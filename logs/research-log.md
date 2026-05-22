@@ -9,3 +9,4 @@
 - Registered the Google Drive research folder for papers, slides, and AI-generated research outputs.
 - Imported six ChatGPT shared conversations into structured notes on MND4-preAPS, analytic APS, fixed point existence, completions, self-existence, and residuated/domain-theoretic completion.
 - Added a Project-to-Codex sync workflow using Google Drive relay files and a ChatGPT shared-link watchlist.
+- Imported the Research Project chat-link handoff from Downloads, added 11 new shared links to the watchlist, and created research-index skeleton files for definitions, open problems, models, and bibliography.

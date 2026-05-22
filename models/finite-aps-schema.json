@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Finite APS Model",
+  "type": "object",
+  "required": ["name", "carrier", "order", "top", "bottom", "box", "refutability"],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "carrier": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "order": {
+      "type": "array",
+      "description": "Pairs [x,y] meaning x <= y.",
+      "items": {
+        "type": "array",
+        "prefixItems": [{ "type": "string" }, { "type": "string" }],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "top": {
+      "type": "string"
+    },
+    "bottom": {
+      "type": "string"
+    },
+    "box": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "refutability": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "negation": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
