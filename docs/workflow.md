@@ -26,6 +26,17 @@ Codex cannot directly open a private ChatGPT Project as a folder. Use one of the
 5. Compile or export results into `outputs/pdf/`.
 6. Commit meaningful milestones with Git.
 
+## Project-to-Codex Sync
+
+Use [../references/drive-relay.md](../references/drive-relay.md) as the operating rule.
+
+- ChatGPT Project remains the exploration space.
+- Google Drive holds durable drafts, slides, PDFs, and long-form relay notes.
+- `references/chatgpt-share-watchlist.csv` holds stable shared links.
+- Codex periodically checks changed sources and updates local Markdown notes.
+
+For ordinary ChatGPT shared links, continuing a Project conversation may not update the shared snapshot automatically. Update the share or add a new link when a conversation has new material that Codex should ingest.
+
 ## PDF Collection
 
 Run this from the repository root:

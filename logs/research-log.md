@@ -6,3 +6,6 @@
 - Connected the Google Drive reference folder as the main bibliography/source folder.
 - Created inbox, literature notes, output, and log entry points.
 - Imported the shared ChatGPT conversation on reconstructing BS16 cut elimination as a fibered residuated APS note.
+- Registered the Google Drive research folder for papers, slides, and AI-generated research outputs.
+- Imported six ChatGPT shared conversations into structured notes on MND4-preAPS, analytic APS, fixed point existence, completions, self-existence, and residuated/domain-theoretic completion.
+- Added a Project-to-Codex sync workflow using Google Drive relay files and a ChatGPT shared-link watchlist.

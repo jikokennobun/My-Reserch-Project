@@ -8,9 +8,13 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 - [ideas/inbox.md](ideas/inbox.md): 思いつき・会話ログ・断片の投入口
 - [notes/literature.md](notes/literature.md): 文献メモ
 - [references/drive.md](references/drive.md): Google Drive参考文献フォルダ
+- [references/research-drive.md](references/research-drive.md): Google Drive研究成果フォルダ
+- [references/drive-relay.md](references/drive-relay.md): ChatGPT Project/Drive/Codex同期ルール
+- [references/chatgpt-share-watchlist.csv](references/chatgpt-share-watchlist.csv): ChatGPT共有リンク監視リスト
 - [outputs/pdf/](outputs/pdf/): 生成・集約したPDF
 - [logs/research-log.md](logs/research-log.md): 作業ログ
 - [scripts/collect-pdfs.ps1](scripts/collect-pdfs.ps1): ローカルPDF集約スクリプト
+- [scripts/check-chatgpt-shares.ps1](scripts/check-chatgpt-shares.ps1): ChatGPT共有リンク変更検出スクリプト
 
 ## Workflow
 
@@ -24,4 +28,8 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\collect-pdfs.ps1
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-chatgpt-shares.ps1
 ```
