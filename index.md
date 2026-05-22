@@ -10,6 +10,7 @@
 
 - Ideas: [ideas/inbox.md](ideas/inbox.md)
 - Literature notes: [notes/literature.md](notes/literature.md)
+- BS16 / Res-APS note: [notes/bs16-fiber-residuated-aps.md](notes/bs16-fiber-residuated-aps.md)
 - Drive references: [references/drive.md](references/drive.md)
 - PDF outputs: [outputs/pdf/](outputs/pdf/)
 - Research log: [logs/research-log.md](logs/research-log.md)
@@ -19,4 +20,3 @@
 - ChatGPT Project内の過去ログをどの粒度でこちらへ移すか。
 - Google Driveの文献フォルダをどの分類で索引化するか。
 - Obsidian vaultとしてこのリポジトリ全体を開くか、`notes/` だけを開くか。
-
