@@ -37,6 +37,16 @@ Use [../references/drive-relay.md](../references/drive-relay.md) as the operatin
 
 For ordinary ChatGPT shared links, continuing a Project conversation may not update the shared snapshot automatically. Update the share or add a new link when a conversation has new material that Codex should ingest.
 
+## Obsidian-to-Codex Index
+
+The Obsidian vault at `C:\Users\20010215fjii\Documents\Mr.Jikokennobun` contains both research and personal notes. Codex should only index the research roots recorded in [../references/obsidian-research-vault.md](../references/obsidian-research-vault.md).
+
+Refresh the research-only index with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\index-obsidian-research.ps1
+```
+
 ## PDF Collection
 
 Run this from the repository root:

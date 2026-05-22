@@ -14,11 +14,14 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 - [references/research-drive.md](references/research-drive.md): Google Drive研究成果フォルダ
 - [references/drive-relay.md](references/drive-relay.md): ChatGPT Project/Drive/Codex同期ルール
 - [references/chatgpt-share-watchlist.csv](references/chatgpt-share-watchlist.csv): ChatGPT共有リンク監視リスト
+- [references/obsidian-research-vault.md](references/obsidian-research-vault.md): Obsidian研究Vault連携ルール
+- [notes/obsidian-research-index.md](notes/obsidian-research-index.md): Obsidian研究ノート索引
 - [outputs/pdf/](outputs/pdf/): 生成・集約したPDF
 - [logs/research-log.md](logs/research-log.md): 作業ログ
 - [models/](models/): 有限APS/preAPSモデル
 - [scripts/collect-pdfs.ps1](scripts/collect-pdfs.ps1): ローカルPDF集約スクリプト
 - [scripts/check-chatgpt-shares.ps1](scripts/check-chatgpt-shares.ps1): ChatGPT共有リンク変更検出スクリプト
+- [scripts/index-obsidian-research.ps1](scripts/index-obsidian-research.ps1): Obsidian研究ノート索引生成スクリプト
 
 ## Workflow
 
@@ -36,4 +39,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\collect-pdfs.ps1
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-chatgpt-shares.ps1
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\index-obsidian-research.ps1
 ```

@@ -38,6 +38,8 @@
 - Drive research outputs: [references/research-drive.md](references/research-drive.md)
 - Drive relay workflow: [references/drive-relay.md](references/drive-relay.md)
 - ChatGPT share watchlist: [references/chatgpt-share-watchlist.csv](references/chatgpt-share-watchlist.csv)
+- Obsidian research vault: [references/obsidian-research-vault.md](references/obsidian-research-vault.md)
+- Obsidian research index: [notes/obsidian-research-index.md](notes/obsidian-research-index.md)
 - PDF outputs: [outputs/pdf/](outputs/pdf/)
 - Research log: [logs/research-log.md](logs/research-log.md)
 
