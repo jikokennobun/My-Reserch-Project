@@ -26,6 +26,20 @@ Codex cannot directly open a private ChatGPT Project as a folder. Use one of the
 5. Compile or export results into `outputs/pdf/`.
 6. Commit meaningful milestones with Git.
 
+## Autonomous Discussion Loop
+
+Use [codex-research-automation.md](codex-research-automation.md) for the
+repository-first automation design. The recurring prompt lives at
+[codex-autonomous-discussion-prompt.md](codex-autonomous-discussion-prompt.md),
+and the running state/log lives at
+[../logs/autonomous-discussion.md](../logs/autonomous-discussion.md).
+
+The intended division is:
+
+- ChatGPT Project: human-facing research conversation and long exploratory context.
+- Repository files: stable source of truth for Codex automation.
+- Codex automation: scheduled multi-role discussion, synthesis, and GitHub push.
+
 ## Project-to-Codex Sync
 
 Use [../references/drive-relay.md](../references/drive-relay.md) as the operating rule.

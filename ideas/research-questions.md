@@ -8,5 +8,6 @@
 - 完備化で得た不動点は、いつ構文的・定義可能な固定点へ反映されるか。
 - 解析的APSでは、対角化補題をどの固定点定理で置き換えるべきか。
 - 剰余付きdcpo/quantaleを APS/G2-ZOO の基本意味論にできるか。
+- Codex cannot currently fetch `https://chatgpt.com/share/...` from this environment (Invoke-WebRequest: remote server unreachable). Decide the ingestion workaround (manual paste/export, new share link, or alternative fetch method).
 
 ## Later

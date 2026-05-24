@@ -151,7 +151,17 @@ $lines += ""
 
 if (Test-Path $LogPath) {
     $existing = Get-Content -Path $LogPath -Raw -Encoding UTF8
-    ($lines -join "`n") + "`n" + $existing | Set-Content -Path $LogPath -Encoding UTF8
+    $header = "# ChatGPT Share Sync Log"
+    if ($existing.StartsWith($header)) {
+        $body = $existing.Substring($header.Length).TrimStart("`r", "`n")
+        $updatedLog = $header + "`n`n" + ($lines -join "`n") + "`n"
+        if (-not [string]::IsNullOrWhiteSpace($body)) {
+            $updatedLog += "`n" + $body
+        }
+        $updatedLog | Set-Content -Path $LogPath -Encoding UTF8
+    } else {
+        ($lines -join "`n") + "`n" + $existing | Set-Content -Path $LogPath -Encoding UTF8
+    }
 } else {
     "# ChatGPT Share Sync Log`n`n" + ($lines -join "`n") + "`n" | Set-Content -Path $LogPath -Encoding UTF8
 }

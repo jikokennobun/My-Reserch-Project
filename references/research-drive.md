@@ -26,6 +26,13 @@ This folder is for research outputs, slides, drafts, and AI-generated materials.
 - aps_dissertation_lualatex.pdf
 - aps_g2_zoo_research_notes_lualatex.pdf
 
+### Monograph (current)
+
+- aps_g2_zoo_monograph_lualatex.pdf
+- APS_G2_Algebraic_Reverse_Mathematics_Monograph.pdf
+- aps_monograph.pdf
+- aps_monograph_xelatex.pdf
+
 ## Slide Folder Snapshot
 
 - beklemishev_shamkanov_abstract_g2_beamer.pdf
@@ -52,7 +59,10 @@ Gemini includes:
 
 Claude includes:
 
-- files
+- files:
+  - APS_dissertation.pdf
+  - APS_dissertation.tex
+  - references.bib
 
 ## Usage
 
