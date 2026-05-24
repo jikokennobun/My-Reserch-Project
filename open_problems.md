@@ -13,6 +13,8 @@
 - Formulate the completion-reflection square \(L\to\widehat L\) for \(\boxtimes\)
   and identify the exact principal/compact/definable condition needed to round a
   completion fixed point back to \(L\).
+- For MacNeille completion, define the order-dual extension convention for
+  antitone \(\boxtimes\) and test whether fixed points can be non-principal cuts.
 - Which APS axioms survive completion?
 - Which extensions of \(\Box\) and \(\boxtimes\) are canonical or stable?
 - Can completion stability be tied to cut elimination in the Ciabattoni-Galatos-Terui style?

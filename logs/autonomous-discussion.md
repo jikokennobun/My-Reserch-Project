@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: six passes unless the user changes the schedule
-- Current pass: 1
+- Current pass: 2
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
 - Initial focus: strengthen the APS/G2-ZOO research program by turning existing
@@ -88,3 +88,59 @@ Next step:
 Use pass 2 to choose one candidate completion, preferably MacNeille completion
 or ideal completion, and write the first precise version of the embedding and
 extension clauses.
+
+### Pass 2 - 2026-05-24 20:36 JST
+
+Focus:
+
+Choose MacNeille completion as the first test case for the completion-reflection
+square and make the embedding/extension vocabulary explicit enough for a later
+theorem or countermodel.
+
+Proposer:
+
+Use MacNeille completion because it is already tied to algebraic proof theory
+and cut-elimination stability in the BS16 note. The first work item should be
+purely structural: define the cut embedding \(i:L\to \widehat L\), then ask how
+\(\Box\), \(\boxtimes\), and residuals extend across it. A completion fixed
+point only counts as reflected when it lands on a principal cut \(i(p)\), or when
+a separate compact/definable rounding lemma recovers such a \(p\).
+
+Skeptic:
+
+MacNeille completion is attractive exactly because it can be too strong. It may
+add cuts that satisfy fixed point equations for order-theoretic reasons while
+having no formula-level representative. For antitone \(\boxtimes\), the main
+risk is variance: extending \(\boxtimes\) directly as if it were monotone will
+hide the real problem. The extension must either pass through the order dual or
+state an explicit polarity convention.
+
+Formalist:
+
+Record a three-part test. First, define \(X^u\), \(X^l\), MacNeille-closed lower
+cuts, and the principal embedding. Second, treat \(\boxtimes\) as a monotone map
+from \(L\) to \(L^{op}\), then only compare it back to \(\widehat L\) after an
+explicit dual-identification step. Third, mark the reflection criterion:
+\(q=\widehat{\boxtimes}q\) is syntactic only if \(q=i(p)\) and
+\(p=\boxtimes p\) holds in \(L\), or if a named rounding lemma proves this from
+compact definable approximants.
+
+Archivist:
+
+Added MacNeille completion vocabulary to `definitions.md`, added a MacNeille
+first-test section to `notes/completion-and-fixed-points.md`, and sharpened the
+open problems with an explicit variance/duality task for \(\boxtimes\).
+
+Repository updates:
+
+- `logs/autonomous-discussion.md`: recorded pass 2 and advanced the state.
+- `definitions.md`: added MacNeille/completion-reflection vocabulary.
+- `notes/completion-and-fixed-points.md`: added the MacNeille first test.
+- `open_problems.md`: added a concrete antitone-extension task.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 3 to turn the MacNeille first test into a small finite APS/preAPS model
+search target: find either a principal reflected fixed point or a non-principal
+completion fixed point that demonstrates failure of reflection.

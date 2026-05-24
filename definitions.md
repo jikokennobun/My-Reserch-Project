@@ -62,6 +62,49 @@ Godel/negated provability fixed point:
 
 These must be kept distinct unless \(\boxtimes\) is explicitly defined from \(\neg\Box\).
 
+## Completion Vocabulary
+
+For a preorder \(L\) and \(X\subseteq L\), write:
+
+\[
+X^u=\{a\in L:\forall x\in X,\ x\le a\},
+\qquad
+X^l=\{a\in L:\forall x\in X,\ a\le x\}.
+\]
+
+A MacNeille-closed lower cut is a set \(C\subseteq L\) such that:
+
+\[
+C=(C^u)^l.
+\]
+
+The MacNeille completion \(\widehat L\) is the ordered collection of these
+closed lower cuts, with the principal embedding:
+
+\[
+i(a)=(\{a\}^u)^l.
+\]
+
+A completion-generated fixed point for \(\boxtimes\) is an element
+\(q\in\widehat L\) satisfying:
+
+\[
+q=\widehat{\boxtimes}q.
+\]
+
+A syntactic fixed point is a formula-level or APS-level element \(p\in L\)
+satisfying:
+
+\[
+p=\boxtimes p.
+\]
+
+A completion fixed point is reflected when \(q=i(p)\) for such a \(p\), or when
+a stated definable/compact rounding lemma recovers such a \(p\) from \(q\).
+
+For antitone \(\boxtimes\), the extension should be treated as a monotone map
+into the order dual before any comparison back with \(\widehat L\).
+
 ## Residuated APS
 
 A residuated APS adds a resource composition and residuals:
@@ -88,4 +131,3 @@ a\le c/b.
 - Define primitive versus definitional \(\boxtimes\).
 - Define indexed/fibered APS.
 - Define completion-generated fixed points versus syntactic fixed points.
-

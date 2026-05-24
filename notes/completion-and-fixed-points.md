@@ -99,10 +99,55 @@ This separates four proof obligations:
 - prove the rounding/reflection lemma, or exhibit a counterexample where a
   non-definable completion fixed point exists.
 
+## MacNeille First Test
+
+Use MacNeille completion as the first concrete test case. For \(X\subseteq L\),
+write:
+
+\[
+X^u=\{a:\forall x\in X,\ x\le a\},
+\qquad
+X^l=\{a:\forall x\in X,\ a\le x\}.
+\]
+
+The completion consists of closed lower cuts:
+
+\[
+C=(C^u)^l,
+\]
+
+with principal embedding:
+
+\[
+i(a)=(\{a\}^u)^l.
+\]
+
+The first extension question is variance-sensitive. A monotone \(\Box:L\to L\)
+can be tested by a direct MacNeille-style extension, but an antitone
+\(\boxtimes:L\to L\) should first be regarded as a monotone map
+
+\[
+L\to L^{op}.
+\]
+
+Only after extending along this polarity should one compare the result back to
+\(\widehat L\). This prevents the extension step from silently treating an
+antitone operation as monotone.
+
+MacNeille reflection target:
+
+1. Build or choose \(\widehat{\boxtimes}\) with the polarity convention stated.
+2. Find \(q\in\widehat L\) such that \(q=\widehat{\boxtimes}q\).
+3. Check whether \(q=i(p)\) for any \(p\in L\).
+4. If not principal, decide whether compact/definable approximants can recover a
+   genuine \(p=\boxtimes p\), or record it as a non-syntactic completion fixed
+   point.
+
 ## Next Tasks
 
 - Write the MacNeille completion of a preorder explicitly as Galois-closed cuts.
 - Define canonical extensions of \(\Box\) and \(\boxtimes\).
+- Specify the order-dual extension convention for antitone \(\boxtimes\).
 - Test whether A1-A4 survive completion.
 - Formulate a reflection theorem from completion fixed points to formula fixed points.
 - Turn the reflection-square work package into a precise theorem/countermodel
