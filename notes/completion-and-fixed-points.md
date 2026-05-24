@@ -143,11 +143,29 @@ MacNeille reflection target:
    genuine \(p=\boxtimes p\), or record it as a non-syntactic completion fixed
    point.
 
+## Finite Search Target
+
+The first computational target is a 3- or 4-element APS/preAPS candidate. For
+each candidate, record the preorder, \(T\), \(\bot\), \(\Box\), \(\boxtimes\),
+the antitone extension convention, and the resulting MacNeille cuts.
+
+Classify candidates into:
+
+1. no completion fixed point;
+2. only principal completion fixed points;
+3. a non-principal completion fixed point with no syntactic fixed point;
+4. a non-principal completion fixed point with a possible compact/definable
+   rounding path.
+
+The working protocol lives in
+[../models/macneille-reflection-search.md](../models/macneille-reflection-search.md).
+
 ## Next Tasks
 
 - Write the MacNeille completion of a preorder explicitly as Galois-closed cuts.
 - Define canonical extensions of \(\Box\) and \(\boxtimes\).
 - Specify the order-dual extension convention for antitone \(\boxtimes\).
+- Build the finite MacNeille reflection search for 3- and 4-element candidates.
 - Test whether A1-A4 survive completion.
 - Formulate a reflection theorem from completion fixed points to formula fixed points.
 - Turn the reflection-square work package into a precise theorem/countermodel

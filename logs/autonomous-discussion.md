@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: six passes unless the user changes the schedule
-- Current pass: 2
+- Current pass: 3
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
 - Initial focus: strengthen the APS/G2-ZOO research program by turning existing
@@ -144,3 +144,57 @@ Next step:
 Use pass 3 to turn the MacNeille first test into a small finite APS/preAPS model
 search target: find either a principal reflected fixed point or a non-principal
 completion fixed point that demonstrates failure of reflection.
+
+### Pass 3 - 2026-05-24 21:07 JST
+
+Focus:
+
+Convert the MacNeille reflection idea into a finite model-search target rather
+than another abstract slogan.
+
+Proposer:
+
+The next concrete artifact should be a small-model search protocol. Enumerate
+finite preorders with \(3\) or \(4\) elements, choose \(T,\bot,\Box,\boxtimes\),
+require \(\boxtimes\) to be antitone, compute the MacNeille closed lower cuts,
+and then classify fixed points of the chosen completion extension as principal
+or non-principal. A non-principal fixed cut would be exactly the kind of
+completion-generated fixed point that does not automatically reflect to syntax.
+
+Skeptic:
+
+The hardest part is not enumeration but extension discipline. If
+\(\widehat{\boxtimes}\) is chosen ad hoc, any counterexample may only refute the
+wrong extension. The search protocol must therefore record the extension rule
+beside every result, and it should separate "APS axiom failure" from
+"reflection failure" so that a toy model does not overclaim relevance to the
+main G2-ZOO.
+
+Formalist:
+
+Use four classifications for each candidate: (1) no completion fixed point,
+(2) only principal fixed points, (3) non-principal fixed points with no
+formula-level fixed point, and (4) non-principal fixed points plus a possible
+compact/definable rounding path. Also record G2, FG2, primitive
+\(\boxtimes\)-fixed points, and whether A1-A4 or the currently used APS
+fragment is being checked.
+
+Archivist:
+
+Added a dedicated model-search note under `models/`, linked it from the model
+README, extended the completion note with the finite-search target, and added a
+matching open problem.
+
+Repository updates:
+
+- `logs/autonomous-discussion.md`: recorded pass 3 and advanced the state.
+- `models/macneille-reflection-search.md`: added finite search protocol.
+- `models/README.md`: linked the new search target.
+- `notes/completion-and-fixed-points.md`: added finite search target.
+- `open_problems.md`: added a finite MacNeille reflection search task.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 4 to either draft a checker script interface for the search protocol or
+write the first hand-checkable 3-element candidate table before automating.

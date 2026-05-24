@@ -15,6 +15,8 @@
   completion fixed point back to \(L\).
 - For MacNeille completion, define the order-dual extension convention for
   antitone \(\boxtimes\) and test whether fixed points can be non-principal cuts.
+- Search 3- and 4-element APS/preAPS candidates for a non-principal MacNeille
+  completion fixed point that has no syntactic \(\boxtimes\)-fixed point.
 - Which APS axioms survive completion?
 - Which extensions of \(\Box\) and \(\boxtimes\) are canonical or stable?
 - Can completion stability be tied to cut elimination in the Ciabattoni-Galatos-Terui style?
