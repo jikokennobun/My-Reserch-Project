@@ -10,6 +10,9 @@
 ## Completion and Fixed Points
 
 - When does a fixed point in a MacNeille/canonical/ideal completion reflect to a formula-definable fixed point?
+- Formulate the completion-reflection square \(L\to\widehat L\) for \(\boxtimes\)
+  and identify the exact principal/compact/definable condition needed to round a
+  completion fixed point back to \(L\).
 - Which APS axioms survive completion?
 - Which extensions of \(\Box\) and \(\boxtimes\) are canonical or stable?
 - Can completion stability be tied to cut elimination in the Ciabattoni-Galatos-Terui style?
@@ -31,4 +34,3 @@
 - Classify 3- and 4-element APS/preAPS models satisfying selected axiom packages.
 - Compute \(|\mathrm{Fix}_{\boxtimes}(S)|\) as a model invariant.
 - Build machine-checkable finite models under `models/`.
-

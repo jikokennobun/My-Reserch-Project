@@ -66,12 +66,47 @@ Even if completion gives a fixed point, it may be an ideal, cut, or limit object
 
 The real problem is to characterize when completion-created fixed points are definable or reflected back into the Lindenbaum/pre-APS structure.
 
+## Reflection Square Work Package
+
+The next formal target is a completion-reflection square:
+
+\[
+L \xrightarrow{i} \widehat L,
+\qquad
+\boxtimes:L\to L,
+\qquad
+\widehat{\boxtimes}:\widehat L\to\widehat L.
+\]
+
+Given a completion fixed point
+
+\[
+q=\widehat{\boxtimes}q,
+\]
+
+the reflection problem asks for conditions under which either:
+
+1. \(q=i(p)\) for some \(p\in L\) with \(p=\boxtimes p\), or
+2. \(q\) has a definable/compact approximation that can be rounded back to an
+   actual formula-level fixed point in \(L\).
+
+This separates four proof obligations:
+
+- specify the completion and embedding \(i\);
+- specify the chosen extension of \(\Box\), \(\boxtimes\), and residuals;
+- define which elements of \(\widehat L\) count as principal, compact, or
+  formula-definable;
+- prove the rounding/reflection lemma, or exhibit a counterexample where a
+  non-definable completion fixed point exists.
+
 ## Next Tasks
 
 - Write the MacNeille completion of a preorder explicitly as Galois-closed cuts.
 - Define canonical extensions of \(\Box\) and \(\boxtimes\).
 - Test whether A1-A4 survive completion.
 - Formulate a reflection theorem from completion fixed points to formula fixed points.
+- Turn the reflection-square work package into a precise theorem/countermodel
+  template.
 - Compare with Ciabattoni-Galatos-Terui completion stability for cut elimination.
 
 ## Related Drive Files
@@ -79,4 +114,3 @@ The real problem is to characterize when completion-created fixed points are def
 - [APS_dissertation.pdf](https://drive.google.com/file/d/1VtS6tSvhUcoIG01fWprIrxGKZ3vZPjxc)
 - [aps_g2_zoo_research_notes_lualatex_proof_complete.pdf](https://drive.google.com/file/d/123SEqYcTrWxkvo2XXvNhUZaN0QTWea3c)
 - [algebraic_reverse_math_g2_aps.pdf](https://drive.google.com/file/d/1JoGMqK-9uQqC2Qp3490G2ZJvMj9N5DTe)
-
