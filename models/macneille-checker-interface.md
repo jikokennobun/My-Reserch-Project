@@ -1,8 +1,10 @@
 # MacNeille Reflection Checker Interface
 
 This note defines the planned interface for a finite MacNeille reflection
-checker. It is a contract for the first implementation, not yet a completed
-script.
+checker.
+
+First implementation:
+[../scripts/check-macneille-reflection.ps1](../scripts/check-macneille-reflection.ps1).
 
 ## Planned Command
 
@@ -56,7 +58,7 @@ operations, or extension-rule limitations.
 
 ## First Milestone
 
-The first implementation should support:
+The first implementation supports:
 
 - finite preorders;
 - total `box` and `refutability` maps;

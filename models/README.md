@@ -10,6 +10,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [macneille-reflection-search.md](macneille-reflection-search.md).
 - Checker interface for the first MacNeille reflection tool:
   [macneille-checker-interface.md](macneille-checker-interface.md).
+- Smoke-test example:
+  [examples/three-chain-antitone.json](examples/three-chain-antitone.json).
 - Scripts to check A1-A4, G2, FG2, fixed point principles, and collapse conditions.
 
 ## Minimal Model Fields

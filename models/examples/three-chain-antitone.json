@@ -1,0 +1,28 @@
+{
+  "name": "three-chain-antitone",
+  "carrier": ["b", "m", "t"],
+  "order": [
+    ["b", "b"],
+    ["m", "m"],
+    ["t", "t"],
+    ["b", "m"],
+    ["m", "t"],
+    ["b", "t"]
+  ],
+  "top": "t",
+  "bottom": "b",
+  "box": {
+    "b": "b",
+    "m": "m",
+    "t": "t"
+  },
+  "refutability": {
+    "b": "t",
+    "m": "m",
+    "t": "b"
+  },
+  "metadata": {
+    "purpose": "Hand-checkable smoke-test model for the first MacNeille reflection checker.",
+    "expectedClassification": "principal-only"
+  }
+}
