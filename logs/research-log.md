@@ -14,6 +14,9 @@
 - Autonomous discussion pass 3: converted the MacNeille reflection target into a
   finite 3-/4-element model-search protocol and linked it from the completion
   and models notes.
+- Autonomous discussion pass 4: drafted the MacNeille reflection checker
+  interface, including command shape, validation checks, output classes, and the
+  first provisional extension-rule milestone.
 - Relay sync: refreshed the ChatGPT watchlist state at `2026-05-24T04:52:11+09:00`; all 18 tracked `https://chatgpt.com/share/...` links still fail with `Invoke-WebRequest` remote-server-unreachable errors, so no conversation diffing or note ingestion was possible.
 - Relay sync: rechecked the recorded Google Drive research and reference folders live. No newly relevant post-`2026-05-22` material appeared beyond the already indexed Monograph snapshot, so no literature or topic note updates were needed this run.
 - Relay sync: cleaned `logs/chatgpt-share-sync.md` after the blocked retry duplicated the newest entry and displaced the file header.

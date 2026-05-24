@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: six passes unless the user changes the schedule
-- Current pass: 3
+- Current pass: 4
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
 - Initial focus: strengthen the APS/G2-ZOO research program by turning existing
@@ -198,3 +198,56 @@ Next step:
 
 Use pass 4 to either draft a checker script interface for the search protocol or
 write the first hand-checkable 3-element candidate table before automating.
+
+### Pass 4 - 2026-05-24 21:36 JST
+
+Focus:
+
+Turn the MacNeille reflection search protocol into a concrete checker interface
+so later passes can automate the small-model search without blurring the
+extension convention for antitone \(\boxtimes\).
+
+Proposer:
+
+Draft a script contract before writing the script. The checker should accept one
+finite APS/preAPS JSON file, validate its preorder and operations, compute
+MacNeille closed lower cuts, compute principal cuts, and report primitive
+\(\boxtimes\)-fixed points in \(L\). The completed-\(\boxtimes\) stage should be
+pluggable by named extension rule, because the research question depends on
+whether the antitone map is extended through \(L^{op}\), a doubled order, or a
+later canonical-extension recipe.
+
+Skeptic:
+
+A checker that silently picks one extension rule would create false confidence.
+The output must make extension discipline visible: every reported completion
+fixed point should carry the extension rule name, whether the cut is principal,
+and whether any syntactic \(p=\boxtimes p\) exists. Otherwise a "countermodel"
+could merely be a countermodel to an undocumented implementation choice.
+
+Formalist:
+
+Use an interface with bounded inputs and explicit output classes:
+`no-completion-fixed-point`, `principal-only`, `nonprincipal-without-syntactic`,
+and `nonprincipal-with-rounding-candidate`. The first implementation can
+support only an `antitone-dual-lower-cut-v0` extension rule, but the output
+schema should be ready for additional rules.
+
+Archivist:
+
+Added a checker interface note that specifies the planned PowerShell command,
+inputs, output schema, validation checks, and first milestone. Linked it from
+the model README and from the MacNeille search protocol.
+
+Repository updates:
+
+- `logs/autonomous-discussion.md`: recorded pass 4 and advanced the state.
+- `models/macneille-checker-interface.md`: added checker interface contract.
+- `models/macneille-reflection-search.md`: linked the checker interface.
+- `models/README.md`: linked the checker interface.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 5 to implement the first minimal checker skeleton or create one
+hand-checkable model JSON that exercises the interface.

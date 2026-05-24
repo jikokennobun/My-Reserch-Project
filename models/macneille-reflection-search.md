@@ -56,6 +56,11 @@ L\to L^{op}
 before comparing any completed value back with \(\widehat L\). A result is not
 usable unless its polarity convention is explicit.
 
+The planned checker interface is specified in
+[macneille-checker-interface.md](macneille-checker-interface.md). Its first
+extension rule is only provisional and should be recorded as part of every
+result.
+
 ## Classification Fields
 
 Each candidate should record:
