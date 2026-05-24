@@ -85,3 +85,22 @@ rule.
 
 If no 3-element candidate exists, move to 4 elements and keep the failed search
 as useful evidence about the strength of the reflection condition.
+
+## First Checker Result
+
+Report:
+[../outputs/macneille-reflection-three-chain-antitone.json](../outputs/macneille-reflection-three-chain-antitone.json).
+
+- Model: `three-chain-antitone`
+- Extension rule: `antitone-dual-lower-cut-v0`
+- Classification: `principal-only`
+- Syntactic fixed point: `m`
+- Completed fixed point: `{ b, m, t }`, principal at `t`
+- G2: false
+- FG2: false
+- A1-A4: not checked by the first milestone
+
+This is a smoke-test baseline, not a reflection counterexample. The next
+substantive search should enumerate additional 3-element preorders and antitone
+maps, or first review whether the provisional extension rule should be replaced
+before enumeration.

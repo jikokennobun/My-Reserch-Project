@@ -1,0 +1,82 @@
+﻿{
+    "model":  "three-chain-antitone",
+    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\models\\examples\\three-chain-antitone.json",
+    "extensionRule":  "antitone-dual-lower-cut-v0",
+    "extensionDescription":  "Provisional v0: close the pointwise refutability image of a MacNeille lower cut. This records the antitone-dual issue but is not yet a theorem-level canonical extension.",
+    "classification":  "principal-only",
+    "carrierSize":  3,
+    "closedCutCount":  3,
+    "closedCuts":  [
+                       {
+                           "cut":  [
+                                       "b"
+                                   ],
+                           "display":  "{ b }",
+                           "principalElement":  "b"
+                       },
+                       {
+                           "cut":  [
+                                       "b",
+                                       "m"
+                                   ],
+                           "display":  "{ b, m }",
+                           "principalElement":  "m"
+                       },
+                       {
+                           "cut":  [
+                                       "b",
+                                       "m",
+                                       "t"
+                                   ],
+                           "display":  "{ b, m, t }",
+                           "principalElement":  "t"
+                       }
+                   ],
+    "principalCuts":  [
+                          {
+                              "element":  "b",
+                              "cut":  [
+                                          "b"
+                                      ],
+                              "display":  "{ b }"
+                          },
+                          {
+                              "element":  "m",
+                              "cut":  [
+                                          "b",
+                                          "m"
+                                      ],
+                              "display":  "{ b, m }"
+                          },
+                          {
+                              "element":  "t",
+                              "cut":  [
+                                          "b",
+                                          "m",
+                                          "t"
+                                      ],
+                              "display":  "{ b, m, t }"
+                          }
+                      ],
+    "syntacticFixedPoints":  [
+                                 "m"
+                             ],
+    "completedFixedPoints":  [
+                                 {
+                                     "cut":  [
+                                                 "b",
+                                                 "m",
+                                                 "t"
+                                             ],
+                                     "display":  "{ b, m, t }",
+                                     "principal":  true,
+                                     "principalElement":  "t"
+                                 }
+                             ],
+    "g2":  false,
+    "fg2":  false,
+    "warnings":  [
+                     "The extension rule is provisional and must be reviewed against the completion-reflection square.",
+                     "APS axioms A1-A4 are not checked by this first milestone."
+                 ]
+}
