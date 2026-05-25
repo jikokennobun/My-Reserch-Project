@@ -1,5 +1,13 @@
 # Research Log
 
+## 2026-05-25
+
+- Resumed the Codex Research Discussion Loop as an ongoing 30-minute heartbeat
+  automation with no six-pass stop condition, while keeping the existing pass
+  count and research trace.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-25T02:36:05+09:00`; all 18 tracked `https://chatgpt.com/share/...` links were reachable and unchanged, so no note ingestion or open-question extraction was needed this run.
+- Relay sync: checked the recorded Google Drive research/reference folders for updates since `2026-05-22`; no newly relevant papers, slides, Gemini outputs, or Claude outputs were detected.
+
 ## 2026-05-24
 
 - Added the Codex-centered autonomous discussion design, recurring prompt, and

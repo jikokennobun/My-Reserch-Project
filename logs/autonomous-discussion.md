@@ -5,9 +5,9 @@
 - Started: 2026-05-24
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
-- Target run: six passes unless the user changes the schedule
+- Target run: ongoing until the user explicitly pauses or stops the automation
 - Current pass: 6
-- Run status: completed initial six-pass automation cycle
+- Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
 - Initial focus: strengthen the APS/G2-ZOO research program by turning existing
@@ -343,7 +343,9 @@ Archivist:
 
 Generated a JSON report under `outputs/`, linked it from `outputs/README.md`,
 and added a first-run result section to the MacNeille reflection search note.
-This completes the initial six-pass Codex research automation cycle.
+This completes the initial six-pass Codex research automation cycle. On
+2026-05-25, the user clarified that the loop should not stop at six passes, so
+the automation was recreated without a pass-count limit.
 
 Repository updates:
 
@@ -357,6 +359,6 @@ Repository updates:
 
 Next step:
 
-Start a new automation cycle only after choosing whether the priority is
-enumerating 3-element candidates or reviewing the canonical status of the
+Continue with pass 7 by choosing whether the priority is enumerating
+3-element candidates or reviewing the canonical status of the
 `antitone-dual-lower-cut-v0` extension rule.
