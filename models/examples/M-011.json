@@ -1,0 +1,53 @@
+{
+  "name": "M-011",
+  "carrier": [
+    "T",
+    "c",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "bot",
+      "bot"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "c": "c",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "bot",
+    "c": "T",
+    "bot": "bot"
+  },
+  "metadata": {
+    "purpose": "Witnesses FG2 + FP-synt without G2.",
+    "separation": "witnesses (G2=F, FG2=T, FP=T)",
+    "syntactic_FP": [
+      "bot"
+    ],
+    "nFG2_pattern": "TTTTTTTT",
+    "boxtimes_orbit_T": [
+      "T",
+      "bot",
+      "bot",
+      "bot"
+    ],
+    "G2_antecedent": true,
+    "G2_consequent": false,
+    "note": "FP at bot: boxtimes(bot)=bot means the inconsistency proof is self-referential.",
+    "aps_class": "G2=false FG2=true FP-synt=true",
+    "long_description": "G2=F FG2=T FP=T. FG2 and syntactic FP, but G2 fails. The FP is at bot itself: boxtimes(bot)=bot. FG2 holds because boxtimes^2(T)=boxtimes(bot)=bot=boxtimes(T). nFG2(k) holds for all k (orbit of T stabilizes at bot)."
+  }
+}

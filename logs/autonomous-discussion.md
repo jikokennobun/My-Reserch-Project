@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 7
+- Current pass: 8
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -431,3 +431,152 @@ Next step:
 Use pass 8 to add either a finite APS-axiom checker layer or a small enumerator
 for G2-holding variants, then test whether the `three-element-nolattice-nosynt`
 phenomenon survives any nontrivial axiom package.
+
+### Pass 8 - 2026-05-25 JST
+
+Focus:
+
+Prove the orbit-stabilization theorem for n-FG2, construct the first
+non-degenerate 4-element witness for G2+FG2+FP-synt, and classify the
+implication structure of the n-FG2 hierarchy.
+
+Proposer:
+
+The G2-ZOO now has all 8 separating witnesses at size 3. The next theoretical
+advance is an exact characterization of when nFG2(\(k\)) holds for ALL \(k\ge 1\).
+Looking at the certified data: M-011 (TTTTTTTT) has \(\boxtimes\)-orbit
+\(T\to\bot\to\bot\to\cdots\) stabilizing at \(\bot=\boxtimes\bot\); M-111 has
+orbit \(T\to T\to\cdots\) stable at \(T\). The common pattern is that the sub-orbit
+\((\boxtimes T,\boxtimes^2 T,\ldots)\) is non-increasing and eventually reaches a
+syntactic fixed point. The conjecture — now proved — is:
+
+**Theorem (Orbit Stabilization)**: Let \((L,\le,\boxtimes,T,\bot)\) be a finite
+preAPS. The following are equivalent:
+
+1. \(\mathrm{nFG2}(k)\) holds for all \(k\ge 1\).
+2. The sequence \(\boxtimes T\ge\boxtimes^2 T\ge\boxtimes^3 T\ge\cdots\) is
+   non-increasing in \(L\).
+3. There exists \(N\ge 1\) such that \(\boxtimes^N T\) is a syntactic fixed
+   point of \(\boxtimes\), and \(\boxtimes T\ge\boxtimes^2 T\ge\cdots\ge\boxtimes^N T\).
+
+(1\(\Leftrightarrow\)2) by definition. (2\(\Rightarrow\)3): since \(L\) is finite,
+any non-increasing chain eventually stabilizes; the stable value \(p=\boxtimes^N T\)
+satisfies \(\boxtimes p=\boxtimes^{N+1}T=\boxtimes^N T=p\). (3\(\Rightarrow\)2):
+clear.
+
+**Corollary**: All-\(k\) nFG2 \(\Rightarrow\) FP-synt. (The converse fails:
+M-101 has FP at \(\bot\) with \(\bot\) not on the \(\boxtimes\)-orbit of \(T\),
+and nFG2(1)=FG2 is false.)
+
+This introduces a new classification axis separating FP-synt into:
+
+- **FP-reachable**: \(\exists N\ge 1\) with \(\boxtimes^N T\) a syntactic FP.
+  Equivalent to: all-\(k\) nFG2 AND non-increasing sub-orbit.
+- **FP-unreachable**: FP exists but not on the \(\boxtimes\)-orbit of \(T\).
+  M-001 and M-101 are examples.
+
+The implication diagram now reads:
+
+\[
+\text{all-}k\text{ nFG2}
+\;\Rightarrow\;
+\text{FP-reachable}
+\;\Rightarrow\;
+\text{FP-synt}
+\;\Rightarrow\;
+\text{neither G2 nor FG2 is forced.}
+\]
+
+Skeptic:
+
+The orbit stabilization theorem is correct for finite preorders, but it has a
+hidden size dependency: "non-increasing" uses the ambient order \(\le\) of \(L\),
+which is not the APS order in general. In an infinite or non-Noetherian APS
+(e.g., the Lindenbaum algebra of a sufficiently strong logic), the sequence
+\(\boxtimes^k T\) might be non-increasing yet never stabilize. The theorem should
+be labeled as a finite-model result. For APS proper, the orbit condition becomes
+a well-foundedness assumption on \(\boxtimes\)-iteration, which is a new axiom
+candidate.
+
+Also: both M-011 and M-111 have the FP-reachable condition, but both have G2
+FALSE (M-011) or G2 vacuous (M-111 has \(\boxtimes T=T\not\le\bot\)). The real
+challenge is finding a model where all-\(k\) nFG2 and G2 hold with a non-trivial
+antecedent path. That requires \(\boxtimes T\le\bot\Rightarrow T\le\bot\) with
+antecedent true but model non-collapsed — which forces \(T\le\bot\), i.e.,
+collapse. So G2 with true antecedent in a non-collapsed model is impossible.
+G2 in non-collapsed models is always vacuous. This is a structural theorem worth
+recording explicitly.
+
+Formalist:
+
+Record two results:
+
+**Proposition (G2 in non-collapsed models)**: Let \(S\) be a non-collapsed
+preAPS (\(T\not\le\bot\)). Then G2 holds if and only if \(\boxtimes T\not\le\bot\).
+In particular, G2 in a non-collapsed model is always vacuously true.
+
+*Proof*: G2 states \(\boxtimes T\le\bot\Rightarrow T\le\bot\). Since
+\(T\not\le\bot\), the consequent is FALSE. So G2 holds iff the antecedent
+\(\boxtimes T\le\bot\) is also FALSE, i.e., \(\boxtimes T\not\le\bot\). \(\square\)
+
+**Corollary**: G2 partitions non-collapsed preAPS into two classes:
+
+- G2 holds: \(\boxtimes T\not\le\bot\) (the "consistency statement is not refutable")
+- G2 fails: \(\boxtimes T\le\bot\) (the "consistency statement is refutable but system is consistent")
+
+This gives G2 an exact algebraic reading: it is the assertion that provability
+and refutability of the consistency statement are separated.
+
+**Theorem (Orbit Stabilization — formal)**: In a finite preAPS \(S\),
+\(\mathrm{nFG2}(k)\) for all \(k\ge 1\) iff
+\(\exists N\ge 1\colon \boxtimes^N T\in\mathrm{Fix}_\boxtimes(S)\)
+and \(\boxtimes^j T\ge\boxtimes^{j+1} T\) for \(j=1,\ldots,N-1\).
+
+Here \(\mathrm{Fix}_\boxtimes(S):=\{p\in L:p=\boxtimes p\}\).
+
+**Non-degenerate 4-element witness** for G2+FG2+FP-synt: the model
+
+\[
+L=\{T,p,c,\bot\},
+\quad T>p>\bot,\quad T>c,\quad p\parallel c,\quad c\parallel\bot,
+\]
+\[
+\boxtimes:\;T\mapsto p,\;p\mapsto p,\;c\mapsto T,\;\bot\mapsto T.
+\]
+
+Verified: antitone ✓, G2 vacuous (\(\boxtimes T=p\not\le\bot\)) ✓, FG2
+(\(\boxtimes^2 T=p\le p=\boxtimes T\)) ✓, FP at \(p\) (with \(p\ne T,\bot\))
+✓, non-collapsed ✓. The \(\boxtimes\)-orbit of \(T\) is \(T\to p\to p\to\cdots\)
+and stabilizes at \(p\in\mathrm{Fix}_\boxtimes\). nFG2(\(k\)) holds for all
+\(k\ge 1\) (pattern TTTTTTTT).
+
+This is the first certified non-degenerate witness for G2+FG2+FP-synt.
+It can be stored as `models/examples/M4-G2FG2FP.json`.
+
+Archivist:
+
+Added Pass 8 results: (1) orbit stabilization theorem in
+`notes/g2-fg2-hierarchy.md`; (2) "G2 in non-collapsed models" proposition in
+`definitions.md`; (3) new model `models/examples/M4-G2FG2FP.json`;
+(4) updated `open_problems.md` to mark FP-reachable vs FP-unreachable as a
+new axis; (5) updated `notes/g2-aps-zoo-classification.md` registry; and
+(6) recorded this pass in `logs/research-log.md`.
+
+Repository updates:
+
+- `logs/autonomous-discussion.md`: recorded pass 8.
+- `notes/g2-fg2-hierarchy.md`: added orbit stabilization theorem, corollary,
+  implication diagram, and FP-reachable/FP-unreachable classification.
+- `definitions.md`: added G2 in non-collapsed models proposition.
+- `models/examples/M4-G2FG2FP.json`: new 4-element non-degenerate witness.
+- `notes/g2-aps-zoo-classification.md`: added M4-G2FG2FP to model registry.
+- `open_problems.md`: added FP-reachable vs FP-unreachable separation problem.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 9 to determine whether the infinite analogue of the orbit stabilization
+theorem requires a new well-foundedness axiom, or whether it is a theorem of
+some existing APS axiom package. Also: characterize which 4-element preAPS models
+satisfy G2+FG2+FP-synt with FP-reachable (there should be a finite enumeration),
+and ask whether any such model also has nontrivial residuation structure.

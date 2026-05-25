@@ -36,12 +36,22 @@ does not.
 | `nFG2(k)` | \(\boxtimes^{k+1}T\leq\boxtimes^k T\) holds (generalization; \(k=1\) is FG2) |
 | `none` | Neither G2 nor FG2 |
 
-Known implications (to be formally verified):
+**Certified independence results** (from `notes/g2-fg2-hierarchy.md`):
+
 \[
-\mathrm{FG2}\Rightarrow\mathrm{G2}?\quad(\text{open})
+\mathrm{FG2}\not\Rightarrow\mathrm{G2}\quad(\text{M-010}),
 \qquad
-\mathrm{nFG2}(k)\Rightarrow\mathrm{nFG2}(k-1)?\quad(\text{open})
+\mathrm{G2}\not\Rightarrow\mathrm{FG2}\quad(\text{M-100}),
 \]
+\[
+\mathrm{G2}+\mathrm{FP\text{-}synt}\not\Rightarrow\mathrm{FG2}\quad(\text{M-101}),
+\qquad
+\mathrm{G2}+\mathrm{FG2}\not\Rightarrow\mathrm{FP\text{-}synt}\quad(\text{M-110}).
+\]
+
+**n-FG2 hierarchy is strict**: nFG2(\(k\)) does NOT imply nFG2(\(k+1\)) for any
+\(k\ge 1\). M-010 witnesses: pattern TFTFTFTF… (odd levels true, even false).
+See `notes/g2-fg2-hierarchy.md` for proofs.
 
 ### I.3 Completion Fixed-Point Type
 
@@ -134,10 +144,29 @@ APS axioms is currently cited.
 
 ## Current Model Registry
 
+All entries below are machine-certified by `scripts/check-g2-zoo.py`.
+
+### G2-ZOO separating witnesses (3-element preAPS)
+
+| Model | \(|L|\) | G2 | FG2 | FP-synt | nFG2 pattern | CFP class |
+|-------|---------|----|----|---------|-------------|-----------|
+| M-000 | 3 | F | F | F | FFFFFFFF | nonprincipal-without-syntactic |
+| M-001 | 3 | F | F | T | FFFFFFFF | mixed (reflected at \(i(c)\) + nonprincipal) |
+| M-010 | 3 | F | T | F | TFTFTFTF | mixed (princ-unref at \(i(\bot)\) + nonprincipal) |
+| M-011 | 3 | F | T | T | TTTTTTTT | mixed (reflected at \(i(\bot)\) + nonprincipal) |
+| M-100 | 3 | T | F | F | FFFFFFFF | nonprincipal-without-syntactic |
+| M-101 | 3 | T | F | T | FFFFFFFF | mixed (reflected at \(i(\bot)\) + nonprincipal) |
+| M-110 | 3 | T | T | F | TFTFTFTF | mixed (princ-unref at \(i(c)\) + nonprincipal) |
+| M-111 | 3 | T | T | T | TTTTTTTT | mixed (reflected at \(i(T)\)) |
+
+All 8 witnesses are in `models/examples/M-{000..111}.json`.
+
+### MacNeille reflection witnesses
+
 | Model | \(|L|\) | Order | FP | G2 | FG2 | CFP | Extension |
 |-------|---------|-------|----|----|-----|-----|-----------|
-| `three-chain-antitone` | 3 | chain (lattice) | `FP-synt` (\(m\)) | false | false | `CFP-principal-unref` (\(i(t)\)) | v1 |
-| `three-element-nolattice-nosynt` | 3 | \(\{0<a,b\}\) (non-lattice) | `FP-none` | false | false | `CFP-nonprincipal` (\(\{0,a,b\}\)) | v1 |
+| `three-chain-antitone` | 3 | chain (lattice) | `FP-synt` (\(m\)) | false | false | `CFP-principal-unref` (\(i(t)\)) | correct L^op |
+| `three-element-nolattice-nosynt` | 3 | \(\{0<a,b\}\) (non-lattice) | `FP-none` | false | false | `CFP-nonprincipal` (\(\{0,a,b\}\)) | correct L^op |
 
 ---
 

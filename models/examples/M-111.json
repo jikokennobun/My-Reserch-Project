@@ -1,0 +1,53 @@
+{
+  "name": "M-111",
+  "carrier": [
+    "T",
+    "c",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "bot",
+      "bot"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "c": "c",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "T",
+    "c": "T",
+    "bot": "T"
+  },
+  "metadata": {
+    "purpose": "Witnesses G2+FG2+FP-synt. Degenerate: FP at T means boxtimes(T)=T (G2 vacuous).",
+    "separation": "witnesses (G2=T, FG2=T, FP=T)",
+    "syntactic_FP": [
+      "T"
+    ],
+    "nFG2_pattern": "TTTTTTTT",
+    "boxtimes_orbit_T": [
+      "T",
+      "T",
+      "T",
+      "T"
+    ],
+    "G2_antecedent": false,
+    "G2_mode": "vacuous",
+    "warning": "FP at T is degenerate. For non-degenerate G2+FG2+FP, search at size 4.",
+    "aps_class": "G2=true FG2=true FP-synt=true",
+    "long_description": "G2=T FG2=T FP=T. All three properties hold. The FP is at T itself: boxtimes(T)=T. G2 holds vacuously (boxtimes(T)=T not <=bot in non-collapsed model). FG2: boxtimes^2(T)=T<=T=boxtimes(T). Warning: having boxtimes(T)=T is a degenerate case where the consistency statement is self-provably consistent. This is not the canonical G2+FG2+FP scenario."
+  }
+}

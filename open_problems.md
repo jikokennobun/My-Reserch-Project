@@ -2,10 +2,25 @@
 
 ## Core Separations
 
-- Separate \(\exists p(p=\boxtimes p)\) from \(\mathrm{FG2}\).
-- Separate \(\exists p(p=\boxtimes p)\) from \(\exists p(p=\neg\Box p)\).
+- **[Resolved]** Separate \(\exists p(p=\boxtimes p)\) from \(\mathrm{FG2}\):
+  model M-001 (¬G2, ¬FG2, FP) and M-101 (G2, ¬FG2, FP) both witness
+  \(\exists p(p=\boxtimes p)\wedge\neg\mathrm{FG2}\).
+- **[Resolved]** Separate FG2 from G2: M-010. Separate G2 from FG2: M-100.
+- Separate \(\exists p(p=\boxtimes p)\) from \(\exists p(p=\neg\Box p)\):
+  still open — requires models where \(\boxtimes\) is primitive and
+  \(\neg\Box\) is defined separately.
 - Characterize when \(MND4\)-preAPS plus a Godel-style fixed point collapses.
-- Find finite nontrivial models with primitive \(\boxtimes\)-fixed points.
+- **[Resolved]** Find finite nontrivial models with primitive \(\boxtimes\)-fixed
+  points: M-001, M-011, M-101, M-111 all have syntactic \(\boxtimes\)-FPs.
+- **[New]** Find a model with G2+FG2+FP where the FP is NOT at \(T\) or \(\bot\)
+  (M-111 is degenerate: \(\boxtimes T=T\)).
+- **[New]** Determine whether nFG2(\(k\)) for ALL \(k\ge 1\) implies G2 or any
+  structural collapse. The pattern TTTTTTTT in M-011 and M-111 suggests it might
+  force orbit-stabilization (syntactic FP on the orbit).
+- **[New — n-FG2 hierarchy strictness at arbitrary depth]** Find a model where
+  nFG2(\(k\)) fails for all \(k\le N\) and holds for \(k=N+1\), for arbitrary
+  given \(N\). This would show the n-FG2 hierarchy has no computable collapse
+  point.
 
 ## Completion and Fixed Points
 

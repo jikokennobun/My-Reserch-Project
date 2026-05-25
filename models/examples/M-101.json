@@ -1,0 +1,54 @@
+{
+  "name": "M-101",
+  "carrier": [
+    "T",
+    "c",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "bot",
+      "bot"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "c": "c",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "c",
+    "c": "T",
+    "bot": "bot"
+  },
+  "metadata": {
+    "purpose": "Core APS witness: G2 + FP-synt without FG2. Algebraic analogue of BS16.",
+    "separation": "witnesses (G2=T, FG2=F, FP=T)",
+    "syntactic_FP": [
+      "bot"
+    ],
+    "nFG2_pattern": "FFFFFFFF",
+    "boxtimes_orbit_T": [
+      "T",
+      "c",
+      "T",
+      "c"
+    ],
+    "G2_antecedent": false,
+    "G2_mode": "vacuous",
+    "theorem": "exists p(p=boxtimes p) + G2 does NOT imply FG2",
+    "reference": "Beklemishev-Shamkanov 2016 (abstract G2 beamer)",
+    "aps_class": "G2=true FG2=false FP-synt=true",
+    "long_description": "G2=T FG2=F FP=T. CORE MODEL. G2 holds, primitive boxtimes-FP exists, FG2 fails. This is the abstract analogue of the Beklemishev-Shamkanov 2016 result: a system can have a Jeroslow-style fixed point p=boxtimes(p) and satisfy G2, yet fail FG2 (formalized second incompleteness). The FP is at bot: boxtimes(bot)=bot. G2 holds vacuously (boxtimes(T)=c not <=bot). FG2 fails: boxtimes^2(T)=T not <=c=boxtimes(T)."
+  }
+}

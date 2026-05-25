@@ -1,0 +1,49 @@
+{
+  "name": "M-000",
+  "carrier": [
+    "T",
+    "c",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "bot",
+      "bot"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "c": "c",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "bot",
+    "c": "T",
+    "bot": "T"
+  },
+  "metadata": {
+    "purpose": "Baseline separating witness. All three properties G2/FG2/FP false.",
+    "separation": "witnesses (G2=F, FG2=F, FP=F)",
+    "nFG2_pattern": "FFFFFFFF",
+    "boxtimes_orbit_T": [
+      "T",
+      "bot",
+      "T",
+      "bot"
+    ],
+    "G2_antecedent": true,
+    "G2_consequent": false,
+    "aps_class": "G2=false FG2=false FP-synt=false",
+    "long_description": "G2=F FG2=F FP=F. Baseline model: discrete 3-element preAPS with no properties. boxtimes oscillates T<->bot, and c->bot. G2 antecedent boxtimes(T)=bot<=bot is TRUE but consequence T<=bot fails. A concrete witness that all three properties are independent."
+  }
+}

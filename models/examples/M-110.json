@@ -1,0 +1,55 @@
+{
+  "name": "M-110",
+  "carrier": [
+    "T",
+    "c",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "bot",
+      "bot"
+    ],
+    [
+      "T",
+      "c"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "c": "c",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "c",
+    "c": "T",
+    "bot": "T"
+  },
+  "metadata": {
+    "purpose": "Witnesses G2+FG2 without FP-synt. G2+FG2 consistent with no primitive fixed point.",
+    "separation": "witnesses (G2=T, FG2=T, FP=F)",
+    "nFG2_pattern": "TFTFTFTF",
+    "boxtimes_orbit_T": [
+      "T",
+      "c",
+      "T",
+      "c"
+    ],
+    "G2_antecedent": false,
+    "G2_mode": "vacuous",
+    "note": "Period-2 orbit of T gives alternating nFG2 pattern. FG2 holds because T<=c.",
+    "CFP_class": "principal-unreflected at i(c)",
+    "aps_class": "G2=true FG2=true FP-synt=false",
+    "long_description": "G2=T FG2=T FP=F. Both G2 and FG2 hold without any syntactic FP. The preorder has T<c, bot isolated. boxtimes(T)=c, boxtimes(c)=T, boxtimes(bot)=T. G2 holds vacuously (boxtimes(T)=c not <=bot). FG2: boxtimes^2(T)=boxtimes(c)=T<=c=boxtimes(T) since T<c. No syntactic FP: boxtimes(T)=c!=T, boxtimes(c)=T!=c, boxtimes(bot)=T!=bot. nFG2 oscillates T,F,T,F (period-2 orbit)."
+  }
+}

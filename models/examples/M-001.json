@@ -1,0 +1,52 @@
+{
+  "name": "M-001",
+  "carrier": [
+    "T",
+    "c",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "bot",
+      "bot"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "c": "c",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "bot",
+    "c": "c",
+    "bot": "T"
+  },
+  "metadata": {
+    "purpose": "Separates FP-synt from G2 and FG2. Beklemishev-Shamkanov type: FP exists, formalized G2 fails.",
+    "separation": "witnesses (G2=F, FG2=F, FP=T)",
+    "syntactic_FP": [
+      "c"
+    ],
+    "nFG2_pattern": "FFFFFFFF",
+    "boxtimes_orbit_T": [
+      "T",
+      "bot",
+      "T",
+      "bot"
+    ],
+    "CFP_reflected_at": "c",
+    "theorem": "exists p(p=boxtimes p) does NOT imply FG2",
+    "aps_class": "G2=false FG2=false FP-synt=true",
+    "long_description": "G2=F FG2=F FP=T. Primitive boxtimes-fixed point without G2 or FG2. This is the Beklemishev-Shamkanov style separation: a model witnessing exists p. p=boxtimes(p) that does not force G2 or FG2. The element c is the syntactic FP."
+  }
+}

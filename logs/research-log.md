@@ -1,5 +1,19 @@
 # Research Log
 
+## 2026-05-25 (G2-ZOO implementation pass)
+
+- Claude Code G2-ZOO implementation: exhaustively enumerated all 3-element
+  preAPS models and certified all 8 combinations of (G2, FG2, FP-synt) with
+  explicit witnesses M-000 through M-111 in `models/examples/`.
+- Certified independence theorems: FG2⇏G2 (M-010), G2⇏FG2 (M-100),
+  G2+FP-synt⇏FG2 (M-101), G2+FG2⇏FP-synt (M-110).
+- Certified strictness of n-FG2 hierarchy: no finite level implies the next;
+  M-010 realizes pattern TFTFTF… (period-2 oscillation).
+- Added `scripts/check-g2-zoo.py` — property checker for G2/FG2/nFG2/FP-synt
+  and MacNeille completion analysis.
+- Updated `notes/g2-fg2-hierarchy.md` with formal theorem statements and proofs.
+- Updated `notes/g2-aps-zoo-classification.md` with certified model registry.
+
 ## 2026-05-25
 
 - Added a Claude Code bridge for independent research review: a stable prompt,

@@ -1,0 +1,56 @@
+{
+  "name": "M-010",
+  "carrier": [
+    "T",
+    "0",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "0",
+      "0"
+    ],
+    [
+      "bot",
+      "bot"
+    ],
+    [
+      "0",
+      "bot"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "0": "0",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "bot",
+    "0": "bot",
+    "bot": "0"
+  },
+  "metadata": {
+    "purpose": "Separates FG2 from G2. FG2 does NOT imply G2.",
+    "separation": "witnesses (G2=F, FG2=T, FP=F)",
+    "nFG2_pattern": "TFTFTFTF",
+    "boxtimes_orbit_T": [
+      "T",
+      "bot",
+      "0",
+      "bot",
+      "0"
+    ],
+    "G2_antecedent": true,
+    "G2_consequent": false,
+    "theorem": "FG2 does not imply G2 (3-element witness)",
+    "CFP_class": "principal-unreflected",
+    "aps_class": "G2=false FG2=true FP-synt=false",
+    "long_description": "G2=F FG2=T FP=F. FG2 without G2, no syntactic FP. Concrete separation: FG2 does NOT imply G2. The preorder has 0<bot, T isolated. boxtimes orbit of T: T->bot->0->bot->0->... The nFG2(k) pattern oscillates: T,F,T,F,... showing FG2 does not imply nFG2(even)."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "M-100",
+  "carrier": [
+    "T",
+    "c",
+    "bot"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "bot",
+      "bot"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "T": "T",
+    "c": "c",
+    "bot": "bot"
+  },
+  "refutability": {
+    "T": "c",
+    "c": "T",
+    "bot": "T"
+  },
+  "metadata": {
+    "purpose": "Separates G2 from FG2. G2 does NOT imply FG2.",
+    "separation": "witnesses (G2=T, FG2=F, FP=F)",
+    "nFG2_pattern": "FFFFFFFF",
+    "boxtimes_orbit_T": [
+      "T",
+      "c",
+      "T",
+      "c"
+    ],
+    "G2_antecedent": false,
+    "G2_mode": "vacuous",
+    "theorem": "G2 does not imply FG2 (3-element witness)",
+    "aps_class": "G2=true FG2=false FP-synt=false",
+    "long_description": "G2=T FG2=F FP=F. G2 without FG2, no syntactic FP. G2 holds vacuously: boxtimes(T)=c and c is not <=bot in the discrete preorder, so the G2 antecedent is false. The orbit T->c->T->c oscillates; FG2 fails because boxtimes^2(T)=T and T is not <=c=boxtimes(T) in the discrete order."
+  }
+}
