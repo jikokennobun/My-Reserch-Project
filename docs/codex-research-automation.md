@@ -9,6 +9,8 @@ human-facing research workspace.
 - ChatGPT Project is the exploration workspace for long conversational work.
 - This repository is the durable research ledger.
 - Codex runs scheduled discussion passes against the repository files.
+- Claude Code can optionally run independent review passes against the same
+  repository state; see [claude-code-research-bridge.md](claude-code-research-bridge.md).
 - GitHub is the shared archive for generated notes, logs, and synthesis.
 
 Codex should not assume it can directly read private ChatGPT Project state.
@@ -39,6 +41,10 @@ Each automated pass should:
    produces a concrete new question, conjecture, definition, or proof task.
 6. Add a short entry to `logs/research-log.md`.
 7. Commit and push the resulting files so GitHub receives the research trace.
+
+When a Claude Code review exists in `logs/claude-code-review.md`, Codex should
+read the newest review before choosing the next pass focus, then explicitly
+either incorporate, defer, or reject its suggested repository updates.
 
 ## Output Standard
 

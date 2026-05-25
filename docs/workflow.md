@@ -40,6 +40,23 @@ The intended division is:
 - Repository files: stable source of truth for Codex automation.
 - Codex automation: scheduled multi-role discussion, synthesis, and GitHub push.
 
+## Claude Code Review Bridge
+
+Use [claude-code-research-bridge.md](claude-code-research-bridge.md) when you
+want Claude Code to act as an independent reviewer for the Codex research loop.
+Generate a focused handoff packet with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\new-claude-code-handoff.ps1 -Focus "Review the next MacNeille finite-model search step."
+```
+
+The stable Claude Code prompt is
+[claude-code-autonomous-review-prompt.md](claude-code-autonomous-review-prompt.md).
+Claude Code should append results to
+[../logs/claude-code-review.md](../logs/claude-code-review.md), while Codex
+continues to integrate accepted items into the main notes, scripts, and Git
+history.
+
 ## Project-to-Codex Sync
 
 Use [../references/drive-relay.md](../references/drive-relay.md) as the operating rule.

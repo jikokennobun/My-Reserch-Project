@@ -75,7 +75,8 @@ L \xrightarrow{i} \widehat L,
 \qquad
 \boxtimes:L\to L,
 \qquad
-\widehat{\boxtimes}:\widehat L\to\widehat L.
+\widehat{\boxtimes}:\widehat L\to(\widehat L)^{op}
+\quad\text{for antitone }\boxtimes.
 \]
 
 Given a completion fixed point
@@ -134,12 +135,24 @@ Only after extending along this polarity should one compare the result back to
 \(\widehat L\). This prevents the extension step from silently treating an
 antitone operation as monotone.
 
+The current finite-checker convention is:
+
+\[
+\widehat{\boxtimes}(C)=\bigl((\boxtimes[C])^{l_L}\bigr)^{u_L},
+\]
+
+the MacNeille closure in \(L^{op}\). The earlier
+`antitone-dual-lower-cut-v0` rule used \(((\boxtimes[C])^{u_L})^{l_L}\), which
+has the wrong polarity for non-lattice examples and is retained only as a
+legacy smoke-test rule.
+
 MacNeille reflection target:
 
 1. Build or choose \(\widehat{\boxtimes}\) with the polarity convention stated.
 2. Find \(q\in\widehat L\) such that \(q=\widehat{\boxtimes}q\).
-3. Check whether \(q=i(p)\) for any \(p\in L\).
-4. If not principal, decide whether compact/definable approximants can recover a
+3. Check whether \(q=i(p)\) for any \(p\in L\), and whether that \(p\) is a
+   syntactic fixed point \(p=\boxtimes p\).
+4. If not reflected, decide whether compact/definable approximants can recover a
    genuine \(p=\boxtimes p\), or record it as a non-syntactic completion fixed
    point.
 
@@ -152,9 +165,10 @@ the antitone extension convention, and the resulting MacNeille cuts.
 Classify candidates into:
 
 1. no completion fixed point;
-2. only principal completion fixed points;
-3. a non-principal completion fixed point with no syntactic fixed point;
-4. a non-principal completion fixed point with a possible compact/definable
+2. reflected principal completion fixed points;
+3. principal but unreflected completion fixed points;
+4. a non-principal completion fixed point with no syntactic fixed point;
+5. a non-principal completion fixed point with a possible compact/definable
    rounding path.
 
 The working protocol lives in
@@ -163,9 +177,9 @@ The working protocol lives in
 ## Next Tasks
 
 - Write the MacNeille completion of a preorder explicitly as Galois-closed cuts.
-- Define canonical extensions of \(\Box\) and \(\boxtimes\).
-- Specify the order-dual extension convention for antitone \(\boxtimes\).
-- Build the finite MacNeille reflection search for 3- and 4-element candidates.
+- Define canonical extensions of \(\Box\) and residual operations.
+- Add APS axiom-package checks to the finite MacNeille reflection search.
+- Search for G2-holding variants of the size-3 non-lattice separation example.
 - Test whether A1-A4 survive completion.
 - Formulate a reflection theorem from completion fixed points to formula fixed points.
 - Turn the reflection-square work package into a precise theorem/countermodel

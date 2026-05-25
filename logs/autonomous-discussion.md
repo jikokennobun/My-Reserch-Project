@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 6
+- Current pass: 7
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -362,3 +362,72 @@ Next step:
 Continue with pass 7 by choosing whether the priority is enumerating
 3-element candidates or reviewing the canonical status of the
 `antitone-dual-lower-cut-v0` extension rule.
+
+### Pass 7 - 2026-05-25 23:04 JST
+
+Focus:
+
+Incorporate Claude Code Review 1 by replacing the wrong-polarity MacNeille
+extension default, separating "principal" from "reflected," and validating the
+new size-3 non-lattice example under the corrected rule.
+
+Proposer:
+
+Accept the review's core correction: for antitone
+\(\boxtimes:L\to L\), treat it as a monotone map \(L\to L^{op}\) and use
+\(((\boxtimes[C])^{l_L})^{u_L}\) as the v1 extension. This makes the old v0
+rule a reproducibility path only. The pass should also accept the new
+`three-element-nolattice-nosynt` model because it gives exactly the desired
+bare finite separation: no syntactic \(\boxtimes\)-fixed point, but a
+non-principal completion fixed point.
+
+Skeptic:
+
+These results are still preAPS/order-theoretic evidence, not APS theorems.
+Both validated examples have G2 and FG2 false, and A1-A4 are not checked by the
+finite checker. The ChatGPT Project source remains a bridge constraint: no
+unrelayed Project content or citation claim was used in this pass. The useful
+next question is which additional axioms destroy or preserve the non-principal
+completion fixed point.
+
+Formalist:
+
+The checker now distinguishes `reflected-only`, `principal-unreflected`,
+`nonprincipal-without-syntactic`, and `nonprincipal-with-rounding-candidate`.
+For v1 it checks the principal extension condition against the dual principal
+cut \(i_{L^{op}}(\boxtimes a)\). The chain smoke test is classified as
+`principal-unreflected`: the completed fixed point is \(i(t)\), but
+\(\boxtimes t=b\neq t\). The non-lattice model is classified as
+`nonprincipal-without-syntactic`, with fixed cut \(\{0,a,b\}\).
+
+Archivist:
+
+Updated the PowerShell checker, regenerated v1 reports for both examples, and
+updated the checker interface, search note, output index, and classification
+registry. Claude Code Review 1 was incorporated where it supplied concrete
+repository artifacts and deferred where it asked for broader APS axiom-package
+search.
+
+Repository updates:
+
+- `scripts/check-macneille-reflection.ps1`: added v1, dual principal checks,
+  reflected status, and refined classifications.
+- `outputs/macneille-reflection-three-chain-antitone-v1.json`: saved the v1
+  chain smoke-test report.
+- `outputs/macneille-reflection-three-element-nolattice-nosynt-v1.json`: saved
+  the v1 non-lattice separation report.
+- `models/macneille-checker-interface.md`: documented v1, reflected status, and
+  extension-condition checks.
+- `models/macneille-reflection-search.md`: recorded the v1 results and marked
+  v0 as legacy.
+- `notes/completion-and-fixed-points.md`: synchronized the v1 antitone
+  extension formula and reflected/principal-unreflected vocabulary.
+- `notes/g2-aps-zoo-classification.md`: updated the current model registry to
+  use v1.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 8 to add either a finite APS-axiom checker layer or a small enumerator
+for G2-holding variants, then test whether the `three-element-nolattice-nosynt`
+phenomenon survives any nontrivial axiom package.

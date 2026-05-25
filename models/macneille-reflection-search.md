@@ -86,21 +86,53 @@ rule.
 If no 3-element candidate exists, move to 4 elements and keep the failed search
 as useful evidence about the strength of the reflection condition.
 
-## First Checker Result
+## Legacy v0 Checker Result
 
 Report:
 [../outputs/macneille-reflection-three-chain-antitone.json](../outputs/macneille-reflection-three-chain-antitone.json).
 
 - Model: `three-chain-antitone`
 - Extension rule: `antitone-dual-lower-cut-v0`
-- Classification: `principal-only`
+- Classification: `principal-only` under the legacy label set
 - Syntactic fixed point: `m`
 - Completed fixed point: `{ b, m, t }`, principal at `t`
 - G2: false
 - FG2: false
 - A1-A4: not checked by the first milestone
 
-This is a smoke-test baseline, not a reflection counterexample. The next
-substantive search should enumerate additional 3-element preorders and antitone
-maps, or first review whether the provisional extension rule should be replaced
-before enumeration.
+This is a smoke-test baseline, not a reflection counterexample. Claude Code
+Review 1 identified `antitone-dual-lower-cut-v0` as the wrong polarity for an
+antitone \(L\to L^{op}\) extension, so current passes should use v1.
+
+## v1 Checker Results
+
+Chain smoke test:
+[../outputs/macneille-reflection-three-chain-antitone-v1.json](../outputs/macneille-reflection-three-chain-antitone-v1.json).
+
+- Model: `three-chain-antitone`
+- Extension rule: `antitone-dual-lower-cut-v1`
+- Classification: `principal-unreflected`
+- Syntactic fixed point: `m`
+- Completed fixed point: `{ b, m, t }`, principal at `t`, not reflected because
+  \(\boxtimes t=b\neq t\)
+- G2: false
+- FG2: false
+- Principal extension condition: no failures when the v1 target is read as the
+  dual principal cut \(i_{L^{op}}(\boxtimes a)\)
+
+Non-lattice separation example:
+[../outputs/macneille-reflection-three-element-nolattice-nosynt-v1.json](../outputs/macneille-reflection-three-element-nolattice-nosynt-v1.json).
+
+- Model: `three-element-nolattice-nosynt`
+- Extension rule: `antitone-dual-lower-cut-v1`
+- Classification: `nonprincipal-without-syntactic`
+- Syntactic fixed points: none
+- Completed fixed point: `{ 0, a, b }`, non-principal
+- G2: false
+- FG2: false
+- Principal extension condition: no failures
+
+The size-3 non-lattice search target is therefore resolved for bare finite
+preAPS data. The next substantive search should test which APS axiom packages
+rule out this non-principal completion fixed point, or find a G2-holding
+variant with the same separation.

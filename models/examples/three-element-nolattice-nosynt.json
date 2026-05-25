@@ -1,0 +1,40 @@
+{
+  "name": "three-element-nolattice-nosynt",
+  "carrier": ["0", "a", "b"],
+  "order": [
+    ["0", "0"],
+    ["a", "a"],
+    ["b", "b"],
+    ["0", "a"],
+    ["0", "b"]
+  ],
+  "top": "a",
+  "bottom": "0",
+  "box": {
+    "0": "0",
+    "a": "a",
+    "b": "b"
+  },
+  "refutability": {
+    "0": "a",
+    "a": "0",
+    "b": "0"
+  },
+  "metadata": {
+    "purpose": "First non-lattice test model for the MacNeille reflection checker. The carrier {0,a,b} with 0 < a, 0 < b, a||b is NOT a lattice: the join a v b does not exist in L. The MacNeille completion adds exactly one non-principal cut {0,a,b}. The antitone map boxtimes has no syntactic fixed point. Under the correct L^op-closure extension, the sole completion fixed point is the non-principal cut {0,a,b}, giving classification nonprincipal-without-syntactic. Under the provisional antitone-dual-lower-cut-v0 rule, the checker WRONGLY reports principal-only at i(a)={0,a}, exposing Defect 1 (wrong polarity in Invoke-CompletedRefutability). This model is the primary regression target for antitone-dual-lower-cut-v1.",
+    "expectedClassificationUnderV0": "principal-only (WRONG)",
+    "expectedClassificationUnderCorrectExtension": "nonprincipal-without-syntactic",
+    "nonPrincipalCut": ["0", "a", "b"],
+    "syntacticFixedPoints": [],
+    "g2": false,
+    "fg2": false,
+    "antitonicity": "boxtimes(0)=a >= boxtimes(a)=0 and boxtimes(0)=a >= boxtimes(b)=0; no other comparable pairs",
+    "latticeStatus": "non-lattice: join a v b is absent from L",
+    "macneilleCuts": [
+      {"cut": ["0"], "principal": true, "principalElement": "0"},
+      {"cut": ["0", "a"], "principal": true, "principalElement": "a"},
+      {"cut": ["0", "b"], "principal": true, "principalElement": "b"},
+      {"cut": ["0", "a", "b"], "principal": false, "note": "missing join a v b"}
+    ]
+  }
+}

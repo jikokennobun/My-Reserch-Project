@@ -37,6 +37,8 @@
 - Drive references: [references/drive.md](references/drive.md)
 - Drive research outputs: [references/research-drive.md](references/research-drive.md)
 - Drive relay workflow: [references/drive-relay.md](references/drive-relay.md)
+- Claude Code bridge: [docs/claude-code-research-bridge.md](docs/claude-code-research-bridge.md)
+- Claude Code review log: [logs/claude-code-review.md](logs/claude-code-review.md)
 - ChatGPT share watchlist: [references/chatgpt-share-watchlist.csv](references/chatgpt-share-watchlist.csv)
 - Obsidian research vault: [references/obsidian-research-vault.md](references/obsidian-research-vault.md)
 - Obsidian research index: [notes/obsidian-research-index.md](notes/obsidian-research-index.md)

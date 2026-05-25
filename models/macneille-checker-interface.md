@@ -11,7 +11,7 @@ First implementation:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-macneille-reflection.ps1 `
   -ModelPath .\models\examples\three-element-example.json `
-  -ExtensionRule antitone-dual-lower-cut-v0 `
+  -ExtensionRule antitone-dual-lower-cut-v1 `
   -OutputPath .\outputs\macneille-reflection-report.json
 ```
 
@@ -19,6 +19,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-macneille-reflection.ps
 
 - `ModelPath`: JSON file conforming to `models/finite-aps-schema.json`.
 - `ExtensionRule`: named rule for extending \(\boxtimes\) to MacNeille cuts.
+  The current default is `antitone-dual-lower-cut-v1`; legacy reports may still
+  use `antitone-dual-lower-cut-v0`.
 - `OutputPath`: optional JSON report path. If omitted, the checker prints a
   compact table to stdout.
 
@@ -42,6 +44,11 @@ For each accepted model, compute:
 - syntactic fixed points \(p=\boxtimes p\) in \(L\);
 - completed fixed points \(q=\widehat{\boxtimes}q\) under the selected rule;
 - whether each completed fixed point is principal;
+- whether each principal completed fixed point is reflected by an actual
+  syntactic fixed point;
+- whether the selected extension rule preserves principal cuts. For v1, the
+  expected target is the dual principal cut
+  \(i_{L^{op}}(\boxtimes a)\), not the lower-cut principal \(i_L(\boxtimes a)\);
 - G2 and FG2 status when the required terms are available.
 
 ## Output Classification
@@ -49,12 +56,17 @@ For each accepted model, compute:
 Each model receives exactly one primary classification:
 
 - `no-completion-fixed-point`
-- `principal-only`
+- `reflected-only`
+- `principal-unreflected`
 - `nonprincipal-without-syntactic`
 - `nonprincipal-with-rounding-candidate`
 
+Legacy v0 reports may contain `principal-only`; treat that label as a pre-review
+classification that did not distinguish reflected from principal-unreflected
+fixed points.
+
 The report must also include warnings for unchecked APS axioms, missing optional
-operations, or extension-rule limitations.
+operations, extension-rule limitations, or principal-extension failures.
 
 ## First Milestone
 
@@ -63,8 +75,12 @@ The first implementation supports:
 - finite preorders;
 - total `box` and `refutability` maps;
 - MacNeille cuts by exhaustive subset enumeration;
-- the provisional `antitone-dual-lower-cut-v0` extension rule;
+- the current `antitone-dual-lower-cut-v1` extension rule, which treats
+  antitone refutability as a monotone map \(L\to L^{op}\) and uses
+  \(((\boxtimes[C])^{l_L})^{u_L}\);
+- the legacy `antitone-dual-lower-cut-v0` extension rule, retained only to
+  reproduce earlier output and expose the wrong-polarity issue;
 - JSON and console-table output.
 
-No result from the first milestone should be treated as a theorem until the
-extension rule is reviewed against the completion-reflection square.
+No checker result should be treated as an APS theorem until the relevant APS
+axioms and completion-stability assumptions are verified for the model family.

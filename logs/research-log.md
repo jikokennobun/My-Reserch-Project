@@ -2,11 +2,22 @@
 
 ## 2026-05-25
 
+- Added a Claude Code bridge for independent research review: a stable prompt,
+  handoff generator, review log, and workflow links so Claude Code can challenge
+  Codex passes without becoming a second source of truth.
 - Resumed the Codex Research Discussion Loop as an ongoing 30-minute heartbeat
   automation with no six-pass stop condition, while keeping the existing pass
   count and research trace.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-25T02:36:05+09:00`; all 18 tracked `https://chatgpt.com/share/...` links were reachable and unchanged, so no note ingestion or open-question extraction was needed this run.
 - Relay sync: checked the recorded Google Drive research/reference folders for updates since `2026-05-22`; no newly relevant papers, slides, Gemini outputs, or Claude outputs were detected.
+- Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-25T17:08:31+09:00`; all 18 links remained `unchanged`, so no note updates were required.
+- Relay sync: listed the Google Drive research `Paper`, `Slide`, and `Gemini` folders for anything newer than `2026-05-22`; nothing new appeared. The `Claude` folder listing timed out in this environment, so it was not revalidated this pass.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-25T22:59:42+09:00`; all 18 links failed (`remote server unreachable`). Google Drive research/reference folders still show nothing newer than `2026-05-22`.
+- Autonomous discussion pass 7: incorporated Claude Code Review 1 into the
+  MacNeille checker, added the corrected `antitone-dual-lower-cut-v1` rule,
+  regenerated v1 reports for the chain and size-3 non-lattice models, and
+  recorded the `principal-unreflected` versus `nonprincipal-without-syntactic`
+  separation.
 
 ## 2026-05-24
 

@@ -2,8 +2,8 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$ModelPath,
 
-    [ValidateSet("antitone-dual-lower-cut-v0")]
-    [string]$ExtensionRule = "antitone-dual-lower-cut-v0",
+    [ValidateSet("antitone-dual-lower-cut-v0", "antitone-dual-lower-cut-v1")]
+    [string]$ExtensionRule = "antitone-dual-lower-cut-v1",
 
     [string]$OutputPath = ""
 )
@@ -196,16 +196,26 @@ function Get-MacNeilleClosure {
     return [string[]](Get-Lowers -Subset (Get-Uppers -Subset $Subset))
 }
 
+function Get-MacNeilleDualClosure {
+    param([string[]]$Subset)
+
+    return [string[]](Get-Uppers -Subset (Get-Lowers -Subset $Subset))
+}
+
 function Invoke-CompletedRefutability {
     param([string[]]$Cut)
 
+    $image = @()
+    foreach ($x in $Cut) {
+        $image += $refutability[$x]
+    }
+
     switch ($ExtensionRule) {
         "antitone-dual-lower-cut-v0" {
-            $image = @()
-            foreach ($x in $Cut) {
-                $image += $refutability[$x]
-            }
             return [string[]](Get-MacNeilleClosure -Subset $image)
+        }
+        "antitone-dual-lower-cut-v1" {
+            return [string[]](Get-MacNeilleDualClosure -Subset $image)
         }
     }
 }
@@ -223,15 +233,22 @@ foreach ($subset in (Get-PowerSet -Carrier $carrier)) {
 }
 
 $principalByKey = @{}
+$principalCutByElement = @{}
+$dualPrincipalCutByElement = @{}
 $principalCuts = @()
 foreach ($x in $carrier) {
     $cut = Get-MacNeilleClosure -Subset @($x)
+    $dualCut = Get-MacNeilleDualClosure -Subset @($x)
     $key = Get-SubsetKey -Subset $cut -Rank $rank
     $principalByKey[$key] = $x
+    $principalCutByElement[$x] = [string[]]$cut
+    $dualPrincipalCutByElement[$x] = [string[]]$dualCut
     $principalCuts += [pscustomobject]@{
         element = $x
         cut = @($cut | Sort-Object { $rank[$_] })
         display = Format-Set -Subset $cut -Rank $rank
+        dualCut = @($dualCut | Sort-Object { $rank[$_] })
+        dualDisplay = Format-Set -Subset $dualCut -Rank $rank
     }
 }
 
@@ -249,35 +266,96 @@ foreach ($cut in $closedCuts) {
     $extendedKey = Get-SubsetKey -Subset $extended -Rank $rank
     if ($cutKey -eq $extendedKey) {
         $isPrincipal = $principalByKey.ContainsKey($cutKey)
+        $principalElement = if ($isPrincipal) { $principalByKey[$cutKey] } else { $null }
+        $isReflected = if ($isPrincipal) {
+            Test-Equivalent -Left $principalElement -Right $refutability[$principalElement]
+        } else {
+            $false
+        }
         $completedFixedPoints += [pscustomobject]@{
             cut = @($cut | Sort-Object { $rank[$_] })
             display = Format-Set -Subset $cut -Rank $rank
             principal = $isPrincipal
-            principalElement = if ($isPrincipal) { $principalByKey[$cutKey] } else { $null }
+            principalElement = $principalElement
+            reflected = $isReflected
+        }
+    }
+}
+
+$extensionConditionFailures = @()
+foreach ($x in $carrier) {
+    $sourceCut = [string[]]($principalCutByElement[$x])
+    $actualCut = Invoke-CompletedRefutability -Cut $sourceCut
+    $expectedCut = if ($ExtensionRule -eq "antitone-dual-lower-cut-v1") {
+        [string[]]($dualPrincipalCutByElement[$refutability[$x]])
+    } else {
+        [string[]]($principalCutByElement[$refutability[$x]])
+    }
+    $expectedEmbedding = if ($ExtensionRule -eq "antitone-dual-lower-cut-v1") {
+        "dual-principal"
+    } else {
+        "lower-principal"
+    }
+    $actualKey = Get-SubsetKey -Subset $actualCut -Rank $rank
+    $expectedKey = Get-SubsetKey -Subset $expectedCut -Rank $rank
+
+    if ($actualKey -ne $expectedKey) {
+        $extensionConditionFailures += [pscustomobject]@{
+            element = $x
+            refutability = $refutability[$x]
+            expectedEmbedding = $expectedEmbedding
+            actual = @($actualCut | Sort-Object { $rank[$_] })
+            actualDisplay = Format-Set -Subset $actualCut -Rank $rank
+            expected = @($expectedCut | Sort-Object { $rank[$_] })
+            expectedDisplay = Format-Set -Subset $expectedCut -Rank $rank
         }
     }
 }
 
 $nonPrincipalCount = @($completedFixedPoints | Where-Object { -not $_.principal }).Count
+$principalUnreflectedCount = @($completedFixedPoints | Where-Object { $_.principal -and -not $_.reflected }).Count
+$reflectedCount = @($completedFixedPoints | Where-Object { $_.reflected }).Count
 $classification = if ($completedFixedPoints.Count -eq 0) {
     "no-completion-fixed-point"
-} elseif ($nonPrincipalCount -eq 0) {
-    "principal-only"
-} elseif ($syntacticFixedPoints.Count -eq 0) {
+} elseif ($nonPrincipalCount -gt 0 -and $syntacticFixedPoints.Count -eq 0) {
     "nonprincipal-without-syntactic"
-} else {
+} elseif ($nonPrincipalCount -gt 0) {
     "nonprincipal-with-rounding-candidate"
+} elseif ($principalUnreflectedCount -gt 0) {
+    "principal-unreflected"
+} elseif ($reflectedCount -gt 0) {
+    "reflected-only"
+} else {
+    "principal-only"
 }
 
 $g2Antecedent = Test-Leq -Left $refutability[$top] -Right $bottom
 $g2 = if ($g2Antecedent) { Test-Leq -Left $top -Right $bottom } else { $true }
 $fg2 = Test-Leq -Left $refutability[$refutability[$top]] -Right $refutability[$top]
 
+$extensionDescription = if ($ExtensionRule -eq "antitone-dual-lower-cut-v1") {
+    "v1: treat antitone refutability as a monotone map L -> L^op and close the pointwise image by the L^op MacNeille closure ((image)^l_L)^u_L."
+} else {
+    "Legacy v0: close the pointwise refutability image by the L MacNeille lower-cut closure ((image)^u_L)^l_L. This is retained to reproduce earlier smoke-test output and has the wrong polarity for antitone L -> L^op."
+}
+
+$warnings = @(
+    "APS axioms A1-A4 are not checked by this finite checker."
+)
+if ($ExtensionRule -eq "antitone-dual-lower-cut-v0") {
+    $warnings = @(
+        "The selected v0 rule has the wrong polarity for antitone L -> L^op; use v1 for current research passes."
+    ) + $warnings
+}
+if ($extensionConditionFailures.Count -gt 0) {
+    $warnings += "The selected extension rule does not preserve all principal cuts for this model."
+}
+
 $report = [pscustomobject]@{
     model = $model.name
     modelPath = $resolvedModelPath
     extensionRule = $ExtensionRule
-    extensionDescription = "Provisional v0: close the pointwise refutability image of a MacNeille lower cut. This records the antitone-dual issue but is not yet a theorem-level canonical extension."
+    extensionDescription = $extensionDescription
     classification = $classification
     carrierSize = $carrier.Count
     closedCutCount = $closedCuts.Count
@@ -291,12 +369,10 @@ $report = [pscustomobject]@{
     principalCuts = $principalCuts
     syntacticFixedPoints = $syntacticFixedPoints
     completedFixedPoints = $completedFixedPoints
+    extensionConditionFailures = $extensionConditionFailures
     g2 = $g2
     fg2 = $fg2
-    warnings = @(
-        "The extension rule is provisional and must be reviewed against the completion-reflection square.",
-        "APS axioms A1-A4 are not checked by this first milestone."
-    )
+    warnings = $warnings
 }
 
 if (-not [string]::IsNullOrWhiteSpace($OutputPath)) {
@@ -314,5 +390,13 @@ Write-Host "Syntactic fixed point(s): $($syntacticFixedPoints -join ', ')"
 Write-Host "Completed fixed point classification: $classification"
 foreach ($fixedPoint in $completedFixedPoints) {
     $principalText = if ($fixedPoint.principal) { "principal: $($fixedPoint.principalElement)" } else { "non-principal" }
-    Write-Host "  $($fixedPoint.display) [$principalText]"
+    $reflectionText = if ($fixedPoint.principal) {
+        if ($fixedPoint.reflected) { "reflected" } else { "unreflected" }
+    } else {
+        "not reflected"
+    }
+    Write-Host "  $($fixedPoint.display) [$principalText; $reflectionText]"
+}
+if ($extensionConditionFailures.Count -gt 0) {
+    Write-Host "Principal extension condition failures: $($extensionConditionFailures.Count)"
 }

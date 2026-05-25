@@ -15,8 +15,20 @@
   completion fixed point back to \(L\).
 - For MacNeille completion, define the order-dual extension convention for
   antitone \(\boxtimes\) and test whether fixed points can be non-principal cuts.
-- Search 3- and 4-element APS/preAPS candidates for a non-principal MacNeille
-  completion fixed point that has no syntactic \(\boxtimes\)-fixed point.
+- **[Resolved at size 3]** Search for a non-principal MacNeille completion fixed
+  point that has no syntactic \(\boxtimes\)-fixed point. The model
+  `three-element-nolattice-nosynt` achieves this: \(L=\{0,a,b\}\) with
+  \(0<a,b\), \(a\parallel b\), \(\boxtimes:0\mapsto a,a\mapsto 0,b\mapsto 0\)
+  has no syntactic fixed point and has a non-principal completion fixed point
+  \(\{0,a,b\}\) under the correct \(L^{op}\)-closure extension. The next
+  question is which APS axiom packages allow or rule out this configuration.
+- **[New]** Separate "principal" from "reflected" for completion fixed points.
+  A principal completion fixed point \(q=i(a)\) need not satisfy \(\boxtimes a=a\).
+  Example: `three-chain-antitone` gives principal completion fixed point \(i(t)\)
+  with \(\boxtimes t = b\neq t\). Characterize when every principal completion
+  fixed point is reflected.
+- **[New]** Which APS/preAPS axioms (A1--A4, G2, FG2, MND4) force all completion
+  fixed points to be principal? Which force them to be reflected?
 - Which APS axioms survive completion?
 - Which extensions of \(\Box\) and \(\boxtimes\) are canonical or stable?
 - Can completion stability be tied to cut elimination in the Ciabattoni-Galatos-Terui style?

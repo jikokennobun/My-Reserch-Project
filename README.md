@@ -15,6 +15,8 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 - [references/drive-relay.md](references/drive-relay.md): ChatGPT Project/Drive/Codex同期ルール
 - [references/chatgpt-share-watchlist.csv](references/chatgpt-share-watchlist.csv): ChatGPT共有リンク監視リスト
 - [references/obsidian-research-vault.md](references/obsidian-research-vault.md): Obsidian研究Vault連携ルール
+- [docs/claude-code-research-bridge.md](docs/claude-code-research-bridge.md): Claude Code連携ルール
+- [logs/claude-code-review.md](logs/claude-code-review.md): Claude Codeレビュー記録
 - [notes/obsidian-research-index.md](notes/obsidian-research-index.md): Obsidian研究ノート索引
 - [outputs/pdf/](outputs/pdf/): 生成・集約したPDF
 - [logs/research-log.md](logs/research-log.md): 作業ログ
@@ -22,6 +24,7 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 - [scripts/collect-pdfs.ps1](scripts/collect-pdfs.ps1): ローカルPDF集約スクリプト
 - [scripts/check-chatgpt-shares.ps1](scripts/check-chatgpt-shares.ps1): ChatGPT共有リンク変更検出スクリプト
 - [scripts/index-obsidian-research.ps1](scripts/index-obsidian-research.ps1): Obsidian研究ノート索引生成スクリプト
+- [scripts/new-claude-code-handoff.ps1](scripts/new-claude-code-handoff.ps1): Claude Codeハンドオフ生成スクリプト
 
 ## Workflow
 
@@ -43,4 +46,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-chatgpt-shares.ps1
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\index-obsidian-research.ps1
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\new-claude-code-handoff.ps1 -Focus "Review the next MacNeille finite-model search step."
 ```

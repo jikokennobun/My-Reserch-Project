@@ -105,6 +105,31 @@ a stated definable/compact rounding lemma recovers such a \(p\) from \(q\).
 For antitone \(\boxtimes\), the extension should be treated as a monotone map
 into the order dual before any comparison back with \(\widehat L\).
 
+The **correct lower extension** of an antitone \(\boxtimes:L\to L\) to
+MacNeille cuts is the map \(\widehat{\boxtimes}:\widehat L\to(\widehat L)^{op}\)
+defined by:
+
+\[
+\widehat{\boxtimes}(C) = \bigl((\boxtimes[C])^{l_L}\bigr)^{u_L},
+\]
+
+i.e., the \(L^{op}\)-MacNeille closure of the pointwise image \(\boxtimes[C]\).
+This satisfies the extension condition
+\(\widehat{\boxtimes}(i(a))=i_{L^{op}}(\boxtimes a)\) for all \(a\in L\).
+
+**Warning**: computing \(((\boxtimes[C])^{u_L})^{l_L}\) instead (the
+\(L\)-MacNeille closure) is the wrong polarity. It agrees with the correct
+formula on lattice models (where every cut is principal) but diverges on
+non-lattice models, producing spurious completion fixed points.
+
+A completion fixed point \(q\) is **reflected** iff \(q=i(p)\) for some
+syntactic fixed point \(p\in L\) (i.e., \(\boxtimes p = p\)).
+
+A completion fixed point is **principal-unreflected** iff \(q=i(a)\) for some
+\(a\in L\) but \(\boxtimes a \neq a\). Principal-unreflected fixed points can
+appear even in lattice models (as in `three-chain-antitone` where \(q=i(t)\)
+with \(\boxtimes t = b\neq t\)).
+
 ## Residuated APS
 
 A residuated APS adds a resource composition and residuals:

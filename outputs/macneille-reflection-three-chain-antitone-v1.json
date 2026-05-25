@@ -1,0 +1,100 @@
+﻿{
+    "model":  "three-chain-antitone",
+    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\models\\examples\\three-chain-antitone.json",
+    "extensionRule":  "antitone-dual-lower-cut-v1",
+    "extensionDescription":  "v1: treat antitone refutability as a monotone map L -\u003e L^op and close the pointwise image by the L^op MacNeille closure ((image)^l_L)^u_L.",
+    "classification":  "principal-unreflected",
+    "carrierSize":  3,
+    "closedCutCount":  3,
+    "closedCuts":  [
+                       {
+                           "cut":  [
+                                       "b"
+                                   ],
+                           "display":  "{ b }",
+                           "principalElement":  "b"
+                       },
+                       {
+                           "cut":  [
+                                       "b",
+                                       "m"
+                                   ],
+                           "display":  "{ b, m }",
+                           "principalElement":  "m"
+                       },
+                       {
+                           "cut":  [
+                                       "b",
+                                       "m",
+                                       "t"
+                                   ],
+                           "display":  "{ b, m, t }",
+                           "principalElement":  "t"
+                       }
+                   ],
+    "principalCuts":  [
+                          {
+                              "element":  "b",
+                              "cut":  [
+                                          "b"
+                                      ],
+                              "display":  "{ b }",
+                              "dualCut":  [
+                                              "b",
+                                              "m",
+                                              "t"
+                                          ],
+                              "dualDisplay":  "{ b, m, t }"
+                          },
+                          {
+                              "element":  "m",
+                              "cut":  [
+                                          "b",
+                                          "m"
+                                      ],
+                              "display":  "{ b, m }",
+                              "dualCut":  [
+                                              "m",
+                                              "t"
+                                          ],
+                              "dualDisplay":  "{ m, t }"
+                          },
+                          {
+                              "element":  "t",
+                              "cut":  [
+                                          "b",
+                                          "m",
+                                          "t"
+                                      ],
+                              "display":  "{ b, m, t }",
+                              "dualCut":  [
+                                              "t"
+                                          ],
+                              "dualDisplay":  "{ t }"
+                          }
+                      ],
+    "syntacticFixedPoints":  [
+                                 "m"
+                             ],
+    "completedFixedPoints":  [
+                                 {
+                                     "cut":  [
+                                                 "b",
+                                                 "m",
+                                                 "t"
+                                             ],
+                                     "display":  "{ b, m, t }",
+                                     "principal":  true,
+                                     "principalElement":  "t",
+                                     "reflected":  false
+                                 }
+                             ],
+    "extensionConditionFailures":  [
+
+                                   ],
+    "g2":  false,
+    "fg2":  false,
+    "warnings":  [
+                     "APS axioms A1-A4 are not checked by this finite checker."
+                 ]
+}
