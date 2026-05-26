@@ -126,6 +126,20 @@ least element and converts the order into the four-element Boolean lattice, so
 the next classification question is which G2-ZOO witnesses survive this
 bottom-discipline filter.
 
+The finite filter report
+`outputs/bottom-discipline-filter-g2-zoo.json` checks this directly. Under pure
+order enforcement, while keeping \(\boxtimes\) fixed:
+
+- antitonicity survives for `M-000`, `M-010`, `M-111`, `M4-G2FG2FP`, and the
+  already repaired `M4-G2FG2FP-order-plus-bot-c-residuated`;
+- only `M-111` and the M4 pair keep the full recorded
+  G2/FG2/FP/nFG2 profile unchanged;
+- `M-010` still witnesses FG2 without G2, but bottom discipline turns its
+  two-cycle into an equivalence \(0\sim\bot\), adding FP-synt and all checked
+  nFG2 instances;
+- `M-001`, `M-011`, `M-100`, `M-101`, `M-110`, and `nfg2-depth-3` fail the
+  pure-order repair because \(\boxtimes\) ceases to be antitone.
+
 ---
 
 ## Axis III — Proof-Theory Axis: What structural rules and stability properties hold?
@@ -234,8 +248,9 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Test bottom discipline \(\forall x(\bot\le x)\) as a filter on the finite
-   G2-ZOO and the \(D_N\) first-true hierarchy.
+3. Search for bottom-disciplined replacement witnesses for the separations lost
+   by pure bottom-order enforcement, especially G2-not-FG2 and arbitrary-depth
+   first-true nFG2.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

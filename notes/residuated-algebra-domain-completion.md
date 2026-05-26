@@ -141,6 +141,16 @@ random order edge; it is the minimal bounded-order/lattice completion of the M4
 witness. The remaining question is whether bottom discipline is intended in the
 APS package under study, especially in the BS16 contraction-free setting.
 
+Pass 14 tested bottom discipline as a finite-model filter. The report
+`../outputs/bottom-discipline-filter-g2-zoo.json` shows that only `M-000`,
+`M-010`, `M-111`, `M4-G2FG2FP`, and the already repaired M4 model remain
+antitone after pure bottom-order enforcement. Full recorded behavior is stable
+only for `M-111` and the M4 pair. The arbitrary-depth `nfg2-depth-3` witness
+does not survive this enforcement: making its bottom element \(s\) below
+\(T,a_1,a_2,a_3\) would require antitone image relations
+\(a_1,a_2,a_3,a_4\le s\), which are absent. Thus bottom discipline is a real
+structural filter, not just a notational cleanup.
+
 ## Next Tasks
 
 - Define "residuated dcpo" carefully.

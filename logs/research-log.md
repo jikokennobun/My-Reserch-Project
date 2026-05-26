@@ -14,6 +14,10 @@
   missing bottom-discipline instance \(\forall x(\bot\le x)\), i.e. ex-falso
   weakening for the \(c\)-branch, and opened the finite-model test of which
   G2-ZOO and \(D_N\) separations survive that discipline.
+- Autonomous discussion pass 14: added a bottom-discipline filter script and
+  report; pure bottom-order enforcement preserves antitonicity for `M-000`,
+  `M-010`, `M-111`, `M4-G2FG2FP`, and the repaired M4 model, but the current
+  `nfg2-depth-3` witness and five 3-element witnesses break antitonicity.
 
 ## 2026-05-26
 

@@ -13,6 +13,6 @@
 - Google Drive folder scanning is currently blocked because the Drive MCP connector fails to start (handshake timeout). Determine whether this is a local auth/session issue or an MCP runtime issue, and re-enable folder listing so relay sync can detect new PDFs/slides/AI outputs.
 - Does the finite orbit-stabilization theorem for all-level nFG2 extend to infinite APS under an existing proof-theoretic axiom, or does it require a new orbit well-foundedness/no-infinite-descent condition?
 - Which nontrivial APS axiom packages preserve the arbitrary-depth \(D_N\) nFG2 first-true witnesses, and which force collapse of the first-true depth?
-- Does bottom discipline \(\forall x(\bot\le x)\), identified by the \(\bot\le c\) repair of `M4-G2FG2FP`, preserve the intended BS16/resource-sensitive G2-ZOO separations or collapse them?
+- Are there bottom-disciplined finite preAPS witnesses for the G2-ZOO separations and arbitrary first-true nFG2 depths that fail under pure bottom-order enforcement?
 
 ## Later

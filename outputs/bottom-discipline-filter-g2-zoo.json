@@ -1,0 +1,952 @@
+{
+  "principle": "bottom discipline",
+  "formula": "forall x, bottom <= x",
+  "nfg2Depth": 8,
+  "summary": {
+    "modelsChecked": 11,
+    "alreadyBottomDisciplined": [
+      "M4-G2FG2FP-order-plus-bot-c-residuated"
+    ],
+    "validAfterPureOrderEnforcement": [
+      "M-000",
+      "M-010",
+      "M-111",
+      "M4-G2FG2FP",
+      "M4-G2FG2FP-order-plus-bot-c-residuated"
+    ],
+    "corePropertiesStableAfterEnforcement": [
+      "M-111",
+      "M4-G2FG2FP",
+      "M4-G2FG2FP-order-plus-bot-c-residuated"
+    ],
+    "invalidAfterPureOrderEnforcement": [
+      "M-001",
+      "M-011",
+      "M-100",
+      "M-101",
+      "M-110",
+      "nfg2-depth-3"
+    ]
+  },
+  "entries": [
+    {
+      "name": "M-000",
+      "path": "models\\examples\\M-000.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": false,
+        "nFG2Pattern": "FFFFFFFF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": false,
+        "nFG2Pattern": "FTFTFTFT",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T"
+        ]
+      },
+      "corePropertiesStable": false
+    },
+    {
+      "name": "M-001",
+      "path": "models\\examples\\M-001.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": false,
+      "antitoneFailuresAfterEnforcement": [
+        {
+          "orderPair": [
+            "bot",
+            "c"
+          ],
+          "requiredImagePair": [
+            "c",
+            "T"
+          ]
+        }
+      ],
+      "before": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": false,
+        "nFG2Pattern": "FFFFFFFF",
+        "FPSyntactic": [
+          "c"
+        ],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": false,
+        "nFG2Pattern": "FTFTFTFT",
+        "FPSyntactic": [
+          "c"
+        ],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T",
+          "bot",
+          "T"
+        ]
+      },
+      "corePropertiesStable": false
+    },
+    {
+      "name": "M-010",
+      "path": "models\\examples\\M-010.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "0"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "0"
+        ]
+      ],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": true,
+        "nFG2Pattern": "TFTFTFTF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "0",
+          "bot",
+          "0",
+          "bot",
+          "0",
+          "bot",
+          "0",
+          "bot",
+          "0"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "0",
+          "bot"
+        ],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "0",
+          "bot",
+          "0",
+          "bot",
+          "0",
+          "bot",
+          "0",
+          "bot",
+          "0"
+        ]
+      },
+      "corePropertiesStable": false
+    },
+    {
+      "name": "M-011",
+      "path": "models\\examples\\M-011.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": false,
+      "antitoneFailuresAfterEnforcement": [
+        {
+          "orderPair": [
+            "bot",
+            "c"
+          ],
+          "requiredImagePair": [
+            "T",
+            "bot"
+          ]
+        }
+      ],
+      "before": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "bot"
+        ],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": false,
+        "G2Antecedent": true,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "bot"
+        ],
+        "orbitPrefix": [
+          "T",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot",
+          "bot"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "M-100",
+      "path": "models\\examples\\M-100.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": false,
+      "antitoneFailuresAfterEnforcement": [
+        {
+          "orderPair": [
+            "bot",
+            "T"
+          ],
+          "requiredImagePair": [
+            "c",
+            "T"
+          ]
+        }
+      ],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFFFFF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFFFFF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "M-101",
+      "path": "models\\examples\\M-101.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": false,
+      "antitoneFailuresAfterEnforcement": [
+        {
+          "orderPair": [
+            "bot",
+            "T"
+          ],
+          "requiredImagePair": [
+            "c",
+            "bot"
+          ]
+        },
+        {
+          "orderPair": [
+            "bot",
+            "c"
+          ],
+          "requiredImagePair": [
+            "T",
+            "bot"
+          ]
+        }
+      ],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFFFFF",
+        "FPSyntactic": [
+          "bot"
+        ],
+        "orbitPrefix": [
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFFFFF",
+        "FPSyntactic": [
+          "bot"
+        ],
+        "orbitPrefix": [
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "M-110",
+      "path": "models\\examples\\M-110.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": false,
+      "antitoneFailuresAfterEnforcement": [
+        {
+          "orderPair": [
+            "bot",
+            "T"
+          ],
+          "requiredImagePair": [
+            "c",
+            "T"
+          ]
+        }
+      ],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TFTFTFTF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TFTFTFTF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T",
+          "c",
+          "T"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "M-111",
+      "path": "models\\examples\\M-111.json",
+      "carrierSize": 3,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "T"
+        ],
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "T"
+        ],
+        "orbitPrefix": [
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "T"
+        ],
+        "orbitPrefix": [
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T",
+          "T"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "M4-G2FG2FP",
+      "path": "models\\examples\\M4-G2FG2FP.json",
+      "carrierSize": 4,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "bot",
+          "c"
+        ]
+      ],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "p"
+        ],
+        "orbitPrefix": [
+          "T",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "p"
+        ],
+        "orbitPrefix": [
+          "T",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "M4-G2FG2FP-order-plus-bot-c-residuated",
+      "path": "models\\examples\\M4-G2FG2FP-order-plus-bot-c-residuated.json",
+      "carrierSize": 4,
+      "bottom": "bot",
+      "alreadyBottomDisciplined": true,
+      "missingBottomPairs": [],
+      "enforcedOrderAdds": [],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "p"
+        ],
+        "orbitPrefix": [
+          "T",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TTTTTTTT",
+        "FPSyntactic": [
+          "p"
+        ],
+        "orbitPrefix": [
+          "T",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "nfg2-depth-3",
+      "path": "models\\examples\\nfg2-depth-3.json",
+      "carrierSize": 6,
+      "bottom": "s",
+      "alreadyBottomDisciplined": false,
+      "missingBottomPairs": [
+        [
+          "s",
+          "T"
+        ],
+        [
+          "s",
+          "a1"
+        ],
+        [
+          "s",
+          "a2"
+        ],
+        [
+          "s",
+          "a3"
+        ]
+      ],
+      "enforcedOrderAdds": [
+        [
+          "s",
+          "T"
+        ],
+        [
+          "s",
+          "a1"
+        ],
+        [
+          "s",
+          "a2"
+        ],
+        [
+          "s",
+          "a3"
+        ]
+      ],
+      "enforcedAntitone": false,
+      "antitoneFailuresAfterEnforcement": [
+        {
+          "orderPair": [
+            "s",
+            "T"
+          ],
+          "requiredImagePair": [
+            "a1",
+            "s"
+          ]
+        },
+        {
+          "orderPair": [
+            "s",
+            "a1"
+          ],
+          "requiredImagePair": [
+            "a2",
+            "s"
+          ]
+        },
+        {
+          "orderPair": [
+            "s",
+            "a2"
+          ],
+          "requiredImagePair": [
+            "a3",
+            "s"
+          ]
+        },
+        {
+          "orderPair": [
+            "s",
+            "a3"
+          ],
+          "requiredImagePair": [
+            "a4",
+            "s"
+          ]
+        }
+      ],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFTTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFTTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "corePropertiesStable": true
+    }
+  ]
+}

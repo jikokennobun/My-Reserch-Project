@@ -27,6 +27,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/search-residuated-tensor.py](../scripts/search-residuated-tensor.py).
 - Same-carrier order repair search script:
   [../scripts/search-residuated-order-expansions.py](../scripts/search-residuated-order-expansions.py).
+- Bottom-discipline filter script:
+  [../scripts/check-bottom-discipline.py](../scripts/check-bottom-discipline.py).
 
 ## Minimal Model Fields
 

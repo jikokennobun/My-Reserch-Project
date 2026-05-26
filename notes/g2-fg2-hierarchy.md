@@ -322,6 +322,32 @@ weakening for the \(c\)-branch rather than as an arbitrary residuation trick.
 Whether that principle is acceptable depends on the intended resource-sensitive
 APS axiom package.
 
+### Bottom Discipline Filter
+
+The script `scripts/check-bottom-discipline.py` tests the finite G2-ZOO models
+by adding every missing relation \(\bot\le x\), then checking whether the fixed
+\(\boxtimes\) map remains antitone and whether the G2/FG2/FP/nFG2 behavior is
+stable. The report is saved as
+`outputs/bottom-discipline-filter-g2-zoo.json`.
+
+The current finite witnesses split as follows:
+
+| Model | Pure bottom-order repair keeps antitone? | Main effect |
+|-------|------------------------------------------|-------------|
+| `M-000` | yes | G2/FG2/FP stay false, but nFG2 changes from `FFFFFFFF` to `FTFTFTFT` |
+| `M-010` | yes | FG2-not-G2 survives; all checked nFG2 become true and FP appears by \(0\sim\bot\) |
+| `M-111` | yes | G2+FG2+FP stays stable |
+| `M4-G2FG2FP` | yes | G2+FG2+FP stays stable; this is exactly the `bot <= c` repair |
+| `M4-G2FG2FP-order-plus-bot-c-residuated` | already | already bottom-disciplined and stable |
+| `M-001`, `M-011`, `M-100`, `M-101`, `M-110` | no | adding bottom pairs breaks antitonicity of \(\boxtimes\) |
+| `nfg2-depth-3` | no | adding \(s\le T,a_1,a_2,a_3\) breaks antitonicity |
+
+Consequently bottom discipline preserves some core separations, including
+FG2-not-G2 via the repaired `M-010`, but it destroys the current pure-order
+versions of G2-not-FG2, G2+FP-not-FG2, G2+FG2-not-FP, and arbitrary-depth nFG2
+strictness. Those separations now require fresh bottom-disciplined witnesses or
+a proof that bottom discipline rules them out.
+
 ---
 
 ## Open Tasks
@@ -329,10 +355,8 @@ APS axiom package.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Test bottom discipline as an APS axiom: does adding
-  \(\forall x\,(\bot\le x)\) preserve the intended BS16/resource-sensitive
-  separations, or does it smuggle in a structural rule that should remain absent?
-- Decide whether the arbitrary-depth witnesses \(D_N\) can be constrained by
-  nontrivial APS axioms without collapsing their nFG2 first-true depth.
+- Search for bottom-disciplined replacement witnesses for the separations whose
+  current pure-order repairs break antitonicity, especially G2-not-FG2 and
+  arbitrary-depth first-true nFG2.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

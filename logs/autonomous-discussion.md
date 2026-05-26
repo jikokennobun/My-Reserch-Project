@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 13
+- Current pass: 14
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -898,3 +898,69 @@ Next step:
 Use pass 14 to implement or run a bottom-discipline filter over the finite
 G2-ZOO models and the \(D_N\) example, recording which separations survive,
 which collapse, and which become better candidates for residuated APS.
+
+### Pass 14 - 2026-05-27 05:47 JST
+
+Focus:
+
+Run bottom discipline as a finite-model filter over the current G2-ZOO
+witnesses and the checked `nfg2-depth-3` example.
+
+Proposer:
+
+The direct test is to keep each carrier, \(T\), \(\bot\), \(\Box\), and
+\(\boxtimes\) fixed, add every missing pair \(\bot\le x\), close transitively,
+and then ask whether \(\boxtimes\) is still antitone. If it is, compare G2,
+FG2, FP-synt, collapse, and the checked nFG2 prefix before and after bottom
+enforcement.
+
+Skeptic:
+
+This is only a pure order-enforcement test. A model that fails it is not proved
+impossible under bottom discipline; it only means that this particular sparse
+witness cannot be repaired by adding bottom pairs while leaving \(\boxtimes\)
+unchanged. Replacement witnesses may exist with different carriers, orders, or
+refutability maps.
+
+Formalist:
+
+The report `outputs/bottom-discipline-filter-g2-zoo.json` checks 11 models.
+Only `M4-G2FG2FP-order-plus-bot-c-residuated` already satisfies bottom
+discipline. Pure enforcement preserves antitonicity for `M-000`, `M-010`,
+`M-111`, `M4-G2FG2FP`, and the repaired M4 model. Full recorded behavior is
+stable only for `M-111` and the M4 pair. `M-010` still witnesses FG2 without
+G2, but enforcing bottom discipline makes \(0\sim\bot\), adding FP-synt and
+turning the checked nFG2 prefix into `TTTTTTTT`. The current arbitrary-depth
+witness `nfg2-depth-3` fails pure enforcement because \(s\le T,a_1,a_2,a_3\)
+would require \(a_1,a_2,a_3,a_4\le s\) by antitonicity.
+
+Archivist:
+
+Added `scripts/check-bottom-discipline.py`, generated the bottom-discipline
+filter report, updated the hierarchy, classification, residuated-domain,
+model/output index, open-problem, active-question, and research-log notes. The
+new research target is now concrete: find bottom-disciplined replacement
+witnesses for the separations lost under pure order enforcement.
+
+Repository updates:
+
+- `scripts/check-bottom-discipline.py`: finite bottom-discipline filter and
+  pure order-enforcement report generator.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: report for the eight 3-element
+  G2-ZOO witnesses, `M4-G2FG2FP`, its repaired residuated version, and
+  `nfg2-depth-3`.
+- `notes/g2-fg2-hierarchy.md`: added the bottom-discipline filter table and
+  consequences for current separations.
+- `notes/g2-aps-zoo-classification.md`: recorded which witnesses survive pure
+  bottom enforcement.
+- `notes/residuated-algebra-domain-completion.md`: noted that bottom discipline
+  is a real structural filter and kills the current \(D_N\) witness.
+- `open_problems.md` and `ideas/research-questions.md`: closed the current
+  filter run and opened the replacement-witness search.
+- `models/README.md` and `outputs/README.md`: indexed the new script and report.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 15 to search for bottom-disciplined finite replacement witnesses,
+starting with G2 without FG2 and arbitrary first-true nFG2 depth.

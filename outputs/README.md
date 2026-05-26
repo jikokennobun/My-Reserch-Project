@@ -23,3 +23,6 @@ Generated artifacts go here.
   report showing that adding `bot <= c` yields a full-residuated expansion.
 - `g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`: G2-ZOO checker report
   for the full-residuated order repair.
+- `bottom-discipline-filter-g2-zoo.json`: finite report showing which G2-ZOO
+  witnesses and the checked `nfg2-depth-3` example survive pure enforcement of
+  `bottom <= x` for every carrier element.
