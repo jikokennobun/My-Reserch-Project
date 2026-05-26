@@ -12,3 +12,5 @@ Generated artifacts go here.
 - `macneille-reflection-three-element-nolattice-nosynt-v1.json`: corrected v1
   report for the size-3 non-lattice separation model, classified as
   `nonprincipal-without-syntactic`.
+- `g2-zoo-M4-G2FG2FP.json`: checker report for the 4-element non-degenerate
+  G2+FG2+FP-synt witness with fixed point at the interior element `p`.

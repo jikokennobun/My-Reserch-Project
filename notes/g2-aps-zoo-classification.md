@@ -49,9 +49,11 @@ does not.
 \mathrm{G2}+\mathrm{FG2}\not\Rightarrow\mathrm{FP\text{-}synt}\quad(\text{M-110}).
 \]
 
-**n-FG2 hierarchy is strict**: nFG2(\(k\)) does NOT imply nFG2(\(k+1\)) for any
-\(k\ge 1\). M-010 witnesses: pattern TFTFTFTF… (odd levels true, even false).
-See `notes/g2-fg2-hierarchy.md` for proofs.
+**Certified n-FG2 separation**: M-010 shows that nFG2(\(1\)) does not imply
+nFG2(\(2\)); more generally its TFTFTFTF... pattern refutes odd-step
+implications nFG2(\(k\)) \(\Rightarrow\) nFG2(\(k+1\)). Even-step and
+arbitrary-depth strictness remain finite-model search problems. See
+`notes/g2-fg2-hierarchy.md` for the corrected status.
 
 ### I.3 Completion Fixed-Point Type
 
@@ -158,8 +160,12 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | M-101 | 3 | T | F | T | FFFFFFFF | mixed (reflected at \(i(\bot)\) + nonprincipal) |
 | M-110 | 3 | T | T | F | TFTFTFTF | mixed (princ-unref at \(i(c)\) + nonprincipal) |
 | M-111 | 3 | T | T | T | TTTTTTTT | mixed (reflected at \(i(T)\)) |
+| M4-G2FG2FP | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point |
 
 All 8 witnesses are in `models/examples/M-{000..111}.json`.
+The non-degenerate 4-element witness is in
+`models/examples/M4-G2FG2FP.json`; its persisted checker report is
+`outputs/g2-zoo-M4-G2FG2FP.json`.
 
 ### MacNeille reflection witnesses
 
@@ -210,7 +216,7 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Build a 4-element preAPS model with G2 holding, as a target for Axis I.2.
+3. Test whether `M4-G2FG2FP` admits nontrivial tensor/residual operations.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

@@ -74,9 +74,7 @@ L=\{T,c,\bot\}\text{ discrete},
 
 ---
 
-### Theorem 2: The \(n\)-FG2 hierarchy is strict.
-
-**nFG2(\(k\)) does NOT imply nFG2(\(k+1\))** for any \(k\ge 1\).
+### Certified separation: FG2 does not imply nFG2(2).
 
 Witness: model **M-010** above. The \(\boxtimes\)-orbit of \(T\) is:
 
@@ -97,10 +95,12 @@ because for odd \(k\): \(\boxtimes^{k+1}T\in\{0\}\) and \(\boxtimes^k T\in\{\bot
 and \(0<\bot\). For even \(k\): \(\boxtimes^{k+1}T\in\{\bot\}\) and
 \(\boxtimes^k T\in\{0\}\), and \(\bot\not\le 0\).
 
-**Corollary**: The \(n\)-FG2 hierarchy does not collapse at any finite level.
-There exist preAPS models satisfying nFG2(\(k\)) for all odd \(k\) while
-refuting nFG2(\(k\)) for all even \(k\ge 2\). In particular, no finite list of
-nFG2 instances axiomatizes FG2 at all levels.
+**Status**: the full strictness problem is still open. The currently certified
+statement is narrower: M-010 refutes
+\(\mathrm{nFG2}(1)\Rightarrow\mathrm{nFG2}(2)\) and, more generally, refutes
+\(\mathrm{nFG2}(k)\Rightarrow\mathrm{nFG2}(k+1)\) at every odd \(k\). It does
+not refute the even-step implications. Arbitrary-depth strictness remains an
+open finite-model search target.
 
 ---
 
@@ -179,12 +179,74 @@ nFG2(\(k\)) fails for all \(k\le N\) but holds for \(k=N+1\), for arbitrary \(N\
 
 ---
 
+## All-Level n-FG2 and Finite Orbit Stabilization
+
+For a finite preAPS, all-level nFG2 has an exact orbit description.
+
+**Theorem (finite orbit stabilization)**. Let \(S=(L,\le,\boxtimes,T,\bot)\)
+be a finite preAPS. The following are equivalent:
+
+1. \(\mathrm{nFG2}(k)\) holds for every \(k\ge 1\).
+2. The tail orbit
+   \(\boxtimes T,\boxtimes^2T,\boxtimes^3T,\ldots\) is non-increasing:
+   \(\boxtimes^{k+1}T\le \boxtimes^kT\) for every \(k\ge 1\).
+3. There is an \(N\ge 1\) such that
+   \(\boxtimes T\ge\boxtimes^2T\ge\cdots\ge\boxtimes^NT\) and
+   \(\boxtimes^NT\) is a syntactic fixed point.
+
+The equivalence of (1) and (2) is definitional. For (2) to (3), finiteness
+forces the non-increasing tail orbit to stabilize; if the stable value is
+\(p=\boxtimes^NT\), then \(p=\boxtimes p\). The implication (3) to (2) is
+immediate along the stated tail.
+
+Consequently, all-level nFG2 implies a reachable syntactic fixed point in finite
+models, but it does not imply G2: M-011 has all nFG2 levels true, a fixed point
+at \(\bot\), and G2 false.
+
+For infinite APS or non-Noetherian preorders, the proof breaks exactly at the
+stabilization step. The useful next axiom candidate is therefore:
+
+**Orbit well-foundedness**: every non-increasing \(\boxtimes\)-tail orbit from
+\(\boxtimes T\) eventually stabilizes.
+
+Under this axiom, the finite theorem extends verbatim to arbitrary preAPS.
+
+## Non-Degenerate G2+FG2+FP Witness
+
+Model `M4-G2FG2FP` is a 4-element non-collapsed witness where G2, FG2, and a
+primitive syntactic fixed point all hold, with the fixed point at an interior
+element \(p\), not at \(T\) or \(\bot\).
+
+\[
+L=\{\bot,p,c,T\},\quad \bot<p<T,\quad c<T,\quad c\parallel p,\quad c\parallel\bot,
+\]
+
+\[
+\boxtimes T=p,\qquad \boxtimes p=p,\qquad
+\boxtimes c=T,\qquad \boxtimes\bot=T.
+\]
+
+The checker report `outputs/g2-zoo-M4-G2FG2FP.json` verifies:
+
+- G2: true, vacuously, since \(\boxtimes T=p\not\le\bot\);
+- FG2: true, since \(\boxtimes^2T=p\le p=\boxtimes T\);
+- FP-synt: true at \(p\);
+- all checked nFG2 levels true by orbit \(T\to p\to p\to\cdots\);
+- collapse: false.
+
+This resolves the previously open "G2+FG2+FP with non-degenerate fixed point"
+finite-model task. It remains open whether such a witness can be equipped with
+nontrivial residual operations satisfying the intended APS axiom package.
+
+---
+
 ## Open Tasks
 
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
-- Find a model with G2 + FG2 + FP-synt where the FP is NOT at T or bot (non-degenerate).
-- Determine whether \(\mathrm{nFG2}(k)\) for ALL \(k\) implies G2 or any other
-  structural collapse.
+- Characterize the infinite analogue of finite orbit stabilization: which APS
+  axiom packages imply orbit well-foundedness?
+- Determine whether a G2+FG2+FP-reachable witness such as `M4-G2FG2FP` can carry
+  nontrivial residual operations.
 - Build finite models separating \(n\)-FG2 at each depth \(N\) (find a model with
   nFG2 pattern first \(N\) entries all F and subsequent entry T).
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis

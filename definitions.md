@@ -46,6 +46,28 @@ Read: if the consistency-like assertion is refutable, then the system is already
 
 Read: a formalized second incompleteness principle internal to the APS order.
 
+For \(k\ge 1\), define:
+
+\[
+\mathrm{nFG2}(k):
+\quad
+\boxtimes^{k+1}T\le_S\boxtimes^kT.
+\]
+
+Thus FG2 is \(\mathrm{nFG2}(1)\). The \(T\)-orbit of \(\boxtimes\) is:
+
+\[
+T,\boxtimes T,\boxtimes^2T,\ldots
+\]
+
+All-level nFG2 means \(\mathrm{nFG2}(k)\) holds for every \(k\ge 1\). In finite
+preAPS models this is equivalent to eventual stabilization of the tail orbit at
+a syntactic \(\boxtimes\)-fixed point.
+
+If \(S\) is non-collapsed, i.e. \(T\not\le_S\bot\), then G2 holds iff
+\(\boxtimes T\not\le_S\bot\). Thus G2 in non-collapsed finite preAPS models is
+always vacuous in the material-implication sense.
+
 ## Fixed Point Principles
 
 Jeroslow/refutability fixed point:
@@ -152,7 +174,6 @@ a\le c/b.
 
 - Define ACR precisely.
 - Normalize A1-A4 and variants.
-- Define \(n\)-FG2.
 - Define primitive versus definitional \(\boxtimes\).
 - Define indexed/fibered APS.
 - Define completion-generated fixed points versus syntactic fixed points.

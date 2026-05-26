@@ -1,0 +1,40 @@
+﻿{
+  "model": "M4-G2FG2FP",
+  "carrier_size": 4,
+  "top": "T",
+  "bottom": "bot",
+  "collapse": false,
+  "G2": true,
+  "G2_mode": "vacuous",
+  "FG2": true,
+  "nFG2": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true
+  },
+  "FP_synt": true,
+  "FP_elements": [
+    "p"
+  ],
+  "boxtimes_orbit_T": [
+    "T",
+    "p",
+    "p",
+    "p",
+    "p",
+    "p",
+    "p",
+    "p",
+    "p",
+    "p"
+  ],
+  "MacNeille_cut_count": 5,
+  "completion_FP_classification": "no-completion-fixed-point",
+  "completion_FPs": [],
+  "warnings": []
+}

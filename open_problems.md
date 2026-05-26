@@ -12,11 +12,19 @@
 - Characterize when \(MND4\)-preAPS plus a Godel-style fixed point collapses.
 - **[Resolved]** Find finite nontrivial models with primitive \(\boxtimes\)-fixed
   points: M-001, M-011, M-101, M-111 all have syntactic \(\boxtimes\)-FPs.
-- **[New]** Find a model with G2+FG2+FP where the FP is NOT at \(T\) or \(\bot\)
-  (M-111 is degenerate: \(\boxtimes T=T\)).
-- **[New]** Determine whether nFG2(\(k\)) for ALL \(k\ge 1\) implies G2 or any
-  structural collapse. The pattern TTTTTTTT in M-011 and M-111 suggests it might
-  force orbit-stabilization (syntactic FP on the orbit).
+- **[Resolved]** Find a model with G2+FG2+FP where the FP is not at \(T\) or
+  \(\bot\): `M4-G2FG2FP` has a non-collapsed 4-element preorder with
+  \(\boxtimes T=p\), \(\boxtimes p=p\), G2 true vacuously, FG2 true, and FP at
+  the interior point \(p\).
+- **[Resolved]** Determine whether all-level nFG2 implies G2 or collapse in
+  finite preAPS: no. M-011 has all checked and theoretically all nFG2 levels
+  true, remains non-collapsed, and fails G2.
+- **[New]** Characterize the infinite analogue of finite orbit stabilization:
+  all-level nFG2 gives a non-increasing \(\boxtimes\)-tail orbit, but without
+  finiteness or a well-foundedness/no-infinite-descent condition it need not
+  stabilize at a syntactic fixed point.
+- **[New]** Decide whether `M4-G2FG2FP` can be expanded with nontrivial tensor
+  and residual operations while preserving G2+FG2+FP-reachable.
 - **[New — n-FG2 hierarchy strictness at arbitrary depth]** Find a model where
   nFG2(\(k\)) fails for all \(k\le N\) and holds for \(k=N+1\), for arbitrary
   given \(N\). This would show the n-FG2 hierarchy has no computable collapse

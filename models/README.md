@@ -12,7 +12,12 @@ This folder is for machine-checkable finite APS/preAPS models.
   [macneille-checker-interface.md](macneille-checker-interface.md).
 - Smoke-test example:
   [examples/three-chain-antitone.json](examples/three-chain-antitone.json).
-- Scripts to check A1-A4, G2, FG2, fixed point principles, and collapse conditions.
+- G2-ZOO examples:
+  [examples/M-000.json](examples/M-000.json) through
+  [examples/M-111.json](examples/M-111.json), plus the 4-element
+  [examples/M4-G2FG2FP.json](examples/M4-G2FG2FP.json).
+- Scripts to check G2, FG2, nFG2, fixed point principles, MacNeille completion
+  properties, and collapse conditions.
 
 ## Minimal Model Fields
 

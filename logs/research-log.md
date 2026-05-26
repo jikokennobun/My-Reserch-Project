@@ -1,5 +1,17 @@
 # Research Log
 
+## 2026-05-26
+
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-26T05:01:25+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-26T18:02:00+09:00`; 17 links were reachable and `unchanged`, while `Local-FG2 Pullback and APS Zoo` returned HTTP 404, so no note ingestion was triggered.
+- Relay sync: checked the recorded Google Drive research/reference folders; no newly relevant items newer than `2026-05-22` were detected.
+- Relay sync: attempted a live Google Drive folder listing, but the Drive MCP connector failed to start in this environment (handshake timeout), so Drive changes could not be revalidated this pass.
+- Autonomous discussion pass 9: audited the nFG2 hierarchy claims, corrected
+  the strictness statement to the certified odd-step separation, added the
+  finite orbit-stabilization theorem, materialized and checked the
+  `M4-G2FG2FP` non-degenerate G2+FG2+FP witness, and opened the infinite
+  orbit-well-foundedness problem.
+
 ## 2026-05-25 (G2-ZOO implementation pass)
 
 - Claude Code G2-ZOO implementation: exhaustively enumerated all 3-element
@@ -7,8 +19,9 @@
   explicit witnesses M-000 through M-111 in `models/examples/`.
 - Certified independence theorems: FG2⇏G2 (M-010), G2⇏FG2 (M-100),
   G2+FP-synt⇏FG2 (M-101), G2+FG2⇏FP-synt (M-110).
-- Certified strictness of n-FG2 hierarchy: no finite level implies the next;
-  M-010 realizes pattern TFTFTF… (period-2 oscillation).
+- Certified n-FG2 separation: M-010 realizes pattern TFTFTF... and refutes
+  odd-step implications, including FG2 -> nFG2(2); arbitrary-depth strictness
+  remains open.
 - Added `scripts/check-g2-zoo.py` — property checker for G2/FG2/nFG2/FP-synt
   and MacNeille completion analysis.
 - Updated `notes/g2-fg2-hierarchy.md` with formal theorem statements and proofs.

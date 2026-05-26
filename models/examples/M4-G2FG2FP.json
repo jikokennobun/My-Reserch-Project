@@ -1,0 +1,76 @@
+{
+  "name": "M4-G2FG2FP",
+  "carrier": [
+    "bot",
+    "p",
+    "c",
+    "T"
+  ],
+  "order": [
+    [
+      "bot",
+      "bot"
+    ],
+    [
+      "p",
+      "p"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "T",
+      "T"
+    ],
+    [
+      "bot",
+      "p"
+    ],
+    [
+      "p",
+      "T"
+    ],
+    [
+      "bot",
+      "T"
+    ],
+    [
+      "c",
+      "T"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "bot": "bot",
+    "p": "p",
+    "c": "c",
+    "T": "T"
+  },
+  "refutability": {
+    "bot": "T",
+    "p": "p",
+    "c": "T",
+    "T": "p"
+  },
+  "metadata": {
+    "purpose": "Non-degenerate 4-element witness for G2+FG2+FP-synt with the fixed point at p, not T or bot.",
+    "order_summary": "bot < p < T and c < T, with c incomparable to bot and p.",
+    "separation": "witnesses (G2=true, FG2=true, FP-synt=true) with FP at an interior element",
+    "syntactic_FP": [
+      "p"
+    ],
+    "nFG2_pattern": "TTTTTTTT",
+    "boxtimes_orbit_T": [
+      "T",
+      "p",
+      "p",
+      "p"
+    ],
+    "G2_antecedent": false,
+    "G2_mode": "vacuous",
+    "collapse": false,
+    "warning": "G2 holds vacuously because boxtimes(T)=p is not <= bot; this is still non-collapsed and non-degenerate with respect to fixed-point location."
+  }
+}

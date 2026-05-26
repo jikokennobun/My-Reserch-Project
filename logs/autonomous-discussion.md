@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 8
+- Current pass: 9
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -580,3 +580,67 @@ theorem requires a new well-foundedness axiom, or whether it is a theorem of
 some existing APS axiom package. Also: characterize which 4-element preAPS models
 satisfy G2+FG2+FP-synt with FP-reachable (there should be a finite enumeration),
 and ask whether any such model also has nontrivial residuation structure.
+
+### Pass 9 - 2026-05-26 18:00 JST
+
+Focus:
+
+Audit the nFG2 claims from pass 8, materialize the missing non-degenerate
+G2+FG2+FP witness, and isolate the exact finite-to-infinite gap in orbit
+stabilization.
+
+Proposer:
+
+The useful positive result is finite and should be stated sharply: all-level
+nFG2 is exactly a non-increasing \(\boxtimes\)-tail orbit, and in finite
+preAPS this tail must stabilize at a syntactic fixed point reachable from \(T\).
+This gives a clean FP-reachable axis without implying G2. The missing witness
+from pass 8 can be made concrete as `M4-G2FG2FP`, with
+\(\bot<p<T\), \(c<T\), \(\boxtimes T=p\), \(\boxtimes p=p\),
+\(\boxtimes c=T\), and \(\boxtimes\bot=T\).
+
+Skeptic:
+
+The earlier "nFG2 hierarchy is strict at every depth" wording was too strong.
+The certified M-010 pattern refutes odd-step implications, including
+FG2 \(\Rightarrow\) nFG2(2), but it does not refute even-step implications or
+arbitrary-depth strictness. Those remain finite search tasks. Also, the
+non-degenerate M4 witness still has G2 only vacuously, which is unavoidable in
+non-collapsed models under the material implication reading of G2.
+
+Formalist:
+
+Added the definition of nFG2(\(k\)) and the non-collapsed G2 criterion to
+`definitions.md`. The finite orbit theorem now has the exact hypothesis where
+it works: finiteness, or more generally an orbit well-foundedness/no-infinite-
+descent assumption. The checker verifies `M4-G2FG2FP` as non-collapsed with
+G2 true, FG2 true, all checked nFG2 levels true, and FP-synt at \(p\). It also
+reports no MacNeille completion fixed point for that model, which separates the
+G2+FG2+FP-synt axis from completion-generated fixed points.
+
+Archivist:
+
+Corrected the overclaim in the nFG2 hierarchy note, added the finite orbit
+stabilization theorem, created and checked `M4-G2FG2FP`, saved its JSON report,
+and updated the model registry, open problems, model/output indexes, active
+research questions, and research log. Claude Code Review 1 had no newer entry;
+its already-incorporated MacNeille requests remain closed.
+
+Repository updates:
+
+- `notes/g2-fg2-hierarchy.md`: corrected the strictness claim, added finite
+  orbit stabilization, and recorded `M4-G2FG2FP`.
+- `definitions.md`: added nFG2(\(k\)), all-level nFG2, and the non-collapsed G2
+  criterion.
+- `models/examples/M4-G2FG2FP.json`: added the 4-element non-degenerate witness.
+- `outputs/g2-zoo-M4-G2FG2FP.json`: saved the checker report.
+- `notes/g2-aps-zoo-classification.md`: added the M4 witness and corrected the
+  nFG2 strictness status.
+- `open_problems.md`: resolved the non-degenerate G2+FG2+FP and all-level
+  nFG2-implies-G2 questions; added the infinite orbit-well-foundedness problem.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 10 to either search for arbitrary-depth nFG2 strictness witnesses or
+attempt to equip `M4-G2FG2FP` with nontrivial tensor/residual operations.
