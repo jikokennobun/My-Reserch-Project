@@ -24,6 +24,21 @@ x\le_S\bot
 x\text{ is refutable}.
 \]
 
+The symbols \(T\) and \(\bot\) are distinguished APS constants; a preAPS need
+not make them greatest or least elements unless this is stated separately.
+
+**Bottom discipline** is the additional order principle:
+
+\[
+\forall x\in L_S,\quad \bot\le_S x.
+\]
+
+Read proof-theoretically, this is an ex-falso or absurdity-weakening principle:
+from the contradiction/refutation constant one may weaken to any element. In the
+four-element model `M4-G2FG2FP`, all instances of bottom discipline already hold
+except \(\bot\le c\), so the residuated order repair is exactly the missing
+bottom-discipline instance for the \(c\)-branch.
+
 ## G2
 
 \[

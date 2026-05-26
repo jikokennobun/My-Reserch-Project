@@ -313,6 +313,15 @@ expansion with unit \(p\). The model preserves non-collapse, G2, FG2, all
 checked nFG2 levels, and the reachable fixed point at \(p\); see
 `outputs/g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`.
 
+This repair has a concrete structural reading. The original M4 order already
+has \(\bot\le p\), \(\bot\le T\), \(p\le T\), and \(c\le T\); its only missing
+bottom-discipline instance is \(\bot\le c\). Adding that relation makes
+\(\bot\) the actual least element and turns the order into the four-element
+Boolean lattice. Thus the repair can be read as adding ex-falso/absurdity
+weakening for the \(c\)-branch rather than as an arbitrary residuation trick.
+Whether that principle is acceptable depends on the intended resource-sensitive
+APS axiom package.
+
 ---
 
 ## Open Tasks
@@ -320,9 +329,9 @@ checked nFG2 levels, and the reachable fixed point at \(p\); see
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Interpret the added relation \(\bot\le c\) in the residuated M4 repair:
-  determine whether it corresponds to a meaningful resource/refutability axiom
-  or is merely an order-theoretic completion trick.
+- Test bottom discipline as an APS axiom: does adding
+  \(\forall x\,(\bot\le x)\) preserve the intended BS16/resource-sensitive
+  separations, or does it smuggle in a structural rule that should remain absent?
 - Decide whether the arbitrary-depth witnesses \(D_N\) can be constrained by
   nontrivial APS axioms without collapsing their nFG2 first-true depth.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis

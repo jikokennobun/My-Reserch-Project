@@ -120,6 +120,12 @@ expansion for any choice of unit. The same carrier becomes `res-full` after the
 single order repair \(\bot\le c\), recorded as
 `M4-G2FG2FP-order-plus-bot-c-residuated`.
 
+Interpretation status: the repair is the missing instance of bottom discipline
+\(\forall x(\bot\le x)\) in the original M4 order. It makes \(\bot\) a genuine
+least element and converts the order into the four-element Boolean lattice, so
+the next classification question is which G2-ZOO witnesses survive this
+bottom-discipline filter.
+
 ---
 
 ## Axis III — Proof-Theory Axis: What structural rules and stability properties hold?
@@ -228,8 +234,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Interpret the \(\bot\le c\) order repair in
-   `M4-G2FG2FP-order-plus-bot-c-residuated`.
+3. Test bottom discipline \(\forall x(\bot\le x)\) as a filter on the finite
+   G2-ZOO and the \(D_N\) first-true hierarchy.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

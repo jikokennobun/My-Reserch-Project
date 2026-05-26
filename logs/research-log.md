@@ -10,6 +10,10 @@
   `M4-G2FG2FP`; adding \(\bot\le c\) yields a full-residuated non-collapsed
   G2+FG2+FP-reachable witness with unit \(p\), with search and checker reports
   saved under `outputs/`.
+- Autonomous discussion pass 13: interpreted the \(\bot\le c\) repair as the
+  missing bottom-discipline instance \(\forall x(\bot\le x)\), i.e. ex-falso
+  weakening for the \(c\)-branch, and opened the finite-model test of which
+  G2-ZOO and \(D_N\) separations survive that discipline.
 
 ## 2026-05-26
 

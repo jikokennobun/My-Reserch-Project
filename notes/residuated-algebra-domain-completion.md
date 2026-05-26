@@ -126,9 +126,20 @@ with unit \(p\), while preserving the G2+FG2+FP-reachable behavior. The tensor
 has \(p\) as unit, \(\bot\) as zero, \(T\otimes T=T\), \(T\otimes c=c\), and
 \(c\otimes c=\bot\).
 
-The remaining conceptual issue is the meaning of \(\bot\le c\). It may be a
-small resource/refutability closure principle, or it may be only an
-order-theoretic repair needed to make residual downsets principal.
+The conceptual reading is now sharper. In `M4-G2FG2FP`, the constant named
+\(\bot\) is not initially a least element: \(\bot\le p\) and \(\bot\le T\), but
+\(\bot\not\le c\). The repair \(\bot\le c\) is therefore exactly the missing
+instance of **bottom discipline**
+\[
+\forall x,\quad \bot\le x.
+\]
+Proof-theoretically, this is an ex-falso or absurdity-weakening principle for
+the \(c\)-branch. Algebraically, it turns the order into the four-element
+Boolean lattice with atoms \(p\) and \(c\), so residual fibers that previously
+had no principal maximum can become principal. The repair is therefore not a
+random order edge; it is the minimal bounded-order/lattice completion of the M4
+witness. The remaining question is whether bottom discipline is intended in the
+APS package under study, especially in the BS16 contraction-free setting.
 
 ## Next Tasks
 
@@ -137,7 +148,9 @@ order-theoretic repair needed to make residual downsets principal.
 - Compare quantale completion with MacNeille completion.
 - Find examples where completion creates a fixed point not present syntactically.
 - Connect Galatos-Jipsen-Kowalski-Ono style residuated lattices with APS/G2-ZOO.
-- Interpret the \(\bot\le c\) repair in proof-theoretic/resource terms.
+- Test bottom discipline against the BS16/resource-sensitive reading: decide
+  whether ex-falso weakening is acceptable without reintroducing hidden
+  contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
 

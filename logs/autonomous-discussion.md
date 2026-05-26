@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 12
+- Current pass: 13
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -830,3 +830,71 @@ Next step:
 Use pass 13 to interpret the \(\bot\le c\) repair: determine whether it
 corresponds to a natural resource/refutability axiom, or whether a more
 proof-theoretically meaningful residuated witness should be sought.
+
+### Pass 13 - 2026-05-27 05:10 JST
+
+Focus:
+
+Interpret the \(\bot\le c\) repair in
+`M4-G2FG2FP-order-plus-bot-c-residuated` and decide whether it is an ad hoc
+edge or a named APS/resource principle.
+
+Proposer:
+
+The repair has a clean structural reading: the original M4 order had a
+distinguished \(\bot\) constant but did not make it a least element. It already
+satisfied \(\bot\le p\), \(\bot\le T\), \(p\le T\), and \(c\le T\); the only
+missing bottom-discipline instance was \(\bot\le c\). Adding that relation is
+therefore exactly bottom discipline on this carrier:
+\[
+\forall x,\quad \bot\le x.
+\]
+Read proof-theoretically, this is ex-falso or absurdity weakening for the
+\(c\)-branch.
+
+Skeptic:
+
+This interpretation is useful but not automatically harmless. In a
+resource-sensitive BS16-style setting, ex-falso weakening may be a structural
+principle that changes the intended calculus. The pass should therefore not
+declare the repair canonical; it should record the principle and make its
+effect on existing separations a new finite-model test.
+
+Formalist:
+
+Order-theoretically, adding \(\bot\le c\) makes \(\bot\) least and keeps \(T\)
+greatest, with \(p\) and \(c\) as incomparable atoms. Thus the repaired order is
+the four-element Boolean lattice. This explains why full residuation becomes
+possible: residual solution sets that were non-principal in the sparse order can
+now be represented by lattice elements. The G2/FG2/FP behavior is unchanged
+because the \(T\)-orbit of \(\boxtimes\) remains \(T\to p\to p\).
+
+Archivist:
+
+Added bottom discipline to the shared definitions, recorded the repair
+interpretation in the hierarchy and residuated-domain notes, updated the model
+metadata, and converted the open interpretive problem into a sharper test:
+which G2-ZOO and \(D_N\) witnesses survive after enforcing
+\(\forall x(\bot\le x)\)?
+
+Repository updates:
+
+- `definitions.md`: defined bottom discipline as
+  \(\forall x(\bot\le x)\), with the M4 repair as its missing instance.
+- `notes/g2-fg2-hierarchy.md`: interpreted \(\bot\le c\) as
+  ex-falso/absurdity weakening for the \(c\)-branch.
+- `notes/residuated-algebra-domain-completion.md`: recorded the Boolean-lattice
+  reading of the repaired order and the remaining BS16/resource-sensitive risk.
+- `notes/g2-aps-zoo-classification.md`: added bottom discipline as the next
+  model-classification filter.
+- `open_problems.md` and `ideas/research-questions.md`: replaced the raw
+  interpretation question with the bottom-discipline preservation problem.
+- `models/examples/M4-G2FG2FP-order-plus-bot-c-residuated.json`: added the
+  repair interpretation to metadata.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 14 to implement or run a bottom-discipline filter over the finite
+G2-ZOO models and the \(D_N\) example, recording which separations survive,
+which collapse, and which become better candidates for residuated APS.
