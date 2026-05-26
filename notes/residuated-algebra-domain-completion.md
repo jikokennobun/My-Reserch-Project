@@ -151,6 +151,12 @@ does not survive this enforcement: making its bottom element \(s\) below
 \(a_1,a_2,a_3,a_4\le s\), which are absent. Thus bottom discipline is a real
 structural filter, not just a notational cleanup.
 
+Pass 15 supplies a bottom-disciplined replacement for the \(D_N\) idea by
+separating the bottom constant \(b\) from the eventual fixed point \(s\) and
+adding a helper upper bound \(U=\boxtimes b\). The checked depth-3 instance
+`bottom-nfg2-depth-3` has G2 true, FG2 false, FP-synt at \(s\), and nFG2 pattern
+`FFFTTTTT` while satisfying \(b\le x\) for every element.
+
 ## Next Tasks
 
 - Define "residuated dcpo" carefully.

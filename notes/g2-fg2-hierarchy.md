@@ -339,14 +339,60 @@ The current finite witnesses split as follows:
 | `M-111` | yes | G2+FG2+FP stays stable |
 | `M4-G2FG2FP` | yes | G2+FG2+FP stays stable; this is exactly the `bot <= c` repair |
 | `M4-G2FG2FP-order-plus-bot-c-residuated` | already | already bottom-disciplined and stable |
+| `bottom-nfg2-depth-3` | already | bottom-disciplined replacement with pattern `FFFTTTTT` |
 | `M-001`, `M-011`, `M-100`, `M-101`, `M-110` | no | adding bottom pairs breaks antitonicity of \(\boxtimes\) |
 | `nfg2-depth-3` | no | adding \(s\le T,a_1,a_2,a_3\) breaks antitonicity |
 
-Consequently bottom discipline preserves some core separations, including
-FG2-not-G2 via the repaired `M-010`, but it destroys the current pure-order
-versions of G2-not-FG2, G2+FP-not-FG2, G2+FG2-not-FP, and arbitrary-depth nFG2
-strictness. Those separations now require fresh bottom-disciplined witnesses or
-a proof that bottom discipline rules them out.
+Pass 15 adds the missing bottom-disciplined arbitrary-depth replacement family.
+Consequently bottom discipline preserves FG2-not-G2 via the repaired `M-010`,
+and preserves G2-not-FG2, G2+FP-not-FG2, and arbitrary first-true nFG2 depth via
+the bottom-disciplined \(B_N\) construction below. The remaining lost separation
+from the current finite zoo is G2+FG2 without FP-synt.
+
+### Bottom-Disciplined Arbitrary-Depth Witnesses
+
+For each \(N\ge 1\), define \(B_N\) with carrier
+
+\[
+\{b,T,a_1,\ldots,a_{N+1},s,U\}.
+\]
+
+The order has \(b\le x\le U\) for every carrier element \(x\), plus
+\[
+s\le a_{N+1}.
+\]
+
+Thus \(b\) is a genuine bottom element and \(B_N\) satisfies bottom discipline.
+Define:
+
+\[
+\boxtimes b=U,\qquad
+\boxtimes U=b,\qquad
+\boxtimes T=a_1,\qquad
+\boxtimes a_i=a_{i+1}\ (1\le i\le N),
+\]
+
+\[
+\boxtimes a_{N+1}=s,\qquad
+\boxtimes s=s.
+\]
+
+Antitonicity holds because every relation \(b\le x\) asks
+\(\boxtimes x\le U=\boxtimes b\), every relation \(x\le U\) asks
+\(b=\boxtimes U\le\boxtimes x\), and \(s\le a_{N+1}\) asks
+\(s=\boxtimes a_{N+1}\le\boxtimes s=s\).
+
+The \(T\)-orbit is again
+
+\[
+T\to a_1\to\cdots\to a_{N+1}\to s\to s\to\cdots.
+\]
+
+So nFG2(\(k\)) fails for \(k\le N\) and holds from \(N+1\) onward. Since
+\(\boxtimes T=a_1\not\le b\), G2 holds vacuously; FG2 fails for \(N\ge 1\);
+and FP-synt holds at \(s\). The generated depth-3 instance
+`models/examples/bottom-nfg2-depth-3.json` is certified by
+`outputs/g2-zoo-bottom-nfg2-depth-3.json` with pattern `FFFTTTTT`.
 
 ---
 
@@ -355,8 +401,8 @@ a proof that bottom discipline rules them out.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Search for bottom-disciplined replacement witnesses for the separations whose
-  current pure-order repairs break antitonicity, especially G2-not-FG2 and
-  arbitrary-depth first-true nFG2.
+- Search for a bottom-disciplined replacement witness for G2+FG2 without
+  FP-synt, the remaining lost finite-zoo separation after the \(B_N\)
+  construction.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

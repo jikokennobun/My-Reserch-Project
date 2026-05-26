@@ -25,4 +25,8 @@ Generated artifacts go here.
   for the full-residuated order repair.
 - `bottom-discipline-filter-g2-zoo.json`: finite report showing which G2-ZOO
   witnesses and the checked `nfg2-depth-3` example survive pure enforcement of
-  `bottom <= x` for every carrier element.
+  `bottom <= x` for every carrier element; updated to include
+  `bottom-nfg2-depth-3`.
+- `g2-zoo-bottom-nfg2-depth-3.json`: checker report for the
+  bottom-disciplined arbitrary-depth nFG2 witness example with pattern
+  `FFFTTTTT`.

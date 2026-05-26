@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 14
+- Current pass: 15
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -964,3 +964,76 @@ Next step:
 
 Use pass 15 to search for bottom-disciplined finite replacement witnesses,
 starting with G2 without FG2 and arbitrary first-true nFG2 depth.
+
+### Pass 15 - 2026-05-27 06:17 JST
+
+Focus:
+
+Find bottom-disciplined replacement witnesses for the separations lost under
+pure bottom-order enforcement, starting with G2 without FG2 and arbitrary
+first-true nFG2 depth.
+
+Proposer:
+
+The sparse \(D_N\) construction failed bottom discipline because its eventual
+fixed point \(s\) was also the bottom constant. Separate those roles. Add a true
+bottom \(b\) below every element and a helper upper bound \(U\) above every
+element. Let \(\boxtimes b=U\) and \(\boxtimes U=b\), while keeping the old
+orbit \(T\to a_1\to\cdots\to a_{N+1}\to s\to s\).
+
+Skeptic:
+
+This is still a preAPS construction, not a proof that the witness survives any
+stronger APS axiom package, residuation requirement, lattice law, or BS16 modal
+rule. The helper \(U\) is a technical upper bound introduced to absorb
+antitonicity requirements from \(b\le x\). That is acceptable as a finite
+witness but should be tracked as structure added for bottom discipline.
+
+Formalist:
+
+For \(B_N\), take carrier
+\(\{b,T,a_1,\ldots,a_{N+1},s,U\}\), order \(b\le x\le U\) for every \(x\), and
+add \(s\le a_{N+1}\). Define
+\(\boxtimes b=U\), \(\boxtimes U=b\), \(\boxtimes T=a_1\),
+\(\boxtimes a_i=a_{i+1}\) for \(1\le i\le N\),
+\(\boxtimes a_{N+1}=s\), and \(\boxtimes s=s\). Antitonicity follows from the
+bounding pairs and \(s\le a_{N+1}\). The \(T\)-orbit gives nFG2 false through
+\(N\) and true from \(N+1\). Since \(a_1\not\le b\), G2 is true vacuously; FG2
+fails; and FP-synt holds at \(s\).
+
+Archivist:
+
+Added a generator for \(B_N\), generated and checked the depth-3 instance, saved
+its G2-ZOO report, updated the bottom-discipline filter report to include it,
+and revised the hierarchy, classification, residuated-domain, open-problem,
+active-question, model index, output index, and research log. The remaining
+bottom-disciplined replacement target is G2+FG2 without FP-synt.
+
+Repository updates:
+
+- `scripts/new-bottom-nfg2-depth-witness.py`: generator for the
+  bottom-disciplined \(B_N\) family.
+- `models/examples/bottom-nfg2-depth-3.json`: checked depth-3
+  bottom-disciplined witness.
+- `outputs/g2-zoo-bottom-nfg2-depth-3.json`: checker report with pattern
+  `FFFTTTTT`.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: updated filter report now
+  includes `bottom-nfg2-depth-3`.
+- `notes/g2-fg2-hierarchy.md`: added the \(B_N\) construction theorem and proof
+  sketch.
+- `notes/g2-aps-zoo-classification.md`: added the new registry row and revised
+  the bottom-discipline next target.
+- `notes/residuated-algebra-domain-completion.md`: recorded the role separation
+  \(b\) versus \(s\) and helper upper bound \(U\).
+- `open_problems.md` and `ideas/research-questions.md`: resolved the
+  bottom-disciplined G2-not-FG2/arbitrary-depth targets and opened the
+  G2+FG2-without-FP target.
+- `models/README.md` and `outputs/README.md`: indexed the new generator, model,
+  and report.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 16 to search directly for a bottom-disciplined finite preAPS with
+G2+FG2 and no syntactic \(\boxtimes\)-fixed point, or prove that the small
+bounded constructions force FP-synt.

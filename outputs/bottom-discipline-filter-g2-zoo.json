@@ -3,21 +3,24 @@
   "formula": "forall x, bottom <= x",
   "nfg2Depth": 8,
   "summary": {
-    "modelsChecked": 11,
+    "modelsChecked": 12,
     "alreadyBottomDisciplined": [
-      "M4-G2FG2FP-order-plus-bot-c-residuated"
+      "M4-G2FG2FP-order-plus-bot-c-residuated",
+      "bottom-nfg2-depth-3"
     ],
     "validAfterPureOrderEnforcement": [
       "M-000",
       "M-010",
       "M-111",
       "M4-G2FG2FP",
-      "M4-G2FG2FP-order-plus-bot-c-residuated"
+      "M4-G2FG2FP-order-plus-bot-c-residuated",
+      "bottom-nfg2-depth-3"
     ],
     "corePropertiesStableAfterEnforcement": [
       "M-111",
       "M4-G2FG2FP",
-      "M4-G2FG2FP-order-plus-bot-c-residuated"
+      "M4-G2FG2FP-order-plus-bot-c-residuated",
+      "bottom-nfg2-depth-3"
     ],
     "invalidAfterPureOrderEnforcement": [
       "M-001",
@@ -900,6 +903,64 @@
           ]
         }
       ],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFTTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFTTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "bottom-nfg2-depth-3",
+      "path": "models\\examples\\bottom-nfg2-depth-3.json",
+      "carrierSize": 8,
+      "bottom": "b",
+      "alreadyBottomDisciplined": true,
+      "missingBottomPairs": [],
+      "enforcedOrderAdds": [],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
       "before": {
         "collapse": false,
         "G2": true,

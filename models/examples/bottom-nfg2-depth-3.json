@@ -1,0 +1,136 @@
+{
+  "name": "bottom-nfg2-depth-3",
+  "carrier": [
+    "b",
+    "T",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "s",
+    "U"
+  ],
+  "order": [
+    [
+      "b",
+      "b"
+    ],
+    [
+      "T",
+      "T"
+    ],
+    [
+      "a1",
+      "a1"
+    ],
+    [
+      "a2",
+      "a2"
+    ],
+    [
+      "a3",
+      "a3"
+    ],
+    [
+      "a4",
+      "a4"
+    ],
+    [
+      "s",
+      "s"
+    ],
+    [
+      "U",
+      "U"
+    ],
+    [
+      "b",
+      "U"
+    ],
+    [
+      "b",
+      "T"
+    ],
+    [
+      "T",
+      "U"
+    ],
+    [
+      "b",
+      "a1"
+    ],
+    [
+      "a1",
+      "U"
+    ],
+    [
+      "b",
+      "a2"
+    ],
+    [
+      "a2",
+      "U"
+    ],
+    [
+      "b",
+      "a3"
+    ],
+    [
+      "a3",
+      "U"
+    ],
+    [
+      "b",
+      "a4"
+    ],
+    [
+      "a4",
+      "U"
+    ],
+    [
+      "b",
+      "s"
+    ],
+    [
+      "s",
+      "U"
+    ],
+    [
+      "s",
+      "a4"
+    ]
+  ],
+  "top": "T",
+  "bottom": "b",
+  "box": {
+    "b": "b",
+    "T": "T",
+    "a1": "a1",
+    "a2": "a2",
+    "a3": "a3",
+    "a4": "a4",
+    "s": "s",
+    "U": "U"
+  },
+  "refutability": {
+    "b": "U",
+    "T": "a1",
+    "U": "b",
+    "s": "s",
+    "a1": "a2",
+    "a2": "a3",
+    "a3": "a4",
+    "a4": "s"
+  },
+  "metadata": {
+    "purpose": "Bottom-disciplined arbitrary-depth nFG2 first-true witness: nFG2(k) fails for k <= 3 and holds at k = 4.",
+    "construction": "Orbit T -> a1 -> ... -> a4 -> s -> s, with b <= x <= U for all x and s <= a4.",
+    "first_true_nFG2": 4,
+    "expected_nFG2_prefix": "FFFTTTT",
+    "bottom_discipline": true,
+    "collapse": false,
+    "G2_mode": "vacuous",
+    "separation": "G2=true, FG2=false, FP-synt=true, bottom discipline true",
+    "note": "The helper bound U absorbs antitonicity requirements from b <= x; U maps back to b."
+  }
+}

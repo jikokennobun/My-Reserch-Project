@@ -18,6 +18,11 @@
   report; pure bottom-order enforcement preserves antitonicity for `M-000`,
   `M-010`, `M-111`, `M4-G2FG2FP`, and the repaired M4 model, but the current
   `nfg2-depth-3` witness and five 3-element witnesses break antitonicity.
+- Autonomous discussion pass 15: constructed the bottom-disciplined \(B_N\)
+  arbitrary-depth nFG2 family by separating true bottom \(b\) from the fixed
+  point \(s\) and adding helper upper bound \(U\); generated and checked
+  `bottom-nfg2-depth-3` with G2 true, FG2 false, FP-synt true, and pattern
+  `FFFTTTTT`.
 
 ## 2026-05-26
 
