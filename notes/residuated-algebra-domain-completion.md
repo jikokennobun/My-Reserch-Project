@@ -100,6 +100,24 @@ It connects directly to:
 - Analytic APS as topological/domain-theoretic APS.
 - Completion-generated fixed points versus syntactic fixed points.
 
+## Finite Search Result: M4 Obstruction
+
+The non-degenerate finite G2+FG2+FP witness `M4-G2FG2FP` cannot be expanded to a
+full residuated ordered monoid on its existing carrier and order. The exhaustive
+search report
+[../outputs/residuated-search-M4-G2FG2FP.json](../outputs/residuated-search-M4-G2FG2FP.json)
+checks every binary tensor with each possible unit and finds no operation that
+is associative, monotone, and admits both residuals.
+
+This is a useful obstruction rather than a failure of the program. It says that
+the current 4-element witness is genuinely a sparse preAPS artifact. A
+residuated G2+FG2+FP witness likely requires at least one of:
+
+- adding new order elements so residual downsets become principal;
+- changing the underlying order while preserving the G2/FG2/FP behavior;
+- weakening to one-sided or partial residuals;
+- searching in a different finite family.
+
 ## Next Tasks
 
 - Define "residuated dcpo" carefully.
@@ -107,6 +125,8 @@ It connects directly to:
 - Compare quantale completion with MacNeille completion.
 - Find examples where completion creates a fixed point not present syntactically.
 - Connect Galatos-Jipsen-Kowalski-Ono style residuated lattices with APS/G2-ZOO.
+- Search for the smallest full-residuated expansion or replacement of
+  `M4-G2FG2FP`.
 
 ## Related References and Drive Files
 
@@ -114,4 +134,3 @@ It connects directly to:
 - [algebraic_reverse_math_g2_aps.pdf](https://drive.google.com/file/d/1JoGMqK-9uQqC2Qp3490G2ZJvMj9N5DTe)
 - [Incompleteness_Algebraic_Reverse_Mathematics_Thesis_コピー.pdf](https://drive.google.com/file/d/1p1r0-FLjAF9x9d_OvXm1HqgC1xF_NYk_)
 - [APS_dissertation.pdf](https://drive.google.com/file/d/1VtS6tSvhUcoIG01fWprIrxGKZ3vZPjxc)
-

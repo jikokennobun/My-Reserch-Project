@@ -16,3 +16,6 @@ Generated artifacts go here.
   G2+FG2+FP-synt witness with fixed point at the interior element `p`.
 - `g2-zoo-nfg2-depth-3.json`: checker report for the arbitrary-depth nFG2
   witness example with pattern `FFFTTTTT`.
+- `residuated-search-M4-G2FG2FP.json`: exhaustive negative search report showing
+  that `M4-G2FG2FP` has no full residuated monoid expansion on its existing
+  carrier/order.

@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-05-27
+
+- Autonomous discussion pass 11: exhaustively searched tensor/residual
+  expansions of `M4-G2FG2FP` on its existing carrier and order; no full
+  residuated monoid expansion exists for any unit choice, so the next target is
+  a modified or expanded G2+FG2+FP-reachable witness.
+
 ## 2026-05-26
 
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-26T05:01:25+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.

@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 10
+- Current pass: 11
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -705,3 +705,66 @@ Next step:
 Use pass 11 to test whether simple tensor/residual candidates can be placed on
 `M4-G2FG2FP` or on the \(D_N\) family without destroying the certified G2/FG2/
 nFG2 behavior.
+
+### Pass 11 - 2026-05-27 00:57 JST
+
+Focus:
+
+Test whether the non-degenerate `M4-G2FG2FP` witness can carry full
+tensor/residual structure on its existing carrier and order.
+
+Proposer:
+
+The right first test is exhaustive rather than speculative. Because
+`M4-G2FG2FP` has four elements, fixing a two-sided unit leaves \(4^9=262144\)
+binary tensor candidates. Checking all four possible units is small enough to
+turn the residuation question into a finite certificate.
+
+Skeptic:
+
+This is only a same-carrier/same-order obstruction. It does not rule out adding
+new elements, changing the order while preserving the G2+FG2+FP behavior, using
+one-sided residuals, or moving to the \(D_N\) family. It also does not use any
+external source claim; it is a machine-checkable finite search result inside
+the repository.
+
+Formalist:
+
+For each possible unit \(e\), the search enumerates every tensor with
+\(e\otimes x=x=x\otimes e\). It keeps only operations that are associative,
+monotone in both arguments, and whose left and right residual fibers are
+principal downsets:
+\[
+\{b:a\otimes b\le c\}=\downarrow(a\backslash c),
+\qquad
+\{a:a\otimes b\le c\}=\downarrow(c/b).
+\]
+The result is zero candidates for every unit. Therefore `M4-G2FG2FP` has no
+full residuated monoid expansion on the existing four-element order.
+
+Archivist:
+
+Added `scripts/search-residuated-tensor.py`, generated
+`outputs/residuated-search-M4-G2FG2FP.json`, and updated the G2/FG2 hierarchy,
+residuated-domain note, model/output indexes, open problems, and active
+questions. The previous open problem is resolved negatively in the strict
+same-order sense and replaced by a sharper search for a modified or expanded
+full-residuated witness.
+
+Repository updates:
+
+- `scripts/search-residuated-tensor.py`: exhaustive tensor/residual search.
+- `outputs/residuated-search-M4-G2FG2FP.json`: negative finite search report.
+- `notes/g2-fg2-hierarchy.md`: recorded the same-order full-residuation
+  obstruction for `M4-G2FG2FP`.
+- `notes/residuated-algebra-domain-completion.md`: added the M4 obstruction and
+  next residuated-search direction.
+- `open_problems.md`: resolved the same-order M4 full-residuation question
+  negatively and opened the modified/expanded witness problem.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 12 to search for the smallest order expansion or carrier extension
+that preserves G2+FG2+FP-reachable behavior while admitting full residuation, or
+to test one-sided/partial residual relaxations as an intermediate target.

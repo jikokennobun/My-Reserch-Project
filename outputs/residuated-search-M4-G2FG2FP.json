@@ -1,0 +1,44 @@
+{
+  "model": "M4-G2FG2FP",
+  "modelPath": "models\\examples\\M4-G2FG2FP.json",
+  "carrierSize": 4,
+  "searchedUnits": [
+    "bot",
+    "p",
+    "c",
+    "T"
+  ],
+  "maxOperations": 1000000,
+  "totalCandidates": 0,
+  "results": [
+    {
+      "unit": "bot",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    },
+    {
+      "unit": "p",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    },
+    {
+      "unit": "c",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    },
+    {
+      "unit": "T",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    }
+  ],
+  "conclusion": "no-full-residuated-expansion-found"
+}

@@ -290,6 +290,20 @@ This resolves the previously open "G2+FG2+FP with non-degenerate fixed point"
 finite-model task. It remains open whether such a witness can be equipped with
 nontrivial residual operations satisfying the intended APS axiom package.
 
+### Full Residuation Search
+
+The exhaustive search report
+`outputs/residuated-search-M4-G2FG2FP.json` shows that `M4-G2FG2FP` has no
+full residuated monoid expansion on the same carrier and order, for any choice
+of unit among \(\{\bot,p,c,T\}\). The search enumerates all \(4^9=262144\)
+binary operations compatible with each possible two-sided unit and rejects every
+candidate after checking associativity, monotonicity, and existence of both
+residuals.
+
+Thus the non-degenerate G2+FG2+FP witness is not itself a residuated APS on this
+underlying order. Any residuated version must either change the order, add
+elements, weaken the residual requirement, or use a different witness family.
+
 ---
 
 ## Open Tasks
@@ -297,8 +311,8 @@ nontrivial residual operations satisfying the intended APS axiom package.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Determine whether a G2+FG2+FP-reachable witness such as `M4-G2FG2FP` can carry
-  nontrivial residual operations.
+- Find a modified or expanded G2+FG2+FP-reachable witness that carries full
+  residuation.
 - Decide whether the arbitrary-depth witnesses \(D_N\) can be constrained by
   nontrivial APS axioms without collapsing their nFG2 first-true depth.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis

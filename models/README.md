@@ -21,6 +21,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/new-nfg2-depth-witness.ps1](../scripts/new-nfg2-depth-witness.ps1).
 - Scripts to check G2, FG2, nFG2, fixed point principles, MacNeille completion
   properties, and collapse conditions.
+- Tensor/residual search script:
+  [../scripts/search-residuated-tensor.py](../scripts/search-residuated-tensor.py).
 
 ## Minimal Model Fields
 
