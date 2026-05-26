@@ -174,8 +174,60 @@ The n-FG2 pattern is determined by the \(\boxtimes\)-orbit of \(T\):
 is periodic with period dividing the period of the \(\boxtimes\)-orbit of \(T\)
 once the orbit enters its eventual cycle.
 
-**Open**: Find a model with strictly increasing n-FG2 depth, i.e.,
-nFG2(\(k\)) fails for all \(k\le N\) but holds for \(k=N+1\), for arbitrary \(N\).
+**Resolved below**: there is a uniform finite witness where nFG2(\(k\)) fails
+for all \(k\le N\) but holds from \(k=N+1\) onward.
+
+---
+
+## Arbitrary-Depth First-True nFG2 Witnesses
+
+For each \(N\ge 1\), define a finite preAPS \(D_N\) with carrier
+
+\[
+L_N=\{T,a_1,\ldots,a_{N+1},s\}.
+\]
+
+The order is reflexive plus the single non-reflexive relation:
+
+\[
+s\le a_{N+1}.
+\]
+
+Define \(\boxtimes\) by:
+
+\[
+\boxtimes T=a_1,\quad
+\boxtimes a_i=a_{i+1}\ (1\le i\le N),\quad
+\boxtimes a_{N+1}=s,\quad
+\boxtimes s=s.
+\]
+
+This is antitone. The only nontrivial order relation is \(s\le a_{N+1}\), and
+antitonicity there asks for
+\(\boxtimes a_{N+1}=s\le s=\boxtimes s\), which holds.
+
+The \(\boxtimes\)-orbit of \(T\) is:
+
+\[
+T\to a_1\to a_2\to\cdots\to a_{N+1}\to s\to s\to\cdots.
+\]
+
+For \(1\le k\le N\), nFG2(\(k\)) asks \(a_{k+1}\le a_k\), which is false by
+construction. For \(k=N+1\), it asks \(s\le a_{N+1}\), which is true. All later
+instances are \(s\le s\), also true.
+
+Thus \(D_N\) proves arbitrary first-true depth for the nFG2 hierarchy:
+
+\[
+\neg\mathrm{nFG2}(1),\ldots,\neg\mathrm{nFG2}(N),
+\quad
+\mathrm{nFG2}(N+1),\mathrm{nFG2}(N+2),\ldots
+\]
+
+The generator
+`scripts/new-nfg2-depth-witness.ps1` creates these models. The persisted
+example `models/examples/nfg2-depth-3.json` is checked in
+`outputs/g2-zoo-nfg2-depth-3.json` and has pattern `FFFTTTTT`.
 
 ---
 
@@ -247,7 +299,7 @@ nontrivial residual operations satisfying the intended APS axiom package.
   axiom packages imply orbit well-foundedness?
 - Determine whether a G2+FG2+FP-reachable witness such as `M4-G2FG2FP` can carry
   nontrivial residual operations.
-- Build finite models separating \(n\)-FG2 at each depth \(N\) (find a model with
-  nFG2 pattern first \(N\) entries all F and subsequent entry T).
+- Decide whether the arbitrary-depth witnesses \(D_N\) can be constrained by
+  nontrivial APS axioms without collapsing their nFG2 first-true depth.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

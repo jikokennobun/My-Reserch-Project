@@ -64,6 +64,10 @@ All-level nFG2 means \(\mathrm{nFG2}(k)\) holds for every \(k\ge 1\). In finite
 preAPS models this is equivalent to eventual stabilization of the tail orbit at
 a syntactic \(\boxtimes\)-fixed point.
 
+The **first-true nFG2 depth** of a model is the least \(d\ge 1\) such that
+\(\mathrm{nFG2}(d)\) holds, if such a \(d\) exists. The family \(D_N\) in
+`notes/g2-fg2-hierarchy.md` has first-true depth \(N+1\).
+
 If \(S\) is non-collapsed, i.e. \(T\not\le_S\bot\), then G2 holds iff
 \(\boxtimes T\not\le_S\bot\). Thus G2 in non-collapsed finite preAPS models is
 always vacuous in the material-implication sense.

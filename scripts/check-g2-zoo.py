@@ -165,7 +165,7 @@ def check_collapse(order_dict, T, bot):
 # ─── Main checker ─────────────────────────────────────────────────────────────
 
 def check_model(path, nfg2_depth=8, verbose=False):
-    with open(path, encoding='utf-8') as fh:
+    with open(path, encoding='utf-8-sig') as fh:
         model = json.load(fh)
 
     carrier = model['carrier']

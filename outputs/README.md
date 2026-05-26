@@ -14,3 +14,5 @@ Generated artifacts go here.
   `nonprincipal-without-syntactic`.
 - `g2-zoo-M4-G2FG2FP.json`: checker report for the 4-element non-degenerate
   G2+FG2+FP-synt witness with fixed point at the interior element `p`.
+- `g2-zoo-nfg2-depth-3.json`: checker report for the arbitrary-depth nFG2
+  witness example with pattern `FFFTTTTT`.

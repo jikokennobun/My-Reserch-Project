@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 9
+- Current pass: 10
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -644,3 +644,64 @@ Next step:
 
 Use pass 10 to either search for arbitrary-depth nFG2 strictness witnesses or
 attempt to equip `M4-G2FG2FP` with nontrivial tensor/residual operations.
+
+### Pass 10 - 2026-05-26 18:56 JST
+
+Focus:
+
+Resolve the arbitrary-depth nFG2 first-true problem by giving a uniform finite
+model family and a checked depth-3 instance.
+
+Proposer:
+
+The clean construction is sparse. For any \(N\ge 1\), take
+\(L_N=\{T,a_1,\ldots,a_{N+1},s\}\), order it only by reflexivity plus
+\(s\le a_{N+1}\), and define
+\(\boxtimes T=a_1\), \(\boxtimes a_i=a_{i+1}\) for \(1\le i\le N\),
+\(\boxtimes a_{N+1}=s\), and \(\boxtimes s=s\). Then the orbit of \(T\) is
+\(T\to a_1\to\cdots\to a_{N+1}\to s\to s\), so nFG2 fails through level \(N\)
+and holds from level \(N+1\) onward.
+
+Skeptic:
+
+This solves the finite first-true-depth problem only in a deliberately sparse
+preAPS class. It does not yet show that the hierarchy remains separated under
+any substantive APS axiom package, residual structure, contraction/weakening
+discipline, or completion-stability condition. The correct next question is
+therefore not "does arbitrary depth exist?" but "which structural axioms kill
+or preserve the \(D_N\) construction?"
+
+Formalist:
+
+Antitonicity is immediate because the only nontrivial order relation is
+\(s\le a_{N+1}\), and its image condition is
+\(\boxtimes a_{N+1}=s\le s=\boxtimes s\). For \(1\le k\le N\), nFG2(\(k\))
+asks \(a_{k+1}\le a_k\), which is absent. At \(k=N+1\), it asks
+\(s\le a_{N+1}\), which is the added relation; all later levels are \(s\le s\).
+The generated `nfg2-depth-3` model was checked and has pattern `FFFTTTTT`.
+
+Archivist:
+
+Added a generator script for \(D_N\), generated and checked `nfg2-depth-3`,
+persisted its report, updated the hierarchy note, and moved the arbitrary-depth
+nFG2 task from open to resolved while opening the sharper APS-axiom preservation
+problem. The checker was also made tolerant of UTF-8 BOM JSON files produced by
+Windows PowerShell.
+
+Repository updates:
+
+- `scripts/new-nfg2-depth-witness.ps1`: generator for the \(D_N\) family.
+- `models/examples/nfg2-depth-3.json`: checked depth-3 witness.
+- `outputs/g2-zoo-nfg2-depth-3.json`: persisted checker report.
+- `scripts/check-g2-zoo.py`: accepts UTF-8 BOM JSON input.
+- `notes/g2-fg2-hierarchy.md`: added the arbitrary-depth construction theorem.
+- `definitions.md`: added first-true nFG2 depth.
+- `open_problems.md`: resolved arbitrary-depth first-true witnesses and opened
+  the structural-axiom preservation problem.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 11 to test whether simple tensor/residual candidates can be placed on
+`M4-G2FG2FP` or on the \(D_N\) family without destroying the certified G2/FG2/
+nFG2 behavior.

@@ -161,11 +161,15 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | M-110 | 3 | T | T | F | TFTFTFTF | mixed (princ-unref at \(i(c)\) + nonprincipal) |
 | M-111 | 3 | T | T | T | TTTTTTTT | mixed (reflected at \(i(T)\)) |
 | M4-G2FG2FP | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point |
+| nfg2-depth-3 | 6 | T | F | T | FFFTTTTT | mixed (principal + nonprincipal) |
 
 All 8 witnesses are in `models/examples/M-{000..111}.json`.
 The non-degenerate 4-element witness is in
 `models/examples/M4-G2FG2FP.json`; its persisted checker report is
 `outputs/g2-zoo-M4-G2FG2FP.json`.
+The arbitrary-depth nFG2 generator is
+`scripts/new-nfg2-depth-witness.ps1`; `models/examples/nfg2-depth-3.json`
+certifies the first-true depth \(4\) pattern.
 
 ### MacNeille reflection witnesses
 
@@ -216,7 +220,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Test whether `M4-G2FG2FP` admits nontrivial tensor/residual operations.
+3. Test whether `M4-G2FG2FP` or the \(D_N\) nFG2-depth witnesses admit
+   nontrivial tensor/residual operations.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

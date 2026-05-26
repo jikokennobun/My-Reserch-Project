@@ -11,6 +11,10 @@
   finite orbit-stabilization theorem, materialized and checked the
   `M4-G2FG2FP` non-degenerate G2+FG2+FP witness, and opened the infinite
   orbit-well-foundedness problem.
+- Autonomous discussion pass 10: resolved arbitrary finite first-true nFG2
+  depth by adding the \(D_N\) construction, a generator script, a checked
+  `nfg2-depth-3` witness with pattern `FFFTTTTT`, and a sharper open problem
+  about which APS axiom packages preserve or rule out the construction.
 
 ## 2026-05-25 (G2-ZOO implementation pass)
 
