@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 15
+- Current pass: 16
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1037,3 +1037,75 @@ Next step:
 Use pass 16 to search directly for a bottom-disciplined finite preAPS with
 G2+FG2 and no syntactic \(\boxtimes\)-fixed point, or prove that the small
 bounded constructions force FP-synt.
+
+### Pass 16 - 2026-05-27 06:47 JST
+
+Focus:
+
+Resolve the remaining bottom-discipline separation: G2+FG2 without syntactic
+\(\boxtimes\)-fixed point.
+
+Proposer:
+
+Use the same role separation as \(B_N\): keep a true bottom \(b\) and helper
+upper bound \(U\), but make the \(T\)-orbit enter a strict two-cycle
+\[
+T\to a\to d\to a\to\cdots
+\]
+with \(d\le a\). This makes FG2 true at the first step without requiring
+\(a\sim d\).
+
+Skeptic:
+
+The construction shows bottom discipline alone does not force FP-synt from
+G2+FG2. It does not yet say whether a stronger setting such as a full
+residuated APS, lattice-ordered APS, or a BS16-derived modal calculus preserves
+this separation. The helper \(U\) again marks the construction as a bounded
+preAPS witness.
+
+Formalist:
+
+The model `bottom-G2FG2-noFP` has carrier \(\{b,d,a,T,U\}\), order
+\(b\le x\le U\) for all \(x\), plus \(d\le a\). Define
+\[
+\boxtimes b=U,\quad \boxtimes U=b,\quad \boxtimes T=a,\quad
+\boxtimes a=d,\quad \boxtimes d=a.
+\]
+Antitonicity follows from the bounding pairs and the interior relation
+\(d\le a\), whose image condition is \(d=\boxtimes a\le\boxtimes d=a\). G2 is
+true vacuously because \(\boxtimes T=a\not\le b\). FG2 is true because
+\(\boxtimes^2T=d\le a=\boxtimes T\). There is no syntactic fixed point:
+\(b\leftrightarrow U\), \(a\leftrightarrow d\), and \(T\mapsto a\) with
+\(T\not\sim a\). The checker reports nFG2 pattern `TFTFTFTF`.
+
+Archivist:
+
+Added the witness model, saved its checker report, updated the
+bottom-discipline filter report, and revised the hierarchy, classification,
+residuated-domain, open-problem, active-question, model index, output index,
+and research log. Bottom discipline alone now preserves all currently tracked
+G2/FG2/FP-synt separations; the next test is residuation.
+
+Repository updates:
+
+- `models/examples/bottom-G2FG2-noFP.json`: 5-element bottom-disciplined
+  G2+FG2 without FP-synt witness.
+- `outputs/g2-zoo-bottom-G2FG2-noFP.json`: checker report for the new witness.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include
+  `bottom-G2FG2-noFP`.
+- `notes/g2-fg2-hierarchy.md`: added the construction and proof sketch.
+- `notes/g2-aps-zoo-classification.md`: added the registry row and revised the
+  immediate target.
+- `notes/residuated-algebra-domain-completion.md`: recorded the new witness as
+  the next residuation test case.
+- `open_problems.md` and `ideas/research-questions.md`: closed the
+  bottom-disciplined G2+FG2-without-FP task and opened the residuated-upgrade
+  question.
+- `models/README.md` and `outputs/README.md`: indexed the new model and report.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 17 to test whether the bottom-disciplined witnesses, starting with
+`bottom-G2FG2-noFP`, admit full residuated expansions or require minimal
+order/carrier repairs.

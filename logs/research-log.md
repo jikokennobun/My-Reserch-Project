@@ -23,6 +23,10 @@
   point \(s\) and adding helper upper bound \(U\); generated and checked
   `bottom-nfg2-depth-3` with G2 true, FG2 false, FP-synt true, and pattern
   `FFFTTTTT`.
+- Autonomous discussion pass 16: added `bottom-G2FG2-noFP`, a 5-element
+  bottom-disciplined witness with G2 true, FG2 true, no syntactic
+  \(\boxtimes\)-fixed point, and nFG2 pattern `TFTFTFTF`; bottom discipline
+  alone now preserves all tracked G2/FG2/FP-synt separations.
 
 ## 2026-05-26
 

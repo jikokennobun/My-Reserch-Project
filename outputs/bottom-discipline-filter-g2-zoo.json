@@ -3,10 +3,11 @@
   "formula": "forall x, bottom <= x",
   "nfg2Depth": 8,
   "summary": {
-    "modelsChecked": 12,
+    "modelsChecked": 13,
     "alreadyBottomDisciplined": [
       "M4-G2FG2FP-order-plus-bot-c-residuated",
-      "bottom-nfg2-depth-3"
+      "bottom-nfg2-depth-3",
+      "bottom-G2FG2-noFP"
     ],
     "validAfterPureOrderEnforcement": [
       "M-000",
@@ -14,13 +15,15 @@
       "M-111",
       "M4-G2FG2FP",
       "M4-G2FG2FP-order-plus-bot-c-residuated",
-      "bottom-nfg2-depth-3"
+      "bottom-nfg2-depth-3",
+      "bottom-G2FG2-noFP"
     ],
     "corePropertiesStableAfterEnforcement": [
       "M-111",
       "M4-G2FG2FP",
       "M4-G2FG2FP-order-plus-bot-c-residuated",
-      "bottom-nfg2-depth-3"
+      "bottom-nfg2-depth-3",
+      "bottom-G2FG2-noFP"
     ],
     "invalidAfterPureOrderEnforcement": [
       "M-001",
@@ -1005,6 +1008,60 @@
           "s",
           "s",
           "s"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "bottom-G2FG2-noFP",
+      "path": "models\\examples\\bottom-G2FG2-noFP.json",
+      "carrierSize": 5,
+      "bottom": "b",
+      "alreadyBottomDisciplined": true,
+      "missingBottomPairs": [],
+      "enforcedOrderAdds": [],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TFTFTFTF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "a",
+          "d",
+          "a",
+          "d",
+          "a",
+          "d",
+          "a",
+          "d",
+          "a",
+          "d"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": true,
+        "nFG2Pattern": "TFTFTFTF",
+        "FPSyntactic": [],
+        "orbitPrefix": [
+          "T",
+          "a",
+          "d",
+          "a",
+          "d",
+          "a",
+          "d",
+          "a",
+          "d",
+          "a",
+          "d"
         ]
       },
       "corePropertiesStable": true

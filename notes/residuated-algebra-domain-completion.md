@@ -157,6 +157,12 @@ adding a helper upper bound \(U=\boxtimes b\). The checked depth-3 instance
 `bottom-nfg2-depth-3` has G2 true, FG2 false, FP-synt at \(s\), and nFG2 pattern
 `FFFTTTTT` while satisfying \(b\le x\) for every element.
 
+Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
+G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
+\(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
+This makes FG2 true while keeping \(a,d\) as a strict two-cycle, so no syntactic
+\(\boxtimes\)-fixed point appears.
+
 ## Next Tasks
 
 - Define "residuated dcpo" carefully.
@@ -169,6 +175,8 @@ adding a helper upper bound \(U=\boxtimes b\). The checked depth-3 instance
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
+- Test whether `bottom-G2FG2-noFP` admits a full residuated expansion or needs a
+  residuated repair analogous to the M4 order repair.
 
 ## Related References and Drive Files
 

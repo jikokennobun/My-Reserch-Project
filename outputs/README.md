@@ -30,3 +30,5 @@ Generated artifacts go here.
 - `g2-zoo-bottom-nfg2-depth-3.json`: checker report for the
   bottom-disciplined arbitrary-depth nFG2 witness example with pattern
   `FFFTTTTT`.
+- `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
+  G2+FG2 without FP-synt witness.

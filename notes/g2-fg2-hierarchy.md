@@ -340,14 +340,16 @@ The current finite witnesses split as follows:
 | `M4-G2FG2FP` | yes | G2+FG2+FP stays stable; this is exactly the `bot <= c` repair |
 | `M4-G2FG2FP-order-plus-bot-c-residuated` | already | already bottom-disciplined and stable |
 | `bottom-nfg2-depth-3` | already | bottom-disciplined replacement with pattern `FFFTTTTT` |
+| `bottom-G2FG2-noFP` | already | bottom-disciplined G2+FG2 without FP-synt |
 | `M-001`, `M-011`, `M-100`, `M-101`, `M-110` | no | adding bottom pairs breaks antitonicity of \(\boxtimes\) |
 | `nfg2-depth-3` | no | adding \(s\le T,a_1,a_2,a_3\) breaks antitonicity |
 
 Pass 15 adds the missing bottom-disciplined arbitrary-depth replacement family.
 Consequently bottom discipline preserves FG2-not-G2 via the repaired `M-010`,
 and preserves G2-not-FG2, G2+FP-not-FG2, and arbitrary first-true nFG2 depth via
-the bottom-disciplined \(B_N\) construction below. The remaining lost separation
-from the current finite zoo is G2+FG2 without FP-synt.
+the bottom-disciplined \(B_N\) construction below. Pass 16 adds
+`bottom-G2FG2-noFP`, so bottom discipline alone preserves all currently tracked
+G2/FG2/FP-synt separations.
 
 ### Bottom-Disciplined Arbitrary-Depth Witnesses
 
@@ -394,6 +396,35 @@ and FP-synt holds at \(s\). The generated depth-3 instance
 `models/examples/bottom-nfg2-depth-3.json` is certified by
 `outputs/g2-zoo-bottom-nfg2-depth-3.json` with pattern `FFFTTTTT`.
 
+### Bottom-Disciplined G2+FG2 without FP
+
+The remaining bottom-discipline separation is witnessed by
+`bottom-G2FG2-noFP`. Its carrier is
+
+\[
+\{b,d,a,T,U\},
+\]
+
+with \(b\le x\le U\) for every \(x\) and one additional relation \(d\le a\).
+The refutability map is:
+
+\[
+\boxtimes b=U,\quad \boxtimes U=b,\quad \boxtimes T=a,\quad
+\boxtimes a=d,\quad \boxtimes d=a.
+\]
+
+Bottom discipline holds because \(b\) is least. Antitonicity holds because the
+bounding pairs are absorbed by \(U\) and \(b\), and the only interior relation
+\(d\le a\) maps to \(d=\boxtimes a\le\boxtimes d=a\). G2 holds vacuously since
+\(\boxtimes T=a\not\le b\). FG2 holds because
+\[
+\boxtimes^2T=d\le a=\boxtimes T.
+\]
+There is no syntactic fixed point: \(b\leftrightarrow U\), \(a\leftrightarrow d\)
+as a strict two-cycle, and \(T\mapsto a\) with \(T\not\sim a\). The checker
+report `outputs/g2-zoo-bottom-G2FG2-noFP.json` verifies G2 true, FG2 true,
+FP-synt false, and nFG2 pattern `TFTFTFTF`.
+
 ---
 
 ## Open Tasks
@@ -401,8 +432,8 @@ and FP-synt holds at \(s\). The generated depth-3 instance
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Search for a bottom-disciplined replacement witness for G2+FG2 without
-  FP-synt, the remaining lost finite-zoo separation after the \(B_N\)
-  construction.
+- Test which bottom-disciplined witnesses can be upgraded to full residuated
+  APS, or identify the smallest order/carrier repairs needed for those that
+  cannot.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.
