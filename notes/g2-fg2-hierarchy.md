@@ -304,6 +304,15 @@ Thus the non-degenerate G2+FG2+FP witness is not itself a residuated APS on this
 underlying order. Any residuated version must either change the order, add
 elements, weaken the residual requirement, or use a different witness family.
 
+The smallest same-carrier order repair is now known. Adding just
+\(\bot\le c\) to `M4-G2FG2FP` produces
+`M4-G2FG2FP-order-plus-bot-c-residuated`, with the order
+\(\bot<p<T\), \(\bot<c<T\), and \(p\parallel c\). The search report
+`outputs/residuated-order-search-M4-G2FG2FP.json` finds a full residuated
+expansion with unit \(p\). The model preserves non-collapse, G2, FG2, all
+checked nFG2 levels, and the reachable fixed point at \(p\); see
+`outputs/g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`.
+
 ---
 
 ## Open Tasks
@@ -311,8 +320,9 @@ elements, weaken the residual requirement, or use a different witness family.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Find a modified or expanded G2+FG2+FP-reachable witness that carries full
-  residuation.
+- Interpret the added relation \(\bot\le c\) in the residuated M4 repair:
+  determine whether it corresponds to a meaningful resource/refutability axiom
+  or is merely an order-theoretic completion trick.
 - Decide whether the arbitrary-depth witnesses \(D_N\) can be constrained by
   nontrivial APS axioms without collapsing their nFG2 first-true depth.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis

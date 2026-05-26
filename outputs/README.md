@@ -19,3 +19,7 @@ Generated artifacts go here.
 - `residuated-search-M4-G2FG2FP.json`: exhaustive negative search report showing
   that `M4-G2FG2FP` has no full residuated monoid expansion on its existing
   carrier/order.
+- `residuated-order-search-M4-G2FG2FP.json`: same-carrier order-repair search
+  report showing that adding `bot <= c` yields a full-residuated expansion.
+- `g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`: G2-ZOO checker report
+  for the full-residuated order repair.

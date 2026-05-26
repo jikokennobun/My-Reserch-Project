@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 11
+- Current pass: 12
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -768,3 +768,65 @@ Next step:
 Use pass 12 to search for the smallest order expansion or carrier extension
 that preserves G2+FG2+FP-reachable behavior while admitting full residuation, or
 to test one-sided/partial residual relaxations as an intermediate target.
+
+### Pass 12 - 2026-05-27 04:40 JST
+
+Focus:
+
+Find the smallest same-carrier order repair of `M4-G2FG2FP` that admits full
+residuation while preserving the G2+FG2+FP-reachable behavior.
+
+Proposer:
+
+Instead of adding elements, first enumerate preorder extensions of the existing
+four-element order. The search keeps the carrier, \(T\), \(\bot\), \(\Box\), and
+\(\boxtimes\) fixed; it allows only extra order pairs that preserve
+non-collapse, antitonicity of \(\boxtimes\), G2, FG2, and a syntactic fixed point.
+This gives a bounded finite problem before moving to larger carriers.
+
+Skeptic:
+
+The result should be interpreted as a residuated repair, not automatically as a
+proof-theoretic axiom. Adding \(\bot\le c\) makes residual downsets principal,
+but it is not yet clear whether that relation has a natural reading in the APS
+or BS16 resource-sensitive story. No external citation or Project-only content
+was used for this step.
+
+Formalist:
+
+The order-extension search found a first hit after checking two candidate
+extensions. Adding exactly \(\bot\le c\) turns the order into the diamond
+\(\bot<p<T\), \(\bot<c<T\), \(p\parallel c\). The resulting model has a full
+residuated monoid expansion with unit \(p\). The tensor has \(p\) as unit,
+\(\bot\) as zero, \(T\otimes T=T\), \(T\otimes c=c\), and \(c\otimes c=\bot\).
+The G2-ZOO checker confirms non-collapse, G2 true, FG2 true, all checked nFG2
+levels true, and FP-synt at \(p\).
+
+Archivist:
+
+Added a same-carrier order-extension search script, generated the full-residuated
+order-repair model, saved both the residuation search report and the G2-ZOO
+checker report, and updated the hierarchy, residuated-domain, classification,
+model/output index, open-problem, and active-question notes.
+
+Repository updates:
+
+- `scripts/search-residuated-order-expansions.py`: same-carrier order repair
+  search.
+- `models/examples/M4-G2FG2FP-order-plus-bot-c-residuated.json`: full-residuated
+  order repair of the M4 witness.
+- `outputs/residuated-order-search-M4-G2FG2FP.json`: order-extension search
+  report.
+- `outputs/g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`: checker report
+  for the repaired witness.
+- `models/finite-aps-schema.json`: documented optional `unit`, `tensor`, and
+  residual tables.
+- `open_problems.md`: resolved the modified same-carrier full-residuation
+  search and opened the interpretation problem for \(\bot\le c\).
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 13 to interpret the \(\bot\le c\) repair: determine whether it
+corresponds to a natural resource/refutability axiom, or whether a more
+proof-theoretically meaningful residuated witness should be sought.

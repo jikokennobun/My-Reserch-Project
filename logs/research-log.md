@@ -6,6 +6,10 @@
   expansions of `M4-G2FG2FP` on its existing carrier and order; no full
   residuated monoid expansion exists for any unit choice, so the next target is
   a modified or expanded G2+FG2+FP-reachable witness.
+- Autonomous discussion pass 12: found a smallest same-carrier order repair of
+  `M4-G2FG2FP`; adding \(\bot\le c\) yields a full-residuated non-collapsed
+  G2+FG2+FP-reachable witness with unit \(p\), with search and checker reports
+  saved under `outputs/`.
 
 ## 2026-05-26
 

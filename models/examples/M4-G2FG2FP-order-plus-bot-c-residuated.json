@@ -1,0 +1,167 @@
+{
+  "name": "M4-G2FG2FP-order-plus-bot-c-residuated",
+  "carrier": [
+    "bot",
+    "p",
+    "c",
+    "T"
+  ],
+  "order": [
+    [
+      "T",
+      "T"
+    ],
+    [
+      "bot",
+      "T"
+    ],
+    [
+      "bot",
+      "bot"
+    ],
+    [
+      "bot",
+      "c"
+    ],
+    [
+      "bot",
+      "p"
+    ],
+    [
+      "c",
+      "T"
+    ],
+    [
+      "c",
+      "c"
+    ],
+    [
+      "p",
+      "T"
+    ],
+    [
+      "p",
+      "p"
+    ]
+  ],
+  "top": "T",
+  "bottom": "bot",
+  "box": {
+    "bot": "bot",
+    "p": "p",
+    "c": "c",
+    "T": "T"
+  },
+  "refutability": {
+    "bot": "T",
+    "p": "p",
+    "c": "T",
+    "T": "p"
+  },
+  "metadata": {
+    "purpose": "Non-degenerate 4-element witness for G2+FG2+FP-synt with the fixed point at p, not T or bot.",
+    "order_summary": "bot < p < T and bot < c < T, with p incomparable to c.",
+    "separation": "witnesses (G2=true, FG2=true, FP-synt=true) with FP at an interior element",
+    "syntactic_FP": [
+      "p"
+    ],
+    "nFG2_pattern": "TTTTTTTT",
+    "boxtimes_orbit_T": [
+      "T",
+      "p",
+      "p",
+      "p"
+    ],
+    "G2_antecedent": false,
+    "G2_mode": "vacuous",
+    "collapse": false,
+    "warning": "G2 holds vacuously because boxtimes(T)=p is not <= bot; this is still non-collapsed and non-degenerate with respect to fixed-point location.",
+    "residuation": "full",
+    "residuation_search_report": "outputs\\residuated-order-search-M4-G2FG2FP.json",
+    "added_order_pairs": [
+      [
+        "bot",
+        "c"
+      ]
+    ]
+  },
+  "unit": "p",
+  "tensor": {
+    "bot": {
+      "p": "bot",
+      "bot": "bot",
+      "c": "bot",
+      "T": "bot"
+    },
+    "p": {
+      "bot": "bot",
+      "p": "p",
+      "c": "c",
+      "T": "T"
+    },
+    "c": {
+      "p": "c",
+      "bot": "bot",
+      "c": "bot",
+      "T": "c"
+    },
+    "T": {
+      "p": "T",
+      "bot": "bot",
+      "c": "c",
+      "T": "T"
+    }
+  },
+  "leftResidual": {
+    "bot": {
+      "bot": "T",
+      "p": "T",
+      "c": "T",
+      "T": "T"
+    },
+    "p": {
+      "bot": "bot",
+      "p": "p",
+      "c": "c",
+      "T": "T"
+    },
+    "c": {
+      "bot": "c",
+      "p": "c",
+      "c": "T",
+      "T": "T"
+    },
+    "T": {
+      "bot": "bot",
+      "p": "bot",
+      "c": "c",
+      "T": "T"
+    }
+  },
+  "rightResidual": {
+    "bot": {
+      "bot": "T",
+      "p": "T",
+      "c": "T",
+      "T": "T"
+    },
+    "p": {
+      "bot": "bot",
+      "p": "p",
+      "c": "c",
+      "T": "T"
+    },
+    "c": {
+      "bot": "c",
+      "p": "c",
+      "c": "T",
+      "T": "T"
+    },
+    "T": {
+      "bot": "bot",
+      "p": "bot",
+      "c": "c",
+      "T": "T"
+    }
+  }
+}

@@ -118,6 +118,18 @@ residuated G2+FG2+FP witness likely requires at least one of:
 - weakening to one-sided or partial residuals;
 - searching in a different finite family.
 
+Pass 12 found the minimal same-carrier order repair. Adding the single relation
+\(\bot\le c\) to `M4-G2FG2FP` makes the order into the diamond
+\(\bot<p<T\), \(\bot<c<T\), \(p\parallel c\). The resulting model
+`M4-G2FG2FP-order-plus-bot-c-residuated` has a full residuated monoid expansion
+with unit \(p\), while preserving the G2+FG2+FP-reachable behavior. The tensor
+has \(p\) as unit, \(\bot\) as zero, \(T\otimes T=T\), \(T\otimes c=c\), and
+\(c\otimes c=\bot\).
+
+The remaining conceptual issue is the meaning of \(\bot\le c\). It may be a
+small resource/refutability closure principle, or it may be only an
+order-theoretic repair needed to make residual downsets principal.
+
 ## Next Tasks
 
 - Define "residuated dcpo" carefully.
@@ -125,8 +137,9 @@ residuated G2+FG2+FP witness likely requires at least one of:
 - Compare quantale completion with MacNeille completion.
 - Find examples where completion creates a fixed point not present syntactically.
 - Connect Galatos-Jipsen-Kowalski-Ono style residuated lattices with APS/G2-ZOO.
-- Search for the smallest full-residuated expansion or replacement of
-  `M4-G2FG2FP`.
+- Interpret the \(\bot\le c\) repair in proof-theoretic/resource terms.
+- Search whether the \(D_N\) nFG2-depth family admits analogous finite
+  residuated repairs.
 
 ## Related References and Drive Files
 

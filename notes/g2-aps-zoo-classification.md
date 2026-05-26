@@ -113,10 +113,12 @@ mathematically uninteresting as a reflection test.
 | `res-full` | Full residuation \((\otimes, \backslash, /)\) |
 | `res-partial` | Partial or one-sided residuation |
 
-Current search status: `M4-G2FG2FP` is certified `res-none` on its existing
+Current search status: `M4-G2FG2FP` is certified `res-none` on its original
 carrier and order. The exhaustive report
 `outputs/residuated-search-M4-G2FG2FP.json` finds no full residuated monoid
-expansion for any choice of unit.
+expansion for any choice of unit. The same carrier becomes `res-full` after the
+single order repair \(\bot\le c\), recorded as
+`M4-G2FG2FP-order-plus-bot-c-residuated`.
 
 ---
 
@@ -166,6 +168,7 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | M-110 | 3 | T | T | F | TFTFTFTF | mixed (princ-unref at \(i(c)\) + nonprincipal) |
 | M-111 | 3 | T | T | T | TTTTTTTT | mixed (reflected at \(i(T)\)) |
 | M4-G2FG2FP | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point; no same-order full residuation |
+| M4-G2FG2FP-order-plus-bot-c-residuated | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point; `res-full` with unit \(p\) |
 | nfg2-depth-3 | 6 | T | F | T | FFFTTTTT | mixed (principal + nonprincipal) |
 
 All 8 witnesses are in `models/examples/M-{000..111}.json`.
@@ -225,8 +228,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Search for a modified or expanded G2+FG2+FP-reachable model with full
-   residuation, since `M4-G2FG2FP` has no same-order full-residuated expansion.
+3. Interpret the \(\bot\le c\) order repair in
+   `M4-G2FG2FP-order-plus-bot-c-residuated`.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic
