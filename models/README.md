@@ -27,12 +27,16 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/new-bottom-nfg2-depth-witness.py](../scripts/new-bottom-nfg2-depth-witness.py).
 - Bottom-disciplined G2+FG2 without FP-synt witness:
   [examples/bottom-G2FG2-noFP.json](examples/bottom-G2FG2-noFP.json).
+- Full-residuated expansion of that witness:
+  [examples/bottom-G2FG2-noFP-residuated.json](examples/bottom-G2FG2-noFP-residuated.json).
 - Scripts to check G2, FG2, nFG2, fixed point principles, MacNeille completion
   properties, and collapse conditions.
 - Tensor/residual search script:
   [../scripts/search-residuated-tensor.py](../scripts/search-residuated-tensor.py).
 - Same-carrier order repair search script:
   [../scripts/search-residuated-order-expansions.py](../scripts/search-residuated-order-expansions.py).
+- Commutative fixed-unit/fixed-zero residuation search script:
+  [../scripts/search-residuated-commutative-zero.py](../scripts/search-residuated-commutative-zero.py).
 - Bottom-discipline filter script:
   [../scripts/check-bottom-discipline.py](../scripts/check-bottom-discipline.py).
 

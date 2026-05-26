@@ -32,3 +32,11 @@ Generated artifacts go here.
   `FFFTTTTT`.
 - `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
   G2+FG2 without FP-synt witness.
+- `residuated-search-bottom-G2FG2-noFP.json`: unrestricted tensor search report
+  recording that the five-element operation space is too large for the current
+  exhaustive bound.
+- `residuated-commutative-zero-search-bottom-G2FG2-noFP.json`: targeted
+  commutative fixed-unit/fixed-zero search report finding full residuated
+  tensors for `bottom-G2FG2-noFP`.
+- `g2-zoo-bottom-G2FG2-noFP-residuated.json`: checker report for the
+  full-residuated same-order expansion of `bottom-G2FG2-noFP`.

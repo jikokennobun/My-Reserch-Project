@@ -1,0 +1,214 @@
+{
+  "name": "bottom-G2FG2-noFP-residuated",
+  "carrier": [
+    "b",
+    "d",
+    "a",
+    "T",
+    "U"
+  ],
+  "order": [
+    [
+      "b",
+      "b"
+    ],
+    [
+      "d",
+      "d"
+    ],
+    [
+      "a",
+      "a"
+    ],
+    [
+      "T",
+      "T"
+    ],
+    [
+      "U",
+      "U"
+    ],
+    [
+      "b",
+      "d"
+    ],
+    [
+      "b",
+      "a"
+    ],
+    [
+      "b",
+      "T"
+    ],
+    [
+      "b",
+      "U"
+    ],
+    [
+      "d",
+      "a"
+    ],
+    [
+      "d",
+      "U"
+    ],
+    [
+      "a",
+      "U"
+    ],
+    [
+      "T",
+      "U"
+    ]
+  ],
+  "top": "T",
+  "bottom": "b",
+  "box": {
+    "b": "b",
+    "d": "d",
+    "a": "a",
+    "T": "T",
+    "U": "U"
+  },
+  "refutability": {
+    "b": "U",
+    "d": "a",
+    "a": "d",
+    "T": "a",
+    "U": "b"
+  },
+  "metadata": {
+    "purpose": "Bottom-disciplined finite preAPS witness for G2+FG2 without syntactic boxtimes fixed point.",
+    "order_summary": "b is least, U is greatest; d < a; T is incomparable with a and d except b < T < U.",
+    "separation": "witnesses (G2=true, FG2=true, FP-synt=false) under bottom discipline",
+    "bottom_discipline": true,
+    "syntactic_FP": [],
+    "nFG2_pattern": "TFTFTFTF",
+    "boxtimes_orbit_T": [
+      "T",
+      "a",
+      "d",
+      "a",
+      "d"
+    ],
+    "G2_antecedent": false,
+    "G2_mode": "vacuous",
+    "collapse": false,
+    "note": "FG2 holds because boxtimes^2(T)=d <= a=boxtimes(T), while a and d form a strict 2-cycle rather than an equivalence.",
+    "residuation": "full",
+    "residuation_search_report": "outputs\\residuated-commutative-zero-search-bottom-G2FG2-noFP.json",
+    "residuation_assumptions": "commutative tensor, fixed unit, fixed zero"
+  },
+  "unit": "T",
+  "tensor": {
+    "b": {
+      "b": "b",
+      "d": "b",
+      "a": "b",
+      "T": "b",
+      "U": "b"
+    },
+    "d": {
+      "b": "b",
+      "T": "d",
+      "d": "b",
+      "a": "b",
+      "U": "d"
+    },
+    "a": {
+      "b": "b",
+      "T": "a",
+      "d": "b",
+      "a": "b",
+      "U": "a"
+    },
+    "T": {
+      "b": "b",
+      "d": "d",
+      "a": "a",
+      "T": "T",
+      "U": "U"
+    },
+    "U": {
+      "b": "b",
+      "T": "U",
+      "d": "d",
+      "a": "a",
+      "U": "U"
+    }
+  },
+  "leftResidual": {
+    "b": {
+      "b": "U",
+      "d": "U",
+      "a": "U",
+      "T": "U",
+      "U": "U"
+    },
+    "d": {
+      "b": "a",
+      "d": "U",
+      "a": "U",
+      "T": "a",
+      "U": "U"
+    },
+    "a": {
+      "b": "a",
+      "d": "a",
+      "a": "U",
+      "T": "a",
+      "U": "U"
+    },
+    "T": {
+      "b": "b",
+      "d": "d",
+      "a": "a",
+      "T": "T",
+      "U": "U"
+    },
+    "U": {
+      "b": "b",
+      "d": "d",
+      "a": "a",
+      "T": "b",
+      "U": "U"
+    }
+  },
+  "rightResidual": {
+    "b": {
+      "b": "U",
+      "d": "U",
+      "a": "U",
+      "T": "U",
+      "U": "U"
+    },
+    "d": {
+      "b": "a",
+      "d": "U",
+      "a": "U",
+      "T": "a",
+      "U": "U"
+    },
+    "a": {
+      "b": "a",
+      "d": "a",
+      "a": "U",
+      "T": "a",
+      "U": "U"
+    },
+    "T": {
+      "b": "b",
+      "d": "d",
+      "a": "a",
+      "T": "T",
+      "U": "U"
+    },
+    "U": {
+      "b": "b",
+      "d": "d",
+      "a": "a",
+      "T": "b",
+      "U": "U"
+    }
+  }
+}

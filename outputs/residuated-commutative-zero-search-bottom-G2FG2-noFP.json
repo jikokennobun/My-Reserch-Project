@@ -1,0 +1,133 @@
+{
+  "model": "bottom-G2FG2-noFP",
+  "modelPath": "models\\examples\\bottom-G2FG2-noFP.json",
+  "carrierSize": 5,
+  "assumptions": {
+    "commutative": true,
+    "unit": "T",
+    "zero": "b"
+  },
+  "search": {
+    "searched": true,
+    "operationSpace": 15625,
+    "candidateCount": 8,
+    "examples": [
+      {
+        "unit": "T",
+        "zero": "b",
+        "tensor": {
+          "b": {
+            "b": "b",
+            "d": "b",
+            "a": "b",
+            "T": "b",
+            "U": "b"
+          },
+          "d": {
+            "b": "b",
+            "T": "d",
+            "d": "b",
+            "a": "b",
+            "U": "d"
+          },
+          "a": {
+            "b": "b",
+            "T": "a",
+            "d": "b",
+            "a": "b",
+            "U": "a"
+          },
+          "T": {
+            "b": "b",
+            "d": "d",
+            "a": "a",
+            "T": "T",
+            "U": "U"
+          },
+          "U": {
+            "b": "b",
+            "T": "U",
+            "d": "d",
+            "a": "a",
+            "U": "U"
+          }
+        },
+        "leftResidual": {
+          "b": {
+            "b": "U",
+            "d": "U",
+            "a": "U",
+            "T": "U",
+            "U": "U"
+          },
+          "d": {
+            "b": "a",
+            "d": "U",
+            "a": "U",
+            "T": "a",
+            "U": "U"
+          },
+          "a": {
+            "b": "a",
+            "d": "a",
+            "a": "U",
+            "T": "a",
+            "U": "U"
+          },
+          "T": {
+            "b": "b",
+            "d": "d",
+            "a": "a",
+            "T": "T",
+            "U": "U"
+          },
+          "U": {
+            "b": "b",
+            "d": "d",
+            "a": "a",
+            "T": "b",
+            "U": "U"
+          }
+        },
+        "rightResidual": {
+          "b": {
+            "b": "U",
+            "d": "U",
+            "a": "U",
+            "T": "U",
+            "U": "U"
+          },
+          "d": {
+            "b": "a",
+            "d": "U",
+            "a": "U",
+            "T": "a",
+            "U": "U"
+          },
+          "a": {
+            "b": "a",
+            "d": "a",
+            "a": "U",
+            "T": "a",
+            "U": "U"
+          },
+          "T": {
+            "b": "b",
+            "d": "d",
+            "a": "a",
+            "T": "T",
+            "U": "U"
+          },
+          "U": {
+            "b": "b",
+            "d": "d",
+            "a": "a",
+            "T": "b",
+            "U": "U"
+          }
+        }
+      }
+    ]
+  },
+  "conclusion": "full-residuated-expansion-found"
+}

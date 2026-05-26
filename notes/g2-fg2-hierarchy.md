@@ -425,6 +425,16 @@ as a strict two-cycle, and \(T\mapsto a\) with \(T\not\sim a\). The checker
 report `outputs/g2-zoo-bottom-G2FG2-noFP.json` verifies G2 true, FG2 true,
 FP-synt false, and nFG2 pattern `TFTFTFTF`.
 
+The same order also carries a full residuated expansion. A targeted commutative
+search with unit \(T\) and absorbing zero \(b\) checks \(5^6=15625\) candidate
+tensors and finds 8 full-residuated operations; see
+`outputs/residuated-commutative-zero-search-bottom-G2FG2-noFP.json`. The
+persisted expansion `bottom-G2FG2-noFP-residuated` uses \(T\) as the monoid
+unit. Its tensor has \(b\) as zero, keeps \(U\) idempotent, and sends
+\(a\otimes a=a\otimes d=d\otimes d=b\). Thus the bottom-disciplined
+G2+FG2-without-FP separation survives full residuation on the same carrier and
+order.
+
 ---
 
 ## Open Tasks
@@ -432,8 +442,8 @@ FP-synt false, and nFG2 pattern `TFTFTFTF`.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Test which bottom-disciplined witnesses can be upgraded to full residuated
-  APS, or identify the smallest order/carrier repairs needed for those that
-  cannot.
+- Test whether the bottom-disciplined arbitrary-depth family \(B_N\) can be
+  upgraded to full residuated APS, or identify the smallest order/carrier
+  repairs needed for it.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

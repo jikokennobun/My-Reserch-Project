@@ -196,6 +196,7 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | nfg2-depth-3 | 6 | T | F | T | FFFTTTTT | mixed (principal + nonprincipal) |
 | bottom-nfg2-depth-3 | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined |
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
+| bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 
 All 8 witnesses are in `models/examples/M-{000..111}.json`.
 The non-degenerate 4-element witness is in
@@ -211,6 +212,10 @@ certifies the same first-true depth \(4\) pattern while satisfying
 The bottom-disciplined G2+FG2 without FP witness is
 `models/examples/bottom-G2FG2-noFP.json`, checked in
 `outputs/g2-zoo-bottom-G2FG2-noFP.json`.
+Its full-residuated same-order expansion is
+`models/examples/bottom-G2FG2-noFP-residuated.json`, with search report
+`outputs/residuated-commutative-zero-search-bottom-G2FG2-noFP.json` and checker
+report `outputs/g2-zoo-bottom-G2FG2-noFP-residuated.json`.
 
 ### MacNeille reflection witnesses
 
@@ -261,8 +266,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Test whether the bottom-disciplined witnesses can be upgraded to full
-   residuated APS, or classify their smallest residuated repairs.
+3. Test whether the bottom-disciplined arbitrary-depth family \(B_N\) can be
+   upgraded to full residuated APS, or classify its smallest residuated repairs.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

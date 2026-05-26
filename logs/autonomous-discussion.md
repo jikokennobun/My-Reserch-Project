@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 16
+- Current pass: 17
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1109,3 +1109,71 @@ Next step:
 Use pass 17 to test whether the bottom-disciplined witnesses, starting with
 `bottom-G2FG2-noFP`, admit full residuated expansions or require minimal
 order/carrier repairs.
+
+### Pass 17 - 2026-05-27 07:17 JST
+
+Focus:
+
+Test whether `bottom-G2FG2-noFP` admits a full residuated expansion on the same
+carrier and order.
+
+Proposer:
+
+The unrestricted five-element tensor search is too large for the current brute
+force script, but the model has a natural resource reading: \(T\) is the
+distinguished APS top and can be tried as monoid unit, while the true bottom
+\(b\) can be tried as absorbing zero. Adding commutativity makes the finite
+search small enough to run exactly.
+
+Skeptic:
+
+This is a targeted positive result, not an exhaustive classification of all
+possible tensors. The unrestricted report correctly records that the
+\(5^{16}\)-per-unit operation space was not searched. The positive constrained
+search is still mathematically useful because any found tensor/residual tables
+are independently checkable witnesses.
+
+Formalist:
+
+`scripts/search-residuated-commutative-zero.py` checks the commutative
+fixed-unit/fixed-zero space with unit \(T\) and zero \(b\). It searches
+\(5^6=15625\) tensors and finds 8 full-residuated candidates. The persisted
+example has \(b\) absorbing, \(T\) as unit, \(U\otimes U=U\),
+\(U\otimes a=a\), \(U\otimes d=d\), and
+\(a\otimes a=a\otimes d=d\otimes d=b\). The checker confirms that
+`bottom-G2FG2-noFP-residuated` preserves non-collapse, G2 true, FG2 true,
+FP-synt false, and nFG2 pattern `TFTFTFTF`.
+
+Archivist:
+
+Fixed the unrestricted tensor-search conclusion so skipped searches no longer
+claim a negative result, added the targeted commutative-zero search script,
+generated the full-residuated expansion and reports, and updated the hierarchy,
+classification, residuated-domain, model/output indexes, open problems, active
+questions, and research log.
+
+Repository updates:
+
+- `scripts/search-residuated-tensor.py`: distinguishes "not searched because
+  too large" from a negative searched result.
+- `scripts/search-residuated-commutative-zero.py`: targeted finite search with
+  fixed unit, fixed zero, and commutativity.
+- `outputs/residuated-search-bottom-G2FG2-noFP.json`: unrestricted search-space
+  report for the 5-element witness.
+- `outputs/residuated-commutative-zero-search-bottom-G2FG2-noFP.json`: positive
+  constrained search report with 8 full-residuated candidates.
+- `models/examples/bottom-G2FG2-noFP-residuated.json`: same-order full
+  residuated expansion.
+- `outputs/g2-zoo-bottom-G2FG2-noFP-residuated.json`: checker report for the
+  expansion.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the
+  residuated expansion.
+- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
+  `logs/research-log.md`: recorded the result and moved the next target to the
+  bottom-disciplined \(B_N\) family.
+
+Next step:
+
+Use pass 18 to test whether the bottom-disciplined arbitrary-depth witness
+`bottom-nfg2-depth-3` admits an analogous full residuated expansion or requires
+a smaller structural repair.

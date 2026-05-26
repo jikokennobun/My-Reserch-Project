@@ -163,6 +163,16 @@ G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 This makes FG2 true while keeping \(a,d\) as a strict two-cycle, so no syntactic
 \(\boxtimes\)-fixed point appears.
 
+Pass 17 shows that this witness is not merely pre-residuated. The broad
+unrestricted tensor search is too large on five elements
+(\(5^{16}=152587890625\) candidates per unit), so the report
+`../outputs/residuated-search-bottom-G2FG2-noFP.json` now correctly records the
+unrestricted search as not run. A targeted commutative search with unit \(T\)
+and zero \(b\) reduces the space to \(5^6=15625\) candidates and finds 8 full
+residuated tensors. The persisted model
+`bottom-G2FG2-noFP-residuated` keeps the same order, G2/FG2/no-FP behavior, and
+bottom discipline while adding full residuals.
+
 ## Next Tasks
 
 - Define "residuated dcpo" carefully.
@@ -175,8 +185,8 @@ This makes FG2 true while keeping \(a,d\) as a strict two-cycle, so no syntactic
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Test whether `bottom-G2FG2-noFP` admits a full residuated expansion or needs a
-  residuated repair analogous to the M4 order repair.
+- Test whether the bottom-disciplined \(B_N\) arbitrary-depth witnesses admit
+  analogous full residuated expansions.
 
 ## Related References and Drive Files
 

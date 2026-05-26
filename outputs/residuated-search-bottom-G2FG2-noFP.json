@@ -1,0 +1,64 @@
+{
+  "model": "bottom-G2FG2-noFP",
+  "modelPath": "models\\examples\\bottom-G2FG2-noFP.json",
+  "carrierSize": 5,
+  "searchedUnits": [
+    "b",
+    "d",
+    "a",
+    "T",
+    "U"
+  ],
+  "maxOperations": 1000000,
+  "totalCandidates": 0,
+  "skippedUnits": [
+    "b",
+    "d",
+    "a",
+    "T",
+    "U"
+  ],
+  "results": [
+    {
+      "unit": "b",
+      "searched": false,
+      "operation_space": 152587890625,
+      "reason": "operation space exceeds max_operations=1000000",
+      "candidate_count": null,
+      "examples": []
+    },
+    {
+      "unit": "d",
+      "searched": false,
+      "operation_space": 152587890625,
+      "reason": "operation space exceeds max_operations=1000000",
+      "candidate_count": null,
+      "examples": []
+    },
+    {
+      "unit": "a",
+      "searched": false,
+      "operation_space": 152587890625,
+      "reason": "operation space exceeds max_operations=1000000",
+      "candidate_count": null,
+      "examples": []
+    },
+    {
+      "unit": "T",
+      "searched": false,
+      "operation_space": 152587890625,
+      "reason": "operation space exceeds max_operations=1000000",
+      "candidate_count": null,
+      "examples": []
+    },
+    {
+      "unit": "U",
+      "searched": false,
+      "operation_space": 152587890625,
+      "reason": "operation space exceeds max_operations=1000000",
+      "candidate_count": null,
+      "examples": []
+    }
+  ],
+  "conclusion": "search-not-run-operation-space-too-large"
+}

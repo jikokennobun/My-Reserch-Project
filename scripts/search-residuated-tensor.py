@@ -196,6 +196,14 @@ def main():
 
     results = [search_for_unit(carrier, order, unit, args.max_operations, args.keep) for unit in units]
     total_candidates = sum(r["candidate_count"] or 0 for r in results)
+    searched_any = any(r["searched"] for r in results)
+    skipped_units = [r["unit"] for r in results if not r["searched"]]
+    if total_candidates:
+        conclusion = "full-residuated-expansion-found"
+    elif searched_any:
+        conclusion = "no-full-residuated-expansion-found-in-searched-space"
+    else:
+        conclusion = "search-not-run-operation-space-too-large"
 
     report = {
         "model": model.get("name", args.model_path),
@@ -204,8 +212,9 @@ def main():
         "searchedUnits": units,
         "maxOperations": args.max_operations,
         "totalCandidates": total_candidates,
+        "skippedUnits": skipped_units,
         "results": results,
-        "conclusion": "full-residuated-expansion-found" if total_candidates else "no-full-residuated-expansion-found",
+        "conclusion": conclusion,
     }
 
     text = json.dumps(report, indent=2, ensure_ascii=False)
