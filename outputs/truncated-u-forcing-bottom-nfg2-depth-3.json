@@ -1,0 +1,139 @@
+{
+  "model": "bottom-nfg2-depth-3",
+  "modelPath": "models\\examples\\bottom-nfg2-depth-3.json",
+  "depth": 3,
+  "assumptions": {
+    "fixedOrbitTable": "truncated-exponent",
+    "commutative": true,
+    "unit": "T",
+    "zero": "b",
+    "absorber": "U",
+    "orderFact": "every carrier element is <= U",
+    "notAssumed": "U * x = U"
+  },
+  "exponent": {
+    "s": 1,
+    "a4": 1,
+    "a1": 2,
+    "a2": 3,
+    "a3": 4
+  },
+  "forcedProducts": {
+    "U * a1": {
+      "forcedValue": "U",
+      "witnesses": [
+        {
+          "lowerFactor": "a2",
+          "fixedProduct": "a2 * a1 = U",
+          "monotoneStep": "a2 <= U implies U <= U * a1"
+        },
+        {
+          "lowerFactor": "a3",
+          "fixedProduct": "a3 * a1 = U",
+          "monotoneStep": "a3 <= U implies U <= U * a1"
+        }
+      ]
+    },
+    "U * a2": {
+      "forcedValue": "U",
+      "witnesses": [
+        {
+          "lowerFactor": "a1",
+          "fixedProduct": "a1 * a2 = U",
+          "monotoneStep": "a1 <= U implies U <= U * a2"
+        },
+        {
+          "lowerFactor": "a2",
+          "fixedProduct": "a2 * a2 = U",
+          "monotoneStep": "a2 <= U implies U <= U * a2"
+        },
+        {
+          "lowerFactor": "a3",
+          "fixedProduct": "a3 * a2 = U",
+          "monotoneStep": "a3 <= U implies U <= U * a2"
+        }
+      ]
+    },
+    "U * a3": {
+      "forcedValue": "U",
+      "witnesses": [
+        {
+          "lowerFactor": "a1",
+          "fixedProduct": "a1 * a3 = U",
+          "monotoneStep": "a1 <= U implies U <= U * a3"
+        },
+        {
+          "lowerFactor": "a2",
+          "fixedProduct": "a2 * a3 = U",
+          "monotoneStep": "a2 <= U implies U <= U * a3"
+        },
+        {
+          "lowerFactor": "a3",
+          "fixedProduct": "a3 * a3 = U",
+          "monotoneStep": "a3 <= U implies U <= U * a3"
+        },
+        {
+          "lowerFactor": "a4",
+          "fixedProduct": "a4 * a3 = U",
+          "monotoneStep": "a4 <= U implies U <= U * a3"
+        },
+        {
+          "lowerFactor": "s",
+          "fixedProduct": "s * a3 = U",
+          "monotoneStep": "s <= U implies U <= U * a3"
+        }
+      ]
+    },
+    "U * a4": {
+      "forcedValue": "U",
+      "witnesses": [
+        {
+          "lowerFactor": "a3",
+          "fixedProduct": "a3 * a4 = U",
+          "monotoneStep": "a3 <= U implies U <= U * a4"
+        }
+      ]
+    },
+    "U * s": {
+      "forcedValue": "U",
+      "witnesses": [
+        {
+          "lowerFactor": "a3",
+          "fixedProduct": "a3 * s = U",
+          "monotoneStep": "a3 <= U implies U <= U * s"
+        }
+      ]
+    },
+    "U * U": {
+      "forcedValue": "U",
+      "witnesses": [
+        {
+          "lowerFactor": "a1",
+          "fixedOrForcedProduct": "U * a1 = U",
+          "monotoneStep": "a1 <= U implies U <= U * U"
+        },
+        {
+          "lowerFactor": "a2",
+          "fixedOrForcedProduct": "U * a2 = U",
+          "monotoneStep": "a2 <= U implies U <= U * U"
+        },
+        {
+          "lowerFactor": "a3",
+          "fixedOrForcedProduct": "U * a3 = U",
+          "monotoneStep": "a3 <= U implies U <= U * U"
+        },
+        {
+          "lowerFactor": "a4",
+          "fixedOrForcedProduct": "U * a4 = U",
+          "monotoneStep": "a4 <= U implies U <= U * U"
+        },
+        {
+          "lowerFactor": "s",
+          "fixedOrForcedProduct": "U * s = U",
+          "monotoneStep": "s <= U implies U <= U * U"
+        }
+      ]
+    }
+  },
+  "conclusion": "u-absorption-forced-by-monotonicity-relative-to-truncated-orbit-table"
+}

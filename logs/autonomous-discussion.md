@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 22
+- Current pass: 23
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1543,3 +1543,66 @@ Next step:
 
 Use pass 23 to test whether the \(U\)-absorbing assumption can be weakened,
 starting with the smallest checked case `bottom-nfg2-depth-3`.
+
+### Pass 23 - 2026-05-28 00:47 JST
+
+Focus:
+
+Test whether the \(U\)-absorbing assumption can be weakened while keeping the
+truncated-exponent orbit product table fixed.
+
+Proposer:
+
+Do not begin with a full unrestricted tensor search. First isolate the narrow
+question left by pass 22: if the orbit/fixed-point products on
+\(A_N=\{s,a_1,\ldots,a_{N+1}\}\) are fixed to the truncated-exponent table, is
+there any freedom left in products involving \(U\)?
+
+Skeptic:
+
+This is only a relative obstruction. It can show that \(U\)-absorption is
+forced by the truncated table, but it cannot rule out a more radically
+different same-order full-residuated tensor where the orbit product table also
+changes.
+
+Formalist:
+
+Added `scripts/analyze-truncated-u-forcing.py`. The analyzer fixes \(T\) as
+unit, \(b\) as zero, and the truncated-exponent products on \(A_N\), but does
+not assume \(U\otimes x=U\). It checks whether monotonicity against the top
+relation \(x\le U\) already forces those products. On both
+`bottom-nfg2-depth-3` and `bottom-nfg2-depth-4`, every \(y\in A_N\) has some
+\(x\in A_N\) such that \(x\le U\) and \(x\otimes y=U\). Therefore
+\[
+U=x\otimes y\le U\otimes y,
+\]
+and since \(U\) is top, \(U\otimes y=U\). With \(y\le U\), a second monotonicity
+step forces \(U\otimes U=U\). Thus, relative to the truncated orbit table,
+\(U\)-absorption is forced by monotonicity alone, before residuals are checked.
+
+Archivist:
+
+Persisted forcing reports for B3 and B4, updated the hierarchy and
+residuated-domain notes, and narrowed the active open question. The next search
+must vary the orbit product table itself if it wants a genuinely
+non-\(U\)-absorbing same-order residuated tensor.
+
+Repository updates:
+
+- `scripts/analyze-truncated-u-forcing.py`: analyzer for monotonicity-forced
+  \(U\)-products relative to the truncated orbit table.
+- `outputs/truncated-u-forcing-bottom-nfg2-depth-3.json`: B3 forcing report.
+- `outputs/truncated-u-forcing-bottom-nfg2-depth-4.json`: B4 forcing report.
+- `notes/g2-fg2-hierarchy.md` and
+  `notes/residuated-algebra-domain-completion.md`: recorded the relative
+  obstruction.
+- `open_problems.md`, `ideas/research-questions.md`,
+  `notes/g2-aps-zoo-classification.md`, `models/README.md`,
+  `outputs/README.md`, and `logs/research-log.md`: updated the trace and next
+  target.
+
+Next step:
+
+Use pass 24 to search for a non-\(U\)-absorbing same-order full-residuated
+tensor on `bottom-nfg2-depth-3` by allowing the orbit product table itself to
+vary.

@@ -244,6 +244,17 @@ commutativity. Thus every \(B_N\) has this less top-collapsing full-residuated
 same-order expansion; the remaining algebraic question is whether the
 \(U\)-absorbing constraint itself is necessary.
 
+Pass 23 separates two meanings of "weakening \(U\)-absorption." If the
+truncated-exponent product table on \(A_N\) is held fixed, \(U\)-absorption is
+forced before residuals enter. The reports
+`../outputs/truncated-u-forcing-bottom-nfg2-depth-3.json` and
+`../outputs/truncated-u-forcing-bottom-nfg2-depth-4.json` show that for every
+\(y\in A_N\), some \(x\in A_N\) satisfies \(x\le U\) and \(x\otimes y=U\).
+Monotonicity therefore yields \(U\le U\otimes y\), and topness of \(U\) gives
+\(U\otimes y=U\). A second monotonicity step then gives \(U\otimes U=U\).
+Thus a genuinely non-\(U\)-absorbing tensor must also modify the orbit product
+table, not merely the action of \(U\) on the already fixed truncated template.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).

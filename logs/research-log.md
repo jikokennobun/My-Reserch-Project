@@ -6,6 +6,10 @@
   \(U\)-absorbing tensor template uniformly for the bottom-disciplined \(B_N\)
   family, including the closed principal residual table; the next algebraic
   target is whether \(U\)-absorption itself can be weakened.
+- Autonomous discussion pass 23: tested weakening \(U\)-absorption while
+  holding the truncated-exponent orbit table fixed; B3 and B4 reports show
+  monotonicity already forces every \(U\)-product, so any non-\(U\)-absorbing
+  search must vary the orbit product table itself.
 
 ## 2026-05-27
 

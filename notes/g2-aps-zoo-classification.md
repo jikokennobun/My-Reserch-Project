@@ -293,8 +293,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Test whether same-order full residuation in the \(B_N\) family can weaken
-   the \(U\)-absorbing assumption used by the truncated-exponent tensor.
+3. Search for a same-order full-residuated \(B_N\) tensor that avoids
+   \(U\)-absorption by varying the orbit product table itself.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

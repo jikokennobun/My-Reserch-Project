@@ -527,6 +527,24 @@ truncated-exponent \(U\)-absorbing tensor. The remaining open issue is no
 longer this uniform construction, but whether the \(U\)-absorbing constraint can
 be weakened.
 
+Pass 23 gives the first negative evidence for weakening \(U\)-absorption. The
+new analyzer `scripts/analyze-truncated-u-forcing.py` fixes only the
+truncated-exponent orbit table on \(A_N\), keeps \(T\) as unit and \(b\) as
+zero, and does **not** assume \(U\otimes x=U\). On both checked instances
+`bottom-nfg2-depth-3` and `bottom-nfg2-depth-4`, monotonicity already forces
+every \(U\)-product. For each \(y\in A_N\), there is some \(x\in A_N\) with
+\[
+x\le U,\qquad x\otimes y=U.
+\]
+Monotonicity in the first coordinate gives
+\[
+U=x\otimes y\le U\otimes y,
+\]
+and since \(U\) is top, \(U\otimes y=U\). Then \(y\le U\) forces
+\(U\otimes U=U\). Thus \(U\)-absorption is not merely an extra assumption once
+the truncated orbit table is fixed. The broader question remains open only for
+product tables that change the orbit part itself.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -573,7 +591,7 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Test whether the \(U\)-absorbing assumption in the truncated-exponent
-  \(B_N\) tensor is forced by same-order full residuation or can be weakened.
+- Search for a non-\(U\)-absorbing same-order full-residuated \(B_N\) tensor
+  by allowing the orbit product table itself to vary.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

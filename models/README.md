@@ -50,6 +50,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/search-u-absorbing-residuated.py](../scripts/search-u-absorbing-residuated.py).
 - Truncated-exponent \(U\)-absorbing residuation builder/checker:
   [../scripts/build-truncated-u-absorbing-residuated.py](../scripts/build-truncated-u-absorbing-residuated.py).
+- Truncated-table \(U\)-absorption forcing analyzer:
+  [../scripts/analyze-truncated-u-forcing.py](../scripts/analyze-truncated-u-forcing.py).
 - Bottom-discipline filter script:
   [../scripts/check-bottom-discipline.py](../scripts/check-bottom-discipline.py).
 

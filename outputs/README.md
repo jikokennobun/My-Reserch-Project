@@ -48,6 +48,11 @@ Generated artifacts go here.
   expansion of `bottom-nfg2-depth-4`.
 - `g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`: checker report for
   that truncated-exponent same-order expansion.
+- `truncated-u-forcing-bottom-nfg2-depth-3.json`: analyzer report showing that,
+  once the truncated-exponent orbit table is fixed on `bottom-nfg2-depth-3`,
+  monotonicity forces every \(U\)-product.
+- `truncated-u-forcing-bottom-nfg2-depth-4.json`: the same forcing check for
+  `bottom-nfg2-depth-4`.
 - `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
   G2+FG2 without FP-synt witness.
 - `residuated-search-bottom-G2FG2-noFP.json`: unrestricted tensor search report
