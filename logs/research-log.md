@@ -42,6 +42,10 @@
   \(U\)-absorbing expansion of `bottom-nfg2-depth-3`; the complete constrained
   search reduces \(U\)-valued products among \(\{a_1,a_2,a_3,a_4,s\}\) from
   15 to 7 while preserving the `FFFTTTTT` profile.
+- Autonomous discussion pass 21: generated and checked `bottom-nfg2-depth-4`,
+  then verified a truncated-exponent \(U\)-absorbing full-residuated expansion
+  with 10 \(U\)-valued searched products out of 21, preserving the `FFFFTTTT`
+  profile.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-27T07:05:18+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: listed the recorded Google Drive research/reference folders live on `2026-05-27`; no newly relevant items newer than `2026-05-22` were detected.
 - Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-27T13:01:02+09:00`; all 18 links were reachable and `unchanged`, so no note ingestion was triggered.

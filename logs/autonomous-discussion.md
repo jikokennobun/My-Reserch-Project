@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 20
+- Current pass: 21
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1380,3 +1380,73 @@ Next step:
 
 Use pass 21 to test whether the 7-\(U\) pattern extends to \(B_4\), or to write
 the first obstruction explaining why it is special to \(B_3\).
+
+### Pass 21 - 2026-05-27 23:47 JST
+
+Focus:
+
+Test whether the less top-collapsing \(U\)-absorbing tensor pattern extends
+from the checked \(B_3\) witness to the next bottom-disciplined arbitrary-depth
+witness \(B_4\).
+
+Proposer:
+
+Generate `bottom-nfg2-depth-4` first, rather than extrapolating from the old
+depth-3 artifact. Then try the pass 20 pattern at the level of the exponent
+structure: give \(a_{N+1}\) and \(s\) exponent 1, give \(a_i\) exponent
+\(i+1\), keep \(T\) as unit and \(b\) as zero, and send a product to \(U\)
+only when the exponent sum exceeds \(N+1\).
+
+Skeptic:
+
+The direct branch-and-bound \(U\)-absorbing search on \(B_4\) did not finish
+within the local 120-second pass budget, so this pass does not prove
+minimality. It verifies a constructive template that is much finer than the
+top-absorbing tensor, and it gives a concrete uniform conjecture to prove.
+
+Formalist:
+
+Added `scripts/build-truncated-u-absorbing-residuated.py`. It infers \(N\)
+from the `a_i` names, constructs the truncated-exponent tensor, checks unit,
+zero, commutativity, associativity, monotonicity, principal left/right
+residuals, and the full residuation law, then emits both the verification
+report and the expanded model. On `bottom-nfg2-depth-4`, it finds a
+same-carrier/order full-residuated expansion with 10 \(U\)-valued products
+among the 21 searched unordered products, compared with 21 for the
+top-absorbing tensor. The G2-ZOO checker confirms G2 true, FG2 false, FP-synt
+at \(s\), and nFG2 pattern `FFFFTTTT`.
+
+Archivist:
+
+Persisted `bottom-nfg2-depth-4`, its truncated-exponent full-residuated
+expansion, the construction report, and the checker reports. Updated the
+bottom-discipline report and the model/output indexes. The active problem is
+now a uniform proof of the truncated-exponent \(B_N\) residuation template,
+including an explicit residual table, followed by a test of whether
+\(U\)-absorption itself is forced.
+
+Repository updates:
+
+- `scripts/build-truncated-u-absorbing-residuated.py`: constructive
+  truncated-exponent \(U\)-absorbing residuation builder/checker.
+- `models/examples/bottom-nfg2-depth-4.json`: checked depth-4
+  bottom-disciplined arbitrary-depth witness.
+- `models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json`:
+  same-order full-residuated expansion.
+- `outputs/residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json`:
+  construction and verification report.
+- `outputs/g2-zoo-bottom-nfg2-depth-4.json`: checker report for the base
+  witness.
+- `outputs/g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`: checker
+  report for the expanded witness.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+  base and expanded witnesses.
+- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
+  `logs/research-log.md`: recorded the depth-4 result and retargeted the next
+  proof task.
+
+Next step:
+
+Use pass 22 to prove the truncated-exponent \(U\)-absorbing template uniformly
+for \(B_N\), including a closed residual table, or run \(B_5\) as another
+checked stress test before writing the proof.

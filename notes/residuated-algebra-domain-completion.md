@@ -206,6 +206,19 @@ separates two questions: top-absorbing residuation is not minimal for \(B_3\),
 but it remains open whether the 7-\(U\) pattern generalizes to \(B_N\), and
 whether \(U\)-absorption itself is forced.
 
+Pass 21 tests the same idea at depth 4. The direct branch-and-bound
+\(U\)-absorbing search did not finish within the local 120-second pass budget,
+but the pass 20 table has a truncated-exponent reading. Give \(a_{N+1}\) and
+\(s\) exponent 1, give \(a_i\) exponent \(i+1\) for \(1\le i\le N\), and send
+nonzero non-unit products to the element whose exponent is the sum when that
+sum is at most \(N+1\), otherwise to \(U\). The builder
+`../scripts/build-truncated-u-absorbing-residuated.py` verifies this template
+for `bottom-nfg2-depth-4`: it is associative, monotone, and fully residuated on
+the same carrier/order, with only 10 \(U\)-valued searched products out of 21
+instead of the 21 forced by the top-absorbing tensor. The checker confirms that
+the expanded model still has G2 true, FG2 false, FP-synt at \(s\), and nFG2
+pattern `FFFFTTTT`.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -234,8 +247,8 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Generalize the 7-\(U\) constrained tensor beyond \(B_3\), or prove it is
-  depth-specific.
+- Prove the truncated-exponent \(U\)-absorbing template uniformly for \(B_N\),
+  including an explicit residual table.
 - Test whether the \(U\)-absorbing assumption is forced by same-order full
   residuation or can be weakened further.
 

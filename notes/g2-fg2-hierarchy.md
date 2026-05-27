@@ -460,6 +460,20 @@ confirms that the G2/nFG2/FP profile is unchanged. This shows that the
 top-absorbing tensor is sufficient but not minimal even inside the
 \(U\)-absorbing search class.
 
+Pass 21 tests the pattern at the next depth. A direct branch-and-bound search
+for \(B_4\) did not finish within the local 120-second pass budget, but the
+pass 20 table has a simple truncated-exponent reading. Give \(a_{N+1}\) and
+\(s\) exponent 1, and give \(a_i\) exponent \(i+1\) for \(1\le i\le N\). Keep
+\(T\) as unit, \(b\) as zero, and \(U\) absorbing over nonzero non-units; for
+the remaining products, add exponents and return \(U\) exactly when the sum
+exceeds \(N+1\). The builder
+`scripts/build-truncated-u-absorbing-residuated.py` verifies this template for
+`bottom-nfg2-depth-4`: it has 10 \(U\)-valued products among 21 unordered
+products on \(\{a_1,\ldots,a_5,s\}\), rather than 21 for the top-absorbing
+template, and preserves the `FFFFTTTT` profile. This supports a uniform
+truncated-exponent \(B_N\) conjecture, now separated from the earlier
+top-absorbing proof.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -506,8 +520,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Generalize the 7-\(U\) \(B_3\) tensor pattern to \(B_N\), or prove it is a
-  depth-3 artifact; then test whether the \(U\)-absorbing assumption itself can
-  be weakened.
+- Prove the truncated-exponent \(U\)-absorbing template uniformly for \(B_N\),
+  including an explicit residual table; then test whether the \(U\)-absorbing
+  assumption itself can be weakened.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

@@ -13,7 +13,7 @@
 - Google Drive folder scanning: keep validating the Drive-research outputs (Paper/Slide/Gemini/Claude) for new PDFs/slides/AI outputs, and summarize any new material into local notes.
 - Does the finite orbit-stabilization theorem for all-level nFG2 extend to infinite APS under an existing proof-theoretic axiom, or does it require a new orbit well-foundedness/no-infinite-descent condition?
 - Which nontrivial APS axiom packages preserve the arbitrary-depth \(D_N\) nFG2 first-true witnesses, and which force collapse of the first-true depth?
-- Does the 7-\(U\) \(B_3\) tensor pattern generalize to the whole bottom-disciplined \(B_N\) family, and can same-order full residuation weaken the \(U\)-absorbing assumption?
+- Can the truncated-exponent \(U\)-absorbing tensor template be proved uniformly for the bottom-disciplined \(B_N\) family, and can same-order full residuation weaken the \(U\)-absorbing assumption?
 
 ## Later
 

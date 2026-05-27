@@ -3,12 +3,14 @@
   "formula": "forall x, bottom <= x",
   "nfg2Depth": 8,
   "summary": {
-    "modelsChecked": 16,
+    "modelsChecked": 18,
     "alreadyBottomDisciplined": [
       "M4-G2FG2FP-order-plus-bot-c-residuated",
       "bottom-nfg2-depth-3",
       "bottom-nfg2-depth-3-residuated",
       "bottom-nfg2-depth-3-u-absorbing-minU",
+      "bottom-nfg2-depth-4",
+      "bottom-nfg2-depth-4-truncated-u-absorbing",
       "bottom-G2FG2-noFP",
       "bottom-G2FG2-noFP-residuated"
     ],
@@ -21,6 +23,8 @@
       "bottom-nfg2-depth-3",
       "bottom-nfg2-depth-3-residuated",
       "bottom-nfg2-depth-3-u-absorbing-minU",
+      "bottom-nfg2-depth-4",
+      "bottom-nfg2-depth-4-truncated-u-absorbing",
       "bottom-G2FG2-noFP",
       "bottom-G2FG2-noFP-residuated"
     ],
@@ -31,6 +35,8 @@
       "bottom-nfg2-depth-3",
       "bottom-nfg2-depth-3-residuated",
       "bottom-nfg2-depth-3-u-absorbing-minU",
+      "bottom-nfg2-depth-4",
+      "bottom-nfg2-depth-4-truncated-u-absorbing",
       "bottom-G2FG2-noFP",
       "bottom-G2FG2-noFP-residuated"
     ],
@@ -1128,6 +1134,122 @@
           "a3",
           "a4",
           "s",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "bottom-nfg2-depth-4",
+      "path": "models\\examples\\bottom-nfg2-depth-4.json",
+      "carrierSize": 9,
+      "bottom": "b",
+      "alreadyBottomDisciplined": true,
+      "missingBottomPairs": [],
+      "enforcedOrderAdds": [],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "corePropertiesStable": true
+    },
+    {
+      "name": "bottom-nfg2-depth-4-truncated-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-4-truncated-u-absorbing.json",
+      "carrierSize": 9,
+      "bottom": "b",
+      "alreadyBottomDisciplined": true,
+      "missingBottomPairs": [],
+      "enforcedOrderAdds": [],
+      "enforcedAntitone": true,
+      "antitoneFailuresAfterEnforcement": [],
+      "before": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "s",
+          "s",
+          "s",
+          "s",
+          "s"
+        ]
+      },
+      "afterEnforcingBottom": {
+        "collapse": false,
+        "G2": true,
+        "G2Antecedent": false,
+        "FG2": false,
+        "nFG2Pattern": "FFFFTTTT",
+        "FPSyntactic": [
+          "s"
+        ],
+        "orbitPrefix": [
+          "T",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
           "s",
           "s",
           "s",
