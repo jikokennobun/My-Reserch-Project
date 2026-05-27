@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 18
+- Current pass: 19
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1245,3 +1245,74 @@ Next step:
 
 Use pass 19 to write the general \(B_N\) top-absorbing residuation lemma, or
 find a strictly less top-collapsing tensor for the same family.
+
+### Pass 19 - 2026-05-27 14:06 JST
+
+Focus:
+
+Promote the `bottom-nfg2-depth-3-residuated` construction to a uniform
+same-order full-residuation lemma for every bottom-disciplined \(B_N\).
+
+Proposer:
+
+The pass 18 tensor was not an accident of depth 3. The \(B_N\) order always has
+the same bounding skeleton \(b\le x\le U\), plus only \(s\le a_{N+1}\). That
+shape is exactly what the top-absorbing tensor needs: \(T\) acts as unit, \(b\)
+as zero, and products of nonzero non-unit elements can all be sent to \(U\).
+
+Skeptic:
+
+The result closes existence of full residuation for \(B_N\), but it does so by
+using a deliberately coarse tensor. A resource-sensitive reading may reject
+the move because nearly every nontrivial product becomes the helper upper
+bound. The next serious question is whether the same-order geometry forces
+that coarseness or whether a finer tensor exists.
+
+Formalist:
+
+For \(B_N\), let \(M_N=B_N\setminus\{b,T\}\). Define
+\[
+b\otimes x=b,\qquad T\otimes x=x,\qquad
+x\otimes y=U\quad(x,y\in M_N).
+\]
+This is a commutative monoid with unit \(T\) and zero \(b\). Associativity
+follows because after removing \(T\)'s, any product containing \(b\) is \(b\),
+while any product of at least two elements of \(M_N\) is \(U\), and \(U\in M_N\)
+absorbs further non-unit nonzero factors. Monotonicity follows from the order
+generators \(b\le x\), \(x\le U\), and \(s\le a_{N+1}\). Residual fibers are
+principal:
+\[
+b\backslash c=U,\quad T\backslash c=c,\quad
+m\backslash c=
+\begin{cases}
+U & c=U,\\
+T & m\le c\ne U,\\
+b & \text{otherwise}
+\end{cases}
+\]
+for \(m\in M_N\), with identical right residuals by commutativity.
+
+Archivist:
+
+Recorded the uniform \(B_N\) top-absorbing residuation lemma in the hierarchy
+and residuated-domain notes. Marked the uniform existence question resolved,
+and moved the active/open problem to finding less top-collapsing same-order
+tensors or proving an obstruction.
+
+Repository updates:
+
+- `notes/g2-fg2-hierarchy.md`: added the uniform \(B_N\) tensor and residual
+  proof sketch.
+- `notes/residuated-algebra-domain-completion.md`: added the same lemma from
+  the residuated-APS perspective.
+- `open_problems.md`: closed uniform top-absorbing existence and opened the
+  finer-tensor/obstruction question.
+- `ideas/research-questions.md`: retargeted the active question to the
+  less-top-collapsing tensor problem.
+- `logs/research-log.md`: recorded this autonomous pass.
+
+Next step:
+
+Use pass 20 to search for a less top-collapsing tensor on
+`bottom-nfg2-depth-3`, starting with constraints that keep products among
+orbit elements below \(U\) whenever residuation permits.

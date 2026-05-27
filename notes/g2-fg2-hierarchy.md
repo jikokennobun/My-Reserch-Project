@@ -405,6 +405,44 @@ monotonicity, principal left/right residuals, and the residuation law; see
 persisted expansion `bottom-nfg2-depth-3-residuated` keeps G2 true, FG2 false,
 FP-synt true at \(s\), bottom discipline, and nFG2 pattern `FFFTTTTT`.
 
+The same argument is uniform in \(N\). Let
+\[
+M_N=B_N\setminus\{b,T\}.
+\]
+Define a commutative tensor by
+\[
+b\otimes x=b,\qquad T\otimes x=x,\qquad
+x\otimes y=U\quad(x,y\in M_N).
+\]
+This is a monoid with unit \(T\) and zero \(b\): after removing occurrences of
+the unit, any product with \(b\) is \(b\), while any product of two elements of
+\(M_N\) is \(U\), and \(U\in M_N\) absorbs all further non-unit nonzero
+factors. Hence associativity is immediate by cases. Monotonicity follows from
+the three kinds of order relation in \(B_N\): \(b\le x\), \(x\le U\), and
+\(s\le a_{N+1}\). The first is absorbed by \(b\le(-)\), the second by
+\((-)\le U\), and the last by the fact that both products with a non-unit
+nonzero factor are \(U\), while products with \(b\) and \(T\) preserve the
+relation.
+
+For \(m\in M_N\), the residual fibers are principal:
+\[
+b\backslash c=U,\qquad T\backslash c=c,
+\]
+and
+\[
+m\backslash c=
+\begin{cases}
+U & c=U,\\
+T & m\le c\ne U,\\
+b & \text{otherwise.}
+\end{cases}
+\]
+Commutativity gives the same table for right residuals. Thus every \(B_N\)
+admits a same-carrier, same-order full-residuated expansion. The tensor is
+deliberately coarse, so the open issue is no longer existence of full
+residuation but whether a less top-collapsing tensor can carry the same
+arbitrary-depth separations.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -451,7 +489,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Prove the uniform \(B_N\) top-absorbing residuation lemma and search for less
-  top-collapsing tensors that preserve the same arbitrary-depth separations.
+- Search for less top-collapsing tensors for \(B_N\) that preserve the same
+  arbitrary-depth separations, and compare any such tensor with the BS16
+  resource-sensitive reading.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

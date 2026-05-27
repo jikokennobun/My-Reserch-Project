@@ -170,6 +170,26 @@ residuation law. The expansion
 `bottom-nfg2-depth-3-residuated` preserves G2 true, FG2 false, FP-synt at \(s\),
 bottom discipline, and nFG2 pattern `FFFTTTTT`.
 
+Pass 19 promotes this from a checked instance to a uniform finite lemma. For
+every \(B_N\), put \(M_N=B_N\setminus\{b,T\}\) and use the same tensor:
+\(b\) is zero, \(T\) is unit, and every product inside \(M_N\) is \(U\).
+Associativity follows because \(U\in M_N\) is absorbing after the first
+non-unit/nonzero product. Monotonicity follows from the order generators
+\(b\le x\), \(x\le U\), and \(s\le a_{N+1}\). The residual fibers are principal:
+\[
+b\backslash c=U,\quad T\backslash c=c,\quad
+m\backslash c=
+\begin{cases}
+U & c=U,\\
+T & m\le c\ne U,\\
+b & \text{otherwise}
+\end{cases}
+\]
+for \(m\in M_N\), with right residuals identical by commutativity. Therefore
+the bottom-disciplined arbitrary-depth \(B_N\) separations all survive full
+residuation on their original carrier/order. What remains mathematically
+interesting is whether a less explosive tensor can do the same job.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -198,8 +218,9 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Prove the uniform \(B_N\) top-absorbing residuation lemma, then test whether a
-  less top-collapsing tensor can still residuate the family.
+- Test whether a less top-collapsing tensor can still residuate the \(B_N\)
+  family, and compare the resulting resource reading with the BS16-inspired
+  constraints.
 
 ## Related References and Drive Files
 

@@ -13,7 +13,7 @@
 - Google Drive folder scanning: keep validating the Drive-research outputs (Paper/Slide/Gemini/Claude) for new PDFs/slides/AI outputs, and summarize any new material into local notes.
 - Does the finite orbit-stabilization theorem for all-level nFG2 extend to infinite APS under an existing proof-theoretic axiom, or does it require a new orbit well-foundedness/no-infinite-descent condition?
 - Which nontrivial APS axiom packages preserve the arbitrary-depth \(D_N\) nFG2 first-true witnesses, and which force collapse of the first-true depth?
-- Can the top-absorbing construction be proved as a uniform full-residuated expansion for every bottom-disciplined \(B_N\) witness, and is there a less top-collapsing tensor that preserves the same arbitrary-depth nFG2 profile?
+- Is there a less top-collapsing full-residuated tensor for the bottom-disciplined \(B_N\) family, or does the same-order order geometry force a large nonzero non-unit collapse?
 
 ## Later
 
