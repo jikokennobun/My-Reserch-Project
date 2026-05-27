@@ -545,6 +545,21 @@ and since \(U\) is top, \(U\otimes y=U\). Then \(y\le U\) forces
 the truncated orbit table is fixed. The broader question remains open only for
 product tables that change the orbit part itself.
 
+Pass 24 starts that broader search on `bottom-nfg2-depth-3`. The new script
+`scripts/search-non-u-absorbing-residuated.py` fixes commutativity, unit \(T\),
+and zero \(b\), but does not fix \(U\)-absorption or the orbit product table.
+It splits cases by the monotonicity-allowed values of \(U\otimes x\), searches
+the remaining 21 nonzero non-unit products, and checks monotonicity,
+associativity, and principal left/right residual fibers. The first persisted
+bounded run
+`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json` visits
+1000 search nodes, 12 \(U\)-action patterns, and 382 complete assignments
+without finding a non-\(U\)-absorbing full-residuated tensor. This is not a
+negative theorem: a larger 10000-node attempt did not finish within the local
+120-second pass budget. The next technical step is to add residual-fiber
+pruning, especially for the \(c=b\) fibers, before treating non-existence as
+plausible.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -592,6 +607,7 @@ order.
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
 - Search for a non-\(U\)-absorbing same-order full-residuated \(B_N\) tensor
-  by allowing the orbit product table itself to vary.
+  by allowing the orbit product table itself to vary; improve the B3 search
+  with residual-fiber pruning.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

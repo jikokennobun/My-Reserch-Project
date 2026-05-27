@@ -1,0 +1,21 @@
+{
+  "model": "bottom-nfg2-depth-3",
+  "modelPath": "models\\examples\\bottom-nfg2-depth-3.json",
+  "assumptions": {
+    "commutative": true,
+    "unit": "T",
+    "zero": "b",
+    "uAbsorptionAssumed": false,
+    "orbitProductTableFixed": false
+  },
+  "search": {
+    "uActionPatternsVisited": 12,
+    "uActionPatternsPrunedImmediately": 4,
+    "nodesVisited": 1000,
+    "completeAssignmentsChecked": 382,
+    "maxNodes": 1000,
+    "complete": false,
+    "variables": 21
+  },
+  "conclusion": "no-non-u-absorbing-residuated-tensor-found-within-node-bound"
+}

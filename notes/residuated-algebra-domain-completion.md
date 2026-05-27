@@ -255,6 +255,17 @@ Monotonicity therefore yields \(U\le U\otimes y\), and topness of \(U\) gives
 Thus a genuinely non-\(U\)-absorbing tensor must also modify the orbit product
 table, not merely the action of \(U\) on the already fixed truncated template.
 
+Pass 24 implements the first broader search for such a tensor on the checked
+B3 instance. The search fixes only commutativity, unit \(T\), and zero \(b\);
+it allows both \(U\)-products and the orbit product table to vary, subject to
+same-order monotonicity, associativity, and principal residual fibers. The
+bounded report
+`../outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json` checks
+382 complete assignments inside 1000 search nodes and finds no candidate, but
+the search is incomplete. The failure mode is useful: without residual-fiber
+pruning the unrestricted orbit-table search is too slow to complete in the
+local pass budget.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).

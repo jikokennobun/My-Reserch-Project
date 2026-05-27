@@ -10,6 +10,12 @@
   holding the truncated-exponent orbit table fixed; B3 and B4 reports show
   monotonicity already forces every \(U\)-product, so any non-\(U\)-absorbing
   search must vary the orbit product table itself.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T01:03:13+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: listed the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T01:04:12+09:00`; no newly relevant items newer than `2026-05-22` were detected.
+- Autonomous discussion pass 24: started the orbit-table-varying search for a
+  non-\(U\)-absorbing same-order full-residuated tensor on
+  `bottom-nfg2-depth-3`; the bounded run checked 382 complete assignments in
+  1000 nodes with no candidate, so the next target is residual-fiber pruning.
 
 ## 2026-05-27
 

@@ -53,6 +53,10 @@ Generated artifacts go here.
   monotonicity forces every \(U\)-product.
 - `truncated-u-forcing-bottom-nfg2-depth-4.json`: the same forcing check for
   `bottom-nfg2-depth-4`.
+- `residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`: first bounded
+  search report for a same-order full-residuated `bottom-nfg2-depth-3` tensor
+  that does not assume \(U\)-absorption and allows the orbit product table to
+  vary; incomplete, no candidate found within 1000 nodes.
 - `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
   G2+FG2 without FP-synt witness.
 - `residuated-search-bottom-G2FG2-noFP.json`: unrestricted tensor search report

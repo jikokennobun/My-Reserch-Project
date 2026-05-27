@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 23
+- Current pass: 24
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1606,3 +1606,65 @@ Next step:
 Use pass 24 to search for a non-\(U\)-absorbing same-order full-residuated
 tensor on `bottom-nfg2-depth-3` by allowing the orbit product table itself to
 vary.
+
+### Pass 24 - 2026-05-28 03:01 JST
+
+Focus:
+
+Start the search for a non-\(U\)-absorbing same-order full-residuated tensor on
+`bottom-nfg2-depth-3`, now allowing the orbit product table itself to vary.
+
+Proposer:
+
+Keep only the structural constraints that are already justified by the B3
+residuated searches: commutativity, unit \(T\), and zero \(b\). Split the
+search by the possible values of \(U\otimes x\) allowed by monotonicity from
+\(T\le U\), then search the remaining products among the nonzero non-unit
+elements.
+
+Skeptic:
+
+The full search is still large. A bounded run can produce useful engineering
+information, but not a mathematical obstruction. The important distinction is
+to record incompleteness clearly and use the failure mode to choose the next
+pruning lemma.
+
+Formalist:
+
+Added `scripts/search-non-u-absorbing-residuated.py`. It fixes commutativity,
+unit \(T\), and zero \(b\), does not assume \(U\)-absorption, and does not fix
+the orbit product table. For each \(U\)-action pattern, it prunes domains using
+monotonicity, then checks associativity, monotonicity, and principal left/right
+residual fibers. On `bottom-nfg2-depth-3`, the persisted bounded report visits
+1000 search nodes, 12 \(U\)-action patterns, and 382 complete assignments
+without finding a candidate. A larger 10000-node attempt did not finish within
+the local 120-second pass budget, so this is an incomplete negative result.
+
+Archivist:
+
+Persisted the bounded search report and search script, updated the hierarchy
+and residuated-domain notes, and narrowed the next task to adding residual-fiber
+pruning. The zero-target fibers \(m\backslash b\) are the first likely pruning
+site, because many naive non-\(U\)-absorbing tables produce non-principal zero
+fibers.
+
+Repository updates:
+
+- `scripts/search-non-u-absorbing-residuated.py`: orbit-table-varying search
+  that does not assume \(U\)-absorption.
+- `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`: bounded
+  incomplete B3 search report.
+- `notes/g2-fg2-hierarchy.md` and
+  `notes/residuated-algebra-domain-completion.md`: recorded the partial search
+  and its limitation.
+- `open_problems.md`, `ideas/research-questions.md`,
+  `notes/g2-aps-zoo-classification.md`, `models/README.md`,
+  `outputs/README.md`, and `logs/research-log.md`: updated the next target.
+- Relay logs from the earlier 2026-05-28 sync were preserved: ChatGPT share
+  links were unreachable, and Drive outputs had no newly relevant post-2026-05-22
+  items.
+
+Next step:
+
+Use pass 25 to add residual-fiber pruning to the B3 non-\(U\)-absorbing search,
+starting with the \(m\backslash b\) fibers.
