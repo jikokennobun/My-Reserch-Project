@@ -27,6 +27,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/new-bottom-nfg2-depth-witness.py](../scripts/new-bottom-nfg2-depth-witness.py).
 - Full-residuated expansion of the checked bottom-disciplined nFG2 witness:
   [examples/bottom-nfg2-depth-3-residuated.json](examples/bottom-nfg2-depth-3-residuated.json).
+- Less top-collapsing \(U\)-absorbing expansion of the same witness:
+  [examples/bottom-nfg2-depth-3-u-absorbing-minU.json](examples/bottom-nfg2-depth-3-u-absorbing-minU.json).
 - Bottom-disciplined G2+FG2 without FP-synt witness:
   [examples/bottom-G2FG2-noFP.json](examples/bottom-G2FG2-noFP.json).
 - Full-residuated expansion of that witness:
@@ -41,6 +43,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/search-residuated-commutative-zero.py](../scripts/search-residuated-commutative-zero.py).
 - Top-absorbing residuation builder/checker:
   [../scripts/build-top-absorbing-residuated-expansion.py](../scripts/build-top-absorbing-residuated-expansion.py).
+- \(U\)-absorbing constrained residuation search:
+  [../scripts/search-u-absorbing-residuated.py](../scripts/search-u-absorbing-residuated.py).
 - Bottom-discipline filter script:
   [../scripts/check-bottom-discipline.py](../scripts/check-bottom-discipline.py).
 

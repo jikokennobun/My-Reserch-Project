@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 19
+- Current pass: 20
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1316,3 +1316,67 @@ Next step:
 Use pass 20 to search for a less top-collapsing tensor on
 `bottom-nfg2-depth-3`, starting with constraints that keep products among
 orbit elements below \(U\) whenever residuation permits.
+
+### Pass 20 - 2026-05-27 20:55 JST
+
+Focus:
+
+Search for a less top-collapsing full-residuated tensor on
+`bottom-nfg2-depth-3`.
+
+Proposer:
+
+Keep the constraints that made pass 18 tractable and mathematically legible:
+commutativity, unit \(T\), zero \(b\), and \(U\otimes x=U\) for every nonzero
+\(x\ne T\). Then search the remaining 15 unordered products on
+\(\{a_1,a_2,a_3,a_4,s\}\), minimizing the number of products equal to \(U\).
+
+Skeptic:
+
+This does not remove the \(U\)-absorbing assumption. It only tests whether the
+top-absorbing tensor was unnecessarily coarse inside that assumption. The
+answer is positive for \(B_3\), but the new pattern may still be depth-specific.
+
+Formalist:
+
+Added `scripts/search-u-absorbing-residuated.py`. It performs a complete
+branch-and-bound search under the \(U\)-absorbing constraints, checks
+associativity, monotonicity, and principal residual fibers, and emits residual
+tables for the best witness. For `bottom-nfg2-depth-3`, the top-absorbing
+template has 15 \(U\)-valued products among the 15 orbit/fixed-point products.
+The search finds a full-residuated witness with 7 such products:
+\[
+a_1s=a_2,\quad a_2s=a_3,\quad
+a_1a_4=a_2,\quad a_2a_4=a_3,\quad
+a_4s=s^2=a_4^2=a_1,\quad a_1^2=a_3,
+\]
+with the remaining searched products equal to \(U\). The checker confirms the
+expanded model keeps G2 true, FG2 false, FP-synt at \(s\), and nFG2 pattern
+`FFFTTTTT`.
+
+Archivist:
+
+Persisted the new model, search report, and checker report; updated the
+bottom-discipline report and the model/output indexes. The notes now record
+that top-absorbing residuation is sufficient but not minimal for \(B_3\). The
+active problem is now to generalize the 7-\(U\) pattern to \(B_N\), or prove it
+is depth-specific, and then test whether \(U\)-absorption can be weakened.
+
+Repository updates:
+
+- `scripts/search-u-absorbing-residuated.py`: complete constrained search for
+  less top-collapsing \(U\)-absorbing tensors.
+- `models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json`: new
+  full-residuated witness with 7 \(U\)-valued searched products.
+- `outputs/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`: search
+  report.
+- `outputs/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`: checker report.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+  expansion.
+- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
+  `logs/research-log.md`: recorded the result and retargeted the next problem.
+
+Next step:
+
+Use pass 21 to test whether the 7-\(U\) pattern extends to \(B_4\), or to write
+the first obstruction explaining why it is special to \(B_3\).

@@ -190,6 +190,22 @@ the bottom-disciplined arbitrary-depth \(B_N\) separations all survive full
 residuation on their original carrier/order. What remains mathematically
 interesting is whether a less explosive tensor can do the same job.
 
+Pass 20 answers this positively for the checked \(B_3\) instance under a
+conservative \(U\)-absorbing search class. Keep \(T\) as unit, \(b\) as zero,
+commutativity, and \(U\otimes x=U\) for every nonzero \(x\ne T\), but search
+the remaining 15 products among \(a_1,a_2,a_3,a_4,s\). The complete constrained
+search finds a full-residuated tensor with only 7 \(U\)-valued products, rather
+than 15. The non-\(U\) products form the pattern
+\[
+a_1^2=a_3,\quad a_1a_4=a_1s=a_2,\quad
+a_2a_4=a_2s=a_3,\quad a_4^2=a_4s=s^2=a_1.
+\]
+The resulting model `bottom-nfg2-depth-3-u-absorbing-minU` has the same
+G2 true, FG2 false, FP-synt at \(s\), and nFG2 pattern `FFFTTTTT`. This
+separates two questions: top-absorbing residuation is not minimal for \(B_3\),
+but it remains open whether the 7-\(U\) pattern generalizes to \(B_N\), and
+whether \(U\)-absorption itself is forced.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -218,9 +234,10 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Test whether a less top-collapsing tensor can still residuate the \(B_N\)
-  family, and compare the resulting resource reading with the BS16-inspired
-  constraints.
+- Generalize the 7-\(U\) constrained tensor beyond \(B_3\), or prove it is
+  depth-specific.
+- Test whether the \(U\)-absorbing assumption is forced by same-order full
+  residuation or can be weakened further.
 
 ## Related References and Drive Files
 

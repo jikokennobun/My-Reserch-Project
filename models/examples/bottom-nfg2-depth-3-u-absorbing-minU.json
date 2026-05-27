@@ -1,0 +1,387 @@
+{
+  "name": "bottom-nfg2-depth-3-u-absorbing-minU",
+  "carrier": [
+    "b",
+    "T",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "s",
+    "U"
+  ],
+  "order": [
+    [
+      "b",
+      "b"
+    ],
+    [
+      "T",
+      "T"
+    ],
+    [
+      "a1",
+      "a1"
+    ],
+    [
+      "a2",
+      "a2"
+    ],
+    [
+      "a3",
+      "a3"
+    ],
+    [
+      "a4",
+      "a4"
+    ],
+    [
+      "s",
+      "s"
+    ],
+    [
+      "U",
+      "U"
+    ],
+    [
+      "b",
+      "U"
+    ],
+    [
+      "b",
+      "T"
+    ],
+    [
+      "T",
+      "U"
+    ],
+    [
+      "b",
+      "a1"
+    ],
+    [
+      "a1",
+      "U"
+    ],
+    [
+      "b",
+      "a2"
+    ],
+    [
+      "a2",
+      "U"
+    ],
+    [
+      "b",
+      "a3"
+    ],
+    [
+      "a3",
+      "U"
+    ],
+    [
+      "b",
+      "a4"
+    ],
+    [
+      "a4",
+      "U"
+    ],
+    [
+      "b",
+      "s"
+    ],
+    [
+      "s",
+      "U"
+    ],
+    [
+      "s",
+      "a4"
+    ]
+  ],
+  "top": "T",
+  "bottom": "b",
+  "box": {
+    "b": "b",
+    "T": "T",
+    "a1": "a1",
+    "a2": "a2",
+    "a3": "a3",
+    "a4": "a4",
+    "s": "s",
+    "U": "U"
+  },
+  "refutability": {
+    "b": "U",
+    "T": "a1",
+    "U": "b",
+    "s": "s",
+    "a1": "a2",
+    "a2": "a3",
+    "a3": "a4",
+    "a4": "s"
+  },
+  "metadata": {
+    "purpose": "Bottom-disciplined arbitrary-depth nFG2 first-true witness: nFG2(k) fails for k <= 3 and holds at k = 4.",
+    "construction": "Orbit T -> a1 -> ... -> a4 -> s -> s, with b <= x <= U for all x and s <= a4.",
+    "first_true_nFG2": 4,
+    "expected_nFG2_prefix": "FFFTTTT",
+    "bottom_discipline": true,
+    "collapse": false,
+    "G2_mode": "vacuous",
+    "separation": "G2=true, FG2=false, FP-synt=true, bottom discipline true",
+    "note": "The helper bound U absorbs antitonicity requirements from b <= x; U maps back to b.",
+    "residuation": "full",
+    "residuation_template": "u-absorbing-minU-search",
+    "residuation_report": "outputs\\residuated-u-absorbing-search-bottom-nfg2-depth-3.json",
+    "residuation_note": "Search found 7 U-valued nonzero non-unit products versus 15 in the top-absorbing template."
+  },
+  "unit": "T",
+  "tensor": {
+    "b": {
+      "b": "b",
+      "T": "b",
+      "a1": "b",
+      "a2": "b",
+      "a3": "b",
+      "a4": "b",
+      "s": "b",
+      "U": "b"
+    },
+    "T": {
+      "b": "b",
+      "T": "T",
+      "a1": "a1",
+      "a2": "a2",
+      "a3": "a3",
+      "a4": "a4",
+      "s": "s",
+      "U": "U"
+    },
+    "a1": {
+      "b": "b",
+      "T": "a1",
+      "a1": "a3",
+      "a2": "U",
+      "a3": "U",
+      "a4": "a2",
+      "s": "a2",
+      "U": "U"
+    },
+    "a2": {
+      "b": "b",
+      "T": "a2",
+      "a1": "U",
+      "a2": "U",
+      "a3": "U",
+      "a4": "a3",
+      "s": "a3",
+      "U": "U"
+    },
+    "a3": {
+      "b": "b",
+      "T": "a3",
+      "a1": "U",
+      "a2": "U",
+      "a3": "U",
+      "a4": "U",
+      "s": "U",
+      "U": "U"
+    },
+    "a4": {
+      "b": "b",
+      "T": "a4",
+      "a1": "a2",
+      "a2": "a3",
+      "a3": "U",
+      "a4": "a1",
+      "s": "a1",
+      "U": "U"
+    },
+    "s": {
+      "b": "b",
+      "T": "s",
+      "a1": "a2",
+      "a2": "a3",
+      "a3": "U",
+      "a4": "a1",
+      "s": "a1",
+      "U": "U"
+    },
+    "U": {
+      "b": "b",
+      "T": "U",
+      "a1": "U",
+      "a2": "U",
+      "a3": "U",
+      "a4": "U",
+      "s": "U",
+      "U": "U"
+    }
+  },
+  "leftResidual": {
+    "b": {
+      "b": "U",
+      "T": "U",
+      "a1": "U",
+      "a2": "U",
+      "a3": "U",
+      "a4": "U",
+      "s": "U",
+      "U": "U"
+    },
+    "T": {
+      "b": "b",
+      "T": "T",
+      "a1": "a1",
+      "a2": "a2",
+      "a3": "a3",
+      "a4": "a4",
+      "s": "s",
+      "U": "U"
+    },
+    "a1": {
+      "b": "b",
+      "T": "b",
+      "a1": "T",
+      "a2": "a4",
+      "a3": "a1",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    },
+    "a2": {
+      "b": "b",
+      "T": "b",
+      "a1": "b",
+      "a2": "T",
+      "a3": "a4",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    },
+    "a3": {
+      "b": "b",
+      "T": "b",
+      "a1": "b",
+      "a2": "b",
+      "a3": "T",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    },
+    "a4": {
+      "b": "b",
+      "T": "b",
+      "a1": "a4",
+      "a2": "a1",
+      "a3": "a2",
+      "a4": "T",
+      "s": "b",
+      "U": "U"
+    },
+    "s": {
+      "b": "b",
+      "T": "b",
+      "a1": "a4",
+      "a2": "a1",
+      "a3": "a2",
+      "a4": "T",
+      "s": "T",
+      "U": "U"
+    },
+    "U": {
+      "b": "b",
+      "T": "b",
+      "a1": "b",
+      "a2": "b",
+      "a3": "b",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    }
+  },
+  "rightResidual": {
+    "b": {
+      "b": "U",
+      "T": "U",
+      "a1": "U",
+      "a2": "U",
+      "a3": "U",
+      "a4": "U",
+      "s": "U",
+      "U": "U"
+    },
+    "T": {
+      "b": "b",
+      "T": "T",
+      "a1": "a1",
+      "a2": "a2",
+      "a3": "a3",
+      "a4": "a4",
+      "s": "s",
+      "U": "U"
+    },
+    "a1": {
+      "b": "b",
+      "T": "b",
+      "a1": "T",
+      "a2": "a4",
+      "a3": "a1",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    },
+    "a2": {
+      "b": "b",
+      "T": "b",
+      "a1": "b",
+      "a2": "T",
+      "a3": "a4",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    },
+    "a3": {
+      "b": "b",
+      "T": "b",
+      "a1": "b",
+      "a2": "b",
+      "a3": "T",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    },
+    "a4": {
+      "b": "b",
+      "T": "b",
+      "a1": "a4",
+      "a2": "a1",
+      "a3": "a2",
+      "a4": "T",
+      "s": "b",
+      "U": "U"
+    },
+    "s": {
+      "b": "b",
+      "T": "b",
+      "a1": "a4",
+      "a2": "a1",
+      "a3": "a2",
+      "a4": "T",
+      "s": "T",
+      "U": "U"
+    },
+    "U": {
+      "b": "b",
+      "T": "b",
+      "a1": "b",
+      "a2": "b",
+      "a3": "b",
+      "a4": "b",
+      "s": "b",
+      "U": "U"
+    }
+  }
+}

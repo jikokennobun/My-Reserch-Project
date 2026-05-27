@@ -443,6 +443,23 @@ deliberately coarse, so the open issue is no longer existence of full
 residuation but whether a less top-collapsing tensor can carry the same
 arbitrary-depth separations.
 
+Pass 20 finds a less top-collapsing tensor for the checked \(B_3\) instance
+under the still-strong constraint that \(U\otimes x=U\) for every nonzero
+\(x\ne T\). The complete constrained search
+`outputs/residuated-u-absorbing-search-bottom-nfg2-depth-3.json` minimizes the
+number of \(U\)-valued products among the 15 unordered products on
+\(\{a_1,a_2,a_3,a_4,s\}\). The top-absorbing template has 15 such products; the
+new witness `bottom-nfg2-depth-3-u-absorbing-minU` has 7. Its non-\(U\) products
+include:
+\[
+a_1^2=a_3,\quad a_1a_4=a_1s=a_2,\quad
+a_2a_4=a_2s=a_3,\quad a_4^2=a_4s=s^2=a_1.
+\]
+The checker report `outputs/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`
+confirms that the G2/nFG2/FP profile is unchanged. This shows that the
+top-absorbing tensor is sufficient but not minimal even inside the
+\(U\)-absorbing search class.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -489,8 +506,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Search for less top-collapsing tensors for \(B_N\) that preserve the same
-  arbitrary-depth separations, and compare any such tensor with the BS16
-  resource-sensitive reading.
+- Generalize the 7-\(U\) \(B_3\) tensor pattern to \(B_N\), or prove it is a
+  depth-3 artifact; then test whether the \(U\)-absorbing assumption itself can
+  be weakened.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

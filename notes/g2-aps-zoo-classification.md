@@ -196,6 +196,7 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | nfg2-depth-3 | 6 | T | F | T | FFFTTTTT | mixed (principal + nonprincipal) |
 | bottom-nfg2-depth-3 | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined |
 | bottom-nfg2-depth-3-residuated | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
+| bottom-nfg2-depth-3-u-absorbing-minU | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; 7 U-products |
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
 | bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 
@@ -214,6 +215,11 @@ Its top-absorbing same-order full-residuated expansion is
 `models/examples/bottom-nfg2-depth-3-residuated.json`, with construction report
 `outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` and checker
 report `outputs/g2-zoo-bottom-nfg2-depth-3-residuated.json`.
+A less top-collapsing \(U\)-absorbing expansion is
+`models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json`; the complete
+constrained search report is
+`outputs/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
+checker report is `outputs/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`.
 The bottom-disciplined G2+FG2 without FP witness is
 `models/examples/bottom-G2FG2-noFP.json`, checked in
 `outputs/g2-zoo-bottom-G2FG2-noFP.json`.

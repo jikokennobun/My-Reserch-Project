@@ -35,6 +35,11 @@ Generated artifacts go here.
   `bottom-nfg2-depth-3`.
 - `g2-zoo-bottom-nfg2-depth-3-residuated.json`: checker report for the
   full-residuated same-order expansion of `bottom-nfg2-depth-3`.
+- `residuated-u-absorbing-search-bottom-nfg2-depth-3.json`: complete
+  constrained search report finding a less top-collapsing \(U\)-absorbing
+  full-residuated expansion of `bottom-nfg2-depth-3`.
+- `g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`: checker report for that
+  less top-collapsing expansion.
 - `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
   G2+FG2 without FP-synt witness.
 - `residuated-search-bottom-G2FG2-noFP.json`: unrestricted tensor search report

@@ -38,10 +38,16 @@
   checked \(B_3\) instance to a uniform \(B_N\) lemma with explicit residual
   fibers; the remaining problem is to find less top-collapsing same-order
   tensors or prove an obstruction.
+- Autonomous discussion pass 20: found a less top-collapsing full-residuated
+  \(U\)-absorbing expansion of `bottom-nfg2-depth-3`; the complete constrained
+  search reduces \(U\)-valued products among \(\{a_1,a_2,a_3,a_4,s\}\) from
+  15 to 7 while preserving the `FFFTTTTT` profile.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-27T07:05:18+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: listed the recorded Google Drive research/reference folders live on `2026-05-27`; no newly relevant items newer than `2026-05-22` were detected.
 - Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-27T13:01:02+09:00`; all 18 links were reachable and `unchanged`, so no note ingestion was triggered.
 - Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-27T13:04:00+09:00`; no items newer than `2026-05-22` were detected.
+- Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-27T19:01:24+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: listed the Google Drive research outputs (Paper/Slide/Gemini/Claude) at `2026-05-27T19:03:16+09:00`; no newly relevant items newer than `2026-05-22` were detected.
 
 ## 2026-05-26
 
