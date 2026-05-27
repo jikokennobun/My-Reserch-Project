@@ -26,10 +26,15 @@ Generated artifacts go here.
 - `bottom-discipline-filter-g2-zoo.json`: finite report showing which G2-ZOO
   witnesses and the checked `nfg2-depth-3` example survive pure enforcement of
   `bottom <= x` for every carrier element; updated to include
-  `bottom-nfg2-depth-3`.
+  `bottom-nfg2-depth-3` and the full-residuated bottom-disciplined expansions.
 - `g2-zoo-bottom-nfg2-depth-3.json`: checker report for the
   bottom-disciplined arbitrary-depth nFG2 witness example with pattern
   `FFFTTTTT`.
+- `residuated-top-absorbing-report-bottom-nfg2-depth-3.json`: constructive
+  report verifying a top-absorbing full-residuated expansion of
+  `bottom-nfg2-depth-3`.
+- `g2-zoo-bottom-nfg2-depth-3-residuated.json`: checker report for the
+  full-residuated same-order expansion of `bottom-nfg2-depth-3`.
 - `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
   G2+FG2 without FP-synt witness.
 - `residuated-search-bottom-G2FG2-noFP.json`: unrestricted tensor search report

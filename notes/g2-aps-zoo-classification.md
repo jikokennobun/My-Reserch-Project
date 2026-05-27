@@ -195,6 +195,7 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | M4-G2FG2FP-order-plus-bot-c-residuated | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point; `res-full` with unit \(p\) |
 | nfg2-depth-3 | 6 | T | F | T | FFFTTTTT | mixed (principal + nonprincipal) |
 | bottom-nfg2-depth-3 | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined |
+| bottom-nfg2-depth-3-residuated | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
 | bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 
@@ -209,6 +210,10 @@ The bottom-disciplined arbitrary-depth generator is
 `scripts/new-bottom-nfg2-depth-witness.py`; `models/examples/bottom-nfg2-depth-3.json`
 certifies the same first-true depth \(4\) pattern while satisfying
 \(\forall x(\bot\le x)\).
+Its top-absorbing same-order full-residuated expansion is
+`models/examples/bottom-nfg2-depth-3-residuated.json`, with construction report
+`outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` and checker
+report `outputs/g2-zoo-bottom-nfg2-depth-3-residuated.json`.
 The bottom-disciplined G2+FG2 without FP witness is
 `models/examples/bottom-G2FG2-noFP.json`, checked in
 `outputs/g2-zoo-bottom-G2FG2-noFP.json`.
@@ -266,8 +271,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Test whether the bottom-disciplined arbitrary-depth family \(B_N\) can be
-   upgraded to full residuated APS, or classify its smallest residuated repairs.
+3. Prove the uniform \(B_N\) top-absorbing residuation lemma and test whether
+   less top-collapsing tensors can preserve the same arbitrary-depth profile.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

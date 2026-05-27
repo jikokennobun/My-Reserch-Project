@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 17
+- Current pass: 18
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1177,3 +1177,71 @@ Next step:
 Use pass 18 to test whether the bottom-disciplined arbitrary-depth witness
 `bottom-nfg2-depth-3` admits an analogous full residuated expansion or requires
 a smaller structural repair.
+
+### Pass 18 - 2026-05-27 08:51 JST
+
+Focus:
+
+Test whether `bottom-nfg2-depth-3`, the checked \(B_N\) arbitrary-depth witness,
+admits a full residuated expansion on the same carrier and order.
+
+Proposer:
+
+The commutative-zero exhaustive strategy from pass 17 is too large for the
+8-element \(B_3\) instance. Instead use the visible shape of the construction:
+\(b\) is a true bottom, \(U\) is a helper upper bound, and \(T\) is the APS
+top. Try \(T\) as monoid unit, \(b\) as zero, and make every nonzero,
+non-unit product collapse upward to \(U\).
+
+Skeptic:
+
+This is a strong resource operation: products of two non-unit nonzero elements
+become \(U\), not a more informative internal element. It is therefore a
+same-order full-residuation witness, not evidence that a fine-grained or
+BS16-like tensor exists. The uniform \(B_N\) theorem still needs a written
+proof, even though the checked \(B_3\) instance verifies all finite algebraic
+conditions.
+
+Formalist:
+
+Added `scripts/build-top-absorbing-residuated-expansion.py`. For a chosen unit
+\(e\), zero \(z\), and absorber \(u\), it builds
+\[
+z\otimes x=z,\qquad e\otimes x=x,\qquad x\otimes y=u
+\]
+in all remaining cases, then checks unit, zero, commutativity, associativity,
+monotonicity, principal left/right residuals, and the full residuation law. On
+`bottom-nfg2-depth-3` with \(e=T\), \(z=b\), and \(u=U\), every check succeeds.
+The resulting expansion preserves non-collapse, G2 true, FG2 false, FP-synt at
+\(s\), and nFG2 pattern `FFFTTTTT`.
+
+Archivist:
+
+Generated `bottom-nfg2-depth-3-residuated`, its top-absorbing residuation
+report, and its G2-ZOO checker report. Updated the bottom-discipline report to
+include the expansion. Recorded the result in the hierarchy, classification,
+residuated-domain note, indexes, open problems, active questions, and research
+log.
+
+Repository updates:
+
+- `scripts/build-top-absorbing-residuated-expansion.py`: constructive
+  top-absorbing full-residuation builder/checker.
+- `scripts/check-g2-zoo.py`: adds `--output` for writing checker JSON reports
+  without shell redirection.
+- `models/examples/bottom-nfg2-depth-3-residuated.json`: same-order full
+  residuated expansion of the checked \(B_3\) witness.
+- `outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json`:
+  construction and verification report.
+- `outputs/g2-zoo-bottom-nfg2-depth-3-residuated.json`: checker report for the
+  expansion.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+  residuated expansion.
+- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
+  `logs/research-log.md`: moved the next task to proving the uniform \(B_N\)
+  residuation lemma and searching for less explosive tensors.
+
+Next step:
+
+Use pass 19 to write the general \(B_N\) top-absorbing residuation lemma, or
+find a strictly less top-collapsing tensor for the same family.

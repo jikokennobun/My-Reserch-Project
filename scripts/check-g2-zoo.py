@@ -305,6 +305,7 @@ if __name__ == '__main__':
     parser.add_argument('--nfg2-depth', type=int, default=8)
     parser.add_argument('--verbose', '-v', action='store_true')
     parser.add_argument('--json', action='store_true', help='Output JSON report')
+    parser.add_argument('--output', help='Write JSON report to this file')
     args = parser.parse_args()
 
     reports = []
@@ -318,5 +319,9 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"ERROR in {path}: {e}", file=sys.stderr)
 
+    payload = reports if len(reports) > 1 else reports[0] if reports else []
+    if args.output:
+        with open(args.output, 'w', encoding='utf-8') as handle:
+            handle.write(json.dumps(payload, indent=2, ensure_ascii=False) + '\n')
     if args.json:
-        print(json.dumps(reports if len(reports) > 1 else reports[0], indent=2, ensure_ascii=False))
+        print(json.dumps(payload, indent=2, ensure_ascii=False))

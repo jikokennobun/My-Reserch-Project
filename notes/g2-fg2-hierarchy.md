@@ -396,6 +396,15 @@ and FP-synt holds at \(s\). The generated depth-3 instance
 `models/examples/bottom-nfg2-depth-3.json` is certified by
 `outputs/g2-zoo-bottom-nfg2-depth-3.json` with pattern `FFFTTTTT`.
 
+Pass 18 upgrades the checked depth-3 instance to full residuation on the same
+carrier and order. The top-absorbing template uses \(T\) as unit, \(b\) as zero,
+and sends every remaining nonzero, non-unit product to \(U\). The builder
+`scripts/build-top-absorbing-residuated-expansion.py` verifies associativity,
+monotonicity, principal left/right residuals, and the residuation law; see
+`outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json`. The
+persisted expansion `bottom-nfg2-depth-3-residuated` keeps G2 true, FG2 false,
+FP-synt true at \(s\), bottom discipline, and nFG2 pattern `FFFTTTTT`.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -442,8 +451,7 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Test whether the bottom-disciplined arbitrary-depth family \(B_N\) can be
-  upgraded to full residuated APS, or identify the smallest order/carrier
-  repairs needed for it.
+- Prove the uniform \(B_N\) top-absorbing residuation lemma and search for less
+  top-collapsing tensors that preserve the same arbitrary-depth separations.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

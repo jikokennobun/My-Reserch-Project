@@ -157,6 +157,19 @@ adding a helper upper bound \(U=\boxtimes b\). The checked depth-3 instance
 `bottom-nfg2-depth-3` has G2 true, FG2 false, FP-synt at \(s\), and nFG2 pattern
 `FFFTTTTT` while satisfying \(b\le x\) for every element.
 
+Pass 18 shows that the checked depth-3 \(B_N\) instance also admits a
+same-order full-residuated expansion. The template uses \(T\) as unit, \(b\) as
+zero, and \(U\) as a top absorber:
+\[
+b\otimes x=b,\qquad T\otimes x=x,\qquad x\otimes y=U
+\]
+for all remaining nonzero, non-unit cases. The report
+`../outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` verifies
+associativity, monotonicity, principal left/right residuals, and the full
+residuation law. The expansion
+`bottom-nfg2-depth-3-residuated` preserves G2 true, FG2 false, FP-synt at \(s\),
+bottom discipline, and nFG2 pattern `FFFTTTTT`.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -185,8 +198,8 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Test whether the bottom-disciplined \(B_N\) arbitrary-depth witnesses admit
-  analogous full residuated expansions.
+- Prove the uniform \(B_N\) top-absorbing residuation lemma, then test whether a
+  less top-collapsing tensor can still residuate the family.
 
 ## Related References and Drive Files
 
