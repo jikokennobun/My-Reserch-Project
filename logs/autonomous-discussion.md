@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 21
+- Current pass: 22
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1450,3 +1450,96 @@ Next step:
 Use pass 22 to prove the truncated-exponent \(U\)-absorbing template uniformly
 for \(B_N\), including a closed residual table, or run \(B_5\) as another
 checked stress test before writing the proof.
+
+### Pass 22 - 2026-05-28 00:17 JST
+
+Focus:
+
+Prove the truncated-exponent \(U\)-absorbing tensor template uniformly for the
+bottom-disciplined \(B_N\) family, including a closed residual table.
+
+Proposer:
+
+Treat the \(B_3\) and \(B_4\) tensors as instances of one finite algebraic
+template. The key invariant is not the names of the orbit points but the
+truncated exponent \(e\): \(e(s)=e(a_{N+1})=1\) and \(e(a_i)=i+1\). Products
+of two orbit/fixed-point elements add exponents until the sum exceeds \(N+1\),
+then overflow to \(U\).
+
+Skeptic:
+
+This proof still assumes \(U\)-absorption. It proves a finer same-order
+residuated expansion than the top-absorbing tensor, but it does not show that
+\(U\)-absorption is forced or optimal. Also, the duplicate exponent-1 pair
+\(s,a_{N+1}\) must be handled explicitly in residuals because \(s\le a_{N+1}\).
+
+Formalist:
+
+Let \(A_N=\{s,a_1,\ldots,a_{N+1}\}\), put
+\[
+e(s)=e(a_{N+1})=1,\qquad e(a_i)=i+1,
+\]
+and define \(\pi(1)=a_{N+1}\), \(\pi(r)=a_{r-1}\) for \(2\le r\le N+1\).
+The tensor has \(T\) as unit, \(b\) as zero, \(U\) absorbing over nonzero
+non-units, and for \(x,y\in A_N\):
+\[
+x\otimes y=
+\begin{cases}
+a_{e(x)+e(y)-1} & e(x)+e(y)\le N+1,\\
+U & e(x)+e(y)>N+1.
+\end{cases}
+\]
+Associativity is associativity of addition with overflow at \(N+1\). The two
+exponent-1 elements cause no associativity ambiguity because no product of two
+non-unit elements has exponent 1. Monotonicity follows from the order
+generators \(b\le x\), \(x\le U\), and \(s\le a_{N+1}\); the last is preserved
+because \(s\) and \(a_{N+1}\) have the same exponent.
+
+For residuals:
+\[
+b\backslash c=U,\quad T\backslash c=c,\quad
+U\backslash c=
+\begin{cases}
+U & c=U,\\
+b & c\ne U,
+\end{cases}
+\]
+and for \(m\in A_N\), \(q=e(m)\), and \(t(a_i)=i+1\) for \(1\le i\le N\),
+\[
+m\backslash c=
+\begin{cases}
+U & c=U,\\
+T & m\le c,\\
+\pi(t(c)-q) & c=a_i,\ 1\le i\le N,\ q<t(c),\\
+b & \text{otherwise.}
+\end{cases}
+\]
+Commutativity gives the same right residuals. These formulas make every
+residual fiber principal, so the tensor is fully residuated on the original
+\(B_N\) carrier and order.
+
+Archivist:
+
+Recorded the tensor definition in `definitions.md`, added the uniform proof and
+residual table to the hierarchy and residuated-domain notes, closed the
+uniform-template proof task in `open_problems.md`, and retargeted the active
+question to weakening or refuting the \(U\)-absorbing assumption.
+
+Repository updates:
+
+- `definitions.md`: added the truncated-exponent \(U\)-absorbing tensor
+  definition for \(B_N\).
+- `notes/g2-fg2-hierarchy.md`: added the uniform proof, monotonicity argument,
+  and residual table.
+- `notes/residuated-algebra-domain-completion.md`: recorded the same lemma from
+  the residuated-APS perspective.
+- `open_problems.md` and `ideas/research-questions.md`: marked the uniform
+  template proof resolved and moved the next question to weakening
+  \(U\)-absorption.
+- `notes/g2-aps-zoo-classification.md` and `logs/research-log.md`: updated the
+  next-step registry and research trace.
+
+Next step:
+
+Use pass 23 to test whether the \(U\)-absorbing assumption can be weakened,
+starting with the smallest checked case `bottom-nfg2-depth-3`.

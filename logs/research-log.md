@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-05-28
+
+- Autonomous discussion pass 22: proved the truncated-exponent
+  \(U\)-absorbing tensor template uniformly for the bottom-disciplined \(B_N\)
+  family, including the closed principal residual table; the next algebraic
+  target is whether \(U\)-absorption itself can be weakened.
+
 ## 2026-05-27
 
 - Autonomous discussion pass 11: exhaustively searched tensor/residual

@@ -219,6 +219,31 @@ instead of the 21 forced by the top-absorbing tensor. The checker confirms that
 the expanded model still has G2 true, FG2 false, FP-synt at \(s\), and nFG2
 pattern `FFFFTTTT`.
 
+Pass 22 closes the uniform existence question for this finer template. For
+\(A_N=\{s,a_1,\ldots,a_{N+1}\}\), set \(e(s)=e(a_{N+1})=1\) and
+\(e(a_i)=i+1\). Products in \(A_N\) add exponents until the sum would exceed
+\(N+1\), at which point they become \(U\); \(T\) is still unit, \(b\) is zero,
+and \(U\) is absorbing over nonzero non-units. Associativity is truncated
+addition with overflow, and monotonicity follows from \(b\le x\), \(x\le U\),
+and \(e(s)=e(a_{N+1})\) for the only nontrivial interior order
+\(s\le a_{N+1}\). Residuals are principal: \(b\backslash c=U\),
+\(T\backslash c=c\), \(U\backslash U=U\), \(U\backslash c=b\) for \(c\ne U\),
+and for \(m\in A_N\), \(q=e(m)\),
+\[
+m\backslash c=
+\begin{cases}
+U & c=U,\\
+T & m\le c,\\
+\pi(t(c)-q) & c=a_i,\ 1\le i\le N,\ q<t(c),\\
+b & \text{otherwise,}
+\end{cases}
+\]
+where \(t(a_i)=i+1\), \(\pi(1)=a_{N+1}\), and
+\(\pi(r)=a_{r-1}\) for \(r\ge2\). Right residuals are the same by
+commutativity. Thus every \(B_N\) has this less top-collapsing full-residuated
+same-order expansion; the remaining algebraic question is whether the
+\(U\)-absorbing constraint itself is necessary.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -247,8 +272,6 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Prove the truncated-exponent \(U\)-absorbing template uniformly for \(B_N\),
-  including an explicit residual table.
 - Test whether the \(U\)-absorbing assumption is forced by same-order full
   residuation or can be weakened further.
 

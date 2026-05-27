@@ -189,6 +189,29 @@ b\le a\backslash c
 a\le c/b.
 \]
 
+For the bottom-disciplined \(B_N\) family, the
+**truncated-exponent \(U\)-absorbing tensor** is the commutative tensor with
+unit \(T\), zero \(b\), \(U\) absorbing over nonzero non-unit factors, and
+exponents
+
+\[
+e(s)=e(a_{N+1})=1,\qquad e(a_i)=i+1\quad(1\le i\le N).
+\]
+
+For \(x,y\in\{s,a_1,\ldots,a_{N+1}\}\),
+
+\[
+x\otimes y=
+\begin{cases}
+a_{e(x)+e(y)-1} & e(x)+e(y)\le N+1,\\
+U & e(x)+e(y)>N+1.
+\end{cases}
+\]
+
+The case \(e(x)+e(y)=1\) never occurs for two non-unit factors, so the
+ambiguous exponent-1 pair \(s,a_{N+1}\) only matters in residuals, where
+\(a_{N+1}\) is the maximum element with exponent 1 because \(s\le a_{N+1}\).
+
 ## Open Definition Tasks
 
 - Define ACR precisely.

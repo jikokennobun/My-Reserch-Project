@@ -474,6 +474,59 @@ template, and preserves the `FFFFTTTT` profile. This supports a uniform
 truncated-exponent \(B_N\) conjecture, now separated from the earlier
 top-absorbing proof.
 
+Pass 22 proves the truncated-exponent construction uniformly. Let
+\[
+A_N=\{s,a_1,\ldots,a_{N+1}\}
+\]
+and put \(e(s)=e(a_{N+1})=1\), \(e(a_i)=i+1\) for \(1\le i\le N\). Define
+\(\pi(1)=a_{N+1}\) and \(\pi(r)=a_{r-1}\) for \(2\le r\le N+1\). The tensor is:
+\[
+b\otimes x=b,\qquad T\otimes x=x,\qquad U\otimes x=U
+\quad(x\ne b,T),
+\]
+and for \(x,y\in A_N\),
+\[
+x\otimes y=
+\begin{cases}
+a_{e(x)+e(y)-1} & e(x)+e(y)\le N+1,\\
+U & e(x)+e(y)>N+1.
+\end{cases}
+\]
+Associativity reduces to associativity of addition with overflow at \(N+1\);
+once a partial sum overflows, all later nonzero non-unit products remain \(U\).
+The duplicate exponent-1 elements do not break associativity because no
+two-factor product in \(A_N\) has exponent 1. Monotonicity only needs the order
+generators \(b\le x\), \(x\le U\), and \(s\le a_{N+1}\). The first two are
+handled by zero and \(U\)-absorption; the last is handled by
+\(e(s)=e(a_{N+1})\), so multiplication by any nonzero non-unit gives equal
+results, while multiplication by \(b\) or \(T\) preserves the relation.
+
+The residual table is principal. For \(m\in A_N\), \(q=e(m)\), and target
+\(c\), define \(t(a_i)=i+1\) for \(1\le i\le N\). Then:
+\[
+b\backslash c=U,\qquad T\backslash c=c,\qquad
+U\backslash c=
+\begin{cases}
+U & c=U,\\
+b & c\ne U,
+\end{cases}
+\]
+and
+\[
+m\backslash c=
+\begin{cases}
+U & c=U,\\
+T & m\le c,\\
+\pi(t(c)-q) & c=a_i,\ 1\le i\le N,\ q<t(c),\\
+b & \text{otherwise.}
+\end{cases}
+\]
+Right residuals are identical by commutativity. Thus every bottom-disciplined
+\(B_N\) admits a same-carrier, same-order full-residuated expansion by the
+truncated-exponent \(U\)-absorbing tensor. The remaining open issue is no
+longer this uniform construction, but whether the \(U\)-absorbing constraint can
+be weakened.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -520,8 +573,7 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Prove the truncated-exponent \(U\)-absorbing template uniformly for \(B_N\),
-  including an explicit residual table; then test whether the \(U\)-absorbing
-  assumption itself can be weakened.
+- Test whether the \(U\)-absorbing assumption in the truncated-exponent
+  \(B_N\) tensor is forced by same-order full residuation or can be weakened.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.
