@@ -30,6 +30,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [examples/bottom-nfg2-depth-3-residuated.json](examples/bottom-nfg2-depth-3-residuated.json).
 - Less top-collapsing \(U\)-absorbing expansion of the same witness:
   [examples/bottom-nfg2-depth-3-u-absorbing-minU.json](examples/bottom-nfg2-depth-3-u-absorbing-minU.json).
+- Non-\(U\)-absorbing full-residuated expansion of the same witness:
+  [examples/bottom-nfg2-depth-3-non-u-absorbing.json](examples/bottom-nfg2-depth-3-non-u-absorbing.json).
 - Truncated-exponent \(U\)-absorbing expansion of the checked depth-4 witness:
   [examples/bottom-nfg2-depth-4-truncated-u-absorbing.json](examples/bottom-nfg2-depth-4-truncated-u-absorbing.json).
 - Bottom-disciplined G2+FG2 without FP-synt witness:

@@ -202,6 +202,7 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | bottom-nfg2-depth-3 | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined |
 | bottom-nfg2-depth-3-residuated | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 | bottom-nfg2-depth-3-u-absorbing-minU | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; 7 U-products |
+| bottom-nfg2-depth-3-non-u-absorbing | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; not U-absorbing |
 | bottom-nfg2-depth-4 | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined |
 | bottom-nfg2-depth-4-truncated-u-absorbing | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined; `res-full`; 10 U-products |
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
@@ -227,6 +228,12 @@ A less top-collapsing \(U\)-absorbing expansion is
 constrained search report is
 `outputs/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
 checker report is `outputs/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`.
+An orbit-table-varying expansion that avoids \(U\)-absorption is
+`models/examples/bottom-nfg2-depth-3-non-u-absorbing.json`; the complete search
+report is
+`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
+checker report is
+`outputs/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`.
 The next checked depth instance is
 `models/examples/bottom-nfg2-depth-4.json`, with checker report
 `outputs/g2-zoo-bottom-nfg2-depth-4.json`. Its truncated-exponent
@@ -293,8 +300,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Improve the B3 non-\(U\)-absorbing same-order residuation search with
-   residual-fiber pruning, then rerun the orbit-table-varying search.
+3. Test whether the B3 non-\(U\)-absorbing same-order residuation pattern
+   extends to `bottom-nfg2-depth-4`.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

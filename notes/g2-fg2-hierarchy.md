@@ -560,6 +560,31 @@ negative theorem: a larger 10000-node attempt did not finish within the local
 pruning, especially for the \(c=b\) fibers, before treating non-existence as
 plausible.
 
+Pass 25 adds that residual-fiber pruning and turns the B3 question positive.
+The completed report
+`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json` now visits
+47 possible \(U\)-action patterns, prunes 16 immediately and 1537 branches by
+partial residual-fiber obstruction, checks 475 complete assignments, and finds
+`bottom-nfg2-depth-3-non-u-absorbing`. It is a full same-order residuated
+expansion with 17 non-\(U\) products among the 21 unordered nonzero non-unit
+products. Crucially,
+\[
+U\otimes a_4=a_4,\qquad U\otimes s=s,
+\]
+so \(U\) is not absorbing. The orbit table is no longer the truncated-exponent
+table: \(a_1,a_2,a_3\) form a Klein-four pattern over the unit \(T\),
+\[
+a_i^2=T,\quad a_1a_2=a_3,\quad a_1a_3=a_2,\quad a_2a_3=a_1,
+\]
+while \(a_j\otimes a_4=a_4\), \(a_j\otimes s=s\) for \(j=1,2,3\), and
+\[
+a_4^2=a_4,\qquad a_4s=s^2=b.
+\]
+The G2-ZOO checker confirms the original `FFFTTTTT` profile, with G2 true,
+FG2 false, FP-synt at \(s\), and bottom discipline intact. Thus same-order
+full residuation does not force \(U\)-absorption even in the checked \(B_3\)
+case; it is forced only relative to the truncated orbit table.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -606,8 +631,7 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Search for a non-\(U\)-absorbing same-order full-residuated \(B_N\) tensor
-  by allowing the orbit product table itself to vary; improve the B3 search
-  with residual-fiber pruning.
+- Test whether the non-\(U\)-absorbing \(B_3\) tensor pattern extends to \(B_4\)
+  or admits a uniform \(B_N\) formulation.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

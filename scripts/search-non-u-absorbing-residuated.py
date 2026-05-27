@@ -48,6 +48,13 @@ def principal_map(carrier, order):
     }
 
 
+def principal_downsets(carrier, order):
+    return [
+        set(x for x in carrier if leq(order, x, r))
+        for r in carrier
+    ]
+
+
 def make_product(unit, zero, assignment):
     def product(a, b):
         if a == zero or b == zero:
@@ -105,6 +112,40 @@ def associative_ok(carrier, unit, zero, assignment):
                     continue
                 if product(ab, c) != product(a, bc):
                     return False
+    return True
+
+
+def residual_possible(carrier, order, unit, zero, assignment, principal_sets):
+    product = make_product(unit, zero, assignment)
+
+    for a in carrier:
+        for c in carrier:
+            included = set()
+            excluded = set()
+            for b in carrier:
+                if not known_product(unit, zero, assignment, a, b):
+                    continue
+                if leq(order, product(a, b), c):
+                    included.add(b)
+                else:
+                    excluded.add(b)
+            if not any(included <= downset and downset.isdisjoint(excluded) for downset in principal_sets):
+                return False
+
+    for b in carrier:
+        for c in carrier:
+            included = set()
+            excluded = set()
+            for a in carrier:
+                if not known_product(unit, zero, assignment, a, b):
+                    continue
+                if leq(order, product(a, b), c):
+                    included.add(a)
+                else:
+                    excluded.add(a)
+            if not any(included <= downset and downset.isdisjoint(excluded) for downset in principal_sets):
+                return False
+
     return True
 
 
@@ -170,10 +211,12 @@ def main():
     orbit = [x for x in nonzero_nonunit if x != absorber]
     all_pairs = [(a, b) for index, a in enumerate(nonzero_nonunit) for b in nonzero_nonunit[index:]]
     orbit_pairs = [(a, b) for index, a in enumerate(orbit) for b in orbit[index:]]
+    principal_sets = principal_downsets(carrier, order)
 
     node_count = 0
     pattern_count = 0
     pruned_patterns = 0
+    residual_prune_count = 0
     complete_assignments_checked = 0
     hit_node_limit = False
     best = None
@@ -188,7 +231,11 @@ def main():
         base = {pair_key(absorber, absorber): absorber}
         for x, value in pattern.items():
             base[pair_key(absorber, x)] = value
-        if not monotone_ok(carrier, order, unit, zero, base) or not associative_ok(carrier, unit, zero, base):
+        if (
+            not monotone_ok(carrier, order, unit, zero, base)
+            or not associative_ok(carrier, unit, zero, base)
+            or not residual_possible(carrier, order, unit, zero, base, principal_sets)
+        ):
             pruned_patterns += 1
             continue
 
@@ -209,7 +256,8 @@ def main():
         ordered_pairs = sorted(orbit_pairs, key=lambda pair: (len(domains[pair_key(*pair)]), pair))
 
         def search(index, assignment):
-            nonlocal node_count, complete_assignments_checked, best, best_non_u_products, best_pattern, hit_node_limit
+            nonlocal node_count, complete_assignments_checked, best, best_non_u_products, best_pattern
+            nonlocal hit_node_limit, residual_prune_count
             if node_count >= args.max_nodes:
                 hit_node_limit = True
                 return
@@ -238,10 +286,15 @@ def main():
             values = sorted(domains[key], key=lambda value: (value == absorber, value))
             for value in values:
                 assignment[key] = value
+                residual_ok = True
                 if monotone_ok(carrier, order, unit, zero, assignment) and associative_ok(
                     carrier, unit, zero, assignment
                 ):
-                    search(index + 1, assignment)
+                    residual_ok = residual_possible(carrier, order, unit, zero, assignment, principal_sets)
+                    if residual_ok:
+                        search(index + 1, assignment)
+                if not residual_ok:
+                    residual_prune_count += 1
                 del assignment[key]
 
         search(0, dict(base))
@@ -259,6 +312,7 @@ def main():
         "search": {
             "uActionPatternsVisited": pattern_count,
             "uActionPatternsPrunedImmediately": pruned_patterns,
+            "residualFiberPrunes": residual_prune_count,
             "nodesVisited": node_count,
             "completeAssignmentsChecked": complete_assignments_checked,
             "maxNodes": args.max_nodes,

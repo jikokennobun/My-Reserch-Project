@@ -16,6 +16,10 @@
   non-\(U\)-absorbing same-order full-residuated tensor on
   `bottom-nfg2-depth-3`; the bounded run checked 382 complete assignments in
   1000 nodes with no candidate, so the next target is residual-fiber pruning.
+- Autonomous discussion pass 25: added residual-fiber pruning and completed the
+  `bottom-nfg2-depth-3` non-\(U\)-absorbing search; found a full-residuated
+  same-order expansion with \(U\otimes a_4=a_4\), \(U\otimes s=s\), and the
+  original `FFFTTTTT` profile.
 
 ## 2026-05-27
 

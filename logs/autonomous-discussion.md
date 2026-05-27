@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 24
+- Current pass: 25
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1668,3 +1668,70 @@ Next step:
 
 Use pass 25 to add residual-fiber pruning to the B3 non-\(U\)-absorbing search,
 starting with the \(m\backslash b\) fibers.
+
+### Pass 25 - 2026-05-28 05:44 JST
+
+Focus:
+
+Complete the B3 non-\(U\)-absorbing same-order residuation search by adding
+residual-fiber pruning.
+
+Proposer:
+
+Use partial residual-fiber principality as a search-time constraint. For every
+partially known fiber, keep only branches where some principal downset can still
+contain all known included elements and exclude all known excluded elements.
+This generalizes the intended \(m\backslash b\) pruning rather than hard-coding
+only the zero target.
+
+Skeptic:
+
+The result must be read against pass 23: \(U\)-absorption is forced if the
+truncated orbit table is fixed. A non-\(U\)-absorbing witness therefore has to
+change the orbit table, so it may be algebraically less close to the
+truncated-exponent construction.
+
+Formalist:
+
+Updated `scripts/search-non-u-absorbing-residuated.py` with partial
+left/right residual-fiber pruning. The B3 search now completes: it visits 47
+\(U\)-action patterns, prunes 16 immediately, prunes 1537 branches by residual
+fiber obstruction, checks 475 complete assignments, and finds
+`bottom-nfg2-depth-3-non-u-absorbing`. The tensor is full-residuated with unit
+\(T\) and zero \(b\), but
+\[
+U\otimes a_4=a_4,\qquad U\otimes s=s.
+\]
+The orbit table changes: \(a_1,a_2,a_3\) form a Klein-four pattern over \(T\),
+\(a_j\otimes a_4=a_4\), \(a_j\otimes s=s\) for \(j=1,2,3\), and
+\[
+a_4^2=a_4,\qquad a_4s=s^2=b.
+\]
+The G2-ZOO checker confirms G2 true, FG2 false, FP-synt at \(s\), and nFG2
+pattern `FFFTTTTT`.
+
+Archivist:
+
+Persisted the expanded model, the completed search report, the checker report,
+and the updated bottom-discipline report. Updated the hierarchy,
+residuated-domain, classification, model/output indexes, open problems, active
+questions, and research log. The next question is whether the B3
+non-\(U\)-absorbing pattern extends to B4 or admits a uniform \(B_N\) form.
+
+Repository updates:
+
+- `scripts/search-non-u-absorbing-residuated.py`: added residual-fiber pruning.
+- `models/examples/bottom-nfg2-depth-3-non-u-absorbing.json`: full-residuated
+  non-\(U\)-absorbing B3 expansion.
+- `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`:
+  completed positive search report.
+- `outputs/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`: checker report.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+  expansion.
+- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
+  `logs/research-log.md`: retargeted the next problem to B4/uniform extension.
+
+Next step:
+
+Use pass 26 to test whether the non-\(U\)-absorbing B3 tensor pattern extends
+to `bottom-nfg2-depth-4`.

@@ -266,6 +266,19 @@ the search is incomplete. The failure mode is useful: without residual-fiber
 pruning the unrestricted orbit-table search is too slow to complete in the
 local pass budget.
 
+Pass 25 adds partial residual-fiber pruning and completes the B3 search. The
+result is positive: `bottom-nfg2-depth-3-non-u-absorbing` is a same-order
+full-residuated expansion with \(T\) as unit and \(b\) as zero, but without
+\(U\)-absorption. Specifically \(U\otimes a_4=a_4\) and \(U\otimes s=s\). The
+price is that the orbit table changes from truncated addition to a mixed
+group/idempotent/zero pattern: \(a_1,a_2,a_3\) form a Klein-four subgroup over
+\(T\), \(a_4\) is fixed by multiplication with those three elements, and
+\(a_4s=s^2=b\). The checker report
+`../outputs/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json` confirms that the
+G2/FG2/FP/nFG2 profile is unchanged. Therefore \(U\)-absorption is not forced
+by same-order full residuation on \(B_3\); it is only forced if the truncated
+orbit table is held fixed.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
