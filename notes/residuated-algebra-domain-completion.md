@@ -348,6 +348,20 @@ tail quotient product, and tail quotient order shape for depths 3, 4, and 5.
 Thus the construction is an ideal extension of a resource-sensitive tail by a
 contractive front ideal, not a product decomposition.
 
+Pass 31 checks the size bound for this kind of front ideal. The generalized
+schema uses an orthogonal idempotent front
+\[
+F_k=\{a_1,\ldots,a_k\}
+\]
+and shifts the tail to \(\{s,a_{N+1},a_{k+1},\ldots,a_N\}\). The report
+`../outputs/front-ideal-size-bound-check.json` checks depths 3, 4, and 5. The
+positive cases are \(k=0,1,2\); the first failure is always \(k=3\), and the
+witness is a non-principal residual fiber. For \(p\in F_k\), the set of
+right-multipliers sending \(p\) below \(b\) contains
+\(\{b\}\cup(F_k\setminus\{p\})\), which has no single maximum when
+\(|F_k\setminus\{p\}|\ge2\). This gives a concrete same-order obstruction to
+front ideals of width at least three in the orthogonal-front schema.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -376,9 +390,9 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Generalize the front-ideal extension recipe: characterize which finite
-  tensor ideals can be glued onto the shifted tail while preserving full
-  residuation and the nFG2-depth separation.
+- Prove the uniform front-width theorem for the orthogonal-front schema and
+  write the closed residual table for the one-front non-\(U\)-absorbing
+  variant.
 
 ## Related References and Drive Files
 

@@ -1,0 +1,920 @@
+{
+  "schema": "orthogonal-front-ideal plus shifted-tail quotient",
+  "summary": {
+    "modelsChecked": 3,
+    "successfulFrontSizesByDepth": {
+      "3": [
+        0,
+        1,
+        2
+      ],
+      "4": [
+        0,
+        1,
+        2
+      ],
+      "5": [
+        0,
+        1,
+        2
+      ]
+    },
+    "firstFailureFrontSizeByDepth": {
+      "3": 3,
+      "4": 3,
+      "5": 3
+    },
+    "interpretation": "within this schema and same order, front sizes 0, 1, and 2 are residuated in the checked depths; size 3 first fails by non-principal residual fibers"
+  },
+  "models": [
+    {
+      "model": "bottom-nfg2-depth-3",
+      "path": "models\\examples\\bottom-nfg2-depth-3.json",
+      "depth": 3,
+      "entries": [
+        {
+          "frontSize": 0,
+          "front": [],
+          "tail": [
+            "a4",
+            "s",
+            "a1",
+            "a2",
+            "a3"
+          ],
+          "threshold": 4,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 1,
+          "front": [
+            "a1"
+          ],
+          "tail": [
+            "a4",
+            "s",
+            "a2",
+            "a3"
+          ],
+          "threshold": 3,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 2,
+          "front": [
+            "a1",
+            "a2"
+          ],
+          "tail": [
+            "a4",
+            "s",
+            "a3"
+          ],
+          "threshold": 2,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 3,
+          "front": [
+            "a1",
+            "a2",
+            "a3"
+          ],
+          "tail": [
+            "a4",
+            "s"
+          ],
+          "threshold": 1,
+          "holds": false,
+          "failureCount": 36,
+          "failures": [
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "b",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "T",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a2",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a3",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a4",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "s",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a2",
+                "b",
+                [
+                  "a1",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a2",
+                "T",
+                [
+                  "a1",
+                  "a3",
+                  "b"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "bottom-nfg2-depth-4",
+      "path": "models\\examples\\bottom-nfg2-depth-4.json",
+      "depth": 4,
+      "entries": [
+        {
+          "frontSize": 0,
+          "front": [],
+          "tail": [
+            "a5",
+            "s",
+            "a1",
+            "a2",
+            "a3",
+            "a4"
+          ],
+          "threshold": 5,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 1,
+          "front": [
+            "a1"
+          ],
+          "tail": [
+            "a5",
+            "s",
+            "a2",
+            "a3",
+            "a4"
+          ],
+          "threshold": 4,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 2,
+          "front": [
+            "a1",
+            "a2"
+          ],
+          "tail": [
+            "a5",
+            "s",
+            "a3",
+            "a4"
+          ],
+          "threshold": 3,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 3,
+          "front": [
+            "a1",
+            "a2",
+            "a3"
+          ],
+          "tail": [
+            "a5",
+            "s",
+            "a4"
+          ],
+          "threshold": 2,
+          "holds": false,
+          "failureCount": 42,
+          "failures": [
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "b",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "T",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a2",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a3",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a4",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a5",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "s",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a2",
+                "b",
+                [
+                  "a1",
+                  "a3",
+                  "b"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "frontSize": 4,
+          "front": [
+            "a1",
+            "a2",
+            "a3",
+            "a4"
+          ],
+          "tail": [
+            "a5",
+            "s"
+          ],
+          "threshold": 1,
+          "holds": false,
+          "failureCount": 56,
+          "failures": [
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "b",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "T",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a2",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a3",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a4",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a5",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "s",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a2",
+                "b",
+                [
+                  "a1",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "bottom-nfg2-depth-5",
+      "path": "models\\examples\\bottom-nfg2-depth-5.json",
+      "depth": 5,
+      "entries": [
+        {
+          "frontSize": 0,
+          "front": [],
+          "tail": [
+            "a6",
+            "s",
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5"
+          ],
+          "threshold": 6,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 1,
+          "front": [
+            "a1"
+          ],
+          "tail": [
+            "a6",
+            "s",
+            "a2",
+            "a3",
+            "a4",
+            "a5"
+          ],
+          "threshold": 5,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 2,
+          "front": [
+            "a1",
+            "a2"
+          ],
+          "tail": [
+            "a6",
+            "s",
+            "a3",
+            "a4",
+            "a5"
+          ],
+          "threshold": 4,
+          "holds": true,
+          "failureCount": 0,
+          "failures": []
+        },
+        {
+          "frontSize": 3,
+          "front": [
+            "a1",
+            "a2",
+            "a3"
+          ],
+          "tail": [
+            "a6",
+            "s",
+            "a4",
+            "a5"
+          ],
+          "threshold": 3,
+          "holds": false,
+          "failureCount": 48,
+          "failures": [
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "b",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "T",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a2",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a3",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a4",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a5",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a6",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "s",
+                [
+                  "a2",
+                  "a3",
+                  "b"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "frontSize": 4,
+          "front": [
+            "a1",
+            "a2",
+            "a3",
+            "a4"
+          ],
+          "tail": [
+            "a6",
+            "s",
+            "a5"
+          ],
+          "threshold": 2,
+          "holds": false,
+          "failureCount": 64,
+          "failures": [
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "b",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "T",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a2",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a3",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a4",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a5",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a6",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "s",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "b"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "frontSize": 5,
+          "front": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5"
+          ],
+          "tail": [
+            "a6",
+            "s"
+          ],
+          "threshold": 1,
+          "holds": false,
+          "failureCount": 80,
+          "failures": [
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "b",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "T",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a2",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a3",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a4",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a5",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "a6",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            },
+            {
+              "check": "left-residual-principal",
+              "witness": [
+                "a1",
+                "s",
+                [
+                  "a2",
+                  "a3",
+                  "a4",
+                  "a5",
+                  "b"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

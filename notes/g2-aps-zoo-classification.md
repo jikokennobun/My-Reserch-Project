@@ -191,6 +191,13 @@ front \(I=\{b,a_1,a_2\}\) is a downward closed two-sided tensor ideal, with
 `outputs/front-shifted-extension-presentation-check.json` verifies this at
 depths 3, 4, and 5.
 
+The follow-up report `outputs/front-ideal-size-bound-check.json` tests the
+same-order orthogonal-front schema with front widths \(k=0,1,\ldots\). In the
+checked depths 3, 4, and 5, widths \(0,1,2\) are residuated and width \(3\) is
+the first failure. The failure is caused by non-principal residual fibers:
+with three front atoms, \(p\backslash b\) has two incomparable maximal
+candidates in \(F_k\setminus\{p\}\).
+
 ### III.2 Completion Stability
 
 | Code | Condition |
@@ -293,6 +300,9 @@ The residual formula for that template is checked by
 The ideal-extension presentation is checked by
 `scripts/check-front-shifted-extension-presentation.py` and
 `outputs/front-shifted-extension-presentation-check.json`.
+The orthogonal front-width bound is checked by
+`scripts/check-front-ideal-size-bound.py` and
+`outputs/front-ideal-size-bound-check.json`.
 The depth-5 base witness is `models/examples/bottom-nfg2-depth-5.json`, checked
 in `outputs/g2-zoo-bottom-nfg2-depth-5.json`.
 The bottom-disciplined G2+FG2 without FP witness is
@@ -352,8 +362,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Generalize or classify the front-ideal extension recipe for the
-   non-\(U\)-absorbing \(B_N\) tensor.
+3. Prove the uniform orthogonal front-width theorem and add the residual table
+   for the one-front non-\(U\)-absorbing variant.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

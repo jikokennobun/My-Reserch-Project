@@ -68,6 +68,10 @@ Generated artifacts go here.
   front-shifted template is an ideal extension with
   \(I=\{b,a_1,a_2\}\), and that collapsing \(I\) gives the shifted tail monoid
   at depths 3, 4, and 5.
+- `front-ideal-size-bound-check.json`: checks the generalized orthogonal
+  front-width schema at depths 3, 4, and 5; widths \(0,1,2\) are residuated,
+  while width \(3\) is the first same-order failure by non-principal residual
+  fibers.
 - `structural-rules-front-shifted-comparison.json`: compares exchange,
   contraction, strong weakening, and reflexive weakening/discarding across
   top-absorbing, truncated, non-\(U\)-absorbing, front-shifted, and

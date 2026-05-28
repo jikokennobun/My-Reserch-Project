@@ -42,6 +42,9 @@
   Rees-style ideal extension; \(I=\{b,a_1,a_2\}\) is a two-sided tensor ideal,
   and collapsing \(I\) yields the shifted tail monoid at checked depths 3, 4,
   and 5.
+- Autonomous discussion pass 31: checked the orthogonal front-width schema;
+  depths 3, 4, and 5 admit front widths \(0,1,2\), while width \(3\) first
+  fails by non-principal residual fibers over \(p\backslash b\).
 
 ## 2026-05-27
 

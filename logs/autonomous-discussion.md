@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 30
+- Current pass: 31
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -2063,3 +2063,66 @@ Next step:
 Use pass 31 to classify small tensor ideals that can replace
 \(\{b,a_1,a_2\}\) in the front-extension recipe, or prove that the two-atom
 zero-band is forced by the present same-order, same-tail constraints.
+
+### Pass 31 - 2026-05-28 15:17 JST
+
+Focus:
+
+Classify the possible size of the orthogonal front ideal in the shifted-tail
+schema, keeping the same \(B_N\) order.
+
+Proposer:
+
+Generalize the pass-30 presentation by replacing the two-front set with
+\[
+F_k=\{a_1,\ldots,a_k\}.
+\]
+Keep the same proof-theoretic shape: \(F_k\) is an orthogonal idempotent
+zero-band, front elements project products with the tail back to themselves,
+and the quotient tail starts at \(a_{k+1}\). This gives a clean finite test for
+whether the two-front construction is forced or merely one positive choice.
+
+Skeptic:
+
+The current order has front atoms pairwise incomparable. If \(k\ge3\), the
+residual \(p\backslash b\) should fail to exist as a principal element, because
+all the other front atoms multiply with \(p\) to \(b\), and no one of them
+dominates the others. Therefore a width-3 failure would be a structural
+obstruction, not a search artifact.
+
+Formalist:
+
+Added `scripts/check-front-ideal-size-bound.py` and saved
+`outputs/front-ideal-size-bound-check.json`. At depths 3, 4, and 5, front
+widths \(0,1,2\) pass the unit, zero, commutativity, associativity,
+monotonicity, principal residual, and residuation checks. Width \(3\) is the
+first failure in every checked depth. The displayed witness is the expected
+non-principal fiber: for \(p=a_1\), \(p\backslash b\) has fiber
+\(\{b,a_2,a_3\}\), with \(a_2\) and \(a_3\) incomparable.
+
+Archivist:
+
+Recorded the orthogonal front-width bound in `definitions.md`, the hierarchy
+note, the residuated-domain note, and the G2-ZOO classification note. Retargeted
+the active problem from broad ideal classification to the uniform front-width
+theorem, especially the one-front residual table and the \(k\ge3\)
+non-principal-fiber obstruction.
+
+Repository updates:
+
+- `scripts/check-front-ideal-size-bound.py`: generalized orthogonal front-width
+  checker.
+- `outputs/front-ideal-size-bound-check.json`: depth-3/4/5 report showing
+  widths \(0,1,2\) pass and width \(3\) first fails.
+- `definitions.md`, `notes/g2-fg2-hierarchy.md`,
+  `notes/residuated-algebra-domain-completion.md`, and
+  `notes/g2-aps-zoo-classification.md`: recorded the bound and obstruction.
+- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
+  `outputs/README.md`, and `logs/research-log.md`: retargeted the next proof
+  task.
+
+Next step:
+
+Use pass 32 to turn the checked front-width pattern into a uniform theorem:
+write the closed residual table for width \(1\), fold widths \(0,1,2\) into a
+single statement where possible, and prove the \(k\ge3\) obstruction directly.

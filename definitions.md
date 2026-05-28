@@ -325,6 +325,23 @@ The finite checker
 `scripts/check-front-shifted-extension-presentation.py` verifies this
 presentation on the saved depth-3, depth-4, and depth-5 instances.
 
+More generally, the **orthogonal front-width schema** replaces the front by
+\[
+F_k=\{a_1,\ldots,a_k\}
+\]
+with pairwise zero product and idempotent diagonal, then shifts the tail to
+\[
+\{s,a_{N+1},a_{k+1},\ldots,a_N\}.
+\]
+The finite report `outputs/front-ideal-size-bound-check.json` checks this
+schema at depths 3, 4, and 5. Front widths \(k=0,1,2\) are fully residuated in
+those checks, while \(k\ge3\) fails immediately by non-principal residual
+fibers: for \(p\in F_k\), the fiber of \(p\backslash b\) contains
+\(\{b\}\cup(F_k\setminus\{p\})\), which has multiple incomparable maximal
+front atoms when \(k\ge3\). Thus the two-atom front is maximal in the present
+same-order orthogonal-front schema, though a one-atom non-\(U\)-absorbing
+variant remains available and should get its own closed residual table.
+
 ## Open Definition Tasks
 
 - Define ACR precisely.

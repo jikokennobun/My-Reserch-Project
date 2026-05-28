@@ -733,6 +733,23 @@ models. The construction is therefore not a direct product or a pure
 orthogonal sum: the front is a contractive tensor ideal glued onto a
 resource-sensitive quotient tail.
 
+Pass 31 tests how far that front can be enlarged inside the same
+orthogonal-front, shifted-tail schema. The script
+`scripts/check-front-ideal-size-bound.py` builds front widths
+\(k=0,1,\ldots\) with
+\[
+F_k=\{a_1,\ldots,a_k\},
+\]
+orthogonal idempotent multiplication on \(F_k\), and shifted tail
+\(\{s,a_{N+1},a_{k+1},\ldots,a_N\}\). The report
+`outputs/front-ideal-size-bound-check.json` checks depths 3, 4, and 5. In all
+three depths, widths \(0,1,2\) are fully residuated and width \(3\) is the first
+failure. The failure is not accidental: for \(p\in F_k\), the fiber of
+\(p\backslash b\) contains \(\{b\}\cup(F_k\setminus\{p\})\), which has multiple
+incomparable maximal elements once \(k\ge3\). Thus the current two-front
+template is maximal within this same-order orthogonal-front schema, while a
+one-front non-\(U\)-absorbing variant remains a smaller positive template.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -779,8 +796,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Generalize or classify front-ideal extensions of the shifted \(B_N\) tail:
-  determine which finite tensor ideals preserve same-order full residuation and
-  the arbitrary-depth nFG2 profile.
+- Prove the uniform front-width theorem for the orthogonal-front schema,
+  including the one-front residual table and the \(k\ge3\) non-principal-fiber
+  obstruction.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.
