@@ -291,6 +291,19 @@ evidence says that same-order full residuation permits non-\(U\)-absorbing
 repairs at both checked depths, but the uniform algebraic explanation remains
 open.
 
+Pass 27 gives the first uniform explanation candidate. The
+front-shifted template keeps \(T\) as unit and \(b\) as zero, makes
+\(a_1,a_2\) orthogonal idempotents, lets \(U\) fix exactly those two front
+elements, and puts a shifted truncated-exponent product on
+\(\{s,a_{N+1},a_3,\ldots,a_N\}\). The builder
+`../scripts/build-front-shifted-non-u-absorbing-residuated.py` verifies full
+residuation for `bottom-nfg2-depth-3`, `bottom-nfg2-depth-4`, and the newly
+generated `bottom-nfg2-depth-5`. The depth-4 template is exactly the pass 26
+bounded-search witness; the depth-3 template is a different valid
+non-\(U\)-absorbing repair than the earlier max-non-\(U\) search witness. The
+uniform theorem is now reduced to a symbolic residual-table proof for this
+front/tail decomposition.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -319,9 +332,8 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Find a uniform \(B_N\) explanation for the checked non-\(U\)-absorbing
-  same-order full-residuated B3 and B4 tensors, or prove that only bounded
-  depth-specific repairs exist.
+- Prove the front-shifted non-\(U\)-absorbing tensor template uniformly for
+  \(B_N\), with an explicit residual table.
 
 ## Related References and Drive Files
 

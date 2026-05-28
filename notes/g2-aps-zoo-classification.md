@@ -150,6 +150,13 @@ order enforcement, while keeping \(\boxtimes\) fixed:
   same-order full-residuated tensor found by the orbit-table-varying search;
   it is not \(U\)-absorbing because \(U\otimes a_1=a_1\) and
   \(U\otimes a_2=a_2\).
+- `bottom-nfg2-depth-5` extends the same bottom-disciplined family one more
+  checked step: G2 true, FG2 false, FP-synt true, and nFG2 pattern
+  `FFFFFTTT`.
+- The front-shifted non-\(U\)-absorbing template preserves the corresponding
+  depth-3, depth-4, and depth-5 profiles while making \(U\otimes a_1=a_1\) and
+  \(U\otimes a_2=a_2\). At depth 4 it coincides with the bounded-search
+  non-\(U\)-absorbing witness.
 - `bottom-G2FG2-noFP` is a bottom-disciplined replacement for the remaining
   G2+FG2 without FP-synt separation.
 
@@ -207,9 +214,13 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | bottom-nfg2-depth-3-residuated | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 | bottom-nfg2-depth-3-u-absorbing-minU | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; 7 U-products |
 | bottom-nfg2-depth-3-non-u-absorbing | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; not U-absorbing |
+| bottom-nfg2-depth-3-front-shifted-non-u-absorbing | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; front-shifted |
 | bottom-nfg2-depth-4 | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined |
 | bottom-nfg2-depth-4-truncated-u-absorbing | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined; `res-full`; 10 U-products |
 | bottom-nfg2-depth-4-non-u-absorbing | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined; `res-full`; not U-absorbing |
+| bottom-nfg2-depth-4-front-shifted-non-u-absorbing | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined; `res-full`; same tensor as B4 non-U witness |
+| bottom-nfg2-depth-5 | 10 | T | F | T | FFFFFTTT | principal-unreflected; bottom-disciplined |
+| bottom-nfg2-depth-5-front-shifted-non-u-absorbing | 10 | T | F | T | FFFFFTTT | principal-unreflected; bottom-disciplined; `res-full`; front-shifted |
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
 | bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 
@@ -253,6 +264,13 @@ Its non-\(U\)-absorbing same-order full-residuated expansion is
 orbit-table-varying search report
 `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` and
 checked in `outputs/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`.
+The front-shifted non-\(U\)-absorbing template is implemented by
+`scripts/build-front-shifted-non-u-absorbing-residuated.py`; checked expansions
+at depths 3, 4, and 5 are saved as
+`bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing`, with construction
+reports under `outputs/residuated-front-shifted-non-u-absorbing-*`.
+The depth-5 base witness is `models/examples/bottom-nfg2-depth-5.json`, checked
+in `outputs/g2-zoo-bottom-nfg2-depth-5.json`.
 The bottom-disciplined G2+FG2 without FP witness is
 `models/examples/bottom-G2FG2-noFP.json`, checked in
 `outputs/g2-zoo-bottom-G2FG2-noFP.json`.
@@ -310,8 +328,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Search for a uniform \(B_N\) explanation of the checked non-\(U\)-absorbing
-   same-order residuation witnesses at depths 3 and 4.
+3. Prove the front-shifted non-\(U\)-absorbing \(B_N\) tensor template
+   uniformly, especially the residual table.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

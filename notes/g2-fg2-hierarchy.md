@@ -607,6 +607,41 @@ discipline, and no warnings. The result is therefore existentially positive at
 checked B4, but it does not yet give a uniform \(B_N\) formula or a minimality
 theorem for the product table.
 
+Pass 27 extracts a uniform candidate from the B4 search witness. For \(N\ge3\),
+split the \(B_N\) orbit part into a front \(F=\{a_1,a_2\}\) and a shifted tail
+\[
+R_N=\{s,a_{N+1},a_3,\ldots,a_N\}.
+\]
+Let \(a_1,a_2\) be orthogonal idempotents:
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,\qquad a_1a_2=b,
+\]
+make each front element absorb multiplication by the tail and by \(U\),
+\[
+p\otimes r=p,\qquad U\otimes p=p
+\quad(p\in F,\ r\in R_N\cup\{U\}),
+\]
+and put a shifted truncated-exponent product on \(R_N\) with
+\[
+\tau(s)=\tau(a_{N+1})=1,\qquad \tau(a_i)=i-1\quad(3\le i\le N),
+\]
+overflowing to \(U\) above \(N-1\). The builder
+`scripts/build-front-shifted-non-u-absorbing-residuated.py` verifies
+associativity, monotonicity, principal left/right residuals, and the full
+residuation law for checked depths 3, 4, and 5. At depth 4 it exactly
+reproduces the bounded-search witness from pass 26. At depth 3 it gives a
+second valid non-\(U\)-absorbing tensor with 14 non-\(U\) searched products,
+whereas the pass 25 search witness has 17. At depth 5 it gives a new checked
+same-order full-residuated expansion preserving the `FFFFFTTT` nFG2 profile.
+
+The template has a clean proof outline. Associativity splits into three
+stable regions: the two-element front semilattice with cross-product \(b\), the
+shifted truncated-addition tail, and the \(U\)-action that fixes the front but
+absorbs the tail. Monotonicity only needs the order generators \(b\le x\),
+\(x\le U\), and \(s\le a_{N+1}\); the last is handled by equal tail exponent
+1. The remaining symbolic work is to write the closed residual table, replacing
+the current finite-depth verification by a uniform lemma.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -653,8 +688,7 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Search for a uniform \(B_N\) formulation explaining the checked
-  non-\(U\)-absorbing B3 and B4 tensors, or prove they require
-  depth-specific product-table repairs.
+- Prove the front-shifted non-\(U\)-absorbing tensor template uniformly for all
+  \(B_N\) with \(N\ge3\), including a closed residual table.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 26
+- Current pass: 27
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1803,3 +1803,76 @@ Next step:
 Use pass 27 to compare the checked B3 and B4 non-\(U\)-absorbing tensors and
 search for either a uniform \(B_N\) construction schema or a proof that the
 known witnesses are depth-specific repairs.
+
+### Pass 27 - 2026-05-28 11:03 JST
+
+Focus:
+
+Compare the checked B3/B4 non-\(U\)-absorbing tensors and extract a uniform
+construction candidate.
+
+Proposer:
+
+Use the B4 bounded-search witness as the guide. It has a simple decomposition:
+\(a_1,a_2\) are front orthogonal idempotents, \(U\) fixes that front, and the
+remaining tail follows a shifted truncated-exponent product. Package that as a
+builder rather than treating the B4 table as a one-off search artifact.
+
+Skeptic:
+
+This does not prove the earlier max-non-\(U\) B3 search witness is the member
+of a uniform family. In fact, the front-shifted depth-3 tensor is different and
+has fewer non-\(U\) products. The correct claim is therefore existence of a
+uniform non-\(U\)-absorbing template candidate, not minimality or uniqueness.
+
+Formalist:
+
+Added `scripts/build-front-shifted-non-u-absorbing-residuated.py`. For
+\(N\ge3\), the template splits \(B_N\) into front \(F=\{a_1,a_2\}\) and tail
+\(R_N=\{s,a_{N+1},a_3,\ldots,a_N\}\). The front satisfies
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,\qquad a_1a_2=b,
+\]
+and \(U\) fixes the front:
+\[
+U\otimes a_1=a_1,\qquad U\otimes a_2=a_2.
+\]
+The tail uses shifted exponents
+\[
+\tau(s)=\tau(a_{N+1})=1,\qquad \tau(a_i)=i-1\quad(3\le i\le N),
+\]
+with overflow above \(N-1\) sent to \(U\). The builder verifies associativity,
+monotonicity, principal left/right residual fibers, and the residuation law.
+It succeeds for depths 3, 4, and 5. At depth 4, the generated tensor is exactly
+the pass 26 bounded-search witness. At depth 5, the new expansion preserves
+G2 true, FG2 false, FP-synt at \(s\), bottom discipline, and nFG2 pattern
+`FFFFFTTT`.
+
+Archivist:
+
+Recorded the front-shifted tensor definition, added the builder and checked
+depth-3/4/5 construction reports, generated the depth-5 base and expanded
+models, and refreshed the model registry and bottom-discipline report. The
+remaining mathematical task is no longer to find a uniform candidate, but to
+write the closed residual table and prove the template for all \(N\ge3\).
+
+Repository updates:
+
+- `scripts/build-front-shifted-non-u-absorbing-residuated.py`: uniform template
+  builder/checker.
+- `models/examples/bottom-nfg2-depth-5.json`: next checked bottom-disciplined
+  first-true nFG2 witness.
+- `models/examples/bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing.json`:
+  checked template expansions.
+- `outputs/residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-{3,4,5}.json`
+  and matching G2-ZOO reports: construction and checker artifacts.
+- `definitions.md`, topic notes, indexes, `open_problems.md`,
+  `ideas/research-questions.md`, `outputs/bottom-discipline-filter-g2-zoo.json`,
+  and `logs/research-log.md`: updated to make the residual-table proof the next
+  target.
+
+Next step:
+
+Use pass 28 to derive the explicit residual table for the front-shifted
+non-\(U\)-absorbing template and turn the checked schema into a uniform
+\(B_N\) lemma.

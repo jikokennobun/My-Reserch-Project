@@ -1,0 +1,56 @@
+{
+  "model": "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
+  "carrier_size": 8,
+  "top": "T",
+  "bottom": "b",
+  "collapse": false,
+  "G2": true,
+  "G2_mode": "vacuous",
+  "FG2": false,
+  "nFG2": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true
+  },
+  "FP_synt": true,
+  "FP_elements": [
+    "s"
+  ],
+  "boxtimes_orbit_T": [
+    "T",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "s",
+    "s",
+    "s",
+    "s",
+    "s"
+  ],
+  "MacNeille_cut_count": 8,
+  "completion_FP_classification": "principal-unreflected",
+  "completion_FPs": [
+    {
+      "cut": [
+        "T",
+        "U",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "b",
+        "s"
+      ],
+      "principal": true,
+      "principal_element": "U",
+      "reflected": false
+    }
+  ],
+  "warnings": []
+}

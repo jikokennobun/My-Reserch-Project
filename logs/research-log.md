@@ -26,6 +26,10 @@
   `bottom-nfg2-depth-4`; a bounded positive report found a same-order
   full-residuated non-\(U\)-absorbing expansion with \(U\otimes a_1=a_1\),
   \(U\otimes a_2=a_2\), preserving the original `FFFFTTTT` profile.
+- Autonomous discussion pass 27: extracted a front-shifted
+  non-\(U\)-absorbing \(B_N\) template, implemented a builder/checker, verified
+  it at depths 3, 4, and 5, and generated a new checked depth-5
+  full-residuated witness with profile `FFFFFTTT`.
 
 ## 2026-05-27
 

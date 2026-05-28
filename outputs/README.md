@@ -26,7 +26,7 @@ Generated artifacts go here.
 - `bottom-discipline-filter-g2-zoo.json`: finite report showing which G2-ZOO
   witnesses and the checked `nfg2-depth-3` example survive pure enforcement of
   `bottom <= x` for every carrier element; updated to include
-  `bottom-nfg2-depth-3`, `bottom-nfg2-depth-4`, and the full-residuated
+  `bottom-nfg2-depth-3`, `bottom-nfg2-depth-4`, `bottom-nfg2-depth-5`, and the full-residuated
   bottom-disciplined expansions.
 - `g2-zoo-bottom-nfg2-depth-3.json`: checker report for the
   bottom-disciplined arbitrary-depth nFG2 witness example with pattern
@@ -54,6 +54,13 @@ Generated artifacts go here.
   witness is valid, but the bounded search is not exhaustive for minimality.
 - `g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`: checker report for that
   non-\(U\)-absorbing depth-4 expansion.
+- `g2-zoo-bottom-nfg2-depth-5.json`: checker report for the next
+  bottom-disciplined arbitrary-depth nFG2 witness, with pattern `FFFFFTTT`.
+- `residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-{3,4,5}.json`:
+  constructive reports verifying the front-shifted non-\(U\)-absorbing template
+  at checked depths 3, 4, and 5.
+- `g2-zoo-bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing.json`:
+  checker reports for those template expansions.
 - `truncated-u-forcing-bottom-nfg2-depth-3.json`: analyzer report showing that,
   once the truncated-exponent orbit table is fixed on `bottom-nfg2-depth-3`,
   monotonicity forces every \(U\)-product.

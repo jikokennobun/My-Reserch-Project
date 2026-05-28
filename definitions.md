@@ -212,6 +212,35 @@ The case \(e(x)+e(y)=1\) never occurs for two non-unit factors, so the
 ambiguous exponent-1 pair \(s,a_{N+1}\) only matters in residuals, where
 \(a_{N+1}\) is the maximum element with exponent 1 because \(s\le a_{N+1}\).
 
+For \(N\ge 3\), the **front-shifted non-\(U\)-absorbing tensor** on \(B_N\) is
+the commutative tensor with unit \(T\), zero \(b\), front set
+\(F=\{a_1,a_2\}\), and tail
+\[
+R_N=\{s,a_{N+1},a_3,\ldots,a_N\}.
+\]
+The front elements are orthogonal idempotents:
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,\qquad a_1a_2=b.
+\]
+For \(p\in F\) and \(r\in R_N\cup\{U\}\), set
+\[
+p\otimes r=p,\qquad U\otimes p=p.
+\]
+On the tail, put
+\[
+\tau(s)=\tau(a_{N+1})=1,\qquad \tau(a_i)=i-1\quad(3\le i\le N),
+\]
+let \(\rho(1)=a_{N+1}\) and \(\rho(q)=a_{q+1}\) for \(2\le q\le N-1\), and set
+\[
+r\otimes r'=
+\begin{cases}
+\rho(\tau(r)+\tau(r')) & \tau(r)+\tau(r')\le N-1,\\
+U & \tau(r)+\tau(r')>N-1.
+\end{cases}
+\]
+Finally \(U\otimes r=U\) for \(r\in R_N\) and \(U^2=U\). This template is not
+\(U\)-absorbing because \(U\otimes a_1=a_1\) and \(U\otimes a_2=a_2\).
+
 ## Open Definition Tasks
 
 - Define ACR precisely.
