@@ -1,0 +1,13 @@
+{
+  "model": "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
+  "modelPath": "models\\examples\\bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
+  "depth": 3,
+  "formula": "front-shifted-non-u-absorbing-residual-table",
+  "checks": {
+    "leftResidualMatchesFormula": true,
+    "rightResidualMatchesFormula": true
+  },
+  "mismatchCount": 0,
+  "mismatches": [],
+  "conclusion": "residual-formula-verified"
+}

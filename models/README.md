@@ -65,6 +65,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/search-non-u-absorbing-residuated.py](../scripts/search-non-u-absorbing-residuated.py).
 - Front-shifted non-\(U\)-absorbing residuation builder/checker:
   [../scripts/build-front-shifted-non-u-absorbing-residuated.py](../scripts/build-front-shifted-non-u-absorbing-residuated.py).
+- Front-shifted residual formula checker:
+  [../scripts/check-front-shifted-residual-formula.py](../scripts/check-front-shifted-residual-formula.py).
 - Bottom-discipline filter script:
   [../scripts/check-bottom-discipline.py](../scripts/check-bottom-discipline.py).
 

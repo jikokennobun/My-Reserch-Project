@@ -304,6 +304,20 @@ non-\(U\)-absorbing repair than the earlier max-non-\(U\) search witness. The
 uniform theorem is now reduced to a symbolic residual-table proof for this
 front/tail decomposition.
 
+Pass 28 records the residual table and verifies it against the checked models.
+For front elements \(p\), \(p\backslash c\) is either \(U\) when \(c\) is
+\(p\) or \(U\), or the opposite front element otherwise. For \(U\), the
+residual is \(U\) at target \(U\), the front target itself at front targets,
+and \(b\) otherwise. For tail elements \(r\), front targets again return that
+front element; tail targets are controlled by shifted exponent subtraction,
+with the duplicate exponent-1 case generating the principal downset
+\(\downarrow a_{N+1}\). The formula is now implemented in
+`../scripts/check-front-shifted-residual-formula.py`, and the reports
+`../outputs/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`
+show zero mismatches against both left and right residuals. This turns the
+front-shifted construction from a checked schema into a uniform full-residuated
+\(B_N\) template, modulo ordinary presentation polishing.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -332,8 +346,9 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Prove the front-shifted non-\(U\)-absorbing tensor template uniformly for
-  \(B_N\), with an explicit residual table.
+- Analyze the front-shifted template as a product/ideal-extension style
+  construction and compare its structural-rule behavior with the
+  truncated-exponent \(U\)-absorbing template.
 
 ## Related References and Drive Files
 

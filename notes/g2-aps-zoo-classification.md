@@ -269,6 +269,9 @@ The front-shifted non-\(U\)-absorbing template is implemented by
 at depths 3, 4, and 5 are saved as
 `bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing`, with construction
 reports under `outputs/residuated-front-shifted-non-u-absorbing-*`.
+The residual formula for that template is checked by
+`scripts/check-front-shifted-residual-formula.py` and the reports
+`outputs/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`.
 The depth-5 base witness is `models/examples/bottom-nfg2-depth-5.json`, checked
 in `outputs/g2-zoo-bottom-nfg2-depth-5.json`.
 The bottom-disciplined G2+FG2 without FP witness is
@@ -328,8 +331,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Prove the front-shifted non-\(U\)-absorbing \(B_N\) tensor template
-   uniformly, especially the residual table.
+3. Analyze the structural-rule behavior of the front-shifted
+   non-\(U\)-absorbing \(B_N\) tensor template.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

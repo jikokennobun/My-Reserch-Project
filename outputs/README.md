@@ -61,6 +61,9 @@ Generated artifacts go here.
   at checked depths 3, 4, and 5.
 - `g2-zoo-bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing.json`:
   checker reports for those template expansions.
+- `front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`:
+  checks that the closed residual formula for the front-shifted template
+  matches the generated left and right residuals at depths 3, 4, and 5.
 - `truncated-u-forcing-bottom-nfg2-depth-3.json`: analyzer report showing that,
   once the truncated-exponent orbit table is fixed on `bottom-nfg2-depth-3`,
   monotonicity forces every \(U\)-product.

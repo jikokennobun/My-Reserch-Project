@@ -642,6 +642,48 @@ absorbs the tail. Monotonicity only needs the order generators \(b\le x\),
 1. The remaining symbolic work is to write the closed residual table, replacing
 the current finite-depth verification by a uniform lemma.
 
+Pass 28 supplies that residual table. Write \(p^\perp\) for the other element
+of \(F=\{a_1,a_2\}\). The easy residuals are
+\[
+b\backslash c=U,\qquad T\backslash c=c,
+\]
+\[
+p\backslash c=
+\begin{cases}
+U & c\in\{p,U\},\\
+p^\perp & \text{otherwise,}
+\end{cases}
+\qquad
+U\backslash c=
+\begin{cases}
+U & c=U,\\
+c & c\in F,\\
+b & \text{otherwise.}
+\end{cases}
+\]
+For \(r\in R_N\), the front targets give \(r\backslash p=p\) and the top
+target gives \(r\backslash U=U\). The remaining tail cases are:
+\[
+r\backslash c=
+\begin{cases}
+T & c=s,\ r=s,\\
+T & c=a_{N+1},\ r\in\{s,a_{N+1}\},\\
+T & c=r\in\{a_3,\ldots,a_N\},\\
+a_{N+1} & c=a_j,\ 3\le j\le N,\ j-1-\tau(r)=1,\\
+a_{d+1} & c=a_j,\ 3\le j\le N,\ d=j-1-\tau(r),\ 2\le d\le N-1,\\
+b & \text{otherwise.}
+\end{cases}
+\]
+Commutativity gives the right residuals. These cases are just the principal
+generators of the fibers: front fibers are \(\downarrow p\), the duplicate
+tail-exponent-1 fiber is \(\downarrow a_{N+1}=\{b,s,a_{N+1}\}\), exact
+tail-target fibers are \(\downarrow T\), and impossible fibers are
+\(\downarrow b\). The checker
+`scripts/check-front-shifted-residual-formula.py` verifies this closed table
+against the generated residuals at depths 3, 4, and 5. Thus the
+front-shifted non-\(U\)-absorbing tensor is now a uniform \(B_N\) same-order
+full-residuated template for \(N\ge3\), not merely a finite search pattern.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -688,7 +730,7 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Prove the front-shifted non-\(U\)-absorbing tensor template uniformly for all
-  \(B_N\) with \(N\ge3\), including a closed residual table.
+- Explain the algebraic meaning of the front/tail split in the front-shifted
+  non-\(U\)-absorbing template, especially its structural-rule behavior.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

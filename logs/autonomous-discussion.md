@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 27
+- Current pass: 28
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1876,3 +1876,67 @@ Next step:
 Use pass 28 to derive the explicit residual table for the front-shifted
 non-\(U\)-absorbing template and turn the checked schema into a uniform
 \(B_N\) lemma.
+
+### Pass 28 - 2026-05-28 11:33 JST
+
+Focus:
+
+Derive the residual table for the front-shifted non-\(U\)-absorbing \(B_N\)
+template and close the gap between finite checks and a uniform lemma.
+
+Proposer:
+
+Keep the proof organized by the front/tail split. The front part should have a
+two-element orthogonal-idempotent residual table; the tail part should be
+shifted exponent subtraction, with a special case for the duplicate exponent-1
+pair \(s,a_{N+1}\).
+
+Skeptic:
+
+The residual table proves full residuation for this template, not minimality
+or uniqueness among non-\(U\)-absorbing tensors. The earlier B3 search witness
+still has more non-\(U\) products than the front-shifted B3 member, so
+classification remains separate.
+
+Formalist:
+
+Recorded the closed residual table in `definitions.md` and the hierarchy note.
+For \(p\in\{a_1,a_2\}\), \(p\backslash c\) is \(U\) at targets \(p,U\), and
+the other front element otherwise. For \(U\), the residual is \(U\) at \(U\),
+the target itself at front targets, and \(b\) otherwise. For tail
+\(r\in R_N\), front targets return the front element, exact targets return
+\(T\), shifted exponent subtraction returns \(a_{N+1}\) or \(a_{d+1}\), and
+impossible fibers return \(b\). Commutativity gives the right residuals.
+Added `scripts/check-front-shifted-residual-formula.py`, which compares this
+symbolic table with generated residuals. The reports for depths 3, 4, and 5
+all have zero mismatches.
+
+Archivist:
+
+Updated `definitions.md`, hierarchy and residuated-domain notes, the model and
+output indexes, open problems, active questions, and the research log. The
+front-shifted construction is now recorded as a uniform same-order
+full-residuated non-\(U\)-absorbing template for \(B_N\) with \(N\ge3\). The
+next meaningful problem is structural interpretation: whether the front/tail
+decomposition is a product, quotient, or ideal-extension construction, and how
+it behaves with respect to weakening/contraction.
+
+Repository updates:
+
+- `scripts/check-front-shifted-residual-formula.py`: symbolic residual-table
+  checker.
+- `outputs/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`:
+  zero-mismatch checks against generated left/right residuals.
+- `definitions.md`, `notes/g2-fg2-hierarchy.md`, and
+  `notes/residuated-algebra-domain-completion.md`: explicit residual table and
+  proof outline.
+- `open_problems.md`, `ideas/research-questions.md`,
+  `notes/g2-aps-zoo-classification.md`, `models/README.md`,
+  `outputs/README.md`, and `logs/research-log.md`: retargeted from residual
+  proof to structural interpretation.
+
+Next step:
+
+Use pass 29 to analyze the structural-rule profile of the front-shifted
+template, especially contraction and weakening compared with the
+truncated-exponent \(U\)-absorbing template.

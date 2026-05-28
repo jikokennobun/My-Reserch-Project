@@ -241,6 +241,45 @@ U & \tau(r)+\tau(r')>N-1.
 Finally \(U\otimes r=U\) for \(r\in R_N\) and \(U^2=U\). This template is not
 \(U\)-absorbing because \(U\otimes a_1=a_1\) and \(U\otimes a_2=a_2\).
 
+Its residuals are symmetric, so it is enough to give \(m\backslash c\). Write
+\(p^\perp\) for the other front element, i.e. \(a_1^\perp=a_2\) and
+\(a_2^\perp=a_1\). Then:
+\[
+b\backslash c=U,\qquad T\backslash c=c,
+\]
+\[
+p\backslash c=
+\begin{cases}
+U & c\in\{p,U\},\\
+p^\perp & \text{otherwise}
+\end{cases}
+\quad(p\in F),
+\]
+and
+\[
+U\backslash c=
+\begin{cases}
+U & c=U,\\
+c & c\in F,\\
+b & \text{otherwise.}
+\end{cases}
+\]
+For \(r\in R_N\):
+\[
+r\backslash c=
+\begin{cases}
+U & c=U,\\
+c & c\in F,\\
+T & c=s,\ r=s,\\
+T & c=a_{N+1},\ r\in\{s,a_{N+1}\},\\
+T & c=r\in\{a_3,\ldots,a_N\},\\
+a_{N+1} & c=a_j,\ 3\le j\le N,\ j-1-\tau(r)=1,\\
+a_{d+1} & c=a_j,\ 3\le j\le N,\ d=j-1-\tau(r),\ 2\le d\le N-1,\\
+b & \text{otherwise.}
+\end{cases}
+\]
+Commutativity gives the same right residuals.
+
 ## Open Definition Tasks
 
 - Define ACR precisely.

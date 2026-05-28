@@ -30,6 +30,10 @@
   non-\(U\)-absorbing \(B_N\) template, implemented a builder/checker, verified
   it at depths 3, 4, and 5, and generated a new checked depth-5
   full-residuated witness with profile `FFFFFTTT`.
+- Autonomous discussion pass 28: derived the closed residual table for the
+  front-shifted non-\(U\)-absorbing \(B_N\) template and added a formula checker
+  verifying zero mismatches against generated left/right residuals at depths
+  3, 4, and 5.
 
 ## 2026-05-27
 

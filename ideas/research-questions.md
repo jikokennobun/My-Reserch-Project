@@ -13,9 +13,9 @@
 - Google Drive folder scanning: keep validating the Drive-research outputs (Paper/Slide/Gemini/Claude) for new PDFs/slides/AI outputs, and summarize any new material into local notes.
 - Does the finite orbit-stabilization theorem for all-level nFG2 extend to infinite APS under an existing proof-theoretic axiom, or does it require a new orbit well-foundedness/no-infinite-descent condition?
 - Which nontrivial APS axiom packages preserve the arbitrary-depth \(D_N\) nFG2 first-true witnesses, and which force collapse of the first-true depth?
-- Prove or refute the front-shifted non-\(U\)-absorbing \(B_N\) tensor template
-  uniformly: the builder verifies depths 3, 4, and 5, and the depth-4 instance
-  exactly reproduces the bounded-search witness.
+- What structural or proof-theoretic principle explains the front/tail split in
+  the front-shifted non-\(U\)-absorbing \(B_N\) tensor, and how does it relate
+  to minimality or contraction/weakening behavior?
 
 ## Later
 
