@@ -48,6 +48,12 @@ Generated artifacts go here.
   expansion of `bottom-nfg2-depth-4`.
 - `g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`: checker report for
   that truncated-exponent same-order expansion.
+- `residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json`: bounded
+  orbit-table-varying search report finding a non-\(U\)-absorbing
+  full-residuated same-order expansion of `bottom-nfg2-depth-4`; the positive
+  witness is valid, but the bounded search is not exhaustive for minimality.
+- `g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`: checker report for that
+  non-\(U\)-absorbing depth-4 expansion.
 - `truncated-u-forcing-bottom-nfg2-depth-3.json`: analyzer report showing that,
   once the truncated-exponent orbit table is fixed on `bottom-nfg2-depth-3`,
   monotonicity forces every \(U\)-product.

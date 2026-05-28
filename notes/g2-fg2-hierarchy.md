@@ -585,6 +585,28 @@ FG2 false, FP-synt at \(s\), and bottom discipline intact. Thus same-order
 full residuation does not force \(U\)-absorption even in the checked \(B_3\)
 case; it is forced only relative to the truncated orbit table.
 
+Pass 26 tests the next checked depth. The same orbit-table-varying search on
+`bottom-nfg2-depth-4` did not finish exhaustively within the local pass budget:
+the saved report
+`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` stops at
+1000 nodes after 48 \(U\)-action patterns, 697 residual-fiber prunes, and 147
+complete assignments. It nevertheless finds a valid same-order full-residuated
+non-\(U\)-absorbing expansion,
+`bottom-nfg2-depth-4-non-u-absorbing`. In this witness
+\[
+U\otimes a_1=a_1,\qquad U\otimes a_2=a_2,
+\]
+while \(U\) still sends \(a_3,a_4,a_5,s\) to \(U\). The orbit product table is
+again different from both the truncated-exponent template and the B3
+Klein-four/idempotent pattern: \(a_1^2=a_1\), \(a_2^2=a_2\),
+\(a_1a_2=b\), and \(a_1,a_2\) act as projective factors on the higher orbit
+elements. The checker report
+`outputs/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json` confirms the original
+`FFFFTTTT` profile, with G2 true, FG2 false, FP-synt at \(s\), bottom
+discipline, and no warnings. The result is therefore existentially positive at
+checked B4, but it does not yet give a uniform \(B_N\) formula or a minimality
+theorem for the product table.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -631,7 +653,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Test whether the non-\(U\)-absorbing \(B_3\) tensor pattern extends to \(B_4\)
-  or admits a uniform \(B_N\) formulation.
+- Search for a uniform \(B_N\) formulation explaining the checked
+  non-\(U\)-absorbing B3 and B4 tensors, or prove they require
+  depth-specific product-table repairs.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

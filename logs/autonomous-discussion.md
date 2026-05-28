@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 25
+- Current pass: 26
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1735,3 +1735,71 @@ Next step:
 
 Use pass 26 to test whether the non-\(U\)-absorbing B3 tensor pattern extends
 to `bottom-nfg2-depth-4`.
+
+### Pass 26 - 2026-05-28 06:14 JST
+
+Focus:
+
+Test whether the non-\(U\)-absorbing same-order full-residuated phenomenon
+found at checked B3 persists at checked B4.
+
+Proposer:
+
+Run the orbit-table-varying search directly on `bottom-nfg2-depth-4`, even if
+full exhaustiveness is too expensive. A single verified full-residuated witness
+is enough to answer the existential B4 question, while optimization and
+classification can remain separate.
+
+Skeptic:
+
+The bounded B4 run cannot prove minimality or uniqueness. It also should not
+be described as the B3 pattern literally extending: the found B4 tensor changes
+the product-table shape, so the current evidence is existential rather than a
+uniform construction.
+
+Formalist:
+
+The search report
+`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` stops at
+1000 nodes after 48 \(U\)-action patterns, 697 residual-fiber prunes, and 147
+complete assignments. It nevertheless finds a fully checked same-order
+residuated expansion. In the found tensor:
+\[
+U\otimes a_1=a_1,\qquad U\otimes a_2=a_2,
+\]
+so \(U\)-absorption fails, while \(U\otimes a_3=U\otimes a_4=U\otimes a_5
+=U\otimes s=U\). The lower part is not the B3 Klein-four pattern:
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,\qquad a_1a_2=b.
+\]
+The G2-ZOO checker confirms that
+`bottom-nfg2-depth-4-non-u-absorbing` keeps G2 true, FG2 false, FP-synt at
+\(s\), bottom discipline, and nFG2 pattern `FFFFTTTT`.
+
+Archivist:
+
+Persisted the B4 non-\(U\)-absorbing expansion, its bounded positive search
+report, checker report, and refreshed bottom-discipline report. Updated the
+hierarchy, residuated-domain, classification, model/output indexes, open
+problems, active questions, and research log. The active question now shifts
+from B4 existence to whether the checked B3 and B4 witnesses have a uniform
+\(B_N\) explanation.
+
+Repository updates:
+
+- `models/examples/bottom-nfg2-depth-4-non-u-absorbing.json`: B4 same-order
+  full-residuated non-\(U\)-absorbing expansion.
+- `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json`:
+  bounded positive search report.
+- `outputs/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`: checker report.
+- `outputs/bottom-discipline-filter-g2-zoo.json`: refreshed with the B4
+  expansion.
+- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
+  `logs/research-log.md`: retargeted the next problem to a uniform \(B_N\)
+  explanation or obstruction.
+
+Next step:
+
+Use pass 27 to compare the checked B3 and B4 non-\(U\)-absorbing tensors and
+search for either a uniform \(B_N\) construction schema or a proof that the
+known witnesses are depth-specific repairs.

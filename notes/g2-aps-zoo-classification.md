@@ -146,6 +146,10 @@ order enforcement, while keeping \(\boxtimes\) fixed:
 - `bottom-nfg2-depth-4-truncated-u-absorbing` preserves that profile while
   adding a same-order full-residuated tensor from the truncated-exponent
   \(U\)-absorbing template.
+- `bottom-nfg2-depth-4-non-u-absorbing` preserves that profile while adding a
+  same-order full-residuated tensor found by the orbit-table-varying search;
+  it is not \(U\)-absorbing because \(U\otimes a_1=a_1\) and
+  \(U\otimes a_2=a_2\).
 - `bottom-G2FG2-noFP` is a bottom-disciplined replacement for the remaining
   G2+FG2 without FP-synt separation.
 
@@ -205,6 +209,7 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | bottom-nfg2-depth-3-non-u-absorbing | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; not U-absorbing |
 | bottom-nfg2-depth-4 | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined |
 | bottom-nfg2-depth-4-truncated-u-absorbing | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined; `res-full`; 10 U-products |
+| bottom-nfg2-depth-4-non-u-absorbing | 9 | T | F | T | FFFFTTTT | principal-unreflected; bottom-disciplined; `res-full`; not U-absorbing |
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
 | bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
 
@@ -243,6 +248,11 @@ construction report
 `outputs/residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json` and checker
 report
 `outputs/g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`.
+Its non-\(U\)-absorbing same-order full-residuated expansion is
+`models/examples/bottom-nfg2-depth-4-non-u-absorbing.json`, found by the bounded
+orbit-table-varying search report
+`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` and
+checked in `outputs/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`.
 The bottom-disciplined G2+FG2 without FP witness is
 `models/examples/bottom-G2FG2-noFP.json`, checked in
 `outputs/g2-zoo-bottom-G2FG2-noFP.json`.
@@ -300,8 +310,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Test whether the B3 non-\(U\)-absorbing same-order residuation pattern
-   extends to `bottom-nfg2-depth-4`.
+3. Search for a uniform \(B_N\) explanation of the checked non-\(U\)-absorbing
+   same-order residuation witnesses at depths 3 and 4.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

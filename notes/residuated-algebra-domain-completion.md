@@ -279,6 +279,18 @@ G2/FG2/FP/nFG2 profile is unchanged. Therefore \(U\)-absorption is not forced
 by same-order full residuation on \(B_3\); it is only forced if the truncated
 orbit table is held fixed.
 
+Pass 26 shows that non-\(U\)-absorption is not confined to checked depth 3. A
+bounded run of the same search on `bottom-nfg2-depth-4` finds
+`bottom-nfg2-depth-4-non-u-absorbing`, a full-residuated same-order expansion
+whose residuals are principal and whose G2-ZOO profile remains `FFFFTTTT`. The
+search report is positive but incomplete for optimization: it stops at 1000
+nodes, after 48 \(U\)-action patterns and 147 complete assignments. The found
+tensor differs from the B3 pattern. Here \(U\) fixes \(a_1\) and \(a_2\), while
+\(U\otimes a_3=U\otimes a_4=U\otimes a_5=U\otimes s=U\). Thus the current
+evidence says that same-order full residuation permits non-\(U\)-absorbing
+repairs at both checked depths, but the uniform algebraic explanation remains
+open.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -307,8 +319,9 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Test whether the \(U\)-absorbing assumption is forced by same-order full
-  residuation or can be weakened further.
+- Find a uniform \(B_N\) explanation for the checked non-\(U\)-absorbing
+  same-order full-residuated B3 and B4 tensors, or prove that only bounded
+  depth-specific repairs exist.
 
 ## Related References and Drive Files
 
