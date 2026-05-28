@@ -342,6 +342,54 @@ front atoms when \(k\ge3\). Thus the two-atom front is maximal in the present
 same-order orthogonal-front schema, though a one-atom non-\(U\)-absorbing
 variant remains available and should get its own closed residual table.
 
+For \(k\in\{0,1,2\}\), write
+\[
+\tau_k(s)=\tau_k(a_{N+1})=1,\qquad
+\tau_k(a_i)=i-k+1\quad(k+1\le i\le N),
+\]
+with \(\rho_k(1)=a_{N+1}\) and
+\(\rho_k(d)=a_{k+d-1}\) for \(2\le d\le N-k+1\). The closed residual table is
+the following uniform one. As usual,
+\[
+b\backslash c=U,\qquad T\backslash c=c.
+\]
+For \(p\in F_k\),
+\[
+p\backslash c=
+\begin{cases}
+U & c\in\{p,U\},\\
+b & k=1,\ c\notin\{p,U\},\\
+p^\perp & k=2,\ c\notin\{p,U\},
+\end{cases}
+\]
+where \(p^\perp\) denotes the unique other front atom. For \(U\),
+\[
+U\backslash c=
+\begin{cases}
+U & c=U,\\
+c & c\in F_k,\\
+b & \text{otherwise.}
+\end{cases}
+\]
+For \(r\) in the shifted tail,
+\[
+r\backslash c=
+\begin{cases}
+U & c=U,\\
+c & c\in F_k,\\
+T & c=s,\ r=s,\\
+T & c=a_{N+1},\ r\in\{s,a_{N+1}\},\\
+T & c=r\in\{a_{k+1},\ldots,a_N\},\\
+\rho_k(\tau_k(c)-\tau_k(r)) &
+  c\in\{a_{k+1},\ldots,a_N\},
+  \tau_k(c)-\tau_k(r)\ge1,\\
+b & \text{otherwise.}
+\end{cases}
+\]
+Commutativity gives the right residuals. The checker
+`scripts/check-front-width-residual-formula.py` verifies this formula with zero
+mismatches for \(k=0,1,2\) at depths 3, 4, and 5.
+
 ## Open Definition Tasks
 
 - Define ACR precisely.

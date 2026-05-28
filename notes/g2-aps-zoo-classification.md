@@ -198,6 +198,11 @@ the first failure. The failure is caused by non-principal residual fibers:
 with three front atoms, \(p\backslash b\) has two incomparable maximal
 candidates in \(F_k\setminus\{p\}\).
 
+The residual table for the positive widths is now checked by
+`outputs/front-width-residual-formula-check.json`. It verifies the uniform
+closed formula for \(k=0,1,2\) against generated residuals at depths 3, 4, and
+5, with zero mismatches.
+
 ### III.2 Completion Stability
 
 | Code | Condition |
@@ -303,6 +308,9 @@ The ideal-extension presentation is checked by
 The orthogonal front-width bound is checked by
 `scripts/check-front-ideal-size-bound.py` and
 `outputs/front-ideal-size-bound-check.json`.
+The corresponding closed residual formula for widths \(0,1,2\) is checked by
+`scripts/check-front-width-residual-formula.py` and
+`outputs/front-width-residual-formula-check.json`.
 The depth-5 base witness is `models/examples/bottom-nfg2-depth-5.json`, checked
 in `outputs/g2-zoo-bottom-nfg2-depth-5.json`.
 The bottom-disciplined G2+FG2 without FP witness is
@@ -362,8 +370,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Prove the uniform orthogonal front-width theorem and add the residual table
-   for the one-front non-\(U\)-absorbing variant.
+3. Test non-orthogonal front ideals or mild front-order refinements as possible
+   ways around the \(k\ge3\) principal-fiber obstruction.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

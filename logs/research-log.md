@@ -45,6 +45,9 @@
 - Autonomous discussion pass 31: checked the orthogonal front-width schema;
   depths 3, 4, and 5 admit front widths \(0,1,2\), while width \(3\) first
   fails by non-principal residual fibers over \(p\backslash b\).
+- Autonomous discussion pass 32: added a closed residual formula checker for
+  orthogonal front widths \(0,1,2\); depths 3, 4, and 5 have zero mismatches,
+  completing the current same-order front-width theorem candidate.
 
 ## 2026-05-27
 

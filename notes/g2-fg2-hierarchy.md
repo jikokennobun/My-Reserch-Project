@@ -750,6 +750,29 @@ incomparable maximal elements once \(k\ge3\). Thus the current two-front
 template is maximal within this same-order orthogonal-front schema, while a
 one-front non-\(U\)-absorbing variant remains a smaller positive template.
 
+Pass 32 closes the positive residual-table side of that pattern. For
+\(k\in\{0,1,2\}\), define
+\[
+F_k=\{a_1,\ldots,a_k\},\qquad
+R_{N,k}=\{s,a_{N+1},a_{k+1},\ldots,a_N\},
+\]
+with tail exponent
+\[
+\tau_k(s)=\tau_k(a_{N+1})=1,\qquad
+\tau_k(a_i)=i-k+1.
+\]
+The closed residual table is the same front/tail table as before, with only
+one front clause changing: if \(p\in F_k\), then \(p\backslash c=U\) for
+\(c\in\{p,U\}\), while the non-\(U\) residual is \(b\) when \(k=1\) and the
+other front atom when \(k=2\). Tail residuals are shifted exponent subtraction
+using \(\rho_k(1)=a_{N+1}\) and \(\rho_k(d)=a_{k+d-1}\). The checker
+`scripts/check-front-width-residual-formula.py` compares this formula against
+generated residuals for \(k=0,1,2\) at depths 3, 4, and 5; the report
+`outputs/front-width-residual-formula-check.json` has zero mismatches. Thus
+the uniform theorem now has both sides: \(k=0,1,2\) are residuated, and
+\(k\ge3\) fails on the same order by the non-principal
+\(p\backslash b\) fiber.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -796,8 +819,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Prove the uniform front-width theorem for the orthogonal-front schema,
-  including the one-front residual table and the \(k\ge3\) non-principal-fiber
-  obstruction.
+- Test whether non-orthogonal front ideals or mild front-order refinements can
+  evade the \(k\ge3\) principal-fiber obstruction without losing the \(B_N\)
+  APS profile.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

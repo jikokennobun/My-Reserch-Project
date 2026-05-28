@@ -1,0 +1,94 @@
+{
+  "formula": {
+    "schema": "orthogonal front-width residual formula",
+    "frontSizes": [
+      0,
+      1,
+      2
+    ],
+    "scope": "front sizes 0, 1, and 2 on the same B_N order",
+    "kGe3Obstruction": "for p in F_k, the p\\b fiber contains b plus at least two incomparable front atoms"
+  },
+  "summary": {
+    "modelsChecked": 3,
+    "totalCases": 9,
+    "totalMismatches": 0
+  },
+  "entries": [
+    {
+      "model": "bottom-nfg2-depth-3",
+      "path": "models\\examples\\bottom-nfg2-depth-3.json",
+      "depth": 3,
+      "cases": [
+        {
+          "frontSize": 0,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        },
+        {
+          "frontSize": 1,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        },
+        {
+          "frontSize": 2,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        }
+      ]
+    },
+    {
+      "model": "bottom-nfg2-depth-4",
+      "path": "models\\examples\\bottom-nfg2-depth-4.json",
+      "depth": 4,
+      "cases": [
+        {
+          "frontSize": 0,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        },
+        {
+          "frontSize": 1,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        },
+        {
+          "frontSize": 2,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        }
+      ]
+    },
+    {
+      "model": "bottom-nfg2-depth-5",
+      "path": "models\\examples\\bottom-nfg2-depth-5.json",
+      "depth": 5,
+      "cases": [
+        {
+          "frontSize": 0,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        },
+        {
+          "frontSize": 1,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        },
+        {
+          "frontSize": 2,
+          "mismatchCount": 0,
+          "mismatches": [],
+          "conclusion": "formula-matches-generated-residuals"
+        }
+      ]
+    }
+  ]
+}

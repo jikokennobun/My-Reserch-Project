@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 31
+- Current pass: 32
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -2126,3 +2126,65 @@ Next step:
 Use pass 32 to turn the checked front-width pattern into a uniform theorem:
 write the closed residual table for width \(1\), fold widths \(0,1,2\) into a
 single statement where possible, and prove the \(k\ge3\) obstruction directly.
+
+### Pass 32 - 2026-05-28 15:47 JST
+
+Focus:
+
+Turn the checked orthogonal front-width pattern into a uniform residual theorem
+for widths \(0,1,2\), and isolate what remains beyond the same-order schema.
+
+Proposer:
+
+The right statement is not only "the two-front template works." It is a
+three-case theorem: \(k=0\) recovers the truncated \(U\)-absorbing tensor,
+\(k=1\) gives a one-front non-\(U\)-absorbing tensor, and \(k=2\) gives the
+front-shifted template. All three share the same shifted-tail residual table,
+with only the front residual clause changing.
+
+Skeptic:
+
+The \(k\ge3\) obstruction depends on orthogonal front atoms in the same
+\(B_N\) order. It should not be overstated as ruling out all larger front
+ideals. A non-orthogonal front multiplication or an added join/order relation
+among front atoms could make the bad residual fiber principal, at the cost of
+changing the algebraic or APS profile.
+
+Formalist:
+
+Added `scripts/check-front-width-residual-formula.py` and saved
+`outputs/front-width-residual-formula-check.json`. For \(k=0,1,2\), the script
+compares a closed residual formula against generated residuals at depths 3, 4,
+and 5. The report has nine checked cases and zero mismatches. The formula uses
+\(\tau_k(s)=\tau_k(a_{N+1})=1\),
+\(\tau_k(a_i)=i-k+1\), and
+\(\rho_k(1)=a_{N+1},\rho_k(d)=a_{k+d-1}\). For \(p\in F_k\),
+\(p\backslash c=U\) at \(c=p,U\); otherwise it is \(b\) for \(k=1\) and the
+other front atom for \(k=2\). The \(k=0\) case has no front clause.
+
+Archivist:
+
+Recorded the uniform residual table in `definitions.md`, updated the hierarchy
+and residuated-domain notes, and marked the orthogonal-front same-order theorem
+as resolved for the current schema. The next open direction is now deliberately
+narrower: test whether non-orthogonal front ideals or mild front-order
+refinements can avoid the \(k\ge3\) principal-fiber obstruction.
+
+Repository updates:
+
+- `scripts/check-front-width-residual-formula.py`: closed residual formula
+  checker for orthogonal front widths \(0,1,2\).
+- `outputs/front-width-residual-formula-check.json`: zero-mismatch report for
+  depths 3, 4, and 5.
+- `definitions.md`, `notes/g2-fg2-hierarchy.md`,
+  `notes/residuated-algebra-domain-completion.md`, and
+  `notes/g2-aps-zoo-classification.md`: recorded the uniform residual table.
+- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
+  `outputs/README.md`, and `logs/research-log.md`: retargeted the next problem
+  to non-orthogonal front ideals or front-order refinements.
+
+Next step:
+
+Use pass 33 to test the smallest \(k=3\) escape route: add one front join or
+try a non-orthogonal front multiplication, then check whether full residuation
+and the \(B_N\) APS profile survive.

@@ -71,6 +71,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/check-front-shifted-extension-presentation.py](../scripts/check-front-shifted-extension-presentation.py).
 - Orthogonal front-width checker:
   [../scripts/check-front-ideal-size-bound.py](../scripts/check-front-ideal-size-bound.py).
+- Orthogonal front-width residual formula checker:
+  [../scripts/check-front-width-residual-formula.py](../scripts/check-front-width-residual-formula.py).
 - Structural-rule analyzer:
   [../scripts/analyze-structural-rules.py](../scripts/analyze-structural-rules.py).
 - Bottom-discipline filter script:

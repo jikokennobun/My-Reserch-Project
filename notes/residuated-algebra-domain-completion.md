@@ -362,6 +362,16 @@ right-multipliers sending \(p\) below \(b\) contains
 \(|F_k\setminus\{p\}|\ge2\). This gives a concrete same-order obstruction to
 front ideals of width at least three in the orthogonal-front schema.
 
+Pass 32 adds the closed residual formula for the positive widths. For
+\(k=0,1,2\), the tail residuals are shifted exponent subtraction with
+\(\rho_k(1)=a_{N+1}\) and \(\rho_k(d)=a_{k+d-1}\). The front clause says:
+for \(p\in F_k\), \(p\backslash c=U\) at \(c=p,U\); otherwise it is \(b\) when
+\(k=1\), and the other front atom when \(k=2\). Together with
+\(b\backslash c=U\), \(T\backslash c=c\), and the usual \(U\)-row, this gives
+a uniform residual table for widths \(0,1,2\). The report
+`../outputs/front-width-residual-formula-check.json` verifies zero mismatches
+against generated residuals for the checked depths 3, 4, and 5.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -390,9 +400,8 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Prove the uniform front-width theorem for the orthogonal-front schema and
-  write the closed residual table for the one-front non-\(U\)-absorbing
-  variant.
+- Test non-orthogonal front ideals or mild front-order refinements as possible
+  ways around the \(k\ge3\) non-principal residual-fiber obstruction.
 
 ## Related References and Drive Files
 

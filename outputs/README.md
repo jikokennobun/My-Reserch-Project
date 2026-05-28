@@ -72,6 +72,9 @@ Generated artifacts go here.
   front-width schema at depths 3, 4, and 5; widths \(0,1,2\) are residuated,
   while width \(3\) is the first same-order failure by non-principal residual
   fibers.
+- `front-width-residual-formula-check.json`: verifies the closed residual
+  formula for the orthogonal front-width schema at \(k=0,1,2\), with zero
+  mismatches across depths 3, 4, and 5.
 - `structural-rules-front-shifted-comparison.json`: compares exchange,
   contraction, strong weakening, and reflexive weakening/discarding across
   top-absorbing, truncated, non-\(U\)-absorbing, front-shifted, and
