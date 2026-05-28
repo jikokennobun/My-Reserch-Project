@@ -1,0 +1,1896 @@
+{
+  "rules": {
+    "E": "exchange/commutativity: a tensor b = b tensor a",
+    "C": "contraction: a tensor a <= a",
+    "W": "weakening: a <= b implies a tensor c <= b",
+    "discarding": "reflexive weakening instance: a tensor c <= a"
+  },
+  "summary": {
+    "modelsChecked": 8,
+    "exchangeHolds": [
+      "bottom-nfg2-depth-3-residuated",
+      "bottom-nfg2-depth-3-u-absorbing-minU",
+      "bottom-nfg2-depth-4-truncated-u-absorbing",
+      "bottom-nfg2-depth-3-non-u-absorbing",
+      "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
+      "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
+      "bottom-nfg2-depth-5-front-shifted-non-u-absorbing",
+      "bottom-G2FG2-noFP-residuated"
+    ],
+    "contractionHolds": [
+      "bottom-G2FG2-noFP-residuated"
+    ],
+    "weakeningHolds": [],
+    "discardingHolds": []
+  },
+  "entries": [
+    {
+      "model": "bottom-nfg2-depth-3-residuated",
+      "path": "models\\examples\\bottom-nfg2-depth-3-residuated.json",
+      "hasTensor": true,
+      "carrierSize": 8,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": false,
+          "failureCount": 5,
+          "witnesses": [
+            {
+              "a": "a1",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a1"
+              ]
+            },
+            {
+              "a": "a2",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a2"
+              ]
+            },
+            {
+              "a": "a3",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a3"
+              ]
+            },
+            {
+              "a": "a4",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a4"
+              ]
+            },
+            {
+              "a": "s",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "s"
+              ]
+            }
+          ]
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 42,
+          "comparablePairsChecked": 22,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "b": "a1",
+              "c": "a1",
+              "aTensorC": "U",
+              "assumption": [
+                "a1",
+                "a1"
+              ],
+              "required": [
+                "U",
+                "a1"
+              ]
+            },
+            {
+              "a": "a1",
+              "b": "a1",
+              "c": "a2",
+              "aTensorC": "U",
+              "assumption": [
+                "a1",
+                "a1"
+              ],
+              "required": [
+                "U",
+                "a1"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 36,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "c": "a1",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "a1"
+              ]
+            },
+            {
+              "a": "a1",
+              "c": "a2",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "a1"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    },
+    {
+      "model": "bottom-nfg2-depth-3-u-absorbing-minU",
+      "path": "models\\examples\\bottom-nfg2-depth-3-u-absorbing-minU.json",
+      "hasTensor": true,
+      "carrierSize": 8,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": false,
+          "failureCount": 5,
+          "witnesses": [
+            {
+              "a": "a1",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "a1"
+              ]
+            },
+            {
+              "a": "a2",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a2"
+              ]
+            },
+            {
+              "a": "a3",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a3"
+              ]
+            },
+            {
+              "a": "a4",
+              "aTensorA": "a1",
+              "required": [
+                "a1",
+                "a4"
+              ]
+            },
+            {
+              "a": "s",
+              "aTensorA": "a1",
+              "required": [
+                "a1",
+                "s"
+              ]
+            }
+          ]
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 42,
+          "comparablePairsChecked": 22,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "b": "a1",
+              "c": "a1",
+              "aTensorC": "a3",
+              "assumption": [
+                "a1",
+                "a1"
+              ],
+              "required": [
+                "a3",
+                "a1"
+              ]
+            },
+            {
+              "a": "a1",
+              "b": "a1",
+              "c": "a2",
+              "aTensorC": "U",
+              "assumption": [
+                "a1",
+                "a1"
+              ],
+              "required": [
+                "U",
+                "a1"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 36,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "c": "a1",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "a1"
+              ]
+            },
+            {
+              "a": "a1",
+              "c": "a2",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "a1"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    },
+    {
+      "model": "bottom-nfg2-depth-4-truncated-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-4-truncated-u-absorbing.json",
+      "hasTensor": true,
+      "carrierSize": 9,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": false,
+          "failureCount": 6,
+          "witnesses": [
+            {
+              "a": "a1",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "a1"
+              ]
+            },
+            {
+              "a": "a2",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a2"
+              ]
+            },
+            {
+              "a": "a3",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a3"
+              ]
+            },
+            {
+              "a": "a4",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a4"
+              ]
+            },
+            {
+              "a": "a5",
+              "aTensorA": "a1",
+              "required": [
+                "a1",
+                "a5"
+              ]
+            },
+            {
+              "a": "s",
+              "aTensorA": "a1",
+              "required": [
+                "a1",
+                "s"
+              ]
+            }
+          ]
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 56,
+          "comparablePairsChecked": 25,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a5",
+              "aTensorC": "a5",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a5",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "b": "a1",
+              "c": "a1",
+              "aTensorC": "a3",
+              "assumption": [
+                "a1",
+                "a1"
+              ],
+              "required": [
+                "a3",
+                "a1"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 49,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a5",
+              "aTensorC": "a5",
+              "required": [
+                "a5",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "c": "a1",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "a1"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    },
+    {
+      "model": "bottom-nfg2-depth-3-non-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-3-non-u-absorbing.json",
+      "hasTensor": true,
+      "carrierSize": 8,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": false,
+          "failureCount": 3,
+          "witnesses": [
+            {
+              "a": "a1",
+              "aTensorA": "T",
+              "required": [
+                "T",
+                "a1"
+              ]
+            },
+            {
+              "a": "a2",
+              "aTensorA": "T",
+              "required": [
+                "T",
+                "a2"
+              ]
+            },
+            {
+              "a": "a3",
+              "aTensorA": "T",
+              "required": [
+                "T",
+                "a3"
+              ]
+            }
+          ]
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 24,
+          "comparablePairsChecked": 22,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "b": "a1",
+              "c": "a1",
+              "aTensorC": "T",
+              "assumption": [
+                "a1",
+                "a1"
+              ],
+              "required": [
+                "T",
+                "a1"
+              ]
+            },
+            {
+              "a": "a1",
+              "b": "a1",
+              "c": "a2",
+              "aTensorC": "a3",
+              "assumption": [
+                "a1",
+                "a1"
+              ],
+              "required": [
+                "a3",
+                "a1"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 24,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a1",
+              "c": "a1",
+              "aTensorC": "T",
+              "required": [
+                "T",
+                "a1"
+              ]
+            },
+            {
+              "a": "a1",
+              "c": "a2",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "a1"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    },
+    {
+      "model": "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
+      "hasTensor": true,
+      "carrierSize": 8,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": false,
+          "failureCount": 3,
+          "witnesses": [
+            {
+              "a": "a3",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a3"
+              ]
+            },
+            {
+              "a": "a4",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "a4"
+              ]
+            },
+            {
+              "a": "s",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "s"
+              ]
+            }
+          ]
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 30,
+          "comparablePairsChecked": 22,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a3",
+              "b": "a3",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "a3",
+                "a3"
+              ],
+              "required": [
+                "a1",
+                "a3"
+              ]
+            },
+            {
+              "a": "a3",
+              "b": "a3",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "a3",
+                "a3"
+              ],
+              "required": [
+                "a2",
+                "a3"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 24,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a3",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "a3"
+              ]
+            },
+            {
+              "a": "a3",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "a3"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    },
+    {
+      "model": "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
+      "hasTensor": true,
+      "carrierSize": 9,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": false,
+          "failureCount": 4,
+          "witnesses": [
+            {
+              "a": "a3",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a3"
+              ]
+            },
+            {
+              "a": "a4",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a4"
+              ]
+            },
+            {
+              "a": "a5",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "a5"
+              ]
+            },
+            {
+              "a": "s",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "s"
+              ]
+            }
+          ]
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 42,
+          "comparablePairsChecked": 25,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a5",
+              "aTensorC": "a5",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a5",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a3",
+              "b": "a3",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "a3",
+                "a3"
+              ],
+              "required": [
+                "a1",
+                "a3"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 35,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a5",
+              "aTensorC": "a5",
+              "required": [
+                "a5",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            },
+            {
+              "a": "a3",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "a3"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    },
+    {
+      "model": "bottom-nfg2-depth-5-front-shifted-non-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
+      "hasTensor": true,
+      "carrierSize": 10,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": false,
+          "failureCount": 5,
+          "witnesses": [
+            {
+              "a": "a3",
+              "aTensorA": "a5",
+              "required": [
+                "a5",
+                "a3"
+              ]
+            },
+            {
+              "a": "a4",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a4"
+              ]
+            },
+            {
+              "a": "a5",
+              "aTensorA": "U",
+              "required": [
+                "U",
+                "a5"
+              ]
+            },
+            {
+              "a": "a6",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "a6"
+              ]
+            },
+            {
+              "a": "s",
+              "aTensorA": "a3",
+              "required": [
+                "a3",
+                "s"
+              ]
+            }
+          ]
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 56,
+          "comparablePairsChecked": 28,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a5",
+              "aTensorC": "a5",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a5",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a6",
+              "aTensorC": "a6",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a6",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 48,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "a1",
+              "aTensorC": "a1",
+              "required": [
+                "a1",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a2",
+              "aTensorC": "a2",
+              "required": [
+                "a2",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a3",
+              "aTensorC": "a3",
+              "required": [
+                "a3",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a4",
+              "aTensorC": "a4",
+              "required": [
+                "a4",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a5",
+              "aTensorC": "a5",
+              "required": [
+                "a5",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a6",
+              "aTensorC": "a6",
+              "required": [
+                "a6",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "s",
+              "aTensorC": "s",
+              "required": [
+                "s",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    },
+    {
+      "model": "bottom-G2FG2-noFP-residuated",
+      "path": "models\\examples\\bottom-G2FG2-noFP-residuated.json",
+      "hasTensor": true,
+      "carrierSize": 5,
+      "rules": {
+        "E_exchange": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "C_contraction": {
+          "holds": true,
+          "failureCount": 0,
+          "witnesses": []
+        },
+        "W_weakening": {
+          "holds": false,
+          "failureCount": 3,
+          "comparablePairsChecked": 13,
+          "witnesses": [
+            {
+              "a": "T",
+              "b": "T",
+              "c": "d",
+              "aTensorC": "d",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "d",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "a",
+              "aTensorC": "a",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "a",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "b": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "assumption": [
+                "T",
+                "T"
+              ],
+              "required": [
+                "U",
+                "T"
+              ]
+            }
+          ]
+        },
+        "discarding_reflexive_W": {
+          "holds": false,
+          "failureCount": 3,
+          "witnesses": [
+            {
+              "a": "T",
+              "c": "d",
+              "aTensorC": "d",
+              "required": [
+                "d",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "a",
+              "aTensorC": "a",
+              "required": [
+                "a",
+                "T"
+              ]
+            },
+            {
+              "a": "T",
+              "c": "U",
+              "aTensorC": "U",
+              "required": [
+                "U",
+                "T"
+              ]
+            }
+          ]
+        }
+      },
+      "conclusion": "structural-rules-analyzed"
+    }
+  ]
+}

@@ -684,6 +684,34 @@ against the generated residuals at depths 3, 4, and 5. Thus the
 front-shifted non-\(U\)-absorbing tensor is now a uniform \(B_N\) same-order
 full-residuated template for \(N\ge3\), not merely a finite search pattern.
 
+Pass 29 checks the structural-rule profile of the current residuated witnesses.
+The analyzer `scripts/analyze-structural-rules.py` implements the Axis III
+rules:
+\[
+E:\ x\otimes y=y\otimes x,\qquad
+C:\ x\otimes x\le x,\qquad
+W:\ x\le y\Rightarrow x\otimes z\le y.
+\]
+The report
+`outputs/structural-rules-front-shifted-comparison.json` compares the
+top-absorbing, truncated \(U\)-absorbing, non-\(U\)-absorbing, front-shifted,
+and G2+FG2-without-FP residuated expansions. All checked tensors satisfy
+exchange. None satisfies the strong weakening rule or its reflexive
+discarding instance \(x\otimes z\le x\); this failure is immediate from the
+unit at \(T\), since \(T\otimes z=z\) and generally \(z\not\le T\). Global
+contraction holds only for `bottom-G2FG2-noFP-residuated`.
+
+The front-shifted template has a sharper local profile. Its front is
+contractive and idempotent:
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,
+\]
+but its shifted tail remains resource-sensitive. At depths 3, 4, and 5 the
+contraction failures are exactly tail or fixed-point witnesses such as
+\(a_3^2=U\), \(a_{N+1}^2=a_3\), and \(s^2=a_3\), depending on the depth.
+Thus the front/tail split is not cosmetic: it isolates a small contractive
+front from the noncontractive tail needed for the arbitrary-depth nFG2 orbit.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -730,7 +758,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Explain the algebraic meaning of the front/tail split in the front-shifted
-  non-\(U\)-absorbing template, especially its structural-rule behavior.
+- Present the front-shifted non-\(U\)-absorbing template as an ideal-extension
+  or orthogonal-sum style construction explaining localized front contraction
+  and tail resource sensitivity.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

@@ -189,6 +189,19 @@ b\le a\backslash c
 a\le c/b.
 \]
 
+For finite structural-rule checks in the G2-ZOO notes, use:
+\[
+E:\ a\otimes b=b\otimes a,
+\qquad
+C:\ a\otimes a\le a,
+\]
+and the strong weakening form
+\[
+W:\ a\le b\Rightarrow a\otimes c\le b.
+\]
+The reflexive instance of \(W\), \(a\otimes c\le a\), is recorded separately in
+machine reports as `discarding_reflexive_W`.
+
 For the bottom-disciplined \(B_N\) family, the
 **truncated-exponent \(U\)-absorbing tensor** is the commutative tensor with
 unit \(T\), zero \(b\), \(U\) absorbing over nonzero non-unit factors, and

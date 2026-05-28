@@ -318,6 +318,18 @@ show zero mismatches against both left and right residuals. This turns the
 front-shifted construction from a checked schema into a uniform full-residuated
 \(B_N\) template, modulo ordinary presentation polishing.
 
+Pass 29 compares structural rules across the current residuated examples. The
+report `../outputs/structural-rules-front-shifted-comparison.json` shows a
+consistent resource-sensitive pattern. Exchange holds for every checked
+tensor. Strong weakening \(a\le b\Rightarrow a\otimes c\le b\) fails for every
+checked tensor, as does its reflexive discarding instance \(a\otimes c\le a\);
+the unit \(T\) already forces this when \(c\not\le T\). Global contraction
+\(a\otimes a\le a\) holds only for `bottom-G2FG2-noFP-residuated`. The
+front-shifted \(B_N\) tensor is therefore best read as a local contraction
+construction: the front idempotents \(a_1,a_2\) are contractive, while the
+shifted tail carries the noncontractive behavior required by the nFG2-depth
+separation.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -346,9 +358,9 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Analyze the front-shifted template as a product/ideal-extension style
-  construction and compare its structural-rule behavior with the
-  truncated-exponent \(U\)-absorbing template.
+- Present the front-shifted template as a product, orthogonal-sum, or
+  ideal-extension construction that explains the local front contraction and
+  noncontractive tail.
 
 ## Related References and Drive Files
 

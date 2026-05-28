@@ -67,6 +67,8 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/build-front-shifted-non-u-absorbing-residuated.py](../scripts/build-front-shifted-non-u-absorbing-residuated.py).
 - Front-shifted residual formula checker:
   [../scripts/check-front-shifted-residual-formula.py](../scripts/check-front-shifted-residual-formula.py).
+- Structural-rule analyzer:
+  [../scripts/analyze-structural-rules.py](../scripts/analyze-structural-rules.py).
 - Bottom-discipline filter script:
   [../scripts/check-bottom-discipline.py](../scripts/check-bottom-discipline.py).
 

@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 28
+- Current pass: 29
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -1940,3 +1940,64 @@ Next step:
 Use pass 29 to analyze the structural-rule profile of the front-shifted
 template, especially contraction and weakening compared with the
 truncated-exponent \(U\)-absorbing template.
+
+### Pass 29 - 2026-05-28 12:03 JST
+
+Focus:
+
+Analyze the structural-rule profile of the front-shifted non-\(U\)-absorbing
+\(B_N\) tensor, especially contraction and weakening.
+
+Proposer:
+
+Add a small analyzer for the Axis III rules already listed in the zoo note:
+exchange \(E\), contraction \(C\), and the strong weakening rule
+\(a\le b\Rightarrow a\otimes c\le b\). Compare the front-shifted template
+against the top-absorbing, truncated \(U\)-absorbing, earlier non-\(U\), and
+G2+FG2-without-FP residuated witnesses.
+
+Skeptic:
+
+The strong weakening rule is very strong in this APS order, since the monoid
+unit is \(T\) but many elements are not below \(T\). Therefore a negative
+weakening result is expected. The useful information is not merely that \(W\)
+fails, but where contraction fails and whether the front/tail split has a
+visible structural signature.
+
+Formalist:
+
+Added `scripts/analyze-structural-rules.py` and saved
+`outputs/structural-rules-front-shifted-comparison.json`. All eight compared
+residuated tensors satisfy exchange. None satisfies strong weakening or the
+reflexive discarding instance \(a\otimes c\le a\); the unit already gives
+witnesses \(T\otimes c=c\not\le T\). Global contraction holds only for
+`bottom-G2FG2-noFP-residuated`. In the front-shifted family, however,
+contraction holds on the front idempotents \(a_1,a_2\) and fails in the shifted
+tail. Checked failures include \(a_3^2=U\), \(a_{N+1}^2=a_3\), and
+\(s^2=a_3\) in the relevant depths.
+
+Archivist:
+
+Updated the structural-rule axis, hierarchy note, residuated-domain note,
+definitions, open problems, active questions, model/output indexes, and
+research log. The next task is now algebraic presentation: describe the
+front-shifted tensor as an ideal-extension, orthogonal-sum, or related
+construction explaining localized front contraction and tail resource
+sensitivity.
+
+Repository updates:
+
+- `scripts/analyze-structural-rules.py`: structural-rule checker.
+- `outputs/structural-rules-front-shifted-comparison.json`: comparison report.
+- `definitions.md`: normalized the finite \(E,C,W\) structural-rule checks.
+- `notes/g2-aps-zoo-classification.md`, `notes/g2-fg2-hierarchy.md`, and
+  `notes/residuated-algebra-domain-completion.md`: recorded the result.
+- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
+  `outputs/README.md`, and `logs/research-log.md`: retargeted the next problem
+  to algebraic presentation of the front/tail split.
+
+Next step:
+
+Use pass 30 to present the front-shifted tensor as an ideal-extension or
+orthogonal-sum style construction and isolate the exact proof obligations for
+that presentation.

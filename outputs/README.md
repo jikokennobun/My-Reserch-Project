@@ -64,6 +64,10 @@ Generated artifacts go here.
 - `front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`:
   checks that the closed residual formula for the front-shifted template
   matches the generated left and right residuals at depths 3, 4, and 5.
+- `structural-rules-front-shifted-comparison.json`: compares exchange,
+  contraction, strong weakening, and reflexive weakening/discarding across
+  top-absorbing, truncated, non-\(U\)-absorbing, front-shifted, and
+  G2+FG2-without-FP residuated expansions.
 - `truncated-u-forcing-bottom-nfg2-depth-3.json`: analyzer report showing that,
   once the truncated-exponent orbit table is fixed on `bottom-nfg2-depth-3`,
   monotonicity forces every \(U\)-product.

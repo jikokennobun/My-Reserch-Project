@@ -34,6 +34,10 @@
   front-shifted non-\(U\)-absorbing \(B_N\) template and added a formula checker
   verifying zero mismatches against generated left/right residuals at depths
   3, 4, and 5.
+- Autonomous discussion pass 29: added a structural-rule analyzer and compared
+  current residuated witnesses; all checked tensors satisfy exchange, none
+  satisfy strong weakening/discarding, and the front-shifted template localizes
+  contraction to \(a_1,a_2\) while the tail remains noncontractive.
 
 ## 2026-05-27
 

@@ -173,6 +173,16 @@ order enforcement, while keeping \(\boxtimes\) fixed:
 | `E` | Exchange: \(a\otimes b=b\otimes a\) |
 | `full-struct` | All of W, C, E (lattice-ordered case) |
 
+The comparison report
+`outputs/structural-rules-front-shifted-comparison.json` checks these rules on
+the current residuated witnesses. All eight checked tensors satisfy exchange.
+None satisfies the strong weakening rule \(a\le b\Rightarrow a\otimes c\le b\)
+or its reflexive discarding instance \(a\otimes c\le a\); the failures already
+appear for \(T\otimes c=c\) when \(c\not\le T\). Global contraction holds only
+for `bottom-G2FG2-noFP-residuated`. In the front-shifted \(B_N\) template,
+contraction is deliberately localized: \(a_1^2=a_1\) and \(a_2^2=a_2\), while
+the shifted tail provides the contraction failures.
+
 ### III.2 Completion Stability
 
 | Code | Condition |
@@ -331,8 +341,9 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Analyze the structural-rule behavior of the front-shifted
-   non-\(U\)-absorbing \(B_N\) tensor template.
+3. Present the front-shifted non-\(U\)-absorbing \(B_N\) tensor as an
+   ideal-extension or orthogonal-sum style construction, explaining localized
+   front contraction and tail resource sensitivity.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic
