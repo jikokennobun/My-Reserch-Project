@@ -293,6 +293,38 @@ b & \text{otherwise.}
 \]
 Commutativity gives the same right residuals.
 
+The same tensor has a useful **front ideal-extension presentation**. Let
+\[
+I=\{b,a_1,a_2\}.
+\]
+Then \(I\) is a downward closed two-sided tensor ideal:
+\[
+x\le y\in I\Rightarrow x\in I,\qquad I\otimes L\subseteq I.
+\]
+Inside \(I\), the nonzero front elements form an orthogonal idempotent
+zero-band:
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,\qquad a_1a_2=b.
+\]
+Multiplication by any element outside the other front atom projects back to the
+chosen front atom:
+\[
+a_i\otimes x=a_i
+\quad(x\notin\{b,a_{3-i}\}).
+\]
+The Rees quotient collapsing \(I\) to its zero \(b\) is the shifted tail monoid
+on representatives
+\[
+\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}.
+\]
+Thus the construction is best viewed as an ideal extension of the shifted
+truncated tail by a two-atom contractive front ideal, not as a direct product.
+This explains the structural-rule profile: contraction holds locally in \(I\),
+while the quotient tail retains the noncontractive resource-sensitive behavior.
+The finite checker
+`scripts/check-front-shifted-extension-presentation.py` verifies this
+presentation on the saved depth-3, depth-4, and depth-5 instances.
+
 ## Open Definition Tasks
 
 - Define ACR precisely.

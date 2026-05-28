@@ -38,6 +38,10 @@
   current residuated witnesses; all checked tensors satisfy exchange, none
   satisfy strong weakening/discarding, and the front-shifted template localizes
   contraction to \(a_1,a_2\) while the tail remains noncontractive.
+- Autonomous discussion pass 30: presented the front-shifted template as a
+  Rees-style ideal extension; \(I=\{b,a_1,a_2\}\) is a two-sided tensor ideal,
+  and collapsing \(I\) yields the shifted tail monoid at checked depths 3, 4,
+  and 5.
 
 ## 2026-05-27
 

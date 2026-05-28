@@ -183,6 +183,14 @@ for `bottom-G2FG2-noFP-residuated`. In the front-shifted \(B_N\) template,
 contraction is deliberately localized: \(a_1^2=a_1\) and \(a_2^2=a_2\), while
 the shifted tail provides the contraction failures.
 
+The front-shifted template has a precise ideal-extension presentation. The
+front \(I=\{b,a_1,a_2\}\) is a downward closed two-sided tensor ideal, with
+\(a_1,a_2\) forming an orthogonal idempotent zero-band. Collapsing \(I\) to
+\(b\) yields the shifted truncated tail monoid on
+\(\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}\). The report
+`outputs/front-shifted-extension-presentation-check.json` verifies this at
+depths 3, 4, and 5.
+
 ### III.2 Completion Stability
 
 | Code | Condition |
@@ -282,6 +290,9 @@ reports under `outputs/residuated-front-shifted-non-u-absorbing-*`.
 The residual formula for that template is checked by
 `scripts/check-front-shifted-residual-formula.py` and the reports
 `outputs/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`.
+The ideal-extension presentation is checked by
+`scripts/check-front-shifted-extension-presentation.py` and
+`outputs/front-shifted-extension-presentation-check.json`.
 The depth-5 base witness is `models/examples/bottom-nfg2-depth-5.json`, checked
 in `outputs/g2-zoo-bottom-nfg2-depth-5.json`.
 The bottom-disciplined G2+FG2 without FP witness is
@@ -341,9 +352,8 @@ The following separation problems should each be attacked by finite model search
    model registry.
 2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
-3. Present the front-shifted non-\(U\)-absorbing \(B_N\) tensor as an
-   ideal-extension or orthogonal-sum style construction, explaining localized
-   front contraction and tail resource sensitivity.
+3. Generalize or classify the front-ideal extension recipe for the
+   non-\(U\)-absorbing \(B_N\) tensor.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

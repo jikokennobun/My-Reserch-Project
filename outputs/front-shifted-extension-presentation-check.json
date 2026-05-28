@@ -1,0 +1,109 @@
+{
+  "presentation": {
+    "name": "front-shifted-ideal-extension",
+    "ideal": "I={b,a1,a2}",
+    "quotient": "collapse I to b; remaining representatives carry the shifted tail tensor",
+    "interpretation": "local front contraction lives in I, while the quotient tail preserves resource-sensitive truncated addition"
+  },
+  "summary": {
+    "modelsChecked": 3,
+    "verified": [
+      "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
+      "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
+      "bottom-nfg2-depth-5-front-shifted-non-u-absorbing"
+    ],
+    "failed": []
+  },
+  "entries": [
+    {
+      "model": "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
+      "depth": 3,
+      "ideal": [
+        "a1",
+        "a2",
+        "b"
+      ],
+      "tailQuotientRepresentatives": [
+        "b",
+        "T",
+        "U",
+        "s",
+        "a4",
+        "a3"
+      ],
+      "checks": {
+        "orderIdeal": true,
+        "twoSidedTensorIdeal": true,
+        "frontZeroBand": true,
+        "frontAction": true,
+        "tailQuotientProduct": true,
+        "tailQuotientOrderShape": true
+      },
+      "failureCount": 0,
+      "failures": [],
+      "conclusion": "ideal-extension-presentation-verified"
+    },
+    {
+      "model": "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
+      "depth": 4,
+      "ideal": [
+        "a1",
+        "a2",
+        "b"
+      ],
+      "tailQuotientRepresentatives": [
+        "b",
+        "T",
+        "U",
+        "s",
+        "a5",
+        "a3",
+        "a4"
+      ],
+      "checks": {
+        "orderIdeal": true,
+        "twoSidedTensorIdeal": true,
+        "frontZeroBand": true,
+        "frontAction": true,
+        "tailQuotientProduct": true,
+        "tailQuotientOrderShape": true
+      },
+      "failureCount": 0,
+      "failures": [],
+      "conclusion": "ideal-extension-presentation-verified"
+    },
+    {
+      "model": "bottom-nfg2-depth-5-front-shifted-non-u-absorbing",
+      "path": "models\\examples\\bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
+      "depth": 5,
+      "ideal": [
+        "a1",
+        "a2",
+        "b"
+      ],
+      "tailQuotientRepresentatives": [
+        "b",
+        "T",
+        "U",
+        "s",
+        "a6",
+        "a3",
+        "a4",
+        "a5"
+      ],
+      "checks": {
+        "orderIdeal": true,
+        "twoSidedTensorIdeal": true,
+        "frontZeroBand": true,
+        "frontAction": true,
+        "tailQuotientProduct": true,
+        "tailQuotientOrderShape": true
+      },
+      "failureCount": 0,
+      "failures": [],
+      "conclusion": "ideal-extension-presentation-verified"
+    }
+  ]
+}

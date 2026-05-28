@@ -330,6 +330,24 @@ construction: the front idempotents \(a_1,a_2\) are contractive, while the
 shifted tail carries the noncontractive behavior required by the nFG2-depth
 separation.
 
+Pass 30 makes that reading precise as an ideal extension. Let
+\[
+I=\{b,a_1,a_2\}.
+\]
+In the front-shifted template, \(I\) is downward closed and satisfies
+\(I\otimes L\subseteq I\), so it is a two-sided tensor ideal. Its nonzero part
+is a two-atom orthogonal idempotent zero-band. The quotient that collapses
+\(I\) to \(b\) has representatives
+\[
+\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}
+\]
+and carries exactly the shifted truncated tail tensor. The finite report
+`../outputs/front-shifted-extension-presentation-check.json` verifies the
+order-ideal condition, tensor-ideal condition, front zero-band, front action,
+tail quotient product, and tail quotient order shape for depths 3, 4, and 5.
+Thus the construction is an ideal extension of a resource-sensitive tail by a
+contractive front ideal, not a product decomposition.
+
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
 G2+FG2 without FP-synt. It again uses a true bottom \(b\) and helper upper bound
 \(U\), but the \(T\)-orbit is \(T\to a\to d\to a\to\cdots\) with \(d\le a\).
@@ -358,9 +376,9 @@ bottom discipline while adding full residuals.
   contraction.
 - Search whether the \(D_N\) nFG2-depth family admits analogous finite
   residuated repairs.
-- Present the front-shifted template as a product, orthogonal-sum, or
-  ideal-extension construction that explains the local front contraction and
-  noncontractive tail.
+- Generalize the front-ideal extension recipe: characterize which finite
+  tensor ideals can be glued onto the shifted tail while preserving full
+  residuation and the nFG2-depth separation.
 
 ## Related References and Drive Files
 

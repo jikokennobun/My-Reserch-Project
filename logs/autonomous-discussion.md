@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 29
+- Current pass: 30
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -2001,3 +2001,65 @@ Next step:
 Use pass 30 to present the front-shifted tensor as an ideal-extension or
 orthogonal-sum style construction and isolate the exact proof obligations for
 that presentation.
+
+### Pass 30 - 2026-05-28 12:33 JST
+
+Focus:
+
+Present the front-shifted non-\(U\)-absorbing \(B_N\) tensor as an algebraic
+extension, and decide whether "orthogonal sum" or "ideal extension" is the
+right reading.
+
+Proposer:
+
+Use the front/tail split to define a genuine tensor ideal
+\(I=\{b,a_1,a_2\}\). If \(I\) is downward closed and absorbs multiplication by
+all elements, then the front-shifted tensor is not merely a patched table. It
+is a Rees-style ideal extension: a contractive two-atom front ideal is glued
+onto the shifted truncated tail.
+
+Skeptic:
+
+Calling the construction an orthogonal sum would be misleading. Cross-products
+between a front atom and a tail element do not vanish to \(b\); they project
+back to the chosen front atom. Also, the presentation should not be advertised
+as a classification theorem. It explains the current template but does not show
+that all same-order non-\(U\)-absorbing repairs arise this way.
+
+Formalist:
+
+Added `scripts/check-front-shifted-extension-presentation.py` and saved
+`outputs/front-shifted-extension-presentation-check.json`. For the checked
+depths 3, 4, and 5, the script verifies that \(I=\{b,a_1,a_2\}\) is a downward
+closed two-sided tensor ideal, that \(a_1,a_2\) form an orthogonal idempotent
+zero-band, and that the quotient collapsing \(I\) to \(b\) has representatives
+\(\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}\) carrying exactly the shifted tail
+product. This explains local contraction as behavior internal to \(I\), while
+the quotient tail keeps the noncontractive resource-sensitive product.
+
+Archivist:
+
+Recorded the ideal-extension presentation in `definitions.md`, the hierarchy
+note, the residuated-domain note, and the G2-ZOO classification note. Updated
+the active question and open problems away from "find a presentation" and
+toward classification of possible front tensor ideals.
+
+Repository updates:
+
+- `scripts/check-front-shifted-extension-presentation.py`: verifies the
+  front-ideal extension presentation.
+- `outputs/front-shifted-extension-presentation-check.json`: depth-3/4/5
+  verification report.
+- `definitions.md`: added the front ideal-extension presentation.
+- `notes/g2-fg2-hierarchy.md`,
+  `notes/residuated-algebra-domain-completion.md`, and
+  `notes/g2-aps-zoo-classification.md`: recorded the structural reading.
+- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
+  `outputs/README.md`, and `logs/research-log.md`: retargeted the next problem
+  to classifying front-ideal extensions.
+
+Next step:
+
+Use pass 31 to classify small tensor ideals that can replace
+\(\{b,a_1,a_2\}\) in the front-extension recipe, or prove that the two-atom
+zero-band is forced by the present same-order, same-tail constraints.

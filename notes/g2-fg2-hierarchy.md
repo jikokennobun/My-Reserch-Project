@@ -712,6 +712,27 @@ contraction failures are exactly tail or fixed-point witnesses such as
 Thus the front/tail split is not cosmetic: it isolates a small contractive
 front from the noncontractive tail needed for the arbitrary-depth nFG2 orbit.
 
+Pass 30 identifies the algebraic presentation behind that split. The set
+\[
+I=\{b,a_1,a_2\}
+\]
+is a downward closed two-sided tensor ideal. Its nonzero part is the
+orthogonal idempotent zero-band
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,\qquad a_1a_2=b,
+\]
+and multiplication by any nonzero element outside the opposite front atom
+projects back to the chosen front atom. Collapsing \(I\) to \(b\) leaves the
+shifted truncated tail monoid on
+\[
+\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}.
+\]
+The checker `scripts/check-front-shifted-extension-presentation.py` verifies
+this ideal-extension presentation on the depth-3, depth-4, and depth-5 saved
+models. The construction is therefore not a direct product or a pure
+orthogonal sum: the front is a contractive tensor ideal glued onto a
+resource-sensitive quotient tail.
+
 ### Bottom-Disciplined G2+FG2 without FP
 
 The remaining bottom-discipline separation is witnessed by
@@ -758,8 +779,8 @@ order.
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS
   axiom packages imply orbit well-foundedness?
-- Present the front-shifted non-\(U\)-absorbing template as an ideal-extension
-  or orthogonal-sum style construction explaining localized front contraction
-  and tail resource sensitivity.
+- Generalize or classify front-ideal extensions of the shifted \(B_N\) tail:
+  determine which finite tensor ideals preserve same-order full residuation and
+  the arbitrary-depth nFG2 profile.
 - Compare with BS16 resource-sensitive separation and hidden-contraction analysis
   in `notes/bs16-fiber-residuated-aps.md`.

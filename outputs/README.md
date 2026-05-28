@@ -64,6 +64,10 @@ Generated artifacts go here.
 - `front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`:
   checks that the closed residual formula for the front-shifted template
   matches the generated left and right residuals at depths 3, 4, and 5.
+- `front-shifted-extension-presentation-check.json`: verifies that the
+  front-shifted template is an ideal extension with
+  \(I=\{b,a_1,a_2\}\), and that collapsing \(I\) gives the shifted tail monoid
+  at depths 3, 4, and 5.
 - `structural-rules-front-shifted-comparison.json`: compares exchange,
   contraction, strong weakening, and reflexive weakening/discarding across
   top-absorbing, truncated, non-\(U\)-absorbing, front-shifted, and
