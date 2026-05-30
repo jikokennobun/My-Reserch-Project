@@ -26,6 +26,11 @@ The handoff lists ChatGPT shared links discovered in currently accessible Resear
 | 10 | Fixed-point hierarchy / self-reference hierarchy | https://chatgpt.com/share/69fcbd5f-d1c0-83e8-a682-187480ed5d1f | [self-mutual-reference-hierarchy.md](self-mutual-reference-hierarchy.md) |
 | 11 | Lawvere fixed-point theorem / categorical domain theory / quotation | https://chatgpt.com/share/6a06498e-c108-83e8-941c-75b1931bbc3a | [smullyan-lawvere-categorical-diagonalization.md](smullyan-lawvere-categorical-diagonalization.md) |
 | 12 | Generalized proof / categorical abstract algebraic logic / proof structures | https://chatgpt.com/share/69feffe9-1da0-83e8-a4af-c6b6ecbc4765 | [generalized-proof-structures.md](generalized-proof-structures.md) |
+| 13 | Formalized G2 in implicational APS / local FG2-G2 hierarchy | https://chatgpt.com/share/6a1ac9e4-2f80-8322-8d1a-9da8dce59177 | [formalized-g2-implicational-aps.md](formalized-g2-implicational-aps.md) |
+| 14 | Provability predicate examples as weak APS / A4 failure | https://chatgpt.com/share/6a1ac9ff-0b20-83a5-8adf-2ce37a8708d1 | [provability-predicate-weak-aps.md](provability-predicate-weak-aps.md) |
+| 15 | Self-elimination logic / dynamic axiom deletion | https://chatgpt.com/share/6a143fbc-a1b0-8321-9149-bb06c05af8b7 | [self-elimination-logic.md](self-elimination-logic.md) |
+| 16 | Sequential Theory and Pair Theory as indexed/fibred APS | https://chatgpt.com/share/6a1aca33-434c-8323-b77c-3f8158ecf52a | [sequential-pair-theory-indexed-aps.md](sequential-pair-theory-indexed-aps.md) |
+| 17 | Research Project share-link batch / discoverability limits | https://chatgpt.com/share/6a1aca8a-49d8-8324-9b61-d6dbfcb878ee | this note |
 
 ## Research Clusters
 
@@ -35,8 +40,22 @@ The handoff lists ChatGPT shared links discovered in currently accessible Resear
 4. Domain/topological directions.
 5. Enriched/substructural logics.
 6. Model-theoretic and combinatorial invariants.
+7. Weak APS and controlled failure of derivability/introspection conditions.
+8. Dynamic axiomhood, deletion, and prelogic.
 
 ## Codex Handling
 
 The links are now included in [../references/chatgpt-share-watchlist.csv](../references/chatgpt-share-watchlist.csv). Each has a local note file that can be expanded by the periodic relay sync.
 
+## 2026-05-30 Batch
+
+The user supplied seven additional shared URLs. Two were already tracked:
+
+- https://chatgpt.com/share/6a0b7536-836c-83ab-ae90-5eb16748d05e
+- https://chatgpt.com/share/6a0cbab3-b174-83ab-8a89-db8a746eacda
+
+The five new URLs have been added to the watchlist and summarized in the notes
+linked above. The "リンクまとめ依頼" thread is a meta-handoff: it records that
+Project-visible shared links are discoverable only when exposed through
+share URLs or uploaded relay files, not by directly enumerating the private
+ChatGPT Project chat list.

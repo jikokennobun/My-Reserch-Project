@@ -37,6 +37,17 @@
   `code/scripts/sync-chatgpt-project-artifacts.ps1` so Project-generated PDF
   slides and exported decks can be imported into `artifacts/slides/` and
   collected under `artifacts/pdf/`.
+- Automation config: updated `Research Project Relay Sync` so each scheduled
+  run starts by importing ChatGPT Project artifact inbox files into the repo.
+- ChatGPT share import: added five new shared links from the user-supplied
+  batch to `research/references/chatgpt-share-watchlist.csv`, created notes on
+  formalized G2, weak APS provability predicates, self-elimination logic, and
+  sequential/pair theory as indexed APS, and marked two supplied links as
+  already tracked.
+- ChatGPT share import: the refreshed cardinal-invariant and residuated/GoI
+  links mention generated PDF/TeX files via `sandbox:/mnt/data/...`; those files
+  are not directly readable locally and should be exported to the Google Drive
+  artifact inbox if they need to be imported as repo artifacts.
 - Drive verification: local Git PDF and local Google Drive backup hashes match;
   Google Drive connector search has not yet surfaced the synced file, likely due
   to Drive sync/index delay.

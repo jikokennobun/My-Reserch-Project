@@ -16,6 +16,16 @@
 - Can the orthogonal front-width theorem be upgraded from the current
   machine-checked closed residual formula to a polished paper lemma, and can
   non-orthogonal front ideals evade the $k\ge3$ principal-fiber obstruction?
+- How should local/formalized G2 principles such as $\mathrm{LG2}(a)$ and
+  $\mathrm{FG2}[q]$ be added to the G2-ZOO without confusing Horn rules with
+  internal implication propositions?
+- Which weak-APS packages capture Feferman/Shavrukov/Rosser-style provability
+  predicates as controlled A4 failures while still preserving useful G2-like
+  conclusions?
+- Can self-elimination logic be modelled as a finite dynamic axiom-deletion
+  system with stable extensions, two-cycles, and no-fixed-point cases?
+- What is the minimal fibred/indexed sequentiality condition needed to supply
+  a Jeroslow-style fixed point for APS?
 
 ## Later
 

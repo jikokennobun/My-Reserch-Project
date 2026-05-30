@@ -4,6 +4,23 @@ Source: https://chatgpt.com/share/6a0cbab3-b174-83ab-8a89-db8a746eacda
 
 Imported: 2026-05-22
 
+Rechecked from user-supplied shared-link batch: 2026-05-30
+
+The refreshed share also links this axis to algebraic proof theory and
+Abstract Geometry of Interaction: residuated algebra gives the order-theoretic
+semantics of assumptions and implication; completions such as MacNeille,
+ideal, canonical, or quantale completions extend that semantics to infinitary
+or relational settings; cut elimination is then read as a conservativity or
+stability property of the completion; Abstract GoI reads cut elimination as a
+dynamic feedback computation over the completed algebra.
+
+The share reports generated files named `residuated_completion_goi_notes.pdf`
+and `residuated_completion_goi_notes.tex`. They appear as
+`sandbox:/mnt/data/...` links from the ChatGPT session and are not directly
+readable from this local repository environment. If exported to the Google
+Drive artifact inbox, they can be imported into `artifacts/` by
+`code/scripts/sync-chatgpt-project-artifacts.ps1`.
+
 ## Core Idea
 
 $$
