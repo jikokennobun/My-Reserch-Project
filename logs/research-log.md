@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-05-30
+
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T05:03:17+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: queried the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-30T05:03:58+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
+
+## 2026-05-29
+
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-29T05:37:09+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed again (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-29T05:38:41+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-29T14:27:21+09:00`; all 18 tracked `https://chatgpt.com/share/...` links were reachable and unchanged, so no note updates were required.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-29T22:53:25+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: queried the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-29T22:54:39+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
+
 ## 2026-05-28
 
 - Autonomous discussion pass 22: proved the truncated-exponent
@@ -14,6 +27,10 @@
 - Relay sync: listed the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T01:04:12+09:00`; no newly relevant items newer than `2026-05-22` were detected.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T10:56:03+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T10:56:31+09:00`; all items still appear unchanged since the `2026-05-22` snapshot.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T17:33:45+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T17:35:17+09:00`; all items still appear unchanged since the `2026-05-22` snapshot.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T23:35:01+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed again (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T23:36:07+09:00`; no newly relevant items newer than `2026-05-21` were detected.
 - Autonomous discussion pass 24: started the orbit-table-varying search for a
   non-\(U\)-absorbing same-order full-residuated tensor on
   `bottom-nfg2-depth-3`; the bounded run checked 382 complete assignments in
