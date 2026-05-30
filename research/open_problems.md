@@ -216,4 +216,21 @@
   preorder.
 - Determine whether Visser-style SEQ should be treated as an idempotent
   sequentialization monad, a reflective completion, or a doctrine-level
-  structure over 
+  structure over APS.
+
+## Weak APS and Dynamic Axiomhood
+
+- Define weak APS variants that retain seriality or A1/A2-like behavior while
+  allowing controlled A4/refutability-introspection failure.
+- Classify Feferman, Shavrukov, and Rosser provability predicates as examples
+  or obstructions for weak APS.
+- Develop a finite-state semantics for self-elimination logic, including hard
+  deletion, soft deletion, stable extensions, and deletion cycles.
+- Decide whether self-elimination belongs to APS, weak APS, or a separate
+  prelogic layer.
+
+## Model Classification
+
+- Classify 3- and 4-element APS/preAPS models satisfying selected axiom packages.
+- Compute $\lvert\mathrm{Fix}_{\boxtimes}(S)\rvert$ as a model invariant.
+- Build machine-checkable finite models under `code/models/`.

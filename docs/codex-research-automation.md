@@ -70,6 +70,31 @@ The loop should avoid inventing bibliographic facts. When it needs external
 sources, it should record the source gap and create a follow-up task instead of
 guessing.
 
+## Project Import Note Standard
+
+When importing ChatGPT Project material from shared links, Drive exports, PDFs,
+or relay files, do not leave only a short summary unless the source itself is
+unavailable. A research-facing Markdown note should preserve as much of the
+mathematical content as possible while clearly marking uncertainty.
+
+Use this structure when applicable:
+
+1. Source URL or file path, import date, and access status.
+2. Context: what question the Project discussion was answering.
+3. Definitions and notation introduced in the discussion.
+4. Main claims as propositions, lemmas, theorem schemas, or conjectures.
+5. Proofs or proof sketches, with exact hypotheses separated from informal
+   motivation.
+6. Examples, counterexamples, finite-model tests, or checker tasks.
+7. Relation to existing notes in `research/notes/`.
+8. Open problems and next actions.
+9. Missing files or inaccessible `sandbox:/mnt/data/...` artifacts, with the
+   Drive artifact-inbox route recorded.
+
+The goal is to turn Project conversations into durable mathematical notes, not
+only into an index. If a first pass must be brief, mark it as a stub and create
+a follow-up task to expand it.
+
 ## Publication Rule
 
 Research output is not complete until it has both a Markdown source and a PDF:

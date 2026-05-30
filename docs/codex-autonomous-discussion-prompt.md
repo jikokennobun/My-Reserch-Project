@@ -25,6 +25,12 @@ format. Update `research/ideas/research-questions.md`, `research/open_problems.m
 only when there is a concrete new question, conjecture, definition, or proof
 task. Add a short dated entry to `records/logs/research-log.md`.
 
+When importing or updating ChatGPT Project-derived notes, preserve the
+mathematical content in detail: definitions, notation, proposition/theorem
+statements, proof sketches, examples, counterexamples, and open problems. Do
+not leave only a high-level summary unless the source cannot be read; if the
+source is inaccessible, record that limitation explicitly.
+
 Create a concise Markdown publication summary for the pass under
 `artifacts/pdf/`, then publish it as PDF with:
 
