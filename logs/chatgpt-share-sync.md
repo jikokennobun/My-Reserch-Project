@@ -1,5 +1,29 @@
 ﻿# ChatGPT Share Sync Log
 
+## 2026-05-30T17:36:14
+
+| Status | Title | Note | Url |
+| --- | --- | --- | --- |
+| error | BS16 Cut Elimination as Fibered Residuated APS | notes/bs16-fiber-residuated-aps.md | https://chatgpt.com/share/6a0f9763-a68c-8323-ad6b-452b82ea8b3b |
+| error | MND4-preAPS and Fixed Point Obstruction | notes/mnd4-preaps-fixedpoint-obstruction.md | https://chatgpt.com/share/6a0fbc5a-a86c-8322-8ce7-1888af5f455e |
+| error | Analytic APS | notes/analytic-aps.md | https://chatgpt.com/share/6a0fbc70-69ac-8323-b5a8-7b32313ce6b6 |
+| error | Fixed Point Existence in Residuated Algebra | notes/residuated-fixedpoint-existence.md | https://chatgpt.com/share/6a0fbc80-8e2c-8324-b690-5676347231cf |
+| error | Completion and Fixed Points | notes/completion-and-fixed-points.md | https://chatgpt.com/share/6a0fbc8e-e630-8324-91df-73add1286869 |
+| error | Self-Existence Sentences | notes/self-existence-sentences.md | https://chatgpt.com/share/6a0fbc9d-be30-8324-9ae2-943bd3ed2b14 |
+| error | Residuated Algebra Domain Theory and Completion | notes/residuated-algebra-domain-completion.md | https://chatgpt.com/share/6a0cbab3-b174-83ab-8a89-db8a746eacda |
+| error | APS and Monad / Computational Effects | notes/aps-monad-computational-effects.md | https://chatgpt.com/share/6a05e7b4-21cc-83e9-bc3b-366beee708c7 |
+| error | Indexed APS / Fibred Algebra | notes/indexed-aps-fibred-algebra.md | https://chatgpt.com/share/6a091206-9c54-83e8-8c17-602c5572e247 |
+| error | APS from Arithmetic / Realization Kernel | notes/aps-arithmetic-realization-kernel.md | https://chatgpt.com/share/6a023ac5-ad64-83e8-93af-d2ba789ca554 |
+| error | APS and Domain Theory / Scott Continuity | notes/predicate-topology-fixed-points.md | https://chatgpt.com/share/69fbf42a-8de0-83e8-8cff-9b51f13a16c0 |
+| error | APS Cardinal Invariants / Fixed Point Spectrum | notes/aps-cardinal-invariants-fixed-points.md | https://chatgpt.com/share/6a0b7536-836c-83ab-ae90-5eb16748d05e |
+| error | G2-ZOO Topological Taming | notes/g2-zoo-topological-taming.md | https://chatgpt.com/share/6a0bc487-fc1c-83a5-80c3-fbac672889a4 |
+| error | G2/FG2 Hierarchy and n-FG2 | notes/g2-fg2-hierarchy.md | https://chatgpt.com/share/6a0a7f2e-eec4-83ec-adc2-7fadc3feb442 |
+| error | Local-FG2 Pullback and APS Zoo | notes/local-fg2-pullback-aps-zoo.md | https://chatgpt.com/share/6a0b9917-ef00-83a7-a14d-57f0788adab2 |
+| error | Self and Mutual Reference Hierarchy | notes/self-mutual-reference-hierarchy.md | https://chatgpt.com/share/69fcbd5f-d1c0-83e8-a682-187480ed5d1f |
+| error | Smullyan Lawvere Categorical Diagonalization | notes/smullyan-lawvere-categorical-diagonalization.md | https://chatgpt.com/share/6a06498e-c108-83e8-941c-75b1931bbc3a |
+| error | Generalized Proof Structures | notes/generalized-proof-structures.md | https://chatgpt.com/share/69feffe9-1da0-83e8-a4af-c6b6ecbc4765 |
+
+
 ## 2026-05-30T05:03:17
 
 | Status | Title | Note | Url |
@@ -680,6 +704,7 @@ Initial stable baseline after watchlist setup.
 | unchanged | 完備化と不動点 | notes/completion-and-fixed-points.md | https://chatgpt.com/share/6a0fbc8e-e630-8324-91df-73add1286869 |
 | unchanged | 自己存在文の作成方法 | notes/self-existence-sentences.md | https://chatgpt.com/share/6a0fbc9d-be30-8324-9ae2-943bd3ed2b14 |
 | unchanged | 剰余付き代数と完備化 | notes/residuated-algebra-domain-completion.md | https://chatgpt.com/share/6a0cbab3-b174-83ab-8a89-db8a746eacda |
+
 
 
 

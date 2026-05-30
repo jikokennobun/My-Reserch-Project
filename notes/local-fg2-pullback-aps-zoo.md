@@ -6,7 +6,7 @@ Imported from Research Project handoff: 2026-05-22
 
 ## Topic
 
-Local-FG2 pullback, \(M_{GJ}\), \(M_G\), and G2-independent principles.
+Local-FG2 pullback, $M_{GJ}$, $M_G$, and G2-independent principles.
 
 ## Working Summary
 
@@ -14,7 +14,7 @@ This likely studies local versions of FG2 and pullback constructions that compar
 
 ## Next Tasks
 
-- Extract definitions of \(M_{GJ}\), \(M_G\), and local-FG2.
+- Extract definitions of $M_{GJ}$, $M_G$, and local-FG2.
 - Identify pullback or model-comparison construction.
 - Add candidate finite structures to `models/`.
 

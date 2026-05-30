@@ -8,15 +8,15 @@ Imported: 2026-05-22
 
 The key condition for fixed points of definable or representable functions is not mere completeness. The essential structure is representable diagonalization through self-application:
 
-\[
+$$
 x\cdot x.
-\]
+$$
 
-For a function \(f\), one wants the diagonalized operation
+For a function $f$, one wants the diagonalized operation
 
-\[
+$$
 x\mapsto f(x\cdot x)
-\]
+$$
 
 to be representable inside the algebraic system.
 
@@ -30,27 +30,27 @@ This is the residuated-algebraic analogue of:
 
 Take a possibly noncommutative residuated ordered algebra:
 
-\[
+$$
 \mathcal A=(A,\le,\cdot,1,\backslash,/)
-\]
+$$
 
 with
 
-\[
+$$
 a\cdot b\le c
 \quad\Longleftrightarrow\quad
 b\le a\backslash c
 \quad\Longleftrightarrow\quad
 a\le c/b.
-\]
+$$
 
 The fixed point question is:
 
-Given a representable \(f:A\to A\), when does there exist \(p\) such that
+Given a representable $f:A\to A$, when does there exist $p$ such that
 
-\[
+$$
 p\equiv f(p)?
-\]
+$$
 
 The proposed answer is: when the internal language can represent the relevant substitution/self-application operation well enough to express its own diagonal.
 
@@ -58,9 +58,9 @@ The proposed answer is: when the internal language can represent the relevant su
 
 Beklemishev-Shamkanov style assumptions
 
-\[
+$$
 \exists p(p=_S\boxtimes p)
-\]
+$$
 
 are an APS instance of this general principle. The fixed point is not just an order-theoretic object; it is a representable self-reference object.
 
@@ -69,7 +69,7 @@ are an APS instance of this general principle. The fixed point is not just an or
 - Define a precise "representable map" notion for residuated APS.
 - Define the internal self-application/composition operation.
 - State a Lawvere-style fixed point theorem for a residuated preorder.
-- Check whether \(p=\boxtimes p\) requires \(\boxtimes\) to preserve representability.
+- Check whether $p=\boxtimes p$ requires $\boxtimes$ to preserve representability.
 - Compare this with completion-generated fixed points, which may exist externally but fail to be formula-definable.
 
 ## Related Notes

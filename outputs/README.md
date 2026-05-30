@@ -3,6 +3,9 @@
 Generated artifacts go here.
 
 - `pdf/`: compiled papers, handouts, notes, and exported PDFs
+- `pdf/discussion-summary-2026-05-30.pdf`: discussion summary covering the
+  Markdown math-display cleanup and the APS/G2-ZOO research state through
+  2026-05-30.
 - `claude-code/`: generated one-off handoff packets for Claude Code review
   passes.
 - `macneille-reflection-three-chain-antitone.json`: first checker report for
@@ -37,27 +40,27 @@ Generated artifacts go here.
 - `g2-zoo-bottom-nfg2-depth-3-residuated.json`: checker report for the
   full-residuated same-order expansion of `bottom-nfg2-depth-3`.
 - `residuated-u-absorbing-search-bottom-nfg2-depth-3.json`: complete
-  constrained search report finding a less top-collapsing \(U\)-absorbing
+  constrained search report finding a less top-collapsing $U$-absorbing
   full-residuated expansion of `bottom-nfg2-depth-3`.
 - `g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`: checker report for that
   less top-collapsing expansion.
 - `g2-zoo-bottom-nfg2-depth-4.json`: checker report for the next checked
   bottom-disciplined arbitrary-depth nFG2 witness, with pattern `FFFFTTTT`.
 - `residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json`: constructive
-  report verifying the truncated-exponent \(U\)-absorbing full-residuated
+  report verifying the truncated-exponent $U$-absorbing full-residuated
   expansion of `bottom-nfg2-depth-4`.
 - `g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`: checker report for
   that truncated-exponent same-order expansion.
 - `residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json`: bounded
-  orbit-table-varying search report finding a non-\(U\)-absorbing
+  orbit-table-varying search report finding a non-$U$-absorbing
   full-residuated same-order expansion of `bottom-nfg2-depth-4`; the positive
   witness is valid, but the bounded search is not exhaustive for minimality.
 - `g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`: checker report for that
-  non-\(U\)-absorbing depth-4 expansion.
+  non-$U$-absorbing depth-4 expansion.
 - `g2-zoo-bottom-nfg2-depth-5.json`: checker report for the next
   bottom-disciplined arbitrary-depth nFG2 witness, with pattern `FFFFFTTT`.
 - `residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-{3,4,5}.json`:
-  constructive reports verifying the front-shifted non-\(U\)-absorbing template
+  constructive reports verifying the front-shifted non-$U$-absorbing template
   at checked depths 3, 4, and 5.
 - `g2-zoo-bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing.json`:
   checker reports for those template expansions.
@@ -66,31 +69,31 @@ Generated artifacts go here.
   matches the generated left and right residuals at depths 3, 4, and 5.
 - `front-shifted-extension-presentation-check.json`: verifies that the
   front-shifted template is an ideal extension with
-  \(I=\{b,a_1,a_2\}\), and that collapsing \(I\) gives the shifted tail monoid
+  $I=\{b,a_1,a_2\}$, and that collapsing $I$ gives the shifted tail monoid
   at depths 3, 4, and 5.
 - `front-ideal-size-bound-check.json`: checks the generalized orthogonal
-  front-width schema at depths 3, 4, and 5; widths \(0,1,2\) are residuated,
-  while width \(3\) is the first same-order failure by non-principal residual
+  front-width schema at depths 3, 4, and 5; widths $0,1,2$ are residuated,
+  while width $3$ is the first same-order failure by non-principal residual
   fibers.
 - `front-width-residual-formula-check.json`: verifies the closed residual
-  formula for the orthogonal front-width schema at \(k=0,1,2\), with zero
+  formula for the orthogonal front-width schema at $k=0,1,2$, with zero
   mismatches across depths 3, 4, and 5.
 - `structural-rules-front-shifted-comparison.json`: compares exchange,
   contraction, strong weakening, and reflexive weakening/discarding across
-  top-absorbing, truncated, non-\(U\)-absorbing, front-shifted, and
+  top-absorbing, truncated, non-$U$-absorbing, front-shifted, and
   G2+FG2-without-FP residuated expansions.
 - `truncated-u-forcing-bottom-nfg2-depth-3.json`: analyzer report showing that,
   once the truncated-exponent orbit table is fixed on `bottom-nfg2-depth-3`,
-  monotonicity forces every \(U\)-product.
+  monotonicity forces every $U$-product.
 - `truncated-u-forcing-bottom-nfg2-depth-4.json`: the same forcing check for
   `bottom-nfg2-depth-4`.
 - `residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`: completed
   search report for a same-order full-residuated `bottom-nfg2-depth-3` tensor
-  that does not assume \(U\)-absorption and allows the orbit product table to
+  that does not assume $U$-absorption and allows the orbit product table to
   vary; residual-fiber pruning makes the search complete and finds a
-  non-\(U\)-absorbing candidate.
+  non-$U$-absorbing candidate.
 - `g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`: checker report for that
-  non-\(U\)-absorbing full-residuated expansion.
+  non-$U$-absorbing full-residuated expansion.
 - `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
   G2+FG2 without FP-synt witness.
 - `residuated-search-bottom-G2FG2-noFP.json`: unrestricted tensor search report

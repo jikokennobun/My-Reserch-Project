@@ -14,7 +14,7 @@ This note should explain how an APS can be extracted from arithmetical syntax or
 
 ## Next Tasks
 
-- Extract the proposed construction of \(L_S\), \(\le_S\), \(\Box\), and \(\boxtimes\).
+- Extract the proposed construction of $L_S$, $\le_S$, $\Box$, and $\boxtimes$.
 - Clarify what "intensional equivalence" means in this setting.
 - Relate realization kernels to definability and fixed point reflection.
 

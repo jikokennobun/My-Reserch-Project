@@ -43,6 +43,7 @@
 - Obsidian research vault: [references/obsidian-research-vault.md](references/obsidian-research-vault.md)
 - Obsidian research index: [notes/obsidian-research-index.md](notes/obsidian-research-index.md)
 - PDF outputs: [outputs/pdf/](outputs/pdf/)
+- Latest discussion PDF: [outputs/pdf/discussion-summary-2026-05-30.pdf](outputs/pdf/discussion-summary-2026-05-30.pdf)
 - Research log: [logs/research-log.md](logs/research-log.md)
 
 ## Open Questions

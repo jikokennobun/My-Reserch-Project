@@ -29,17 +29,17 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/new-bottom-nfg2-depth-witness.py](../scripts/new-bottom-nfg2-depth-witness.py).
 - Full-residuated expansion of the checked bottom-disciplined nFG2 witness:
   [examples/bottom-nfg2-depth-3-residuated.json](examples/bottom-nfg2-depth-3-residuated.json).
-- Less top-collapsing \(U\)-absorbing expansion of the same witness:
+- Less top-collapsing $U$-absorbing expansion of the same witness:
   [examples/bottom-nfg2-depth-3-u-absorbing-minU.json](examples/bottom-nfg2-depth-3-u-absorbing-minU.json).
-- Non-\(U\)-absorbing full-residuated expansion of the same witness:
+- Non-$U$-absorbing full-residuated expansion of the same witness:
   [examples/bottom-nfg2-depth-3-non-u-absorbing.json](examples/bottom-nfg2-depth-3-non-u-absorbing.json).
-- Front-shifted non-\(U\)-absorbing template expansions:
+- Front-shifted non-$U$-absorbing template expansions:
   [examples/bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json](examples/bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json),
   [examples/bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json](examples/bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json),
   [examples/bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json](examples/bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json).
-- Truncated-exponent \(U\)-absorbing expansion of the checked depth-4 witness:
+- Truncated-exponent $U$-absorbing expansion of the checked depth-4 witness:
   [examples/bottom-nfg2-depth-4-truncated-u-absorbing.json](examples/bottom-nfg2-depth-4-truncated-u-absorbing.json).
-- Non-\(U\)-absorbing full-residuated expansion of the checked depth-4 witness:
+- Non-$U$-absorbing full-residuated expansion of the checked depth-4 witness:
   [examples/bottom-nfg2-depth-4-non-u-absorbing.json](examples/bottom-nfg2-depth-4-non-u-absorbing.json).
 - Bottom-disciplined G2+FG2 without FP-synt witness:
   [examples/bottom-G2FG2-noFP.json](examples/bottom-G2FG2-noFP.json).
@@ -55,15 +55,15 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/search-residuated-commutative-zero.py](../scripts/search-residuated-commutative-zero.py).
 - Top-absorbing residuation builder/checker:
   [../scripts/build-top-absorbing-residuated-expansion.py](../scripts/build-top-absorbing-residuated-expansion.py).
-- \(U\)-absorbing constrained residuation search:
+- $U$-absorbing constrained residuation search:
   [../scripts/search-u-absorbing-residuated.py](../scripts/search-u-absorbing-residuated.py).
-- Truncated-exponent \(U\)-absorbing residuation builder/checker:
+- Truncated-exponent $U$-absorbing residuation builder/checker:
   [../scripts/build-truncated-u-absorbing-residuated.py](../scripts/build-truncated-u-absorbing-residuated.py).
-- Truncated-table \(U\)-absorption forcing analyzer:
+- Truncated-table $U$-absorption forcing analyzer:
   [../scripts/analyze-truncated-u-forcing.py](../scripts/analyze-truncated-u-forcing.py).
-- Non-\(U\)-absorbing same-order residuation search:
+- Non-$U$-absorbing same-order residuation search:
   [../scripts/search-non-u-absorbing-residuated.py](../scripts/search-non-u-absorbing-residuated.py).
-- Front-shifted non-\(U\)-absorbing residuation builder/checker:
+- Front-shifted non-$U$-absorbing residuation builder/checker:
   [../scripts/build-front-shifted-non-u-absorbing-residuated.py](../scripts/build-front-shifted-non-u-absorbing-residuated.py).
 - Front-shifted residual formula checker:
   [../scripts/check-front-shifted-residual-formula.py](../scripts/check-front-shifted-residual-formula.py).

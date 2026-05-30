@@ -26,7 +26,7 @@ This file indexes the ChatGPT shared conversations imported into the local resea
 
 These six conversations form one coherent research cluster:
 
-\[
+$$
 \text{APS/G2-ZOO}
 \quad+\quad
 \text{residuated algebra}
@@ -34,7 +34,7 @@ These six conversations form one coherent research cluster:
 \text{completion/fixed point theory}
 \quad+\quad
 \text{self-reference}.
-\]
+$$
 
 The most promising synthesis is to formulate a theory of APS where syntactic fixed points, completion-generated fixed points, and resource-sensitive contraction principles are separated and compared.
 

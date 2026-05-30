@@ -10,7 +10,7 @@ APS and MONAD / abstract provability monad.
 
 ## Working Summary
 
-Treat provability-like operations as modal or computational effects. The likely research target is to understand \(\Box\) and related APS structure through monads, Kleisli structure, or effectful proof transformations.
+Treat provability-like operations as modal or computational effects. The likely research target is to understand $\Box$ and related APS structure through monads, Kleisli structure, or effectful proof transformations.
 
 ## Next Tasks
 

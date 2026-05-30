@@ -19,9 +19,11 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 - [logs/claude-code-review.md](logs/claude-code-review.md): Claude Codeレビュー記録
 - [notes/obsidian-research-index.md](notes/obsidian-research-index.md): Obsidian研究ノート索引
 - [outputs/pdf/](outputs/pdf/): 生成・集約したPDF
+- [outputs/pdf/discussion-summary-2026-05-30.pdf](outputs/pdf/discussion-summary-2026-05-30.pdf): 議論要約PDF
 - [logs/research-log.md](logs/research-log.md): 作業ログ
 - [models/](models/): 有限APS/preAPSモデル
 - [scripts/collect-pdfs.ps1](scripts/collect-pdfs.ps1): ローカルPDF集約スクリプト
+- [scripts/normalize-markdown-math.ps1](scripts/normalize-markdown-math.ps1): Markdown数式区切り正規化スクリプト
 - [scripts/check-chatgpt-shares.ps1](scripts/check-chatgpt-shares.ps1): ChatGPT共有リンク変更検出スクリプト
 - [scripts/index-obsidian-research.ps1](scripts/index-obsidian-research.ps1): Obsidian研究ノート索引生成スクリプト
 - [scripts/new-claude-code-handoff.ps1](scripts/new-claude-code-handoff.ps1): Claude Codeハンドオフ生成スクリプト
@@ -38,6 +40,10 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\collect-pdfs.ps1
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\normalize-markdown-math.ps1
 ```
 
 ```powershell

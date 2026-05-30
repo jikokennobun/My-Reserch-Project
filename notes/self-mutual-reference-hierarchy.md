@@ -10,7 +10,7 @@ Fixed-point hierarchy, self-reference hierarchy, and mutual reference.
 
 ## Working Summary
 
-This extends single fixed points \(p=\boxtimes p\) to systems of mutual reference, possibly classifying self-reference strength by arity, graph shape, or definability conditions.
+This extends single fixed points $p=\boxtimes p$ to systems of mutual reference, possibly classifying self-reference strength by arity, graph shape, or definability conditions.
 
 ## Next Tasks
 

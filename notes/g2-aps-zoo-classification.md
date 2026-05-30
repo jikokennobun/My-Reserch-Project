@@ -17,41 +17,41 @@ with certified properties.
 
 | Code | Condition | Meaning |
 |------|-----------|---------|
-| `FP-none` | No \(p\in L\) with \(p=\boxtimes p\) | No syntactic fixed point |
-| `FP-synt` | \(\exists p(p=\boxtimes p)\) in \(L\) | Primitive Jeroslow/refutability FP |
-| `FP-godel` | \(\exists p(p=\neg\Box p)\) in \(L\) | Gödel-style FP (requires \(\neg\Box\) defined) |
-| `FP-both` | Both `FP-synt` and `FP-godel` | If \(\boxtimes=\neg\Box\) these may coincide |
+| `FP-none` | No $p\in L$ with $p=\boxtimes p$ | No syntactic fixed point |
+| `FP-synt` | $\exists p(p=\boxtimes p)$ in $L$ | Primitive Jeroslow/refutability FP |
+| `FP-godel` | $\exists p(p=\neg\Box p)$ in $L$ | Gödel-style FP (requires $\neg\Box$ defined) |
+| `FP-both` | Both `FP-synt` and `FP-godel` | If $\boxtimes=\neg\Box$ these may coincide |
 
 **Separation goal**: find models in class `FP-synt` \ `FP-godel` and `FP-godel` \ `FP-synt`.
-Result from `mnd4-preaps-fixedpoint-obstruction.md`: classical \(MND4\)-preAPS
-with `FP-godel` collapses (\(T\leq\bot\)); `FP-synt` with primitive \(\boxtimes\)
+Result from `mnd4-preaps-fixedpoint-obstruction.md`: classical $MND4$-preAPS
+with `FP-godel` collapses ($T\leq\bot$); `FP-synt` with primitive $\boxtimes$
 does not.
 
 ### I.2 G2/FG2 Status
 
 | Code | Condition |
 |------|-----------|
-| `G2` | \(\boxtimes T\leq\bot\Rightarrow T\leq\bot\) holds |
-| `FG2` | \(\boxtimes\boxtimes T\leq\boxtimes T\) holds |
-| `nFG2(k)` | \(\boxtimes^{k+1}T\leq\boxtimes^k T\) holds (generalization; \(k=1\) is FG2) |
+| `G2` | $\boxtimes T\leq\bot\Rightarrow T\leq\bot$ holds |
+| `FG2` | $\boxtimes\boxtimes T\leq\boxtimes T$ holds |
+| `nFG2(k)` | $\boxtimes^{k+1}T\leq\boxtimes^k T$ holds (generalization; $k=1$ is FG2) |
 | `none` | Neither G2 nor FG2 |
 
 **Certified independence results** (from `notes/g2-fg2-hierarchy.md`):
 
-\[
+$$
 \mathrm{FG2}\not\Rightarrow\mathrm{G2}\quad(\text{M-010}),
 \qquad
 \mathrm{G2}\not\Rightarrow\mathrm{FG2}\quad(\text{M-100}),
-\]
-\[
+$$
+$$
 \mathrm{G2}+\mathrm{FP\text{-}synt}\not\Rightarrow\mathrm{FG2}\quad(\text{M-101}),
 \qquad
 \mathrm{G2}+\mathrm{FG2}\not\Rightarrow\mathrm{FP\text{-}synt}\quad(\text{M-110}).
-\]
+$$
 
-**Certified n-FG2 separation**: M-010 shows that nFG2(\(1\)) does not imply
-nFG2(\(2\)); more generally its TFTFTFTF... pattern refutes odd-step
-implications nFG2(\(k\)) \(\Rightarrow\) nFG2(\(k+1\)). Even-step and
+**Certified n-FG2 separation**: M-010 shows that nFG2($1$) does not imply
+nFG2($2$); more generally its TFTFTFTF... pattern refutes odd-step
+implications nFG2($k$) $\Rightarrow$ nFG2($k+1$). Even-step and
 arbitrary-depth strictness remain finite-model search problems. See
 `notes/g2-fg2-hierarchy.md` for the corrected status.
 
@@ -59,49 +59,49 @@ arbitrary-depth strictness remain finite-model search problems. See
 
 | Code | Condition |
 |------|-----------|
-| `CFP-none` | No completion fixed point in \(\widehat L\) |
-| `CFP-reflected` | Some completion FP \(q=i(p)\) with \(\boxtimes p=p\) |
-| `CFP-principal-unref` | Some completion FP \(q=i(a)\) with \(\boxtimes a\neq a\) |
+| `CFP-none` | No completion fixed point in $\widehat L$ |
+| `CFP-reflected` | Some completion FP $q=i(p)$ with $\boxtimes p=p$ |
+| `CFP-principal-unref` | Some completion FP $q=i(a)$ with $\boxtimes a\neq a$ |
 | `CFP-nonprincipal` | Some non-principal completion FP |
 
 Current verified instances:
 
-- `three-chain-antitone`: `FP-synt` at \(m\), `CFP-principal-unref` at \(i(t)\).
+- `three-chain-antitone`: `FP-synt` at $m$, `CFP-principal-unref` at $i(t)$.
   G2: false. FG2: false.
 - `three-element-nolattice-nosynt`: `FP-none`, `CFP-nonprincipal` at
-  \(\{0,a,b\}\). G2: false. FG2: false.
+  $\{0,a,b\}$. G2: false. FG2: false.
 
 ---
 
-## Axis II — Algebra Axis: What is the order/algebraic structure of \(L\)?
+## Axis II — Algebra Axis: What is the order/algebraic structure of $L$?
 
 ### II.1 Order-Theoretic Class
 
 | Code | Condition |
 |------|-----------|
-| `chain` | \(L\) is a total order |
-| `lattice` | \(L\) is a lattice (all finite binary meets/joins exist) |
-| `dist-lattice` | \(L\) is a distributive lattice |
-| `heyting` | \(L\) is a Heyting algebra |
-| `boolean` | \(L\) is a Boolean algebra |
-| `non-lattice` | \(L\) is a poset without all binary meets/joins |
+| `chain` | $L$ is a total order |
+| `lattice` | $L$ is a lattice (all finite binary meets/joins exist) |
+| `dist-lattice` | $L$ is a distributive lattice |
+| `heyting` | $L$ is a Heyting algebra |
+| `boolean` | $L$ is a Boolean algebra |
+| `non-lattice` | $L$ is a poset without all binary meets/joins |
 
-**Key observation**: if \(L\) is a lattice then \(\widehat L=L\) and all MacNeille
+**Key observation**: if $L$ is a lattice then $\widehat L=L$ and all MacNeille
 cuts are principal. Non-principal completion fixed points require `non-lattice`.
 
-### II.2 \(\boxtimes\)-Properties
+### II.2 $\boxtimes$-Properties
 
 | Code | Condition |
 |------|-----------|
-| `bt-antitone` | \(\boxtimes\) is antitone |
-| `bt-involutive` | \(\boxtimes^2=\mathrm{id}\) |
-| `bt-bijective` | \(\boxtimes\) is a bijection |
-| `bt-continuous` | \(\boxtimes\) is Scott/order-continuous |
-| `bt-prim` | \(\boxtimes\) is primitive (not definitionally \(\neg\Box\)) |
-| `bt-def` | \(\boxtimes x:=\neg\Box x\) (definitional) |
+| `bt-antitone` | $\boxtimes$ is antitone |
+| `bt-involutive` | $\boxtimes^2=\mathrm{id}$ |
+| `bt-bijective` | $\boxtimes$ is a bijection |
+| `bt-continuous` | $\boxtimes$ is Scott/order-continuous |
+| `bt-prim` | $\boxtimes$ is primitive (not definitionally $\neg\Box$) |
+| `bt-def` | $\boxtimes x:=\neg\Box x$ (definitional) |
 
-For `bt-bijective` models on a lattice: the full cut \(L\) is always a trivial
-completion FP (its \(\boxtimes\)-image is the same set), giving `CFP-principal-unref`
+For `bt-bijective` models on a lattice: the full cut $L$ is always a trivial
+completion FP (its $\boxtimes$-image is the same set), giving `CFP-principal-unref`
 at the top element. This is the `three-chain-antitone` situation and is
 mathematically uninteresting as a reflection test.
 
@@ -110,53 +110,53 @@ mathematically uninteresting as a reflection test.
 | Code | Condition |
 |------|-----------|
 | `res-none` | No residuals |
-| `res-full` | Full residuation \((\otimes, \backslash, /)\) |
+| `res-full` | Full residuation $(\otimes, \backslash, /)$ |
 | `res-partial` | Partial or one-sided residuation |
 
 Current search status: `M4-G2FG2FP` is certified `res-none` on its original
 carrier and order. The exhaustive report
 `outputs/residuated-search-M4-G2FG2FP.json` finds no full residuated monoid
 expansion for any choice of unit. The same carrier becomes `res-full` after the
-single order repair \(\bot\le c\), recorded as
+single order repair $\bot\le c$, recorded as
 `M4-G2FG2FP-order-plus-bot-c-residuated`.
 
 Interpretation status: the repair is the missing instance of bottom discipline
-\(\forall x(\bot\le x)\) in the original M4 order. It makes \(\bot\) a genuine
+$\forall x(\bot\le x)$ in the original M4 order. It makes $\bot$ a genuine
 least element and converts the order into the four-element Boolean lattice, so
 the next classification question is which G2-ZOO witnesses survive this
 bottom-discipline filter.
 
 The finite filter report
 `outputs/bottom-discipline-filter-g2-zoo.json` checks this directly. Under pure
-order enforcement, while keeping \(\boxtimes\) fixed:
+order enforcement, while keeping $\boxtimes$ fixed:
 
 - antitonicity survives for `M-000`, `M-010`, `M-111`, `M4-G2FG2FP`, and the
   already repaired `M4-G2FG2FP-order-plus-bot-c-residuated`;
 - only `M-111` and the M4 pair keep the full recorded
   G2/FG2/FP/nFG2 profile unchanged;
 - `M-010` still witnesses FG2 without G2, but bottom discipline turns its
-  two-cycle into an equivalence \(0\sim\bot\), adding FP-synt and all checked
+  two-cycle into an equivalence $0\sim\bot$, adding FP-synt and all checked
   nFG2 instances;
 - `M-001`, `M-011`, `M-100`, `M-101`, `M-110`, and `nfg2-depth-3` fail the
-  pure-order repair because \(\boxtimes\) ceases to be antitone.
+  pure-order repair because $\boxtimes$ ceases to be antitone.
 - `bottom-nfg2-depth-3` is a fresh bottom-disciplined replacement witness:
   G2 true, FG2 false, FP-synt true, and nFG2 pattern `FFFTTTTT`.
 - `bottom-nfg2-depth-4` extends the same bottom-disciplined family one more
   checked step: G2 true, FG2 false, FP-synt true, and nFG2 pattern `FFFFTTTT`.
 - `bottom-nfg2-depth-4-truncated-u-absorbing` preserves that profile while
   adding a same-order full-residuated tensor from the truncated-exponent
-  \(U\)-absorbing template.
+  $U$-absorbing template.
 - `bottom-nfg2-depth-4-non-u-absorbing` preserves that profile while adding a
   same-order full-residuated tensor found by the orbit-table-varying search;
-  it is not \(U\)-absorbing because \(U\otimes a_1=a_1\) and
-  \(U\otimes a_2=a_2\).
+  it is not $U$-absorbing because $U\otimes a_1=a_1$ and
+  $U\otimes a_2=a_2$.
 - `bottom-nfg2-depth-5` extends the same bottom-disciplined family one more
   checked step: G2 true, FG2 false, FP-synt true, and nFG2 pattern
   `FFFFFTTT`.
-- The front-shifted non-\(U\)-absorbing template preserves the corresponding
-  depth-3, depth-4, and depth-5 profiles while making \(U\otimes a_1=a_1\) and
-  \(U\otimes a_2=a_2\). At depth 4 it coincides with the bounded-search
-  non-\(U\)-absorbing witness.
+- The front-shifted non-$U$-absorbing template preserves the corresponding
+  depth-3, depth-4, and depth-5 profiles while making $U\otimes a_1=a_1$ and
+  $U\otimes a_2=a_2$. At depth 4 it coincides with the bounded-search
+  non-$U$-absorbing witness.
 - `bottom-G2FG2-noFP` is a bottom-disciplined replacement for the remaining
   G2+FG2 without FP-synt separation.
 
@@ -164,50 +164,50 @@ order enforcement, while keeping \(\boxtimes\) fixed:
 
 ## Axis III — Proof-Theory Axis: What structural rules and stability properties hold?
 
-### III.1 Structural Rules on \(L\)
+### III.1 Structural Rules on $L$
 
 | Code | Condition |
 |------|-----------|
-| `W` | Weakening: \(a\leq b\Rightarrow a\otimes c\leq b\) |
-| `C` | Contraction: \(a\otimes a\leq a\) |
-| `E` | Exchange: \(a\otimes b=b\otimes a\) |
+| `W` | Weakening: $a\leq b\Rightarrow a\otimes c\leq b$ |
+| `C` | Contraction: $a\otimes a\leq a$ |
+| `E` | Exchange: $a\otimes b=b\otimes a$ |
 | `full-struct` | All of W, C, E (lattice-ordered case) |
 
 The comparison report
 `outputs/structural-rules-front-shifted-comparison.json` checks these rules on
 the current residuated witnesses. All eight checked tensors satisfy exchange.
-None satisfies the strong weakening rule \(a\le b\Rightarrow a\otimes c\le b\)
-or its reflexive discarding instance \(a\otimes c\le a\); the failures already
-appear for \(T\otimes c=c\) when \(c\not\le T\). Global contraction holds only
-for `bottom-G2FG2-noFP-residuated`. In the front-shifted \(B_N\) template,
-contraction is deliberately localized: \(a_1^2=a_1\) and \(a_2^2=a_2\), while
+None satisfies the strong weakening rule $a\le b\Rightarrow a\otimes c\le b$
+or its reflexive discarding instance $a\otimes c\le a$; the failures already
+appear for $T\otimes c=c$ when $c\not\le T$. Global contraction holds only
+for `bottom-G2FG2-noFP-residuated`. In the front-shifted $B_N$ template,
+contraction is deliberately localized: $a_1^2=a_1$ and $a_2^2=a_2$, while
 the shifted tail provides the contraction failures.
 
 The front-shifted template has a precise ideal-extension presentation. The
-front \(I=\{b,a_1,a_2\}\) is a downward closed two-sided tensor ideal, with
-\(a_1,a_2\) forming an orthogonal idempotent zero-band. Collapsing \(I\) to
-\(b\) yields the shifted truncated tail monoid on
-\(\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}\). The report
+front $I=\{b,a_1,a_2\}$ is a downward closed two-sided tensor ideal, with
+$a_1,a_2$ forming an orthogonal idempotent zero-band. Collapsing $I$ to
+$b$ yields the shifted truncated tail monoid on
+$\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}$. The report
 `outputs/front-shifted-extension-presentation-check.json` verifies this at
 depths 3, 4, and 5.
 
 The follow-up report `outputs/front-ideal-size-bound-check.json` tests the
-same-order orthogonal-front schema with front widths \(k=0,1,\ldots\). In the
-checked depths 3, 4, and 5, widths \(0,1,2\) are residuated and width \(3\) is
+same-order orthogonal-front schema with front widths $k=0,1,\ldots$. In the
+checked depths 3, 4, and 5, widths $0,1,2$ are residuated and width $3$ is
 the first failure. The failure is caused by non-principal residual fibers:
-with three front atoms, \(p\backslash b\) has two incomparable maximal
-candidates in \(F_k\setminus\{p\}\).
+with three front atoms, $p\backslash b$ has two incomparable maximal
+candidates in $F_k\setminus\{p\}$.
 
 The residual table for the positive widths is now checked by
 `outputs/front-width-residual-formula-check.json`. It verifies the uniform
-closed formula for \(k=0,1,2\) against generated residuals at depths 3, 4, and
+closed formula for $k=0,1,2$ against generated residuals at depths 3, 4, and
 5, with zero mismatches.
 
 ### III.2 Completion Stability
 
 | Code | Condition |
 |------|-----------|
-| `stab-G2` | G2 holds in \(\widehat L\) if it holds in \(L\) |
+| `stab-G2` | G2 holds in $\widehat L$ if it holds in $L$ |
 | `stab-FG2` | FG2 preserved under MacNeille completion |
 | `stab-A1..4` | APS axioms A1-A4 preserved under MacNeille completion |
 | `unstable` | Some axiom fails under completion |
@@ -227,21 +227,21 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 
 ### G2-ZOO separating witnesses (3-element preAPS)
 
-| Model | \(|L|\) | G2 | FG2 | FP-synt | nFG2 pattern | CFP class |
+| Model | $\lvert L\rvert$ | G2 | FG2 | FP-synt | nFG2 pattern | CFP class |
 |-------|---------|----|----|---------|-------------|-----------|
 | M-000 | 3 | F | F | F | FFFFFFFF | nonprincipal-without-syntactic |
-| M-001 | 3 | F | F | T | FFFFFFFF | mixed (reflected at \(i(c)\) + nonprincipal) |
-| M-010 | 3 | F | T | F | TFTFTFTF | mixed (princ-unref at \(i(\bot)\) + nonprincipal) |
-| M-011 | 3 | F | T | T | TTTTTTTT | mixed (reflected at \(i(\bot)\) + nonprincipal) |
+| M-001 | 3 | F | F | T | FFFFFFFF | mixed (reflected at $i(c)$ + nonprincipal) |
+| M-010 | 3 | F | T | F | TFTFTFTF | mixed (princ-unref at $i(\bot)$ + nonprincipal) |
+| M-011 | 3 | F | T | T | TTTTTTTT | mixed (reflected at $i(\bot)$ + nonprincipal) |
 | M-100 | 3 | T | F | F | FFFFFFFF | nonprincipal-without-syntactic |
-| M-101 | 3 | T | F | T | FFFFFFFF | mixed (reflected at \(i(\bot)\) + nonprincipal) |
-| M-110 | 3 | T | T | F | TFTFTFTF | mixed (princ-unref at \(i(c)\) + nonprincipal) |
-| M-111 | 3 | T | T | T | TTTTTTTT | mixed (reflected at \(i(T)\)) |
+| M-101 | 3 | T | F | T | FFFFFFFF | mixed (reflected at $i(\bot)$ + nonprincipal) |
+| M-110 | 3 | T | T | F | TFTFTFTF | mixed (princ-unref at $i(c)$ + nonprincipal) |
+| M-111 | 3 | T | T | T | TTTTTTTT | mixed (reflected at $i(T)$) |
 | M4-G2FG2FP | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point; no same-order full residuation |
-| M4-G2FG2FP-order-plus-bot-c-residuated | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point; `res-full` with unit \(p\) |
+| M4-G2FG2FP-order-plus-bot-c-residuated | 4 | T | T | T | TTTTTTTT | no-completion-fixed-point; `res-full` with unit $p$ |
 | nfg2-depth-3 | 6 | T | F | T | FFFTTTTT | mixed (principal + nonprincipal) |
 | bottom-nfg2-depth-3 | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined |
-| bottom-nfg2-depth-3-residuated | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
+| bottom-nfg2-depth-3-residuated | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full` with unit $T$ |
 | bottom-nfg2-depth-3-u-absorbing-minU | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; 7 U-products |
 | bottom-nfg2-depth-3-non-u-absorbing | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; not U-absorbing |
 | bottom-nfg2-depth-3-front-shifted-non-u-absorbing | 8 | T | F | T | FFFTTTTT | principal-unreflected; bottom-disciplined; `res-full`; front-shifted |
@@ -252,7 +252,7 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | bottom-nfg2-depth-5 | 10 | T | F | T | FFFFFTTT | principal-unreflected; bottom-disciplined |
 | bottom-nfg2-depth-5-front-shifted-non-u-absorbing | 10 | T | F | T | FFFFFTTT | principal-unreflected; bottom-disciplined; `res-full`; front-shifted |
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
-| bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit \(T\) |
+| bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit $T$ |
 
 All 8 witnesses are in `models/examples/M-{000..111}.json`.
 The non-degenerate 4-element witness is in
@@ -260,21 +260,21 @@ The non-degenerate 4-element witness is in
 `outputs/g2-zoo-M4-G2FG2FP.json`.
 The arbitrary-depth nFG2 generator is
 `scripts/new-nfg2-depth-witness.ps1`; `models/examples/nfg2-depth-3.json`
-certifies the first-true depth \(4\) pattern.
+certifies the first-true depth $4$ pattern.
 The bottom-disciplined arbitrary-depth generator is
 `scripts/new-bottom-nfg2-depth-witness.py`; `models/examples/bottom-nfg2-depth-3.json`
-certifies the same first-true depth \(4\) pattern while satisfying
-\(\forall x(\bot\le x)\).
+certifies the same first-true depth $4$ pattern while satisfying
+$\forall x(\bot\le x)$.
 Its top-absorbing same-order full-residuated expansion is
 `models/examples/bottom-nfg2-depth-3-residuated.json`, with construction report
 `outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` and checker
 report `outputs/g2-zoo-bottom-nfg2-depth-3-residuated.json`.
-A less top-collapsing \(U\)-absorbing expansion is
+A less top-collapsing $U$-absorbing expansion is
 `models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json`; the complete
 constrained search report is
 `outputs/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
 checker report is `outputs/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`.
-An orbit-table-varying expansion that avoids \(U\)-absorption is
+An orbit-table-varying expansion that avoids $U$-absorption is
 `models/examples/bottom-nfg2-depth-3-non-u-absorbing.json`; the complete search
 report is
 `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
@@ -283,18 +283,18 @@ checker report is
 The next checked depth instance is
 `models/examples/bottom-nfg2-depth-4.json`, with checker report
 `outputs/g2-zoo-bottom-nfg2-depth-4.json`. Its truncated-exponent
-\(U\)-absorbing same-order full-residuated expansion is
+$U$-absorbing same-order full-residuated expansion is
 `models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json`, with
 construction report
 `outputs/residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json` and checker
 report
 `outputs/g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`.
-Its non-\(U\)-absorbing same-order full-residuated expansion is
+Its non-$U$-absorbing same-order full-residuated expansion is
 `models/examples/bottom-nfg2-depth-4-non-u-absorbing.json`, found by the bounded
 orbit-table-varying search report
 `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` and
 checked in `outputs/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`.
-The front-shifted non-\(U\)-absorbing template is implemented by
+The front-shifted non-$U$-absorbing template is implemented by
 `scripts/build-front-shifted-non-u-absorbing-residuated.py`; checked expansions
 at depths 3, 4, and 5 are saved as
 `bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing`, with construction
@@ -308,7 +308,7 @@ The ideal-extension presentation is checked by
 The orthogonal front-width bound is checked by
 `scripts/check-front-ideal-size-bound.py` and
 `outputs/front-ideal-size-bound-check.json`.
-The corresponding closed residual formula for widths \(0,1,2\) is checked by
+The corresponding closed residual formula for widths $0,1,2$ is checked by
 `scripts/check-front-width-residual-formula.py` and
 `outputs/front-width-residual-formula-check.json`.
 The depth-5 base witness is `models/examples/bottom-nfg2-depth-5.json`, checked
@@ -323,10 +323,10 @@ report `outputs/g2-zoo-bottom-G2FG2-noFP-residuated.json`.
 
 ### MacNeille reflection witnesses
 
-| Model | \(|L|\) | Order | FP | G2 | FG2 | CFP | Extension |
+| Model | $\lvert L\rvert$ | Order | FP | G2 | FG2 | CFP | Extension |
 |-------|---------|-------|----|----|-----|-----|-----------|
-| `three-chain-antitone` | 3 | chain (lattice) | `FP-synt` (\(m\)) | false | false | `CFP-principal-unref` (\(i(t)\)) | correct L^op |
-| `three-element-nolattice-nosynt` | 3 | \(\{0<a,b\}\) (non-lattice) | `FP-none` | false | false | `CFP-nonprincipal` (\(\{0,a,b\}\)) | correct L^op |
+| `three-chain-antitone` | 3 | chain (lattice) | `FP-synt` ($m$) | false | false | `CFP-principal-unref` ($i(t)$) | correct L^op |
+| `three-element-nolattice-nosynt` | 3 | $\{0<a,b\}$ (non-lattice) | `FP-none` | false | false | `CFP-nonprincipal` ($\{0,a,b\}$) | correct L^op |
 
 ---
 
@@ -337,14 +337,14 @@ The following separation problems should each be attacked by finite model search
 1. **FG2 without G2**: find a model with `FG2` and not `G2`.
 2. **G2 without FG2**: find a model with `G2` and not `FG2`. (May be easier.)
 3. **FP-synt without CFP-reflected**: `three-chain-antitone` already provides
-   this — the syntactic FP at \(m\) does not lift to the completion.
+   this — the syntactic FP at $m$ does not lift to the completion.
 4. **CFP-reflected (actual reflection)**: find a model where a completion FP is
    genuinely reflected back to a syntactic FP.
 5. **FP-none with CFP-none**: find a model with no FP at any level.
 6. **G2 with FP-synt**: the core APS program — find a non-trivial model where
    both G2 holds and a primitive refutability FP exists.
 7. **MND4 + FP-synt without collapse**: per
-   `mnd4-preaps-fixedpoint-obstruction.md`, primitive \(\boxtimes\)-FP with MND4
+   `mnd4-preaps-fixedpoint-obstruction.md`, primitive $\boxtimes$-FP with MND4
    need not collapse; construct an explicit model.
 
 ---
@@ -368,10 +368,10 @@ The following separation problems should each be attacked by finite model search
 
 1. Add `\(n\)-FG2` definition to `definitions.md` and populate column I.2 in the
    model registry.
-2. Extract precise definitions of \(M_{GJ}\) and \(M_G\) from
+2. Extract precise definitions of $M_{GJ}$ and $M_G$ from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
 3. Test non-orthogonal front ideals or mild front-order refinements as possible
-   ways around the \(k\ge3\) principal-fiber obstruction.
+   ways around the $k\ge3$ principal-fiber obstruction.
 4. Identify a CGT reference for APS axiom stability (source gap in Axis III.2).
 5. Connect `analytic-aps.md` (Banach/Kleene FP for antitone maps via bilattice)
    to the `CFP-nonprincipal` case: is the non-principal completion FP an analytic

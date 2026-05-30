@@ -1,7 +1,27 @@
 # Research Log
 
+## 2026-05-30 (Pass 33 — cyclic-group front-ideal escape)
+
+- Autonomous discussion pass 33: analyzed two escape routes from the $k\ge3$
+  orthogonal-front principal-fiber obstruction. Route A (cyclic group of order 3
+  on $F_3$) succeeds: non-zero cross-products remove front elements from the
+  $p\backslash b$ fiber, giving a principal residual at $b$. Route B
+  (adding a front join $a_i\le a_j$) is obstructed: antitonicity of
+  $\boxtimes$ forces a cascading chain of reverse orbit relations that
+  collapses adjacent orbit elements. Next target: determine the maximum group
+  order compatible with the $B_N$ schema (Klein four-group and
+  $\mathbb Z/4\mathbb Z$ are the immediate candidates).
+- Updated `notes/g2-fg2-hierarchy.md`, `open_problems.md`, and
+  `logs/autonomous-discussion.md` with Pass 33 analysis.
+
 ## 2026-05-30
 
+- Maintenance: normalized Markdown math delimiters from LaTeX-style
+  `\(...\)`/`\[...\]` to Markdown-friendly `$...$`/`$$...$$` across repository
+  notes, added `scripts/normalize-markdown-math.ps1`, and stored the discussion
+  summary PDF at `outputs/pdf/discussion-summary-2026-05-30.pdf`.
+- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T17:36:14+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
+- Relay sync: scanned the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude, including `Paper/Monograph`) plus reference-folder top level at `2026-05-30T17:38:10+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T05:03:17+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: queried the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-30T05:03:58+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
 
@@ -16,12 +36,12 @@
 ## 2026-05-28
 
 - Autonomous discussion pass 22: proved the truncated-exponent
-  \(U\)-absorbing tensor template uniformly for the bottom-disciplined \(B_N\)
+  $U$-absorbing tensor template uniformly for the bottom-disciplined $B_N$
   family, including the closed principal residual table; the next algebraic
-  target is whether \(U\)-absorption itself can be weakened.
-- Autonomous discussion pass 23: tested weakening \(U\)-absorption while
+  target is whether $U$-absorption itself can be weakened.
+- Autonomous discussion pass 23: tested weakening $U$-absorption while
   holding the truncated-exponent orbit table fixed; B3 and B4 reports show
-  monotonicity already forces every \(U\)-product, so any non-\(U\)-absorbing
+  monotonicity already forces every $U$-product, so any non-$U$-absorbing
   search must vary the orbit product table itself.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T01:03:13+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: listed the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T01:04:12+09:00`; no newly relevant items newer than `2026-05-22` were detected.
@@ -32,38 +52,38 @@
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T23:35:01+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed again (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T23:36:07+09:00`; no newly relevant items newer than `2026-05-21` were detected.
 - Autonomous discussion pass 24: started the orbit-table-varying search for a
-  non-\(U\)-absorbing same-order full-residuated tensor on
+  non-$U$-absorbing same-order full-residuated tensor on
   `bottom-nfg2-depth-3`; the bounded run checked 382 complete assignments in
   1000 nodes with no candidate, so the next target is residual-fiber pruning.
 - Autonomous discussion pass 25: added residual-fiber pruning and completed the
-  `bottom-nfg2-depth-3` non-\(U\)-absorbing search; found a full-residuated
-  same-order expansion with \(U\otimes a_4=a_4\), \(U\otimes s=s\), and the
+  `bottom-nfg2-depth-3` non-$U$-absorbing search; found a full-residuated
+  same-order expansion with $U\otimes a_4=a_4$, $U\otimes s=s$, and the
   original `FFFTTTTT` profile.
 - Autonomous discussion pass 26: ran the orbit-table-varying search on
   `bottom-nfg2-depth-4`; a bounded positive report found a same-order
-  full-residuated non-\(U\)-absorbing expansion with \(U\otimes a_1=a_1\),
-  \(U\otimes a_2=a_2\), preserving the original `FFFFTTTT` profile.
+  full-residuated non-$U$-absorbing expansion with $U\otimes a_1=a_1$,
+  $U\otimes a_2=a_2$, preserving the original `FFFFTTTT` profile.
 - Autonomous discussion pass 27: extracted a front-shifted
-  non-\(U\)-absorbing \(B_N\) template, implemented a builder/checker, verified
+  non-$U$-absorbing $B_N$ template, implemented a builder/checker, verified
   it at depths 3, 4, and 5, and generated a new checked depth-5
   full-residuated witness with profile `FFFFFTTT`.
 - Autonomous discussion pass 28: derived the closed residual table for the
-  front-shifted non-\(U\)-absorbing \(B_N\) template and added a formula checker
+  front-shifted non-$U$-absorbing $B_N$ template and added a formula checker
   verifying zero mismatches against generated left/right residuals at depths
   3, 4, and 5.
 - Autonomous discussion pass 29: added a structural-rule analyzer and compared
   current residuated witnesses; all checked tensors satisfy exchange, none
   satisfy strong weakening/discarding, and the front-shifted template localizes
-  contraction to \(a_1,a_2\) while the tail remains noncontractive.
+  contraction to $a_1,a_2$ while the tail remains noncontractive.
 - Autonomous discussion pass 30: presented the front-shifted template as a
-  Rees-style ideal extension; \(I=\{b,a_1,a_2\}\) is a two-sided tensor ideal,
-  and collapsing \(I\) yields the shifted tail monoid at checked depths 3, 4,
+  Rees-style ideal extension; $I=\{b,a_1,a_2\}$ is a two-sided tensor ideal,
+  and collapsing $I$ yields the shifted tail monoid at checked depths 3, 4,
   and 5.
 - Autonomous discussion pass 31: checked the orthogonal front-width schema;
-  depths 3, 4, and 5 admit front widths \(0,1,2\), while width \(3\) first
-  fails by non-principal residual fibers over \(p\backslash b\).
+  depths 3, 4, and 5 admit front widths $0,1,2$, while width $3$ first
+  fails by non-principal residual fibers over $p\backslash b$.
 - Autonomous discussion pass 32: added a closed residual formula checker for
-  orthogonal front widths \(0,1,2\); depths 3, 4, and 5 have zero mismatches,
+  orthogonal front widths $0,1,2$; depths 3, 4, and 5 have zero mismatches,
   completing the current same-order front-width theorem candidate.
 
 ## 2026-05-27
@@ -73,44 +93,44 @@
   residuated monoid expansion exists for any unit choice, so the next target is
   a modified or expanded G2+FG2+FP-reachable witness.
 - Autonomous discussion pass 12: found a smallest same-carrier order repair of
-  `M4-G2FG2FP`; adding \(\bot\le c\) yields a full-residuated non-collapsed
-  G2+FG2+FP-reachable witness with unit \(p\), with search and checker reports
+  `M4-G2FG2FP`; adding $\bot\le c$ yields a full-residuated non-collapsed
+  G2+FG2+FP-reachable witness with unit $p$, with search and checker reports
   saved under `outputs/`.
-- Autonomous discussion pass 13: interpreted the \(\bot\le c\) repair as the
-  missing bottom-discipline instance \(\forall x(\bot\le x)\), i.e. ex-falso
-  weakening for the \(c\)-branch, and opened the finite-model test of which
-  G2-ZOO and \(D_N\) separations survive that discipline.
+- Autonomous discussion pass 13: interpreted the $\bot\le c$ repair as the
+  missing bottom-discipline instance $\forall x(\bot\le x)$, i.e. ex-falso
+  weakening for the $c$-branch, and opened the finite-model test of which
+  G2-ZOO and $D_N$ separations survive that discipline.
 - Autonomous discussion pass 14: added a bottom-discipline filter script and
   report; pure bottom-order enforcement preserves antitonicity for `M-000`,
   `M-010`, `M-111`, `M4-G2FG2FP`, and the repaired M4 model, but the current
   `nfg2-depth-3` witness and five 3-element witnesses break antitonicity.
-- Autonomous discussion pass 15: constructed the bottom-disciplined \(B_N\)
-  arbitrary-depth nFG2 family by separating true bottom \(b\) from the fixed
-  point \(s\) and adding helper upper bound \(U\); generated and checked
+- Autonomous discussion pass 15: constructed the bottom-disciplined $B_N$
+  arbitrary-depth nFG2 family by separating true bottom $b$ from the fixed
+  point $s$ and adding helper upper bound $U$; generated and checked
   `bottom-nfg2-depth-3` with G2 true, FG2 false, FP-synt true, and pattern
   `FFFTTTTT`.
 - Autonomous discussion pass 16: added `bottom-G2FG2-noFP`, a 5-element
   bottom-disciplined witness with G2 true, FG2 true, no syntactic
-  \(\boxtimes\)-fixed point, and nFG2 pattern `TFTFTFTF`; bottom discipline
+  $\boxtimes$-fixed point, and nFG2 pattern `TFTFTFTF`; bottom discipline
   alone now preserves all tracked G2/FG2/FP-synt separations.
 - Autonomous discussion pass 17: found a same-order full-residuated expansion
-  of `bottom-G2FG2-noFP` using a commutative tensor with unit \(T\) and zero
-  \(b\); the expansion preserves G2+FG2 without FP-synt.
+  of `bottom-G2FG2-noFP` using a commutative tensor with unit $T$ and zero
+  $b$; the expansion preserves G2+FG2 without FP-synt.
 - Autonomous discussion pass 18: built a same-order full-residuated expansion
   of `bottom-nfg2-depth-3` using a top-absorbing commutative tensor with unit
-  \(T\), zero \(b\), and absorber \(U\); the expansion preserves the
+  $T$, zero $b$, and absorber $U$; the expansion preserves the
   bottom-disciplined G2+not-FG2+FP-synt profile and nFG2 pattern `FFFTTTTT`.
 - Autonomous discussion pass 19: promoted the top-absorbing expansion from the
-  checked \(B_3\) instance to a uniform \(B_N\) lemma with explicit residual
+  checked $B_3$ instance to a uniform $B_N$ lemma with explicit residual
   fibers; the remaining problem is to find less top-collapsing same-order
   tensors or prove an obstruction.
 - Autonomous discussion pass 20: found a less top-collapsing full-residuated
-  \(U\)-absorbing expansion of `bottom-nfg2-depth-3`; the complete constrained
-  search reduces \(U\)-valued products among \(\{a_1,a_2,a_3,a_4,s\}\) from
+  $U$-absorbing expansion of `bottom-nfg2-depth-3`; the complete constrained
+  search reduces $U$-valued products among $\{a_1,a_2,a_3,a_4,s\}$ from
   15 to 7 while preserving the `FFFTTTTT` profile.
 - Autonomous discussion pass 21: generated and checked `bottom-nfg2-depth-4`,
-  then verified a truncated-exponent \(U\)-absorbing full-residuated expansion
-  with 10 \(U\)-valued searched products out of 21, preserving the `FFFFTTTT`
+  then verified a truncated-exponent $U$-absorbing full-residuated expansion
+  with 10 $U$-valued searched products out of 21, preserving the `FFFFTTTT`
   profile.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-27T07:05:18+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: listed the recorded Google Drive research/reference folders live on `2026-05-27`; no newly relevant items newer than `2026-05-22` were detected.
@@ -131,7 +151,7 @@
   `M4-G2FG2FP` non-degenerate G2+FG2+FP witness, and opened the infinite
   orbit-well-foundedness problem.
 - Autonomous discussion pass 10: resolved arbitrary finite first-true nFG2
-  depth by adding the \(D_N\) construction, a generator script, a checked
+  depth by adding the $D_N$ construction, a generator script, a checked
   `nfg2-depth-3` witness with pattern `FFFTTTTT`, and a sharper open problem
   about which APS axiom packages preserve or rule out the construction.
 
@@ -179,7 +199,7 @@
   note and open problems with the resulting proof obligations.
 - Autonomous discussion pass 2: chose MacNeille completion as the first
   reflection-square test case, added completion vocabulary, and isolated the
-  order-dual extension issue for antitone \(\boxtimes\).
+  order-dual extension issue for antitone $\boxtimes$.
 - Autonomous discussion pass 3: converted the MacNeille reflection target into a
   finite 3-/4-element model-search protocol and linked it from the completion
   and models notes.
