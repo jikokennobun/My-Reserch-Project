@@ -16,5 +16,5 @@ This likely studies local versions of FG2 and pullback constructions that compar
 
 - Extract definitions of $M_{GJ}$, $M_G$, and local-FG2.
 - Identify pullback or model-comparison construction.
-- Add candidate finite structures to `models/`.
+- Add candidate finite structures to `code/models/`.
 

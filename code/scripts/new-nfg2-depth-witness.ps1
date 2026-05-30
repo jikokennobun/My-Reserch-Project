@@ -9,10 +9,10 @@ $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 $OutputEncoding = [Console]::OutputEncoding
 
-$repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+$repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 
 if ([string]::IsNullOrWhiteSpace($OutputPath)) {
-    $OutputPath = Join-Path $repositoryRoot "models\examples\nfg2-depth-$Depth.json"
+    $OutputPath = Join-Path $repositoryRoot "code\models\examples\nfg2-depth-$Depth.json"
 }
 
 $carrier = @("T")

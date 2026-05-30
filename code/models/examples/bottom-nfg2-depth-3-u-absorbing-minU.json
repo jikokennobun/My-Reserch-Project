@@ -134,7 +134,7 @@
     "note": "The helper bound U absorbs antitonicity requirements from b <= x; U maps back to b.",
     "residuation": "full",
     "residuation_template": "u-absorbing-minU-search",
-    "residuation_report": "outputs\\residuated-u-absorbing-search-bottom-nfg2-depth-3.json",
+    "residuation_report": "artifacts/reports/residuated-u-absorbing-search-bottom-nfg2-depth-3.json",
     "residuation_note": "Search found 7 U-valued nonzero non-unit products versus 15 in the top-absorbing template."
   },
   "unit": "T",

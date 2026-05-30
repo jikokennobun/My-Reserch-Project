@@ -16,4 +16,4 @@ The fixed point set of $\boxtimes$ can be treated as an invariant of an APS. Cla
 
 - Define $\mathrm{Fix}_{\boxtimes}(S)$.
 - List possible invariants: cardinality, order type, closure properties, definable subset.
-- Build finite examples in `models/`.
+- Build finite examples in `code/models/`.

@@ -17,7 +17,7 @@
   "entries": [
     {
       "model": "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
       "depth": 3,
       "ideal": [
         "a1",
@@ -46,7 +46,7 @@
     },
     {
       "model": "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
       "depth": 4,
       "ideal": [
         "a1",
@@ -76,7 +76,7 @@
     },
     {
       "model": "bottom-nfg2-depth-5-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
       "depth": 5,
       "ideal": [
         "a1",

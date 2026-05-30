@@ -1,6 +1,6 @@
 {
   "model": "bottom-nfg2-depth-4",
-  "modelPath": "models\\examples\\bottom-nfg2-depth-4.json",
+  "modelPath": "code/models/examples/bottom-nfg2-depth-4.json",
   "depth": 4,
   "assumptions": {
     "template": "front-shifted-non-u-absorbing",

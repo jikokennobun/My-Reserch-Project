@@ -1,106 +1,21 @@
-# Outputs
+# Artifacts
 
-Generated artifacts go here.
+Generated and exported research artifacts live here.
 
-- `pdf/`: compiled papers, handouts, notes, and exported PDFs
-- `pdf/discussion-summary-2026-05-30.pdf`: discussion summary covering the
-  Markdown math-display cleanup and the APS/G2-ZOO research state through
-  2026-05-30.
-- `claude-code/`: generated one-off handoff packets for Claude Code review
-  passes.
-- `macneille-reflection-three-chain-antitone.json`: first checker report for
-  the 3-element MacNeille reflection smoke-test model under legacy v0.
-- `macneille-reflection-three-chain-antitone-v1.json`: corrected v1 report for
-  the chain smoke-test model, classified as `principal-unreflected`.
-- `macneille-reflection-three-element-nolattice-nosynt-v1.json`: corrected v1
-  report for the size-3 non-lattice separation model, classified as
-  `nonprincipal-without-syntactic`.
-- `g2-zoo-M4-G2FG2FP.json`: checker report for the 4-element non-degenerate
-  G2+FG2+FP-synt witness with fixed point at the interior element `p`.
-- `g2-zoo-nfg2-depth-3.json`: checker report for the arbitrary-depth nFG2
-  witness example with pattern `FFFTTTTT`.
-- `residuated-search-M4-G2FG2FP.json`: exhaustive negative search report showing
-  that `M4-G2FG2FP` has no full residuated monoid expansion on its existing
-  carrier/order.
-- `residuated-order-search-M4-G2FG2FP.json`: same-carrier order-repair search
-  report showing that adding `bot <= c` yields a full-residuated expansion.
-- `g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`: G2-ZOO checker report
-  for the full-residuated order repair.
-- `bottom-discipline-filter-g2-zoo.json`: finite report showing which G2-ZOO
-  witnesses and the checked `nfg2-depth-3` example survive pure enforcement of
-  `bottom <= x` for every carrier element; updated to include
-  `bottom-nfg2-depth-3`, `bottom-nfg2-depth-4`, `bottom-nfg2-depth-5`, and the full-residuated
-  bottom-disciplined expansions.
-- `g2-zoo-bottom-nfg2-depth-3.json`: checker report for the
-  bottom-disciplined arbitrary-depth nFG2 witness example with pattern
-  `FFFTTTTT`.
-- `residuated-top-absorbing-report-bottom-nfg2-depth-3.json`: constructive
-  report verifying a top-absorbing full-residuated expansion of
-  `bottom-nfg2-depth-3`.
-- `g2-zoo-bottom-nfg2-depth-3-residuated.json`: checker report for the
-  full-residuated same-order expansion of `bottom-nfg2-depth-3`.
-- `residuated-u-absorbing-search-bottom-nfg2-depth-3.json`: complete
-  constrained search report finding a less top-collapsing $U$-absorbing
-  full-residuated expansion of `bottom-nfg2-depth-3`.
-- `g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`: checker report for that
-  less top-collapsing expansion.
-- `g2-zoo-bottom-nfg2-depth-4.json`: checker report for the next checked
-  bottom-disciplined arbitrary-depth nFG2 witness, with pattern `FFFFTTTT`.
-- `residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json`: constructive
-  report verifying the truncated-exponent $U$-absorbing full-residuated
-  expansion of `bottom-nfg2-depth-4`.
-- `g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`: checker report for
-  that truncated-exponent same-order expansion.
-- `residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json`: bounded
-  orbit-table-varying search report finding a non-$U$-absorbing
-  full-residuated same-order expansion of `bottom-nfg2-depth-4`; the positive
-  witness is valid, but the bounded search is not exhaustive for minimality.
-- `g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`: checker report for that
-  non-$U$-absorbing depth-4 expansion.
-- `g2-zoo-bottom-nfg2-depth-5.json`: checker report for the next
-  bottom-disciplined arbitrary-depth nFG2 witness, with pattern `FFFFFTTT`.
-- `residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-{3,4,5}.json`:
-  constructive reports verifying the front-shifted non-$U$-absorbing template
-  at checked depths 3, 4, and 5.
-- `g2-zoo-bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing.json`:
-  checker reports for those template expansions.
-- `front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`:
-  checks that the closed residual formula for the front-shifted template
-  matches the generated left and right residuals at depths 3, 4, and 5.
-- `front-shifted-extension-presentation-check.json`: verifies that the
-  front-shifted template is an ideal extension with
-  $I=\{b,a_1,a_2\}$, and that collapsing $I$ gives the shifted tail monoid
-  at depths 3, 4, and 5.
-- `front-ideal-size-bound-check.json`: checks the generalized orthogonal
-  front-width schema at depths 3, 4, and 5; widths $0,1,2$ are residuated,
-  while width $3$ is the first same-order failure by non-principal residual
-  fibers.
-- `front-width-residual-formula-check.json`: verifies the closed residual
-  formula for the orthogonal front-width schema at $k=0,1,2$, with zero
-  mismatches across depths 3, 4, and 5.
-- `structural-rules-front-shifted-comparison.json`: compares exchange,
-  contraction, strong weakening, and reflexive weakening/discarding across
-  top-absorbing, truncated, non-$U$-absorbing, front-shifted, and
-  G2+FG2-without-FP residuated expansions.
-- `truncated-u-forcing-bottom-nfg2-depth-3.json`: analyzer report showing that,
-  once the truncated-exponent orbit table is fixed on `bottom-nfg2-depth-3`,
-  monotonicity forces every $U$-product.
-- `truncated-u-forcing-bottom-nfg2-depth-4.json`: the same forcing check for
-  `bottom-nfg2-depth-4`.
-- `residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`: completed
-  search report for a same-order full-residuated `bottom-nfg2-depth-3` tensor
-  that does not assume $U$-absorption and allows the orbit product table to
-  vary; residual-fiber pruning makes the search complete and finds a
-  non-$U$-absorbing candidate.
-- `g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`: checker report for that
-  non-$U$-absorbing full-residuated expansion.
-- `g2-zoo-bottom-G2FG2-noFP.json`: checker report for the bottom-disciplined
-  G2+FG2 without FP-synt witness.
-- `residuated-search-bottom-G2FG2-noFP.json`: unrestricted tensor search report
-  recording that the five-element operation space is too large for the current
-  exhaustive bound.
-- `residuated-commutative-zero-search-bottom-G2FG2-noFP.json`: targeted
-  commutative fixed-unit/fixed-zero search report finding full residuated
-  tensors for `bottom-G2FG2-noFP`.
-- `g2-zoo-bottom-G2FG2-noFP-residuated.json`: checker report for the
-  full-residuated same-order expansion of `bottom-G2FG2-noFP`.
+## Layout
+
+- [pdf/](pdf/): compiled papers, handouts, discussion summaries, and collected PDFs.
+- [reports/](reports/): machine-generated JSON/CSV checker reports.
+- [handoffs/](handoffs/): generated one-off handoff packets for external review.
+- [slides/](slides/): slide decks and exported slide material.
+- [tex/](tex/): TeX sources and compiled paper drafts.
+
+## Current Highlights
+
+- [pdf/discussion-summary-2026-05-30.pdf](pdf/discussion-summary-2026-05-30.pdf):
+  discussion summary covering the Markdown math-display cleanup and APS/G2-ZOO
+  research state through 2026-05-30.
+- [reports/g2-zoo-M4-G2FG2FP.json](reports/g2-zoo-M4-G2FG2FP.json):
+  checker report for the 4-element non-degenerate G2+FG2+FP-synt witness.
+- [reports/front-width-residual-formula-check.json](reports/front-width-residual-formula-check.json):
+  checker report for the orthogonal front-width residual formula.

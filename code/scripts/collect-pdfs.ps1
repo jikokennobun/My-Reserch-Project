@@ -1,9 +1,20 @@
 param(
-    [string]$Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path,
-    [string]$Destination = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "outputs\pdf")
+    [string]$Root = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path,
+    [string]$Destination = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path "artifacts\pdf")
 )
 
 $ErrorActionPreference = "Stop"
+
+function Get-RelativePathCompat {
+    param(
+        [string]$BasePath,
+        [string]$TargetPath
+    )
+
+    $baseUri = [System.Uri]::new(($BasePath.TrimEnd('\') + '\'))
+    $targetUri = [System.Uri]::new($TargetPath)
+    return [System.Uri]::UnescapeDataString($baseUri.MakeRelativeUri($targetUri).ToString()).Replace('/', '\')
+}
 
 $rootPath = (Resolve-Path $Root).Path
 $destinationPath = if (Test-Path $Destination) {
@@ -37,7 +48,7 @@ foreach ($pdf in $pdfs) {
         Copy-Item -LiteralPath $pdf.FullName -Destination $targetPath
     }
 
-    $relativeSource = [System.IO.Path]::GetRelativePath($rootPath, $pdf.FullName)
+    $relativeSource = Get-RelativePathCompat -BasePath $rootPath -TargetPath $pdf.FullName
     $manifestRows += [pscustomobject]@{
         File = $targetName
         Source = $relativeSource

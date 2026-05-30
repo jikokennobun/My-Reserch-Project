@@ -16,9 +16,9 @@ Codex should treat the local repository as the durable research record.
 
 1. Discuss freely in ChatGPT Project.
 2. When a conversation becomes research-relevant, create or update a shared link.
-3. Add the shared link to `references/chatgpt-share-watchlist.csv`.
+3. Add the shared link to `research/references/chatgpt-share-watchlist.csv`.
 4. If the output is a draft, slide, PDF, or long note, put it in the Google Drive research folder.
-5. Codex checks the watchlist and Drive folders, then updates local notes under `notes/`.
+5. Codex checks the watchlist and Drive folders, then updates local notes under `research/notes/`.
 
 ## Important Limitation
 
@@ -28,6 +28,5 @@ For ordinary ChatGPT shared links, the link is usually a snapshot of the convers
 
 - Watch changed shared links and update their corresponding `NoteFile`.
 - Watch the research Drive folder for new outputs under `Paper`, `Slide`, `Gemini`, and `Claude`.
-- Summarize meaningful updates in [../logs/research-log.md](../logs/research-log.md).
+- Summarize meaningful updates in [../../records/logs/research-log.md](../../records/logs/research-log.md).
 - Add raw ideas to [../ideas/inbox.md](../ideas/inbox.md) when they do not yet have a home.
-

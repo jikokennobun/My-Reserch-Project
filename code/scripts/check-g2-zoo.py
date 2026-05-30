@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-G2-ZOO Checker — scripts/check-g2-zoo.py
+G2-ZOO Checker — code/scripts/check-g2-zoo.py
 
 Checks a finite preAPS model (JSON) against the following properties:
   - G2:        boxtimes(T) <= bot  =>  T <= bot
@@ -13,13 +13,13 @@ Checks a finite preAPS model (JSON) against the following properties:
 Usage:
   python check-g2-zoo.py MODEL.json [--nfg2-depth 8] [--verbose]
 
-  python check-g2-zoo.py models/examples/M-101.json
-  python check-g2-zoo.py models/examples/*.json --verbose
+  python check-g2-zoo.py code/models/examples/M-101.json
+  python check-g2-zoo.py code/models/examples/*.json --verbose
 
-Output: JSON report to stdout; also appends a row to outputs/g2-zoo-registry.csv
+Output: JSON report to stdout; also appends a row to artifacts/reports/g2-zoo-registry.csv
         if --register is passed.
 
-Mathematical definitions (all from definitions.md in this repository):
+Mathematical definitions (all from research/definitions.md in this repository):
 
   Preorder:  (L, <=) reflexive and transitive.
   T, bot:    distinguished elements of L.
@@ -41,7 +41,7 @@ Mathematical definitions (all from definitions.md in this repository):
 References:
   - Beklemishev-Shamkanov (2016): Jeroslow FP without formalized G2.
   - Ciabattoni-Galatos-Terui: completion stability for substructural logics.
-  - notes/completion-and-fixed-points.md, models/macneille-reflection-search.md
+  - research/notes/completion-and-fixed-points.md, code/models/macneille-reflection-search.md
 """
 
 import json

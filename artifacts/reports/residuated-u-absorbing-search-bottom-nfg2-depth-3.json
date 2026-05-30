@@ -1,6 +1,6 @@
 {
   "model": "bottom-nfg2-depth-3",
-  "modelPath": "models\\examples\\bottom-nfg2-depth-3.json",
+  "modelPath": "code/models/examples/bottom-nfg2-depth-3.json",
   "assumptions": {
     "commutative": true,
     "unit": "T",

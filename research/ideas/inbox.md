@@ -26,7 +26,7 @@ Idea:
 Reconstruct the BS16 cut elimination theorem as closure of a cut-free, fibered, polarized, non-idempotent, residuated pre-APS under cut composition. Ordinary APS should arise only after adding diagonal contraction data; APS A3 can be read as a hidden contraction principle.
 
 Organized note:
-[notes/bs16-fiber-residuated-aps.md](../notes/bs16-fiber-residuated-aps.md)
+[research/notes/bs16-fiber-residuated-aps.md](../notes/bs16-fiber-residuated-aps.md)
 
 Next action:
 Find the BS16 paper in Drive, verify the exact theorem/proposition numbers, and turn the theorem schema into a formal local draft.
@@ -43,7 +43,7 @@ Source links:
 - https://chatgpt.com/share/6a0cbab3-b174-83ab-8a89-db8a746eacda
 
 Organized index:
-[notes/chatgpt-imports-2026-05-22.md](../notes/chatgpt-imports-2026-05-22.md)
+[research/notes/chatgpt-imports-2026-05-22.md](../notes/chatgpt-imports-2026-05-22.md)
 
 Idea:
 Develop APS/G2-ZOO through the interaction of MND4-preAPS obstructions, analytic APS, representable fixed points in residuated algebra, completions, self-existence sentences, and domain-theoretic residuation.

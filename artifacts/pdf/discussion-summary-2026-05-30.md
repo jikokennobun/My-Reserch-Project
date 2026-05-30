@@ -28,7 +28,7 @@ $$
 
 あわせて、Markdown表の中で列区切りと衝突しやすい `$|L|$` などは
 $\lvert L\rvert$ の形へ直した。
-再実行用のスクリプトは `scripts/normalize-markdown-math.ps1` に置いた。
+再実行用のスクリプトは `code/scripts/normalize-markdown-math.ps1` に置いた。
 
 # 議論の要点
 
@@ -104,5 +104,5 @@ $\lvert G\rvert\ge4$ のfront群が同じ方針で成立するかを判定する
 
 # 保管場所
 
-このPDFと元Markdownは `outputs/pdf/` に置く。
-生成物の一覧から辿れるように、`outputs/pdf/README.md` と `outputs/README.md` にも記録する。
+このPDFと元Markdownは `artifacts/pdf/` に置く。
+生成物の一覧から辿れるように、`artifacts/pdf/README.md` と `artifacts/README.md` にも記録する。

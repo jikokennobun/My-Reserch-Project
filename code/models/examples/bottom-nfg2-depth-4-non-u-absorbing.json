@@ -149,7 +149,7 @@
     "note": "The helper bound U absorbs antitonicity requirements from b <= x; U maps back to b.",
     "residuation": "full",
     "residuation_template": "non-u-absorbing-search",
-    "residuation_report": "outputs\\residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json",
+    "residuation_report": "artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json",
     "residuation_note": "Search varied the orbit product table and did not assume U-absorption."
   },
   "unit": "T",

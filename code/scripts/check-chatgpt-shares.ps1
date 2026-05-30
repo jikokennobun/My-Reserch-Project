@@ -1,7 +1,7 @@
 param(
-    [string]$WatchlistPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "references\chatgpt-share-watchlist.csv"),
-    [string]$StatePath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "logs\chatgpt-share-state.csv"),
-    [string]$LogPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "logs\chatgpt-share-sync.md")
+    [string]$WatchlistPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path "research\references\chatgpt-share-watchlist.csv"),
+    [string]$StatePath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path "records\logs\chatgpt-share-state.csv"),
+    [string]$LogPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path "records\logs\chatgpt-share-sync.md")
 )
 
 $ErrorActionPreference = "Stop"

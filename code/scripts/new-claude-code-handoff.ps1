@@ -5,15 +5,15 @@ param(
         "docs\claude-code-research-bridge.md",
         "docs\claude-code-autonomous-review-prompt.md",
         "docs\codex-research-automation.md",
-        "logs\autonomous-discussion.md",
-        "logs\claude-code-review.md",
-        "ideas\research-questions.md",
-        "open_problems.md",
-        "definitions.md",
-        "models\README.md",
-        "models\macneille-reflection-search.md",
-        "models\macneille-checker-interface.md",
-        "scripts\check-macneille-reflection.ps1"
+        "records\discussions\autonomous-discussion.md",
+        "records\discussions\claude-code-review.md",
+        "research\ideas\research-questions.md",
+        "research\open_problems.md",
+        "research\definitions.md",
+        "code\models\README.md",
+        "code\models\macneille-reflection-search.md",
+        "code\models\macneille-checker-interface.md",
+        "code\scripts\check-macneille-reflection.ps1"
     )
 )
 
@@ -21,7 +21,7 @@ $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 $OutputEncoding = [Console]::OutputEncoding
 
-$repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+$repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 
 function Get-RepositoryText {
     param([string]$RelativePath)
@@ -86,17 +86,17 @@ function Get-GitStatusText {
 
 $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
 if ([string]::IsNullOrWhiteSpace($OutputPath)) {
-    $outputDir = Join-Path $repositoryRoot "outputs\claude-code"
+    $outputDir = Join-Path $repositoryRoot "artifacts\handoffs\claude-code"
     if (-not (Test-Path $outputDir)) {
         New-Item -ItemType Directory -Path $outputDir | Out-Null
     }
     $OutputPath = Join-Path $outputDir "handoff-$timestamp.md"
 }
 
-$researchQuestions = Get-RepositoryText "ideas\research-questions.md"
-$openProblems = Get-RepositoryText "open_problems.md"
-$autonomousLog = Get-RepositoryText "logs\autonomous-discussion.md"
-$claudeLog = Get-RepositoryText "logs\claude-code-review.md"
+$researchQuestions = Get-RepositoryText "research\ideas\research-questions.md"
+$openProblems = Get-RepositoryText "research\open_problems.md"
+$autonomousLog = Get-RepositoryText "records\discussions\autonomous-discussion.md"
+$claudeLog = Get-RepositoryText "records\discussions\claude-code-review.md"
 
 $activeQuestions = Get-Section -Text $researchQuestions -StartHeading "## Active"
 $coreProblems = Get-Section -Text $openProblems -StartHeading "## Core Separations"
@@ -117,7 +117,7 @@ $lines += "## Claude Code Task"
 $lines += ""
 $lines += "Run one independent review pass for this repository. Complement the Codex autonomous loop by looking for hidden assumptions, counterexample directions, implementation gaps, and concrete next steps."
 $lines += ""
-$lines += 'Append your result to `logs/claude-code-review.md` using the format in `docs/claude-code-autonomous-review-prompt.md`. Do not commit or push unless the user explicitly asks.'
+$lines += 'Append your result to `records/discussions/claude-code-review.md` using the format in `docs/claude-code-autonomous-review-prompt.md`. Do not commit or push unless the user explicitly asks.'
 $lines += ""
 $lines += "## Git Status"
 $lines += ""
@@ -158,7 +158,7 @@ $lines += "## Suggested Review Angles"
 $lines += ""
 $lines += '- Is the current completion-extension convention for antitone `boxtimes` mathematically justified, or merely a smoke-test rule?'
 $lines += "- What is the smallest finite model/search target that could expose a non-principal completion fixed point?"
-$lines += '- Does `scripts/check-macneille-reflection.ps1` report enough data to separate implementation artifacts from theorem-level evidence?'
+$lines += '- Does `code/scripts/check-macneille-reflection.ps1` report enough data to separate implementation artifacts from theorem-level evidence?'
 $lines += "- Which note or open problem should be sharpened before the next autonomous Codex pass?"
 $lines += ""
 

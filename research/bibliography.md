@@ -32,4 +32,3 @@
 
 - [Google Drive references](references/drive.md)
 - [Google Drive research outputs](references/research-drive.md)
-

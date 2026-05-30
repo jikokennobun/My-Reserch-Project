@@ -11,15 +11,18 @@
   collapses adjacent orbit elements. Next target: determine the maximum group
   order compatible with the $B_N$ schema (Klein four-group and
   $\mathbb Z/4\mathbb Z$ are the immediate candidates).
-- Updated `notes/g2-fg2-hierarchy.md`, `open_problems.md`, and
-  `logs/autonomous-discussion.md` with Pass 33 analysis.
+- Updated `research/notes/g2-fg2-hierarchy.md`, `research/open_problems.md`, and
+  `records/discussions/autonomous-discussion.md` with Pass 33 analysis.
 
 ## 2026-05-30
 
 - Maintenance: normalized Markdown math delimiters from LaTeX-style
   `\(...\)`/`\[...\]` to Markdown-friendly `$...$`/`$$...$$` across repository
-  notes, added `scripts/normalize-markdown-math.ps1`, and stored the discussion
-  summary PDF at `outputs/pdf/discussion-summary-2026-05-30.pdf`.
+  notes, added `code/scripts/normalize-markdown-math.ps1`, and stored the discussion
+  summary PDF at `artifacts/pdf/discussion-summary-2026-05-30.pdf`.
+- Repository organization: split the GitHub-visible tree into `research/`
+  (notes and references), `records/` (logs and discussions), `artifacts/`
+  (PDFs, reports, slides, TeX), and `code/` (scripts and finite models).
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T17:36:14+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: scanned the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude, including `Paper/Monograph`) plus reference-folder top level at `2026-05-30T17:38:10+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T05:03:17+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
@@ -95,7 +98,7 @@
 - Autonomous discussion pass 12: found a smallest same-carrier order repair of
   `M4-G2FG2FP`; adding $\bot\le c$ yields a full-residuated non-collapsed
   G2+FG2+FP-reachable witness with unit $p$, with search and checker reports
-  saved under `outputs/`.
+  saved under `artifacts/reports/`.
 - Autonomous discussion pass 13: interpreted the $\bot\le c$ repair as the
   missing bottom-discipline instance $\forall x(\bot\le x)$, i.e. ex-falso
   weakening for the $c$-branch, and opened the finite-model test of which
@@ -159,16 +162,16 @@
 
 - Claude Code G2-ZOO implementation: exhaustively enumerated all 3-element
   preAPS models and certified all 8 combinations of (G2, FG2, FP-synt) with
-  explicit witnesses M-000 through M-111 in `models/examples/`.
+  explicit witnesses M-000 through M-111 in `code/models/examples/`.
 - Certified independence theorems: FG2⇏G2 (M-010), G2⇏FG2 (M-100),
   G2+FP-synt⇏FG2 (M-101), G2+FG2⇏FP-synt (M-110).
 - Certified n-FG2 separation: M-010 realizes pattern TFTFTF... and refutes
   odd-step implications, including FG2 -> nFG2(2); arbitrary-depth strictness
   remains open.
-- Added `scripts/check-g2-zoo.py` — property checker for G2/FG2/nFG2/FP-synt
+- Added `code/scripts/check-g2-zoo.py` — property checker for G2/FG2/nFG2/FP-synt
   and MacNeille completion analysis.
-- Updated `notes/g2-fg2-hierarchy.md` with formal theorem statements and proofs.
-- Updated `notes/g2-aps-zoo-classification.md` with certified model registry.
+- Updated `research/notes/g2-fg2-hierarchy.md` with formal theorem statements and proofs.
+- Updated `research/notes/g2-aps-zoo-classification.md` with certified model registry.
 
 ## 2026-05-25
 
@@ -216,7 +219,7 @@
   counterexample.
 - Relay sync: refreshed the ChatGPT watchlist state at `2026-05-24T04:52:11+09:00`; all 18 tracked `https://chatgpt.com/share/...` links still fail with `Invoke-WebRequest` remote-server-unreachable errors, so no conversation diffing or note ingestion was possible.
 - Relay sync: rechecked the recorded Google Drive research and reference folders live. No newly relevant post-`2026-05-22` material appeared beyond the already indexed Monograph snapshot, so no literature or topic note updates were needed this run.
-- Relay sync: cleaned `logs/chatgpt-share-sync.md` after the blocked retry duplicated the newest entry and displaced the file header.
+- Relay sync: cleaned `records/logs/chatgpt-share-sync.md` after the blocked retry duplicated the newest entry and displaced the file header.
 - Relay sync: rechecked the ChatGPT share watchlist at `2026-05-24T14:02:20+09:00`; all 18 links still fail (`remote server unreachable`), and the Drive research/reference folders show no post-`2026-05-22` additions.
 - Relay sync: rechecked the ChatGPT share watchlist at `2026-05-24T14:09:44+09:00`; all 18 links still fail (`remote server unreachable`). Google Drive research/reference folders still show no additions newer than `2026-05-22`.
 - Relay sync: rechecked the ChatGPT share watchlist at `2026-05-24T14:33:09+09:00`; all 18 links still fail (`remote server unreachable`). Google Drive research/reference folders still show no additions newer than `2026-05-22`.
@@ -226,7 +229,7 @@
 
 - Relay sync: retried the ChatGPT share watchlist, but `https://chatgpt.com/share/...` pages are still unreachable from this environment, so no new share content, note summaries, or open-question extraction could be performed.
 - Relay sync: queried the Google Drive research and reference folders live; no newly relevant papers, slides, Gemini outputs, or Claude outputs appeared beyond the `2026-05-22` snapshot.
-- Relay sync: normalized `ideas/research-questions.md` and `references/research-drive.md` after the prior run introduced encoding corruption while preserving the existing research-facing content.
+- Relay sync: normalized `research/ideas/research-questions.md` and `research/references/research-drive.md` after the prior run introduced encoding corruption while preserving the existing research-facing content.
 
 ## 2026-05-22
 
@@ -240,4 +243,4 @@
 - Imported the Research Project chat-link handoff from Downloads, added 11 new shared links to the watchlist, and created research-index skeleton files for definitions, open problems, models, and bibliography.
 - Added a research-only Obsidian vault indexing workflow for `Mr.Jikokennobun`, excluding personal notes by policy.
 - Relay sync: checked ChatGPT share watchlist, but `Invoke-WebRequest` failed for all entries (`remote server unreachable`), so no new share content could be ingested this run.
-- Relay sync: scanned Google Drive research outputs and refreshed `references/research-drive.md` with current Monograph/Gemini/Claude listings.
+- Relay sync: scanned Google Drive research outputs and refreshed `research/references/research-drive.md` with current Monograph/Gemini/Claude listings.

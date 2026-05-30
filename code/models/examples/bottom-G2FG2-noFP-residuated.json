@@ -96,7 +96,7 @@
     "collapse": false,
     "note": "FG2 holds because boxtimes^2(T)=d <= a=boxtimes(T), while a and d form a strict 2-cycle rather than an equivalence.",
     "residuation": "full",
-    "residuation_search_report": "outputs\\residuated-commutative-zero-search-bottom-G2FG2-noFP.json",
+    "residuation_search_report": "artifacts/reports/residuated-commutative-zero-search-bottom-G2FG2-noFP.json",
     "residuation_assumptions": "commutative tensor, fixed unit, fixed zero"
   },
   "unit": "T",

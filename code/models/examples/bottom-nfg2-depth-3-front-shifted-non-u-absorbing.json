@@ -134,7 +134,7 @@
     "note": "The helper bound U absorbs antitonicity requirements from b <= x; U maps back to b.",
     "residuation": "full",
     "residuation_template": "front-shifted-non-u-absorbing",
-    "residuation_report": "outputs\\residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-3.json",
+    "residuation_report": "artifacts/reports/residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-3.json",
     "residuation_note": "Uniform template: a1,a2 are orthogonal idempotents, U fixes them, and the remaining tail uses a shifted truncated-exponent product."
   },
   "unit": "T",

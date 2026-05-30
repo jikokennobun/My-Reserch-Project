@@ -1,6 +1,6 @@
 {
   "model": "M4-G2FG2FP",
-  "modelPath": "models\\examples\\M4-G2FG2FP.json",
+  "modelPath": "code/models/examples/M4-G2FG2FP.json",
   "candidateOrderExtensions": 32,
   "checkedUntilFirstHit": 2,
   "found": true,

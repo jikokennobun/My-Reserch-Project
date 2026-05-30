@@ -105,7 +105,7 @@ It connects directly to:
 The non-degenerate finite G2+FG2+FP witness `M4-G2FG2FP` cannot be expanded to a
 full residuated ordered monoid on its existing carrier and order. The exhaustive
 search report
-[../outputs/residuated-search-M4-G2FG2FP.json](../outputs/residuated-search-M4-G2FG2FP.json)
+[../../artifacts/reports/residuated-search-M4-G2FG2FP.json](../../artifacts/reports/residuated-search-M4-G2FG2FP.json)
 checks every binary tensor with each possible unit and finds no operation that
 is associative, monotone, and admits both residuals.
 
@@ -142,7 +142,7 @@ witness. The remaining question is whether bottom discipline is intended in the
 APS package under study, especially in the BS16 contraction-free setting.
 
 Pass 14 tested bottom discipline as a finite-model filter. The report
-`../outputs/bottom-discipline-filter-g2-zoo.json` shows that only `M-000`,
+`../../artifacts/reports/bottom-discipline-filter-g2-zoo.json` shows that only `M-000`,
 `M-010`, `M-111`, `M4-G2FG2FP`, and the already repaired M4 model remain
 antitone after pure bottom-order enforcement. Full recorded behavior is stable
 only for `M-111` and the M4 pair. The arbitrary-depth `nfg2-depth-3` witness
@@ -164,7 +164,7 @@ $$
 b\otimes x=b,\qquad T\otimes x=x,\qquad x\otimes y=U
 $$
 for all remaining nonzero, non-unit cases. The report
-`../outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` verifies
+`../../artifacts/reports/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` verifies
 associativity, monotonicity, principal left/right residuals, and the full
 residuation law. The expansion
 `bottom-nfg2-depth-3-residuated` preserves G2 true, FG2 false, FP-synt at $s$,
@@ -212,7 +212,7 @@ but the pass 20 table has a truncated-exponent reading. Give $a_{N+1}$ and
 $s$ exponent 1, give $a_i$ exponent $i+1$ for $1\le i\le N$, and send
 nonzero non-unit products to the element whose exponent is the sum when that
 sum is at most $N+1$, otherwise to $U$. The builder
-`../scripts/build-truncated-u-absorbing-residuated.py` verifies this template
+`../../code/scripts/build-truncated-u-absorbing-residuated.py` verifies this template
 for `bottom-nfg2-depth-4`: it is associative, monotone, and fully residuated on
 the same carrier/order, with only 10 $U$-valued searched products out of 21
 instead of the 21 forced by the top-absorbing tensor. The checker confirms that
@@ -247,8 +247,8 @@ $U$-absorbing constraint itself is necessary.
 Pass 23 separates two meanings of "weakening $U$-absorption." If the
 truncated-exponent product table on $A_N$ is held fixed, $U$-absorption is
 forced before residuals enter. The reports
-`../outputs/truncated-u-forcing-bottom-nfg2-depth-3.json` and
-`../outputs/truncated-u-forcing-bottom-nfg2-depth-4.json` show that for every
+`../../artifacts/reports/truncated-u-forcing-bottom-nfg2-depth-3.json` and
+`../../artifacts/reports/truncated-u-forcing-bottom-nfg2-depth-4.json` show that for every
 $y\in A_N$, some $x\in A_N$ satisfies $x\le U$ and $x\otimes y=U$.
 Monotonicity therefore yields $U\le U\otimes y$, and topness of $U$ gives
 $U\otimes y=U$. A second monotonicity step then gives $U\otimes U=U$.
@@ -260,7 +260,7 @@ B3 instance. The search fixes only commutativity, unit $T$, and zero $b$;
 it allows both $U$-products and the orbit product table to vary, subject to
 same-order monotonicity, associativity, and principal residual fibers. The
 bounded report
-`../outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json` checks
+`../../artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json` checks
 382 complete assignments inside 1000 search nodes and finds no candidate, but
 the search is incomplete. The failure mode is useful: without residual-fiber
 pruning the unrestricted orbit-table search is too slow to complete in the
@@ -274,7 +274,7 @@ price is that the orbit table changes from truncated addition to a mixed
 group/idempotent/zero pattern: $a_1,a_2,a_3$ form a Klein-four subgroup over
 $T$, $a_4$ is fixed by multiplication with those three elements, and
 $a_4s=s^2=b$. The checker report
-`../outputs/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json` confirms that the
+`../../artifacts/reports/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json` confirms that the
 G2/FG2/FP/nFG2 profile is unchanged. Therefore $U$-absorption is not forced
 by same-order full residuation on $B_3$; it is only forced if the truncated
 orbit table is held fixed.
@@ -296,7 +296,7 @@ front-shifted template keeps $T$ as unit and $b$ as zero, makes
 $a_1,a_2$ orthogonal idempotents, lets $U$ fix exactly those two front
 elements, and puts a shifted truncated-exponent product on
 $\{s,a_{N+1},a_3,\ldots,a_N\}$. The builder
-`../scripts/build-front-shifted-non-u-absorbing-residuated.py` verifies full
+`../../code/scripts/build-front-shifted-non-u-absorbing-residuated.py` verifies full
 residuation for `bottom-nfg2-depth-3`, `bottom-nfg2-depth-4`, and the newly
 generated `bottom-nfg2-depth-5`. The depth-4 template is exactly the pass 26
 bounded-search witness; the depth-3 template is a different valid
@@ -312,14 +312,14 @@ and $b$ otherwise. For tail elements $r$, front targets again return that
 front element; tail targets are controlled by shifted exponent subtraction,
 with the duplicate exponent-1 case generating the principal downset
 $\downarrow a_{N+1}$. The formula is now implemented in
-`../scripts/check-front-shifted-residual-formula.py`, and the reports
-`../outputs/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`
+`../../code/scripts/check-front-shifted-residual-formula.py`, and the reports
+`../../artifacts/reports/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`
 show zero mismatches against both left and right residuals. This turns the
 front-shifted construction from a checked schema into a uniform full-residuated
 $B_N$ template, modulo ordinary presentation polishing.
 
 Pass 29 compares structural rules across the current residuated examples. The
-report `../outputs/structural-rules-front-shifted-comparison.json` shows a
+report `../../artifacts/reports/structural-rules-front-shifted-comparison.json` shows a
 consistent resource-sensitive pattern. Exchange holds for every checked
 tensor. Strong weakening $a\le b\Rightarrow a\otimes c\le b$ fails for every
 checked tensor, as does its reflexive discarding instance $a\otimes c\le a$;
@@ -342,7 +342,7 @@ $$
 \{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}
 $$
 and carries exactly the shifted truncated tail tensor. The finite report
-`../outputs/front-shifted-extension-presentation-check.json` verifies the
+`../../artifacts/reports/front-shifted-extension-presentation-check.json` verifies the
 order-ideal condition, tensor-ideal condition, front zero-band, front action,
 tail quotient product, and tail quotient order shape for depths 3, 4, and 5.
 Thus the construction is an ideal extension of a resource-sensitive tail by a
@@ -354,7 +354,7 @@ $$
 F_k=\{a_1,\ldots,a_k\}
 $$
 and shifts the tail to $\{s,a_{N+1},a_{k+1},\ldots,a_N\}$. The report
-`../outputs/front-ideal-size-bound-check.json` checks depths 3, 4, and 5. The
+`../../artifacts/reports/front-ideal-size-bound-check.json` checks depths 3, 4, and 5. The
 positive cases are $k=0,1,2$; the first failure is always $k=3$, and the
 witness is a non-principal residual fiber. For $p\in F_k$, the set of
 right-multipliers sending $p$ below $b$ contains
@@ -369,7 +369,7 @@ for $p\in F_k$, $p\backslash c=U$ at $c=p,U$; otherwise it is $b$ when
 $k=1$, and the other front atom when $k=2$. Together with
 $b\backslash c=U$, $T\backslash c=c$, and the usual $U$-row, this gives
 a uniform residual table for widths $0,1,2$. The report
-`../outputs/front-width-residual-formula-check.json` verifies zero mismatches
+`../../artifacts/reports/front-width-residual-formula-check.json` verifies zero mismatches
 against generated residuals for the checked depths 3, 4, and 5.
 
 Pass 16 adds `bottom-G2FG2-noFP`, a 5-element bottom-disciplined witness for
@@ -381,7 +381,7 @@ $\boxtimes$-fixed point appears.
 Pass 17 shows that this witness is not merely pre-residuated. The broad
 unrestricted tensor search is too large on five elements
 ($5^{16}=152587890625$ candidates per unit), so the report
-`../outputs/residuated-search-bottom-G2FG2-noFP.json` now correctly records the
+`../../artifacts/reports/residuated-search-bottom-G2FG2-noFP.json` now correctly records the
 unrestricted search as not run. A targeted commutative search with unit $T$
 and zero $b$ reduces the space to $5^6=15625$ candidates and finds 8 full
 residuated tensors. The persisted model

@@ -1,6 +1,6 @@
-﻿{
+{
     "model":  "three-element-nolattice-nosynt",
-    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\models\\examples\\three-element-nolattice-nosynt.json",
+    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\code/models/examples/three-element-nolattice-nosynt.json",
     "extensionRule":  "antitone-dual-lower-cut-v1",
     "extensionDescription":  "v1: treat antitone refutability as a monotone map L -\u003e L^op and close the pointwise image by the L^op MacNeille closure ((image)^l_L)^u_L.",
     "classification":  "nonprincipal-without-syntactic",

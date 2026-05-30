@@ -77,7 +77,7 @@
     "collapse": false,
     "warning": "G2 holds vacuously because boxtimes(T)=p is not <= bot; this is still non-collapsed and non-degenerate with respect to fixed-point location.",
     "residuation": "full",
-    "residuation_search_report": "outputs\\residuated-order-search-M4-G2FG2FP.json",
+    "residuation_search_report": "artifacts/reports/residuated-order-search-M4-G2FG2FP.json",
     "repair_interpretation": "bot <= c is the missing bottom-discipline instance; it makes bot least and turns the order into the four-element Boolean lattice.",
     "added_order_pairs": [
       [

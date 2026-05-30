@@ -1,6 +1,6 @@
-﻿param(
+param(
     [string]$VaultRoot = (Join-Path ([Environment]::GetFolderPath("MyDocuments")) "Mr.Jikokennobun"),
-    [string]$RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+    [string]$RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 )
 
 $ErrorActionPreference = "Stop"
@@ -109,8 +109,8 @@ foreach ($rootName in $includedRoots) {
     }
 }
 
-$referencesDir = Join-Path $RepositoryRoot "references"
-$notesDir = Join-Path $RepositoryRoot "notes"
+$referencesDir = Join-Path $RepositoryRoot "research\references"
+$notesDir = Join-Path $RepositoryRoot "research\notes"
 if (-not (Test-Path $referencesDir)) { New-Item -ItemType Directory -Path $referencesDir | Out-Null }
 if (-not (Test-Path $notesDir)) { New-Item -ItemType Directory -Path $notesDir | Out-Null }
 
@@ -190,7 +190,7 @@ $lines += ""
 $lines += "## Update Command"
 $lines += ""
 $lines += '```powershell'
-$lines += 'powershell -ExecutionPolicy Bypass -File .\scripts\index-obsidian-research.ps1'
+$lines += 'powershell -ExecutionPolicy Bypass -File .\code\scripts\index-obsidian-research.ps1'
 $lines += '```'
 
 $lines -join "`n" | Set-Content -Path $mdPath -Encoding UTF8

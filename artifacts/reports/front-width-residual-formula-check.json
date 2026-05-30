@@ -17,7 +17,7 @@
   "entries": [
     {
       "model": "bottom-nfg2-depth-3",
-      "path": "models\\examples\\bottom-nfg2-depth-3.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3.json",
       "depth": 3,
       "cases": [
         {
@@ -42,7 +42,7 @@
     },
     {
       "model": "bottom-nfg2-depth-4",
-      "path": "models\\examples\\bottom-nfg2-depth-4.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4.json",
       "depth": 4,
       "cases": [
         {
@@ -67,7 +67,7 @@
     },
     {
       "model": "bottom-nfg2-depth-5",
-      "path": "models\\examples\\bottom-nfg2-depth-5.json",
+      "path": "code/models/examples/bottom-nfg2-depth-5.json",
       "depth": 5,
       "cases": [
         {

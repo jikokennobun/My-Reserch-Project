@@ -1,6 +1,6 @@
 {
   "model": "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
-  "modelPath": "models\\examples\\bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
+  "modelPath": "code/models/examples/bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
   "depth": 4,
   "formula": "front-shifted-non-u-absorbing-residual-table",
   "checks": {

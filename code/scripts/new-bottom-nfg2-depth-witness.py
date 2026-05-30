@@ -93,7 +93,7 @@ def main():
     parser.add_argument("--output")
     args = parser.parse_args()
 
-    output = args.output or f"models/examples/bottom-nfg2-depth-{args.depth}.json"
+    output = args.output or f"code/models/examples/bottom-nfg2-depth-{args.depth}.json"
     model = build_model(args.depth)
     path = Path(output)
     path.parent.mkdir(parents=True, exist_ok=True)

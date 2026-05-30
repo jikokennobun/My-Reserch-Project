@@ -89,7 +89,7 @@ as useful evidence about the strength of the reflection condition.
 ## Legacy v0 Checker Result
 
 Report:
-[../outputs/macneille-reflection-three-chain-antitone.json](../outputs/macneille-reflection-three-chain-antitone.json).
+[../../artifacts/reports/macneille-reflection-three-chain-antitone.json](../../artifacts/reports/macneille-reflection-three-chain-antitone.json).
 
 - Model: `three-chain-antitone`
 - Extension rule: `antitone-dual-lower-cut-v0`
@@ -107,7 +107,7 @@ antitone $L\to L^{op}$ extension, so current passes should use v1.
 ## v1 Checker Results
 
 Chain smoke test:
-[../outputs/macneille-reflection-three-chain-antitone-v1.json](../outputs/macneille-reflection-three-chain-antitone-v1.json).
+[../../artifacts/reports/macneille-reflection-three-chain-antitone-v1.json](../../artifacts/reports/macneille-reflection-three-chain-antitone-v1.json).
 
 - Model: `three-chain-antitone`
 - Extension rule: `antitone-dual-lower-cut-v1`
@@ -121,7 +121,7 @@ Chain smoke test:
   dual principal cut $i_{L^{op}}(\boxtimes a)$
 
 Non-lattice separation example:
-[../outputs/macneille-reflection-three-element-nolattice-nosynt-v1.json](../outputs/macneille-reflection-three-element-nolattice-nosynt-v1.json).
+[../../artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json](../../artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json).
 
 - Model: `three-element-nolattice-nosynt`
 - Extension rule: `antitone-dual-lower-cut-v1`

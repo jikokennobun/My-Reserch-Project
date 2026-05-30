@@ -134,7 +134,7 @@
     "note": "The helper bound U absorbs antitonicity requirements from b <= x; U maps back to b.",
     "residuation": "full",
     "residuation_template": "top-absorbing",
-    "residuation_report": "outputs\\residuated-top-absorbing-report-bottom-nfg2-depth-3.json",
+    "residuation_report": "artifacts/reports/residuated-top-absorbing-report-bottom-nfg2-depth-3.json",
     "residuation_assumptions": "commutative tensor with unit T, zero b, and absorber U"
   },
   "unit": "T",

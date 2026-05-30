@@ -9,15 +9,15 @@ First implementation:
 ## Planned Command
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\check-macneille-reflection.ps1 `
-  -ModelPath .\models\examples\three-element-example.json `
+powershell -ExecutionPolicy Bypass -File .\code\scripts\check-macneille-reflection.ps1 `
+  -ModelPath .\code\models\examples\three-element-example.json `
   -ExtensionRule antitone-dual-lower-cut-v1 `
-  -OutputPath .\outputs\macneille-reflection-report.json
+  -OutputPath .\artifacts\reports\macneille-reflection-report.json
 ```
 
 ## Inputs
 
-- `ModelPath`: JSON file conforming to `models/finite-aps-schema.json`.
+- `ModelPath`: JSON file conforming to `code/models/finite-aps-schema.json`.
 - `ExtensionRule`: named rule for extending $\boxtimes$ to MacNeille cuts.
   The current default is `antitone-dual-lower-cut-v1`; legacy reports may still
   use `antitone-dual-lower-cut-v0`.

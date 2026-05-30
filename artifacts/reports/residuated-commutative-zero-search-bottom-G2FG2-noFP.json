@@ -1,6 +1,6 @@
 {
   "model": "bottom-G2FG2-noFP",
-  "modelPath": "models\\examples\\bottom-G2FG2-noFP.json",
+  "modelPath": "code/models/examples/bottom-G2FG2-noFP.json",
   "carrierSize": 5,
   "assumptions": {
     "commutative": true,

@@ -81,7 +81,7 @@ a syntactic $\boxtimes$-fixed point.
 
 The **first-true nFG2 depth** of a model is the least $d\ge 1$ such that
 $\mathrm{nFG2}(d)$ holds, if such a $d$ exists. The family $D_N$ in
-`notes/g2-fg2-hierarchy.md` has first-true depth $N+1$.
+`research/notes/g2-fg2-hierarchy.md` has first-true depth $N+1$.
 
 If $S$ is non-collapsed, i.e. $T\not\le_S\bot$, then G2 holds iff
 $\boxtimes T\not\le_S\bot$. Thus G2 in non-collapsed finite preAPS models is
@@ -322,7 +322,7 @@ truncated tail by a two-atom contractive front ideal, not as a direct product.
 This explains the structural-rule profile: contraction holds locally in $I$,
 while the quotient tail retains the noncontractive resource-sensitive behavior.
 The finite checker
-`scripts/check-front-shifted-extension-presentation.py` verifies this
+`code/scripts/check-front-shifted-extension-presentation.py` verifies this
 presentation on the saved depth-3, depth-4, and depth-5 instances.
 
 More generally, the **orthogonal front-width schema** replaces the front by
@@ -333,7 +333,7 @@ with pairwise zero product and idempotent diagonal, then shifts the tail to
 $$
 \{s,a_{N+1},a_{k+1},\ldots,a_N\}.
 $$
-The finite report `outputs/front-ideal-size-bound-check.json` checks this
+The finite report `artifacts/reports/front-ideal-size-bound-check.json` checks this
 schema at depths 3, 4, and 5. Front widths $k=0,1,2$ are fully residuated in
 those checks, while $k\ge3$ fails immediately by non-principal residual
 fibers: for $p\in F_k$, the fiber of $p\backslash b$ contains
@@ -387,7 +387,7 @@ b & \text{otherwise.}
 \end{cases}
 $$
 Commutativity gives the right residuals. The checker
-`scripts/check-front-width-residual-formula.py` verifies this formula with zero
+`code/scripts/check-front-width-residual-formula.py` verifies this formula with zero
 mismatches for $k=0,1,2$ at depths 3, 4, and 5.
 
 ## Open Definition Tasks

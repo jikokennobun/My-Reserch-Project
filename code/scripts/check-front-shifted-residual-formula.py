@@ -5,7 +5,7 @@ Check the closed residual table for the front-shifted B_N tensor.
 The input model should already contain tensor, leftResidual, and rightResidual
 fields produced by build-front-shifted-non-u-absorbing-residuated.py.  This
 checker compares those residual tables with the symbolic formula recorded in
-definitions.md and the topic notes.
+research/definitions.md and the topic notes.
 """
 
 import argparse

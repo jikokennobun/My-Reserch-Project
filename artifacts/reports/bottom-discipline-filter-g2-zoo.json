@@ -70,7 +70,7 @@
   "entries": [
     {
       "name": "M-000",
-      "path": "models\\examples\\M-000.json",
+      "path": "code/models/examples/M-000.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -142,7 +142,7 @@
     },
     {
       "name": "M-001",
-      "path": "models\\examples\\M-001.json",
+      "path": "code/models/examples/M-001.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -229,7 +229,7 @@
     },
     {
       "name": "M-010",
-      "path": "models\\examples\\M-010.json",
+      "path": "code/models/examples/M-010.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -304,7 +304,7 @@
     },
     {
       "name": "M-011",
-      "path": "models\\examples\\M-011.json",
+      "path": "code/models/examples/M-011.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -391,7 +391,7 @@
     },
     {
       "name": "M-100",
-      "path": "models\\examples\\M-100.json",
+      "path": "code/models/examples/M-100.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -474,7 +474,7 @@
     },
     {
       "name": "M-101",
-      "path": "models\\examples\\M-101.json",
+      "path": "code/models/examples/M-101.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -571,7 +571,7 @@
     },
     {
       "name": "M-110",
-      "path": "models\\examples\\M-110.json",
+      "path": "code/models/examples/M-110.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -654,7 +654,7 @@
     },
     {
       "name": "M-111",
-      "path": "models\\examples\\M-111.json",
+      "path": "code/models/examples/M-111.json",
       "carrierSize": 3,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -730,7 +730,7 @@
     },
     {
       "name": "M4-G2FG2FP",
-      "path": "models\\examples\\M4-G2FG2FP.json",
+      "path": "code/models/examples/M4-G2FG2FP.json",
       "carrierSize": 4,
       "bottom": "bot",
       "alreadyBottomDisciplined": false,
@@ -798,7 +798,7 @@
     },
     {
       "name": "M4-G2FG2FP-order-plus-bot-c-residuated",
-      "path": "models\\examples\\M4-G2FG2FP-order-plus-bot-c-residuated.json",
+      "path": "code/models/examples/M4-G2FG2FP-order-plus-bot-c-residuated.json",
       "carrierSize": 4,
       "bottom": "bot",
       "alreadyBottomDisciplined": true,
@@ -856,7 +856,7 @@
     },
     {
       "name": "nfg2-depth-3",
-      "path": "models\\examples\\nfg2-depth-3.json",
+      "path": "code/models/examples/nfg2-depth-3.json",
       "carrierSize": 6,
       "bottom": "s",
       "alreadyBottomDisciplined": false,
@@ -989,7 +989,7 @@
     },
     {
       "name": "bottom-nfg2-depth-3",
-      "path": "models\\examples\\bottom-nfg2-depth-3.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3.json",
       "carrierSize": 8,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1047,7 +1047,7 @@
     },
     {
       "name": "bottom-nfg2-depth-3-residuated",
-      "path": "models\\examples\\bottom-nfg2-depth-3-residuated.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-residuated.json",
       "carrierSize": 8,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1105,7 +1105,7 @@
     },
     {
       "name": "bottom-nfg2-depth-3-u-absorbing-minU",
-      "path": "models\\examples\\bottom-nfg2-depth-3-u-absorbing-minU.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json",
       "carrierSize": 8,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1163,7 +1163,7 @@
     },
     {
       "name": "bottom-nfg2-depth-3-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-3-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-non-u-absorbing.json",
       "carrierSize": 8,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1221,7 +1221,7 @@
     },
     {
       "name": "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
       "carrierSize": 8,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1279,7 +1279,7 @@
     },
     {
       "name": "bottom-nfg2-depth-4",
-      "path": "models\\examples\\bottom-nfg2-depth-4.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4.json",
       "carrierSize": 9,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1337,7 +1337,7 @@
     },
     {
       "name": "bottom-nfg2-depth-4-truncated-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-4-truncated-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json",
       "carrierSize": 9,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1395,7 +1395,7 @@
     },
     {
       "name": "bottom-nfg2-depth-4-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-4-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4-non-u-absorbing.json",
       "carrierSize": 9,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1453,7 +1453,7 @@
     },
     {
       "name": "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
       "carrierSize": 9,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1511,7 +1511,7 @@
     },
     {
       "name": "bottom-nfg2-depth-5",
-      "path": "models\\examples\\bottom-nfg2-depth-5.json",
+      "path": "code/models/examples/bottom-nfg2-depth-5.json",
       "carrierSize": 10,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1569,7 +1569,7 @@
     },
     {
       "name": "bottom-nfg2-depth-5-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
       "carrierSize": 10,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1627,7 +1627,7 @@
     },
     {
       "name": "bottom-G2FG2-noFP",
-      "path": "models\\examples\\bottom-G2FG2-noFP.json",
+      "path": "code/models/examples/bottom-G2FG2-noFP.json",
       "carrierSize": 5,
       "bottom": "b",
       "alreadyBottomDisciplined": true,
@@ -1681,7 +1681,7 @@
     },
     {
       "name": "bottom-G2FG2-noFP-residuated",
-      "path": "models\\examples\\bottom-G2FG2-noFP-residuated.json",
+      "path": "code/models/examples/bottom-G2FG2-noFP-residuated.json",
       "carrierSize": 5,
       "bottom": "b",
       "alreadyBottomDisciplined": true,

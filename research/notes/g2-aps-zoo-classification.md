@@ -36,7 +36,7 @@ does not.
 | `nFG2(k)` | $\boxtimes^{k+1}T\leq\boxtimes^k T$ holds (generalization; $k=1$ is FG2) |
 | `none` | Neither G2 nor FG2 |
 
-**Certified independence results** (from `notes/g2-fg2-hierarchy.md`):
+**Certified independence results** (from `research/notes/g2-fg2-hierarchy.md`):
 
 $$
 \mathrm{FG2}\not\Rightarrow\mathrm{G2}\quad(\text{M-010}),
@@ -53,7 +53,7 @@ $$
 nFG2($2$); more generally its TFTFTFTF... pattern refutes odd-step
 implications nFG2($k$) $\Rightarrow$ nFG2($k+1$). Even-step and
 arbitrary-depth strictness remain finite-model search problems. See
-`notes/g2-fg2-hierarchy.md` for the corrected status.
+`research/notes/g2-fg2-hierarchy.md` for the corrected status.
 
 ### I.3 Completion Fixed-Point Type
 
@@ -115,7 +115,7 @@ mathematically uninteresting as a reflection test.
 
 Current search status: `M4-G2FG2FP` is certified `res-none` on its original
 carrier and order. The exhaustive report
-`outputs/residuated-search-M4-G2FG2FP.json` finds no full residuated monoid
+`artifacts/reports/residuated-search-M4-G2FG2FP.json` finds no full residuated monoid
 expansion for any choice of unit. The same carrier becomes `res-full` after the
 single order repair $\bot\le c$, recorded as
 `M4-G2FG2FP-order-plus-bot-c-residuated`.
@@ -127,7 +127,7 @@ the next classification question is which G2-ZOO witnesses survive this
 bottom-discipline filter.
 
 The finite filter report
-`outputs/bottom-discipline-filter-g2-zoo.json` checks this directly. Under pure
+`artifacts/reports/bottom-discipline-filter-g2-zoo.json` checks this directly. Under pure
 order enforcement, while keeping $\boxtimes$ fixed:
 
 - antitonicity survives for `M-000`, `M-010`, `M-111`, `M4-G2FG2FP`, and the
@@ -174,7 +174,7 @@ order enforcement, while keeping $\boxtimes$ fixed:
 | `full-struct` | All of W, C, E (lattice-ordered case) |
 
 The comparison report
-`outputs/structural-rules-front-shifted-comparison.json` checks these rules on
+`artifacts/reports/structural-rules-front-shifted-comparison.json` checks these rules on
 the current residuated witnesses. All eight checked tensors satisfy exchange.
 None satisfies the strong weakening rule $a\le b\Rightarrow a\otimes c\le b$
 or its reflexive discarding instance $a\otimes c\le a$; the failures already
@@ -188,10 +188,10 @@ front $I=\{b,a_1,a_2\}$ is a downward closed two-sided tensor ideal, with
 $a_1,a_2$ forming an orthogonal idempotent zero-band. Collapsing $I$ to
 $b$ yields the shifted truncated tail monoid on
 $\{b,T,U,s,a_{N+1},a_3,\ldots,a_N\}$. The report
-`outputs/front-shifted-extension-presentation-check.json` verifies this at
+`artifacts/reports/front-shifted-extension-presentation-check.json` verifies this at
 depths 3, 4, and 5.
 
-The follow-up report `outputs/front-ideal-size-bound-check.json` tests the
+The follow-up report `artifacts/reports/front-ideal-size-bound-check.json` tests the
 same-order orthogonal-front schema with front widths $k=0,1,\ldots$. In the
 checked depths 3, 4, and 5, widths $0,1,2$ are residuated and width $3$ is
 the first failure. The failure is caused by non-principal residual fibers:
@@ -199,7 +199,7 @@ with three front atoms, $p\backslash b$ has two incomparable maximal
 candidates in $F_k\setminus\{p\}$.
 
 The residual table for the positive widths is now checked by
-`outputs/front-width-residual-formula-check.json`. It verifies the uniform
+`artifacts/reports/front-width-residual-formula-check.json`. It verifies the uniform
 closed formula for $k=0,1,2$ against generated residuals at depths 3, 4, and
 5, with zero mismatches.
 
@@ -223,7 +223,7 @@ APS axioms is currently cited.
 
 ## Current Model Registry
 
-All entries below are machine-certified by `scripts/check-g2-zoo.py`.
+All entries below are machine-certified by `code/scripts/check-g2-zoo.py`.
 
 ### G2-ZOO separating witnesses (3-element preAPS)
 
@@ -254,72 +254,72 @@ All entries below are machine-certified by `scripts/check-g2-zoo.py`.
 | bottom-G2FG2-noFP | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined |
 | bottom-G2FG2-noFP-residuated | 5 | T | T | F | TFTFTFTF | principal-unreflected; bottom-disciplined; `res-full` with unit $T$ |
 
-All 8 witnesses are in `models/examples/M-{000..111}.json`.
+All 8 witnesses are in `code/models/examples/M-{000..111}.json`.
 The non-degenerate 4-element witness is in
-`models/examples/M4-G2FG2FP.json`; its persisted checker report is
-`outputs/g2-zoo-M4-G2FG2FP.json`.
+`code/models/examples/M4-G2FG2FP.json`; its persisted checker report is
+`artifacts/reports/g2-zoo-M4-G2FG2FP.json`.
 The arbitrary-depth nFG2 generator is
-`scripts/new-nfg2-depth-witness.ps1`; `models/examples/nfg2-depth-3.json`
+`code/scripts/new-nfg2-depth-witness.ps1`; `code/models/examples/nfg2-depth-3.json`
 certifies the first-true depth $4$ pattern.
 The bottom-disciplined arbitrary-depth generator is
-`scripts/new-bottom-nfg2-depth-witness.py`; `models/examples/bottom-nfg2-depth-3.json`
+`code/scripts/new-bottom-nfg2-depth-witness.py`; `code/models/examples/bottom-nfg2-depth-3.json`
 certifies the same first-true depth $4$ pattern while satisfying
 $\forall x(\bot\le x)$.
 Its top-absorbing same-order full-residuated expansion is
-`models/examples/bottom-nfg2-depth-3-residuated.json`, with construction report
-`outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` and checker
-report `outputs/g2-zoo-bottom-nfg2-depth-3-residuated.json`.
+`code/models/examples/bottom-nfg2-depth-3-residuated.json`, with construction report
+`artifacts/reports/residuated-top-absorbing-report-bottom-nfg2-depth-3.json` and checker
+report `artifacts/reports/g2-zoo-bottom-nfg2-depth-3-residuated.json`.
 A less top-collapsing $U$-absorbing expansion is
-`models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json`; the complete
+`code/models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json`; the complete
 constrained search report is
-`outputs/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
-checker report is `outputs/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`.
+`artifacts/reports/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
+checker report is `artifacts/reports/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`.
 An orbit-table-varying expansion that avoids $U$-absorption is
-`models/examples/bottom-nfg2-depth-3-non-u-absorbing.json`; the complete search
+`code/models/examples/bottom-nfg2-depth-3-non-u-absorbing.json`; the complete search
 report is
-`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
+`artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`, and the
 checker report is
-`outputs/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`.
+`artifacts/reports/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`.
 The next checked depth instance is
-`models/examples/bottom-nfg2-depth-4.json`, with checker report
-`outputs/g2-zoo-bottom-nfg2-depth-4.json`. Its truncated-exponent
+`code/models/examples/bottom-nfg2-depth-4.json`, with checker report
+`artifacts/reports/g2-zoo-bottom-nfg2-depth-4.json`. Its truncated-exponent
 $U$-absorbing same-order full-residuated expansion is
-`models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json`, with
+`code/models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json`, with
 construction report
-`outputs/residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json` and checker
+`artifacts/reports/residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json` and checker
 report
-`outputs/g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`.
+`artifacts/reports/g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`.
 Its non-$U$-absorbing same-order full-residuated expansion is
-`models/examples/bottom-nfg2-depth-4-non-u-absorbing.json`, found by the bounded
+`code/models/examples/bottom-nfg2-depth-4-non-u-absorbing.json`, found by the bounded
 orbit-table-varying search report
-`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` and
-checked in `outputs/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`.
+`artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` and
+checked in `artifacts/reports/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`.
 The front-shifted non-$U$-absorbing template is implemented by
-`scripts/build-front-shifted-non-u-absorbing-residuated.py`; checked expansions
+`code/scripts/build-front-shifted-non-u-absorbing-residuated.py`; checked expansions
 at depths 3, 4, and 5 are saved as
 `bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing`, with construction
-reports under `outputs/residuated-front-shifted-non-u-absorbing-*`.
+reports under `artifacts/reports/residuated-front-shifted-non-u-absorbing-*`.
 The residual formula for that template is checked by
-`scripts/check-front-shifted-residual-formula.py` and the reports
-`outputs/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`.
+`code/scripts/check-front-shifted-residual-formula.py` and the reports
+`artifacts/reports/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`.
 The ideal-extension presentation is checked by
-`scripts/check-front-shifted-extension-presentation.py` and
-`outputs/front-shifted-extension-presentation-check.json`.
+`code/scripts/check-front-shifted-extension-presentation.py` and
+`artifacts/reports/front-shifted-extension-presentation-check.json`.
 The orthogonal front-width bound is checked by
-`scripts/check-front-ideal-size-bound.py` and
-`outputs/front-ideal-size-bound-check.json`.
+`code/scripts/check-front-ideal-size-bound.py` and
+`artifacts/reports/front-ideal-size-bound-check.json`.
 The corresponding closed residual formula for widths $0,1,2$ is checked by
-`scripts/check-front-width-residual-formula.py` and
-`outputs/front-width-residual-formula-check.json`.
-The depth-5 base witness is `models/examples/bottom-nfg2-depth-5.json`, checked
-in `outputs/g2-zoo-bottom-nfg2-depth-5.json`.
+`code/scripts/check-front-width-residual-formula.py` and
+`artifacts/reports/front-width-residual-formula-check.json`.
+The depth-5 base witness is `code/models/examples/bottom-nfg2-depth-5.json`, checked
+in `artifacts/reports/g2-zoo-bottom-nfg2-depth-5.json`.
 The bottom-disciplined G2+FG2 without FP witness is
-`models/examples/bottom-G2FG2-noFP.json`, checked in
-`outputs/g2-zoo-bottom-G2FG2-noFP.json`.
+`code/models/examples/bottom-G2FG2-noFP.json`, checked in
+`artifacts/reports/g2-zoo-bottom-G2FG2-noFP.json`.
 Its full-residuated same-order expansion is
-`models/examples/bottom-G2FG2-noFP-residuated.json`, with search report
-`outputs/residuated-commutative-zero-search-bottom-G2FG2-noFP.json` and checker
-report `outputs/g2-zoo-bottom-G2FG2-noFP-residuated.json`.
+`code/models/examples/bottom-G2FG2-noFP-residuated.json`, with search report
+`artifacts/reports/residuated-commutative-zero-search-bottom-G2FG2-noFP.json` and checker
+report `artifacts/reports/g2-zoo-bottom-G2FG2-noFP-residuated.json`.
 
 ### MacNeille reflection witnesses
 
@@ -366,7 +366,7 @@ The following separation problems should each be attacked by finite model search
 
 ## Immediate Next Steps
 
-1. Add `\(n\)-FG2` definition to `definitions.md` and populate column I.2 in the
+1. Add `\(n\)-FG2` definition to `research/definitions.md` and populate column I.2 in the
    model registry.
 2. Extract precise definitions of $M_{GJ}$ and $M_G$ from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.

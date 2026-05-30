@@ -35,5 +35,5 @@ This is an Obsidian-style vault that includes both research notes and personal n
 ## Update Command
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\index-obsidian-research.ps1
+powershell -ExecutionPolicy Bypass -File .\code\scripts\index-obsidian-research.ps1
 ```

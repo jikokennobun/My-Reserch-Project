@@ -172,7 +172,7 @@ Classify candidates into:
    rounding path.
 
 The working protocol lives in
-[../models/macneille-reflection-search.md](../models/macneille-reflection-search.md).
+[../../code/models/macneille-reflection-search.md](../../code/models/macneille-reflection-search.md).
 
 ## Next Tasks
 

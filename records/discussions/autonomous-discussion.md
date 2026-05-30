@@ -74,15 +74,15 @@ useful but non-theorematic.
 Archivist:
 
 Added a concrete completion-reflection work package to
-`notes/completion-and-fixed-points.md` and promoted the corresponding proof
-problem in `open_problems.md`.
+`research/notes/completion-and-fixed-points.md` and promoted the corresponding proof
+problem in `research/open_problems.md`.
 
 Repository updates:
 
-- `logs/autonomous-discussion.md`: recorded pass 1 and advanced the state.
-- `notes/completion-and-fixed-points.md`: added the reflection-square target.
-- `open_problems.md`: added a concrete completion-reflection problem.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/discussions/autonomous-discussion.md`: recorded pass 1 and advanced the state.
+- `research/notes/completion-and-fixed-points.md`: added the reflection-square target.
+- `research/open_problems.md`: added a concrete completion-reflection problem.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -128,17 +128,17 @@ compact definable approximants.
 
 Archivist:
 
-Added MacNeille completion vocabulary to `definitions.md`, added a MacNeille
-first-test section to `notes/completion-and-fixed-points.md`, and sharpened the
+Added MacNeille completion vocabulary to `research/definitions.md`, added a MacNeille
+first-test section to `research/notes/completion-and-fixed-points.md`, and sharpened the
 open problems with an explicit variance/duality task for $\boxtimes$.
 
 Repository updates:
 
-- `logs/autonomous-discussion.md`: recorded pass 2 and advanced the state.
-- `definitions.md`: added MacNeille/completion-reflection vocabulary.
-- `notes/completion-and-fixed-points.md`: added the MacNeille first test.
-- `open_problems.md`: added a concrete antitone-extension task.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/discussions/autonomous-discussion.md`: recorded pass 2 and advanced the state.
+- `research/definitions.md`: added MacNeille/completion-reflection vocabulary.
+- `research/notes/completion-and-fixed-points.md`: added the MacNeille first test.
+- `research/open_problems.md`: added a concrete antitone-extension task.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -182,18 +182,18 @@ fragment is being checked.
 
 Archivist:
 
-Added a dedicated model-search note under `models/`, linked it from the model
+Added a dedicated model-search note under `code/models/`, linked it from the model
 README, extended the completion note with the finite-search target, and added a
 matching open problem.
 
 Repository updates:
 
-- `logs/autonomous-discussion.md`: recorded pass 3 and advanced the state.
-- `models/macneille-reflection-search.md`: added finite search protocol.
-- `models/README.md`: linked the new search target.
-- `notes/completion-and-fixed-points.md`: added finite search target.
-- `open_problems.md`: added a finite MacNeille reflection search task.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/discussions/autonomous-discussion.md`: recorded pass 3 and advanced the state.
+- `code/models/macneille-reflection-search.md`: added finite search protocol.
+- `code/models/README.md`: linked the new search target.
+- `research/notes/completion-and-fixed-points.md`: added finite search target.
+- `research/open_problems.md`: added a finite MacNeille reflection search task.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -242,11 +242,11 @@ the model README and from the MacNeille search protocol.
 
 Repository updates:
 
-- `logs/autonomous-discussion.md`: recorded pass 4 and advanced the state.
-- `models/macneille-checker-interface.md`: added checker interface contract.
-- `models/macneille-reflection-search.md`: linked the checker interface.
-- `models/README.md`: linked the checker interface.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/discussions/autonomous-discussion.md`: recorded pass 4 and advanced the state.
+- `code/models/macneille-checker-interface.md`: added checker interface contract.
+- `code/models/macneille-reflection-search.md`: linked the checker interface.
+- `code/models/README.md`: linked the checker interface.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -286,19 +286,19 @@ rather than more scaffolding.
 
 Archivist:
 
-Added `scripts/check-macneille-reflection.ps1` and a hand-checkable
-`models/examples/three-chain-antitone.json` smoke-test model. The checker
-implements the first milestone from `models/macneille-checker-interface.md` and
+Added `code/scripts/check-macneille-reflection.ps1` and a hand-checkable
+`code/models/examples/three-chain-antitone.json` smoke-test model. The checker
+implements the first milestone from `code/models/macneille-checker-interface.md` and
 keeps the extension-rule warning in its JSON report. The smoke test reports
 `principal-only`, with syntactic fixed point `m`.
 
 Repository updates:
 
-- `logs/autonomous-discussion.md`: recorded pass 5 and advanced the state.
-- `scripts/check-macneille-reflection.ps1`: added the first checker milestone.
-- `models/examples/three-chain-antitone.json`: added a smoke-test model.
+- `records/discussions/autonomous-discussion.md`: recorded pass 5 and advanced the state.
+- `code/scripts/check-macneille-reflection.ps1`: added the first checker milestone.
+- `code/models/examples/three-chain-antitone.json`: added a smoke-test model.
 - Smoke-tested the checker on the example model.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -341,7 +341,7 @@ false, and A1-A4 unchecked. The next proof obligation is to separate
 
 Archivist:
 
-Generated a JSON report under `outputs/`, linked it from `outputs/README.md`,
+Generated a JSON report under `artifacts/reports/`, linked it from `artifacts/README.md`,
 and added a first-run result section to the MacNeille reflection search note.
 This completes the initial six-pass Codex research automation cycle. On
 2026-05-25, the user clarified that the loop should not stop at six passes, so
@@ -349,13 +349,13 @@ the automation was recreated without a pass-count limit.
 
 Repository updates:
 
-- `logs/autonomous-discussion.md`: recorded pass 6 and marked the initial cycle
+- `records/discussions/autonomous-discussion.md`: recorded pass 6 and marked the initial cycle
   completed.
-- `outputs/macneille-reflection-three-chain-antitone.json`: saved the checker
+- `artifacts/reports/macneille-reflection-three-chain-antitone.json`: saved the checker
   report.
-- `outputs/README.md`: linked the MacNeille reflection report.
-- `models/macneille-reflection-search.md`: recorded the first checker result.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `artifacts/README.md`: linked the MacNeille reflection report.
+- `code/models/macneille-reflection-search.md`: recorded the first checker result.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -410,21 +410,21 @@ search.
 
 Repository updates:
 
-- `scripts/check-macneille-reflection.ps1`: added v1, dual principal checks,
+- `code/scripts/check-macneille-reflection.ps1`: added v1, dual principal checks,
   reflected status, and refined classifications.
-- `outputs/macneille-reflection-three-chain-antitone-v1.json`: saved the v1
+- `artifacts/reports/macneille-reflection-three-chain-antitone-v1.json`: saved the v1
   chain smoke-test report.
-- `outputs/macneille-reflection-three-element-nolattice-nosynt-v1.json`: saved
+- `artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json`: saved
   the v1 non-lattice separation report.
-- `models/macneille-checker-interface.md`: documented v1, reflected status, and
+- `code/models/macneille-checker-interface.md`: documented v1, reflected status, and
   extension-condition checks.
-- `models/macneille-reflection-search.md`: recorded the v1 results and marked
+- `code/models/macneille-reflection-search.md`: recorded the v1 results and marked
   v0 as legacy.
-- `notes/completion-and-fixed-points.md`: synchronized the v1 antitone
+- `research/notes/completion-and-fixed-points.md`: synchronized the v1 antitone
   extension formula and reflected/principal-unreflected vocabulary.
-- `notes/g2-aps-zoo-classification.md`: updated the current model registry to
+- `research/notes/g2-aps-zoo-classification.md`: updated the current model registry to
   use v1.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -551,27 +551,27 @@ and stabilizes at $p\in\mathrm{Fix}_\boxtimes$. nFG2($k$) holds for all
 $k\ge 1$ (pattern TTTTTTTT).
 
 This is the first certified non-degenerate witness for G2+FG2+FP-synt.
-It can be stored as `models/examples/M4-G2FG2FP.json`.
+It can be stored as `code/models/examples/M4-G2FG2FP.json`.
 
 Archivist:
 
 Added Pass 8 results: (1) orbit stabilization theorem in
-`notes/g2-fg2-hierarchy.md`; (2) "G2 in non-collapsed models" proposition in
-`definitions.md`; (3) new model `models/examples/M4-G2FG2FP.json`;
-(4) updated `open_problems.md` to mark FP-reachable vs FP-unreachable as a
-new axis; (5) updated `notes/g2-aps-zoo-classification.md` registry; and
-(6) recorded this pass in `logs/research-log.md`.
+`research/notes/g2-fg2-hierarchy.md`; (2) "G2 in non-collapsed models" proposition in
+`research/definitions.md`; (3) new model `code/models/examples/M4-G2FG2FP.json`;
+(4) updated `research/open_problems.md` to mark FP-reachable vs FP-unreachable as a
+new axis; (5) updated `research/notes/g2-aps-zoo-classification.md` registry; and
+(6) recorded this pass in `records/logs/research-log.md`.
 
 Repository updates:
 
-- `logs/autonomous-discussion.md`: recorded pass 8.
-- `notes/g2-fg2-hierarchy.md`: added orbit stabilization theorem, corollary,
+- `records/discussions/autonomous-discussion.md`: recorded pass 8.
+- `research/notes/g2-fg2-hierarchy.md`: added orbit stabilization theorem, corollary,
   implication diagram, and FP-reachable/FP-unreachable classification.
-- `definitions.md`: added G2 in non-collapsed models proposition.
-- `models/examples/M4-G2FG2FP.json`: new 4-element non-degenerate witness.
-- `notes/g2-aps-zoo-classification.md`: added M4-G2FG2FP to model registry.
-- `open_problems.md`: added FP-reachable vs FP-unreachable separation problem.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `research/definitions.md`: added G2 in non-collapsed models proposition.
+- `code/models/examples/M4-G2FG2FP.json`: new 4-element non-degenerate witness.
+- `research/notes/g2-aps-zoo-classification.md`: added M4-G2FG2FP to model registry.
+- `research/open_problems.md`: added FP-reachable vs FP-unreachable separation problem.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -611,7 +611,7 @@ non-collapsed models under the material implication reading of G2.
 Formalist:
 
 Added the definition of nFG2($k$) and the non-collapsed G2 criterion to
-`definitions.md`. The finite orbit theorem now has the exact hypothesis where
+`research/definitions.md`. The finite orbit theorem now has the exact hypothesis where
 it works: finiteness, or more generally an orbit well-foundedness/no-infinite-
 descent assumption. The checker verifies `M4-G2FG2FP` as non-collapsed with
 G2 true, FG2 true, all checked nFG2 levels true, and FP-synt at $p$. It also
@@ -628,17 +628,17 @@ its already-incorporated MacNeille requests remain closed.
 
 Repository updates:
 
-- `notes/g2-fg2-hierarchy.md`: corrected the strictness claim, added finite
+- `research/notes/g2-fg2-hierarchy.md`: corrected the strictness claim, added finite
   orbit stabilization, and recorded `M4-G2FG2FP`.
-- `definitions.md`: added nFG2($k$), all-level nFG2, and the non-collapsed G2
+- `research/definitions.md`: added nFG2($k$), all-level nFG2, and the non-collapsed G2
   criterion.
-- `models/examples/M4-G2FG2FP.json`: added the 4-element non-degenerate witness.
-- `outputs/g2-zoo-M4-G2FG2FP.json`: saved the checker report.
-- `notes/g2-aps-zoo-classification.md`: added the M4 witness and corrected the
+- `code/models/examples/M4-G2FG2FP.json`: added the 4-element non-degenerate witness.
+- `artifacts/reports/g2-zoo-M4-G2FG2FP.json`: saved the checker report.
+- `research/notes/g2-aps-zoo-classification.md`: added the M4 witness and corrected the
   nFG2 strictness status.
-- `open_problems.md`: resolved the non-degenerate G2+FG2+FP and all-level
+- `research/open_problems.md`: resolved the non-degenerate G2+FG2+FP and all-level
   nFG2-implies-G2 questions; added the infinite orbit-well-foundedness problem.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -690,15 +690,15 @@ Windows PowerShell.
 
 Repository updates:
 
-- `scripts/new-nfg2-depth-witness.ps1`: generator for the $D_N$ family.
-- `models/examples/nfg2-depth-3.json`: checked depth-3 witness.
-- `outputs/g2-zoo-nfg2-depth-3.json`: persisted checker report.
-- `scripts/check-g2-zoo.py`: accepts UTF-8 BOM JSON input.
-- `notes/g2-fg2-hierarchy.md`: added the arbitrary-depth construction theorem.
-- `definitions.md`: added first-true nFG2 depth.
-- `open_problems.md`: resolved arbitrary-depth first-true witnesses and opened
+- `code/scripts/new-nfg2-depth-witness.ps1`: generator for the $D_N$ family.
+- `code/models/examples/nfg2-depth-3.json`: checked depth-3 witness.
+- `artifacts/reports/g2-zoo-nfg2-depth-3.json`: persisted checker report.
+- `code/scripts/check-g2-zoo.py`: accepts UTF-8 BOM JSON input.
+- `research/notes/g2-fg2-hierarchy.md`: added the arbitrary-depth construction theorem.
+- `research/definitions.md`: added first-true nFG2 depth.
+- `research/open_problems.md`: resolved arbitrary-depth first-true witnesses and opened
   the structural-axiom preservation problem.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -744,8 +744,8 @@ full residuated monoid expansion on the existing four-element order.
 
 Archivist:
 
-Added `scripts/search-residuated-tensor.py`, generated
-`outputs/residuated-search-M4-G2FG2FP.json`, and updated the G2/FG2 hierarchy,
+Added `code/scripts/search-residuated-tensor.py`, generated
+`artifacts/reports/residuated-search-M4-G2FG2FP.json`, and updated the G2/FG2 hierarchy,
 residuated-domain note, model/output indexes, open problems, and active
 questions. The previous open problem is resolved negatively in the strict
 same-order sense and replaced by a sharper search for a modified or expanded
@@ -753,15 +753,15 @@ full-residuated witness.
 
 Repository updates:
 
-- `scripts/search-residuated-tensor.py`: exhaustive tensor/residual search.
-- `outputs/residuated-search-M4-G2FG2FP.json`: negative finite search report.
-- `notes/g2-fg2-hierarchy.md`: recorded the same-order full-residuation
+- `code/scripts/search-residuated-tensor.py`: exhaustive tensor/residual search.
+- `artifacts/reports/residuated-search-M4-G2FG2FP.json`: negative finite search report.
+- `research/notes/g2-fg2-hierarchy.md`: recorded the same-order full-residuation
   obstruction for `M4-G2FG2FP`.
-- `notes/residuated-algebra-domain-completion.md`: added the M4 obstruction and
+- `research/notes/residuated-algebra-domain-completion.md`: added the M4 obstruction and
   next residuated-search direction.
-- `open_problems.md`: resolved the same-order M4 full-residuation question
+- `research/open_problems.md`: resolved the same-order M4 full-residuation question
   negatively and opened the modified/expanded witness problem.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -811,19 +811,19 @@ model/output index, open-problem, and active-question notes.
 
 Repository updates:
 
-- `scripts/search-residuated-order-expansions.py`: same-carrier order repair
+- `code/scripts/search-residuated-order-expansions.py`: same-carrier order repair
   search.
-- `models/examples/M4-G2FG2FP-order-plus-bot-c-residuated.json`: full-residuated
+- `code/models/examples/M4-G2FG2FP-order-plus-bot-c-residuated.json`: full-residuated
   order repair of the M4 witness.
-- `outputs/residuated-order-search-M4-G2FG2FP.json`: order-extension search
+- `artifacts/reports/residuated-order-search-M4-G2FG2FP.json`: order-extension search
   report.
-- `outputs/g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`: checker report
+- `artifacts/reports/g2-zoo-M4-G2FG2FP-order-plus-bot-c-residuated.json`: checker report
   for the repaired witness.
-- `models/finite-aps-schema.json`: documented optional `unit`, `tensor`, and
+- `code/models/finite-aps-schema.json`: documented optional `unit`, `tensor`, and
   residual tables.
-- `open_problems.md`: resolved the modified same-carrier full-residuation
+- `research/open_problems.md`: resolved the modified same-carrier full-residuation
   search and opened the interpretation problem for $\bot\le c$.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -879,19 +879,19 @@ $\forall x(\bot\le x)$?
 
 Repository updates:
 
-- `definitions.md`: defined bottom discipline as
+- `research/definitions.md`: defined bottom discipline as
   $\forall x(\bot\le x)$, with the M4 repair as its missing instance.
-- `notes/g2-fg2-hierarchy.md`: interpreted $\bot\le c$ as
+- `research/notes/g2-fg2-hierarchy.md`: interpreted $\bot\le c$ as
   ex-falso/absurdity weakening for the $c$-branch.
-- `notes/residuated-algebra-domain-completion.md`: recorded the Boolean-lattice
+- `research/notes/residuated-algebra-domain-completion.md`: recorded the Boolean-lattice
   reading of the repaired order and the remaining BS16/resource-sensitive risk.
-- `notes/g2-aps-zoo-classification.md`: added bottom discipline as the next
+- `research/notes/g2-aps-zoo-classification.md`: added bottom discipline as the next
   model-classification filter.
-- `open_problems.md` and `ideas/research-questions.md`: replaced the raw
+- `research/open_problems.md` and `research/ideas/research-questions.md`: replaced the raw
   interpretation question with the bottom-discipline preservation problem.
-- `models/examples/M4-G2FG2FP-order-plus-bot-c-residuated.json`: added the
+- `code/models/examples/M4-G2FG2FP-order-plus-bot-c-residuated.json`: added the
   repair interpretation to metadata.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -924,7 +924,7 @@ refutability maps.
 
 Formalist:
 
-The report `outputs/bottom-discipline-filter-g2-zoo.json` checks 11 models.
+The report `artifacts/reports/bottom-discipline-filter-g2-zoo.json` checks 11 models.
 Only `M4-G2FG2FP-order-plus-bot-c-residuated` already satisfies bottom
 discipline. Pure enforcement preserves antitonicity for `M-000`, `M-010`,
 `M-111`, `M4-G2FG2FP`, and the repaired M4 model. Full recorded behavior is
@@ -936,7 +936,7 @@ would require $a_1,a_2,a_3,a_4\le s$ by antitonicity.
 
 Archivist:
 
-Added `scripts/check-bottom-discipline.py`, generated the bottom-discipline
+Added `code/scripts/check-bottom-discipline.py`, generated the bottom-discipline
 filter report, updated the hierarchy, classification, residuated-domain,
 model/output index, open-problem, active-question, and research-log notes. The
 new research target is now concrete: find bottom-disciplined replacement
@@ -944,21 +944,21 @@ witnesses for the separations lost under pure order enforcement.
 
 Repository updates:
 
-- `scripts/check-bottom-discipline.py`: finite bottom-discipline filter and
+- `code/scripts/check-bottom-discipline.py`: finite bottom-discipline filter and
   pure order-enforcement report generator.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: report for the eight 3-element
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: report for the eight 3-element
   G2-ZOO witnesses, `M4-G2FG2FP`, its repaired residuated version, and
   `nfg2-depth-3`.
-- `notes/g2-fg2-hierarchy.md`: added the bottom-discipline filter table and
+- `research/notes/g2-fg2-hierarchy.md`: added the bottom-discipline filter table and
   consequences for current separations.
-- `notes/g2-aps-zoo-classification.md`: recorded which witnesses survive pure
+- `research/notes/g2-aps-zoo-classification.md`: recorded which witnesses survive pure
   bottom enforcement.
-- `notes/residuated-algebra-domain-completion.md`: noted that bottom discipline
+- `research/notes/residuated-algebra-domain-completion.md`: noted that bottom discipline
   is a real structural filter and kills the current $D_N$ witness.
-- `open_problems.md` and `ideas/research-questions.md`: closed the current
+- `research/open_problems.md` and `research/ideas/research-questions.md`: closed the current
   filter run and opened the replacement-witness search.
-- `models/README.md` and `outputs/README.md`: indexed the new script and report.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `code/models/README.md` and `artifacts/README.md`: indexed the new script and report.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -1011,26 +1011,26 @@ bottom-disciplined replacement target is G2+FG2 without FP-synt.
 
 Repository updates:
 
-- `scripts/new-bottom-nfg2-depth-witness.py`: generator for the
+- `code/scripts/new-bottom-nfg2-depth-witness.py`: generator for the
   bottom-disciplined $B_N$ family.
-- `models/examples/bottom-nfg2-depth-3.json`: checked depth-3
+- `code/models/examples/bottom-nfg2-depth-3.json`: checked depth-3
   bottom-disciplined witness.
-- `outputs/g2-zoo-bottom-nfg2-depth-3.json`: checker report with pattern
+- `artifacts/reports/g2-zoo-bottom-nfg2-depth-3.json`: checker report with pattern
   `FFFTTTTT`.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: updated filter report now
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: updated filter report now
   includes `bottom-nfg2-depth-3`.
-- `notes/g2-fg2-hierarchy.md`: added the $B_N$ construction theorem and proof
+- `research/notes/g2-fg2-hierarchy.md`: added the $B_N$ construction theorem and proof
   sketch.
-- `notes/g2-aps-zoo-classification.md`: added the new registry row and revised
+- `research/notes/g2-aps-zoo-classification.md`: added the new registry row and revised
   the bottom-discipline next target.
-- `notes/residuated-algebra-domain-completion.md`: recorded the role separation
+- `research/notes/residuated-algebra-domain-completion.md`: recorded the role separation
   $b$ versus $s$ and helper upper bound $U$.
-- `open_problems.md` and `ideas/research-questions.md`: resolved the
+- `research/open_problems.md` and `research/ideas/research-questions.md`: resolved the
   bottom-disciplined G2-not-FG2/arbitrary-depth targets and opened the
   G2+FG2-without-FP target.
-- `models/README.md` and `outputs/README.md`: indexed the new generator, model,
+- `code/models/README.md` and `artifacts/README.md`: indexed the new generator, model,
   and report.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -1088,21 +1088,21 @@ G2/FG2/FP-synt separations; the next test is residuation.
 
 Repository updates:
 
-- `models/examples/bottom-G2FG2-noFP.json`: 5-element bottom-disciplined
+- `code/models/examples/bottom-G2FG2-noFP.json`: 5-element bottom-disciplined
   G2+FG2 without FP-synt witness.
-- `outputs/g2-zoo-bottom-G2FG2-noFP.json`: checker report for the new witness.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include
+- `artifacts/reports/g2-zoo-bottom-G2FG2-noFP.json`: checker report for the new witness.
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: updated to include
   `bottom-G2FG2-noFP`.
-- `notes/g2-fg2-hierarchy.md`: added the construction and proof sketch.
-- `notes/g2-aps-zoo-classification.md`: added the registry row and revised the
+- `research/notes/g2-fg2-hierarchy.md`: added the construction and proof sketch.
+- `research/notes/g2-aps-zoo-classification.md`: added the registry row and revised the
   immediate target.
-- `notes/residuated-algebra-domain-completion.md`: recorded the new witness as
+- `research/notes/residuated-algebra-domain-completion.md`: recorded the new witness as
   the next residuation test case.
-- `open_problems.md` and `ideas/research-questions.md`: closed the
+- `research/open_problems.md` and `research/ideas/research-questions.md`: closed the
   bottom-disciplined G2+FG2-without-FP task and opened the residuated-upgrade
   question.
-- `models/README.md` and `outputs/README.md`: indexed the new model and report.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `code/models/README.md` and `artifacts/README.md`: indexed the new model and report.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -1135,7 +1135,7 @@ are independently checkable witnesses.
 
 Formalist:
 
-`scripts/search-residuated-commutative-zero.py` checks the commutative
+`code/scripts/search-residuated-commutative-zero.py` checks the commutative
 fixed-unit/fixed-zero space with unit $T$ and zero $b$. It searches
 $5^6=15625$ tensors and finds 8 full-residuated candidates. The persisted
 example has $b$ absorbing, $T$ as unit, $U\otimes U=U$,
@@ -1154,22 +1154,22 @@ questions, and research log.
 
 Repository updates:
 
-- `scripts/search-residuated-tensor.py`: distinguishes "not searched because
+- `code/scripts/search-residuated-tensor.py`: distinguishes "not searched because
   too large" from a negative searched result.
-- `scripts/search-residuated-commutative-zero.py`: targeted finite search with
+- `code/scripts/search-residuated-commutative-zero.py`: targeted finite search with
   fixed unit, fixed zero, and commutativity.
-- `outputs/residuated-search-bottom-G2FG2-noFP.json`: unrestricted search-space
+- `artifacts/reports/residuated-search-bottom-G2FG2-noFP.json`: unrestricted search-space
   report for the 5-element witness.
-- `outputs/residuated-commutative-zero-search-bottom-G2FG2-noFP.json`: positive
+- `artifacts/reports/residuated-commutative-zero-search-bottom-G2FG2-noFP.json`: positive
   constrained search report with 8 full-residuated candidates.
-- `models/examples/bottom-G2FG2-noFP-residuated.json`: same-order full
+- `code/models/examples/bottom-G2FG2-noFP-residuated.json`: same-order full
   residuated expansion.
-- `outputs/g2-zoo-bottom-G2FG2-noFP-residuated.json`: checker report for the
+- `artifacts/reports/g2-zoo-bottom-G2FG2-noFP-residuated.json`: checker report for the
   expansion.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: updated to include the
   residuated expansion.
-- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
-  `logs/research-log.md`: recorded the result and moved the next target to the
+- Topic notes, indexes, `research/open_problems.md`, `research/ideas/research-questions.md`, and
+  `records/logs/research-log.md`: recorded the result and moved the next target to the
   bottom-disciplined $B_N$ family.
 
 Next step:
@@ -1204,7 +1204,7 @@ conditions.
 
 Formalist:
 
-Added `scripts/build-top-absorbing-residuated-expansion.py`. For a chosen unit
+Added `code/scripts/build-top-absorbing-residuated-expansion.py`. For a chosen unit
 $e$, zero $z$, and absorber $u$, it builds
 $$
 z\otimes x=z,\qquad e\otimes x=x,\qquad x\otimes y=u
@@ -1225,20 +1225,20 @@ log.
 
 Repository updates:
 
-- `scripts/build-top-absorbing-residuated-expansion.py`: constructive
+- `code/scripts/build-top-absorbing-residuated-expansion.py`: constructive
   top-absorbing full-residuation builder/checker.
-- `scripts/check-g2-zoo.py`: adds `--output` for writing checker JSON reports
+- `code/scripts/check-g2-zoo.py`: adds `--output` for writing checker JSON reports
   without shell redirection.
-- `models/examples/bottom-nfg2-depth-3-residuated.json`: same-order full
+- `code/models/examples/bottom-nfg2-depth-3-residuated.json`: same-order full
   residuated expansion of the checked $B_3$ witness.
-- `outputs/residuated-top-absorbing-report-bottom-nfg2-depth-3.json`:
+- `artifacts/reports/residuated-top-absorbing-report-bottom-nfg2-depth-3.json`:
   construction and verification report.
-- `outputs/g2-zoo-bottom-nfg2-depth-3-residuated.json`: checker report for the
+- `artifacts/reports/g2-zoo-bottom-nfg2-depth-3-residuated.json`: checker report for the
   expansion.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: updated to include the new
   residuated expansion.
-- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
-  `logs/research-log.md`: moved the next task to proving the uniform $B_N$
+- Topic notes, indexes, `research/open_problems.md`, `research/ideas/research-questions.md`, and
+  `records/logs/research-log.md`: moved the next task to proving the uniform $B_N$
   residuation lemma and searching for less explosive tensors.
 
 Next step:
@@ -1301,15 +1301,15 @@ tensors or proving an obstruction.
 
 Repository updates:
 
-- `notes/g2-fg2-hierarchy.md`: added the uniform $B_N$ tensor and residual
+- `research/notes/g2-fg2-hierarchy.md`: added the uniform $B_N$ tensor and residual
   proof sketch.
-- `notes/residuated-algebra-domain-completion.md`: added the same lemma from
+- `research/notes/residuated-algebra-domain-completion.md`: added the same lemma from
   the residuated-APS perspective.
-- `open_problems.md`: closed uniform top-absorbing existence and opened the
+- `research/open_problems.md`: closed uniform top-absorbing existence and opened the
   finer-tensor/obstruction question.
-- `ideas/research-questions.md`: retargeted the active question to the
+- `research/ideas/research-questions.md`: retargeted the active question to the
   less-top-collapsing tensor problem.
-- `logs/research-log.md`: recorded this autonomous pass.
+- `records/logs/research-log.md`: recorded this autonomous pass.
 
 Next step:
 
@@ -1339,7 +1339,7 @@ answer is positive for $B_3$, but the new pattern may still be depth-specific.
 
 Formalist:
 
-Added `scripts/search-u-absorbing-residuated.py`. It performs a complete
+Added `code/scripts/search-u-absorbing-residuated.py`. It performs a complete
 branch-and-bound search under the $U$-absorbing constraints, checks
 associativity, monotonicity, and principal residual fibers, and emits residual
 tables for the best witness. For `bottom-nfg2-depth-3`, the top-absorbing
@@ -1364,17 +1364,17 @@ is depth-specific, and then test whether $U$-absorption can be weakened.
 
 Repository updates:
 
-- `scripts/search-u-absorbing-residuated.py`: complete constrained search for
+- `code/scripts/search-u-absorbing-residuated.py`: complete constrained search for
   less top-collapsing $U$-absorbing tensors.
-- `models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json`: new
+- `code/models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json`: new
   full-residuated witness with 7 $U$-valued searched products.
-- `outputs/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`: search
+- `artifacts/reports/residuated-u-absorbing-search-bottom-nfg2-depth-3.json`: search
   report.
-- `outputs/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`: checker report.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+- `artifacts/reports/g2-zoo-bottom-nfg2-depth-3-u-absorbing-minU.json`: checker report.
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: updated to include the new
   expansion.
-- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
-  `logs/research-log.md`: recorded the result and retargeted the next problem.
+- Topic notes, indexes, `research/open_problems.md`, `research/ideas/research-questions.md`, and
+  `records/logs/research-log.md`: recorded the result and retargeted the next problem.
 
 Next step:
 
@@ -1406,7 +1406,7 @@ top-absorbing tensor, and it gives a concrete uniform conjecture to prove.
 
 Formalist:
 
-Added `scripts/build-truncated-u-absorbing-residuated.py`. It infers $N$
+Added `code/scripts/build-truncated-u-absorbing-residuated.py`. It infers $N$
 from the `a_i` names, constructs the truncated-exponent tensor, checks unit,
 zero, commutativity, associativity, monotonicity, principal left/right
 residuals, and the full residuation law, then emits both the verification
@@ -1427,22 +1427,22 @@ $U$-absorption itself is forced.
 
 Repository updates:
 
-- `scripts/build-truncated-u-absorbing-residuated.py`: constructive
+- `code/scripts/build-truncated-u-absorbing-residuated.py`: constructive
   truncated-exponent $U$-absorbing residuation builder/checker.
-- `models/examples/bottom-nfg2-depth-4.json`: checked depth-4
+- `code/models/examples/bottom-nfg2-depth-4.json`: checked depth-4
   bottom-disciplined arbitrary-depth witness.
-- `models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json`:
+- `code/models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json`:
   same-order full-residuated expansion.
-- `outputs/residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json`:
+- `artifacts/reports/residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json`:
   construction and verification report.
-- `outputs/g2-zoo-bottom-nfg2-depth-4.json`: checker report for the base
+- `artifacts/reports/g2-zoo-bottom-nfg2-depth-4.json`: checker report for the base
   witness.
-- `outputs/g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`: checker
+- `artifacts/reports/g2-zoo-bottom-nfg2-depth-4-truncated-u-absorbing.json`: checker
   report for the expanded witness.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: updated to include the new
   base and expanded witnesses.
-- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
-  `logs/research-log.md`: recorded the depth-4 result and retargeted the next
+- Topic notes, indexes, `research/open_problems.md`, `research/ideas/research-questions.md`, and
+  `records/logs/research-log.md`: recorded the depth-4 result and retargeted the next
   proof task.
 
 Next step:
@@ -1520,23 +1520,23 @@ $B_N$ carrier and order.
 
 Archivist:
 
-Recorded the tensor definition in `definitions.md`, added the uniform proof and
+Recorded the tensor definition in `research/definitions.md`, added the uniform proof and
 residual table to the hierarchy and residuated-domain notes, closed the
-uniform-template proof task in `open_problems.md`, and retargeted the active
+uniform-template proof task in `research/open_problems.md`, and retargeted the active
 question to weakening or refuting the $U$-absorbing assumption.
 
 Repository updates:
 
-- `definitions.md`: added the truncated-exponent $U$-absorbing tensor
+- `research/definitions.md`: added the truncated-exponent $U$-absorbing tensor
   definition for $B_N$.
-- `notes/g2-fg2-hierarchy.md`: added the uniform proof, monotonicity argument,
+- `research/notes/g2-fg2-hierarchy.md`: added the uniform proof, monotonicity argument,
   and residual table.
-- `notes/residuated-algebra-domain-completion.md`: recorded the same lemma from
+- `research/notes/residuated-algebra-domain-completion.md`: recorded the same lemma from
   the residuated-APS perspective.
-- `open_problems.md` and `ideas/research-questions.md`: marked the uniform
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked the uniform
   template proof resolved and moved the next question to weakening
   $U$-absorption.
-- `notes/g2-aps-zoo-classification.md` and `logs/research-log.md`: updated the
+- `research/notes/g2-aps-zoo-classification.md` and `records/logs/research-log.md`: updated the
   next-step registry and research trace.
 
 Next step:
@@ -1567,7 +1567,7 @@ changes.
 
 Formalist:
 
-Added `scripts/analyze-truncated-u-forcing.py`. The analyzer fixes $T$ as
+Added `code/scripts/analyze-truncated-u-forcing.py`. The analyzer fixes $T$ as
 unit, $b$ as zero, and the truncated-exponent products on $A_N$, but does
 not assume $U\otimes x=U$. It checks whether monotonicity against the top
 relation $x\le U$ already forces those products. On both
@@ -1589,16 +1589,16 @@ non-$U$-absorbing same-order residuated tensor.
 
 Repository updates:
 
-- `scripts/analyze-truncated-u-forcing.py`: analyzer for monotonicity-forced
+- `code/scripts/analyze-truncated-u-forcing.py`: analyzer for monotonicity-forced
   $U$-products relative to the truncated orbit table.
-- `outputs/truncated-u-forcing-bottom-nfg2-depth-3.json`: B3 forcing report.
-- `outputs/truncated-u-forcing-bottom-nfg2-depth-4.json`: B4 forcing report.
-- `notes/g2-fg2-hierarchy.md` and
-  `notes/residuated-algebra-domain-completion.md`: recorded the relative
+- `artifacts/reports/truncated-u-forcing-bottom-nfg2-depth-3.json`: B3 forcing report.
+- `artifacts/reports/truncated-u-forcing-bottom-nfg2-depth-4.json`: B4 forcing report.
+- `research/notes/g2-fg2-hierarchy.md` and
+  `research/notes/residuated-algebra-domain-completion.md`: recorded the relative
   obstruction.
-- `open_problems.md`, `ideas/research-questions.md`,
-  `notes/g2-aps-zoo-classification.md`, `models/README.md`,
-  `outputs/README.md`, and `logs/research-log.md`: updated the trace and next
+- `research/open_problems.md`, `research/ideas/research-questions.md`,
+  `research/notes/g2-aps-zoo-classification.md`, `code/models/README.md`,
+  `artifacts/README.md`, and `records/logs/research-log.md`: updated the trace and next
   target.
 
 Next step:
@@ -1631,7 +1631,7 @@ pruning lemma.
 
 Formalist:
 
-Added `scripts/search-non-u-absorbing-residuated.py`. It fixes commutativity,
+Added `code/scripts/search-non-u-absorbing-residuated.py`. It fixes commutativity,
 unit $T$, and zero $b$, does not assume $U$-absorption, and does not fix
 the orbit product table. For each $U$-action pattern, it prunes domains using
 monotonicity, then checks associativity, monotonicity, and principal left/right
@@ -1650,16 +1650,16 @@ fibers.
 
 Repository updates:
 
-- `scripts/search-non-u-absorbing-residuated.py`: orbit-table-varying search
+- `code/scripts/search-non-u-absorbing-residuated.py`: orbit-table-varying search
   that does not assume $U$-absorption.
-- `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`: bounded
+- `artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`: bounded
   incomplete B3 search report.
-- `notes/g2-fg2-hierarchy.md` and
-  `notes/residuated-algebra-domain-completion.md`: recorded the partial search
+- `research/notes/g2-fg2-hierarchy.md` and
+  `research/notes/residuated-algebra-domain-completion.md`: recorded the partial search
   and its limitation.
-- `open_problems.md`, `ideas/research-questions.md`,
-  `notes/g2-aps-zoo-classification.md`, `models/README.md`,
-  `outputs/README.md`, and `logs/research-log.md`: updated the next target.
+- `research/open_problems.md`, `research/ideas/research-questions.md`,
+  `research/notes/g2-aps-zoo-classification.md`, `code/models/README.md`,
+  `artifacts/README.md`, and `records/logs/research-log.md`: updated the next target.
 - Relay logs from the earlier 2026-05-28 sync were preserved: ChatGPT share
   links were unreachable, and Drive outputs had no newly relevant post-2026-05-22
   items.
@@ -1693,7 +1693,7 @@ truncated-exponent construction.
 
 Formalist:
 
-Updated `scripts/search-non-u-absorbing-residuated.py` with partial
+Updated `code/scripts/search-non-u-absorbing-residuated.py` with partial
 left/right residual-fiber pruning. The B3 search now completes: it visits 47
 $U$-action patterns, prunes 16 immediately, prunes 1537 branches by residual
 fiber obstruction, checks 475 complete assignments, and finds
@@ -1720,16 +1720,16 @@ non-$U$-absorbing pattern extends to B4 or admits a uniform $B_N$ form.
 
 Repository updates:
 
-- `scripts/search-non-u-absorbing-residuated.py`: added residual-fiber pruning.
-- `models/examples/bottom-nfg2-depth-3-non-u-absorbing.json`: full-residuated
+- `code/scripts/search-non-u-absorbing-residuated.py`: added residual-fiber pruning.
+- `code/models/examples/bottom-nfg2-depth-3-non-u-absorbing.json`: full-residuated
   non-$U$-absorbing B3 expansion.
-- `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`:
+- `artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-3.json`:
   completed positive search report.
-- `outputs/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`: checker report.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: updated to include the new
+- `artifacts/reports/g2-zoo-bottom-nfg2-depth-3-non-u-absorbing.json`: checker report.
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: updated to include the new
   expansion.
-- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
-  `logs/research-log.md`: retargeted the next problem to B4/uniform extension.
+- Topic notes, indexes, `research/open_problems.md`, `research/ideas/research-questions.md`, and
+  `records/logs/research-log.md`: retargeted the next problem to B4/uniform extension.
 
 Next step:
 
@@ -1760,7 +1760,7 @@ uniform construction.
 Formalist:
 
 The search report
-`outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` stops at
+`artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json` stops at
 1000 nodes after 48 $U$-action patterns, 697 residual-fiber prunes, and 147
 complete assignments. It nevertheless finds a fully checked same-order
 residuated expansion. In the found tensor:
@@ -1787,15 +1787,15 @@ $B_N$ explanation.
 
 Repository updates:
 
-- `models/examples/bottom-nfg2-depth-4-non-u-absorbing.json`: B4 same-order
+- `code/models/examples/bottom-nfg2-depth-4-non-u-absorbing.json`: B4 same-order
   full-residuated non-$U$-absorbing expansion.
-- `outputs/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json`:
+- `artifacts/reports/residuated-non-u-absorbing-search-bottom-nfg2-depth-4.json`:
   bounded positive search report.
-- `outputs/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`: checker report.
-- `outputs/bottom-discipline-filter-g2-zoo.json`: refreshed with the B4
+- `artifacts/reports/g2-zoo-bottom-nfg2-depth-4-non-u-absorbing.json`: checker report.
+- `artifacts/reports/bottom-discipline-filter-g2-zoo.json`: refreshed with the B4
   expansion.
-- Topic notes, indexes, `open_problems.md`, `ideas/research-questions.md`, and
-  `logs/research-log.md`: retargeted the next problem to a uniform $B_N$
+- Topic notes, indexes, `research/open_problems.md`, `research/ideas/research-questions.md`, and
+  `records/logs/research-log.md`: retargeted the next problem to a uniform $B_N$
   explanation or obstruction.
 
 Next step:
@@ -1827,7 +1827,7 @@ uniform non-$U$-absorbing template candidate, not minimality or uniqueness.
 
 Formalist:
 
-Added `scripts/build-front-shifted-non-u-absorbing-residuated.py`. For
+Added `code/scripts/build-front-shifted-non-u-absorbing-residuated.py`. For
 $N\ge3$, the template splits $B_N$ into front $F=\{a_1,a_2\}$ and tail
 $R_N=\{s,a_{N+1},a_3,\ldots,a_N\}$. The front satisfies
 $$
@@ -1858,17 +1858,17 @@ write the closed residual table and prove the template for all $N\ge3$.
 
 Repository updates:
 
-- `scripts/build-front-shifted-non-u-absorbing-residuated.py`: uniform template
+- `code/scripts/build-front-shifted-non-u-absorbing-residuated.py`: uniform template
   builder/checker.
-- `models/examples/bottom-nfg2-depth-5.json`: next checked bottom-disciplined
+- `code/models/examples/bottom-nfg2-depth-5.json`: next checked bottom-disciplined
   first-true nFG2 witness.
-- `models/examples/bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing.json`:
+- `code/models/examples/bottom-nfg2-depth-{3,4,5}-front-shifted-non-u-absorbing.json`:
   checked template expansions.
-- `outputs/residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-{3,4,5}.json`
+- `artifacts/reports/residuated-front-shifted-non-u-absorbing-bottom-nfg2-depth-{3,4,5}.json`
   and matching G2-ZOO reports: construction and checker artifacts.
-- `definitions.md`, topic notes, indexes, `open_problems.md`,
-  `ideas/research-questions.md`, `outputs/bottom-discipline-filter-g2-zoo.json`,
-  and `logs/research-log.md`: updated to make the residual-table proof the next
+- `research/definitions.md`, topic notes, indexes, `research/open_problems.md`,
+  `research/ideas/research-questions.md`, `artifacts/reports/bottom-discipline-filter-g2-zoo.json`,
+  and `records/logs/research-log.md`: updated to make the residual-table proof the next
   target.
 
 Next step:
@@ -1900,20 +1900,20 @@ classification remains separate.
 
 Formalist:
 
-Recorded the closed residual table in `definitions.md` and the hierarchy note.
+Recorded the closed residual table in `research/definitions.md` and the hierarchy note.
 For $p\in\{a_1,a_2\}$, $p\backslash c$ is $U$ at targets $p,U$, and
 the other front element otherwise. For $U$, the residual is $U$ at $U$,
 the target itself at front targets, and $b$ otherwise. For tail
 $r\in R_N$, front targets return the front element, exact targets return
 $T$, shifted exponent subtraction returns $a_{N+1}$ or $a_{d+1}$, and
 impossible fibers return $b$. Commutativity gives the right residuals.
-Added `scripts/check-front-shifted-residual-formula.py`, which compares this
+Added `code/scripts/check-front-shifted-residual-formula.py`, which compares this
 symbolic table with generated residuals. The reports for depths 3, 4, and 5
 all have zero mismatches.
 
 Archivist:
 
-Updated `definitions.md`, hierarchy and residuated-domain notes, the model and
+Updated `research/definitions.md`, hierarchy and residuated-domain notes, the model and
 output indexes, open problems, active questions, and the research log. The
 front-shifted construction is now recorded as a uniform same-order
 full-residuated non-$U$-absorbing template for $B_N$ with $N\ge3$. The
@@ -1923,16 +1923,16 @@ it behaves with respect to weakening/contraction.
 
 Repository updates:
 
-- `scripts/check-front-shifted-residual-formula.py`: symbolic residual-table
+- `code/scripts/check-front-shifted-residual-formula.py`: symbolic residual-table
   checker.
-- `outputs/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`:
+- `artifacts/reports/front-shifted-residual-table-check-bottom-nfg2-depth-{3,4,5}.json`:
   zero-mismatch checks against generated left/right residuals.
-- `definitions.md`, `notes/g2-fg2-hierarchy.md`, and
-  `notes/residuated-algebra-domain-completion.md`: explicit residual table and
+- `research/definitions.md`, `research/notes/g2-fg2-hierarchy.md`, and
+  `research/notes/residuated-algebra-domain-completion.md`: explicit residual table and
   proof outline.
-- `open_problems.md`, `ideas/research-questions.md`,
-  `notes/g2-aps-zoo-classification.md`, `models/README.md`,
-  `outputs/README.md`, and `logs/research-log.md`: retargeted from residual
+- `research/open_problems.md`, `research/ideas/research-questions.md`,
+  `research/notes/g2-aps-zoo-classification.md`, `code/models/README.md`,
+  `artifacts/README.md`, and `records/logs/research-log.md`: retargeted from residual
   proof to structural interpretation.
 
 Next step:
@@ -1966,8 +1966,8 @@ visible structural signature.
 
 Formalist:
 
-Added `scripts/analyze-structural-rules.py` and saved
-`outputs/structural-rules-front-shifted-comparison.json`. All eight compared
+Added `code/scripts/analyze-structural-rules.py` and saved
+`artifacts/reports/structural-rules-front-shifted-comparison.json`. All eight compared
 residuated tensors satisfy exchange. None satisfies strong weakening or the
 reflexive discarding instance $a\otimes c\le a$; the unit already gives
 witnesses $T\otimes c=c\not\le T$. Global contraction holds only for
@@ -1987,13 +1987,13 @@ sensitivity.
 
 Repository updates:
 
-- `scripts/analyze-structural-rules.py`: structural-rule checker.
-- `outputs/structural-rules-front-shifted-comparison.json`: comparison report.
-- `definitions.md`: normalized the finite $E,C,W$ structural-rule checks.
-- `notes/g2-aps-zoo-classification.md`, `notes/g2-fg2-hierarchy.md`, and
-  `notes/residuated-algebra-domain-completion.md`: recorded the result.
-- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
-  `outputs/README.md`, and `logs/research-log.md`: retargeted the next problem
+- `code/scripts/analyze-structural-rules.py`: structural-rule checker.
+- `artifacts/reports/structural-rules-front-shifted-comparison.json`: comparison report.
+- `research/definitions.md`: normalized the finite $E,C,W$ structural-rule checks.
+- `research/notes/g2-aps-zoo-classification.md`, `research/notes/g2-fg2-hierarchy.md`, and
+  `research/notes/residuated-algebra-domain-completion.md`: recorded the result.
+- `research/open_problems.md`, `research/ideas/research-questions.md`, `code/models/README.md`,
+  `artifacts/README.md`, and `records/logs/research-log.md`: retargeted the next problem
   to algebraic presentation of the front/tail split.
 
 Next step:
@@ -2028,8 +2028,8 @@ that all same-order non-$U$-absorbing repairs arise this way.
 
 Formalist:
 
-Added `scripts/check-front-shifted-extension-presentation.py` and saved
-`outputs/front-shifted-extension-presentation-check.json`. For the checked
+Added `code/scripts/check-front-shifted-extension-presentation.py` and saved
+`artifacts/reports/front-shifted-extension-presentation-check.json`. For the checked
 depths 3, 4, and 5, the script verifies that $I=\{b,a_1,a_2\}$ is a downward
 closed two-sided tensor ideal, that $a_1,a_2$ form an orthogonal idempotent
 zero-band, and that the quotient collapsing $I$ to $b$ has representatives
@@ -2039,23 +2039,23 @@ the quotient tail keeps the noncontractive resource-sensitive product.
 
 Archivist:
 
-Recorded the ideal-extension presentation in `definitions.md`, the hierarchy
+Recorded the ideal-extension presentation in `research/definitions.md`, the hierarchy
 note, the residuated-domain note, and the G2-ZOO classification note. Updated
 the active question and open problems away from "find a presentation" and
 toward classification of possible front tensor ideals.
 
 Repository updates:
 
-- `scripts/check-front-shifted-extension-presentation.py`: verifies the
+- `code/scripts/check-front-shifted-extension-presentation.py`: verifies the
   front-ideal extension presentation.
-- `outputs/front-shifted-extension-presentation-check.json`: depth-3/4/5
+- `artifacts/reports/front-shifted-extension-presentation-check.json`: depth-3/4/5
   verification report.
-- `definitions.md`: added the front ideal-extension presentation.
-- `notes/g2-fg2-hierarchy.md`,
-  `notes/residuated-algebra-domain-completion.md`, and
-  `notes/g2-aps-zoo-classification.md`: recorded the structural reading.
-- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
-  `outputs/README.md`, and `logs/research-log.md`: retargeted the next problem
+- `research/definitions.md`: added the front ideal-extension presentation.
+- `research/notes/g2-fg2-hierarchy.md`,
+  `research/notes/residuated-algebra-domain-completion.md`, and
+  `research/notes/g2-aps-zoo-classification.md`: recorded the structural reading.
+- `research/open_problems.md`, `research/ideas/research-questions.md`, `code/models/README.md`,
+  `artifacts/README.md`, and `records/logs/research-log.md`: retargeted the next problem
   to classifying front-ideal extensions.
 
 Next step:
@@ -2092,8 +2092,8 @@ obstruction, not a search artifact.
 
 Formalist:
 
-Added `scripts/check-front-ideal-size-bound.py` and saved
-`outputs/front-ideal-size-bound-check.json`. At depths 3, 4, and 5, front
+Added `code/scripts/check-front-ideal-size-bound.py` and saved
+`artifacts/reports/front-ideal-size-bound-check.json`. At depths 3, 4, and 5, front
 widths $0,1,2$ pass the unit, zero, commutativity, associativity,
 monotonicity, principal residual, and residuation checks. Width $3$ is the
 first failure in every checked depth. The displayed witness is the expected
@@ -2102,7 +2102,7 @@ $\{b,a_2,a_3\}$, with $a_2$ and $a_3$ incomparable.
 
 Archivist:
 
-Recorded the orthogonal front-width bound in `definitions.md`, the hierarchy
+Recorded the orthogonal front-width bound in `research/definitions.md`, the hierarchy
 note, the residuated-domain note, and the G2-ZOO classification note. Retargeted
 the active problem from broad ideal classification to the uniform front-width
 theorem, especially the one-front residual table and the $k\ge3$
@@ -2110,15 +2110,15 @@ non-principal-fiber obstruction.
 
 Repository updates:
 
-- `scripts/check-front-ideal-size-bound.py`: generalized orthogonal front-width
+- `code/scripts/check-front-ideal-size-bound.py`: generalized orthogonal front-width
   checker.
-- `outputs/front-ideal-size-bound-check.json`: depth-3/4/5 report showing
+- `artifacts/reports/front-ideal-size-bound-check.json`: depth-3/4/5 report showing
   widths $0,1,2$ pass and width $3$ first fails.
-- `definitions.md`, `notes/g2-fg2-hierarchy.md`,
-  `notes/residuated-algebra-domain-completion.md`, and
-  `notes/g2-aps-zoo-classification.md`: recorded the bound and obstruction.
-- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
-  `outputs/README.md`, and `logs/research-log.md`: retargeted the next proof
+- `research/definitions.md`, `research/notes/g2-fg2-hierarchy.md`,
+  `research/notes/residuated-algebra-domain-completion.md`, and
+  `research/notes/g2-aps-zoo-classification.md`: recorded the bound and obstruction.
+- `research/open_problems.md`, `research/ideas/research-questions.md`, `code/models/README.md`,
+  `artifacts/README.md`, and `records/logs/research-log.md`: retargeted the next proof
   task.
 
 Next step:
@@ -2152,8 +2152,8 @@ changing the algebraic or APS profile.
 
 Formalist:
 
-Added `scripts/check-front-width-residual-formula.py` and saved
-`outputs/front-width-residual-formula-check.json`. For $k=0,1,2$, the script
+Added `code/scripts/check-front-width-residual-formula.py` and saved
+`artifacts/reports/front-width-residual-formula-check.json`. For $k=0,1,2$, the script
 compares a closed residual formula against generated residuals at depths 3, 4,
 and 5. The report has nine checked cases and zero mismatches. The formula uses
 $\tau_k(s)=\tau_k(a_{N+1})=1$,
@@ -2164,7 +2164,7 @@ other front atom for $k=2$. The $k=0$ case has no front clause.
 
 Archivist:
 
-Recorded the uniform residual table in `definitions.md`, updated the hierarchy
+Recorded the uniform residual table in `research/definitions.md`, updated the hierarchy
 and residuated-domain notes, and marked the orthogonal-front same-order theorem
 as resolved for the current schema. The next open direction is now deliberately
 narrower: test whether non-orthogonal front ideals or mild front-order
@@ -2172,15 +2172,15 @@ refinements can avoid the $k\ge3$ principal-fiber obstruction.
 
 Repository updates:
 
-- `scripts/check-front-width-residual-formula.py`: closed residual formula
+- `code/scripts/check-front-width-residual-formula.py`: closed residual formula
   checker for orthogonal front widths $0,1,2$.
-- `outputs/front-width-residual-formula-check.json`: zero-mismatch report for
+- `artifacts/reports/front-width-residual-formula-check.json`: zero-mismatch report for
   depths 3, 4, and 5.
-- `definitions.md`, `notes/g2-fg2-hierarchy.md`,
-  `notes/residuated-algebra-domain-completion.md`, and
-  `notes/g2-aps-zoo-classification.md`: recorded the uniform residual table.
-- `open_problems.md`, `ideas/research-questions.md`, `models/README.md`,
-  `outputs/README.md`, and `logs/research-log.md`: retargeted the next problem
+- `research/definitions.md`, `research/notes/g2-fg2-hierarchy.md`,
+  `research/notes/residuated-algebra-domain-completion.md`, and
+  `research/notes/g2-aps-zoo-classification.md`: recorded the uniform residual table.
+- `research/open_problems.md`, `research/ideas/research-questions.md`, `code/models/README.md`,
+  `artifacts/README.md`, and `records/logs/research-log.md`: retargeted the next problem
   to non-orthogonal front ideals or front-order refinements.
 
 Next step:
@@ -2390,25 +2390,25 @@ $k=3$ front ideal evading the principal-fiber obstruction. The analysis is
 purely algebraic: no new script is needed for the obstruction proof (it follows
 from the associativity failure of idempotent cyclic and the success of the
 genuine cyclic group). The Route B failure is a clean antitonicity-cascade
-argument. Updated `open_problems.md` to record the Route A resolution and the
+argument. Updated `research/open_problems.md` to record the Route A resolution and the
 Route B obstruction. Recorded the cyclic-group-front template in
-`notes/g2-fg2-hierarchy.md` and the uniform residual-table extension in
-`definitions.md`. Added a new open problem: determine the maximum front-group
+`research/notes/g2-fg2-hierarchy.md` and the uniform residual-table extension in
+`research/definitions.md`. Added a new open problem: determine the maximum front-group
 order $\lvert G\rvert$ compatible with the $B_N$ APS order, full residuation, and the
 antitone $\boxtimes$ profile.
 
 Repository updates:
 
-- `notes/g2-fg2-hierarchy.md`: added the cyclic-group $k=3$ front-ideal
+- `research/notes/g2-fg2-hierarchy.md`: added the cyclic-group $k=3$ front-ideal
   construction, the Route A/B analysis, and the resulting theorem on orthogonal
   vs.\ non-orthogonal fronts.
-- `definitions.md`: added the cyclic-group front-ideal template (identity $T$,
+- `research/definitions.md`: added the cyclic-group front-ideal template (identity $T$,
   zero $b$, group product on $F_k$, $U$ acting as group identity on $F_k$,
   tail absorbed to front element).
-- `open_problems.md`: marked the $k=3$ Route A escape as resolved and the
+- `research/open_problems.md`: marked the $k=3$ Route A escape as resolved and the
   Route B order-extension as obstructed; added the max-front-group-order problem.
-- `logs/research-log.md`: recorded Pass 33 result.
-- `ideas/research-questions.md` and `notes/g2-aps-zoo-classification.md`:
+- `records/logs/research-log.md`: recorded Pass 33 result.
+- `research/ideas/research-questions.md` and `research/notes/g2-aps-zoo-classification.md`:
   retargeted the next structural problem.
 
 Next step:

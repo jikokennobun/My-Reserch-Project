@@ -26,7 +26,7 @@
   "entries": [
     {
       "model": "bottom-nfg2-depth-3-residuated",
-      "path": "models\\examples\\bottom-nfg2-depth-3-residuated.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-residuated.json",
       "hasTensor": true,
       "carrierSize": 8,
       "rules": {
@@ -283,7 +283,7 @@
     },
     {
       "model": "bottom-nfg2-depth-3-u-absorbing-minU",
-      "path": "models\\examples\\bottom-nfg2-depth-3-u-absorbing-minU.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-u-absorbing-minU.json",
       "hasTensor": true,
       "carrierSize": 8,
       "rules": {
@@ -540,7 +540,7 @@
     },
     {
       "model": "bottom-nfg2-depth-4-truncated-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-4-truncated-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4-truncated-u-absorbing.json",
       "hasTensor": true,
       "carrierSize": 9,
       "rules": {
@@ -805,7 +805,7 @@
     },
     {
       "model": "bottom-nfg2-depth-3-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-3-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-non-u-absorbing.json",
       "hasTensor": true,
       "carrierSize": 8,
       "rules": {
@@ -1046,7 +1046,7 @@
     },
     {
       "model": "bottom-nfg2-depth-3-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-3-front-shifted-non-u-absorbing.json",
       "hasTensor": true,
       "carrierSize": 8,
       "rules": {
@@ -1287,7 +1287,7 @@
     },
     {
       "model": "bottom-nfg2-depth-4-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-4-front-shifted-non-u-absorbing.json",
       "hasTensor": true,
       "carrierSize": 9,
       "rules": {
@@ -1536,7 +1536,7 @@
     },
     {
       "model": "bottom-nfg2-depth-5-front-shifted-non-u-absorbing",
-      "path": "models\\examples\\bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
+      "path": "code/models/examples/bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json",
       "hasTensor": true,
       "carrierSize": 10,
       "rules": {
@@ -1793,7 +1793,7 @@
     },
     {
       "model": "bottom-G2FG2-noFP-residuated",
-      "path": "models\\examples\\bottom-G2FG2-noFP-residuated.json",
+      "path": "code/models/examples/bottom-G2FG2-noFP-residuated.json",
       "hasTensor": true,
       "carrierSize": 5,
       "rules": {

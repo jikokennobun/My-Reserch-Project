@@ -1,6 +1,6 @@
 {
   "model": "M4-G2FG2FP",
-  "modelPath": "models\\examples\\M4-G2FG2FP.json",
+  "modelPath": "code/models/examples/M4-G2FG2FP.json",
   "carrierSize": 4,
   "searchedUnits": [
     "bot",

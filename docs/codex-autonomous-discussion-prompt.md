@@ -7,11 +7,11 @@ Run the next autonomous research discussion pass for this repository.
 Read:
 
 - `docs/codex-research-automation.md`
-- `logs/autonomous-discussion.md`
-- `ideas/research-questions.md`
-- `open_problems.md`
-- `definitions.md`
-- the most relevant topic notes under `notes/`
+- `records/discussions/autonomous-discussion.md`
+- `research/ideas/research-questions.md`
+- `research/open_problems.md`
+- `research/definitions.md`
+- the most relevant topic notes under `research/notes/`
 
 Then perform one compact multi-role discussion using these roles:
 
@@ -20,10 +20,10 @@ Then perform one compact multi-role discussion using these roles:
 - Formalist
 - Archivist
 
-Append the result to `logs/autonomous-discussion.md` using the established
-format. Update `ideas/research-questions.md`, `open_problems.md`, or topic notes
+Append the result to `records/discussions/autonomous-discussion.md` using the established
+format. Update `research/ideas/research-questions.md`, `research/open_problems.md`, or topic notes
 only when there is a concrete new question, conjecture, definition, or proof
-task. Add a short dated entry to `logs/research-log.md`.
+task. Add a short dated entry to `records/logs/research-log.md`.
 
 Commit the changed research files and push the current branch to GitHub. Keep
 the commit message short and specific.

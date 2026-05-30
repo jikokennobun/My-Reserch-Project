@@ -9,13 +9,13 @@ Read:
 
 - `docs/claude-code-research-bridge.md`
 - `docs/codex-research-automation.md`
-- `logs/autonomous-discussion.md`
-- `logs/claude-code-review.md`
-- `ideas/research-questions.md`
-- `open_problems.md`
-- `definitions.md`
-- the most relevant topic notes under `notes/`
-- relevant files under `models/` and `scripts/` when the focus concerns model
+- `records/discussions/autonomous-discussion.md`
+- `records/discussions/claude-code-review.md`
+- `research/ideas/research-questions.md`
+- `research/open_problems.md`
+- `research/definitions.md`
+- the most relevant topic notes under `research/notes/`
+- relevant files under `code/models/` and `code/scripts/` when the focus concerns model
   search or implementation
 
 Then perform one compact review pass with these roles:
@@ -27,7 +27,7 @@ Then perform one compact review pass with these roles:
   support the mathematical claim being made.
 - Integrator: convert the useful output into repository-ready next steps.
 
-Append the result to `logs/claude-code-review.md` using this format:
+Append the result to `records/discussions/claude-code-review.md` using this format:
 
 ```text
 ### Review N - YYYY-MM-DD HH:MM JST
@@ -56,7 +56,7 @@ Guidelines:
   theorem attributions.
 - If a claim needs a source, record it as a source gap.
 - If you edit files, keep edits small and focused. Do not rewrite
-  `logs/autonomous-discussion.md`; append to `logs/claude-code-review.md`
+  `records/discussions/autonomous-discussion.md`; append to `records/discussions/claude-code-review.md`
   instead.
 - Do not commit or push unless the user explicitly asks for that.
 - When reviewing scripts, run the relevant local check if it is available.

@@ -24,10 +24,10 @@ Codex and Claude Code contribute different passes over it.
 ## Shared Files
 
 - `docs/claude-code-autonomous-review-prompt.md`: stable prompt for Claude Code.
-- `logs/claude-code-review.md`: Claude Code review results and suggested tasks.
-- `outputs/claude-code/`: generated handoff packets for one-off Claude Code runs.
-- `logs/autonomous-discussion.md`: Codex autonomous discussion state.
-- `logs/research-log.md`: short project-level trace of meaningful events.
+- `records/discussions/claude-code-review.md`: Claude Code review results and suggested tasks.
+- `artifacts/handoffs/claude-code/`: generated handoff packets for one-off Claude Code runs.
+- `records/discussions/autonomous-discussion.md`: Codex autonomous discussion state.
+- `records/logs/research-log.md`: short project-level trace of meaningful events.
 
 ## Operating Loop
 
@@ -35,16 +35,16 @@ Codex and Claude Code contribute different passes over it.
 2. Generate a handoff packet:
 
    ```powershell
-   powershell -ExecutionPolicy Bypass -File .\scripts\new-claude-code-handoff.ps1 -Focus "Review the MacNeille extension rule and propose the next finite-model search."
+   powershell -ExecutionPolicy Bypass -File .\code\scripts\new-claude-code-handoff.ps1 -Focus "Review the MacNeille extension rule and propose the next finite-model search."
    ```
 
 3. Open Claude Code in the repository root and give it the generated handoff
    packet, or paste the stable prompt from
    `docs/claude-code-autonomous-review-prompt.md`.
-4. Claude Code writes or proposes its review in `logs/claude-code-review.md`.
-5. Codex incorporates accepted items into `open_problems.md`, `ideas/`, `notes/`,
-   `models/`, or `scripts/`, then records the integration in
-   `logs/research-log.md`.
+4. Claude Code writes or proposes its review in `records/discussions/claude-code-review.md`.
+5. Codex incorporates accepted items into `research/open_problems.md`, `research/ideas/`, `research/notes/`,
+   `code/models/`, or `code/scripts/`, then records the integration in
+   `records/logs/research-log.md`.
 
 ## Conflict Discipline
 

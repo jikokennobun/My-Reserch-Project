@@ -63,7 +63,7 @@ the report who conflates "principal" with "reflected" will draw a wrong conclusi
 The deeper hidden assumption: because the smoke-test model is a chain (already
 a complete lattice), $\widehat{L} = L$ and every MacNeille cut is trivially
 principal. A lattice model can never produce a non-principal cut. The search
-target specified in `models/macneille-reflection-search.md` ("find a model with
+target specified in `code/models/macneille-reflection-search.md` ("find a model with
 a non-principal completion fixed point") is unreachable inside the class of
 lattice inputs. The search space must include non-lattice preorders.
 
@@ -125,7 +125,7 @@ not be promoted beyond smoke-test status.
 Implementation Auditor:
 
 Three concrete defects in the current checker script
-(`scripts/check-macneille-reflection.ps1`):
+(`code/scripts/check-macneille-reflection.ps1`):
 
 **Defect 1 — Wrong polarity in `Invoke-CompletedRefutability`.**
 
@@ -176,7 +176,7 @@ Integrator:
 
 Concrete repository updates:
 
-1. **New model file** `models/examples/three-element-nolattice-nosynt.json`:
+1. **New model file** `code/models/examples/three-element-nolattice-nosynt.json`:
    carrier $\{0,a,b\}$, $0<a$, $0<b$, $a\parallel b$, $\bot=0$, $T=a$,
    $\boxtimes: 0\mapsto a, a\mapsto 0, b\mapsto 0$.
    Expected classification under correct extension: `nonprincipal-without-syntactic`.
@@ -204,11 +204,11 @@ Concrete repository updates:
    smoke-test model falls into this class; currently it is misclassified as
    `principal-only`.
 
-5. **Update `open_problems.md`**: add the problem "Characterize when principal
+5. **Update `research/open_problems.md`**: add the problem "Characterize when principal
    completion fixed points are reflected (i.e., the principal element is also a
    syntactic fixed point)."
 
-6. **Update `models/macneille-reflection-search.md`**: the 3-element non-lattice
+6. **Update `code/models/macneille-reflection-search.md`**: the 3-element non-lattice
    model above already achieves `nonprincipal-without-syntactic` under the
    correct extension. The search can now shift focus to characterizing which APS
    axiom packages allow or prevent this.
@@ -217,14 +217,14 @@ Concrete repository updates:
 
 Suggested repository updates:
 
-- `models/examples/three-element-nolattice-nosynt.json`: new model file (see above).
-- `scripts/check-macneille-reflection.ps1`: add `reflected` field; add extension
+- `code/models/examples/three-element-nolattice-nosynt.json`: new model file (see above).
+- `code/scripts/check-macneille-reflection.ps1`: add `reflected` field; add extension
   condition verification warning per principal cut.
-- `models/macneille-checker-interface.md`: document $L^{op}$-closure formula;
+- `code/models/macneille-checker-interface.md`: document $L^{op}$-closure formula;
   add `principal-unreflected` to output classification list; add `reflected` to
   computed data fields.
-- `open_problems.md`: add "principal ≠ reflected" separation problem.
-- `notes/completion-and-fixed-points.md`: add the $L^{op}$-closure formula as
+- `research/open_problems.md`: add "principal ≠ reflected" separation problem.
+- `research/notes/completion-and-fixed-points.md`: add the $L^{op}$-closure formula as
   the definition of the correct antitone extension.
 
 ---

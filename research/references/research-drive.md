@@ -68,5 +68,5 @@ Claude includes:
 
 - Use this folder as the source of generated drafts, slides, and research outputs.
 - Use [drive.md](drive.md) as the source of external reference literature.
-- When importing ideas from a PDF or slide deck, create a note under `notes/` and link back to the Drive file here.
-- When creating a new local PDF from this repository, collect it under `outputs/pdf/` and then decide whether it should also be placed in this Drive folder manually or through a future upload workflow.
+- When importing ideas from a PDF or slide deck, create a note under `research/notes/` and link back to the Drive file here.
+- When creating a new local PDF from this repository, collect it under `artifacts/pdf/` and then decide whether it should also be placed in this Drive folder manually or through a future upload workflow.
