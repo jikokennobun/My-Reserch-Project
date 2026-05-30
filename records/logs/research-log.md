@@ -1,5 +1,11 @@
 # Research Log
 
+## 2026-05-30 (Relay sync 2026-05-30T23:38:25+09:00)
+
+- ChatGPT Project artifact inbox sync: 0 new artifacts imported; no updates to `artifacts/slides/chatgpt-project/` or `artifacts/pdf/`.
+- ChatGPT share watchlist check: all 23 `https://chatgpt.com/share/...` links failed to fetch from this environment (logged in `records/logs/chatgpt-share-sync.md`).
+- Drive relay scan: listed the recorded Research (Paper/Slide/Gemini/Claude) and Reference folders; no newly relevant items newer than the existing snapshot were detected.
+
 ## 2026-05-30 (Cowork session — Shibuya Seminar 2 import, repository consolidation)
 
 - Imported Shibuya Seminar 2 (2026-05-08) notes as
