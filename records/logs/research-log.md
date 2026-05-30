@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-05-30 (Cowork session — Shibuya Seminar 2 import, repository consolidation)
+
+- Imported Shibuya Seminar 2 (2026-05-08) notes as
+  `research/notes/shibuya-seminar-2026-05-08.md`: formal APS definition (A1–A4),
+  Beklemishev–Shamkanov main theorem with proofs, and five reverse-mathematics
+  separation cases (G2 vs. FG2, existence of $\boxtimes$-FP, A4 vs. A4', SC vs. Löb).
+- Added open problem: Löb $\Rightarrow$ G2 separation — is there an APS model
+  where Löb holds but G2 fails? Vacuous-G2 models exist; non-vacuous direction open.
+- Consolidated all prior Cowork-session discussion threads (APS foundations,
+  connections to domain theory/formal topology/AAL/category theory, MacNeille
+  completion, $B_N$ front ideals) into `research/notes/` and
+  `research/ideas/research-questions.md`.
+
 ## 2026-05-30 (Pass 33 — cyclic-group front-ideal escape)
 
 - Autonomous discussion pass 33: analyzed two escape routes from the $k\ge3$
@@ -269,9 +282,4 @@
 - Created inbox, literature notes, output, and log entry points.
 - Imported the shared ChatGPT conversation on reconstructing BS16 cut elimination as a fibered residuated APS note.
 - Registered the Google Drive research folder for papers, slides, and AI-generated research outputs.
-- Imported six ChatGPT shared conversations into structured notes on MND4-preAPS, analytic APS, fixed point existence, completions, self-existence, and residuated/domain-theoretic completion.
-- Added a Project-to-Codex sync workflow using Google Drive relay files and a ChatGPT shared-link watchlist.
-- Imported the Research Project chat-link handoff from Downloads, added 11 new shared links to the watchlist, and created research-index skeleton files for definitions, open problems, models, and bibliography.
-- Added a research-only Obsidian vault indexing workflow for `Mr.Jikokennobun`, excluding personal notes by policy.
-- Relay sync: checked ChatGPT share watchlist, but `Invoke-WebRequest` failed for all entries (`remote server unreachable`), so no new share content could be ingested this run.
-- Relay sync: scanned Google Drive research outputs and refreshed `research/references/research-drive.md` with current Monograph/Gemini/Claude listings.
+- Imported six ChatGPT shared conversations into structured notes on MND4-preAPS, analytic APS, fixed point existence, completions, self-exist

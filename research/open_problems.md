@@ -1,5 +1,20 @@
 # Open Problems
 
+## From Shibuya Seminar 2 (2026-05-08)
+
+- **[Open]** Does Löb imply G2 in APS? That is, is there an APS model where
+  Löb holds but G2 fails (non-vacuously: $\boxtimes T\le\bot$ but $T\not\le\bot$)?
+  Easy direction: G2 $\Rightarrow$ Löb has a counterexample ($\Box=\mathrm{Id}$).
+  The reverse — Löb $\Rightarrow$ G2 — is open.
+  Candidate arena: implication-extended APS on $[0,1]$ with Łukasiewicz implication.
+
+- **[Open]** Does FG2 imply G2 (syntactically, not just in finite models)?
+  On the 3-point linear order $L_{\mathrm{Id}}$, the separation fails;
+  a syntactic proof of FG2 $\Rightarrow$ G2 may be possible.
+
+- **[Open]** Characterize the APS models satisfying $\exists$SC but not Löb,
+  and separately those satisfying Löb but not $\exists$SC.
+
 ## Core Separations
 
 - **[Resolved]** Separate $\exists p(p=\boxtimes p)$ from $\mathrm{FG2}$:
@@ -201,21 +216,4 @@
   preorder.
 - Determine whether Visser-style SEQ should be treated as an idempotent
   sequentialization monad, a reflective completion, or a doctrine-level
-  structure over APS.
-
-## Weak APS and Dynamic Axiomhood
-
-- Define weak APS variants that retain seriality or A1/A2-like behavior while
-  allowing controlled A4/refutability-introspection failure.
-- Classify Feferman, Shavrukov, and Rosser provability predicates as examples
-  or obstructions for weak APS.
-- Develop a finite-state semantics for self-elimination logic, including hard
-  deletion, soft deletion, stable extensions, and deletion cycles.
-- Decide whether self-elimination belongs to APS, weak APS, or a separate
-  prelogic layer.
-
-## Model Classification
-
-- Classify 3- and 4-element APS/preAPS models satisfying selected axiom packages.
-- Compute $\lvert\mathrm{Fix}_{\boxtimes}(S)\rvert$ as a model invariant.
-- Build machine-checkable finite models under `code/models/`.
+  structure over 
