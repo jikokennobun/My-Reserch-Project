@@ -70,3 +70,10 @@ Claude includes:
 - Use [drive.md](drive.md) as the source of external reference literature.
 - When importing ideas from a PDF or slide deck, create a note under `research/notes/` and link back to the Drive file here.
 - When creating a new local PDF from this repository, collect it under `artifacts/pdf/` and then decide whether it should also be placed in this Drive folder manually or through a future upload workflow.
+
+## Local Drive Backup
+
+- 2026-05-30: Backed up GitHub PDF artifacts to the local Google Drive sync
+  folder `C:\Users\20010215fjii\マイドライブ\GitHub PDF Backup\My-Reserch-Project\artifacts\pdf`.
+  Current file: `discussion-summary-2026-05-30.pdf`
+  (`sha256 ac750f82c1c9f79600f53fef46e36b7a536367bba7a99f115bf3da55e9b60985`).

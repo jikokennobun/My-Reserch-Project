@@ -23,6 +23,9 @@
 - Repository organization: split the GitHub-visible tree into `research/`
   (notes and references), `records/` (logs and discussions), `artifacts/`
   (PDFs, reports, slides, TeX), and `code/` (scripts and finite models).
+- Drive backup: copied `artifacts/pdf/discussion-summary-2026-05-30.pdf` to
+  `C:\Users\20010215fjii\マイドライブ\GitHub PDF Backup\My-Reserch-Project\artifacts\pdf`
+  for Google Drive synchronization; the Git-tracked PDF remains in place.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T17:36:14+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: scanned the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude, including `Paper/Monograph`) plus reference-folder top level at `2026-05-30T17:38:10+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T05:03:17+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
