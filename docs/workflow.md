@@ -69,6 +69,23 @@ Use [../research/references/drive-relay.md](../research/references/drive-relay.m
 
 For ordinary ChatGPT shared links, continuing a Project conversation may not update the shared snapshot automatically. Update the share or add a new link when a conversation has new material that Codex should ingest.
 
+For PDF slides or exported slide decks created in ChatGPT Project, place the
+file in this local Google Drive sync folder:
+
+```text
+C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project
+```
+
+Then run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1
+```
+
+The script imports supported artifacts into
+`artifacts/slides/chatgpt-project/`, collects PDFs into `artifacts/pdf/`, and
+writes `artifacts/reports/chatgpt-project-artifact-sync.csv`.
+
 ## Obsidian-to-Codex Index
 
 The Obsidian vault at `C:\Users\20010215fjii\Documents\Mr.Jikokennobun` contains both research and personal notes. Codex should only index the research roots recorded in [../research/references/obsidian-research-vault.md](../research/references/obsidian-research-vault.md).

@@ -20,6 +20,28 @@ Codex should treat the local repository as the durable research record.
 4. If the output is a draft, slide, PDF, or long note, put it in the Google Drive research folder.
 5. Codex checks the watchlist and Drive folders, then updates local notes under `research/notes/`.
 
+## ChatGPT Project Artifact Inbox
+
+For PDFs and slide decks generated inside ChatGPT Project, use this local Google
+Drive sync folder as the transfer inbox:
+
+```text
+C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project
+```
+
+Supported import formats are `.pdf`, `.ppt`, `.pptx`, and `.odp`.
+
+Run the repo sync with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1
+```
+
+The import keeps the original artifact under
+`artifacts/slides/chatgpt-project/`. If the artifact is a PDF, the script also
+updates the central PDF collection under `artifacts/pdf/` through
+`code/scripts/collect-pdfs.ps1`.
+
 ## Important Limitation
 
 For ordinary ChatGPT shared links, the link is usually a snapshot of the conversation at share time. If the Project conversation continues, Codex may not see new messages unless the shared link is updated or a new shared link is added. Enterprise/Edu shared links may behave differently.
@@ -28,5 +50,7 @@ For ordinary ChatGPT shared links, the link is usually a snapshot of the convers
 
 - Watch changed shared links and update their corresponding `NoteFile`.
 - Watch the research Drive folder for new outputs under `Paper`, `Slide`, `Gemini`, and `Claude`.
+- Watch the ChatGPT Project artifact inbox and import `.pdf`, `.ppt`, `.pptx`,
+  and `.odp` files into `artifacts/slides/chatgpt-project/`.
 - Summarize meaningful updates in [../../records/logs/research-log.md](../../records/logs/research-log.md).
 - Add raw ideas to [../ideas/inbox.md](../ideas/inbox.md) when they do not yet have a home.

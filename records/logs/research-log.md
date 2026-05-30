@@ -33,6 +33,10 @@
 - Automation config: updated the active Codex research discussion and relay-sync
   automations so they use the new `research/`, `records/`, `artifacts/`, and
   `code/` directory structure.
+- ChatGPT Project artifact sync: added a local Google Drive inbox workflow and
+  `code/scripts/sync-chatgpt-project-artifacts.ps1` so Project-generated PDF
+  slides and exported decks can be imported into `artifacts/slides/` and
+  collected under `artifacts/pdf/`.
 - Drive verification: local Git PDF and local Google Drive backup hashes match;
   Google Drive connector search has not yet surfaced the synced file, likely due
   to Drive sync/index delay.

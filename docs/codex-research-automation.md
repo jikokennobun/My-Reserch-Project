@@ -26,6 +26,9 @@ Project material must enter the repository through one of these bridges:
    repository.
 4. Put a durable relay note in Google Drive and mirror the summary into this
    repository.
+5. Put ChatGPT Project-generated PDFs or slide decks in the local Google Drive
+   artifact inbox, then import them with
+   `code/scripts/sync-chatgpt-project-artifacts.ps1`.
 
 ## Discussion Loop
 
@@ -92,6 +95,24 @@ powershell -ExecutionPolicy Bypass -File .\code\scripts\collect-pdfs.ps1
 
 This keeps all repository-visible PDFs gathered under `artifacts/pdf/` and
 mirrors that folder to Drive when the sync folder is available.
+
+## ChatGPT Project Artifact Import
+
+ChatGPT Project-generated PDF slides and exported decks should be placed in:
+
+```text
+C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project
+```
+
+Then run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1
+```
+
+The script imports `.pdf`, `.ppt`, `.pptx`, and `.odp` files into
+`artifacts/slides/chatgpt-project/`. PDF files are also collected into
+`artifacts/pdf/` so the repository keeps one central PDF shelf.
 
 ## Current Limits
 

@@ -74,6 +74,10 @@ Claude includes:
   `code/scripts/publish-research-output.ps1`. This keeps the PDF under
   `artifacts/pdf/` and mirrors it to the local Google Drive backup folder when
   available.
+- When exporting PDF slides or slide decks from ChatGPT Project, place them in
+  `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project`
+  and run `code/scripts/sync-chatgpt-project-artifacts.ps1` to import them into
+  the repository.
 
 ## Local Drive Backup
 
@@ -87,3 +91,6 @@ Claude includes:
   `discussion-summary-2026-05-30.pdf` immediately after the local sync copy, so
   the verified local Drive folder hash is the current backup proof until Drive
   indexing catches up.
+- 2026-05-30: Added a ChatGPT Project artifact inbox workflow for importing
+  generated PDF slides and slide decks from local Google Drive sync into
+  `artifacts/slides/chatgpt-project/` and `artifacts/pdf/`.

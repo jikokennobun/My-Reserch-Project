@@ -22,6 +22,18 @@ powershell -ExecutionPolicy Bypass -File .\code\scripts\publish-research-output.
 This creates the PDF in `pdf/`, updates `pdf/manifest.csv`, and mirrors the PDF
 to the local Google Drive backup folder when available.
 
+## ChatGPT Project Imports
+
+PDF slides and exported slide decks from ChatGPT Project are imported from the
+local Google Drive inbox with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1
+```
+
+Imported slide artifacts are stored under `slides/chatgpt-project/`. Imported
+PDFs are also collected under `pdf/`.
+
 ## Current Highlights
 
 - [pdf/discussion-summary-2026-05-30.pdf](pdf/discussion-summary-2026-05-30.pdf):
