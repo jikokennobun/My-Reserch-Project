@@ -26,6 +26,16 @@
 - Drive backup: copied `artifacts/pdf/discussion-summary-2026-05-30.pdf` to
   `C:\Users\20010215fjii\マイドライブ\GitHub PDF Backup\My-Reserch-Project\artifacts\pdf`
   for Google Drive synchronization; the Git-tracked PDF remains in place.
+- Automation policy: added the standard publication rule that autonomous
+  research outputs must be summarized in Markdown under `artifacts/pdf/`,
+  published to PDF with `code/scripts/publish-research-output.ps1`, and mirrored
+  to the local Google Drive backup folder when available.
+- Automation config: updated the active Codex research discussion and relay-sync
+  automations so they use the new `research/`, `records/`, `artifacts/`, and
+  `code/` directory structure.
+- Drive verification: local Git PDF and local Google Drive backup hashes match;
+  Google Drive connector search has not yet surfaced the synced file, likely due
+  to Drive sync/index delay.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T17:36:14+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
 - Relay sync: scanned the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude, including `Paper/Monograph`) plus reference-folder top level at `2026-05-30T17:38:10+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
 - Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T05:03:17+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.

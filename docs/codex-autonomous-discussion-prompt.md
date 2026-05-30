@@ -25,6 +25,18 @@ format. Update `research/ideas/research-questions.md`, `research/open_problems.m
 only when there is a concrete new question, conjecture, definition, or proof
 task. Add a short dated entry to `records/logs/research-log.md`.
 
+Create a concise Markdown publication summary for the pass under
+`artifacts/pdf/`, then publish it as PDF with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\publish-research-output.ps1 -MarkdownPath .\artifacts\pdf\<summary-name>.md
+```
+
+The PDF must remain in `artifacts/pdf/`. When the local Google Drive sync
+folder is available, the script also backs it up to
+`C:\Users\20010215fjii\マイドライブ\GitHub PDF Backup\My-Reserch-Project\artifacts\pdf`.
+Do not delete Git-tracked PDFs after the Drive backup.
+
 Commit the changed research files and push the current branch to GitHub. Keep
 the commit message short and specific.
 

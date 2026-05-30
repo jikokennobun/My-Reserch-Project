@@ -23,8 +23,9 @@ Codex cannot directly open a private ChatGPT Project as a folder. Use one of the
 2. Ask Codex to sort them into claims, definitions, examples, proof attempts, and references.
 3. Ask Codex to search/list the Drive reference folder for relevant materials.
 4. Store literature notes in `research/notes/literature.md` or topic-specific files under `research/notes/`.
-5. Compile or export results into `artifacts/pdf/`.
-6. Commit meaningful milestones with Git.
+5. Summarize each finished research result as Markdown under `artifacts/pdf/`.
+6. Publish that Markdown to PDF and mirror the PDF to the Drive backup folder.
+7. Commit meaningful milestones with Git.
 
 ## Autonomous Discussion Loop
 
@@ -80,10 +81,22 @@ powershell -ExecutionPolicy Bypass -File .\code\scripts\index-obsidian-research.
 
 ## PDF Collection
 
-Run this from the repository root:
+For a new autonomous-research result, create the Markdown summary first, then run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\publish-research-output.ps1 -MarkdownPath .\artifacts\pdf\<summary-name>.md
+```
+
+The generated PDF is stored in `artifacts/pdf/`, recorded in
+`artifacts/pdf/manifest.csv`, and mirrored to the local Google Drive sync folder
+when available.
+
+For older or externally generated PDFs, run this from the repository root:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\code\scripts\collect-pdfs.ps1
 ```
 
-The script copies PDFs found under the project into `artifacts/pdf/` and writes `artifacts/pdf/manifest.csv`.
+The script copies PDFs found under the project into `artifacts/pdf/`, writes
+`artifacts/pdf/manifest.csv`, and mirrors the centralized PDF folder to Drive
+when the sync folder is available.

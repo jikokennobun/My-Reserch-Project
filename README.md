@@ -34,6 +34,10 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 ## Common Commands
 
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\publish-research-output.ps1 -MarkdownPath .\artifacts\pdf\<summary-name>.md
+```
+
+```powershell
 powershell -ExecutionPolicy Bypass -File .\code\scripts\normalize-markdown-math.ps1
 ```
 

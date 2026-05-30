@@ -69,11 +69,21 @@ Claude includes:
 - Use this folder as the source of generated drafts, slides, and research outputs.
 - Use [drive.md](drive.md) as the source of external reference literature.
 - When importing ideas from a PDF or slide deck, create a note under `research/notes/` and link back to the Drive file here.
-- When creating a new local PDF from this repository, collect it under `artifacts/pdf/` and then decide whether it should also be placed in this Drive folder manually or through a future upload workflow.
+- When creating a new local PDF from this repository, write its Markdown source
+  under `artifacts/pdf/` and run
+  `code/scripts/publish-research-output.ps1`. This keeps the PDF under
+  `artifacts/pdf/` and mirrors it to the local Google Drive backup folder when
+  available.
 
 ## Local Drive Backup
 
 - 2026-05-30: Backed up GitHub PDF artifacts to the local Google Drive sync
   folder `C:\Users\20010215fjii\マイドライブ\GitHub PDF Backup\My-Reserch-Project\artifacts\pdf`.
   Current file: `discussion-summary-2026-05-30.pdf`
-  (`sha256 ac750f82c1c9f79600f53fef46e36b7a536367bba7a99f115bf3da55e9b60985`).
+  (`sha256 73d73bc4ad501b08f9e68b30f8a8a429a55b122b3364cb32d2b0d054f787694a`).
+- 2026-05-30: Added `code/scripts/publish-research-output.ps1` as the standard
+  Markdown-to-PDF publication step for autonomous research outputs.
+- 2026-05-30: Google Drive connector search did not list
+  `discussion-summary-2026-05-30.pdf` immediately after the local sync copy, so
+  the verified local Drive folder hash is the current backup proof until Drive
+  indexing catches up.

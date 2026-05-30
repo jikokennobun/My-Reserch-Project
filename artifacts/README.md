@@ -10,6 +10,18 @@ Generated and exported research artifacts live here.
 - [slides/](slides/): slide decks and exported slide material.
 - [tex/](tex/): TeX sources and compiled paper drafts.
 
+## Publication Rule
+
+Autonomous research results should be written first as Markdown under
+`pdf/`, then published with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\code\scripts\publish-research-output.ps1 -MarkdownPath .\artifacts\pdf\<summary-name>.md
+```
+
+This creates the PDF in `pdf/`, updates `pdf/manifest.csv`, and mirrors the PDF
+to the local Google Drive backup folder when available.
+
 ## Current Highlights
 
 - [pdf/discussion-summary-2026-05-30.pdf](pdf/discussion-summary-2026-05-30.pdf):
