@@ -1,4 +1,36 @@
 # Reports
 
 Machine-generated checker and search reports live here. These are artifacts,
-not source code.
+not source code, and they should be cited from research notes when they certify
+a finite model, search result, or counterexample.
+
+## Report Contract
+
+A useful report should make the following clear:
+
+1. input model or search space;
+2. script and command used;
+3. checked properties;
+4. result summary;
+5. timestamp or commit context when available.
+
+For APS/G2-ZOO reports, include the values of:
+
+$$
+\mathrm{G2},
+\qquad
+\mathrm{FG2},
+\qquad
+\mathrm{nFG2}(k),
+\qquad
+\mathrm{FP\text{-}synt},
+$$
+
+and any relevant residuation, bottom-discipline, or completion-fixed-point
+profile.
+
+## Use in Notes
+
+Research notes should not simply say that a search was run. They should cite
+the report path and explain which mathematical claim the report supports. If a
+report is exploratory or incomplete, mark it as such.

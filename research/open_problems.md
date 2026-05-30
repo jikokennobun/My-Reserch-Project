@@ -1,5 +1,28 @@
 # Open Problems
 
+## Arithmetic G2 and Derivability Conditions
+
+- **[Open]** Formalized G1 vs G2 separation: does there exist a provability predicate
+  satisfying FedG1 ($T \vdash \neg\square\bot \to \neg\square\neg\square\bot$) but failing G2
+  ($T \nvdash \neg\square\bot$)?
+- **[Open]** Does $M^U$ (uniform monotonicity) imply $T \nvdash Con_T^L$?
+  Equivalently, does $M^U$ imply TM?
+- **[Open]** Can the conclusion $T \nvdash Con_T^S$ be obtained under $\{wM, D3\}$ alone?
+- **[Open]** Construct the supremum/infimum structure of $\mathrm{ConLat}_T$: classify which
+  $\varphi \in \mathrm{ConLat}_T$ are provably equivalent to $\neg\square\bot$ and which
+  form an infinite descending chain between $Con_T^G$ and $Con_T^L$.
+- **[Open]** Does Ros fail imply Löb fail, or vice versa?
+  Known: Löb $\Rightarrow T \vdash Con_T^L$; Ros $\Rightarrow T \vdash Con_T^S$.
+- **[Open]** Separate $D$ and each $D_n$ (variants of the seriality axiom $\square\varphi\to\diamond\varphi$
+  restricted to $n$-boxed formulas) by explicit predicate models.
+- **[Open]** Separate $P$ and each $P_n$ ($n$-boxed existence of unprovable sentences) by
+  explicit predicate models.
+- **[Open]** Construct a provability predicate with computationally arbitrary complex modal
+  principles (i.e., $\Sigma_1$-predicates whose provability logic is undecidable/hard).
+- **[Open]** Does there exist a Rosser provability predicate such that no $\diamond$-fixed point
+  yields a contradiction?
+- **[Open]** Axiomatize $PL_{PA}(Prov_Q)$ (provability logic of $Q$ under $PA$-interpretation).
+
 ## From Shibuya Seminar 2 (2026-05-08)
 
 - **[Open]** Does Löb imply G2 in APS? That is, is there an APS model where

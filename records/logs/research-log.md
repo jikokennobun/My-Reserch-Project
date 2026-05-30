@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-05-30 (Codex note enrichment pass)
+
+- Added `docs/research-note-quality-standard.md` as the minimum checklist for
+  Project-derived and autonomous research Markdown: provenance, definitions,
+  named claims, proof sketches, examples/checker tasks, relations to existing
+  notes, and open problems.
+- Expanded the remaining short Project-derived notes on topological taming,
+  local-FG2 pullbacks, self/mutual reference, Smullyan-Lawvere diagonalization,
+  generalized proof structures, and literature anchors into detailed
+  preprint-seed notes.
+- Updated the Codex discussion-loop and relay-sync automations so future
+  Project imports explicitly follow `docs/research-note-quality-standard.md`.
+
 ## 2026-05-30 (Relay sync 2026-05-30T23:38:25+09:00)
 
 - ChatGPT Project artifact inbox sync: 0 new artifacts imported; no updates to `artifacts/slides/chatgpt-project/` or `artifacts/pdf/`.

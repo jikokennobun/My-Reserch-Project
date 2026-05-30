@@ -38,9 +38,32 @@ Project由来ノートには、可能な限り次を含める。
 - `research/notes/provability-predicate-weak-aps.md`
 - `research/notes/self-elimination-logic.md`
 - `research/notes/sequential-pair-theory-indexed-aps.md`
+- `research/notes/g2-zoo-topological-taming.md`
+- `research/notes/local-fg2-pullback-aps-zoo.md`
+- `research/notes/self-mutual-reference-hierarchy.md`
+- `research/notes/smullyan-lawvere-categorical-diagonalization.md`
+- `research/notes/generalized-proof-structures.md`
+- `research/notes/literature.md`
 
 いずれも、短い要約から、定義・基本補題・証明スケッチ・有限モデル検査方針を
 含む研究ノートへ増補した。
+
+# 追加した品質基準
+
+`docs/research-note-quality-standard.md` を追加し、Project由来ノートと
+自動研究ノートの最低基準を明文化した。研究ノートは、少なくとも次を持つ。
+
+- source/provenance
+- abstract
+- background and notation
+- definitions
+- lemmas/propositions/conjectures
+- examples/counterexamples/checker tasks
+- relation to existing notes
+- open problems
+
+これにより、Projectの議論を「会話の短い要約」として保存するのではなく、
+専門家が検査・反証・拡張できる小さなpreprint seedとして保存する。
 
 # 自動化側の変更
 

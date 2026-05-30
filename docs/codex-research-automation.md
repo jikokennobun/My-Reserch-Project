@@ -95,6 +95,10 @@ The goal is to turn Project conversations into durable mathematical notes, not
 only into an index. If a first pass must be brief, mark it as a stub and create
 a follow-up task to expand it.
 
+The operative checklist is `docs/research-note-quality-standard.md`. A Project
+import that lacks definitions, at least one named claim or conjecture, and a
+concrete verification task is considered a stub, not a finished research note.
+
 ## Publication Rule
 
 Research output is not complete until it has both a Markdown source and a PDF:

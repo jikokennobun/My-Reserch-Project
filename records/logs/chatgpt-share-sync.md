@@ -762,4 +762,3 @@ Initial stable baseline after watchlist setup.
 | unchanged | 完備化と不動点 | research/notes/completion-and-fixed-points.md | https://chatgpt.com/share/6a0fbc8e-e630-8324-91df-73add1286869 |
 | unchanged | 自己存在文の作成方法 | research/notes/self-existence-sentences.md | https://chatgpt.com/share/6a0fbc9d-be30-8324-9ae2-943bd3ed2b14 |
 | unchanged | 剰余付き代数と完備化 | research/notes/residuated-algebra-domain-completion.md | https://chatgpt.com/share/6a0cbab3-b174-83ab-8a89-db8a746eacda |
-
