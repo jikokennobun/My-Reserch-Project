@@ -48,6 +48,9 @@
   links mention generated PDF/TeX files via `sandbox:/mnt/data/...`; those files
   are not directly readable locally and should be exported to the Google Drive
   artifact inbox if they need to be imported as repo artifacts.
+- ChatGPT share import: published the import summary as
+  `artifacts/pdf/chatgpt-share-import-2026-05-30.pdf` and mirrored it to the
+  local Google Drive PDF backup folder.
 - Drive verification: local Git PDF and local Google Drive backup hashes match;
   Google Drive connector search has not yet surfaced the synced file, likely due
   to Drive sync/index delay.
