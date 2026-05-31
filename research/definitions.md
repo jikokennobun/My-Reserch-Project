@@ -355,6 +355,22 @@ nontrivial group forces $U$-absorption and breaks the diagonal residual. See
 `code/scripts/check-front-group-order-bound.py` and the Front Rigidity section of
 `research/notes/g2-fg2-hierarchy.md`.
 
+**Order-theoretic diagnosis (Pass 35).** Front rigidity is *not* an artifact of
+commutativity or integrality. Dropping commutativity (admitting two residuals
+$\backslash,/$ with independent left/right $U$-actions) does not reopen group
+fronts: for a group front $F_k\cong G$ with $k\ge2$ the translations
+$L_{a_j},R_{a_j}$ permute $F_k$, so two-sided monotonicity forces
+$a_j\otimes U=U\otimes a_j=U$, and both diagonal fibers $a_j\backslash a_j$,
+$a_j/a_j$ contain the incomparable pair $\{T,a_{i_0}\}$ (global unit, local group
+identity) whose sole upper bound $U$ is excluded — so neither is principal. Thus
+$\lvert G\rvert=1$ even non-commutatively (verified through the non-abelian
+$S_3$ by `code/scripts/check-noncommutative-front-group-bound.py`). The two
+load-bearing facts are: (i) a group identity must sit inside the incomparable
+front, hence incomparable to the global unit $T$; (ii) in $B_N$ the only upper
+bound of two distinct front atoms is the absorbing ceiling $U$. The only escape
+is to relax the ceiling — adjoin a sub-top cap $c<U$ above the front — which
+leaves the same-carrier $B_N$ schema (Pass-36 capped-front problem).
+
 For $k\in\{0,1,2\}$, write
 $$
 \tau_k(s)=\tau_k(a_{N+1})=1,\qquad

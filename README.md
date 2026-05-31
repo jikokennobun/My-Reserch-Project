@@ -18,6 +18,7 @@ Codex, VSCode, Obsidian, ChatGPT, and Google Driveをつなぐための研究ワ
 - [research/definitions.md](research/definitions.md): APS/G2-ZOOの基本定義
 - [research/open_problems.md](research/open_problems.md): 未解決問題リスト
 - [research/notes/](research/notes/): 研究ノート
+- [docs/markdown-file-guide/](docs/markdown-file-guide/): すべてのMarkdownファイルの解説資料
 - [records/discussions/autonomous-discussion.md](records/discussions/autonomous-discussion.md): 自律議論ログ
 - [records/logs/research-log.md](records/logs/research-log.md): 作業ログ
 - [artifacts/pdf/discussion-summary-2026-05-30.pdf](artifacts/pdf/discussion-summary-2026-05-30.pdf): 最新の議論要約PDF

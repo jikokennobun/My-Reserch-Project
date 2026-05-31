@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 34
+- Current pass: 35
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -2559,3 +2559,152 @@ two-sided monotonicity $a_i\le U\Rightarrow a_i\otimes a_j\le U\otimes a_j$ and
 $a_j\otimes a_i\le a_j\otimes U$ still force $U$-absorption and kill the diagonal
 residual? Settle whether the front rigidity is a commutativity artifact or a
 genuine $B_N$-order phenomenon.
+
+### Pass 35 - 2026-05-31 14:32 JST
+
+Focus:
+
+Settle whether dropping commutativity reopens group fronts on the
+bottom-disciplined $B_N$. Replace the single residual by an honest two-residual
+(left $a\backslash c=\max\{x:a\otimes x\le c\}$, right $c/a=\max\{x:x\otimes
+a\le c\}$) tensor with unit $T$, zero $b$, search the two $U$-actions
+$U\otimes a_i$ and $a_i\otimes U$ *independently* (so no two-sided absorber is
+smuggled in), and ask whether a nontrivial finite group — including a
+non-abelian one — can occupy the incomparable front $F_k=\{a_1,\dots,a_k\}$.
+Is the Pass-34 front rigidity an artifact of the commutative integrality
+lemma $a_i\otimes a_j\le a_i\wedge a_j$, or a genuine $B_N$-order phenomenon?
+
+Proposer:
+
+The commutative obstruction (Pass 34) had a single failure mode: the diagonal
+fiber $a_j\backslash a_j$ collected $T$ (unit) and the local front identity, two
+incomparable atoms whose only common upper bound is the absorbing $U$, while
+monotonicity forced $U\otimes a_j=U\not\le a_j$, so the fiber lost its top.
+Commutativity entered only through $a_i\otimes a_j\le a_i\wedge a_j$. Dropping it
+gives two independent residuals and two independent $U$-actions; a priori the
+left action $U\otimes a_i$ could descend into the front while the right action
+$a_i\otimes U$ absorbs, decoupling the two diagonal fibers. The natural candidate
+is to put a nontrivial group $G\cong F_k$ on the front (identity $a_{i_0}\in
+F_k$, a *local* unit coexisting with the global unit $T$) and hope the two-sided
+freedom keeps both $a_j\backslash a_j$ and $a_j/a_j$ principal. Smallest genuinely
+non-commutative test: $S_3$ on $k=6$ front atoms.
+
+Skeptic:
+
+The decoupling is illusory because the killing argument is already one-sided.
+Fix a group front $F_k\cong G$, $k\ge2$. Left-translation $L_{a_j}:a_e\mapsto
+a_j\otimes a_e$ is a bijection of $F_k$ (group axiom), so
+$\{a_j\otimes a_e:a_e\in F_k\}=F_k$. By right-monotonicity ($a_e\le U\Rightarrow
+a_j\otimes a_e\le a_j\otimes U$), the element $a_j\otimes U$ is an upper bound of
+all of $F_k$. For $k\ge2$ the *only* upper bound of the pairwise-incomparable
+front in $B_N$ is $U$ itself, so $a_j\otimes U=U$ — right $U$-absorption is
+**forced**, with no use of commutativity. Symmetrically $R_{a_j}$ bijective
+forces $U\otimes a_j=U$. Now the right fiber $a_j/a_j=\{x:x\otimes a_j\le a_j\}$
+contains $T$ ($T\otimes a_j=a_j$) and the group identity $a_{i_0}$
+($a_{i_0}\otimes a_j=a_j$), incomparable atoms joining only at $U$; but
+$U\otimes a_j=U\not\le a_j$ excludes $U$, so the fiber has no maximum. The left
+fiber dies the same way via $a_j\otimes U=U$. Two residuals do not help: each
+fails on its own. The group identity living *inside* $F_k$ (incomparable to the
+global unit $T$) is the irreducible source of the non-principality.
+
+Formalist:
+
+**Setup.** $B_N$ carrier $\{b,T,a_1,\dots,a_{N+1},s,U\}$, order $b\le x\le U$
+($\forall x$), $s\le a_{N+1}$; front $F_k=\{a_1,\dots,a_k\}$ pairwise
+incomparable. Let $\otimes$ be associative, two-sidedly monotone, with two-sided
+unit $T$ and two-sided zero $b$, restricting to a group $(F_k,\otimes)\cong G$,
+$|G|=k\ge2$, identity $a_{i_0}$.
+
+**Lemma (two-sided front absorption).** $a_j\otimes U=U\otimes a_j=U$ for every
+$a_j\in F_k$.
+
+*Proof.* $L_{a_j}$ is a bijection of $F_k$, so for each $a_m\in F_k$ there is
+$a_e$ with $a_j\otimes a_e=a_m$. Since $a_e\le U$, right-monotonicity gives
+$a_m=a_j\otimes a_e\le a_j\otimes U$. Thus $a_j\otimes U$ upper-bounds $F_k$.
+For $k\ge2$ the front atoms are pairwise incomparable and, in $B_N$, their sole
+common upper bound is $U$ (no $a_{N+1}$, $s$, or front atom dominates two
+distinct front atoms). Hence $a_j\otimes U=U$. The mirror statement uses
+$R_{a_j}$ and left-monotonicity. $\blacksquare$
+
+**Theorem (non-commutative front rigidity).** No nontrivial finite group is the
+front of a two-sidedly monotone, associative, two-residuated $B_N$-tensor.
+Equivalently, a group front exists iff $|G|=1$.
+
+*Proof.* Suppose $|G|=k\ge2$. The right residual fiber
+$a_j/a_j=\{x:x\otimes a_j\le a_j\}$ contains $T$ (unit) and $a_{i_0}$ (group
+identity: $a_{i_0}\otimes a_j=a_j$). $T$ and $a_{i_0}$ are incomparable in $B_N$
+(the orbit start $T$ versus a front atom), so any common upper bound is $U$. By
+the Lemma $U\otimes a_j=U\not\le a_j$, so $U\notin a_j/a_j$; the fiber thus has
+two incomparable maximal candidates and no maximum, violating right
+residuation. (Symmetrically $a_j\backslash a_j\ni T,a_{i_0}$ and
+$a_j\otimes U=U$ break left residuation.) Hence $k\ge2$ is impossible.
+$\blacksquare$
+
+**Verified.** `code/scripts/check-noncommutative-front-group-bound.py` checks
+the two-residual predicate (associativity, two-sided monotonicity, *both* fibers
+principal) over **independent** left/right $U$-actions:
+- Validation harness (commutative orthogonal band, two-residual predicate):
+  $k=1,2$ residuated with the non-absorbing action $U\otimes a_i=a_i\otimes
+  U=a_i$; $k=3$ fails — exactly the established single-residual data.
+- Exhaustive over both $U$-actions: $\mathbb Z/2$ ($k=2$) and $\mathbb Z/3$
+  ($k=3$) — **NO** two-residuated tensor.
+- Forced-action test (Lemma): for $\mathbb Z/4$, $V_4$, and the non-abelian
+  $S_3$ ($k=6$), the monotonicity-forced all-$U$ tensor is not two-residuated,
+  and the only non-absorbing ("hopeful") action fails two-sided monotonicity —
+  confirming the Lemma leaves the all-$U$ absorber as the unique monotone option,
+  which then fails the diagonal fibers.
+
+**Conclusion.** Front rigidity is **not** a commutativity artifact. The
+load-bearing facts are purely order-theoretic in $B_N$: (i) a group identity
+must sit *inside* the incomparable front, incomparable to the global unit $T$;
+(ii) the only upper bound of $\ge2$ front atoms is the absorbing $U$. Together
+they force $U$-absorption on both sides and strand the diagonal residual fibers
+without a top. The single open loophole now is *not* algebraic
+(commutativity/integrality) but *order-theoretic*: the absorbing ceiling. If
+$B_N$ is enlarged by a sub-top cap $c<U$ that is a common upper bound of the
+front but not absorbing, the fibers could become principal at $c$. This changes
+the carrier (no longer same-carrier $B_N$) and is the genuine next escape.
+
+Archivist:
+
+Mark the Pass-34 [New] non-commutative loophole **[Resolved]** with verdict
+$|G|=1$ (the two-sided front-absorption lemma + non-commutative rigidity
+theorem). Record both in `g2-fg2-hierarchy.md` as the "Non-Commutative Front
+Rigidity (Pass 35)" subsection. Promote the order-theoretic diagnosis
+(incomparable local identity + absorbing ceiling) to `definitions.md` as the
+structural reason the front-width schema is rigid. Open a [New] "capped-front"
+problem (sub-top $c<U$, enlarged carrier) in `open_problems.md` and retarget
+`research-questions.md`. Log a one-line research-log entry. New script
+`code/scripts/check-noncommutative-front-group-bound.py` (added).
+
+Repository updates:
+- `code/scripts/check-noncommutative-front-group-bound.py`: new two-residual
+  checker (independent left/right $U$-actions, two-sided monotonicity, both
+  fibers principal); exhaustive at $k\le3$, forced-action test incl. $S_3$.
+- `research/notes/g2-fg2-hierarchy.md`: added "Non-Commutative Front Rigidity
+  (Pass 35)" — two-sided front-absorption lemma, non-commutative rigidity
+  theorem, verification summary, capped-front loophole.
+- `research/definitions.md`: appended the order-theoretic diagnosis of front
+  rigidity (incomparable local identity vs. global unit $T$; absorbing ceiling
+  $U$ as the unique upper bound of $\ge2$ front atoms).
+- `research/open_problems.md`: non-commutative loophole marked [Resolved];
+  added [New] capped-front ($c<U$) problem.
+- `records/logs/research-log.md`: one-line Pass 35 entry.
+- `research/ideas/research-questions.md`: retargeted to the capped-front /
+  ceiling-relaxation escape.
+
+Next step:
+Pass 36 should attack the capped-front escape, the only remaining loophole. Add
+to $B_N$ a single sub-top element $c$ with $a_i\le c<U$ for all front atoms
+$a_i$ (so the front's least upper bound becomes $c$, not the absorbing $U$),
+keeping $\boxtimes$ on the orbit untouched. Question: does the enlarged carrier
+$B_N^{\mathrm{cap}}$ admit a monotone associative two-residuated tensor whose
+front $F_k$ is a nontrivial group with $a_j\otimes c=c\otimes a_j=c$ (so the
+diagonal fibers become principal at $c$ rather than stranded at $U$)? Determine
+(a) whether antitonicity of $\boxtimes$ survives the new relation $a_i\le c$
+(this is where Route B died on the same-carrier $B_N$ — check whether the cap,
+being *outside* the $\boxtimes$-orbit, escapes the antitonicity cascade), and
+(b) the resulting maximum group order as a function of where $c$ sits relative
+to the orbit. Settle whether ceiling-relaxation is the true price of a group
+front, or whether a deeper APS-level obstruction (e.g. G2/nFG2 interaction)
+forbids group fronts in *every* finite bottom-disciplined ambient.

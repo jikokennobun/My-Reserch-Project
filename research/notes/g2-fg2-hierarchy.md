@@ -927,6 +927,69 @@ escape routes from the $k\ge3$ obstruction therefore fail: Route B by the
 antitonicity cascade, Route A by integrality. The remaining loophole is
 non-commutativity (two residuals), opened as a new problem.
 
+## Non-Commutative Front Rigidity (Pass 35) — the loophole closes
+
+Pass 34's rigidity proof used commutativity through the integrality inequality
+$a_i\otimes a_j\le a_i\wedge a_j$. The natural escape is to drop commutativity,
+admit two residuals
+$$
+a\backslash c=\max\{x:a\otimes x\le c\},\qquad
+c/a=\max\{x:x\otimes a\le c\},
+$$
+and search the left and right $U$-actions $U\otimes a_i$, $a_i\otimes U$
+*independently*. Pass 35 shows the loophole is empty: the failure mode is
+already one-sided and order-theoretic.
+
+Fix the bottom-disciplined $B_N$, $\otimes$ associative, two-sidedly monotone,
+two-sided unit $T$, two-sided zero $b$, restricting to a finite group
+$(F_k,\otimes)\cong G$ with $\lvert G\rvert=k\ge2$ and identity $a_{i_0}\in F_k$.
+
+**Lemma (two-sided front absorption).** $a_j\otimes U=U\otimes a_j=U$ for all
+$a_j\in F_k$.
+
+*Proof.* Left-translation $L_{a_j}:a_e\mapsto a_j\otimes a_e$ is a bijection of
+the group $F_k$, so $\{a_j\otimes a_e:a_e\in F_k\}=F_k$. For each $a_e\le U$,
+right-monotonicity gives $a_j\otimes a_e\le a_j\otimes U$; hence $a_j\otimes U$
+is an upper bound of all of $F_k$. In $B_N$ the front atoms are pairwise
+incomparable and (for $k\ge2$) their only common upper bound is $U$ — no
+$a_{N+1}$, $s$, or front atom dominates two distinct front atoms. Thus
+$a_j\otimes U=U$. The mirror statement uses $R_{a_j}$ bijective and
+left-monotonicity. $\blacksquare$
+
+**Theorem (non-commutative front rigidity).** A finite group fits the front of a
+two-sidedly monotone, associative, two-residuated $B_N$-tensor **iff
+$\lvert G\rvert=1$**.
+
+*Proof.* Suppose $k\ge2$. The right fiber $a_j/a_j=\{x:x\otimes a_j\le a_j\}$
+contains both $T$ (global unit: $T\otimes a_j=a_j$) and $a_{i_0}$ (group
+identity: $a_{i_0}\otimes a_j=a_j$). These are incomparable in $B_N$ (orbit
+start vs. front atom), so the only candidate maximum is their join $U$; but the
+Lemma gives $U\otimes a_j=U\not\le a_j$, so $U\notin a_j/a_j$ and the fiber has
+no maximum — right residuation fails. The left fiber $a_j\backslash a_j$ fails
+symmetrically via $a_j\otimes U=U$. $\blacksquare$
+
+**Verification.** `code/scripts/check-noncommutative-front-group-bound.py`
+implements the two-residual predicate (associativity, two-sided monotonicity,
+*both* fibers principal) with independent left/right $U$-actions. (i) The
+commutative orthogonal band, re-checked under the two-residual predicate,
+reproduces the established data: residuated at $k=1,2$ with the non-absorbing
+action $U\otimes a_i=a_i\otimes U=a_i$, failing at $k=3$. (ii) Exhaustive over
+both $U$-actions, $\mathbb Z/2$ ($k=2$) and $\mathbb Z/3$ ($k=3$) admit no
+two-residuated tensor. (iii) For $\mathbb Z/4$, $V_4$, and the non-abelian
+$S_3$ ($k=6$), the monotonicity-forced all-$U$ tensor is not two-residuated and
+the unique non-absorbing action is not even two-sided monotone — confirming the
+Lemma leaves no monotone alternative.
+
+**Diagnosis.** The obstruction is now isolated to two purely order-theoretic
+facts about $B_N$: (i) a group identity must live *inside* the incomparable
+front, hence incomparable to the global unit $T$; (ii) the only upper bound of
+$\ge2$ front atoms is the absorbing top $U$. Neither uses commutativity,
+integrality, or even associativity beyond the unit laws. The single remaining
+escape is therefore *ceiling relaxation*: enlarge the carrier by a sub-top cap
+$c<U$ above the front but below $U$, so the diagonal fibers can be principal at
+$c$ instead of stranded at $U$. This breaks the same-carrier discipline and is
+opened as the Pass-36 capped-front problem.
+
 ### Open Tasks (updated after Pass 34)
 
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).

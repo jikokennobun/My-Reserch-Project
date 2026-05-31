@@ -1,5 +1,24 @@
 # Research Log
 
+## 2026-05-31 (Markdown guide)
+
+- Added `docs/markdown-file-guide/` as a dedicated explanation folder for all
+  Markdown files, including a full file index, a research-note guide, and an
+  operations/artifacts guide. Linked it from the root `README.md` and
+  `index.md`.
+
+## 2026-05-31 (PDF import)
+
+- Added externally supplied PDF `residuated_APS_principles.pdf` from the local
+  Downloads folder to `artifacts/pdf/`, refreshed `artifacts/pdf/manifest.csv`,
+  and mirrored the PDF collection to the configured Google Drive backup folder.
+
+## 2026-05-31 (Relay sync 2026-05-31T12:30:53+09:00)
+
+- ChatGPT Project artifact inbox sync: 0 new artifacts imported; no updates to `artifacts/slides/chatgpt-project/` (PDF collection updates, if any, are logged separately under the same date).
+- ChatGPT share watchlist check: all 23 `https://chatgpt.com/share/...` links failed to fetch from this environment (PowerShell `Invoke-WebRequest`: "リモート サーバーに接続できません。"), so no conversation diffing or note ingestion was possible this run (logged in `records/logs/chatgpt-share-sync.md`).
+- Drive relay scan (connector listing): listed the recorded Research root, plus the `Paper` and `Slide` subfolders, and the Reference-root top level; no changes relative to the existing snapshots in `research/references/research-drive.md` and `research/references/drive.md`, so no index/literature note updates were needed.
+
 ## 2026-05-31 (Relay sync 2026-05-31T05:42:29+09:00)
 
 - ChatGPT Project artifact inbox sync: 0 new artifacts imported; no updates to `artifacts/slides/chatgpt-project/` or `artifacts/pdf/`.
@@ -317,3 +336,13 @@
 ## 2026-05-31
 
 - Pass 34: **Refuted Pass 33 Route A.** A finite group on the front $F_k$ of $B_N$ ($k\ge2$) admits NO same-carrier/order commutative monotone fully-residuated tensor. Monotonicity ($a_i\le U$) forces $U\otimes a_j$ to upper-bound the bijective image $\{a_i a_j:i\}=F_k$, hence $U\otimes a_j=U$ (U-absorption); the diagonal residual $a_j\backslash a_j$ then loses its top and fails. Integrality lemma + rigidity theorem prove the front is forced to be the orthogonal idempotent zero-band; max front-group order $=1$. Verified exhaustively for $\mathbb Z/2,\mathbb Z/3,\mathbb Z/4,V_4$ in `code/scripts/check-front-group-order-bound.py` (validated against the orthogonal $k=1,2$/fail-at-$3$ data).
+- Autonomous discussion pass 35 (2026-05-31): settled the non-commutative
+  loophole. Two-sided front-absorption lemma + non-commutative front-rigidity
+  theorem show that for $k\ge2$ any group front of a two-sidedly monotone,
+  associative, two-residuated $B_N$-tensor forces $a_j\otimes U=U\otimes a_j=U$,
+  stranding both diagonal fibers $a_j\backslash a_j$, $a_j/a_j$ (which contain
+  the incomparable $T$ and local identity $a_{i_0}$) without a top. Verdict:
+  $|G|=1$ even non-commutatively; rigidity is an order phenomenon, not a
+  commutativity artifact. Verified incl. non-abelian $S_3$ by
+  `code/scripts/check-noncommutative-front-group-bound.py`. Only remaining
+  escape: ceiling relaxation (sub-top cap $c<U$, enlarged carrier).

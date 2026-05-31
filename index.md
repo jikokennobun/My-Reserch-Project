@@ -22,6 +22,7 @@
 - Open problems: [research/open_problems.md](research/open_problems.md)
 - Bibliography: [research/bibliography.md](research/bibliography.md)
 - Finite models: [code/models/README.md](code/models/README.md)
+- Markdown file guide: [docs/markdown-file-guide/](docs/markdown-file-guide/)
 - ChatGPT imports: [research/notes/chatgpt-imports-2026-05-22.md](research/notes/chatgpt-imports-2026-05-22.md)
 - Research Project handoff links: [research/notes/research-project-chat-links-handoff.md](research/notes/research-project-chat-links-handoff.md)
 - BS16 / Res-APS note: [research/notes/bs16-fiber-residuated-aps.md](research/notes/bs16-fiber-residuated-aps.md)

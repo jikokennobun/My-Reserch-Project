@@ -11,6 +11,8 @@ research PDFs.
 - `project-note-depth-policy-2026-05-30.pdf`: policy note explaining why
   Project-derived Markdown imports must be expanded into detailed mathematical
   notes rather than kept as short summaries.
+- `residuated_APS_principles.pdf`: externally supplied PDF on residuated APS
+  principles, added from the local Downloads folder on 2026-05-31.
 
 ## Workflow
 

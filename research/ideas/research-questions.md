@@ -21,8 +21,16 @@
 - Does dropping commutativity reopen group fronts? Can a non-integral
   two-residual ($\backslash,/$) tensor on $B_N$ host a nontrivial finite group on
   the front, or does two-sided monotonicity still force $U$-absorption and the
-  diagonal-residual failure? Equivalently: is front rigidity a commutativity
-  artifact or a genuine $B_N$-order phenomenon?
+  diagonal-residual failure? **(Resolved, Pass 35: rigidity is a genuine
+  $B_N$-order phenomenon — two-sided $U$-absorption is forced, both diagonal
+  fibers strand the incomparable $\{T,a_{i_0}\}$ pair, so $\lvert G\rvert=1$
+  even non-commutatively, incl. $S_3$.)** Live successor: **capped-front /
+  ceiling relaxation** — adjoin a sub-top cap $c<U$ above the front
+  ($a_i\le c<U$) and ask whether $B_N^{\mathrm{cap}}$ hosts a nontrivial group
+  front with $a_j\otimes c=c\otimes a_j=c$, whether antitonicity of $\boxtimes$
+  survives an off-orbit cap (the same-carrier Route B died by an antitonicity
+  cascade), and whether a deeper G2/nFG2 obstruction forbids group fronts in
+  *every* finite bottom-disciplined ambient.
 - Classify which finite commutative residuated structures (beyond the orthogonal
   band) can appear as integral tensor ideals glued onto the shifted $B_N$ tail.
 - How should local/formalized G2 principles such as $\mathrm{LG2}(a)$ and
