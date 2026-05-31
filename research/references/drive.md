@@ -7,34 +7,33 @@ https://drive.google.com/drive/folders/1R7j8xtt1nNXVxFrlutAn9eo5LCpUWn1l?usp=dri
 ## Top-Level Items Seen by Codex
 
 - Universal Algebra
-- 理論計算機科学
+- 逅・ｫ冶ｨ育ｮ玲ｩ溽ｧ大ｭｦ
 - General topology
-- 人工知能
+- 莠ｺ蟾･遏･閭ｽ
 - Type theory
 - By Researchers
 - Computer Science
 - HoTT
 - Universal logic
 - Lean
-- 研究集会
-- MLG2025
-- 若手の会2025
-- 巨大数
+- 遐皮ｩｶ髮・ｼ・- MLG2025
+- 闍･謇九・莨・025
+- 蟾ｨ螟ｧ謨ｰ
 - Model theory
 - Algebraic logic
 - Incompleteness Theorem
 - Paradox and Logic
-- 研究関連
+- 遐皮ｩｶ髢｢騾｣
 - Others
 - Bounded arithmetic
 - Provability algebra
-- 数理哲学
+- 謨ｰ逅・憧蟄ｦ
 - Proof theory
-- 論理学
+- 隲也炊蟄ｦ
 - Non-standard analysis
 - Algorithmic information theory
 - Domain theory
-- kaken 研究成果報告書
+- kaken 遐皮ｩｶ謌先棡蝣ｱ蜻頑嶌
 - Doxastic logic
 - Computability theory
 - Set theory
@@ -47,9 +46,16 @@ https://drive.google.com/drive/folders/1R7j8xtt1nNXVxFrlutAn9eo5LCpUWn1l?usp=dri
 - Reverse math
 - Realizability theory
 - Categorical logic
-- 代数的位相幾何学
-- 様相論理学
-- ゲーデルあるいは不思議の環
+- 莉｣謨ｰ逧・ｽ咲嶌蟷ｾ菴募ｭｦ
+- 讒倡嶌隲也炊蟄ｦ
+- 繧ｲ繝ｼ繝・Ν縺ゅｋ縺・・荳肴晁ｭｰ縺ｮ迺ｰ
+
+Top-level PDF files also present in the reference root:
+
+- ML-Day-2_コピー.pdf
+- suri1001_コピー.pdf
+- Sequent_calculi_for_n-trans_コピー.pdf
+- Strictly transitive modal logics_コピー.pdf
 
 ## How to Use
 

@@ -52,7 +52,7 @@ Gemini includes:
 - 不完全性現象の代数的逆数学_総合モノグラフ_コピー.pdf
 - thesis_コピー.pdf
 - Incompleteness_Reverse_Mathematics_Grand_Monograph_v3_コピー.pdf
-- Incompleteness_Phenomena_Grand_Monograph_コピー.pdf
+- Incompleteness_Phenomena_Grand_Monograph_コピー.pdf (2 copies)
 - Incompleteness_Algebraic_Reverse_Mathematics_Thesis_コピー.pdf
 - Mathematical_Logic_Document_コピー.pdf
 - aps_report_コピー.pdf

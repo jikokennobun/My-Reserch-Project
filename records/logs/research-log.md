@@ -1,5 +1,11 @@
 # Research Log
 
+## 2026-05-31 (Relay sync 2026-05-31T18:53:00+09:00)
+
+- ChatGPT Project artifact inbox sync: 0 new artifacts imported; no updates to `artifacts/slides/chatgpt-project/` or `artifacts/pdf/`.
+- ChatGPT share watchlist check: all 23 `https://chatgpt.com/share/...` links failed to fetch from this environment (PowerShell `Invoke-WebRequest`: "リモート サーバーに接続できません。"), so no conversation diffing or note ingestion was possible this run (logged in `records/logs/chatgpt-share-sync.md` and `records/logs/chatgpt-share-state.csv`).
+- Drive relay scan (connector listing): listed the recorded Research root (`Paper`/`Slide`/`Gemini`/`Claude`) and the Reference-root top level; refreshed `research/references/research-drive.md` and `research/references/drive.md` to match the current connector-visible inventory.
+
 ## 2026-05-31 (Markdown guide)
 
 - Added `docs/markdown-file-guide/` as a dedicated explanation folder for all
