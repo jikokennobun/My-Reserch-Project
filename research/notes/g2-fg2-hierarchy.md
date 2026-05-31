@@ -874,7 +874,60 @@ $B_N$ while keeping $\boxtimes$ antitone induces a cascade of reverse
 relations that collapses adjacent orbit elements. Route B fails to extend the
 $B_N$ preAPS.
 
-### Open Tasks (updated after Pass 33)
+## Front Rigidity (Pass 34) — Route A Refuted
+
+> **Correction.** The Route A "cyclic-group escape at $k=3$" theorem stated
+> above is **false as stated**. Its monotonicity paragraph silently kept the
+> non-$U$-absorbing action $U\otimes a_i=a_i$ borrowed from the orthogonal
+> $k=2$ template. That action is monotone for an orthogonal *zero-band* (whose
+> products descend, $a_i\otimes a_j\le a_j$) but not for a group (whose products
+> permute the front). Pass 34 shows no nontrivial group front survives.
+
+Fix the bottom-disciplined $B_N$ ($N\ge1$) and let $\otimes$ be a commutative,
+associative, monotone, fully residuated tensor with unit $T$, zero $b$,
+restricting to a magma on the incomparable front $F_k=\{a_1,\dots,a_k\}$,
+$k\ge2$.
+
+**Lemma (front integrality).** For all $i,j\le k$, $\;a_i\otimes a_j\le a_j$.
+
+*Proof.* Monotonicity on $a_i\le U$ gives $a_i\otimes a_j\le U\otimes a_j=:u_j$,
+so $u_j$ upper-bounds $\{a_i\otimes a_j:i\}$. If $u_j\not\le a_j$ then
+$U\notin(a_j\backslash a_j)$ because $U\otimes a_j=u_j\not\le a_j$. But that
+fiber contains $T$ (as $a_j\otimes T=a_j$) and any front atom $a_e$ with
+$a_e\otimes a_j=a_j$; $T$ and $a_e$ are incomparable atoms whose only common
+upper bound in $B_N$ is $U$, so the fiber has no maximum — contradicting full
+residuation. Hence $u_j\le a_j$, so $a_i\otimes a_j\le a_j$. $\blacksquare$
+
+**Theorem (front rigidity).** The front sub-magma is forced to be the
+orthogonal idempotent zero-band
+$$
+a_i\otimes a_j=b\ (i\ne j),\qquad a_i\otimes a_i\in\{a_i,b\}.
+$$
+Hence no nontrivial group fits on $F_k$: a group front exists **iff
+$\lvert G\rvert=1$**.
+
+*Proof.* The lemma with commutativity gives $a_i\otimes a_j\le a_i\wedge a_j$;
+incomparable atoms meet at $b$, so $a_i\otimes a_j=b$ for $i\ne j$, and
+$a_i^2\le a_i$ forces $a_i^2\in\{a_i,b\}$. A group needs $a_i\otimes a_j$ to
+exhaust $F_k$ with inverses, impossible once a single cross-product is pinned to
+$b$ ($k\ge2$). $\blacksquare$
+
+**Verification.** `code/scripts/check-front-group-order-bound.py` ranges over
+every $U\otimes a_i$ choice in the minimal faithful ambient
+$\{b,T,a_1,\dots,a_k,U\}$. It returns no monotone fully-residuated tensor for
+$\mathbb Z/2,\mathbb Z/3,\mathbb Z/4$ or $V_4=\mathbb Z/2\times\mathbb Z/2$,
+while reproducing the established orthogonal data (residuated at $k=1,2$ with
+$U\otimes a_i=a_i$; failure at $k=3$). The group case forces $U$-absorption
+($U\otimes a_j=U$) and the diagonal fiber $a_j\backslash a_j$ then loses its top.
+
+Combined with the Pass-31 width bound ($k\le2$), the orthogonal idempotent
+zero-band of width $\le2$ is the **forced** shape of any same-carrier/order
+commutative residuated front of $B_N$ — not merely one option among many. Both
+escape routes from the $k\ge3$ obstruction therefore fail: Route B by the
+antitonicity cascade, Route A by integrality. The remaining loophole is
+non-commutativity (two residuals), opened as a new problem.
+
+### Open Tasks (updated after Pass 34)
 
 - Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
 - Characterize the infinite analogue of finite orbit stabilization: which APS

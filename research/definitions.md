@@ -342,6 +342,19 @@ front atoms when $k\ge3$. Thus the two-atom front is maximal in the present
 same-order orthogonal-front schema, though a one-atom non-$U$-absorbing
 variant remains available and should get its own closed residual table.
 
+**Front-rigidity ceiling (Pass 34).** The orthogonal idempotent zero-band is not
+just *a* front but the *forced* one. Any commutative, monotone, fully residuated
+same-carrier/order tensor on $B_N$ ($N\ge1$) satisfies the *front integrality*
+inequality $a_i\otimes a_j\le a_j$ on the incomparable front (monotonicity
+against $a_i\le U$ together with principality of the diagonal fiber
+$a_j\backslash a_j$ force $U\otimes a_j\le a_j$). With commutativity this yields
+$a_i\otimes a_j\le a_i\wedge a_j=b$ for $i\ne j$ and $a_i^2\in\{a_i,b\}$ — i.e.
+the orthogonal zero-band. Consequently a finite *group* on the front exists iff
+$\lvert G\rvert=1$: the Pass-33 cyclic-group "Route A" is refuted, since a
+nontrivial group forces $U$-absorption and breaks the diagonal residual. See
+`code/scripts/check-front-group-order-bound.py` and the Front Rigidity section of
+`research/notes/g2-fg2-hierarchy.md`.
+
 For $k\in\{0,1,2\}$, write
 $$
 \tau_k(s)=\tau_k(a_{N+1})=1,\qquad

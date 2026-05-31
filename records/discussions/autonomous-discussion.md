@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 33
+- Current pass: 34
 - Run status: continuous automation resumed on 2026-05-25
 - Main bridge: ChatGPT Project material must be copied, exported, shared, or
   relayed into this repository before Codex can use it reliably.
@@ -2418,3 +2418,144 @@ serve as the cyclic/non-orthogonal front in the $B_N$ schema — specifically,
 whether $\lvert G\rvert\ge4$ fronts (e.g., the Klein four-group or cyclic group of order 4)
 are compatible with full residuation, antitonicity of $\boxtimes$, and the $B_N$
 order, or whether the monotonicity constraints force $\lvert G\rvert\le3$.
+
+### Pass 34 - 2026-05-31 11:21 JST
+
+Focus:
+Determine the maximum order $\lvert G\rvert$ of a finite group that can serve as
+the non-orthogonal front $F_k=\{a_1,\dots,a_k\}$ in the bottom-disciplined
+$B_N$ schema while preserving full residuation, antitonicity of $\boxtimes$, and
+the G2/nFG2/FP profile, on the same carrier and order. Pass 33 recorded that the
+cyclic group $\mathbb Z/3$ ("Route A") succeeds at $k=3$; this pass re-examines
+that claim and tests the order-$4$ groups $\mathbb Z/4$ and the Klein four-group
+$V_4=\mathbb Z/2\times\mathbb Z/2$.
+
+Proposer:
+The optimistic continuation of Pass 33: a finite group $G$ kills the
+$k\ge3$ principal-fiber obstruction because left division in a group is unique,
+so for $p\in F_k$ the fiber $p\backslash b=\{x:p\otimes x=b\}$ collapses to
+$\{b\}$ (no group product equals the adjoined zero $b$), and each $p\backslash
+a_m$ collapses to $\{b,\,p^{-1}a_m\}$ with top $p^{-1}a_m$. By this reasoning
+both order-$4$ abelian groups should work, the only group-theoretic ceiling
+being commutativity of $\otimes$ (so $S_3$ and larger non-abelian groups would
+be excluded, but $\lvert G\rvert$ otherwise unbounded). Conjecture: max order is
+$\infty$ over the abelian groups, with $S_3$ the first excluded group.
+
+Skeptic:
+The Proposer (and Pass 33) only audited the *division* fibers $p\backslash b$
+and $p\backslash a_m$ and silently retained the non-$U$-absorbing front action
+$U\otimes a_i=a_i$ imported from the orthogonal $k=2$ template. That import is
+illegitimate. Monotonicity is a constraint, not a courtesy: from $a_i\le U$ and
+monotonicity of $\otimes$ we must have, for every front atom $a_j$,
+$$
+a_i\otimes a_j \;\le\; U\otimes a_j \qquad(\forall i).
+$$
+When the front carries a group, $\{a_i\otimes a_j : i\}=\{a_i a_j:i\}=F_k$
+(multiplication by $a_j$ is a bijection of $G$). Hence $U\otimes a_j$ must be a
+common upper bound of the *entire* incomparable front $F_k$. For $k\ge2$ the
+only such bound in the $B_N$ order is $U$ itself, so monotonicity *forces*
+$U\otimes a_j=U$ — $U$-absorption is mandatory, the non-$U$-absorbing action is
+impossible. But $U$-absorption then breaks the diagonal residual: in the fiber
+of $a_j\backslash a_j$ we have $T$ (unit) and the group identity $a_e$ (with
+$a_e\otimes a_j=a_j$), both incomparable atoms whose only common upper bound is
+$U$ — and $U$ is now expelled from the fiber because $U\otimes a_j=U\not\le
+a_j$. No maximum survives; residuation fails. The orthogonal $k=2$ band escapes
+this trap precisely because its products *descend* ($a_i\otimes a_j\le a_j$
+always), so non-$U$-absorption stays monotone. A group's products do not
+descend. Route A is refuted.
+
+Formalist:
+Work in $B_N$ ($N\ge1$) on the carrier $\{b,T,a_1,\dots,a_{N+1},s,U\}$ with the
+bottom-disciplined order; let $\otimes$ be commutative, associative, monotone,
+fully residuated, with unit $T$ and zero $b$, restricting to a magma on the
+incomparable front prefix $F_k=\{a_1,\dots,a_k\}$, $k\ge2$.
+
+**Lemma (front integrality).** $a_i\otimes a_j\le a_j$ for all $i,j\le k$.
+
+*Proof.* Monotonicity on $a_i\le U$ gives $a_i\otimes a_j\le U\otimes a_j=:u_j$,
+so $u_j$ upper-bounds $\{a_i\otimes a_j:i\}$. Suppose $u_j\not\le a_j$. Then
+$U\notin (a_j\backslash a_j)$ since $U\otimes a_j=u_j\not\le a_j$. Yet the fiber
+$a_j\backslash a_j$ contains $T$ ($a_j\otimes T=a_j$) and any front atom $a_e$
+with $a_e\otimes a_j=a_j$; $T$ and $a_e$ are distinct incomparable atoms whose
+unique common upper bound in $B_N$ is $U$. Hence the fiber has no maximum,
+contradicting full residuation. Therefore $u_j\le a_j$, and a fortiori
+$a_i\otimes a_j\le a_j$ for all $i$. $\qquad\blacksquare$
+
+**Theorem (front rigidity).** Under the above hypotheses the front sub-magma is
+forced to be the orthogonal idempotent zero-band:
+$$
+a_i\otimes a_j=b\ (i\ne j),\qquad a_i\otimes a_i\in\{a_i,b\}.
+$$
+Consequently no nontrivial group structure is realizable on $F_k$: a group front
+exists **iff $\lvert G\rvert=1$**.
+
+*Proof.* The Lemma plus commutativity give $a_i\otimes a_j\le a_i\wedge a_j$.
+For $i\ne j$ the incomparable atoms meet at $b$, so $a_i\otimes a_j=b$; for
+$i=j$, $a_i\otimes a_i\le a_i$ forces $a_i\otimes a_i\in\{a_i,b\}$ (the only
+elements $\le a_i$). A group on $F_k$ requires $a_i\otimes a_j$ to range over all
+of $F_k$ and to have inverses, incompatible with $a_i\otimes a_j=b$ once
+$k\ge2$. Hence $k=1$. $\qquad\blacksquare$
+
+This is verified by exhaustive search in
+`code/scripts/check-front-group-order-bound.py`, which ranges over every choice
+of $U\otimes a_i$ in the minimal faithful ambient $\{b,T,a_1,\dots,a_k,U\}$
+(the substructure carrying all binding front constraints). Output:
+
+```
+group fronts: k=1 Z/1 -> 1 solution (U*a_i = a_1, non-U-absorbing);
+              k=2 Z/2, k=3 Z/3, k=4 Z/4, k=4 V4 -> NO solution.
+validation:   orthogonal k=1,2 -> residuated (U*a_i = a_i);  k=3 -> 0 (matches Pass 31).
+```
+
+The harness is validated against the established orthogonal-front data: it
+returns the unique non-$U$-absorbing solution for orthogonal $k=1,2$ and the
+known failure at $k=3$. **Proof obligations discharged:** integrality lemma,
+rigidity theorem, exhaustive confirmation at $k\le4$ for $\mathbb Z/2$,
+$\mathbb Z/3$, $\mathbb Z/4$, $V_4$. **Remaining (minor):** the rigidity theorem
+is general in $k$, so no per-$k$ search is logically required beyond the validation;
+the $k\le4$ run is corroborative, not load-bearing.
+
+Consequence for Pass 33: the recorded "Route A success" was an error of omission
+— it checked the division fibers but not the monotonicity-induced $U$-action.
+The corrected verdict is that *both* escape routes from the $k\ge3$ obstruction
+fail: Route B by the antitonicity cascade (Pass 33, still valid), Route A by the
+integrality/diagonal-residual obstruction (this pass). The orthogonal idempotent
+band of width $\le2$ is therefore not merely *a* solution but the *forced* shape
+of any same-carrier/order commutative residuated front.
+
+Archivist:
+Mark the Pass-33 "[New] maximum front-group order" problem **[Resolved]** with
+answer $\lvert G\rvert=1$, and append a correction note to the Cyclic-Group
+Front section of `g2-fg2-hierarchy.md` flagging the monotonicity flaw in the
+Route A claim and stating the front-rigidity theorem. Record the integrality
+lemma and rigidity theorem in `g2-fg2-hierarchy.md`; add the rigidity statement
+to `definitions.md` as the structural ceiling of the front-width schema. Log the
+pass in `research-log.md`, retarget `research-questions.md`. New script
+`code/scripts/check-front-group-order-bound.py` (added).
+
+Repository updates:
+- `code/scripts/check-front-group-order-bound.py`: new exhaustive checker for the
+  front-group order bound, with an orthogonal-front validation harness.
+- `research/notes/g2-fg2-hierarchy.md`: added the "Front Rigidity (Pass 34)"
+  subsection — integrality lemma, rigidity theorem, and a correction flag on the
+  Pass-33 Route A claim.
+- `research/definitions.md`: added the front-rigidity ceiling to the front-width
+  schema description (group fronts collapse to the orthogonal band; only $|G|=1$).
+- `research/open_problems.md`: the max-front-group-order item marked [Resolved];
+  Route A entry corrected to [Refuted]; added a [New] item on whether a
+  *non-commutative* (two-residual) expansion could host a group front.
+- `records/logs/research-log.md`: one-line Pass 34 entry.
+- `research/ideas/research-questions.md`: retargeted the front question to the
+  non-commutative-residuation variant and to integral-tensor classification.
+
+Next step:
+The rigidity theorem uses commutativity (single residual). Pass 35 should test
+the genuinely non-commutative escape: equip $B_N$ with a *non-integral*
+two-residual (left/right $\backslash,\,/$) tensor and ask whether a nontrivial
+finite group can sit on the front when monotonicity no longer forces a single
+common $U$-action — i.e., does dropping commutativity (and hence the
+$a_i\otimes a_j\le a_i\wedge a_j$ collapse) reopen group fronts, or does the
+two-sided monotonicity $a_i\le U\Rightarrow a_i\otimes a_j\le U\otimes a_j$ and
+$a_j\otimes a_i\le a_j\otimes U$ still force $U$-absorption and kill the diagonal
+residual? Settle whether the front rigidity is a commutativity artifact or a
+genuine $B_N$-order phenomenon.

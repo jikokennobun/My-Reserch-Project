@@ -14,8 +14,17 @@
 - Does the finite orbit-stabilization theorem for all-level nFG2 extend to infinite APS under an existing proof-theoretic axiom, or does it require a new orbit well-foundedness/no-infinite-descent condition?
 - Which nontrivial APS axiom packages preserve the arbitrary-depth $D_N$ nFG2 first-true witnesses, and which force collapse of the first-true depth?
 - Can the orthogonal front-width theorem be upgraded from the current
-  machine-checked closed residual formula to a polished paper lemma, and can
-  non-orthogonal front ideals evade the $k\ge3$ principal-fiber obstruction?
+  machine-checked closed residual formula to a polished paper lemma? (The
+  non-orthogonal escape is now closed: Pass 34's front-rigidity theorem shows a
+  commutative residuated front of $B_N$ is *forced* to be the orthogonal
+  idempotent zero-band, so no nontrivial group front exists.)
+- Does dropping commutativity reopen group fronts? Can a non-integral
+  two-residual ($\backslash,/$) tensor on $B_N$ host a nontrivial finite group on
+  the front, or does two-sided monotonicity still force $U$-absorption and the
+  diagonal-residual failure? Equivalently: is front rigidity a commutativity
+  artifact or a genuine $B_N$-order phenomenon?
+- Classify which finite commutative residuated structures (beyond the orthogonal
+  band) can appear as integral tensor ideals glued onto the shifted $B_N$ tail.
 - How should local/formalized G2 principles such as $\mathrm{LG2}(a)$ and
   $\mathrm{FG2}[q]$ be added to the G2-ZOO without confusing Horn rules with
   internal implication propositions?
