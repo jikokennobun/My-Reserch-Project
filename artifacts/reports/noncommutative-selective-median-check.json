@@ -1,0 +1,1531 @@
+{
+  "summary": {
+    "target": "non-abelian selective median (group battery)",
+    "groups": [
+      "S3",
+      "D4",
+      "Q8",
+      "Z4"
+    ],
+    "allEscapeWithSingleMedian": true,
+    "allControlsFail": true,
+    "uniformMediansNeeded": 1,
+    "uniformity": [
+      {
+        "group": "S3",
+        "order": 6,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ],
+        "forcedBoxtimesM": "b",
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      },
+      {
+        "group": "D4",
+        "order": 8,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ],
+        "forcedBoxtimesM": "b",
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      },
+      {
+        "group": "Q8",
+        "order": 8,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ],
+        "forcedBoxtimesM": "b",
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      },
+      {
+        "group": "Z4",
+        "order": 4,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ],
+        "forcedBoxtimesM": "b",
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case": "S3-selective-median",
+      "group": [
+        "e",
+        "132",
+        "213",
+        "231",
+        "312",
+        "321"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "s",
+        "U",
+        "m"
+      ],
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "leftMaximal": [
+          "m"
+        ],
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "rightMaximal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ]
+      },
+      "antitoneMedianImage": {
+        "constraints": [
+          "a1",
+          "a2"
+        ],
+        "admissibleValues": [
+          "b"
+        ],
+        "forcedValue": "b"
+      }
+    },
+    {
+      "case": "S3-no-extra-control",
+      "group": [
+        "e",
+        "132",
+        "213",
+        "231",
+        "312",
+        "321"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "s",
+        "U"
+      ],
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 12,
+      "failures": [
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    },
+    {
+      "case": "S3-full-cap-control",
+      "group": [
+        "e",
+        "132",
+        "213",
+        "231",
+        "312",
+        "321"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "s",
+        "U",
+        "c"
+      ],
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 38,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a4",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a4",
+            "c",
+            "U",
+            "c"
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    },
+    {
+      "case": "D4-selective-median",
+      "group": [
+        "e",
+        "r1",
+        "r2",
+        "r3",
+        "sr",
+        "sr1",
+        "sr2",
+        "sr3"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "a8",
+        "a9",
+        "s",
+        "U",
+        "m"
+      ],
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "leftMaximal": [
+          "m"
+        ],
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "rightMaximal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ]
+      },
+      "antitoneMedianImage": {
+        "constraints": [
+          "a1",
+          "a2"
+        ],
+        "admissibleValues": [
+          "b"
+        ],
+        "forcedValue": "b"
+      }
+    },
+    {
+      "case": "D4-no-extra-control",
+      "group": [
+        "e",
+        "r1",
+        "r2",
+        "r3",
+        "sr",
+        "sr1",
+        "sr2",
+        "sr3"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "a8",
+        "a9",
+        "s",
+        "U"
+      ],
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 16,
+      "failures": [
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    },
+    {
+      "case": "D4-full-cap-control",
+      "group": [
+        "e",
+        "r1",
+        "r2",
+        "r3",
+        "sr",
+        "sr1",
+        "sr2",
+        "sr3"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "a8",
+        "a9",
+        "s",
+        "U",
+        "c"
+      ],
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 50,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a4",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a4",
+            "c",
+            "U",
+            "c"
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    },
+    {
+      "case": "Q8-selective-median",
+      "group": [
+        "e",
+        "-1",
+        "i",
+        "-i",
+        "j",
+        "-j",
+        "k",
+        "-k"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "a8",
+        "a9",
+        "s",
+        "U",
+        "m"
+      ],
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "leftMaximal": [
+          "m"
+        ],
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "rightMaximal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ]
+      },
+      "antitoneMedianImage": {
+        "constraints": [
+          "a1",
+          "a2"
+        ],
+        "admissibleValues": [
+          "b"
+        ],
+        "forcedValue": "b"
+      }
+    },
+    {
+      "case": "Q8-no-extra-control",
+      "group": [
+        "e",
+        "-1",
+        "i",
+        "-i",
+        "j",
+        "-j",
+        "k",
+        "-k"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "a8",
+        "a9",
+        "s",
+        "U"
+      ],
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 16,
+      "failures": [
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    },
+    {
+      "case": "Q8-full-cap-control",
+      "group": [
+        "e",
+        "-1",
+        "i",
+        "-i",
+        "j",
+        "-j",
+        "k",
+        "-k"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "a8",
+        "a9",
+        "s",
+        "U",
+        "c"
+      ],
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 50,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a4",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a4",
+            "c",
+            "U",
+            "c"
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    },
+    {
+      "case": "Z4-selective-median",
+      "group": [
+        "e",
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "s",
+        "U",
+        "m"
+      ],
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "leftMaximal": [
+          "m"
+        ],
+        "leftPrincipal": [
+          "m"
+        ],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1",
+          "m"
+        ],
+        "rightMaximal": [
+          "m"
+        ],
+        "rightPrincipal": [
+          "m"
+        ]
+      },
+      "antitoneMedianImage": {
+        "constraints": [
+          "a1",
+          "a2"
+        ],
+        "admissibleValues": [
+          "b"
+        ],
+        "forcedValue": "b"
+      }
+    },
+    {
+      "case": "Z4-no-extra-control",
+      "group": [
+        "e",
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "s",
+        "U"
+      ],
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 8,
+      "failures": [
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a1",
+            "a1",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a2",
+            "a2",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a3",
+            "a3",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "left-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        },
+        {
+          "check": "right-residual-principal",
+          "witness": [
+            "a4",
+            "a4",
+            [
+              "b",
+              "T",
+              "a1"
+            ],
+            []
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    },
+    {
+      "case": "Z4-full-cap-control",
+      "group": [
+        "e",
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "carrier": [
+        "b",
+        "T",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "s",
+        "U",
+        "c"
+      ],
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 26,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a4",
+            "c",
+            "c",
+            "U",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a4",
+            "c",
+            "U",
+            "c"
+          ]
+        }
+      ],
+      "diagonalFibers": {
+        "frontElement": "a2",
+        "leftFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "leftMaximal": [
+          "T",
+          "a1"
+        ],
+        "leftPrincipal": [],
+        "rightFiber": [
+          "b",
+          "T",
+          "a1"
+        ],
+        "rightMaximal": [
+          "T",
+          "a1"
+        ],
+        "rightPrincipal": []
+      },
+      "antitoneMedianImage": null
+    }
+  ],
+  "conclusion": "One selective median m=T v e_G makes both diagonal fibers principal for every tested group (S3, D4, Q8, Z/4): the number of medians needed is 1, independent of conjugacy-class count, so it is NOT a new group invariant of the front."
+}

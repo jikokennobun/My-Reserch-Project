@@ -34,3 +34,10 @@ profile.
 Research notes should not simply say that a search was run. They should cite
 the report path and explain which mathematical claim the report supports. If a
 report is exploratory or incomplete, mark it as such.
+
+## Recent Reports
+
+- `noncommutative-selective-median-check.json`: verifies the Pass-38
+  two-residual selective-median construction for an $S_3$ front. The median case
+  is fully residuated; the no-median and full-cap controls fail with the
+  predicted residual/monotonicity obstructions.

@@ -212,18 +212,61 @@
   an order-theoretic phenomenon, not a commutativity artifact. Verified
   (incl. non-abelian $S_3$) by
   `code/scripts/check-noncommutative-front-group-bound.py`.
-- **[New]** Capped-front (ceiling-relaxation) escape: the rigidity argument
-  rests on the absorbing ceiling, i.e. the only upper bound of $\ge2$ front
-  atoms is $U$. Enlarge $B_N$ to $B_N^{\mathrm{cap}}$ by a single sub-top
-  element $c$ with $a_i\le c<U$ for all front atoms. Does $B_N^{\mathrm{cap}}$
-  admit a monotone associative two-residuated tensor with a nontrivial group
-  front and $a_j\otimes c=c\otimes a_j=c$ (so diagonal fibers become principal
-  at $c$)? Subquestions: (a) does antitonicity of $\boxtimes$ survive $a_i\le c$
-  when $c$ lies *outside* the $\boxtimes$-orbit (Route B died on the same-carrier
-  $B_N$ by an antitonicity cascade — does an off-orbit cap escape it?); (b) the
-  resulting maximum group order as a function of $c$'s position; (c) whether a
-  deeper APS-level (G2/nFG2) obstruction forbids group fronts in *every* finite
-  bottom-disciplined ambient.
+- **[Resolved (Pass 36)]** Capped-front (ceiling-relaxation) escape: enlarge
+  $B_N$ to $B_N^{\mathrm{cap}}$ by a single sub-top $c$ with $a_i\le c<U$ for all
+  front atoms. **Verdict: $\lvert G\rvert=1$ for every placement of a single
+  cap.** (a) *Antitonicity survives* with the forced value $\boxtimes c=b$
+  (since $\boxtimes c\le\bigwedge_i a_{i+1}=b$); the G2/FG2/nFG2/FP profile is
+  preserved and the Route-B cascade is escaped because $c\notin\mathrm{orbit}(T)$
+  pins only the fresh element. (b) *Group rigidity persists:* monotonicity
+  against $\bigvee F_k=c$ forces $a_j\otimes c\ge c\not\le a_j$, so the diagonal
+  fiber $a_j\backslash a_j$ still strands the incomparable pair $\{T,e_G\}$ whose
+  only common upper bounds $c,U$ are both excluded — non-principal. *Cap Ejection
+  lemma*: if $p\le c$, $p^2=p$, then $p\otimes c\ge p\not\le t$ for any $t$ with
+  $p\not\le t$, so a ceiling above the front cannot repair a fiber whose
+  obstruction sits at/below the front (the orthogonal $k\ge3$ bound also
+  survives). Verified by `code/scripts/check-capped-front-bound.py`.
+- **[Resolved (Pass 37)]** Selective-median escape: adjoin a single $m$
+  dominating *only* the obstructing pair $\{T,e_G\}$ ($T,e_G\le m$), incomparable
+  to every non-identity front atom and to the tail. **Verdict: the escape
+  succeeds and $\lvert G\rvert$ is unbounded.** In the augmented order $m=T\vee
+  e_G$ is the join $B_N$ was missing below the absorbing top. (a) *Antitonicity
+  survives*, forced value $\boxtimes m=b$ (since $\boxtimes m\le\boxtimes
+  T\wedge\boxtimes e_G=a_1\wedge a_2=b$); profile preserved, no Route-B cascade
+  ($m\notin\mathrm{orbit}(T)$). (b) *$a_j\otimes m=a_j$ is attainable* — forced
+  into $\{a_j,U\}$ by monotonicity, and the value $a_j$ keeps $m$ in the fiber.
+  (c) *Maximum group order $=\infty$* (finite abelian): with the front *not*
+  absorbing the tail ($a_j\otimes r=U$), the diagonal fiber is principal,
+  $a_j\backslash a_j=\{b,T,e_G,m\}$ with max $m$. **Missing-join principle**: a
+  group fits the front iff the order supplies a common upper bound of $\{T,e_G\}$
+  strictly below $U$. Machine-verified for $\mathbb Z/2,\dots,\mathbb Z/5$ by
+  `code/scripts/check-selective-median-bound.py` (both no-median and full-cap
+  controls reproduce the predicted obstructions).
+- **[Resolved for tested battery (Pass 38)]** Non-abelian selective median:
+  equip $B_N^{\mathrm{med}}$ with a two-residual ($\backslash,/$) tensor and a
+  non-abelian front. `check-noncommutative-selective-median.py` verifies a
+  four-group battery — $S_3$ ($k=6$, 3 conjugacy classes), $D_4$ and $Q_8$
+  ($k=8$, 5 classes each: $D_4$ has non-normal reflections, $Q_8$ has every
+  subgroup normal), and the abelian control $\mathbb Z/4$. In **every** case the
+  one-point median $m=T\vee e_G$ makes both diagonal fibers
+  $a_j\backslash a_j=a_j/a_j=\{b,T,e_G,m\}$ principal (max $m$), forced
+  $\boxtimes m=b$ preserves the APS profile, and the no-median / full-cap
+  controls fail as predicted. **Single-median uniformity:** $\#$(medians needed)
+  $=1$ independent of conjugacy-class count — so it is *not* a new group
+  invariant of the front; the unique join-deficient pair below $U$ is always
+  $\{T,e_G\}$, regardless of $|G|$. No second median, and no $G$-dependent order
+  data, is required. Report:
+  `artifacts/reports/noncommutative-selective-median-check.json`.
+- **[New]** Uniform non-abelian selective-median theorem: prove or refute that
+  the Pass-38 $S_3$ construction works for every finite group $G$, using
+  ordinary group multiplication on the front and the single join $m=T\vee e_G$.
+  If it fails, identify the first group-theoretic obstruction and whether it is
+  tied to conjugacy, one-sided translations, or a missing left/right join.
+- **[New]** Abelian uniformity lemma: write out the $G$-independent
+  associativity proof for $B_N^{\mathrm{med}}$ over an arbitrary finite abelian
+  $G$ (the interaction blocks $b,T,m,\text{collapse}$ are $G$-free and the
+  $A\times A$ block inherits associativity from $G$), upgrading the cyclic
+  $k\le5$ machine checks to a theorem for all finite abelian fronts.
 - **[Resolved]** n-FG2 hierarchy first-true depth at arbitrary finite depth:
   the family $D_N$ generated by `code/scripts/new-nfg2-depth-witness.ps1` has
   nFG2($k$) false for all $k\le N$ and true from $k=N+1$ onward. The
@@ -291,3 +334,41 @@
 - Classify 3- and 4-element APS/preAPS models satisfying selected axiom packages.
 - Compute $\lvert\mathrm{Fix}_{\boxtimes}(S)\rvert$ as a model invariant.
 - Build machine-checkable finite models under `code/models/`.
+holds even when both residuals are present. Verified in
+  `code/scripts/check-noncommutative-front-group-bound.py`.
+- **[Resolved (Pass 36)]** Does a sub-top *ceiling* over the whole front reopen
+  group fronts? **No.** Adjoin one $c$ with $a_i\le c<U$ for every front atom.
+  Antitonicity forces the unique profile-preserving value $\boxtimes c=b$, but
+  the cap is *ejected* from every diagonal fiber: for a group front the
+  translations give $\bigvee_i(a_j\otimes a_i)=\bigvee F_k=c$, so monotonicity
+  forces $a_j\otimes c\ge c\not\le a_j$. *Cap Ejection lemma*: if $p\le c$ and
+  $p^2=p$ then $p\otimes c\ge p\not\le t$ for any $t$ with $p\not\le t$, so $c$
+  leaves the fiber. Hence $\lvert G\rvert=1$ for *every* single-cap placement.
+  Verified in `code/scripts/check-capped-front-bound.py`. The lemma leaves
+  exactly one repair standing: a *selective median* over $\{T,e_G\}$ only.
+- **[Resolved (Pass 37)]** Does the selective median buy a group front, and at
+  what maximum order? **Yes — $\lvert G\rvert$ unbounded with a single added
+  element.** Adjoin one median $m$ dominating *only* the stranded pair:
+  $b,T,a_1\le m\le U$ ($a_1=e_G$), $m$ incomparable to $a_2,\dots,a_{N+1},s$.
+  Then $B_N^{\mathrm{med}}$ carries a commutative, associative, monotone, fully
+  residuated tensor with front $F_k\cong\mathbb Z/k$ a genuine group, for every
+  $k\ge2$ (verified $k=2,3,4,5$ in
+  `code/scripts/check-selective-median-bound.py`). The diagonal fiber
+  $a_j\backslash a_j=\{b,T,a_1,m\}$ is principal with top $m$, because
+  $m\otimes a_j=a_j\le a_j$ and $m\not\ge a_i$ ($i\ne1$) so Cap Ejection never
+  fires. Antitonicity forces $\boxtimes m=b$ (profile-preserving). *Dichotomy:*
+  one element placed as a whole-front ceiling gives $\lvert G\rvert=1$ (Pass 36),
+  but placed as a selective median over $\{T,e_G\}$ gives $\lvert
+  G\rvert=\infty$ — *placement, not cardinality, is decisive.* This yields the
+  minimal-carrier-extension invariant $\mu(\text{nontrivial group})=1$.
+- **[New]** *Arbitrary finite group and median necessity.* (i) Does the single
+  median host an *arbitrary* finite group $G$, non-abelian included? Both
+  two-sided diagonal fibers reduce to $\{b,T,e_G,m\}$ (since $xa_j=a_j$ or
+  $a_jx=a_j\Rightarrow x=e_G$), so $m$ should cap both and give $\mu(G)=1$ for
+  every finite $G$ — verify $S_3,Q_8,V_4$ with both residuals. (ii) Is the
+  median's order-position *forced* — i.e. is the selective median over exactly
+  $\{T,e_G\}$ the *unique* one-element repair (any single repair must dominate
+  $T$ and $e_G$ and be incomparable to every $a_i$, $i\ne1$, else Cap Ejection
+  re-fires)? (iii) Compute $\mu(\mathcal A)$ for non-group front algebras:
+  conjecture $\mu=t$ when the front algebra's identity-like idempotents form an
+  antichain of size $t$ (one median per stranded unit/identity pair).

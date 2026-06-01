@@ -1,5 +1,29 @@
 # Research Log
 
+## 2026-06-01 (Autonomous discussion Pass 38)
+
+- Non-abelian selective-median escape resolved for the tested battery: the single
+  median $m=T\vee e_G$ makes both diagonal fibers $a_j\backslash a_j=a_j/a_j=
+  \{b,T,e_G,m\}$ principal for $S_3$, $D_4$, $Q_8$, and the control $\mathbb Z/4$,
+  with forced $\boxtimes m=b$. $\#$(medians) $=1$ uniformly — independent of
+  conjugacy-class count — so it is NOT a new group invariant. No-median and
+  full-cap controls fail for every group. Verified by
+  `code/scripts/check-noncommutative-selective-median.py` (four-group battery);
+  report `artifacts/reports/noncommutative-selective-median-check.json`. The
+  all-finite-groups uniform theorem remains open (Pass 39 target).
+
+## 2026-05-31 (Autonomous discussion Pass 36)
+
+- Capped-front escape resolved: adjoining a single sub-top cap $c$ ($a_i\le c<U$)
+  to $B_N$ preserves antitonicity with the forced value $\boxtimes c=b$ and
+  escapes the Route-B cascade (since $c\notin\mathrm{orbit}(T)$), but does **not**
+  reopen group fronts — $\lvert G\rvert=1$ for every cap placement. New *Cap
+  Ejection lemma*: a ceiling above the front cannot repair a fiber whose
+  obstruction sits at/below the front ($p\otimes c\ge p^2=p\not\le t$), so the
+  diagonal fiber still strands $\{T,e_G\}$ and the orthogonal $k\ge3$ bound also
+  survives. Verified by `code/scripts/check-capped-front-bound.py`. Next target:
+  the selective-median escape (a node over $\{T,e_G\}$ only).
+
 ## 2026-05-31 (Relay sync 2026-05-31T18:53:00+09:00)
 
 - ChatGPT Project artifact inbox sync: 0 new artifacts imported; no updates to `artifacts/slides/chatgpt-project/` or `artifacts/pdf/`.
@@ -352,3 +376,34 @@
   commutativity artifact. Verified incl. non-abelian $S_3$ by
   `code/scripts/check-noncommutative-front-group-bound.py`. Only remaining
   escape: ceiling relaxation (sub-top cap $c<U$, enlarged carrier).
+
+## 2026-06-01
+
+- Autonomous discussion pass 37: **selective-median escape succeeds; front-group
+  order is unbounded.** Adjoining one element $m=T\vee e_G$ (dominating only the
+  global unit $T$ and group identity $e_G$, incomparable to the rest of the front
+  and the tail) makes the diagonal fiber principal, $a_j\backslash
+  a_j=\{b,T,e_G,m\}$ with max $m$, provided the front stops absorbing the tail
+  ($a_j\otimes r=U$); forced $\boxtimes m=b$ preserves the profile. The
+  same-carrier verdict $|G|=1$ (Passes 34–35) flips to $|G|=\infty$ for finite
+  abelian $G$ — the **missing-join principle**: a group fits iff the order has a
+  common upper bound of $\{T,e_G\}$ strictly below $U$. Machine-verified for
+  $\mathbb Z/2,\dots,\mathbb Z/5$ by
+  `code/scripts/check-selective-median-bound.py` (no-median and full-cap controls
+  reproduce the predicted obstructions). Non-abelian (two-residual) case opened
+  for Pass 38.
+- Relay sync (2026-06-01T01:53:05+09:00): ChatGPT Project artifact inbox import
+  found 0 artifacts; share-watchlist refresh still fails for all 23
+  `https://chatgpt.com/share/...` URLs (logged in
+  `records/logs/chatgpt-share-sync.md` and `records/logs/chatgpt-share-state.csv`),
+  so no conversation diffing/note ingestion was possible this run.
+- Relay sync (2026-06-01T16:09:40+09:00): re-ran the artifact import and
+  share-watchlist check; still 0 inbox artifacts and 23/23 share fetch failures.
+  Local-only updates remain available (autonomous discussion writeups, verifiers,
+  and collected PDFs), but new shared-conversation ingestion needs the Drive
+  inbox fallback or a networked fetch environment.
+- Autonomous discussion pass 38: tested the non-abelian selective-median escape
+  on an $S_3$ front. The one-point median $m=T\vee e_G$ makes both left and
+  right diagonal fibers principal at $m$, while no-median and full-cap controls
+  fail as predicted; report saved at
+  `artifacts/reports/noncommutative-selective-median-check.json`.

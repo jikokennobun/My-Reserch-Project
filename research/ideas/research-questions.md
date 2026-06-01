@@ -24,28 +24,25 @@
   diagonal-residual failure? **(Resolved, Pass 35: rigidity is a genuine
   $B_N$-order phenomenon — two-sided $U$-absorption is forced, both diagonal
   fibers strand the incomparable $\{T,a_{i_0}\}$ pair, so $\lvert G\rvert=1$
-  even non-commutatively, incl. $S_3$.)** Live successor: **capped-front /
-  ceiling relaxation** — adjoin a sub-top cap $c<U$ above the front
-  ($a_i\le c<U$) and ask whether $B_N^{\mathrm{cap}}$ hosts a nontrivial group
-  front with $a_j\otimes c=c\otimes a_j=c$, whether antitonicity of $\boxtimes$
-  survives an off-orbit cap (the same-carrier Route B died by an antitonicity
-  cascade), and whether a deeper G2/nFG2 obstruction forbids group fronts in
-  *every* finite bottom-disciplined ambient.
-- Classify which finite commutative residuated structures (beyond the orthogonal
-  band) can appear as integral tensor ideals glued onto the shifted $B_N$ tail.
-- How should local/formalized G2 principles such as $\mathrm{LG2}(a)$ and
-  $\mathrm{FG2}[q]$ be added to the G2-ZOO without confusing Horn rules with
-  internal implication propositions?
-- Which weak-APS packages capture Feferman/Shavrukov/Rosser-style provability
-  predicates as controlled A4 failures while still preserving useful G2-like
-  conclusions?
-- Can self-elimination logic be modelled as a finite dynamic axiom-deletion
-  system with stable extensions, two-cycles, and no-fixed-point cases?
-- What is the minimal fibred/indexed sequentiality condition needed to supply
-  a Jeroslow-style fixed point for APS?
+  even non-commutatively, incl. $S_3$.)** Capped-front successor **(Resolved,
+  Pass 36: $\lvert G\rvert=1$ for every single-cap placement — antitonicity
+  survives with forced $\boxtimes c=b$ and the Route-B
+cascade is escaped, but no cap repairs the at/below-front fiber obstruction.)**
+Selective-median successor **(Resolved, Pass 37: adjoining the single join
+$m=T\vee e_G$ below the absorbing top makes the diagonal fiber principal, so
+$\lvert G\rvert$ is unbounded for finite abelian fronts — the rigidity ceiling
+was the missing join $T\vee e_G$.)** Non-abelian successor **(Resolved for the
+tested battery, Pass 38: the same one-point median makes both diagonal fibers
+principal for $S_3$, $D_4$, $Q_8$, $\mathbb Z/4$; $\#$(medians) $=1$ uniformly,
+not a new group invariant.)**
+- **Active (Pass 39 target):** Prove the *uniform all-finite-groups* non-abelian
+  selective-median theorem — for an arbitrary finite group $G$, with ordinary
+  group multiplication on the front $F_k\cong G$ and the single join $m=T\vee
+  e_G$, is $B_N^{\mathrm{med}}$ ($N\ge\lvert G\rvert$) always fully two-sided
+  residuated? Isolate any first group-theoretic obstruction (conjugacy,
+  one-sided translation defects, or a stranded left/right join distinct from
+  $\{T,e_G\}$). Companion: write out the $G$-independent associativity lemma
+  (interaction blocks $b,T,m,\text{collapse}$ are $G$-free; the $F_k\times F_k$
+  block inherits associativity from $G$), upgrading the finite battery to a
+  theorem for all finite fronts.
 
-## Later
-
-## Resolved
-
-- Google Drive folder scanning via the Drive MCP connector was blocked (handshake timeout) in prior runs, but was reachable again as of 2026-05-27.

@@ -981,24 +981,72 @@ the unique non-absorbing action is not even two-sided monotone — confirming th
 Lemma leaves no monotone alternative.
 
 **Diagnosis.** The obstruction is now isolated to two purely order-theoretic
-facts about $B_N$: (i) a group identity must live *inside* the incomparable
-front, hence incomparable to the global unit $T$; (ii) the only upper bound of
-$\ge2$ front atoms is the absorbing top $U$. Neither uses commutativity,
-integrality, or even associativity beyond the unit laws. The single remaining
-escape is therefore *ceiling relaxation*: enlarge the carrier by a sub-top cap
-$c<U$ above the front but below $U$, so the diagonal fibers can be principal at
-$c$ instead of stranded at $U$. This breaks the same-carrier discipline and is
-opened as the Pass-36 capped-front problem.
+facts about $B_N$: (i) for $k\ge2$ a group
+front has $\ge2$ pairwise-incomparable atoms whose only common upper bound is
+$U$, and (ii) $U$ absorbs every front atom on both sides. Together they strand
+the incomparable pair $\{T,e_G\}$ in each diagonal fiber, with no maximum below
+$U$. Commutativity and integrality are red herrings; rigidity is an
+order-theoretic property of the carrier.
 
-### Open Tasks (updated after Pass 34)
+## Selective-Median Escape (Pass 37)
 
-- Classify all non-isomorphic 3-element preAPS models by (G2, FG2, FP-synt, nFG2-pattern).
-- Characterize the infinite analogue of finite orbit stabilization: which APS
-  axiom packages imply orbit well-foundedness?
-- **[New]** Determine the maximum order $\lvert G\rvert$ of a finite group that can serve
-  as the non-orthogonal front ideal in the $B_N$ schema while preserving full
-  residuation, antitonicity of $\boxtimes$, and the G2/nFG2 profile. The cyclic
-  group $\mathbb Z/3\mathbb Z$ works at $k=3$; the Klein four-group and
-  $\mathbb Z/4\mathbb Z$ are the next candidates.
-- Compare with BS16 resource-sensitive separation and hidden-contraction analysis
-  in `research/notes/bs16-fiber-residuated-aps.md`.
+The Pass 34–36 rigidity ceiling $\lvert G\rvert=1$ turns out to be an artifact
+of a *single missing join*. The diagonal-fiber obstruction is always the same
+incomparable pair $\{T,e_G\}$ (global unit vs. group identity), whose only
+common upper bound in $B_N$ is the absorbing top $U$ — and $U$ is excluded by
+$U$-absorption. Supply the missing join and the obstruction evaporates.
+
+**Definition ($B_N^{\mathrm{med}}$).** Augment the bottom-disciplined $B_N$
+carrier by one element $m$; order $b\le x\le U$, $s\le a_{N+1}$, and
+$b,T,a_1\le m\le U$ with $a_1=e_G$; $m$ incomparable to $a_2,\dots,a_{N+1},s$.
+Tensor: $b$ zero, $T$ unit, group product on $F_k\cong G$, $m^2=m$,
+$m\otimes g=g\otimes m=g$ ($g\in F_k$), $a_j\otimes m=a_j$, all remaining
+nonzero non-unit products $=U$. Forced $\boxtimes m=b$ (since $\boxtimes
+m\le\boxtimes T\wedge\boxtimes e_G=a_1\wedge a_2=b$).
+
+**Theorem (Selective-Median Escape).** For every finite abelian $G$ and
+$N\ge\lvert G\rvert$, $B_N^{\mathrm{med}}$ with front $F_k\cong G$ carries a
+commutative, associative, monotone, $T$-unital, fully residuated tensor whose
+diagonal fibers are principal, $a_j\backslash a_j=\{b,T,e_G,m\}$ with maximum
+$m=T\vee e_G$. Hence the maximum front-group order in the carrier-plus-median
+schema is $\lvert G\rvert=\infty$; the rigidity ceiling was a pure artifact of
+the absent join $T\vee e_G$.
+
+*Status.* Machine-verified for $\mathbb Z/2,\dots,\mathbb Z/5$ by
+`code/scripts/check-selective-median-bound.py`. Controls reproduce the known
+obstructions: no median $\Rightarrow$ fiber $\{b,T,e_G\}$ with empty maximal set
+(non-principal); full cap $c$ over the front $\Rightarrow$ non-monotonicity
+($a_1\otimes c=U\not\le c$, the Pass-36 ejection). Remaining obligation: the
+$G$-uniform associativity lemma and the non-abelian case (two residuals).
+
+## Non-Abelian Selective Median (Pass 38)
+
+**Question.** Non-commutativity splits the diagonal residual into two fibers
+$a_j\backslash a_j$ (left) and $a_j/a_j$ (right). Does the escape now require a
+*second* median, or $G$-dependent order data growing with the conjugacy-class
+count?
+
+**Theorem (Single-Median Uniformity, tested battery).** Equip
+$B_N^{\mathrm{med}}$ with a two-residual ($\backslash,/$) tensor and a
+non-abelian front. The *same* one-point median $m=T\vee e_G$ makes *both*
+diagonal fibers principal, $a_j\backslash a_j=a_j/a_j=\{b,T,e_G,m\}$ (maximum
+$m$), with forced $\boxtimes m=b$ preserving the G2/FG2/nFG2/FP profile. The
+number of medians needed is $1$, independent of the conjugacy-class count — so
+it is *not* a new group invariant.
+
+*Proof idea.* Left/right translations $L_{a_j},R_{a_j}$ are bijections of the
+group front, so the $U$-absorption analysis is two-sided-symmetric; the unique
+join-deficient pair strictly below $U$ is $\{T,e_G\}$ for *every* finite $G$,
+because $T$ (global unit) and $e_G$ (group identity) are the only two idempotent
+two-sided units acting as identity on the front, and no front atom or tail
+element dominates both. One join $m$ caps exactly this pair on both sides.
+
+*Status.* Machine-verified for $S_3$ ($k=6$, 3 conjugacy classes), $D_4$ and
+$Q_8$ ($k=8$, 5 classes each — $D_4$ with non-normal reflections, $Q_8$ with
+every subgroup normal and a unique involution), plus the abelian control
+$\mathbb Z/4$, by `code/scripts/check-noncommutative-selective-median.py`
+(full two-sided unit/associativity/monotonicity/residuation check; both
+no-median and full-cap controls FAIL as predicted). Report:
+`artifacts/reports/noncommutative-selective-median-check.json`. *Open:* the
+uniform all-finite-groups theorem (Pass 39 target).
+

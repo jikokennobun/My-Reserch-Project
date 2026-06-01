@@ -73,6 +73,10 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/check-front-ideal-size-bound.py](../scripts/check-front-ideal-size-bound.py).
 - Orthogonal front-width residual formula checker:
   [../scripts/check-front-width-residual-formula.py](../scripts/check-front-width-residual-formula.py).
+- Capped-front and selective-median front-group checkers:
+  [../scripts/check-capped-front-bound.py](../scripts/check-capped-front-bound.py),
+  [../scripts/check-selective-median-bound.py](../scripts/check-selective-median-bound.py),
+  [../scripts/check-noncommutative-selective-median.py](../scripts/check-noncommutative-selective-median.py).
 - Structural-rule analyzer:
   [../scripts/analyze-structural-rules.py](../scripts/analyze-structural-rules.py).
 - Bottom-discipline filter script:

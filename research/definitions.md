@@ -360,69 +360,36 @@ commutativity or integrality. Dropping commutativity (admitting two residuals
 $\backslash,/$ with independent left/right $U$-actions) does not reopen group
 fronts: for a group front $F_k\cong G$ with $k\ge2$ the translations
 $L_{a_j},R_{a_j}$ permute $F_k$, so two-sided monotonicity forces
-$a_j\otimes U=U\otimes a_j=U$, and both diagonal fibers $a_j\backslash a_j$,
-$a_j/a_j$ contain the incomparable pair $\{T,a_{i_0}\}$ (global unit, local group
-identity) whose sole upper bound $U$ is excluded — so neither is principal. Thus
-$\lvert G\rvert=1$ even non-commutatively (verified through the non-abelian
-$S_3$ by `code/scripts/check-noncommutative-front-group-bound.py`). The two
-load-bearing facts are: (i) a group identity must sit inside the incomparable
-front, hence incomparable to the global unit $T$; (ii) in $B_N$ the only upper
-bound of two distinct front atoms is the absorbing ceiling $U$. The only escape
-is to relax the ceiling — adjoin a sub-top cap $c<U$ above the front — which
-leaves the same-carrier $B_N$ schema (Pass-36 capped-front problem).
+$a_j\otimes U=U\otimes a_j=U$, and both diagonal fibers $a_j\backslash a_j$, $a_j/a_j$ strand the
+incomparable pair $\{T,a_{i_0}\}$ (global unit vs. local group identity), whose
+sole common upper bound $U$ is excluded by absorption; hence neither fiber is
+principal and $\lvert G\rvert=1$ even non-commutatively (incl. $S_3$). See
+`code/scripts/check-noncommutative-front-group-bound.py`.
 
-For $k\in\{0,1,2\}$, write
-$$
-\tau_k(s)=\tau_k(a_{N+1})=1,\qquad
-\tau_k(a_i)=i-k+1\quad(k+1\le i\le N),
-$$
-with $\rho_k(1)=a_{N+1}$ and
-$\rho_k(d)=a_{k+d-1}$ for $2\le d\le N-k+1$. The closed residual table is
-the following uniform one. As usual,
-$$
-b\backslash c=U,\qquad T\backslash c=c.
-$$
-For $p\in F_k$,
-$$
-p\backslash c=
-\begin{cases}
-U & c\in\{p,U\},\\
-b & k=1,\ c\notin\{p,U\},\\
-p^\perp & k=2,\ c\notin\{p,U\},
-\end{cases}
-$$
-where $p^\perp$ denotes the unique other front atom. For $U$,
-$$
-U\backslash c=
-\begin{cases}
-U & c=U,\\
-c & c\in F_k,\\
-b & \text{otherwise.}
-\end{cases}
-$$
-For $r$ in the shifted tail,
-$$
-r\backslash c=
-\begin{cases}
-U & c=U,\\
-c & c\in F_k,\\
-T & c=s,\ r=s,\\
-T & c=a_{N+1},\ r\in\{s,a_{N+1}\},\\
-T & c=r\in\{a_{k+1},\ldots,a_N\},\\
-\rho_k(\tau_k(c)-\tau_k(r)) &
-  c\in\{a_{k+1},\ldots,a_N\},
-  \tau_k(c)-\tau_k(r)\ge1,\\
-b & \text{otherwise.}
-\end{cases}
-$$
-Commutativity gives the right residuals. The checker
-`code/scripts/check-front-width-residual-formula.py` verifies this formula with zero
-mismatches for $k=0,1,2$ at depths 3, 4, and 5.
+**Selective median $m=T\vee e_G$ (Pass 37).** $B_N^{\mathrm{med}}$ is the
+bottom-disciplined $B_N$ augmented by one element $m$ with order
+$b,T,e_G\le m\le U$ ($e_G=a_1$ the group identity), $m$ incomparable to every
+non-identity front atom and to the tail; the tensor keeps $b$ zero, $T$ unit,
+the group product on $F_k$, sets $m\otimes m=m$, $m\otimes g=g\otimes m=g$ for
+front $g$, $a_j\otimes m=a_j$, and collapses every remaining nonzero non-unit
+product to $U$; $\boxtimes m:=b$ (forced, since $\boxtimes m\le\boxtimes
+T\wedge\boxtimes e_G=a_1\wedge a_2=b$).
 
-## Open Definition Tasks
+**Missing-join principle (Pass 37).** A finite group fits the residuated front
+of $B_N$ iff the order supplies a common upper bound of the obstructing pair
+$\{T,e_G\}$ *strictly below* the absorbing top $U$. The same-carrier rigidity
+ceiling $\lvert G\rvert=1$ of Passes 34–36 is therefore exactly the failure
+$T\vee e_G=U$; the minimal repair is the single join $m=T\vee e_G$, after which
+the diagonal fiber $a_j\backslash a_j=\{b,T,e_G,m\}$ is principal with maximum
+$m$ and $\lvert G\rvert$ becomes unbounded (finite abelian, machine-verified
+$\mathbb Z/2,\dots,\mathbb Z/5$).
 
-- Define ACR precisely.
-- Normalize A1-A4 and variants.
-- Define primitive versus definitional $\boxtimes$.
-- Define indexed/fibered APS.
-- Define completion-generated fixed points versus syntactic fixed points.
+**Single-median uniformity (Pass 38).** Dropping commutativity does *not* demand
+extra order data. For the two-residual $B_N^{\mathrm{med}}$ the *same* one-point
+median $m=T\vee e_G$ makes *both* diagonal fibers principal,
+$a_j\backslash a_j=a_j/a_j=\{b,T,e_G,m\}$, because left/right group translations
+are bijections and the only join-deficient pair below $U$ remains $\{T,e_G\}$
+regardless of $\lvert G\rvert$ or conjugacy structure. Hence $\#$(medians needed)
+$=1$ for every finite front group — it is *not* a new group invariant.
+Machine-verified for $S_3$, $D_4$, $Q_8$ (and the abelian control $\mathbb
+Z/4$) by `code/scripts/check-noncommutative-selective-median.py`.
