@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-04 (Relay sync 2026-06-04T05:54:56+09:00)
+
+- ChatGPT Project artifact inbox sync: re-ran `code/scripts/sync-chatgpt-project-artifacts.ps1`; the local inbox `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` contained 0 supported artifacts, so `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and `artifacts/pdf/` remained unchanged.
+- ChatGPT share watchlist check: re-ran `code/scripts/check-chatgpt-shares.ps1` at `2026-06-04T05:54:56+09:00`; all 23 watched `https://chatgpt.com/share/...` links still failed with PowerShell `Invoke-WebRequest` remote-server-unreachable errors (`リモート サーバーに接続できません。`), so no changed conversation content could be fetched and no linked research note could be reconstructed this run. The refreshed state is recorded in `records/logs/chatgpt-share-state.csv` and prepended to `records/logs/chatgpt-share-sync.md`.
+- Drive relay scan: re-listed the recorded Research root plus `Paper`, `Paper/Monograph`, `Slide`, `Gemini`, `Claude/files`, and the Reference-root top level through the Google Drive connector. The live inventory still matches the tracked research snapshots for papers, slides, Gemini outputs, Claude outputs, and generated PDFs closely enough that no note, literature, `artifacts/reports/chatgpt-project-artifact-sync.csv`, or `artifacts/pdf/manifest.csv` update was warranted.
+- Relay limitation remains active: if a watched share or Project thread references `sandbox:/mnt/data/...` exports or other inaccessible artifacts, route them through `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` so a later relay sync can import them into the repository.
+
 ## 2026-06-03 (Autonomous discussion Pass 40)
 
 - Proved the **Median Uniqueness Theorem (40a)**: the poset $\mathcal M$ of
