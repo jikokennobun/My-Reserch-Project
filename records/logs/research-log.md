@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-03 (Relay sync 2026-06-03T05:43:14+09:00)
+
+- ChatGPT Project artifact inbox sync: 0 new artifacts imported by `code/scripts/sync-chatgpt-project-artifacts.ps1`; no updates to `artifacts/slides/chatgpt-project/` or `artifacts/pdf/`.
+- ChatGPT share watchlist check: all 23 `https://chatgpt.com/share/...` links failed again at `2026-06-03T05:42:29+09:00` with `Invoke-WebRequest` remote-server-unreachable errors, so no changed conversation content could be fetched, reconstructed, or merged into the linked research notes this run. The refreshed status is recorded in `records/logs/chatgpt-share-sync.md` and `records/logs/chatgpt-share-state.csv`.
+- Drive relay scan: live Google Drive listings for the recorded Research root plus `Paper`, `Slide`, `Gemini`, `Claude`, and the top level of the reference folder matched the existing snapshots in `research/references/research-drive.md` and `research/references/drive.md`; no newly relevant papers, slides, Gemini outputs, Claude outputs, or generated PDFs were found.
+- Relay limitation remains unchanged: if a shared conversation references `sandbox:/mnt/data/...` artifacts or other inaccessible exports, route those files through `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` so the repository sync can import them on a later run.
+
 ## 2026-06-01 (Autonomous discussion Pass 38)
 
 - Non-abelian selective-median escape resolved for the tested battery: the single
