@@ -1,0 +1,717 @@
+{
+  "summary": {
+    "target": "uniform all-finite-groups non-abelian selective median (Pass 39)",
+    "battery": [
+      "Z6",
+      "C2^3",
+      "D5",
+      "A4",
+      "S4"
+    ],
+    "maxOrderTested": 24,
+    "allEscapeWithSingleMedian": true,
+    "allGIndependenceAuditsPass": true,
+    "uniformMediansNeeded": 1,
+    "allControlsFail": true,
+    "uniformity": [
+      {
+        "group": "Z6",
+        "order": 6,
+        "carrierSize": 12,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "gIndependenceAuditPasses": true,
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      },
+      {
+        "group": "C2^3",
+        "order": 8,
+        "carrierSize": 14,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "gIndependenceAuditPasses": true,
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      },
+      {
+        "group": "D5",
+        "order": 10,
+        "carrierSize": 16,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "gIndependenceAuditPasses": true,
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      },
+      {
+        "group": "A4",
+        "order": 12,
+        "carrierSize": 18,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "gIndependenceAuditPasses": true,
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      },
+      {
+        "group": "S4",
+        "order": 24,
+        "carrierSize": 30,
+        "selectiveMedianHolds": true,
+        "mediansNeeded": 1,
+        "gIndependenceAuditPasses": true,
+        "noMedianControlHolds": false,
+        "fullCapControlHolds": false
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case": "Z6-selective-median",
+      "order": 6,
+      "carrierSize": 12,
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "gIndependenceAudit": {
+        "F_plus_m_is_G1": true,
+        "C_is_collapsing_ideal": true,
+        "diagonal_pair_is_always_T_eG": true,
+        "offdiagonal_strands_no_pair": true,
+        "all_g_independent_facts_hold": true
+      }
+    },
+    {
+      "case": "Z6-no-median-control",
+      "order": 6,
+      "carrierSize": 11,
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 12,
+      "failures": [
+        {
+          "check": "left-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "Z6-full-cap-control",
+      "order": 6,
+      "carrierSize": 12,
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 38,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "C2^3-selective-median",
+      "order": 8,
+      "carrierSize": 14,
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "gIndependenceAudit": {
+        "F_plus_m_is_G1": true,
+        "C_is_collapsing_ideal": true,
+        "diagonal_pair_is_always_T_eG": true,
+        "offdiagonal_strands_no_pair": true,
+        "all_g_independent_facts_hold": true
+      }
+    },
+    {
+      "case": "C2^3-no-median-control",
+      "order": 8,
+      "carrierSize": 13,
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 16,
+      "failures": [
+        {
+          "check": "left-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "C2^3-full-cap-control",
+      "order": 8,
+      "carrierSize": 14,
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 50,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "D5-selective-median",
+      "order": 10,
+      "carrierSize": 16,
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "gIndependenceAudit": {
+        "F_plus_m_is_G1": true,
+        "C_is_collapsing_ideal": true,
+        "diagonal_pair_is_always_T_eG": true,
+        "offdiagonal_strands_no_pair": true,
+        "all_g_independent_facts_hold": true
+      }
+    },
+    {
+      "case": "D5-no-median-control",
+      "order": 10,
+      "carrierSize": 15,
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 20,
+      "failures": [
+        {
+          "check": "left-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "D5-full-cap-control",
+      "order": 10,
+      "carrierSize": 16,
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 62,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "A4-selective-median",
+      "order": 12,
+      "carrierSize": 18,
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "gIndependenceAudit": {
+        "F_plus_m_is_G1": true,
+        "C_is_collapsing_ideal": true,
+        "diagonal_pair_is_always_T_eG": true,
+        "offdiagonal_strands_no_pair": true,
+        "all_g_independent_facts_hold": true
+      }
+    },
+    {
+      "case": "A4-no-median-control",
+      "order": 12,
+      "carrierSize": 17,
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 24,
+      "failures": [
+        {
+          "check": "left-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "A4-full-cap-control",
+      "order": 12,
+      "carrierSize": 18,
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 74,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "S4-selective-median",
+      "order": 24,
+      "carrierSize": 30,
+      "median": true,
+      "cap": false,
+      "holds": true,
+      "failureCount": 0,
+      "failures": [],
+      "gIndependenceAudit": {
+        "F_plus_m_is_G1": true,
+        "C_is_collapsing_ideal": true,
+        "diagonal_pair_is_always_T_eG": true,
+        "offdiagonal_strands_no_pair": true,
+        "all_g_independent_facts_hold": true
+      }
+    },
+    {
+      "case": "S4-no-median-control",
+      "order": 24,
+      "carrierSize": 29,
+      "median": false,
+      "cap": false,
+      "holds": false,
+      "failureCount": 48,
+      "failures": [
+        {
+          "check": "left-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a1",
+            "a1"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a2",
+            "a2"
+          ]
+        },
+        {
+          "check": "left-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        },
+        {
+          "check": "right-residual",
+          "witness": [
+            "a3",
+            "a3"
+          ]
+        }
+      ]
+    },
+    {
+      "case": "S4-full-cap-control",
+      "order": 24,
+      "carrierSize": 30,
+      "median": false,
+      "cap": true,
+      "holds": false,
+      "failureCount": 146,
+      "failures": [
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a1",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a1",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a2",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a2",
+            "c"
+          ]
+        },
+        {
+          "check": "left-monotone",
+          "witness": [
+            "a3",
+            "c",
+            "c"
+          ]
+        },
+        {
+          "check": "right-monotone",
+          "witness": [
+            "c",
+            "a3",
+            "c"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": "For every group in the extended battery (Z/6, (Z/2)^3, D5, A4, S4; |G| up to 24, incl. A4 where Lagrange's converse fails) the single median m=T v e_G yields full two-sided residuation, and the G-independence audit passes uniformly: max front-group order = infinity, medians needed = 1, for ALL finite G."
+}

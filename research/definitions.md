@@ -393,3 +393,69 @@ regardless of $\lvert G\rvert$ or conjugacy structure. Hence $\#$(medians needed
 $=1$ for every finite front group — it is *not* a new group invariant.
 Machine-verified for $S_3$, $D_4$, $Q_8$ (and the abelian control $\mathbb
 Z/4$) by `code/scripts/check-noncommutative-selective-median.py`.
+
+**$G^1$-block / collapsing-ideal decomposition (Pass 39).** In
+$B_N^{\mathrm{med}}$ the nonzero non-unit multiplicative part splits as
+$M^\ast=(F\cup\{m\})\sqcup C$ with $C=\{a_{N+1},s,U\}$. The block
+$F\cup\{m\}\cong G^1$ is the group $G$ with a *freshly adjoined* identity $m$:
+$m$ is the two-sided block identity ($m\otimes g=g\otimes m=g$, $m^2=m$), while
+the group identity $e_G=a_1$ is *not* the block identity ($e_G\otimes m=e_G\ne
+m$), so $G$ sits inside as a subsemigroup-not-submonoid. $C$ is a two-sided
+tensor ideal on which every product collapses to $U$. Thus $M^\ast$ is the ideal
+extension $G^1\hookrightarrow M^\ast\twoheadrightarrow\{U\}$; associativity is
+ideal-extension associativity and is independent of the Cayley table of $G$.
+
+**Front-inverting anti-automorphism $\phi$ (Pass 39).** $\phi(a_i)=a_{i^{-1}}$
+on the front, $\phi=\mathrm{id}$ off $F$. $\phi$ is an order-automorphism (it
+permutes the front antichain, fixes $a_1=e_G$, preserves $a_1\le m$) and a
+tensor anti-automorphism, $\phi(x\otimes y)=\phi(y)\otimes\phi(x)$. It carries
+left residual fibers to right residual fibers, so for $B_N^{\mathrm{med}}$ "every
+left fiber is principal" implies "every right fiber is principal" with no
+separate computation — the formal device behind two-sided residuation from a
+one-sided check.
+
+**Uniform selective-median theorem (Pass 39).** For *every* finite group $G$,
+$B_N^{\mathrm{med}}$ ($N=\lvert G\rvert$) with front $F_k\cong G$ and the single
+median $m=T\vee e_G$ is fully two-sided residuated; $\#$(medians needed) $=1$ and
+the maximum front-group order is $\infty$, uniformly in $G$. Proof = three
+$G$-free lemmas: (1) ideal-extension associativity via the $G^1$-block; (2)
+monotonicity using only $a_1\otimes a_j=a_j=m\otimes a_j$ (the identity law);
+(3) fiber classification — diagonal fibers always strand exactly $\{T,e_G\}$
+(capped by $m$), off-diagonal fibers $\{b,a_{p^{-1}r}\}$ strand no pair.
+Empirically reconfirmed for $\mathbb Z/6,(\mathbb Z/2)^3,D_5,A_4,S_4$ (up to
+order 24) by `code/scripts/check-uniform-selective-median-theorem.py`.
+
+**Poset $\mathcal M$ of admissible medians (Pass 40).** Fix the
+$B_N^{\mathrm{med}}$ order minus its median, $M_0$, with collapsing ideal
+$C=\{a_{N+1},s,U\}$ and front $F\cong G$. A *candidate median* is a single fresh
+$m'<U$ with the monotone-forced least tensor extension $a\otimes m':=
+\bigvee\{a\otimes z:z\le m'\}$; it is *admissible* iff $\otimes$ stays monotone
+and every diagonal fiber $a_p\backslash a_p$ is principal. $\mathcal M$ is the
+poset of admissible medians under $\downarrow$-inclusion. **Theorem (Pass 40):
+$\mathcal M$ is a singleton** $\{T\vee e_G\}$ — the least repair is the *only*
+repair, for every finite $G$.
+
+**Backwards-Cap-Ejection uniqueness principle (Pass 40).** The Cap-Ejection
+lemma (Pass 36 — a ceiling over the whole front is ejected by monotonicity) run
+in reverse pins the median: any element a candidate median dominates *beyond*
+the obstructing pair $\{T,e_G\}$ is ejected, because (i) tail/ideal elements $z$
+have $a_p\otimes z=U$, forcing $a_p\otimes m'=U\not\le a_p$, and (ii)
+non-identity front atoms $a_q$ have $a_p\otimes a_q=a_{pq}\not\le a_p$. Hence
+$\downarrow m'\cap M_0=\{b,T,e_G\}$ and $\uparrow m'=\{U\}$ are *forced*. The
+median is thus a representable (free) repair: $m=T\vee e_G$ computed in the
+largest sub-join-subsemilattice of $\downarrow U$ avoiding $C\cup(F\setminus
+\{e_G\})$, both initial and terminal in $\mathcal M$.
+
+**Cardinality-freedom of $B^{\mathrm{med}}$ residuation (Pass 40).** For *any*
+group $G$ (finite or infinite) every residual fiber of $R(G)$-with-median is
+either $\le4$ elements (diagonal $\{b,T,e_G,m\}$, off-diagonal
+$\{b,a_{p^{-1}r}\}$) or the whole carrier (cofinal at $U$); no proper infinite
+fiber arises, so full residuation needs no infinitary suprema beyond the
+absorbing top. Residuation transfers verbatim to $\mathbb Z,\mathbb Q,S_\infty$.
+
+**Limit fixed point $s_\omega$ (Pass 40).** When the front is infinite and also
+carries the $\boxtimes$-orbit, the orbit $T\to a_1\to a_2\to\cdots$ has no
+terminal stage; nFG2($k$) is false for all finite $k$ and FP-synt fails unless
+one adjoins $s_\omega:=\bigwedge_{n<\omega}\boxtimes^n T$ (the orbit meet) with
+$\boxtimes s_\omega=s_\omega$. This is the orbit-side (not front/residual-side)
+completion; cf. the on-file infinite-orbit-stabilization problem.

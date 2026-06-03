@@ -1,0 +1,105 @@
+{
+  "part_a_uniqueness": {
+    "Z/2": {
+      "candidate_downsets": 8,
+      "survivors": [
+        [
+          "b",
+          "T",
+          "a1"
+        ]
+      ]
+    },
+    "Z/3": {
+      "candidate_downsets": 16,
+      "survivors": [
+        [
+          "b",
+          "T",
+          "a1"
+        ]
+      ]
+    },
+    "Z/4": {
+      "candidate_downsets": 32,
+      "survivors": [
+        [
+          "b",
+          "T",
+          "a1"
+        ]
+      ]
+    },
+    "Z/5": {
+      "candidate_downsets": 64,
+      "survivors": [
+        [
+          "b",
+          "T",
+          "a1"
+        ]
+      ]
+    }
+  },
+  "part_b_cardinality_freedom": [
+    {
+      "M": 2,
+      "carrier": 8,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 3,
+      "carrier": 9,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 5,
+      "carrier": 11,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 8,
+      "carrier": 14,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 13,
+      "carrier": 19,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 21,
+      "carrier": 27,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 50,
+      "carrier": 56,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 100,
+      "carrier": 106,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    },
+    {
+      "M": 200,
+      "carrier": 206,
+      "max_proper_fiber": 4,
+      "all_principal": true
+    }
+  ],
+  "summary": {
+    "part_a": "unique survivor = canonical median (down-set {b,T,e_G}) for every tested group",
+    "part_b_max_proper_fiber": 4,
+    "part_b_all_principal": true
+  }
+}

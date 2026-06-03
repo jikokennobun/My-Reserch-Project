@@ -1050,3 +1050,218 @@ no-median and full-cap controls FAIL as predicted). Report:
 `artifacts/reports/noncommutative-selective-median-check.json`. *Open:* the
 uniform all-finite-groups theorem (Pass 39 target).
 
+## Uniform Selective-Median Theorem (Pass 39)
+
+The Pass 37/38 escapes were verified group by group. Pass 39 proves the
+statement for *all* finite $G$ at once, by naming the algebra of
+$B_N^{\mathrm{med}}$ correctly. The nonzero, non-unit multiplicative part
+$M^\ast=F\cup\{m\}\cup C$ (with $C=\{a_{N+1},s,U\}$) is an **ideal extension**
+$$ G^1 \;\hookrightarrow\; M^\ast \;\twoheadrightarrow\; \{U\}, $$
+where $F\cup\{m\}\cong G^1$ is the group $G$ with a *freshly adjoined* identity
+$m$, and $C$ is a two-sided ideal on which every product collapses to $U$. The
+subtlety: $m$ is the block's two-sided identity ($m\otimes g=g\otimes m=g$,
+$m^2=m$), while the group identity $e_G=a_1$ is **not** the block identity
+($e_G\otimes m=e_G\ne m$). Two distinct two-sided identities cannot coexist in a
+monoid, and they don't — $G$ embeds in $G^1$ as a subsemigroup that is *not* a
+submonoid. Everything below is independent of the Cayley table of $G$.
+
+**Lemma 1 (Associativity, $G$-free).** $\otimes$ is associative. *Proof.* $b$
+absorbs, $T$ neutralizes. On $M^\ast$: $F\cup\{m\}\cong G^1$ is a monoid; $C$ is
+a two-sided ideal with $U\otimes z=z\otimes U=U$ for nonzero non-unit $z$, so any
+triple touching $C$ short-circuits to $U$ in both bracketings (and $F\cup\{m\}$
+is closed, so the untouched factors never produce a non-$U$ value). Ideal-
+extension associativity, table-independent. $\square$
+
+**Lemma 2 (Two-sided monotonicity, $G$-free).** Check the order covers
+$s\prec a_{N+1}$, $T\prec m$, $a_1\prec m$. The group enters *only* via
+$a_1\otimes a_j=a_j=m\otimes a_j$, which holds precisely because $a_1=e_G$ is the
+identity; no other table entry is consulted. The front $F_k$ being an antichain
+permuted by translation means front products never violate order. $\square$
+
+**Lemma 3 (Fiber classification, $G$-free).** Every left fiber
+$L(a,c)=\{x:a\otimes x\le c\}$ is principal; the front-inverting
+anti-automorphism $\phi(a_i)=a_{i^{-1}}$ (identity off $F$, order-automorphism,
+$\phi(x\otimes y)=\phi(y)\otimes\phi(x)$) carries left fibers to right fibers, so
+right fibers are principal too. *Proof.* The only nontrivial multiplier is
+$a_p\in F$, with $a_p\otimes x=b\,(x{=}b)$, $a_p\,(x{\in}\{T,m\})$,
+$a_{pq}\,(x{=}a_q)$, $U\,(x{\in}C)$. For $c=a_r$: if $r\ne p$ the fiber is
+$\{b,a_{p^{-1}r}\}$ (the unit $T$ drops out, **no pair stranded**, max
+$a_{p^{-1}r}$); if $r=p$ the fiber is $\{b,T,a_1,m\}$ (the stranded pair is
+$\{T,a_1\}$ for **every** $p$, capped by the single $m=T\vee a_1$). For $c=m$,
+$c\in\{b,T,a_{N+1},s\}$, $c=U$: principal by inspection. $\square$
+
+**Theorem (Uniform Non-Abelian Selective-Median Residuation).** For every finite
+group $G$ and $N=\lvert G\rvert$, $B_N^{\mathrm{med}}$ with front $F_k\cong G$
+carries an associative, two-sided monotone, $T$-unital, fully two-sided
+residuated tensor with forced $\boxtimes m=b$ (antitonicity preserved, profile
+intact). The diagonal fibers are $a_p\backslash a_p=a_p/a_p=\{b,T,e_G,m\}$ (max
+$m$) for all $p$. Hence the maximum admissible front-group order is
+$\lvert G\rvert=\infty$ and the number of medians needed is exactly $1$,
+uniformly — independent of $\lvert G\rvert$, conjugacy-class count, and
+normality structure. $\blacksquare$
+
+*Reading.* The Pass 34–36 rigidity ceiling ($\lvert G\rvert=1$) and its Pass
+37/38 collapse are now one phenomenon: $B_N$ lacked exactly one join, $T\vee
+e_G$, and supplying it repairs *all* diagonal fibers because they strand the
+*same* pair. Non-commutativity, large conjugacy-class counts, and exotic
+normality structure are all irrelevant — front rigidity and its repair are
+order-theoretic, group-theoretically uniform facts.
+
+*Status.* Lemmas 1–3 proved $G$-independently above. Empirically reconfirmed
+past the old $\lvert G\rvert\le8$ ceiling by
+`code/scripts/check-uniform-selective-median-theorem.py` on the battery
+$\mathbb Z/6$, $(\mathbb Z/2)^3$, $D_5$, $A_4$ (smallest group violating the
+converse of Lagrange — a pathological stress test), $S_4$ (order 24, carrier
+30): all five ESCAPE with one median; the $G$-independence audit ($G^1$ block;
+$C$ a collapsing ideal; diagonal fiber $\equiv\{b,T,e_G,m\}$; off-diagonal
+strands no pair) passes for all five; both controls FAIL for all five. Report:
+`artifacts/reports/uniform-selective-median-theorem-check.json`.
+
+## Uniform Selective-Median Theorem (Pass 39)
+
+The Pass 37/38 escapes were verified group by group. Pass 39 proves the
+statement for *all* finite $G$ at once, by naming the algebra of
+$B_N^{\mathrm{med}}$ correctly. The nonzero, non-unit multiplicative part
+$M^\ast=F\cup\{m\}\cup C$ (with $C=\{a_{N+1},s,U\}$) is an **ideal extension**
+$$ G^1 \;\hookrightarrow\; M^\ast \;\twoheadrightarrow\; \{U\}, $$
+where $F\cup\{m\}\cong G^1$ is the group $G$ with a *freshly adjoined* identity
+$m$, and $C$ is a two-sided ideal on which every product collapses to $U$. The
+subtlety: $m$ is the block's two-sided identity ($m\otimes g=g\otimes m=g$,
+$m^2=m$), while the group identity $e_G=a_1$ is **not** the block identity
+($e_G\otimes m=e_G\ne m$). Two distinct two-sided identities cannot coexist in a
+monoid, and they don't — $G$ embeds in $G^1$ as a subsemigroup that is *not* a
+submonoid. Everything below is independent of the Cayley table of $G$.
+
+**Lemma 1 (Associativity, $G$-free).** $\otimes$ is associative. *Proof.* $b$
+absorbs, $T$ neutralizes. On $M^\ast$: $F\cup\{m\}\cong G^1$ is a monoid; $C$ is
+a two-sided ideal with $U\otimes z=z\otimes U=U$ for nonzero non-unit $z$, so any
+triple touching $C$ short-circuits to $U$ in both bracketings (and $F\cup\{m\}$
+is closed, so the untouched factors never produce a non-$U$ value). Ideal-
+extension associativity, table-independent. $\square$
+
+**Lemma 2 (Two-sided monotonicity, $G$-free).** Check the order covers
+$s\prec a_{N+1}$, $T\prec m$, $a_1\prec m$. The group enters *only* via
+$a_1\otimes a_j=a_j=m\otimes a_j$, which holds precisely because $a_1=e_G$ is the
+identity; no other table entry is consulted. The front $F_k$ being an antichain
+permuted by translation means front products never violate order. $\square$
+
+**Lemma 3 (Fiber classification, $G$-free).** Every left fiber
+$L(a,c)=\{x:a\otimes x\le c\}$ is principal; the front-inverting
+anti-automorphism $\phi(a_i)=a_{i^{-1}}$ (identity off $F$, order-automorphism,
+$\phi(x\otimes y)=\phi(y)\otimes\phi(x)$) carries left fibers to right fibers, so
+right fibers are principal too. *Proof.* The only nontrivial multiplier is
+$a_p\in F$, with $a_p\otimes x=b\,(x{=}b)$, $a_p\,(x{\in}\{T,m\})$,
+$a_{pq}\,(x{=}a_q)$, $U\,(x{\in}C)$. For $c=a_r$: if $r\ne p$ the fiber is
+$\{b,a_{p^{-1}r}\}$ (the unit $T$ drops out, **no pair stranded**, max
+$a_{p^{-1}r}$); if $r=p$ the fiber is $\{b,T,a_1,m\}$ (the stranded pair is
+$\{T,a_1\}$ for **every** $p$, capped by the single $m=T\vee a_1$). For $c=m$,
+$c\in\{b,T,a_{N+1},s\}$, $c=U$: principal by inspection. $\square$
+
+**Theorem (Uniform Non-Abelian Selective-Median Residuation).** For every finite
+group $G$ and $N=\lvert G\rvert$, $B_N^{\mathrm{med}}$ with front $F_k\cong G$
+carries an associative, two-sided monotone, $T$-unital, fully two-sided
+residuated tensor with forced $\boxtimes m=b$ (antitonicity preserved, profile
+intact). The diagonal fibers are $a_p\backslash a_p=a_p/a_p=\{b,T,e_G,m\}$ (max
+$m$) for all $p$. Hence the maximum admissible front-group order is
+$\lvert G\rvert=\infty$ and the number of medians needed is exactly $1$,
+uniformly — independent of $\lvert G\rvert$, conjugacy-class count, and
+normality structure. $\blacksquare$
+
+*Reading.* The Pass 34–36 rigidity ceiling ($\lvert G\rvert=1$) and its Pass
+37/38 collapse are now one phenomenon: $B_N$ lacked exactly one join, $T\vee
+e_G$, and supplying it repairs *all* diagonal fibers because they strand the
+*same* pair. Non-commutativity, large conjugacy-class counts, and exotic
+normality structure are all irrelevant — front rigidity and its repair are
+order-theoretic, group-theoretically uniform facts.
+
+*Status.* Lemmas 1–3 proved $G$-independently above. Empirically reconfirmed
+past the old $\lvert G\rvert\le8$ ceiling by
+`code/scripts/check-uniform-selective-median-theorem.py` on the battery
+$\mathbb Z/6$, $(\mathbb Z/2)^3$, $D_5$, $A_4$ (smallest group violating the
+converse of Lagrange — a pathological stress test), $S_4$ (order 24, carrier
+30): all five ESCAPE with one median; the $G$-independence audit ($G^1$ block;
+$C$ a collapsing ideal; diagonal fiber $\equiv\{b,T,e_G,m\}$; off-diagonal
+strands no pair) passes for all five; both controls FAIL for all five. Report:
+`artifacts/reports/uniform-selective-median-theorem-check.json`.
+
+## Median Uniqueness & Infinite-Front Dichotomy (Pass 40)
+
+Pass 37–39 supplied *a* repair for front-group rigidity: adjoin one median
+$m=T\vee e_G$ with $\downarrow m\cap M_0=\{b,T,e_G\}$, $\uparrow m=\{U\}$. Pass
+40 sharpens this in two directions — the repair is *unique*, and it is
+*cardinality-free* (residuation), though the orbit/profile is not.
+
+**Definition ($\mathcal M$, admissible medians).** Fix the $B_N^{\mathrm{med}}$
+order minus its median, $M_0$, with collapsing ideal $C=\{a_{N+1},s,U\}$ and
+front $F\cong G$. A *candidate median* is a single fresh element $m'$ with
+$m'<U$; the tensor is extended by the monotone-forced least rule $a\otimes
+m':=\bigvee\{a\otimes z: z\le m'\}$ (and $m'\otimes m'=m'$, $T\otimes m'=m'$).
+$m'$ is *admissible* iff the extended $\otimes$ stays monotone and every diagonal
+fiber $a_p\backslash a_p$ ($a_p\in F$) is principal. $\mathcal M$ is the poset of
+admissible medians ordered by $\downarrow$-inclusion.
+
+**Theorem 40a (Least = unique repair).** For every finite group $G$, $\mathcal M$
+is a *singleton*: the only admissible median is $m=T\vee e_G$, with $\downarrow
+m\cap M_0=\{b,T,e_G\}$ and $\uparrow m=\{U\}$.
+
+*Proof.* Admissibility forces $\{b,T,e_G\}\subseteq\downarrow m'\not\ni U$.
+Suppose $z\in\downarrow m'\setminus\{b,T,e_G\}$. If $z\in C$ or $z$ is a tail
+element, then $a_p\otimes z=U$ for every front $a_p$, so monotonicity forces
+$a_p\otimes m'\ge U$, hence $a_p\otimes m'=U\not\le a_p$ and $m'\notin
+a_p\backslash a_p$; the diagonal fiber reverts to $\{b,T,e_G\}$ with the
+incomparable pair $\{T,e_G\}$ maximal — non-principal, contradiction. If
+$z=a_q\in F$ with $q\ne e$, then $a_p\otimes m'\ge a_p\otimes a_q=a_{pq}$, an
+atom incomparable to $a_p$ (since $pq\ne p$ for $q\ne e$ in a group), so again
+$a_p\otimes m'\not\le a_p$. Thus $\downarrow m'\cap M_0=\{b,T,e_G\}$. Dually,
+$m'\le t$ for a tail/ideal $t$ drags $t$ into the diagonal fiber with
+$a_p\otimes t=U$ — ejection; so $\uparrow m'=\{U\}$. Both data pinned:
+$m'=m=T\vee e_G$. $\square$
+
+This is the **Cap-Ejection lemma (Pass 36) read backwards**: the very forcing
+that ejected a ceiling over the whole front ejects *any* element a candidate
+median dares to dominate beyond the obstructing pair $\{T,e_G\}$.
+
+**Corollary 40a′ (Representability / freeness).** $G\mapsto(R(G),m)$ is a
+representable construction: $m$ is the join $T\vee e_G$ taken in the largest
+sub-join-subsemilattice of $\downarrow U$ avoiding $C$ and $F\setminus\{e_G\}$.
+Being the sole element of $\mathcal M$, $m$ is at once initial and terminal — the
+selective-median functor sends each finite group to its *unique* universal
+repair; there is no moduli of medians.
+
+**Theorem 40b (Residuation cardinality-free; orbit not).** Let $G$ be *any*
+group. (1) $R(G)$ with median $m$ is a fully two-sided residuated poset: every
+residual fiber is either $\le 4$ elements (diagonal $\{b,T,e_G,m\}$ or
+off-diagonal $\{b,a_{p^{-1}r}\}$) or the whole carrier (cofinal at $U$). *No
+proper infinite fiber occurs*, so all residuals exist without infinitary suprema
+beyond the absorbing top; Theorems 40a and the Pass-39 Uniform Selective-Median
+Theorem hold verbatim for $\mathbb Z,\mathbb Q,S_\infty$. (2) If the same front
+carries the $\boxtimes$-orbit, the nFG2/FP profile is *not* cardinality-free:
+the orbit $T\to a_1\to a_2\to\cdots$ has no terminal stage, nFG2($k$) is false
+for all finite $k$, and FP-synt fails unless one adjoins the limit fixed point
+$s_\omega:=\bigwedge_{n<\omega}\boxtimes^n T$ with $\boxtimes s_\omega=s_\omega$.
+
+*Proof.* (1) The only non-trivial multiplier is a front atom $a_p$, whose
+$\otimes$-values are $b,a_p,a_{pq},U$; the preimage of any $\downarrow c$ is one
+of the listed $\le4$-element sets or the whole carrier. The bound $4=\lvert
+\{b,T,e_G,m\}\rvert$ is $\lvert G\rvert$-independent. Right fibers transfer via
+the anti-automorphism $\phi$. (2) The descending antitone chain $\boxtimes^n T$
+stabilizes at a fixed point iff its meet exists and is $\boxtimes$-fixed — the
+infinite-orbit-stabilization obstruction already on file. $\square$
+
+**Greedy-median pathology (病的な例).** The candidate $m^\sharp$ with $\downarrow
+m^\sharp=\{b,T,e_G,s,a_{N+1}\}$ dominates *more* of the obstruction's
+neighbourhood, yet repairs *nothing*: monotonicity forces $a_p\otimes
+m^\sharp\ge a_p\otimes s=U$, so $m^\sharp$ is ejected from every diagonal fiber.
+In $\mathcal M$, "do the minimum" and "do the only possible thing" coincide; any
+attempt to "help more" by sinking the median deeper into the order is exactly
+what breaks it.
+
+*Status.* Theorem 40a machine-confirmed by `code/scripts/check-median-
+uniqueness.py` Part (a): for $\mathbb Z/2,\dots,\mathbb Z/5$ all $8/16/32/64$
+admissible down-sets are enumerated and exactly one survives ($\{b,T,e_G\}$).
+Theorem 40b(1) confirmed by Part (b): the maximum proper residual fiber is the
+constant $4$ for $\lvert G\rvert\in\{2,3,5,8,13,21,50,100,200\}$ (carrier up to
+$206$), all fibers principal — a flat $\lvert G\rvert$-independent profile.
+Theorem 40b(2) ties to the infinite-orbit-stabilization open problem; the limit
+FP $s_\omega$ is proposed, not yet modelled. Report:
+`artifacts/reports/median-uniqueness-check.json`.

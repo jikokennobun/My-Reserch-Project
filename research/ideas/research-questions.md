@@ -35,14 +35,31 @@ was the missing join $T\vee e_G$.)** Non-abelian successor **(Resolved for the
 tested battery, Pass 38: the same one-point median makes both diagonal fibers
 principal for $S_3$, $D_4$, $Q_8$, $\mathbb Z/4$; $\#$(medians) $=1$ uniformly,
 not a new group invariant.)**
-- **Active (Pass 39 target):** Prove the *uniform all-finite-groups* non-abelian
-  selective-median theorem — for an arbitrary finite group $G$, with ordinary
-  group multiplication on the front $F_k\cong G$ and the single join $m=T\vee
-  e_G$, is $B_N^{\mathrm{med}}$ ($N\ge\lvert G\rvert$) always fully two-sided
-  residuated? Isolate any first group-theoretic obstruction (conjugacy,
-  one-sided translation defects, or a stranded left/right join distinct from
-  $\{T,e_G\}$). Companion: write out the $G$-independent associativity lemma
-  (interaction blocks $b,T,m,\text{collapse}$ are $G$-free; the $F_k\times F_k$
-  block inherits associativity from $G$), upgrading the finite battery to a
-  theorem for all finite fronts.
+- **(Resolved, Pass 39)** Uniform all-finite-groups non-abelian selective-median
+  theorem: for *every* finite group $G$, $B_N^{\mathrm{med}}$ ($N=\lvert
+  G\rvert$) with front $F_k\cong G$ and single join $m=T\vee e_G$ is fully
+  two-sided residuated; $\#$(medians) $=1$ and max front-group order $=\infty$,
+  uniformly. Proof = three $G$-free lemmas (ideal-extension associativity via
+  the $G^1$-block $F\cup\{m\}\cong G^1$; monotonicity from the identity law
+  $a_1\otimes a_j=a_j$; diagonal fibers always strand $\{T,e_G\}$, off-diagonal
+  fibers strand no pair; right fibers via the anti-automorphism $\phi$). Battery
+  $\mathbb Z/6,(\mathbb Z/2)^3,D_5,A_4,S_4$ (to order 24) reconfirms it.
+- **(Resolved, Pass 40)** The selective median as a *free / least* construction.
+  (a) *Uniqueness (stronger than minimality):* the poset $\mathcal M$ of
+  admissible medians is a **singleton** $\{T\vee e_G\}$ — the least repair is the
+  *only* repair, by the backwards-Cap-Ejection forcing; $m$ is a representable
+  (free) repair, initial and terminal in $\mathcal M$. (b) *Infinite fronts:*
+  residuation is **cardinality-free** (every fiber $\le4$ elts or cofinal-at-$U$;
+  survives $\mathbb Z,\mathbb Q,S_\infty$ verbatim, DM completion of the front
+  adds nothing); only the $\boxtimes$-*orbit/profile* needs finiteness, repaired
+  by the limit FP $s_\omega=\bigwedge_n\boxtimes^n T$.
+- **Active (Pass 41 target):** (a) *Limit-FP orbit completion:* model
+  infinite-front $B_\infty^{\mathrm{med}}$ with $\boxtimes$-orbit decoupled from
+  the residuated front, adjoin $s_\omega=\bigwedge_n\boxtimes^n T$, and test
+  whether antitonicity + full residuation survive and all-level nFG2 is restored
+  — and whether $s_\omega$ breeds a new join-deficient pair $\{T,s_\omega\}$,
+  degrading the single median into a countable tower $m_0,m_1,\dots$ (b)
+  *Multi-pair geometry:* with two group fronts $F^{(1)},F^{(2)}$, does $\mathcal
+  M$ stay a singleton ($T\vee e_1\vee e_2$ serving both) or acquire genuine
+  moduli?
 

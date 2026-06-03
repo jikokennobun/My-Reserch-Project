@@ -1,11 +1,45 @@
 # Research Log
 
+## 2026-06-03 (Autonomous discussion Pass 40)
+
+- Proved the **Median Uniqueness Theorem (40a)**: the poset $\mathcal M$ of
+  admissible medians is a *singleton* — $m=T\vee e_G$ is not merely the least
+  but the *only* single-element repair of $B_N^{\mathrm{med}}$ front rigidity
+  (backwards Cap-Ejection forces $\downarrow m=\{b,T,e_G\}$, $\uparrow m=\{U\}$).
+  And the **Infinite-Front Dichotomy (40b)**: residuation is cardinality-free
+  (every fiber $\le4$ elts or cofinal-at-$U$; survives $\mathbb Z,\mathbb
+  Q,S_\infty$), while the $\boxtimes$-orbit/nFG2 profile is not, needing the
+  limit FP $s_\omega=\bigwedge_n\boxtimes^n T$. Machine-verified by
+  `check-median-uniqueness.py` (4 groups, all down-sets; max proper fiber $=4$
+  constant for $\lvert G\rvert$ up to 200). Closed both Pass-39 [New] items.
+
 ## 2026-06-03 (Relay sync 2026-06-03T05:43:14+09:00)
 
 - ChatGPT Project artifact inbox sync: 0 new artifacts imported by `code/scripts/sync-chatgpt-project-artifacts.ps1`; no updates to `artifacts/slides/chatgpt-project/` or `artifacts/pdf/`.
 - ChatGPT share watchlist check: all 23 `https://chatgpt.com/share/...` links failed again at `2026-06-03T05:42:29+09:00` with `Invoke-WebRequest` remote-server-unreachable errors, so no changed conversation content could be fetched, reconstructed, or merged into the linked research notes this run. The refreshed status is recorded in `records/logs/chatgpt-share-sync.md` and `records/logs/chatgpt-share-state.csv`.
 - Drive relay scan: live Google Drive listings for the recorded Research root plus `Paper`, `Slide`, `Gemini`, `Claude`, and the top level of the reference folder matched the existing snapshots in `research/references/research-drive.md` and `research/references/drive.md`; no newly relevant papers, slides, Gemini outputs, Claude outputs, or generated PDFs were found.
 - Relay limitation remains unchanged: if a shared conversation references `sandbox:/mnt/data/...` artifacts or other inaccessible exports, route those files through `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` so the repository sync can import them on a later run.
+
+## 2026-06-03 (Autonomous discussion Pass 39)
+
+- Proved the **Uniform Non-Abelian Selective-Median Theorem**: for *every* finite
+  group $G$, $B_N^{\mathrm{med}}$ ($N=\lvert G\rvert$) with front $F_k\cong G$ and
+  the single join $m=T\vee e_G$ is fully two-sided residuated; $\#$(medians) $=1$
+  and the maximum front-group order is $\infty$, uniformly in $G$. Three $G$-free
+  lemmas: (1) associativity via the ideal extension $G^1\hookrightarrow M^\ast
+  \twoheadrightarrow\{U\}$ (block $F\cup\{m\}\cong G^1$, the group with a freshly
+  adjoined identity $m\ne e_G$; $C=\{a_{N+1},s,U\}$ a collapsing ideal); (2)
+  monotonicity using only the identity law $a_1\otimes a_j=a_j=m\otimes a_j$; (3)
+  fiber classification — diagonal fibers always strand the *same* pair
+  $\{T,e_G\}$ (capped by $m$), off-diagonal fibers $\{b,a_{p^{-1}r}\}$ strand no
+  pair; right fibers from left via the front-inverting anti-automorphism $\phi$.
+  Reconfirmed past the old $\lvert G\rvert\le8$ ceiling for $\mathbb Z/6$,
+  $(\mathbb Z/2)^3$, $D_5$, $A_4$ (smallest group violating the converse of
+  Lagrange), $S_4$ (order 24) by
+  `code/scripts/check-uniform-selective-median-theorem.py`; report
+  `artifacts/reports/uniform-selective-median-theorem-check.json`. $G$-independence
+  audit passes and both controls fail for all five. Closed the two Pass-38 [New]
+  obligations (uniform theorem; $G$-free associativity lemma).
 
 ## 2026-06-01 (Autonomous discussion Pass 38)
 
@@ -414,3 +448,12 @@
   right diagonal fibers principal at $m$, while no-median and full-cap controls
   fail as predicted; report saved at
   `artifacts/reports/noncommutative-selective-median-check.json`.
+run.
+- 2026-06-03 (Pass 39): proved the **Uniform Non-Abelian Selective-Median Theorem** — for every finite group $G$, $B_N^{\mathrm{med}}$ with front $F_k\cong G$ and the single join $m=T\vee e_G$ is fully two-sided residuated ($\#$medians $=1$, max front-group order $=\infty$), via three $G$-free lemmas (ideal extension $G^1\hookrightarrow M^\ast\twoheadrightarrow\{U\}$ for associativity; identity-law monotonicity; diagonal fibers always strand $\{T,e_G\}$, off-diagonal strand none). Reconfirmed for $\mathbb Z/6,(\mathbb Z/2)^3,D_5,A_4,S_4$ (to order 24) by `check-uniform-selective-median-theorem.py`; controls fail, $G$-independence audit passes. Closed two Pass-38 [New] obligations.
+
+## 2026-06-03 (Relay sync 2026-06-03T21:12:43+09:00)
+
+- ChatGPT Project artifact inbox sync: 0 new artifacts imported by `code/scripts/sync-chatgpt-project-artifacts.ps1`; `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and `artifacts/pdf/` remain unchanged.
+- ChatGPT share watchlist check: re-ran `code/scripts/check-chatgpt-shares.ps1` at `2026-06-03T21:12:43+09:00`; all 23 watched `https://chatgpt.com/share/...` links still failed with PowerShell `Invoke-WebRequest` remote-server-unreachable errors, so no changed conversation content could be fetched and no note reconstruction was possible this run. Refreshed `records/logs/chatgpt-share-state.csv` and prepended the new status table to `records/logs/chatgpt-share-sync.md`.
+- Drive relay scan: live Google Drive listings for the recorded Research root, its `Paper` / `Slide` / `Gemini` / `Claude` subfolders, and the Reference-root top level showed no newly relevant material after `2026-06-01`, so `research/references/research-drive.md`, `research/references/drive.md`, literature notes, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and `artifacts/pdf/manifest.csv` needed no update.
+- Relay limitation remains active: any `sandbox:/mnt/data/...` exports or otherwise inaccessible shared-link artifacts must be routed through `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` so a later sync can import them into the repository.
