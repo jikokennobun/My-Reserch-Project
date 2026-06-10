@@ -87,6 +87,46 @@ If $S$ is non-collapsed, i.e. $T\not\le_S\bot$, then G2 holds iff
 $\boxtimes T\not\le_S\bot$. Thus G2 in non-collapsed finite preAPS models is
 always vacuous in the material-implication sense.
 
+## Iterated Consistency Tower
+
+For an AMS/preAPS, define:
+
+$$
+C_0:=T,\qquad C_{n+1}:=\boxtimes C_n.
+$$
+
+The Pass-69 G2-ZOO layer uses the following APS-level consistency names:
+
+$$
+\mathrm{Con}^{\mathrm{orb}}_n(S):\quad C_n\nleq_S\bot,
+$$
+
+$$
+\mathrm{G2}_n(S):\quad C_n\le_S\bot\Rightarrow T\le_S\bot,
+$$
+
+$$
+\mathrm{FG2}_n(S):\quad C_{n+1}\le_S C_n.
+$$
+
+Thus $\mathrm{FG2}_n$ is exactly $\mathrm{nFG2}(n)$.  The statement
+$\mathrm{Flat}_{\le N}$ means that the checked finite orbit
+$C_0,\ldots,C_N$ has no comparable distinct elements except those explicitly
+listed as equal.  This is a finite shadow of the infinite star-dynamic
+consistency tower.
+
+The cut/collision consistency statement is:
+
+$$
+\mathrm{CutA3}(S):\quad
+x\le_S\Box y\ \wedge\ x\le_S\boxtimes y
+\Rightarrow
+x\le_S\boxtimes T.
+$$
+
+This is APS axiom A3 read as a consistency principle: no proof/refutation
+collision survives except below the base consistency element $\boxtimes T$.
+
 ## Fixed Point Principles
 
 Jeroslow/refutability fixed point:

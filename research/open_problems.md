@@ -22,6 +22,17 @@
 - **[Open]** Does there exist a Rosser provability predicate such that no $\diamond$-fixed point
   yields a contradiction?
 - **[Open]** Axiomatize $PL_{PA}(Prov_Q)$ (provability logic of $Q$ under $PA$-interpretation).
+- **[Open, Pass 69]** Arithmetic lift of the APS consistency tower:
+  interpret $C_0=T$, $C_{n+1}=\boxtimes C_n$ as a genuine iterated
+  consistency sequence and locate $\mathrm{Con}^{\mathrm{orb}}_n$ inside
+  $ConLat_T$.
+- **[Open, Pass 69]** Identify the arithmetic counterpart of `CutA3`.
+  Candidate locations are $Con_T^S$, $Con_T^H$, Rosser consistency, local
+  reflection, and cut-admissibility for BS16-style calculi.
+- **[Open, Pass 69]** Decide whether a fully residuated, integral,
+  contraction-bearing version of the detached $R_{2k}$ Rosser period models can
+  preserve $p=\boxtimes p$ while still failing FG2, or whether A3/contraction
+  necessarily pulls the fixed point back into the consistency orbit.
 
 ## From Shibuya Seminar 2 (2026-05-08)
 

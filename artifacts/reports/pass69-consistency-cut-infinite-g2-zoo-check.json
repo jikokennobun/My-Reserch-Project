@@ -1,0 +1,3530 @@
+{
+  "pass_number": 69,
+  "title": "consistency-tower, cut/A3, and infinite-model expansion of G2-ZOO",
+  "statement_names": {
+    "C_n": "C_0=T and C_{n+1}=boxtimes(C_n), the iterated APS consistency tower",
+    "Con_orb_n": "C_n is not refutable, i.e. C_n not <= bot",
+    "G2_n": "C_n <= bot implies T <= bot",
+    "FG2_n": "C_{n+1} <= C_n; this is nFG2(n)",
+    "Con_cut_A3": "x<=Box(y) and x<=boxtimes(y) imply x<=boxtimes(T)",
+    "Con_flat_le_N": "the checked initial C_0..C_N orbit is flat except for equality"
+  },
+  "A_cycle_APS_no_fixed_point_family": {
+    "family": "C_m cycle APS, m=2..max_period",
+    "max_period": 12,
+    "models": {
+      "C_2": {
+        "period": 2,
+        "detached_fp_added": false,
+        "carrier_size": 4,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 6,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o1"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o1"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_3": {
+        "period": 3,
+        "detached_fp_added": false,
+        "carrier_size": 5,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 8,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o2"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_4": {
+        "period": 4,
+        "detached_fp_added": false,
+        "carrier_size": 6,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 10,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o3"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_5": {
+        "period": 5,
+        "detached_fp_added": false,
+        "carrier_size": 7,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 12,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o4"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_6": {
+        "period": 6,
+        "detached_fp_added": false,
+        "carrier_size": 8,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 14,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o5"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_7": {
+        "period": 7,
+        "detached_fp_added": false,
+        "carrier_size": 9,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 16,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o6"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_8": {
+        "period": 8,
+        "detached_fp_added": false,
+        "carrier_size": 10,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 18,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o7"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_9": {
+        "period": 9,
+        "detached_fp_added": false,
+        "carrier_size": 11,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7",
+          "o8"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 20,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o8"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o8"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "19": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "20": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "19": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "20": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_10": {
+        "period": 10,
+        "detached_fp_added": false,
+        "carrier_size": 12,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7",
+          "o8",
+          "o9"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 22,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o9"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "19": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o9"
+          },
+          "20": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "21": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "22": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "19": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "20": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "21": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "22": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_11": {
+        "period": 11,
+        "detached_fp_added": false,
+        "carrier_size": 13,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7",
+          "o8",
+          "o9",
+          "o10"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 24,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o10",
+            "rhs": "o9"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o10"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "19": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "20": {
+            "holds": false,
+            "lhs": "o10",
+            "rhs": "o9"
+          },
+          "21": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o10"
+          },
+          "22": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "23": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "24": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o10",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "19": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "20": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "21": {
+            "Con_orb_n": "o10",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "22": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "23": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "24": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "C_12": {
+        "period": 12,
+        "detached_fp_added": false,
+        "carrier_size": 14,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": true,
+          "A3_counterexamples": [],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": true
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7",
+          "o8",
+          "o9",
+          "o10",
+          "o11"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [],
+        "detached_fixed_points": [],
+        "FP_synt": false,
+        "nFG2_depth_checked": 26,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o10",
+            "rhs": "o9"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o11",
+            "rhs": "o10"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o11"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "19": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "20": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "21": {
+            "holds": false,
+            "lhs": "o10",
+            "rhs": "o9"
+          },
+          "22": {
+            "holds": false,
+            "lhs": "o11",
+            "rhs": "o10"
+          },
+          "23": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o11"
+          },
+          "24": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "25": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "26": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o10",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o11",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "19": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "20": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "21": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "22": {
+            "Con_orb_n": "o10",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "23": {
+            "Con_orb_n": "o11",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "24": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "25": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "26": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      }
+    },
+    "all_APS": true,
+    "all_no_FP": true,
+    "all_G2_true": true,
+    "all_checked_nFG2_false": true,
+    "verdict": "PASS"
+  },
+  "B_detached_rosser_period_family": {
+    "family": "R_{2k} detached Rosser period preAPS, k=1..max_k",
+    "max_k": 6,
+    "models": {
+      "R_2": {
+        "period": 2,
+        "detached_fp_added": true,
+        "carrier_size": 5,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": false,
+          "A3_counterexamples": [
+            {
+              "x": "p",
+              "y": "p",
+              "Box_y": "p",
+              "boxtimes_y": "p",
+              "boxtimes_T": "o1"
+            }
+          ],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": false
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [
+          "p"
+        ],
+        "detached_fixed_points": [
+          "p"
+        ],
+        "FP_synt": true,
+        "nFG2_depth_checked": 6,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o1"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o1"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "R_4": {
+        "period": 4,
+        "detached_fp_added": true,
+        "carrier_size": 7,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": false,
+          "A3_counterexamples": [
+            {
+              "x": "p",
+              "y": "p",
+              "Box_y": "p",
+              "boxtimes_y": "p",
+              "boxtimes_T": "o1"
+            }
+          ],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": false
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [
+          "p"
+        ],
+        "detached_fixed_points": [
+          "p"
+        ],
+        "FP_synt": true,
+        "nFG2_depth_checked": 10,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o3"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "R_6": {
+        "period": 6,
+        "detached_fp_added": true,
+        "carrier_size": 9,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": false,
+          "A3_counterexamples": [
+            {
+              "x": "p",
+              "y": "p",
+              "Box_y": "p",
+              "boxtimes_y": "p",
+              "boxtimes_T": "o1"
+            }
+          ],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": false
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [
+          "p"
+        ],
+        "detached_fixed_points": [
+          "p"
+        ],
+        "FP_synt": true,
+        "nFG2_depth_checked": 14,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o5"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "R_8": {
+        "period": 8,
+        "detached_fp_added": true,
+        "carrier_size": 11,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": false,
+          "A3_counterexamples": [
+            {
+              "x": "p",
+              "y": "p",
+              "Box_y": "p",
+              "boxtimes_y": "p",
+              "boxtimes_T": "o1"
+            }
+          ],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": false
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [
+          "p"
+        ],
+        "detached_fixed_points": [
+          "p"
+        ],
+        "FP_synt": true,
+        "nFG2_depth_checked": 18,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o7"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "R_10": {
+        "period": 10,
+        "detached_fp_added": true,
+        "carrier_size": 13,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": false,
+          "A3_counterexamples": [
+            {
+              "x": "p",
+              "y": "p",
+              "Box_y": "p",
+              "boxtimes_y": "p",
+              "boxtimes_T": "o1"
+            }
+          ],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": false
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7",
+          "o8",
+          "o9"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [
+          "p"
+        ],
+        "detached_fixed_points": [
+          "p"
+        ],
+        "FP_synt": true,
+        "nFG2_depth_checked": 22,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o9"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "19": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o9"
+          },
+          "20": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "21": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "22": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "19": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "20": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "21": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "22": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      },
+      "R_12": {
+        "period": 12,
+        "detached_fp_added": true,
+        "carrier_size": 15,
+        "T": "o0",
+        "boxtimes_T": "o1",
+        "APS_axioms": {
+          "A1_Box_monotone": true,
+          "A1_boxtimes_antitone": true,
+          "A2_T_le_boxtimes_bot": true,
+          "A3": false,
+          "A3_counterexamples": [
+            {
+              "x": "p",
+              "y": "p",
+              "Box_y": "p",
+              "boxtimes_y": "p",
+              "boxtimes_T": "o1"
+            }
+          ],
+          "A4_boxtimes_x_le_Box_boxtimes_x": true,
+          "A124_core": true,
+          "APS": false
+        },
+        "G2": {
+          "antecedent_boxtimes_T_le_bot": false,
+          "G2": true,
+          "mode": "vacuous"
+        },
+        "orbit_support": [
+          "o0",
+          "o1",
+          "o2",
+          "o3",
+          "o4",
+          "o5",
+          "o6",
+          "o7",
+          "o8",
+          "o9",
+          "o10",
+          "o11"
+        ],
+        "orbit_flat_antichain": true,
+        "fixed_points": [
+          "p"
+        ],
+        "detached_fixed_points": [
+          "p"
+        ],
+        "FP_synt": true,
+        "nFG2_depth_checked": 26,
+        "nFG2": {
+          "1": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "2": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "3": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "4": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "5": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "6": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "7": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "8": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "9": {
+            "holds": false,
+            "lhs": "o10",
+            "rhs": "o9"
+          },
+          "10": {
+            "holds": false,
+            "lhs": "o11",
+            "rhs": "o10"
+          },
+          "11": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o11"
+          },
+          "12": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "13": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "14": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          },
+          "15": {
+            "holds": false,
+            "lhs": "o4",
+            "rhs": "o3"
+          },
+          "16": {
+            "holds": false,
+            "lhs": "o5",
+            "rhs": "o4"
+          },
+          "17": {
+            "holds": false,
+            "lhs": "o6",
+            "rhs": "o5"
+          },
+          "18": {
+            "holds": false,
+            "lhs": "o7",
+            "rhs": "o6"
+          },
+          "19": {
+            "holds": false,
+            "lhs": "o8",
+            "rhs": "o7"
+          },
+          "20": {
+            "holds": false,
+            "lhs": "o9",
+            "rhs": "o8"
+          },
+          "21": {
+            "holds": false,
+            "lhs": "o10",
+            "rhs": "o9"
+          },
+          "22": {
+            "holds": false,
+            "lhs": "o11",
+            "rhs": "o10"
+          },
+          "23": {
+            "holds": false,
+            "lhs": "o0",
+            "rhs": "o11"
+          },
+          "24": {
+            "holds": false,
+            "lhs": "o1",
+            "rhs": "o0"
+          },
+          "25": {
+            "holds": false,
+            "lhs": "o2",
+            "rhs": "o1"
+          },
+          "26": {
+            "holds": false,
+            "lhs": "o3",
+            "rhs": "o2"
+          }
+        },
+        "all_checked_nFG2_false": true,
+        "consistency_tower": {
+          "1": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "2": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "3": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "4": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "5": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "6": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "7": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "8": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "9": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "10": {
+            "Con_orb_n": "o10",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "11": {
+            "Con_orb_n": "o11",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "12": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "13": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "14": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "15": {
+            "Con_orb_n": "o3",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "16": {
+            "Con_orb_n": "o4",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "17": {
+            "Con_orb_n": "o5",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "18": {
+            "Con_orb_n": "o6",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "19": {
+            "Con_orb_n": "o7",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "20": {
+            "Con_orb_n": "o8",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "21": {
+            "Con_orb_n": "o9",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "22": {
+            "Con_orb_n": "o10",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "23": {
+            "Con_orb_n": "o11",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "24": {
+            "Con_orb_n": "o0",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "25": {
+            "Con_orb_n": "o1",
+            "irrefutable": true,
+            "G2_n": true
+          },
+          "26": {
+            "Con_orb_n": "o2",
+            "irrefutable": true,
+            "G2_n": true
+          }
+        }
+      }
+    },
+    "all_A124_core": true,
+    "all_A3_fail": true,
+    "all_FP_only_detached_p": true,
+    "all_G2_true": true,
+    "all_checked_nFG2_false": true,
+    "verdict": "PASS"
+  },
+  "C_cut_boundary_diagnosis": {
+    "minimal_failure": "Adding one detached boxtimes-fixed point p preserves A1/A2/A4 but breaks A3 at x=y=p.",
+    "repair": "Deleting p returns the cycle model C_m, a genuine APS with the same flat consistency orbit.",
+    "interpretation": "A3 is the algebraic cut/collision closure missing from the detached Rosser fixed point layer."
+  },
+  "overall": "PASS"
+}

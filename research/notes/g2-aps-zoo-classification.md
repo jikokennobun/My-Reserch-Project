@@ -55,6 +55,32 @@ implications nFG2($k$) $\Rightarrow$ nFG2($k+1$). Even-step and
 arbitrary-depth strictness remain finite-model search problems. See
 `research/notes/g2-fg2-hierarchy.md` for the corrected status.
 
+### I.2.1 Consistency-Tower and Cut Layer (Pass 69)
+
+Pass 69 adds named APS-level consistency statements based on the orbit
+$C_0=T$, $C_{n+1}=\boxtimes C_n$:
+
+| Code | Condition | Meaning |
+|------|-----------|---------|
+| `Con-orb(n)` | $C_n\nleq\bot$ | the $n$th consistency iterate is not refutable |
+| `G2(n)` | $C_n\le\bot\Rightarrow T\le\bot$ | $n$th G2 implication |
+| `FG2(n)` | $C_{n+1}\le C_n$ | formalized descent; same as `nFG2(n)` |
+| `flat-orbit(N)` | checked $C_0,\ldots,C_N$ have no distinct comparabilities | finite shadow of an infinite flat consistency tower |
+| `CutA3` | $x\le\Box y$ and $x\le\boxtimes y$ imply $x\le\boxtimes T$ | A3 read as cut/collision consistency |
+
+The report `artifacts/reports/pass69-consistency-cut-infinite-g2-zoo-check.json`
+checks two schematic families:
+
+- `C_m` cycle APS models: APS, no syntactic fixed point, G2 true, flat
+  consistency orbit, and all checked `nFG2` false.
+- `R_{2k}` detached Rosser period models: A1/A2/A4 true and a primitive
+  fixed point $p=\boxtimes p$, but A3 fails exactly at the detached point;
+  all checked `nFG2` still fail.
+
+Interpretation: primitive Rosser/Jeroslow fixed points belong to a layer below
+cut elimination unless an additional A3, contraction, or completion principle
+reconnects the detached point to the consistency orbit.
+
 ### I.3 Completion Fixed-Point Type
 
 | Code | Condition |
@@ -361,13 +387,15 @@ The following separation problems should each be attacked by finite model search
 | `smullyan-lawvere-categorical-diagonalization.md` | I.1 | categorical | — | tasks open |
 | `local-fg2-pullback-aps-zoo.md` | I.2: local-FG2 | model comparison | — | tasks open |
 | `bs16-fiber-residuated-aps.md` | I.2 | II.3: res-full | III: CGT | source gap |
+| `g2-zoo-consistency-cut-infinite-pass69.md` | I.2.1: consistency tower | infinite/cyclic models | III: CutA3 boundary | checked |
 
 ---
 
 ## Immediate Next Steps
 
-1. Add `\(n\)-FG2` definition to `research/definitions.md` and populate column I.2 in the
-   model registry.
+1. Lift the Pass-69 statements `Con-orb(n)`, `G2(n)`, `CutA3`, and
+   `flat-orbit(N)` to arithmetic provability predicates and compare them with
+   `Con_L`, `Con_G`, `Con_S`, `Con_H`, and Ros.
 2. Extract precise definitions of $M_{GJ}$ and $M_G$ from
    `local-fg2-pullback-aps-zoo.md` source and add them to the model registry.
 3. Test non-orthogonal front ideals or mild front-order refinements as possible

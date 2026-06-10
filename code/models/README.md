@@ -81,6 +81,9 @@ This folder is for machine-checkable finite APS/preAPS models.
   [../scripts/analyze-structural-rules.py](../scripts/analyze-structural-rules.py).
 - Bottom-discipline filter script:
   [../scripts/check-bottom-discipline.py](../scripts/check-bottom-discipline.py).
+- Pass-69 consistency/cut/infinite schema checker:
+  [../scripts/check-pass69.py](../scripts/check-pass69.py), with report
+  [../../artifacts/reports/pass69-consistency-cut-infinite-g2-zoo-check.json](../../artifacts/reports/pass69-consistency-cut-infinite-g2-zoo-check.json).
 
 ## Minimal Model Fields
 

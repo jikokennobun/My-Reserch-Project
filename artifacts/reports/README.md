@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass69-consistency-cut-infinite-g2-zoo-check.json`: verifies the Pass-69
+  G2-ZOO expansion layer. It checks cycle APS models with flat consistency
+  towers, detached Rosser period preAPS models, the A3/cut boundary, and the
+  named statements `Con-orb(n)`, `G2(n)`, `FG2(n)`, `CutA3`, and
+  `flat-orbit(N)`.
+
 - `pass68-derived-pro-cokernel-phantom-check.json`: verifies the Pass-68
   derived pro-cokernel recovery of `Zhat/Z`.  It checks lcm-tower cofinality,
   CRT levelwise-zero quotients, non-Mittag-Leffler kernel behavior, zero kernel
