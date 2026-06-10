@@ -1285,3 +1285,34 @@ dualizes to $-d_S^T$, duality squared returns $d_S$, and the restriction
 squares commute.  This is presently a precise finite-shadow/pro-object
 formulation, not yet a full theorem in a chosen LCA-sheaf, condensed, or solid
 category.
+
+## Hybrid epsilon exact-category candidate (Pass 72)
+
+The **hybrid epsilon category candidate** $\mathcal H_\epsilon$ is the minimal
+bookkeeping category proposed for the all-prime Loeb-Rosser class.  An object
+has two synchronized layers:
+
+1. finite restricted-product shadows $(S,k,W_{S,k},L_{S,k},d_S)$, where
+   $S$ is a finite prime set, $k\ge1$,
+   $$W_{S,k}=\prod_{p\in S}(p^{-k}\mathbb Z_p/p^k\mathbb Z_p),\qquad
+   L_{S,k}=\prod_{p\in S}(\mathbb Z_p/p^k\mathbb Z_p),$$
+   and $d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ is the Loeb-Rosser boundary;
+2. a derived pro-Ab diagonal layer given by the lcm kernel tower
+   $$K_n=N_n\mathbb Z,\qquad N_n=\operatorname{lcm}(1,\ldots,n).$$
+
+A sequence in $\mathcal H_\epsilon$ is **hybrid-exact** when every finite
+restricted-product shadow is exact and the pro layer supplies the derived
+diagonal quotient
+$$\varprojlim\nolimits^1 K_n\cong\widehat{\mathbb Z}/\mathbb Z.$$
+Equivalently, the finite CRT quotient is levelwise zero, while the non-ML
+kernel tower records the all-prime phantom.
+
+The candidate duality $\mathbb D_{\mathcal H}$ is the signed finite-shadow
+duality
+$$d_S\mapsto -d_S^T$$
+together with the rule that $\widehat{\mathbb Z}/\mathbb Z$ remains a derived
+pro-Ab quotient rather than an ordinary Hausdorff LCA quotient.  Pass 72 checks
+finite exactness, restriction functoriality, conductor bookkeeping, and the
+non-ML pro witness; the remaining task is to prove a universal property or
+embed $\mathcal H_\epsilon$ fully into an established LCA-sheaf,
+condensed/solid, or exact pro-category framework.

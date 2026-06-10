@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-11 (Autonomous discussion Pass 72)
+
+- Pass 72 defined the hybrid exact-category candidate $\mathcal H_\epsilon$ for the all-prime Loeb-Rosser class.  Objects carry finite conductor restricted-product shadows $(S,k,W_{S,k},L_{S,k},d_S)$ plus the derived pro-Ab lcm kernel tower $K_n=N_n\mathbb Z$; hybrid-exactness means exact finite shadows together with $\varprojlim^1K_n\cong\widehat{\mathbb Z}/\mathbb Z$.  Machine-verified `code/scripts/check-pass72.py` -> `artifacts/reports/pass72-hybrid-exact-epsilon-category-check.json` (overall PASS): exact shadows through six primes, restriction composition, conductor layers through $k=3$, and non-ML pro growth all pass.  The remaining residue is a universal property or faithful embedding into LCA sheaves, condensed/solid groups, or an exact pro-category.
+
 ## 2026-06-11 (Autonomous discussion Pass 71)
 
 - Pass 71 formulated the all-prime signed duality as a pro-restricted finite-shadow package rather than a bare Pontryagin-dual claim for $\widehat{\mathbb Z}/\mathbb Z$.  The object is $\epsilon_{\mathbb P}=\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$ plus the derived pro-cokernel $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$; the signed law $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ means every finite prime/conductor shadow sends $d_S$ to $-d_S^T$ and commutes with restriction.  Machine-verified `code/scripts/check-pass71.py` -> `artifacts/reports/pass71-restricted-product-epsilon-duality-check.json` (overall PASS).  The remaining residue is to construct the ambient LCA-sheaf, condensed/solid, or hybrid exact category proving this finite-shadow law as a genuine all-prime duality theorem.

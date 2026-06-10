@@ -3562,3 +3562,57 @@ counts separate restricted-product product profiles from bounded finite-support 
 suite.  The remaining task is to choose and prove the ambient exact category: LCA sheaves over
 finite adeles, condensed/solid abelian groups, or an explicit hybrid exact category combining
 restricted products with derived pro-Ab quotients.
+
+## Pass 72 - The hybrid epsilon exact category candidate
+
+Pass 72 chooses the constrained route left open by Pass 71: define a small
+hybrid bookkeeping category before trying to identify it with an established
+LCA-sheaf or condensed category.  Call it $\mathcal H_\epsilon$.
+
+An object of $\mathcal H_\epsilon$ has two synchronized layers:
+
+1. finite restricted-product shadows
+   $$(S,k,W_{S,k},L_{S,k},d_S),$$
+   where
+   $$W_{S,k}=\prod_{p\in S}(p^{-k}\mathbb Z_p/p^k\mathbb Z_p),\qquad
+   L_{S,k}=\prod_{p\in S}(\mathbb Z_p/p^k\mathbb Z_p),$$
+   and $d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ is the Loeb-Rosser boundary;
+2. the derived pro-Ab diagonal layer
+   $$K_n=N_n\mathbb Z,\qquad N_n=\operatorname{lcm}(1,\ldots,n).$$
+
+A sequence is **hybrid-exact** if all finite restricted-product shadows are
+exact and the pro layer supplies the derived diagonal quotient
+$$\varprojlim\nolimits^1K_n\cong\widehat{\mathbb Z}/\mathbb Z.$$
+The finite layer keeps conductor and support; the pro layer keeps the phantom
+that every fixed CRT quotient kills.  The candidate duality is
+$$\mathbb D_{\mathcal H}(d_S)=-d_S^T,$$
+with $\widehat{\mathbb Z}/\mathbb Z$ retained as a derived pro-Ab quotient, not
+as an ordinary Hausdorff LCA quotient.
+
+> **Definition 72a (hybrid-exact sequence).** A diagram in $\mathcal H_\epsilon$
+> is hybrid-exact when its finite conductor shadows are exact after every
+> finite restriction and the lcm kernel tower is interpreted through
+> $R^1\varprojlim$.
+>
+> **Theorem 72b (finite exactness of $\epsilon_{\mathbb P}$ in
+> $\mathcal H_\epsilon$).** The finite shadows of $\epsilon_{\mathbb P}$ are
+> exact: $d_S$ is surjective, has diagonal kernel, and the signed dual
+> $-d_S^T$ has primitive image.  Restriction maps compose and commute with the
+> signed dual.
+>
+> **Theorem 72c (pro layer is not optional).** The finite CRT shadows remain
+> levelwise zero, while the lcm kernel tower is non-Mittag-Leffler and gives
+> $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$.  Hence any
+> exact category forgetting the pro layer loses the Loeb-Rosser phantom.
+
+**Machine verification** (`code/scripts/check-pass72.py` ->
+`artifacts/reports/pass72-hybrid-exact-epsilon-category-check.json`, PASS): exact shadows pass for
+$|S|=1,\ldots,6$; restriction composition and signed-dual restriction pass for all chains
+$S_r\subseteq S_s\subseteq S_t$ among the first six primes; conductor layers pass through
+$k=1,2,3$; the lcm tower is cofinal for moduli up to $24$, has non-ML growth, and certifies the
+finite-CRT-zero/pro-derived-nonzero split.
+
+**Limit of the pass.** $\mathcal H_\epsilon$ is now a precise finite/pro bookkeeping candidate.
+The remaining issue is external validation: prove a universal property for it, or embed it into an
+established category such as LCA sheaves, condensed/solid abelian groups, or an exact pro-category
+with restricted-product generators.

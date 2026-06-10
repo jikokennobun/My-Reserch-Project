@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 72
+- Current pass: 73
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -8045,3 +8045,80 @@ Pass 72 should choose one ambient formalism and test it seriously.  The most con
 to define a small hybrid exact category whose objects are finite-conductor restricted products
 plus derived pro-Ab quotient data, then prove whether the duality functor is exact and sends
 $\epsilon_{\mathbb P}$ to $-\epsilon_{\mathbb P}^{\vee}$.
+
+---
+
+### Pass 72 - 2026-06-11 JST
+
+Focus:
+Choose a concrete ambient formalism for the Pass-71 pro-restricted signed law.
+The safest option is not to claim a finished LCA-sheaf or condensed theorem, but
+to define the smallest hybrid exact-category candidate that keeps both finite
+restricted-product support and the derived pro-Ab diagonal quotient.
+
+Proposer:
+Define $\mathcal H_\epsilon$ as a two-layer bookkeeping category.  An object has
+finite conductor restricted-product shadows
+$$(S,k,W_{S,k},L_{S,k},d_S),$$
+where
+$$W_{S,k}=\prod_{p\in S}(p^{-k}\mathbb Z_p/p^k\mathbb Z_p),\qquad
+L_{S,k}=\prod_{p\in S}(\mathbb Z_p/p^k\mathbb Z_p),$$
+and $d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ is the Loeb-Rosser boundary, together
+with the derived pro-Ab lcm kernel tower
+$$K_n=N_n\mathbb Z,\qquad N_n=\operatorname{lcm}(1,\ldots,n).$$
+A sequence is hybrid-exact if every finite conductor shadow is exact and the
+pro layer supplies
+$$\varprojlim\nolimits^1K_n\cong\widehat{\mathbb Z}/\mathbb Z.$$
+The candidate duality is $\mathbb D_{\mathcal H}(d_S)=-d_S^T$, while
+$\widehat{\mathbb Z}/\mathbb Z$ remains a derived pro-Ab quotient rather than a
+Hausdorff LCA quotient.
+
+Skeptic:
+This is still a bookkeeping category, not a universal construction.  The phrase
+"hybrid-exact" must therefore be read as a criterion, not as a proved Quillen
+exact structure on a large ambient category.  The tests verify exact finite
+shadows, restriction composition, conductor order bookkeeping, and non-ML pro
+growth.  They do not prove that $\mathcal H_\epsilon$ embeds fully faithfully
+into condensed abelian groups, LCA sheaves, or a canonical exact pro-category.
+That embedding or universal property is now the precise remaining obligation.
+
+Formalist:
+> **Definition 72a (hybrid-exact sequence).** A sequence in
+> $\mathcal H_\epsilon$ is hybrid-exact when all finite conductor restrictions
+> are exact and the lcm kernel tower is interpreted through $R^1\varprojlim$.
+>
+> **Theorem 72b (finite exactness in $\mathcal H_\epsilon$).** For finite
+> $S$, the boundary $d_S$ is surjective with diagonal kernel, the signed dual
+> $-d_S^T$ has primitive image, and restriction maps compose compatibly with
+> both $d_S$ and $-d_S^T$.
+>
+> **Theorem 72c (pro layer necessity).** Fixed finite CRT shadows are
+> levelwise zero, but the lcm kernel tower is non-Mittag-Leffler and yields
+> $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$.  Therefore
+> forgetting the pro layer destroys the all-prime Loeb-Rosser phantom.
+
+Machine-verified `code/scripts/check-pass72.py` ->
+`artifacts/reports/pass72-hybrid-exact-epsilon-category-check.json` (overall PASS): exact shadows
+pass for $|S|=1,\ldots,6$; all restriction-composition squares for chains among the first six
+primes commute, including signed duals; conductor layers pass through $k=1,2,3$; and the lcm
+tower is cofinal for moduli up to $24$, has non-ML growth, and certifies finite-CRT-zero versus
+derived-pro-nonzero.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-72 entry; State counter
+  $72\to73$.
+- `records/logs/research-log.md`: Pass-72 one-line entry.
+- `research/definitions.md`: added $\mathcal H_\epsilon$, hybrid-exactness, and
+  $\mathbb D_{\mathcal H}$.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-72 section (Definition 72a, Thms 72b/72c).
+- `research/open_problems.md` and `research/ideas/research-questions.md`: retargeted the
+  residue to a universal property or faithful embedding of $\mathcal H_\epsilon$.
+- `code/scripts/check-pass72.py`,
+  `artifacts/reports/pass72-hybrid-exact-epsilon-category-check.json`: new.
+- `artifacts/pdf/hybrid-exact-epsilon-category-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 73 should try to prove a universal property for $\mathcal H_\epsilon$: it should be initial
+among support-preserving exact targets receiving the finite conductor windows and the lcm derived
+pro-cokernel, or else exhibit the obstruction that prevents such an initial property.

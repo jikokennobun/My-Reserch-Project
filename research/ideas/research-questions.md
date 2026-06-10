@@ -26,18 +26,18 @@
   integrality, and contraction force a detached Rosser fixed point back into
   the consistency orbit.
 
-- **(Pass 71 retarget: exact category for pro-restricted $\epsilon_{\mathbb P}$)**
-  Pass 71 formulated the all-prime signed law as a pro-restricted finite-shadow
-  theorem: $\epsilon_{\mathbb P}$ is the compatible family
-  $\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$ together with the derived
-  pro-cokernel $\widehat{\mathbb Z}/\mathbb Z$, and
-  $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ means
-  that every finite-prime/conductor shadow sends $d_S$ to $-d_S^T$ compatibly
-  with restrictions.  Open: construct the ambient exact category in which this
-  is a genuine duality theorem.  Candidate targets are LCA sheaves over finite
-  adeles, condensed/solid abelian groups, or a hybrid exact category combining
-  restricted products with derived pro-Ab quotients; the proof must preserve
-  product support and not replace it by finite-support direct sums.
+- **(Pass 72 retarget: universal property or embedding of $\mathcal H_\epsilon$)**
+  Pass 72 defined a concrete hybrid exact-category candidate
+  $\mathcal H_\epsilon$ for $\epsilon_{\mathbb P}$: finite conductor
+  restricted-product shadows $(S,k,W_{S,k},L_{S,k},d_S)$ plus the derived
+  pro-Ab lcm kernel tower $K_n=N_n\mathbb Z$.  Hybrid-exactness means exactness
+  on all finite shadows together with the derived quotient
+  $\varprojlim^1K_n\cong\widehat{\mathbb Z}/\mathbb Z$; the duality sends
+  $d_S$ to $-d_S^T$ and does not treat $\widehat{\mathbb Z}/\mathbb Z$ as a
+  Hausdorff LCA quotient.  Open: prove a universal property for
+  $\mathcal H_\epsilon$, or embed it faithfully into LCA sheaves,
+  condensed/solid abelian groups, or an exact pro-category with
+  restricted-product generators.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

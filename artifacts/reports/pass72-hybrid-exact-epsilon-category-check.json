@@ -1,0 +1,851 @@
+{
+  "pass_number": 72,
+  "title": "hybrid exact category candidate for epsilon_P",
+  "scope": "finite verification for H_epsilon, a bookkeeping exact category combining restricted-product conductor shadows with a derived pro-Ab diagonal quotient",
+  "candidate_category": {
+    "objects": "finite conductor restricted-product shadows plus the lcm kernel tower N_n Z",
+    "exact_sequences": "hybrid-exact iff all finite shadows are exact and the pro kernel tower supplies the derived diagonal quotient",
+    "duality": "finite shadows use signed character dual d_S -> -d_S^T; the pro layer records Zhat/Z without treating it as a Hausdorff LCA quotient"
+  },
+  "finite_exact_shadows": [
+    {
+      "size": 1,
+      "boundary_rank": 0,
+      "boundary_surjective": true,
+      "kernel_rank": 1,
+      "kernel_is_diagonal_rank": true,
+      "signed_dual_rank": 0,
+      "signed_dual_primitive_image": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 2,
+      "boundary_rank": 1,
+      "boundary_surjective": true,
+      "kernel_rank": 1,
+      "kernel_is_diagonal_rank": true,
+      "signed_dual_rank": 1,
+      "signed_dual_primitive_image": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 3,
+      "boundary_rank": 2,
+      "boundary_surjective": true,
+      "kernel_rank": 1,
+      "kernel_is_diagonal_rank": true,
+      "signed_dual_rank": 2,
+      "signed_dual_primitive_image": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 4,
+      "boundary_rank": 3,
+      "boundary_surjective": true,
+      "kernel_rank": 1,
+      "kernel_is_diagonal_rank": true,
+      "signed_dual_rank": 3,
+      "signed_dual_primitive_image": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 5,
+      "boundary_rank": 4,
+      "boundary_surjective": true,
+      "kernel_rank": 1,
+      "kernel_is_diagonal_rank": true,
+      "signed_dual_rank": 4,
+      "signed_dual_primitive_image": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 6,
+      "boundary_rank": 5,
+      "boundary_surjective": true,
+      "kernel_rank": 1,
+      "kernel_is_diagonal_rank": true,
+      "signed_dual_rank": 5,
+      "signed_dual_primitive_image": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    }
+  ],
+  "restriction_composition": [
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 1,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 2,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 3,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 2,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 3,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 3,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 2,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 3,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 3,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 3,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 6,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_composes": true,
+      "dual_restriction_composes": true,
+      "verdict": "PASS"
+    }
+  ],
+  "conductor_layers": [
+    {
+      "primes": [
+        2
+      ],
+      "conductor": 1,
+      "window_order": 4,
+      "integral_lattice_order": 2,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 2,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2
+      ],
+      "conductor": 2,
+      "window_order": 16,
+      "integral_lattice_order": 4,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 4,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2
+      ],
+      "conductor": 3,
+      "window_order": 64,
+      "integral_lattice_order": 8,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 8,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3
+      ],
+      "conductor": 1,
+      "window_order": 36,
+      "integral_lattice_order": 6,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 6,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3
+      ],
+      "conductor": 2,
+      "window_order": 1296,
+      "integral_lattice_order": 36,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 36,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3
+      ],
+      "conductor": 3,
+      "window_order": 46656,
+      "integral_lattice_order": 216,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 216,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "conductor": 1,
+      "window_order": 900,
+      "integral_lattice_order": 30,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 30,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "conductor": 2,
+      "window_order": 810000,
+      "integral_lattice_order": 900,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 900,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "conductor": 3,
+      "window_order": 729000000,
+      "integral_lattice_order": 27000,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 27000,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "conductor": 1,
+      "window_order": 44100,
+      "integral_lattice_order": 210,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 210,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "conductor": 2,
+      "window_order": 1944810000,
+      "integral_lattice_order": 44100,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 44100,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "conductor": 3,
+      "window_order": 85766121000000,
+      "integral_lattice_order": 9261000,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 9261000,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "conductor": 1,
+      "window_order": 5336100,
+      "integral_lattice_order": 2310,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 2310,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "conductor": 2,
+      "window_order": 28473963210000,
+      "integral_lattice_order": 5336100,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 5336100,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "conductor": 3,
+      "window_order": 151939915084881000000,
+      "integral_lattice_order": 12326391000,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 12326391000,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "conductor": 1,
+      "window_order": 901800900,
+      "integral_lattice_order": 30030,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 30030,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "conductor": 2,
+      "window_order": 813244863240810000,
+      "integral_lattice_order": 901800900,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 901800900,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    },
+    {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "conductor": 3,
+      "window_order": 733384949590939374729000000,
+      "integral_lattice_order": 27081081027000,
+      "lattice_order_squared_equals_window_order": true,
+      "crt_diagonal_finite_shadow_order": 27081081027000,
+      "crt_bijective_by_coprime_moduli": true,
+      "verdict": "PASS"
+    }
+  ],
+  "pro_layer": {
+    "max_n": 24,
+    "lcm_values": [
+      1,
+      2,
+      6,
+      12,
+      60,
+      60,
+      420,
+      840,
+      2520,
+      2520,
+      27720,
+      27720,
+      360360,
+      360360,
+      360360,
+      720720,
+      12252240,
+      12252240,
+      232792560,
+      232792560,
+      232792560,
+      232792560,
+      5354228880,
+      5354228880
+    ],
+    "transition_ratios": [
+      2,
+      3,
+      2,
+      5,
+      1,
+      7,
+      2,
+      3,
+      1,
+      11,
+      1,
+      13,
+      1,
+      1,
+      2,
+      17,
+      1,
+      19,
+      1,
+      1,
+      1,
+      23,
+      1
+    ],
+    "cofinal_for_moduli_up_to_max_n": true,
+    "dense_diagonal_by_finite_surjectivity": true,
+    "non_mittag_leffler_growth_witness": true,
+    "finite_crt_levelwise_zero_but_pro_derived_nonzero": true,
+    "verdict": "PASS"
+  },
+  "overall": "PASS"
+}

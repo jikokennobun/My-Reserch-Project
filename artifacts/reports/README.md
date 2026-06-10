@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass72-hybrid-exact-epsilon-category-check.json`: verifies the Pass-72
+  hybrid exact-category candidate for $\epsilon_{\mathbb P}$. It checks finite
+  exact shadows, restriction composition, signed-dual restriction compatibility,
+  conductor-layer bookkeeping, and the non-Mittag-Leffler lcm tower separating
+  finite CRT zero from the derived pro-Ab quotient.
+
 - `pass71-restricted-product-epsilon-duality-check.json`: verifies the Pass-71
   pro-restricted all-prime epsilon package. It checks finite-prime boundary
   naturality, signed-dual naturality, finite conductor self-annihilating
