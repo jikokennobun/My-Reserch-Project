@@ -2,16 +2,16 @@
 
 ## Active
 
-- **(Pass 65 retarget: scheme-site Verdier lift of the signed functional equation)**
-  Pass 65 closed the finite-model sign question: on $X_S=\{\eta\}\sqcup\{(p):p\in S\}$, the
-  $i^!$ spine is $\mathbb Z\xrightarrow{\Delta}\mathbb Z^S$ with $H^1=\mathbb Z^{s-1}$, and
-  Verdier duality sends the recollement boundary $d_S$ to $-d_S^T$, so
-  $\mathbb D(\epsilon_S)=-\epsilon_S^\vee$ in the finite Alexandrov model. Now open:
-  (i) choose the correct scheme-site dualizing normalization
-  (Verdier/Pontryagin/Matlis/$R\mathrm{Hom}_{\mathbb Z}$) for the dilation pro-object
-  $\mathcal V$; (ii) compute the duals of $\mathbb Z_p/\mathbb Z$ and
-  $\widehat{\mathbb Z}_S/\mathbb Z$ while tracking products versus sums; (iii) prove whether the
-  finite sign survives for honest $\mathrm{Spec}\,\mathbb Z$ and for $S=\mathbb P$.
+- **(Pass 66 retarget: restricted-product adelic duality for $S=\mathbb P$)**
+  Pass 66 resolved the finite-prime duality normalization: plain unshifted
+  $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ is shifted, while character duality
+  $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite cyclic layers and
+  gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The remaining obstruction is
+  the full spectrum: the continuous dual of a bare infinite product is a finite-support direct sum.
+  Now open: formulate the Loeb-Rosser coefficient as a restricted-product/LCA sheaf over
+  $\mathrm{Spec}\,\mathbb Z$, prove the finite-adele coefficient is self-dual with the chosen
+  additive character, and check whether the global boundary class transforms as
+  $-\epsilon^\vee$ or absorbs the sign by orientation.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

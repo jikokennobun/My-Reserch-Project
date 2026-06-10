@@ -1,0 +1,188 @@
+{
+  "pass_number": 66,
+  "title": "duality normalization for the scheme-site Loeb-Rosser functional equation",
+  "overall": "PASS",
+  "conclusion": {
+    "RHom_Z_plain": "not degree-preserving; torsion local layers appear in Ext^1",
+    "finite_S": "character-normalized duality supports D(epsilon_S)=-epsilon_S^vee",
+    "S_all_primes": "bare product has product/direct-sum obstruction; restricted-product/LCA lift required"
+  },
+  "checks": {
+    "A_RHomZ_shift_cyclic_2": {
+      "pass": true,
+      "detail": "Hom_Z(Z/2,Z)=0 (order 1), Ext^1_Z(Z/2,Z) has order 2; plain Hom loses torsion"
+    },
+    "A_RHomZ_shift_cyclic_3": {
+      "pass": true,
+      "detail": "Hom_Z(Z/3,Z)=0 (order 1), Ext^1_Z(Z/3,Z) has order 3; plain Hom loses torsion"
+    },
+    "A_RHomZ_shift_cyclic_4": {
+      "pass": true,
+      "detail": "Hom_Z(Z/4,Z)=0 (order 1), Ext^1_Z(Z/4,Z) has order 4; plain Hom loses torsion"
+    },
+    "A_RHomZ_shift_cyclic_5": {
+      "pass": true,
+      "detail": "Hom_Z(Z/5,Z)=0 (order 1), Ext^1_Z(Z/5,Z) has order 5; plain Hom loses torsion"
+    },
+    "A_RHomZ_shift_cyclic_8": {
+      "pass": true,
+      "detail": "Hom_Z(Z/8,Z)=0 (order 1), Ext^1_Z(Z/8,Z) has order 8; plain Hom loses torsion"
+    },
+    "A_RHomZ_shift_cyclic_9": {
+      "pass": true,
+      "detail": "Hom_Z(Z/9,Z)=0 (order 1), Ext^1_Z(Z/9,Z) has order 9; plain Hom loses torsion"
+    },
+    "A_RHomZ_shift_cyclic_16": {
+      "pass": true,
+      "detail": "Hom_Z(Z/16,Z)=0 (order 1), Ext^1_Z(Z/16,Z) has order 16; plain Hom loses torsion"
+    },
+    "A_RHomZ_shift_cyclic_25": {
+      "pass": true,
+      "detail": "Hom_Z(Z/25,Z)=0 (order 1), Ext^1_Z(Z/25,Z) has order 25; plain Hom loses torsion"
+    },
+    "B_character_dual_layer_p2_k1": {
+      "pass": true,
+      "detail": "Hom(Z/2, Q/Z) has order 2, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p2_k2": {
+      "pass": true,
+      "detail": "Hom(Z/4, Q/Z) has order 4, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p2_k3": {
+      "pass": true,
+      "detail": "Hom(Z/8, Q/Z) has order 8, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p2_k4": {
+      "pass": true,
+      "detail": "Hom(Z/16, Q/Z) has order 16, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p3_k1": {
+      "pass": true,
+      "detail": "Hom(Z/3, Q/Z) has order 3, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p3_k2": {
+      "pass": true,
+      "detail": "Hom(Z/9, Q/Z) has order 9, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p3_k3": {
+      "pass": true,
+      "detail": "Hom(Z/27, Q/Z) has order 27, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p3_k4": {
+      "pass": true,
+      "detail": "Hom(Z/81, Q/Z) has order 81, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p5_k1": {
+      "pass": true,
+      "detail": "Hom(Z/5, Q/Z) has order 5, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p5_k2": {
+      "pass": true,
+      "detail": "Hom(Z/25, Q/Z) has order 25, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p5_k3": {
+      "pass": true,
+      "detail": "Hom(Z/125, Q/Z) has order 125, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p5_k4": {
+      "pass": true,
+      "detail": "Hom(Z/625, Q/Z) has order 625, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p7_k1": {
+      "pass": true,
+      "detail": "Hom(Z/7, Q/Z) has order 7, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p7_k2": {
+      "pass": true,
+      "detail": "Hom(Z/49, Q/Z) has order 49, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p7_k3": {
+      "pass": true,
+      "detail": "Hom(Z/343, Q/Z) has order 343, preserving the finite dilation layer"
+    },
+    "B_character_dual_layer_p7_k4": {
+      "pass": true,
+      "detail": "Hom(Z/2401, Q/Z) has order 2401, preserving the finite dilation layer"
+    },
+    "C_finite_signed_boundary_rank_s1": {
+      "pass": true,
+      "detail": "rank(d_S)=rank(-d_S^T)=0"
+    },
+    "C_finite_dual_squared_s1": {
+      "pass": true,
+      "detail": "signed character duality squares to the original boundary matrix"
+    },
+    "C_finite_signed_boundary_rank_s2": {
+      "pass": true,
+      "detail": "rank(d_S)=rank(-d_S^T)=1"
+    },
+    "C_finite_dual_squared_s2": {
+      "pass": true,
+      "detail": "signed character duality squares to the original boundary matrix"
+    },
+    "C_finite_signed_boundary_rank_s3": {
+      "pass": true,
+      "detail": "rank(d_S)=rank(-d_S^T)=2"
+    },
+    "C_finite_dual_squared_s3": {
+      "pass": true,
+      "detail": "signed character duality squares to the original boundary matrix"
+    },
+    "C_finite_signed_boundary_rank_s4": {
+      "pass": true,
+      "detail": "rank(d_S)=rank(-d_S^T)=3"
+    },
+    "C_finite_dual_squared_s4": {
+      "pass": true,
+      "detail": "signed character duality squares to the original boundary matrix"
+    },
+    "C_finite_signed_boundary_rank_s5": {
+      "pass": true,
+      "detail": "rank(d_S)=rank(-d_S^T)=4"
+    },
+    "C_finite_dual_squared_s5": {
+      "pass": true,
+      "detail": "signed character duality squares to the original boundary matrix"
+    },
+    "C_finite_signed_boundary_rank_s6": {
+      "pass": true,
+      "detail": "rank(d_S)=rank(-d_S^T)=5"
+    },
+    "C_finite_dual_squared_s6": {
+      "pass": true,
+      "detail": "signed character duality squares to the original boundary matrix"
+    },
+    "C_finite_signed_boundary_rank_s7": {
+      "pass": true,
+      "detail": "rank(d_S)=rank(-d_S^T)=6"
+    },
+    "C_finite_dual_squared_s7": {
+      "pass": true,
+      "detail": "signed character duality squares to the original boundary matrix"
+    },
+    "C_finite_product_sum_no_gap": {
+      "pass": true,
+      "detail": "finite product order=180 equals finite direct-sum order=180"
+    },
+    "D_infinite_product_sum_gap_prefix_6": {
+      "pass": true,
+      "detail": "support <= 3 gives 42 binary characters, strictly less than product-prefix 64; no bounded-support model is product-like"
+    },
+    "D_infinite_product_sum_gap_prefix_8": {
+      "pass": true,
+      "detail": "support <= 4 gives 163 binary characters, strictly less than product-prefix 256; no bounded-support model is product-like"
+    },
+    "D_infinite_product_sum_gap_prefix_10": {
+      "pass": true,
+      "detail": "support <= 5 gives 638 binary characters, strictly less than product-prefix 1024; no bounded-support model is product-like"
+    },
+    "D_infinite_product_sum_gap_prefix_12": {
+      "pass": true,
+      "detail": "support <= 6 gives 2510 binary characters, strictly less than product-prefix 4096; no bounded-support model is product-like"
+    },
+    "D_restricted_product_obligation": {
+      "pass": true,
+      "detail": "all-prime S=P requires restricted-product/LCA normalization; bare product dualizes to direct sum of local characters"
+    }
+  }
+}

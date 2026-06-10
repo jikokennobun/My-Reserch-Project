@@ -636,7 +636,7 @@
   [Open] at the honest $\mathrm{Spec}\,\mathbb Z$ site: choose the dualizing normalization and
   compute the duals of $\mathbb Z_p/\mathbb Z$ and $\widehat{\mathbb Z}_S/\mathbb Z$ with
   products/sums controlled. (iii) remains [Open].
-- **[New (Pass 65)]** **Scheme-site Verdier lift and dualizing normalization.** Prove or refute the
+- **[Partially resolved (Pass 66)]** **Scheme-site Verdier lift and dualizing normalization.** Prove or refute the
   scheme-level equation $\mathbb D(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$ and then
   $S=\mathbb P$. Required subquestions: (a) identify the correct duality
   (Verdier/Pontryagin/Matlis/$R\mathrm{Hom}_{\mathbb Z}$) for the pro-object $\mathcal V$; (b)
@@ -644,6 +644,20 @@
   $\widehat{\mathbb Z}_S/\mathbb Z$ without losing product/direct-sum information; (c) decide
   whether the integral sign in the finite model survives the scheme-site convention or is absorbed
   by an orientation choice.
+  **Finite-prime resolution (Pass 66):** unshifted $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ is not
+  the degree-preserving duality because finite cyclic layers are killed by
+  $\operatorname{Hom}_{\mathbb Z}(-,\mathbb Z)$ and recovered only in
+  $\operatorname{Ext}^1_{\mathbb Z}(-,\mathbb Z)$. Character duality
+  $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite $\mathbb Z/p^n$
+  layers and gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The all-prime
+  case remains [Open]: the bare infinite product dualizes to a finite-support direct sum, so
+  $S=\mathbb P$ needs a restricted-product / locally compact abelian sheaf normalization.
+- **[New (Pass 66)]** **Restricted-product adelic duality for the full spectrum.** Define the
+  Loeb-Rosser coefficient for $S=\mathbb P$ as a restricted product of local objects rather than a
+  bare product. Prove that the finite-adele coefficient is self-dual under a chosen additive
+  character, identify the integral lattice annihilator, and check whether the global boundary class
+  transforms as $-\epsilon^\vee$ or whether the sign is absorbed by the global orientation
+  convention. This is the necessary replacement for the naive all-prime product statement.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

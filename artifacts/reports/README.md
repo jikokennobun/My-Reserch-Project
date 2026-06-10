@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass66-duality-normalization-scheme-lift-check.json`: verifies the Pass-66
+  duality-normalization split.  It checks that plain
+  `RHom_Z(-, Z)` is shifted on finite cyclic layers, character duality preserves
+  finite `Z/p^k` layers, finite boundaries dualize by signed transpose, and the
+  all-prime product/direct-sum gap is real.
+
 - `pass65-verdier-dual-recollement-functional-equation-check.json`: verifies the
   Pass-65 finite-model Verdier-dual recollement calculation.  It checks the
   $i^!$ local-support ranks, the signed transpose rule

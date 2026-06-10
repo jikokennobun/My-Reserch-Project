@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 66
+- Current pass: 67
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -7543,3 +7543,86 @@ products/sums controlled, and prove or refute the scheme-level equation
 $$\mathbb D(\epsilon_S)=-\epsilon_S^\vee$$
 for $S$ finite and then $S=\mathbb P$.  Keep the Pass-61 $\aleph_1$ threshold carried as a separate
 set-theoretic residue.
+
+---
+
+### Pass 66 - 2026-06-10 JST
+
+Focus:
+Lift Pass 65 as far as possible toward the honest arithmetic site by choosing the right duality
+normalization.  The finite sign equation
+$$\mathbb D(\epsilon_S)=-\epsilon_S^\vee$$
+is already checked on the Alexandrov spine.  The question is whether this is a literal
+$R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ statement, a character-duality statement, or a
+restricted-product adelic statement.
+
+Proposer:
+The clean finite lift uses **character-normalized Verdier duality**
+$$D_{\mathrm{ch}}(A)=\operatorname{Hom}(A,\mathbb Q/\mathbb Z)$$
+on the finite cyclic truncations of the dilation coefficient.  It preserves every layer
+$\mathbb Z/p^n$, dualizes maps by transpose, and therefore carries the Pass-65 boundary matrix
+$d_S$ to $-d_S^T$.  For finite $S$ there is no product/direct-sum issue: finite products of local
+layers are finite direct sums.  Thus the finite-prime scheme-lift should be stated as:
+$$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee,\qquad S\in\mathcal P_{\mathrm{fin}}(\mathbb P),$$
+with the usual connecting-morphism sign.
+
+Skeptic:
+Two naive lifts fail.  First, the unshifted $\mathbb Z$-linear dual is too small:
+$\operatorname{Hom}_{\mathbb Z}(\mathbb Z/n,\mathbb Z)=0$, while
+$\operatorname{Ext}^1_{\mathbb Z}(\mathbb Z/n,\mathbb Z)\cong\mathbb Z/n$.  So
+$R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ can see the local layers only after a cohomological shift;
+it is not the degree-preserving duality behind the finite functional equation.  Second, the
+all-prime object cannot be obtained by simply letting $S=\mathbb P$ in the discrete product:
+continuous characters of an infinite product have finite support, so the dual of a bare product is
+a direct sum.  The all-prime adelic statement must be formulated in the category of locally compact
+abelian / restricted-product sheaves, where the finite adele object has its own self-duality
+normalization.  Without that topology the full-spectrum functional equation is false as stated.
+
+Formalist:
+> **Theorem 66a (plain $R\mathrm{Hom}_{\mathbb Z}$ is shifted).** For $n>1$,
+> $\operatorname{Hom}_{\mathbb Z}(\mathbb Z/n,\mathbb Z)=0$ and
+> $\operatorname{Ext}^1_{\mathbb Z}(\mathbb Z/n,\mathbb Z)\cong\mathbb Z/n$.
+> Hence the local cyclic layers of $\mathcal V$ live in degree $1$ under
+> $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$; the Pass-65 degree-preserving equation is not a literal
+> unshifted $\mathbb Z$-dual statement.
+>
+> **Theorem 66b (finite $S$ character-dual lift).** On finite truncations,
+> $D_{\mathrm{ch}}(\mathbb Z/n)\cong\mathbb Z/n$.  Therefore for every finite prime set $S$,
+> character-normalized Verdier duality sends the mixed boundary $d_S$ to $-d_S^T$ and proves the
+> finite-prime functional equation $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$.
+>
+> **Theorem 66c (all-prime product obstruction).** For $S=\mathbb P$, the naive product of local
+> ghosts has continuous character dual equal to a finite-support direct sum of local characters,
+> not another product.  The all-prime equation must be promoted to a restricted-product/LCA
+> formulation; the bare discrete product formulation loses the adelic self-duality.
+
+Machine-verified `code/scripts/check-pass66.py` ->
+`artifacts/reports/pass66-duality-normalization-scheme-lift-check.json` (overall PASS): finite
+cyclic layers $n=2,3,4,5,8,9,16,25$ have trivial $\operatorname{Hom}(-,\mathbb Z)$ but
+$\operatorname{Ext}^1$ of order $n$; $D_{\mathrm{ch}}(\mathbb Z/p^k)$ has order $p^k$ for
+$p=2,3,5,7$ and $k=1,\ldots,4$; $d_S$ and $-d_S^T$ have matching rank and square back for
+$s=1,\ldots,7$; finite product/direct-sum orders agree; finite-prefix support counts exhibit the
+infinite product/direct-sum gap.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-66 entry; State counter
+  $66\to67$.
+- `records/logs/research-log.md`: Pass-66 one-line entry.
+- `research/open_problems.md`: [New (Pass 65)] split into finite-$S$ character-dual resolution and
+  an all-prime restricted-product/LCA residue.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-66 section (Thms 66a, 66b, 66c).
+- `research/definitions.md`: character-normalized duality and all-prime product/direct-sum gap.
+- `research/ideas/research-questions.md`: active question retargeted to restricted-product adelic
+  Verdier duality.
+- `code/scripts/check-pass66.py`,
+  `artifacts/reports/pass66-duality-normalization-scheme-lift-check.json`: new.
+- `artifacts/pdf/duality-normalization-loeb-rosser-2026-06-10.md`: publication summary source.
+
+Next step:
+Pass 67 should formulate the restricted-product / locally compact abelian sheaf category needed for
+$S=\mathbb P$.  The test is concrete: define the finite-adele coefficient as a restricted product
+with respect to the integral lattices $\mathbb Z_p$, show its character dual is again the same
+restricted product up to the standard additive character, and then re-check whether the boundary
+class still transforms as $-\epsilon^\vee$.  Keep this separate from the carried $\aleph_1$ tower
+problem.

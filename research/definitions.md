@@ -1117,3 +1117,25 @@ Duality squared returns $d_S$. The sign is invisible over $\mathbb F_2$ but rema
 $\mathbb Z$ as an orientation datum of the gluing triangle. This statement is presently proved only
 for the finite Alexandrov model; the honest $\mathrm{Spec}\,\mathbb Z$ site lift requires a separate
 dualizing-normalization proof.
+
+## Character-normalized duality and restricted-product gap (Pass 66)
+
+The **character-normalized dual** of a discrete abelian group $A$ is
+$$D_{\mathrm{ch}}(A)=\operatorname{Hom}(A,\mathbb Q/\mathbb Z).$$
+For finite cyclic groups it preserves the layer:
+$$D_{\mathrm{ch}}(\mathbb Z/n)\cong\mathbb Z/n.$$
+This is the finite-level duality compatible with the Pass-65 signed boundary equation
+$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite prime sets $S$.
+
+The **plain $\mathbb Z$-linear dual shift** is the failure of
+$\operatorname{Hom}_{\mathbb Z}(-,\mathbb Z)$ to see finite torsion in degree $0$:
+$$\operatorname{Hom}_{\mathbb Z}(\mathbb Z/n,\mathbb Z)=0,\qquad
+\operatorname{Ext}^1_{\mathbb Z}(\mathbb Z/n,\mathbb Z)\cong\mathbb Z/n.$$
+Thus $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ sees the dilation layers only after a cohomological
+shift; it is not the literal degree-preserving duality of the finite Loeb-Rosser matrix spine.
+
+The **all-prime product/direct-sum gap** is the obstruction to passing from finite $S$ to
+$S=\mathbb P$ by bare products. Continuous characters of an infinite product have finite support,
+so the dual of $\prod_p A_p$ is naturally $\bigoplus_p D(A_p)$, not another product. Consequently
+the full adelic Loeb-Rosser duality must be formulated using restricted products / locally compact
+abelian sheaves, where finite adeles carry their own self-duality normalization.

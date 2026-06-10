@@ -3304,3 +3304,56 @@ requires choosing the dualizing normalization on the actual arithmetic site, com
 $\mathbb Z_p/\mathbb Z$ and $\widehat{\mathbb Z}_S/\mathbb Z$, and controlling products versus sums.
 So Pass 65 closes the finite sign question but leaves the honest $\mathrm{Spec}\,\mathbb Z$
 Verdier-duality lift open.
+
+## Pass 66 - Duality normalization and the product/direct-sum obstruction
+
+Pass 65 left one ambiguity: which duality is meant when the finite signed equation is lifted toward
+the arithmetic site?  Pass 66 separates three candidates.
+
+### Plain $\mathbb Z$-linear duality is shifted
+
+For a finite cyclic layer $\mathbb Z/n$, the unshifted dual is trivial:
+$$\operatorname{Hom}_{\mathbb Z}(\mathbb Z/n,\mathbb Z)=0.$$
+The layer reappears one degree later:
+$$\operatorname{Ext}^1_{\mathbb Z}(\mathbb Z/n,\mathbb Z)\cong\mathbb Z/n.$$
+Thus $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ is not wrong, but it is not the degree-preserving
+duality behind the Pass-65 matrix equation.  It forces a cohomological shift before the local
+dilation layers are visible.
+
+### Character-normalized finite lift
+
+Use character duality
+$$D_{\mathrm{ch}}(A)=\operatorname{Hom}(A,\mathbb Q/\mathbb Z).$$
+Then
+$$D_{\mathrm{ch}}(\mathbb Z/n)\cong\mathbb Z/n,$$
+so the finite layers of the dilation tower are preserved.  For finite $S$, products and direct
+sums agree, so there is no support ambiguity.  The Pass-65 boundary
+$$d_S:\mathbb Z^S\to\mathbb Z^{s-1}$$
+is sent to the signed transpose $-d_S^T$, giving:
+
+> **Theorem 66a (plain $R\mathrm{Hom}_{\mathbb Z}$ is shifted).** The local finite cyclic layers are
+> killed by $\operatorname{Hom}_{\mathbb Z}(-,\mathbb Z)$ and recovered by
+> $\operatorname{Ext}^1_{\mathbb Z}(-,\mathbb Z)$, so the unshifted $\mathbb Z$-dual is not the
+> degree-preserving Loeb-Rosser duality.
+>
+> **Theorem 66b (finite-$S$ character-dual lift).** For every finite prime set $S$,
+> character-normalized Verdier duality supports the equation
+> $$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee.$$
+>
+> **Theorem 66c (all-prime obstruction).** For $S=\mathbb P$, the bare infinite product does not
+> self-dualize: continuous characters of a product have finite support, so the dual is a direct
+> sum of local characters.  The all-prime statement requires a restricted-product / locally compact
+> abelian normalization.
+
+**Machine verification** (`code/scripts/check-pass66.py` ->
+`artifacts/reports/pass66-duality-normalization-scheme-lift-check.json`, PASS): finite cyclic
+layers $n=2,3,4,5,8,9,16,25$ have trivial $\operatorname{Hom}(-,\mathbb Z)$ but
+$\operatorname{Ext}^1$ of order $n$; $D_{\mathrm{ch}}(\mathbb Z/p^k)$ has order $p^k$ for
+$p=2,3,5,7$, $k=1,\ldots,4$; $d_S$ and $-d_S^T$ have matching rank and duality squared returns
+$d_S$ for $s=1,\ldots,7$; finite product/direct-sum orders agree; finite-prefix support counts
+exhibit the infinite product/direct-sum gap.
+
+**Reading.** Finite $S$ is now stable: use character-normalized duality and the Pass-65 sign
+survives.  The full spectrum is not a formal limit of those finite statements in the category of
+bare groups.  It must be stated in a topological category of restricted products, the natural home
+of finite adeles.

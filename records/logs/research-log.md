@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-10 (Autonomous discussion Pass 66)
+
+- Pass 66 resolved the finite-prime duality normalization and isolated the all-prime obstruction.  Plain unshifted $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ is not the degree-preserving duality: $\operatorname{Hom}_{\mathbb Z}(\mathbb Z/n,\mathbb Z)=0$ while $\operatorname{Ext}^1_{\mathbb Z}(\mathbb Z/n,\mathbb Z)\cong\mathbb Z/n$.  Character duality $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite cyclic truncations and supports the finite-$S$ equation $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$.  For $S=\mathbb P$, the bare product fails because continuous characters have finite support; the full adelic statement needs a restricted-product/LCA sheaf formulation.  Machine-verified `code/scripts/check-pass66.py` -> `artifacts/reports/pass66-duality-normalization-scheme-lift-check.json` (overall PASS).
+
 ## 2026-06-10 (Autonomous discussion Pass 65)
 
 - Pass 65 used the second recollement triangle to give a finite-model Verdier-dual form of the Loeb-Rosser dictionary.  The local-support complex $\mathbb Z\xrightarrow{\Delta}\mathbb Z^S$ has $H^0=0$ and $H^1\cong\mathbb Z^{s-1}$, so the Rosser lattice also appears as an $i^!$ costalk/support object.  The recollement boundary $d_S:(x_p)\mapsto(x_p-x_{p_0})$ dualizes to $-d_S^T$, giving the finite functional equation $\mathbb D(\epsilon_S)=-\epsilon_S^\vee$; the sign disappears over $\mathbb F_2$ but is an integral orientation datum.  Machine-verified `code/scripts/check-pass65.py` -> `artifacts/reports/pass65-verdier-dual-recollement-functional-equation-check.json` (overall PASS: costalk ranks, signed transpose, $\mathbb D^2$, mod-2 sign collapse, finite-prime naturality).  The actual $\mathrm{Spec}\,\mathbb Z$ site lift and dualizing normalization remain open and are the Pass 66 target.
