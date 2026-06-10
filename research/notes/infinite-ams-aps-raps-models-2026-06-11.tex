@@ -1,0 +1,563 @@
+\documentclass[uplatex,dvipdfmx,a4paper,10pt]{jsarticle}
+\usepackage[top=24mm,bottom=24mm,left=22mm,right=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage[dvipdfmx]{xcolor}
+\usepackage{enumitem}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  urlcolor=blue!45!black,
+  pdftitle={AMS/APS/剰余付きAPSの無限モデル構成集},
+  pdfauthor={My-Reserch-Project}
+}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.25em}
+\setlist[itemize]{leftmargin=2.2em,itemsep=0.15em}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=0.15em}
+
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{example}[theorem]{例}
+\newtheorem{remark}[theorem]{注意}
+
+\newcommand{\AMS}{\mathrm{AMS}}
+\newcommand{\APS}{\mathrm{APS}}
+\newcommand{\RAPS}{\mathrm{RAPS}}
+\newcommand{\Gtwo}{\mathrm{G2}}
+\newcommand{\FGtwo}{\mathrm{FG2}}
+\newcommand{\nFGtwo}{\mathrm{nFG2}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\bt}{\boxtimes}
+\newcommand{\resl}{\backslash}
+\newcommand{\resr}{/}
+\newcommand{\Pow}{\mathcal P}
+\newcommand{\Top}{\top}
+\newcommand{\Bot}{\bot}
+
+\title{AMS/APS/剰余付きAPSの無限モデル構成集\\
+{\large 可算・非可算・連続・quantale・phantom系の例}}
+\author{My-Reserch-Project}
+\date{2026年6月11日}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本資料は、AMS、APS、剰余付きAPSの無限モデルを、構成できる限り明示的に作る。
+結論は、無限モデルは少なくとも五つの大きな供給源を持つ、というものである。
+第一に、任意の無限濃度で作れる star-dynamic RAPS。
+第二に、任意の有界剰余代数やquantaleから作れる coarse APS/RAPS。
+第三に、Heyting代数・Scottフレーム・開集合フレームから作る擬補元APS/RAPS。
+第四に、有界剰余鎖上の threshold APS/RAPS。
+第五に、profinite/solenoid/\(\varprojlim^1\) 由来の phantom AMS である。
+このうち star-dynamic 系列と coarse quantale 系列は、3値モデルへ還元されにくい
+本質的無限例を大量に与える。
+\end{abstract}
+
+\section{共通定義}
+
+\begin{definition}[AMS, APS, RAPS]
+AMS は
+\[
+S=(L,\le,\Box,\bt,T,\bot)
+\]
+という順序付き様相データである。APS は次を満たす AMS とする。
+\[
+x\le y\Rightarrow \Box x\le\Box y,\qquad
+x\le y\Rightarrow \bt y\le\bt x,
+\]
+\[
+T\le\bt\bot,
+\]
+\[
+x\le\Box y\ \text{かつ}\ x\le\bt y\Rightarrow x\le\bt T,
+\]
+\[
+\bt x\le\Box\bt x.
+\]
+さらに \((L,\le,\otimes,\mathbf 1,\resl,\resr)\) が剰余付き順序モノイドで、
+\[
+a\otimes b\le c
+\iff
+b\le a\resl c
+\iff
+a\le c\resr b
+\]
+を満たすとき、剰余付きAPS、または \(\RAPS\)、と呼ぶ。
+\end{definition}
+
+\begin{definition}[G2, FG2]
+\[
+\Gtwo:\quad \bt T\le\bot\Rightarrow T\le\bot,
+\qquad
+\FGtwo:\quad \bt\bt T\le\bt T,
+\]
+\[
+\nFGtwo(k):\quad \bt^{k+1}T\le\bt^kT.
+\]
+\end{definition}
+
+\section{構成一覧}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\linewidth}
+                  >{\raggedright\arraybackslash}p{0.25\linewidth}
+                  >{\raggedright\arraybackslash}p{0.25\linewidth}
+                  >{\raggedright\arraybackslash}p{0.21\linewidth}}
+\toprule
+型 & 台集合・代数 & APS/RAPS状況 & 典型的な現象 \\
+\midrule
+\endfirsthead
+\toprule
+型 & 台集合・代数 & APS/RAPS状況 & 典型的な現象 \\
+\midrule
+\endhead
+star-dynamic &
+\(\{b,U\}\cup A\)、\(A\) は任意濃度の反鎖 &
+条件付きでAPS。top-absorbing tensorでRAPS &
+任意濃度、非周期軌道、全 \(\nFGtwo\) 失敗 \\
+\midrule
+coarse quantale &
+任意の有界剰余代数・unital quantale &
+常にAPS/RAPS。ただし \(T\ne\Top\) を選ぶ &
+\(\Gtwo+\FGtwo\)、固定点なし、非可換例あり \\
+\midrule
+Heyting/擬補元 &
+任意のHeyting代数 \(H\) &
+\(\bt x=x\Rightarrow0\) でRAPS &
+\(\Gtwo,\FGtwo\) は非自明なら失敗、固定点なし \\
+\midrule
+threshold chain &
+任意の有界剰余鎖と \(0<r<1\) &
+\(\bt0=1,\ \bt x=r\) でRAPS &
+\(\Gtwo+\FGtwo+\Fix\)、連続濃度例 \\
+\midrule
+relation/language quantale &
+\(\Pow(X\times X)\), \(\Pow(\Sigma^\ast)\) &
+coarse 様相で非可換/非可算RAPS &
+資源合成・プログラム合成モデル \\
+\midrule
+Scott/domain frame &
+\(\mathcal O(D)\) &
+Heyting型RAPS &
+大きな負のモデル族。G2/FG2/固定点を壊す \\
+\midrule
+phantom/profinite &
+\(\widehat{\mathbb Z}_m/\mathbb Z\), \(\varprojlim^1\) &
+AMSまたは完成由来の候補 &
+有限段で消え、極限で現れる本質的無限成分 \\
+\bottomrule
+\end{longtable}
+
+\section{Star-dynamic RAPS}
+
+\begin{definition}[star-dynamic carrier]
+\(A\) を空でない集合、\(T\in A\)、\(\sigma:A\to A\) を写像とする。
+\[
+L_A=\{b,U\}\cup A
+\]
+に順序を
+\[
+b\le x\le U\qquad(x\in L_A)
+\]
+だけで入れ、\(A\) の異なる元同士は不可比較とする。すなわち \(b\) は最小元、
+\(U\) は最大元、\(A\) は反鎖である。さらに
+\[
+\Box=\mathrm{id},\qquad
+\bt b=U,\quad \bt U=b,\quad \bt a=\sigma(a)\quad(a\in A)
+\]
+と定める。
+\end{definition}
+
+\begin{theorem}[star-dynamic APS判定]
+上の \(L_A\) は常にAMSである。さらに
+\[
+\Fix(\sigma)\subseteq\{\sigma(T)\}
+\]
+ならばAPSである。つまり、\(\sigma\) の固定点は、存在しても高々
+\(\bt T=\sigma(T)\) だけでなければならない。
+\end{theorem}
+
+\begin{proof}
+\(\Box=\mathrm{id}\) は単調である。\(\bt\) の反単調性は、非自明な順序が
+\(b\le x\le U\) だけであることから従う。すなわち
+\(\bt U=b\le\bt x\le U=\bt b\) である。A2は \(T\le U=\bt b\)。
+A4は \(\Box=\mathrm{id}\) より自明。
+残るA3を調べる。\(y=b\) または \(y=U\) なら
+\(\downarrow y\cap\downarrow\bt y\subseteq\{b\}\) であり、\(b\le\bt T\)。
+\(y\in A\) で \(\sigma(y)\ne y\) なら、反鎖性より
+\(\downarrow y\cap\downarrow\sigma(y)=\{b\}\)。最後に \(\sigma(y)=y\) の場合、
+仮定より \(y=\sigma(T)=\bt T\) であり、A3の結論 \(x\le\bt T\) が成り立つ。
+\end{proof}
+
+\begin{theorem}[star-dynamic RAPS化]
+同じ台集合上で、\(T\) をモノイド単位、\(b\) を零元とし、
+\[
+b\otimes x=b,\qquad T\otimes x=x,
+\]
+かつ \(x,y\ne b,T\) のとき
+\[
+x\otimes y=U
+\]
+と定める。ただし可換に拡張する。このとき \((L_A,\le,\otimes,T)\) は完全剰余付き
+順序モノイドである。したがって、上のAPS判定条件を満たすとき \(L_A\) はRAPSである。
+\end{theorem}
+
+\begin{proof}
+結合律は、非零非単位を二つ掛けた時点で \(U\) に到達し、その後も非零非単位との積で
+\(U\) に留まることから従う。単調性は \(b\le x\le U\) だけを調べればよい。
+剰余は次で与えられる。
+\[
+b\resl c=U,\qquad T\resl c=c,
+\]
+非零非単位 \(m\ne U\) について
+\[
+m\resl c=
+\begin{cases}
+U & c=U,\\
+T & c=m,\\
+b & \text{otherwise},
+\end{cases}
+\]
+また
+\[
+U\resl c=
+\begin{cases}
+U & c=U,\\
+b & c\ne U.
+\end{cases}
+\]
+可換なので右剰余も同じである。各場合で
+\(m\otimes y\le c\iff y\le m\resl c\) を直接確認できる。
+\end{proof}
+
+\begin{example}[可算一方向シフト \(S_\omega\)]
+\[
+A=\mathbb N,\qquad T=0,\qquad \sigma(n)=n+1.
+\]
+これは可算RAPSであり、\(\sigma\) に固定点がないのでAPS条件を満たす。
+\[
+\bt^nT=n
+\]
+は全て相異なる。したがって
+\[
+\nFGtwo(k)\ \text{は全て偽},\qquad \Fix_{\bt}=\varnothing.
+\]
+また \(\bt T=1\not\le b\) なので \(\Gtwo\) は非崩壊かつ真である。
+これは「どの有限モデルとも \(\bt^iT\ne\bt^jT\) の全体系で同値にならない」
+という意味で本質的無限である。
+\end{example}
+
+\begin{example}[任意無限濃度シフト \(S_\kappa\)]
+\(\kappa\) を任意の無限基数とし、\(A=\kappa\) を初期順序数として
+\[
+\sigma(\alpha)=\alpha+1\qquad(\alpha<\kappa)
+\]
+と置く。無限基数は極限順序数なので \(\alpha+1<\kappa\) である。
+この \(S_\kappa\) は濃度 \(\kappa\) のRAPSであり、固定点を持たず、\(T=0\) の
+\(\bt\)-軌道は長さ \(\kappa\) の初期部分を走る。特に \(\kappa=\omega_1\) とすれば、
+可算モデルでは見えない長さの反証軌道を持つ。
+\end{example}
+
+\begin{example}[全周期を含む可算RAPS]
+\[
+A=\{(n,i):n\ge2,\ i\in\mathbb Z/n\mathbb Z\}
+\]
+とし、\(\sigma(n,i)=(n,i+1)\) とする。\(T=(2,0)\) を選ぶ。
+固定点はないのでAPSであり、RAPS化できる。このモデルは、あらゆる有限周期の
+\(\bt\)-軌道を一つの可算モデル内に含む。
+\end{example}
+
+\begin{remark}
+star-dynamic構成の重要点は、\(\bt\)-軌道の複雑さを \(\sigma:A\to A\) の力学として
+自由に埋め込めることである。3値モデルでは、軌道の長さ、周期、濃度、固定点の有無を
+同時に保持できない。
+\end{remark}
+
+\section{Coarse APS/RAPS: 任意の剰余代数から}
+
+\begin{definition}[coarse refutability]
+\((L,\le)\) を最小元 \(0\) と最大元 \(1\) を持つ順序集合とし、指定点 \(T\ne1\) を取る。
+\[
+\Box=\mathrm{id},\qquad
+\bot=0,
+\]
+\[
+\bt x=
+\begin{cases}
+1 & x\ne1,\\
+0 & x=1
+\end{cases}
+\]
+と定める。
+\end{definition}
+
+\begin{theorem}[coarse APS]
+上の構造はAPSである。さらに \(L\) が剰余付き順序モノイドなら、そのままRAPSである。
+\end{theorem}
+
+\begin{proof}
+\(\bt\) は反単調である。実際、\(x\le y\) かつ \(y=1\) なら
+\(\bt y=0\le\bt x\)、\(y\ne1\) なら \(x\ne1\) なので両方 \(1\) である。
+A2は \(T\le1=\bt0\)。A3は \(\bt T=1\) なので結論が自明である。
+A4は \(\Box=\mathrm{id}\) より自明。剰余構造がすでにあれば、様相を加えただけなのでRAPSになる。
+\end{proof}
+
+\begin{example}[関係quantale]
+\(X\) を無限集合とする。
+\[
+L=\Pow(X\times X)
+\]
+を包含順序で並べ、積を関係合成、単位を対角関係 \(\Delta_X\) とする。
+これは一般に非可換な完全quantaleであり、左右剰余は関係合成の右随伴として存在する。
+\(|X|\ge2\) なら \(\Delta_X\ne X\times X\) なので、\(T=\Delta_X\) として
+coarse構成を入れると非可換RAPSが得られる。
+\end{example}
+
+\begin{example}[言語quantale]
+\(\Sigma\) を非空アルファベットとし、
+\[
+L=\Pow(\Sigma^\ast)
+\]
+を包含順序で並べ、積を言語連接
+\[
+A\otimes B=\{uv:u\in A,\ v\in B\}
+\]
+とし、単位を \(\{\varepsilon\}\) とする。左右商
+\[
+A\resl C=\{w:Aw\subseteq C\},\qquad C\resr B=\{w:wB\subseteq C\}
+\]
+が剰余を与える。\(T=\{\varepsilon\}\) は最大元 \(\Sigma^\ast\) ではないので、
+coarse構成によりRAPSとなる。
+\end{example}
+
+\begin{example}[powerset monoid quantale]
+任意の無限モノイド \(M\) に対し、\(\Pow(M)\) は集合積
+\[
+A\otimes B=\{ab:a\in A,\ b\in B\}
+\]
+でquantaleになる。単位は \(\{e\}\)。\(M\) が自明でなければ
+\(\{e\}\ne M\) なので、coarse構成で無限RAPSが得られる。
+\end{example}
+
+\section{Heyting/pseudocomplement RAPS}
+
+\begin{theorem}[任意Heyting代数からの負のRAPS]
+\(H\) を非自明Heyting代数とする。順序はHeyting順序、積は meet、
+単位は \(1\)、剰余はHeyting含意 \(\Rightarrow\) とする。
+\[
+T=1,\qquad \bot=0,\qquad \Box=\mathrm{id},\qquad
+\bt x=x^\ast=(x\Rightarrow0)
+\]
+と置くと、\(H\) はRAPSである。さらに
+\[
+\neg\Gtwo,\qquad \neg\FGtwo,\qquad \Fix_{\bt}=\varnothing
+\]
+が成り立つ。
+\end{theorem}
+
+\begin{proof}
+擬補元は反単調で、\(\Box\) は恒等なのでA1とA4は明らか。
+A2は \(1\le0^\ast=1\)。A3は、\(x\le y\) かつ \(x\le y^\ast\) なら
+\[
+x\le y\wedge y^\ast=0=\bt1
+\]
+である。非自明なら \(\bt1=0\le0\) だが \(1\not\le0\) なので \(\Gtwo\) は失敗する。
+また \(\bt\bt1=0^\ast=1\not\le0=\bt1\) なので \(\FGtwo\) も失敗する。
+固定点 \(p=p^\ast\) があれば \(p=p\wedge p^\ast=0\) だが、\(0^\ast=1\ne0\)。
+\end{proof}
+
+\begin{example}[可算Heyting/RAPS例]
+次はいずれも可算または可算生成の無限RAPSである。
+\begin{itemize}
+  \item \(\mathbb N\) 上の有限・余有限Boolean代数。
+  \item 任意の可算poset \(P\) のdownset Heyting代数 \(\mathcal D(P)\)。
+  \item 有理数鎖 \([0,1]\cap\mathbb Q\) 上のGödel Heyting chain。
+\end{itemize}
+\end{example}
+
+\begin{example}[非可算・連続Heyting/RAPS例]
+次はいずれも非可算RAPSである。
+\begin{itemize}
+  \item \(\Pow(\mathbb N)\) または \(\Pow(\mathbb R)\)。
+  \item 位相空間 \(X\) の開集合フレーム \(\mathcal O(X)\)、特に \(\mathcal O(\mathbb R)\)。
+  \item dcpo \(D\) のScott開集合フレーム \(\mathcal O(D)\)。
+  \item 実区間 \([0,1]\) のGödel chain。
+\end{itemize}
+\end{example}
+
+\begin{remark}
+この型は「大きな負のモデル族」である。自然な反証作用素を擬補元にすると、
+APS公理は満たすが、非自明な場合は必ずG2、FG2、固定点を壊す。
+これはdomain semanticsが自動的に固定点を供給するわけではないことを示す。
+\end{remark}
+
+\section{Threshold chain RAPS}
+
+\begin{definition}[threshold refutability]
+\(C\) を \(0<r<1\) を持つ有界剰余鎖とする。例えば
+\([0,1]\)、\([0,1]\cap\mathbb Q\)、任意の完備線形Heyting代数でよい。
+\[
+T=1,\qquad \bot=0,\qquad \Box=\mathrm{id},
+\]
+\[
+\bt0=1,\qquad \bt x=r\quad(x>0)
+\]
+と定める。
+\end{definition}
+
+\begin{theorem}[threshold chain は正のRAPS]
+上の構造はRAPSであり、
+\[
+\Gtwo,\qquad \FGtwo,\qquad \Fix_{\bt}=\{r\}
+\]
+を満たす。
+\end{theorem}
+
+\begin{proof}
+\(\bt\) は反単調である。A2は \(1=\bt0\)。A3を示す。
+\(y=0\) なら \(x\le y\) から \(x=0\le r=\bt1\)。
+\(y>0\) なら \(\bt y=r\) なので、\(x\le y\) かつ \(x\le r\) から
+\(x\le r=\bt1\)。A4は自明。RAPS性は、もとの鎖が剰余付きであることから従う。
+\(\bt1=r\not\le0\) なので \(\Gtwo\) は真。
+\(\bt\bt1=\bt r=r=\bt1\) なので \(\FGtwo\) も真であり、固定点は \(r\) だけである。
+\end{proof}
+
+\begin{example}
+\([0,1]\cap\mathbb Q\) にGödel積 \(x\otimes y=\min(x,y)\) を入れると、可算RAPSが得られる。
+\([0,1]\) にGödel積、product t-norm、またはŁukasiewicz t-normを入れても、
+threshold \(\bt\) は残余否定とは独立に定義されるので、連続濃度のRAPSが得られる。
+\end{example}
+
+\begin{remark}
+Łukasiewicz残余否定 \(x\mapsto1-x\) はA3を壊すが、同じŁukasiewicz剰余鎖でも
+threshold \(\bt\) を使えばAPSになる。したがって、剰余の存在と、どの否定を
+\(\bt\) として採用するかは分けて考えるべきである。
+\end{remark}
+
+\section{AMSだけの無限モデル}
+
+\begin{example}[解析的AMS]
+\[
+L=[0,1],\qquad T=1,\qquad \bot=0,\qquad \Box x=x^2,\qquad \bt x=1-x
+\]
+とする。これはAMSであり、\(\bt\) は \(1/2\) を固定点に持つ。
+しかしA3は壊れる。例えば \(y=1/2\)、\(x=1/2\) では
+\[
+x\le y,\qquad x\le\bt y
+\]
+だが、\(\bt T=0\) なので \(x\le0\) ではない。
+これは「連続性や中間値的固定点だけではAPSにならない」ことを示す基礎例である。
+\end{example}
+
+\begin{example}[双方向シフトAMS]
+\[
+L=\mathbb Z,\qquad \le\text{ は等号順序},\qquad
+\Box=\mathrm{id},\qquad \bt n=n+1
+\]
+とする。これは固定点を持たないAMSで、\(\bt\)-軌道は双方向に無限である。
+最大元・最小元がないので、このままではAPSではないが、純粋な反証力学のモデルとして使える。
+\end{example}
+
+\begin{example}[phantom AMS]
+\[
+P_m=\widehat{\mathbb Z}_m/\mathbb Z
+\]
+を \(m\)-進profinite quotientとし、\(L=\mathrm{Sub}(P_m)\) を部分群束とする。
+\(\Box\) を閉包または恒等、\(\bt\) をPontryagin双対性に由来するannihilator型操作として
+入れれば、profinite phantomを carrier に持つAMSが得られる。
+これは有限段では消えるが \(\varprojlim^1\) で現れる成分を直接持つモデルである。
+APS公理を満たすかは、選ぶ順序とannihilatorの極性に依存するので、ここではAMS例として扱う。
+\end{example}
+
+\section{Domain/Scott 由来の具体例}
+
+\begin{example}[\(\omega+1\) のScott frame]
+\(D=\omega+1\) を通常順序のdcpoとし、\(L=\mathcal O(D)\) をScott開集合フレームとする。
+擬補元RAPS構成を入れると、非空Scott開の擬補元は多くの場合 \(\varnothing\) へ潰れる。
+したがってこれは完全RAPSだが、非自明Heyting定理により \(\Gtwo,\FGtwo,\Fix_{\bt}\)
+を全て壊す。
+\end{example}
+
+\begin{example}[flat domain \(\mathbb N_\bot\)]
+\(D=\mathbb N_\bot\) のScott開集合フレームは可算情報・未定義性・観測可能性を分ける。
+擬補元RAPS構成により、未定義性を含む観測と全体観測の反証が異なる無限RAPSが得られる。
+\end{example}
+
+\begin{example}[prefix domain]
+\(\Sigma^{\le\omega}\) のprefix順序からScott frameを作ると、開集合は有限prefixで
+観測される計算状態を表す。擬補元またはprefix incompatibilityを \(\bt\) として使うことで、
+分岐計算・event structure・直交性意味論に近いAMS/RAPSが得られる。
+\end{example}
+
+\section{まとめ: 構成済みの無限モデル}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.23\linewidth}
+                  >{\raggedright\arraybackslash}p{0.18\linewidth}
+                  >{\raggedright\arraybackslash}p{0.18\linewidth}
+                  >{\raggedright\arraybackslash}p{0.31\linewidth}}
+\toprule
+モデル & 濃度 & 種別 & 主な性質 \\
+\midrule
+\endfirsthead
+\toprule
+モデル & 濃度 & 種別 & 主な性質 \\
+\midrule
+\endhead
+\(S_\omega\) star shift & \(\aleph_0\) & RAPS & 全 \(\nFGtwo\) 偽、固定点なし、有限非同値 \\
+\midrule
+\(S_\kappa\) star shift & 任意無限 \(\kappa\) & RAPS & 任意濃度の非周期反証軌道 \\
+\midrule
+全周期star model & \(\aleph_0\) & RAPS & 全有限周期を一つの可算モデルに含む \\
+\midrule
+関係quantale & \(2^{|X|^2}\) & 非可換RAPS & 関係合成と左右剰余を持つ \\
+\midrule
+言語quantale & \(2^{\aleph_0}\) など & RAPS & 形式言語の資源合成モデル \\
+\midrule
+\(\Pow(M)\) monoid quantale & \(2^{|M|}\) & RAPS & 任意無限モノイドから生成 \\
+\midrule
+有限・余有限Boolean代数 & \(\aleph_0\) & RAPS & Heyting負モデル。G2/FG2失敗 \\
+\midrule
+\(\Pow(\mathbb N)\) & \(2^{\aleph_0}\) & RAPS & Boolean/Heyting負モデル \\
+\midrule
+\(\mathcal O(\mathbb R)\) & \(2^{\aleph_0}\) & RAPS & 位相的負モデル \\
+\midrule
+\([0,1]\cap\mathbb Q\) threshold & \(\aleph_0\) & RAPS & \(\Gtwo+\FGtwo+\Fix\) \\
+\midrule
+\([0,1]\) threshold & \(2^{\aleph_0}\) & RAPS & 連続濃度の正モデル \\
+\midrule
+\([0,1]\) involutive & \(2^{\aleph_0}\) & AMS & 固定点あり、A3失敗 \\
+\midrule
+\(\widehat{\mathbb Z}_m/\mathbb Z\) phantom & \(2^{\aleph_0}\) & AMS & \(\varprojlim^1\) 由来、有限段で不可視 \\
+\bottomrule
+\end{longtable}
+
+\section{結論}
+
+無限AMS/APS/RAPSは、単に有限モデルを大きくしたものではない。特に、
+\begin{enumerate}
+  \item star-dynamic RAPS は、任意の写像力学を \(\bt\)-軌道として埋め込める。
+  \item coarse quantale RAPS は、関係・言語・プログラム合成のような非可換資源意味論をAPS化する。
+  \item Heyting/pseudocomplement RAPS は、自然だがG2/FG2/固定点を壊す大きな負のモデル族である。
+  \item threshold chain RAPS は、同じ連続鎖上で \(\Gtwo+\FGtwo+\Fix\) を作る正のモデル族である。
+  \item phantom AMS は、有限段で消える情報が極限で出現する、本質的無限モデルの候補である。
+\end{enumerate}
+したがって、無限モデル分類では、3値還元ではなく、軌道型、剰余型、quantale型、
+Heyting負性、threshold正性、そして \(\varprojlim^1\)-phantom を別々の軸として扱うべきである。
+
+\section*{参照したローカル資料}
+\begin{itemize}
+  \item \(\texttt{research/definitions.md}\)
+  \item \(\texttt{research/notes/ams-aps-raps-model-classification-2026-06-11.tex}\)
+  \item \(\texttt{research/notes/predicate-topology-fixed-points.md}\)
+  \item \(\texttt{research/notes/residuated-algebra-domain-completion.md}\)
+  \item \(\texttt{research/notes/g2-fg2-hierarchy.md}\)
+  \item \(\texttt{artifacts/reports/pass54--pass68*.json}\)
+\end{itemize}
+
+\end{document}
