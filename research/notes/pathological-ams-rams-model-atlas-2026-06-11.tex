@@ -1,0 +1,862 @@
+\documentclass[uplatex,dvipdfmx,a4paper,10pt]{jsarticle}
+\usepackage[top=24mm,bottom=24mm,left=22mm,right=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage[dvipdfmx]{xcolor}
+\usepackage{enumitem}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  urlcolor=blue!45!black,
+  pdftitle={病的AMS/RAMS/RAPSモデル・アトラス},
+  pdfauthor={My-Reserch-Project}
+}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.25em}
+\setlist[itemize]{leftmargin=2.2em,itemsep=0.15em}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=0.15em}
+
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{example}[theorem]{例}
+\newtheorem{remark}[theorem]{注意}
+\newtheorem{problem}[theorem]{問題}
+
+\newcommand{\AMS}{\mathrm{AMS}}
+\newcommand{\APS}{\mathrm{APS}}
+\newcommand{\RAMS}{\mathrm{RAMS}}
+\newcommand{\RAPS}{\mathrm{RAPS}}
+\newcommand{\Gtwo}{\mathrm{G2}}
+\newcommand{\FGtwo}{\mathrm{FG2}}
+\newcommand{\nFGtwo}{\mathrm{nFG2}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\bt}{\boxtimes}
+\newcommand{\resl}{\backslash}
+\newcommand{\resr}{/}
+\newcommand{\Pow}{\mathcal P}
+\newcommand{\calU}{\mathcal U}
+\newcommand{\calI}{\mathcal I}
+\newcommand{\Top}{\top}
+\newcommand{\Bot}{\bot}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+
+\title{病的AMS/RAMS/RAPSモデル・アトラス\\
+{\large 剰余付きAMSの分類軸と、3値還元を避けるモデル族}}
+\author{My-Reserch-Project}
+\date{2026年6月11日}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本資料は、AMS、剰余付きAMS、APS、剰余付きAPSのモデルを、病理と分類不変量を
+中心に増殖させるためのアトラスである。3値モデルは最小証人として有用だが、
+分類理論の主役にするには粗すぎる。本稿では、star-dynamicモデル、coarse
+quantaleモデル、Heyting/pseudocomplementモデル、threshold鎖モデル、直交性・
+Chu型モデル、ultrafilter/quotient Booleanモデル、非剰余化可能なmonoidal APS、
+完成でのみ固定点を持つAMS、profinite/phantom型AMSを構成する。最後に、有限還元を
+避けるための分類不変量として、反証軌道型、残余ファイバーの主性、直交空間の
+ランク、連続性欠陥、完成反映欠陥、集合論的剛性を提案する。
+\end{abstract}
+
+\section{基本語彙}
+
+\begin{definition}[AMS, RAMS, APS, RAPS]
+AMS は
+\[
+S=(L,\le,\Box,\bt,T,\bot)
+\]
+という順序付き様相データである。本稿では、APS公理のうち少なくとも
+\[
+x\le y\Rightarrow \Box x\le\Box y,\qquad
+x\le y\Rightarrow \bt y\le\bt x
+\]
+を満たすものを、特に単調AMSと呼ぶ。
+\(\RAMS\) は、AMSに剰余付き順序モノイド
+\[
+(L,\le,\otimes,\mathbf 1,\resl,\resr)
+\]
+を加えたもので、
+\[
+a\otimes b\le c
+\iff
+b\le a\resl c
+\iff
+a\le c\resr b
+\]
+を満たす。
+
+APS は単調AMSで、さらに
+\[
+T\le\bt\bot,
+\]
+\[
+x\le\Box y\ \text{かつ}\ x\le\bt y\Rightarrow x\le\bt T,
+\]
+\[
+\bt x\le\Box\bt x
+\]
+を満たすものとする。RAPS は RAMS でもある APS である。
+\end{definition}
+
+\begin{definition}[三つの粗い原理]
+\[
+\Gtwo:\quad \bt T\le\bot\Rightarrow T\le\bot,
+\qquad
+\FGtwo:\quad \bt\bt T\le\bt T,
+\qquad
+\Fix_{\bt}:\quad \exists p\ (p=\bt p).
+\]
+また
+\[
+\nFGtwo(k):\quad \bt^{k+1}T\le\bt^kT
+\]
+と書く。
+\end{definition}
+
+\begin{remark}
+以下では「RAPS」と書く場合、剰余付き順序モノイドの存在まで含める。
+一方、「RAMS」と書く場合、APSのA2--A4を満たすとは限らない。
+この区別は重要である。病的な例の多くは、様相構造としては自然だが、
+A3または剰余性のどちらか一方で落ちる。
+\end{remark}
+
+\section{分類軸}
+
+\subsection{第一分類表}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.18\linewidth}
+                  >{\raggedright\arraybackslash}p{0.22\linewidth}
+                  >{\raggedright\arraybackslash}p{0.23\linewidth}
+                  >{\raggedright\arraybackslash}p{0.27\linewidth}}
+\toprule
+型 & 台構造 & 状態 & 分類上の意味 \\
+\midrule
+\endfirsthead
+\toprule
+型 & 台構造 & 状態 & 分類上の意味 \\
+\midrule
+\endhead
+star-dynamic &
+反鎖に上下を足したstar束 &
+条件付きRAPS &
+任意の写像力学を \(\bt\)-軌道として埋め込む。有限還元を避ける第一候補。\\
+\midrule
+coarse quantale &
+任意の有界residuated poset/quantale &
+RAPS &
+関係・言語・プログラム合成を即座にRAPS化する。ただし様相部は粗い。\\
+\midrule
+Heyting負モデル &
+Heyting代数、frame、Boolean代数 &
+RAPS &
+\(\Gtwo,\FGtwo,\Fix_{\bt}\) を一斉に壊す巨大な自然例族。\\
+\midrule
+threshold鎖 &
+有界剰余鎖 &
+RAPS &
+連続濃度で \(\Gtwo+\FGtwo+\Fix_{\bt}\) を実現する正の例族。\\
+\midrule
+直交性モデル &
+対称非反射関係、coherence空間、event structure &
+RAPS &
+A3を「自己直交禁止」として満たす。線形論理・意味論との接点。\\
+\midrule
+ultrafilter/quotient &
+\(\Pow(\N)\)、\(\Pow(\N)/\mathrm{Fin}\)、measure algebra &
+RAPSまたはRAMS &
+集合論的・測度論的な非構成性を持つ。有限表では見えない剛性がある。\\
+\midrule
+monoidal非剰余化 &
+monoidal APSだが残余なし &
+APS、非RAMS &
+剰余化可能性の境界を与える。残余ファイバーの非主性が障害。\\
+\midrule
+完成固定点 &
+稠密順序・MacNeille/Dedekind completion &
+AMS、時にRAMS候補 &
+構文段階には固定点がなく、完成でだけ固定点が出る。\\
+\midrule
+phantom/profinite &
+逆極限、\(\varprojlim^1\)、profinite quotient &
+AMS/RAMS候補 &
+有限段では消え、極限でだけ見える本質的無限成分。\\
+\bottomrule
+\end{longtable}
+
+\subsection{分類不変量}
+
+\begin{definition}[モデルを分ける不変量]
+AMS/RAMS/RAPS \(S\) に対して、次のデータを分類不変量として使う。
+\begin{enumerate}
+  \item \(\bt\)-軌道型:
+  \[
+  T,\bt T,\bt^2T,\ldots
+  \]
+  の順序型、周期、前周期、固定点、反鎖幅。
+  \item A3-核:
+  \[
+  K_{\mathrm{A3}}(y)=\downarrow\Box y\cap\downarrow\bt y.
+  \]
+  APSでは \(K_{\mathrm{A3}}(y)\subseteq\downarrow\bt T\) が要求される。
+  \item 残余ファイバー:
+  \[
+  R(a,c)=\{b:a\otimes b\le c\}.
+  \]
+  RAMSでは \(R(a,c)\) が主イデアルでなければならない。
+  \item \(\bt\)-固定点スペクトル:
+  \[
+  \Fix_{\bt}(S)=\{p:p=\bt p\}
+  \]
+  の濃度、順序型、閉包性。
+  \item 連続性欠陥:
+  dcpo/frame/quantale上で \(\Box,\bt,\otimes\) が directed sup や任意joinを
+  保存するか。
+  \item 完成反映欠陥:
+  完成 \(\widehat L\) に現れる固定点が \(L\) に反映されるか。
+  \item 集合論的剛性:
+  ultrafilter、Boolean quotient、measure algebraなどの自己同型・lifting・
+  definabilityの独立性。
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[有限還元を避けるための十分条件]
+次のいずれかが成り立つAMS/RAMS/RAPSは、少なくともその不変量を保つ分類では、
+単一の3値モデルに還元できない。
+\begin{enumerate}
+  \item \(\bt^nT\) が無限個の相異なる元を持ち、かつこの事実が射で潰されないよう
+  不変量に含まれている。
+  \item 残余ファイバー \(R(a,c)\) に無限共終性または非主性がある。
+  \item \(\Fix_{\bt}\) が無限濃度、稠密順序、または非閉包性を持つ。
+  \item 直交空間のrank、clique/anticliqueスペクトル、event構造の分岐数が無限である。
+  \item 完成で生じる固定点が非主または非反映である。
+  \item ultrafilterやquotient Boolean algebraの自己同型問題を含む。
+\end{enumerate}
+\end{proposition}
+
+\begin{remark}
+ここでいう「還元できない」は、論理的完全性を主張しているのではない。
+むしろ、今後の分類理論で保持すべき不変量を宣言している。
+3値モデルは \(\Gtwo,\FGtwo,\Fix_{\bt}\) の真偽表を保存するが、軌道長、残余ファイバー、
+直交rank、集合論的剛性は保存しない。
+\end{remark}
+
+\section{RAPSを大量生成する安全な構成}
+
+\subsection{Star-dynamic RAPS}
+
+\begin{definition}[star-dynamic carrier]
+\(A\) を空でない集合、\(T\in A\)、\(\sigma:A\to A\) を写像とする。
+\[
+L_A=\{b,U\}\cup A
+\]
+に、\(b\) を最小元、\(U\) を最大元とし、\(A\) の異なる元は互いに不可比較とする
+順序を入れる。さらに
+\[
+\Box=\mathrm{id},\qquad
+\bt b=U,\quad \bt U=b,\quad \bt a=\sigma(a)\quad(a\in A)
+\]
+と定める。
+\end{definition}
+
+\begin{theorem}[star-dynamic APS判定]
+上の構造は単調AMSである。さらに
+\[
+\Fix(\sigma)\subseteq\{\sigma(T)\}
+\]
+ならばAPSである。
+\end{theorem}
+
+\begin{proof}
+\(\Box\) は恒等写像なので単調である。\(\bt\) の反単調性は、非自明な順序関係が
+\(b\le x\le U\) だけであることから従う。A2は \(T\le U=\bt b\)。
+A4は \(\Box=\mathrm{id}\) より自明である。A3について、\(y=b\) または \(y=U\) なら
+\(\downarrow y\cap\downarrow\bt y\subseteq\{b\}\subseteq\downarrow\bt T\)。
+\(y\in A\) で \(\sigma(y)\ne y\) なら、反鎖性により
+\(\downarrow y\cap\downarrow\sigma(y)=\{b\}\)。
+\(\sigma(y)=y\) の場合だけ、仮定から \(y=\sigma(T)=\bt T\) となり、A3の結論が従う。
+\end{proof}
+
+\begin{theorem}[top-absorbing剰余化]
+同じ \(L_A\) 上で、\(T\) を単位、\(b\) を零元とし、
+\[
+b\otimes x=b,\qquad T\otimes x=x,
+\]
+\[
+x,y\ne b,T\Rightarrow x\otimes y=U
+\]
+と定め、可換に拡張する。このとき \(L_A\) は剰余付き順序モノイドである。
+したがって、前定理の仮定を満たすとき \(L_A\) はRAPSである。
+\end{theorem}
+
+\begin{proof}
+結合律は、非零非単位を二つ掛けると \(U\) へ到達し、以後は非零非単位との積で
+\(U\) に留まることから従う。単調性は \(b\le x\le U\) の三ケースだけを調べればよい。
+また \(L_A\) は任意joinを持つ完備束であり、各左乗法 \(x\otimes -\) は任意joinを保存する。
+従って
+\[
+x\resl c=\bigvee\{z:x\otimes z\le c\}
+\]
+が存在し、可換性により右剰余も同じ式で存在する。
+\end{proof}
+
+\begin{example}[全有限周期を含む可算RAPS]
+\[
+A=\{(n,i):n\ge1,\ 0\le i<n\},\qquad
+\sigma(n,i)=(n,i+1\bmod n)
+\]
+とする。\(T=(1,0)\) とすれば、全ての有限周期を一つの可算RAPSに含む。
+これは \(\bt\)-軌道型の分類で、任意の固定された有限モデルより豊かである。
+\end{example}
+
+\begin{example}[非周期RAPS]
+\[
+A=\Z,\qquad \sigma(n)=n+1,\qquad T=0
+\]
+とする。固定点がないのでAPS条件を満たし、\(\bt^nT=n\) は全て相異なる。
+したがって全ての \(\nFGtwo(k)\) は失敗し、有限モデルの周期・前周期では表せない。
+\end{example}
+
+\subsection{Coarse quantale RAPS}
+
+\begin{definition}[coarse refutability]
+\(L\) を非自明な有界順序集合とし、最小元を \(0\)、最大元を \(1\) とする。
+真に最大でない \(T\ne1\) を選び、
+\[
+\Box=\mathrm{id},\qquad
+\bt x=
+\begin{cases}
+1 & (x\ne1),\\
+0 & (x=1)
+\end{cases}
+\]
+と定める。
+\end{definition}
+
+\begin{theorem}[coarse RAPS]
+\(L\) が剰余付き順序モノイドなら、上の構造はRAPSである。
+特に、任意のunital quantaleからRAPSが得られる。
+\end{theorem}
+
+\begin{proof}
+\(\bt\) は反単調である。A2は \(T\le1=\bt0\)。A3は、\(T\ne1\) なので
+\(\bt T=1\) となり自明である。A4も \(\Box=\mathrm{id}\) から従う。
+剰余構造は仮定で与えられている。
+\end{proof}
+
+\begin{example}[関係quantale]
+集合 \(X\) に対して
+\[
+L=\Pow(X\times X),\qquad \otimes=\text{関係合成}
+\]
+を考える。これは一般に非可換なquantaleで、左右剰余は関係合成に対する最大解として
+存在する。coarse構成を入れると、非可換RAPSが得られる。
+これはプログラム合成、遷移系、動的意味論をAPSの内部に入れる最短経路である。
+\end{example}
+
+\begin{example}[言語quantale]
+モノイド \(M\) に対して
+\[
+L=\Pow(M),\qquad A\otimes B=\{ab:a\in A,\ b\in B\}
+\]
+とする。これはunital quantaleである。特に \(M=\Sigma^\ast\) とすれば、
+形式言語の連接を資源合成とするRAPSが得られる。
+\end{example}
+
+\begin{example}[Lawvere quantale]
+\[
+([0,\infty],\ge,+,0)
+\]
+は標準的なLawvere quantaleである。順序が通常とは逆であることに注意する。
+coarse構成により、距離・コスト・enriched category由来のRAPSが得られる。
+\end{example}
+
+\section{自然だが負に働くRAPS}
+
+\subsection{Heyting/pseudocomplement RAPS}
+
+\begin{theorem}[Heyting負モデル]
+\(H\) を非自明Heyting代数とする。
+\[
+T=1,\qquad \bot=0,\qquad \Box=\mathrm{id},\qquad \bt x=(x\Rightarrow0)
+\]
+と定める。また \(\otimes=\wedge\)、単位 \(1\)、剰余をHeyting含意とする。
+このとき \(H\) はRAPSである。さらに
+\[
+\Gtwo,\quad \FGtwo,\quad \Fix_{\bt}
+\]
+はいずれも失敗する。
+\end{theorem}
+
+\begin{proof}
+擬補元は反単調であり、\(\Box\) は単調である。A2は \(1\le(0\Rightarrow0)=1\)。
+A3について、\(x\le y\) かつ \(x\le y\Rightarrow0\) なら
+\[
+x=x\wedge x\le y\wedge(y\Rightarrow0)\le0=\bt1.
+\]
+A4は \(\Box=\mathrm{id}\) より自明である。剰余性はHeyting代数の定義である。
+非自明性より \(1\nleq0\)。したがって \(\bt T=0\le0\) だが \(T\nleq0\) なので
+\(\Gtwo\) は失敗する。また \(\bt\bt T=\bt0=1\nleq0=\bt T\) なので \(\FGtwo\) も失敗する。
+最後に \(p=\bt p\) なら \(p\le\bt p\) なので \(p\wedge p=p\le0\)、従って \(p=0\)。
+しかし \(\bt0=1\ne0\) で矛盾する。
+\end{proof}
+
+\begin{example}[Boolean代数群]
+次はいずれもHeyting負モデルの例である。
+\begin{itemize}
+  \item \(\Pow(\N)\)。
+  \item 有限・余有限Boolean代数。
+  \item quotient Boolean algebra \(\Pow(\N)/\mathrm{Fin}\)。
+  \item 標準Lebesgue measure algebra。
+  \item 任意の位相空間 \(X\) の開集合frame \(\mathcal O(X)\)。
+\end{itemize}
+これらはすべてRAPSだが、\(\Gtwo,\FGtwo,\Fix_{\bt}\) を壊す。
+特に \(\Pow(\N)/\mathrm{Fin}\) やmeasure algebraは、自己同型、lifting、可測性などの
+集合論的問題を含み、3値真偽表では潰れてしまう。
+\end{example}
+
+\subsection{Threshold鎖RAPS}
+
+\begin{theorem}[threshold正モデル]
+\(C\) を非自明な有界剰余鎖とし、最小元を \(0\)、最大元を \(1\) とする。
+\(0<r<1\) を一つ固定し、
+\[
+T=1,\qquad \bot=0,\qquad \Box=\mathrm{id},
+\]
+\[
+\bt0=1,\qquad
+x>0\Rightarrow \bt x=r
+\]
+と定める。このとき \(C\) はRAPSで、
+\[
+\Gtwo+\FGtwo+\Fix_{\bt}
+\]
+を満たす。
+\end{theorem}
+
+\begin{proof}
+鎖性から \(\bt\) は反単調である。A2は \(1=\bt0\)。
+A3について、\(y=0\) なら \(x\le0\le r=\bt1\)。
+\(y>0\) なら \(x\le\bt y=r=\bt1\)。A4は恒等Boxから従う。
+\(\bt T=r\nleq0\) なので \(\Gtwo\) は真、\(\bt\bt T=\bt r=r\le r=\bt T\) なので
+\(\FGtwo\) は真、さらに \(r=\bt r\) なので固定点がある。
+\end{proof}
+
+\begin{example}[非連続な連続濃度RAPS]
+\([0,1]\) に任意の標準t-norm residuated structureを入れ、\(0<r<1\) を固定する。
+threshold構成はRAPSだが、\(\bt\) は \(0\) で大きく跳ぶ。
+したがって、代数は連続的でも、APS様相がScott連続・位相連続とは限らない。
+\end{example}
+
+\section{直交性・Chu型の肥沃なモデル}
+
+\begin{definition}[直交性RAPS]
+\(E\) を集合、\(\perp\subseteq E\times E\) を対称かつ非反射な関係とする。
+\[
+A^\perp=\{x\in E:\forall a\in A,\ x\perp a\}
+\]
+と置く。\(L=\Pow(E)\) に包含順序を入れ、
+\[
+\Box A=A^{\perp\perp},\qquad
+\bt A=A^\perp,\qquad
+T=E,\qquad \bot=\varnothing
+\]
+と定める。剰余構造はBoolean meet
+\[
+A\otimes B=A\cap B,\qquad A\Rightarrow C=(E\setminus A)\cup C
+\]
+で入れる。
+\end{definition}
+
+\begin{theorem}[自己直交禁止によるA3]
+上の直交性構造はRAPSである。
+\end{theorem}
+
+\begin{proof}
+\(\Box=(-)^{\perp\perp}\) は単調、\(\bt=(-)^\perp\) は反単調である。
+A2は \(E\subseteq\varnothing^\perp=E\)。A4は、対称性により
+\[
+A^\perp\subseteq (A^\perp)^{\perp\perp}
+\]
+となるので成り立つ。A3を示す。\(Z\subseteq A^{\perp\perp}\cap A^\perp\) とする。
+もし \(z\in Z\) なら、\(z\in A^\perp\) であり、同時に \(z\in A^{\perp\perp}\) なので、
+\(z\) は \(A^\perp\) の全ての元に直交する。特に \(z\perp z\) となる。
+これは非反射性に反する。従って \(Z=\varnothing\subseteq E^\perp=\bt T\)。
+Boolean meetは剰余付きなのでRAPSである。
+\end{proof}
+
+\begin{example}[coherence space]
+線形論理のcoherence spaceでは、イベントやトークンの両立不能性を \(\perp\) と見れば、
+直交性RAPSが得られる。このモデルではA3は「両立不能性を自分自身へ向けてはいけない」
+という幾何学的条件になる。
+\end{example}
+
+\begin{example}[ランダムグラフRAPS]
+\(E\) を可算ランダムグラフの頂点集合、\(\perp\) を隣接関係とする。
+このRAPSは可算台から作られるが、\(\Pow(E)\) をcarrierにするため濃度は
+\(2^{\aleph_0}\) である。有限部分グラフの拡張性が、直交閉包の豊かさとして現れる。
+\end{example}
+
+\begin{example}[almost-disjoint family RAPS]
+\(\mathcal A\subseteq\Pow(\N)\) をalmost-disjoint familyとし、
+\[
+A\perp B\quad\Longleftrightarrow\quad |A\cap B|<\infty
+\]
+を、必要なら対角を除いて非反射化する。すると、almost-disjointnessの集合論を
+直交性RAPSに埋め込める。極大almost-disjoint familyを使うと、選択公理や連続体の
+組合せ論に敏感なモデル族が得られる。
+\end{example}
+
+\begin{remark}[Chu化]
+一般のpolarity \(R\subseteq X\times Y\) では
+\[
+A^R=\{y:\forall x\in A,\ xRy\},\qquad
+{}^RB=\{x:\forall y\in B,\ xRy\}
+\]
+という二つの反変写像が得られる。これは一ソートAPSというより、二ソートまたは
+fibred AMS/RAMSの自然な供給源である。今後、APSを双対ソートへ拡張するなら、
+Chu空間は分類理論の中心候補になる。
+\end{remark}
+
+\section{Ultrafilter・quotient Boolean・measure型}
+
+\subsection{Ultrafilter cut APS}
+
+\begin{definition}[ultrafilter cut]
+\(\calU\) を \(\N\) 上の非主ultrafilterとする。
+\[
+L=\Pow(\N),\qquad \Box=\mathrm{id},\qquad \bot=\varnothing
+\]
+とし、
+\[
+\bt X=
+\begin{cases}
+\N & (X\notin\calU),\\
+\varnothing & (X\in\calU)
+\end{cases}
+\]
+と定める。さらに \(T\notin\calU\) を選ぶ。
+\end{definition}
+
+\begin{proposition}
+上の構造はBoolean meetによりRAPSである。
+\end{proposition}
+
+\begin{proof}
+\(\bt\) は反単調である。実際 \(X\subseteq Y\) かつ \(Y\notin\calU\) なら、
+ultrafilterの上閉性の対偶から \(X\notin\calU\) である。
+A2は \(T\subseteq\N=\bt\varnothing\)。A3は \(T\notin\calU\) により
+\(\bt T=\N\) なので自明である。A4は恒等Boxから従う。
+剰余構造はBoolean代数のmeet/implicationで与えられる。
+\end{proof}
+
+\begin{remark}
+このモデルの \(\bt\) の値域だけを見ると二値的で、3値還元されやすい。
+しかし \((\Pow(\N),\calU)\) を構造として保持するなら、非主ultrafilterのRudin--Keisler型、
+Tukey型、選択公理への依存が残る。したがってこれは「様相真偽表は粗いが、
+台構造が病的」というタイプの例である。
+\end{remark}
+
+\subsection{Boolean quotient と measure algebra}
+
+\begin{example}[\(\Pow(\N)/\mathrm{Fin}\)]
+\[
+L=\Pow(\N)/\mathrm{Fin}
+\]
+をBoolean代数とし、\(\bt x=\neg x\)、\(\Box=\mathrm{id}\)、\(T=1\)、\(\bot=0\) とする。
+これはHeyting負モデルなのでRAPSであり、\(\Gtwo,\FGtwo,\Fix_{\bt}\) を壊す。
+この例の面白さは、命題論理的な真偽ではなく、quotient Boolean algebraの自己同型や
+lifting問題にある。
+\end{example}
+
+\begin{example}[measure algebra]
+標準Lebesgue空間の可測集合を零集合で割ったmeasure algebraもBoolean RAPSである。
+\(\bt\) を補集合にすればHeyting負モデルになる。measure-preserving transformation
+\(\tau\) がある場合、\(\Box A=\tau^{-1}(A)\) とするRAMSも考えられる。
+ただし、この \(\Box\) を入れた構造がAPSのA4やA3を満たすかは \(\tau\) と \(\bt\) の
+組合せに依存するため、ここではRAMS候補として記録する。
+\end{example}
+
+\section{剰余化の境界: monoidal APSだがRAMSでない例}
+
+\begin{definition}[wide star meet model]
+\(F\) を三つ以上の元を持つ集合とし、
+\[
+L_F=\{b,U\}\cup F
+\]
+を、\(b\) が最小、\(U\) が最大、\(F\) が反鎖である束とする。
+積を meet
+\[
+x\otimes y=x\wedge y
+\]
+で定め、単位を \(U\) とする。
+\end{definition}
+
+\begin{proposition}[残余ファイバー非主性]
+\((L_F,\le,\wedge,U)\) は可換monoidal posetだが、剰余付きではない。
+\end{proposition}
+
+\begin{proof}
+\(p\in F\) を固定する。残余 \(p\resl b\) が存在するなら、それは
+\[
+R(p,b)=\{z:p\wedge z\le b\}
+\]
+の最大元でなければならない。しかし
+\[
+R(p,b)=\{b\}\cup(F\setminus\{p\})
+\]
+であり、\(|F|\ge3\) なので \(F\setminus\{p\}\) には互いに不可比較な元が少なくとも二つある。
+従って最大元は存在しない。joinは \(U\) だが、\(p\wedge U=p\nleq b\) なので
+\(U\notin R(p,b)\) である。
+\end{proof}
+
+\begin{remark}
+この例にstar-dynamicの \(\Box,\bt,T,\bot\) を載せれば、APSではあるがRAMSではない
+monoidal APSが得られる。したがって、剰余付き分類では「積がある」だけでは不十分であり、
+残余ファイバーが主であることを明示的な不変量にしなければならない。
+\end{remark}
+
+\section{完成でのみ現れる固定点}
+
+\begin{example}[Dedekind完成が作る固定点]
+\[
+L=([-1,1]\cap\Q)\setminus\{0\}
+\]
+に通常順序を入れ、
+\[
+\Box=\mathrm{id},\qquad \bt q=-q,\qquad T=1,\qquad \bot=-1
+\]
+とする。これは単調AMSで、\(\bt\) は反単調であるが、\(L\) には固定点がない。
+一方、Dedekind完成で \(0\) が追加されると、
+\[
+\widehat{\bt}(0)=0
+\]
+となり、完成生成固定点が現れる。このモデルはA3を満たさない。例えば
+\(y=1/2\)、\(x=-1/2\) では \(x\le y\) かつ \(x\le\bt y\) だが、
+\(x\nleq\bt T=-1\) である。
+\end{example}
+
+\begin{example}[MacNeille反映問題]
+一般に、反単調 \(\bt:L\to L\) のMacNeille拡張は、\(L\) ではなく双対順序への写像として
+扱わなければならない。局所資料の反例が示すように、極性を誤ると、非ラティスモデルで
+偽の完成固定点が出る。したがって分類理論では
+\[
+\mathrm{syntactic\ fixed\ point}
+\quad\text{と}\quad
+\mathrm{completion\ fixed\ point}
+\]
+を別々の不変量として扱う必要がある。
+\end{example}
+
+\section{Phantom/profinite型AMS}
+
+\begin{definition}[profinite phantom carrier]
+\[
+P_m=\widehat{\Z}_m/\Z
+\]
+を \(m\)-進profinite quotientとする。部分群束
+\[
+L=\mathrm{Sub}(P_m)
+\]
+または閉部分群束をcarrierにし、\(\Box\) を閉包・包含安定化・または恒等写像、
+\(\bt\) をannihilator型の反変操作として入れると、profinite phantomを台に持つAMSが得られる。
+\end{definition}
+
+\begin{remark}
+この型は、有限段では消えるが逆極限や \(\varprojlim^1\) で現れる成分をAPS側へ運ぶための
+候補である。現段階では、全てをAPS/RAPS公理まで押し込むより、まず
+\[
+\text{有限段で不可視}\quad /\quad \text{極限で可視}
+\]
+という不変量をAMS分類に導入することが重要である。
+\end{remark}
+
+\begin{problem}[phantomをRAPS化する問題]
+profinite phantom carrier上で、annihilator型 \(\bt\) と相性のよい剰余付き積
+\(\otimes\) を構成せよ。特に次を分けたい。
+\begin{enumerate}
+  \item 積を保つとphantomが消える場合。
+  \item phantomを保つと剰余性が壊れる場合。
+  \item 吸収的積により剰余性とphantomを両立できる場合。
+\end{enumerate}
+局所的なPass 54--60系列は、この三分法が分類理論の中核になることを示唆している。
+\end{problem}
+
+\section{モデル・アトラス表}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}
+                  >{\raggedright\arraybackslash}p{0.14\linewidth}
+                  >{\raggedright\arraybackslash}p{0.16\linewidth}
+                  >{\raggedright\arraybackslash}p{0.18\linewidth}
+                  >{\raggedright\arraybackslash}p{0.20\linewidth}}
+\toprule
+モデル族 & 種別 & \(\Gtwo,\FGtwo,\Fix\) & 病理 & 有限還元への抵抗 \\
+\midrule
+\endfirsthead
+\toprule
+モデル族 & 種別 & \(\Gtwo,\FGtwo,\Fix\) & 病理 & 有限還元への抵抗 \\
+\midrule
+\endhead
+star shift \(\Z\) &
+RAPS &
+\(\Gtwo\)真、全 \(\nFGtwo\) 偽、固定点なし &
+非周期軌道 &
+\(\bt^nT\) が無限に相異なる \\
+\midrule
+全有限周期star &
+RAPS &
+周期ごとに異なる &
+周期スペクトル無限 &
+任意有限周期を内部に持つ \\
+\midrule
+関係quantale &
+RAPS &
+coarseでは \(\Gtwo+\FGtwo\)、固定点なし &
+非可換資源合成 &
+関係代数の不変量が残る \\
+\midrule
+言語quantale &
+RAPS &
+coarseでは \(\Gtwo+\FGtwo\)、固定点なし &
+形式言語・連接 &
+monoid/language複雑性 \\
+\midrule
+Heyting frame &
+RAPS &
+三つとも失敗 &
+位相・領域由来 &
+開集合frameの位相不変量 \\
+\midrule
+threshold \([0,1]\) &
+RAPS &
+三つとも成立 &
+\(\bt\) 非連続 &
+連続濃度と固定点位置 \\
+\midrule
+直交性RAPS &
+RAPS &
+\(\perp\) に依存 &
+自己直交禁止、closure geometry &
+graph/coherence rank \\
+\midrule
+ultrafilter cut &
+RAPS &
+coarseでは \(\Gtwo+\FGtwo\)、固定点なし &
+非主ultrafilter &
+RK/Tukey型を保持するなら非還元 \\
+\midrule
+\(\Pow(\N)/\mathrm{Fin}\) &
+RAPS &
+三つとも失敗 &
+quotient Boolean algebra &
+自己同型・lifting問題 \\
+\midrule
+measure algebra &
+RAPS/RAMS候補 &
+補元なら三つとも失敗 &
+非空間性・測度零商 &
+measure algebra不変量 \\
+\midrule
+wide star meet &
+monoidal APS、非RAMS &
+様相部に依存 &
+残余ファイバー非主 &
+剰余化不能性そのもの \\
+\midrule
+\(\Q\setminus\{0\}\) 反転 &
+AMS &
+完成後に固定点 &
+完成生成固定点 &
+構文固定点と完成固定点の分離 \\
+\midrule
+profinite phantom &
+AMS/RAMS候補 &
+未定 &
+\(\varprojlim^1\) 成分 &
+有限段で不可視 \\
+\bottomrule
+\end{longtable}
+
+\section{分類理論の暫定スケッチ}
+
+\begin{theorem}[粗分類スキーム]
+本稿で構成したモデルは、次の七つの主成分の組として分類するのが自然である。
+\[
+\mathcal C(S)=
+\bigl(
+\mathrm{Orb}_{\bt}(T),\
+K_{\mathrm{A3}},\
+\Fix_{\bt},\
+\mathrm{ResFib},\
+\mathrm{OrthRank},\
+\mathrm{ContDef},\
+\mathrm{CompDef}
+\bigr).
+\]
+ここで \(\mathrm{ResFib}\) は残余ファイバーの主性・共終性、
+\(\mathrm{OrthRank}\) は直交閉包やgraph/event構造のrank、
+\(\mathrm{ContDef}\) はScott/位相/quantale連続性の欠陥、
+\(\mathrm{CompDef}\) は完成固定点の反映欠陥である。
+\end{theorem}
+
+\begin{proof}[証明方針]
+\(\Gtwo,\FGtwo,\Fix_{\bt}\) だけでは、Heyting負モデル、Boolean quotient、
+measure algebraが同じ粗い負パターンへ潰れる。またcoarse quantaleモデルは、
+様相真偽表だけ見れば非常に単純だが、関係合成・言語連接・Lawvere距離といった
+資源合成の違いを持つ。従って分類対象を様相真偽表から
+\[
+\bt\text{-軌道}+\text{A3核}+\text{残余ファイバー}+\text{完成挙動}
+\]
+へ拡張する必要がある。上の七成分は、本稿の全モデル族を区別するために実際に使われた
+最小限の軸である。
+\end{proof}
+
+\begin{problem}[次の分類定理]
+次を証明または反証せよ。
+\begin{enumerate}
+  \item 任意の単調AMSは、A3核を商で潰すことでAPS反射を持つか。
+  \item 任意のmonoidal APSのRAMS化可能性は、全ての残余ファイバー
+  \(R(a,c)\) の主性と同値か。
+  \item 直交性RAPSの同型分類は、元の対称非反射graphのどの同値関係と一致するか。
+  \item coarse quantale RAPSの射をquantale準同型に制限すると、元のquantale分類を
+  忠実に反映するか。
+  \item 完成固定点が反映されるためのcompactness/continuity条件は何か。
+\end{enumerate}
+\end{problem}
+
+\section{結論}
+
+病的AMS/RAMS/RAPSの主な供給源は、有限小モデルではなく、次の五つである。
+\begin{enumerate}
+  \item 写像力学を反証軌道へ変換するstar-dynamic RAPS。
+  \item 関係・言語・距離・プログラム合成を持ち込むcoarse quantale RAPS。
+  \item 位相・領域・Boolean quotient・measure algebraから来るHeyting負モデル。
+  \item coherence/event/graph構造をA3へ変換する直交性RAPS。
+  \item 完成・逆極限・\(\varprojlim^1\) によるphantom AMS。
+\end{enumerate}
+分類理論の焦点は、もはや3値真偽表ではなく、
+\[
+\text{軌道型、残余ファイバー、直交rank、連続性、完成反映、集合論的剛性}
+\]
+である。これらを不変量として固定すれば、AMSや剰余付きAMSのモデル論は十分に複雑で、
+肥沃な対象になる。
+
+\section*{参照したローカル資料}
+\begin{itemize}
+  \item \(\texttt{research/definitions.md}\)
+  \item \(\texttt{research/notes/ams-aps-raps-model-classification-2026-06-11.tex}\)
+  \item \(\texttt{research/notes/infinite-ams-aps-raps-models-2026-06-11.tex}\)
+  \item \(\texttt{research/notes/residuated-algebra-domain-completion.md}\)
+  \item \(\texttt{research/notes/predicate-topology-fixed-points.md}\)
+  \item \(\texttt{artifacts/reports/pass54--pass60*.json}\)
+\end{itemize}
+
+\end{document}

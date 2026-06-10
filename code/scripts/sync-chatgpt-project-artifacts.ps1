@@ -233,12 +233,11 @@ if (-not $WhatIf) {
 
 if ($pdfCount -gt 0 -and -not $SkipPdfCollection -and -not $WhatIf) {
     $collectScript = Join-Path $scriptRoot "collect-pdfs.ps1"
-    $collectArgs = @("-Root", $repoPath, "-Destination", $pdfDestinationPath)
     if ($SkipPdfBackup) {
-        $collectArgs += "-SkipBackup"
+        & $collectScript -Root $repoPath -Destination $pdfDestinationPath -SkipBackup
+    } else {
+        & $collectScript -Root $repoPath -Destination $pdfDestinationPath
     }
-
-    & $collectScript @collectArgs
 }
 
 Write-Host "Source inbox: $sourcePath"
