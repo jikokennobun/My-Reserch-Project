@@ -8,6 +8,7 @@ This folder is for research outputs, slides, drafts, and AI-generated materials.
 
 ## Top-Level Structure
 
+- ChatGPT: https://drive.google.com/drive/folders/16cojxYnPI9E1uvRuXFRViBQjShALg8I9
 - Claude: https://drive.google.com/drive/folders/1izaXlfFOgOKPThQdTIcPzkeEt1lQNUEe
 - Gemini: https://drive.google.com/drive/folders/1boq_8q2sAiQ-PDvN1Mxa2QyZPYj1C58W
 - Paper: https://drive.google.com/drive/folders/1YmDsKbuokr_5GNIEUr1gv6nDQvdJFoVN
@@ -46,6 +47,29 @@ This folder is for research outputs, slides, drafts, and AI-generated materials.
 - wakate.pdf
 
 ## AI Output Folders
+
+### ChatGPT snapshot (added 2026-06-10)
+
+Top-level subfolders:
+
+- ChatGPT_Research: https://drive.google.com/drive/folders/19AHfJOych28vhGtYioFp4qQT2HWEzlFX
+- ChatGPT_Study: https://drive.google.com/drive/folders/1Kicm4qMQh2hQBOhwbADIS_s6c5A8kkC2
+
+`ChatGPT_Research` currently contains:
+
+- aps_abs_cutfree_consistency_exposition.pdf
+- domain_stable_ams_aps_raps_models.pdf
+- residuated_aps_monoid_properties.pdf
+- ams_aps_raps_infinite_models.pdf
+- abs_aps_g2_relationships.pdf
+- aps_model_zoo_notes.pdf
+- cut_elimination_bs2016.pdf
+
+`ChatGPT_Study` currently contains:
+
+- aal_japanese_notes.pdf
+- unified_logic_sheaf_aal_geminal.pdf
+- 解説資料.pdf
 
 Gemini includes:
 

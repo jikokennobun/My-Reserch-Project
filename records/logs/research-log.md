@@ -1,5 +1,125 @@
 # Research Log
 
+## 2026-06-10 (Research Project relay sync)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1`: the local Google Drive
+  ChatGPT Project inbox still contained `0` supported artifacts, so
+  `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`,
+  and `artifacts/pdf/manifest.csv` were unchanged.
+- Ran `code/scripts/check-chatgpt-shares.ps1`: all `23` watched
+  `https://chatgpt.com/share/...` links remained inaccessible from this
+  environment at `2026-06-10T20:20:25+09:00`, so no share-based note diffs
+  could be extracted today. The current access state is recorded in
+  `records/logs/chatgpt-share-sync.md`.
+- Inspected the Google Drive research and reference roots after the previous
+  relay run (`2026-06-05T07:49:44.793Z`). The reference root showed no newly
+  relevant top-level material. The research root contained a new `ChatGPT`
+  subtree with `ChatGPT_Research` and `ChatGPT_Study` folders created on
+  `2026-06-06` and `2026-06-09`, including new PDFs such as
+  `domain_stable_ams_aps_raps_models.pdf`,
+  `residuated_aps_monoid_properties.pdf`, and
+  `ams_aps_raps_infinite_models.pdf`.
+- Expanded
+  `research/notes/predicate-topology-fixed-points.md` from a thin handoff note
+  into a proper reconstruction using the accessible Drive PDF
+  `domain_stable_ams_aps_raps_models.pdf`. The upgraded note now records the
+  Scott-frame/stable-domain countermodel scheme, the role of A3 as the semantic
+  bottleneck, explicit examples, and concrete verification/open tasks.
+- Updated `research/references/research-drive.md` with the new Drive `ChatGPT`
+  subtree snapshot and added a new active item to
+  `research/ideas/research-questions.md` about characterizing when
+  Scott/domain/stable semantic operators satisfy A3/A4 and when such semantics
+  can produce genuine $\boxtimes$-fixed points.
+
+## 2026-06-09 (Autonomous discussion Pass 64)
+
+- Pass 64 packaged the entire Löb–Rosser dictionary as a **recollement / six-functor** statement on the finite generic-point model $X=\{\eta\}\sqcup\{(p):p\in S\}$ of $\mathrm{Spec}\,\mathbb Z$ ($s=|S|$), discharging the **[New (Pass 63)]** (i)/(ii) residues. **Thm 64a (recollement):** with $j:\{\eta\}\hookrightarrow X$ open, $i:Z\hookrightarrow X$ closed, $D(Z)\overset{i_*=i_!}{\hookrightarrow}D(X)\overset{j^*=j^!}{\twoheadrightarrow}D(U)$ is a BBD recollement, $j_!\dashv j^*\dashv j_*$, $i^*\dashv i_*\dashv i^!$, gluing triangles $j_!j^*\to\mathrm{id}\to i_*i^*\xrightarrow{+1}$ and $i_*i^!\to\mathrm{id}\to Rj_*j^*\xrightarrow{+1}$ (valid on the Alexandrov space; adjunctions hom-set-checked over $\mathbb F_2$). **Thm 64b (phantom realization):** for the **dilation coefficient** $\mathcal V$ (generic stalk $\mathbb Z$, closed costalk the per-prime Milnor pro-system $(\mathbb Z,\times p)$ with $R\varprojlim$ giving $\varprojlim=0$ detached, $\varprojlim^1=\mathbb Z_p/\mathbb Z$), the open/closed triangle applied to $j_!\mathcal V$ ($j^*j_!=\mathrm{id}$, $i^*j_!=0$) collapses to $0\to\mathbb Z^{s-1}\to H^1(X,j_!\mathcal V)\to\prod_p(\mathbb Z_p/\mathbb Z)\to0$ with middle $H^1(X,j_!\mathcal V)\cong\widehat{\mathbb Z}_S/\mathbb Z$ — the **total phantom is a single $H^1(j_!\mathcal V)$**, and the boundary $\partial:(x_p)\mapsto[(x_p-x_{p_0})]$ (image rank $s-1$, kernel diagonal $\mathbb Z$) is *literally* the Pass-63 $d_2$ $=$ Pass-62 $\epsilon_S$: the three avatars are one morphism. The dictionary is now clause-for-clause six-functor: **Löb $=i^*$** (closed-stalk sheaf, descends), **Rosser $=j_!$** (generic-point compact support), mixing $=\partial$. **Thm 64c (motive):** $S\subseteq S'\Rightarrow X_S$ open in $X_{S'}$, so $M:S\mapsto j_!\mathcal V_S$ is a functor $(\mathcal P_{\mathrm{fin}}(\mathbb P),\subseteq)\to D^b(\mathbb Z)$ (weight-filtered: $W_0=$ Löb, $\mathrm{gr}^W_1=$ Rosser), with $\epsilon$ natural and genuinely **arithmetic** (Thm 63c) — the "Löb–Rosser motive" (an honest constructible-sheaf datum, *not* a Voevodsky motive). **Pathologies:** $s=1$ → $H^1(j_!\underline{\mathbb Z})=0$, phantom $=\mathbb Z_p/\mathbb Z$ pure Löb (Rosser needs $\ge2$ primes); $\{2,3\}$ vs $\{2,5\}$ rad-incomparable, no arrow, $\epsilon_{\{2,3\}}\ne\epsilon_{\{2,5\}}$; **$S=\mathbb P$ (all primes): $H^1(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)=\widehat{\mathbb Z}/\mathbb Z$, the integral finite-adele class group** — the Löb–Rosser phantom of all arithmetic is an adele that is not an integer (Smullyan gloss). Machine-verified `code/scripts/check-pass64.py` → `artifacts/reports/pass64-recollement-six-functor-motive-check.json` (41 checks: horizontal $\mathbb Z^{s-1}$ SNF, vertical detached+non-ML, connecting rank $s-1$ kernel diagonal, $j_!\dashv j^*$ over $\mathbb F_2$, $s=1$ degeneration, motive functoriality/incomparability, adelic punchline; overall PASS). Lit.: Beĭlinson–Bernstein–Deligne, *Faisceaux pervers*, Astérisque 100 (1982) §1.4; Kashiwara–Schapira, *Sheaves on Manifolds* (1990) §2.6/§3.1; Iversen, *Cohomology of Sheaves* (1986) Ch. II–III; Weibel 1994 §3.5/§5.6; Ramakrishnan–Valenza, *Fourier Analysis on Number Fields* (1999) Ch. 5. Updated `notes/g2-fg2-hierarchy.md`, `definitions.md`, `open_problems.md` ([New (Pass 63)] (i)(ii)→[Resolved 64], (iii) $\aleph_1$-threshold carried [Open]; [New (Pass 64)] Verdier-duality "functional equation" + scheme-lift residue added). Counter 64→65. *Exec note:* bash served a Pass-53-era stale copy of the discussion file again; per `[[aps-run-sync-hazard]]` state was diagnosed and all edits applied via Windows-path tools, the script run off-mount in `/tmp`.
+
+## 2026-06-09 (Autonomous discussion Pass 63)
+
+- Pass 63 discharged the **[New (Pass 62)]** triad (Zariski cosheaf / unabridged $d_2$ / explicit $\mathrm{Ext}^1$). **Thm 63a (Zariski relocation — "$j_!$-cosheaf" form):** on the connected generic-point subspace $X=\{\eta\}\cup\{(p):p\in S\}$ (particular-point Zariski topology), the cover $\mathcal U=\{U_p=\{\eta,(p)\}\}$ has **all** nonempty overlaps $=\{\eta\}$, so its nerve is the *full simplex* $\Delta^{s-1}$ (contractible). Hence (1) the constant sheaf $\underline{\mathbb Z}$ is now a sheaf with $\check H^1(\mathcal U,\underline{\mathbb Z})=0$ — connectivity **annihilates** the discrete-site horizontal defect $\mathbb Z^{s-1}=\check H^0_{\mathrm{red}}$; (2) but the relations **relocate up one degree**: with $j:\{\eta\}\hookrightarrow X$ open and $i:Z\hookrightarrow X$ the closed $s$-point complement, $0\to j_!\underline{\mathbb Z}\to\underline{\mathbb Z}_X\to i_*\underline{\mathbb Z}_Z\to0$ gives $0\to\mathbb Z\xrightarrow{\Delta}\mathbb Z^s\to H^1(X,j_!\underline{\mathbb Z})\to0$, so $H^1(X,j_!\underline{\mathbb Z})=\mathbb Z^s/\Delta\mathbb Z=\mathbb Z^{s-1}\ne0$. Since $j_!$ is the left-adjoint (compact-support/cosheaf) extension, "Rosser $=$ cosheaf" lands in the precise form **Rosser $=H^1$ of $j_!$ supported at the generic point**, Löb $=$ stalkwise sheaf $L(S)$ — a *third correction* (the naive cover-cosheafification still returns $L$, since overlaps carry the skyscraper $0$). **Thm 63b (unabridged $d_2$):** resolving each $\mathbb Z_p=\varprojlim\mathbb Z/p^n$ by its $\mathbb Z/p^n$-tower opens a third column $E_2^{2,0}=\operatorname{coker}\Delta=\mathbb Z^{s-1}$, turning the hidden Pass-62 $E_\infty$-extension into a genuine page differential $d_2:E_2^{0,1}=L(S)\to E_2^{2,0}=\mathbb Z^{s-1}$, $(x_p)\mapsto[(x_p-x_{p_0})]$ = the common-integer-lift obstruction (image rank $s-1$); $\epsilon_S=\partial$ and the $d_2$ are one datum in two resolutions. **Thm 63c ($\mathrm{Ext}^1$ ghost line; arithmetic $\succ$ cardinal):** $\mathrm{Hom}(\mathbb Z_p,\mathbb Z)=0$ makes $\delta:\mathbb Z\hookrightarrow\mathrm{Ext}^1(\mathbb Z_p/\mathbb Z,\mathbb Z)$ injective, $\delta(1)=\epsilon_p$ the **infinite-order** ghost class (lacunary witness $u=\sum_k p^{k!}$) generating a canonical $\mathbb Z$-line inside the uncountable $\mathrm{Ext}^1(\mathbb Z_p/\mathbb Z,\mathbb Z)$ (extension of the continuum-dim'l $\mathrm{Ext}^1(\mathbb Z_p,\mathbb Z)$ by $\mathbb Z$). $\epsilon_S\in\bigoplus_{p}\mathrm{Ext}^1(\mathbb Z_p/\mathbb Z,\mathbb Z)^{s-1}$ is nonzero of infinite order for $s\ge2$; the *target* rank $s-1$ is **cardinal** ($|S|$ only) but $\epsilon_S$ lives on the pairwise non-isomorphic $\mathbb Z_p/\mathbb Z$ (torsion $\bigoplus_{q\ne p}\mathbb Z(q^\infty)$ uniquely omits the $p$-Prüfer), hence is a genuinely **arithmetic** invariant: $\epsilon_{\{2,3\}}\ne\epsilon_{\{2,5\}}$. Machine-verified `code/scripts/check-pass63.py` $\to$ `artifacts/reports/pass63-zariski-cosheaf-unabridged-d2-ext1-check.json` (constant $\check H^1=0$ vs $j_!$ free rank $s-1$ no-torsion by SNF $s=2..6$; $d_2$ image rank $=s-1$; no-retraction $p^{-n}\notin\mathbb Z$ and ghost-torsion signature; overall PASS). Lit.: Weibel 1994 §5.6; Fuchs 2015 Vol.1 ($\mathrm{Ext}(\widehat{\mathbb Z}_p,\mathbb Z)$); Curry 2014 (cosheaves). Updated `notes/g2-fg2-hierarchy.md`, `definitions.md`, `open_problems.md` ([New (Pass 62)] (i)(ii)(iii)→[Resolved 63]; $\aleph_1$-threshold carried [Open]; [New (Pass 63)] recollement/six-functor residue added). Counter 63→64. *Exec note:* bash served a Pass-53-era stale copy of the discussion file again; per `[[aps-run-sync-hazard]]` state was diagnosed and all edits applied via Windows-path tools, the script run off-mount in `/tmp`.
+
+## 2026-06-09 (Autonomous discussion Pass 62)
+
+- Pass 62 assembled the Pass-61 horizontal ($\check H^1_{\mathrm{prime}}\underline{\mathbb Z}=\mathbb Z^{|S|-1}$) and vertical ($\varprojlim^1_{\mathrm{dil}}=\mathbb Z_p/\mathbb Z$) obstructions into a single **Löb–Rosser bicomplex** and **corrected** the Pass-61 cosheaf slogan. **Thm 62a (bicomplex / $E_2$ = dictionary):** the double complex (vertical $=$ per-prime Milnor $\varprojlim$-cochain of $(\mathbb Z,\times p)$; horizontal $=$ augmented reduced Čech of $\underline{\mathbb Z}$ over the singleton prime cover) has $H^1(\mathrm{Tot})=\widehat{\mathbb Z}_S/\mathbb Z=P(S)$, and both spectral sequences degenerate at $E_2$ to $E_2^{1,0}=\mathbb Z^{|S|-1}$ (Rosser/horizontal) and $E_2^{0,1}=\prod_{p\in S}(\mathbb Z_p/\mathbb Z)=L(S)$ (Löb/vertical), all else $0$. **Thm 62b (mixed class $=$ non-split extension, not a $d_2$):** $E_2^{2,0}=0$ leaves no room for $d_r$ ($r\ge2$), so $E_2=E_\infty$ and the mixing is the **non-split** filtration extension $0\to\mathbb Z^{|S|-1}\to\widehat{\mathbb Z}_S/\mathbb Z\to\prod_p(\mathbb Z_p/\mathbb Z)\to0$ ($|S|\ge2$); non-splitting certified by $\mathrm{Hom}(\mathbb Z_p,\mathbb Z)=0$ (no retraction kills the integer points $e_p$). The mixed Löb–Rosser class $\epsilon_S\in\mathrm{Ext}^1_{\mathbb Z}(L(S),\mathbb Z^{|S|-1})\ne0$ is a connecting $\partial$, not a page differential; a genuine $d_2$ reappears only after unabridging each $\mathbb Z_p$ into its $\mathbb Z/p^n$-tower (a third column $E_2^{2,0}\ne0$). Pathology $S=\{2,3\}$: in $(\mathbb Z_2\times\mathbb Z_3)/\Delta\mathbb Z$ the horizontal generator $[(1,0)]=[(0,-1)]$ has no horizontal complement. **Thm 62c (cosheafification collapse — corrects Pass 61):** on the discrete prime site the cosheafification $\check P(S)=\bigoplus_{p\in S}(\mathbb Z_p/\mathbb Z)=\prod_{p\in S}(\mathbb Z_p/\mathbb Z)=L(S)$ for finite $S$, so **sheafification $=$ cosheafification $=L$**; the global $\widehat{\mathbb Z}_S/\mathbb Z$ is **neither**, irreducibly presheaf-level (the descent defect $\mathbb Z^{|S|-1}$). "Rosser $=$ cosheaf" is FALSE on the discrete site (too disconnected for $\mathbf{Sh}\ne\mathbf{coSh}$); reinstating $\check H^1\ne0$ needs the Zariski/cofinite topology on $\mathrm{Spec}\,\mathbb Z$. Corrected slogan: Löb $=$ common (co)sheafification $L$, Rosser $=$ descent defect $\mathbb Z^{|S|-1}$ welded to the local ghosts by $\epsilon_S$. Machine-verified `code/scripts/check-pass62.py` $\to$ `artifacts/reports/pass62-loeb-rosser-bicomplex-mixed-class-check.json` (coker rank $|S|-1$ via SNF $|S|=2..6$; $\mathrm{Hom}(\mathbb Z_p,\mathbb Z)=0$ non-splitting certificate $p\in\{2,3,5,7,11\}$; $\varprojlim^{\ge2}=0$; reduced-Čech no-$d_2$; cosheaf$=$sheaf collapse; CRT/radical; overall PASS). Lit.: Weibel 1994 §3.5/§5.6; Fuchs 2015; Curry 2014. Updated `notes/g2-fg2-hierarchy.md`, `definitions.md`, `open_problems.md` ([New (Pass 61)] (i)/(ii)→[Resolved 62], (iii) carried [Open]; [New (Pass 62)] Zariski cosheaf + unabridged $d_2$ + $\mathrm{Ext}^1$ added). Counter 62→63. *Exec note:* bash served a Pass-53-era stale copy of the discussion file and undercounted `open_problems.md`/`g2-fg2-hierarchy.md` line counts; per `[[aps-run-sync-hazard]]` state was diagnosed and all edits applied via Windows-path tools, the script run off-mount in `/tmp`.
+
+## 2026-06-09 (Autonomous discussion Pass 61)
+
+- Pass 61 tested the Pass-60 slogan "$\Theta$ is a natural iso of the phantom **sheaf** $S\mapsto(\prod_{p\in S}\mathbb Z_p)/\mathbb Z$ with the Rosser-torsor presheaf" **literally**, and **corrected** it. **(i) RESOLVED — Thm 61a (descent fails).** Resolving the phantom into the presheaf SES $0\to\underline{\mathbb Z}\xrightarrow{\Delta}\mathcal F\xrightarrow{\pi}P\to0$ on the prime lattice $(\mathcal P_{\mathrm{fin}}(\mathbb P),\subseteq)$ with $\mathcal F(S)=\prod_{p\in S}\mathbb Z_p$: $\mathcal F$ is a **flasque sheaf** (product of skyscrapers), but $\underline{\mathbb Z}$ (constant presheaf) is not separated, with sheafification $\mathbb Z^{S}$ and defect $\mathbb Z^{S}/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}$. Hence the phantom presheaf $P$ **fails descent**: $P(S)\to\prod_p P(\{p\})$ is onto with kernel $\mathbb Z^{|S|-1}\ne0$. Its **sheafification is the stalkwise sheaf** $P^{\#}=L$, $L(S)=\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$ — NOT the Rosser torsor. **Thm 61b (Rosser $=$ descent obstruction).** The Rosser torsor $\widehat{\mathbb Z}_m/\mathbb Z=P(S)$ is the **non-sheafy** part of $P$ (kernel of presheaf$\to$sheafification), split into a horizontal free part $\mathbb Z^{|S|-1}=\check H^1(\underline{\mathbb Z})$ (prime cover) and a vertical $\varprojlim^1=\widehat{\mathbb Z}_p/\mathbb Z$ (dilation tower) per stalk; the Pass-60 slogan holds only after **dualizing** ($P$ is a flabby *cosheaf*, the Löb/sheaf part is $L$, the Rosser/cosheaf part reconstitutes the global ghost). **(ii) PARTIALLY RESOLVED — Thm 61c.** $\mathfrak b=\aleph_1\Rightarrow\varprojlim^1\mathbf A_{\omega_1}\ne0$ (weaker than CH); $\mathrm{MA}_{\aleph_1}\Rightarrow0$ (forces $\mathfrak b=\aleph_2$); the threshold is **bracketed but not a single named cardinal characteristic**, and an $\aleph_2$-cofinal cover gives not a $0/\aleph_1/2^{\aleph_0}$ trichotomy but a *sequence* of higher-$\varprojlim^s$ ($s\ge2$) independence statements (strong-homology spectrum). Machine-verified `code/scripts/check-pass61.py` $\to$ `artifacts/reports/pass61-phantom-sheaf-descent-check.json` (coker rank $|S|-1$ via SNF for $|S|=2..6$; product-presheaf descent; sheafification kernel rank; rad-lattice meet/join $=\gcd/\mathrm{lcm}$; overall PASS). Lit.: Mardešić–Prasolov 1988; Dow–Simon–Vaughan 1989. Updated `notes/g2-fg2-hierarchy.md`, `definitions.md`, `open_problems.md` ([New (Pass 60)]→[Resolved 61](i)/[Partially resolved 61](ii), [New (Pass 61)] bicomplex/cosheafification added). Counter 61→62. *Exec note:* bash served a Pass-53-era stale copy of the discussion file again; per `[[aps-run-sync-hazard]]` state was diagnosed and all edits applied via Windows-path tools, the script run off-mount in `/tmp`.
+
+## 2026-06-08 (Autonomous discussion Pass 60)
+
+- Pass 60 CLOSED the **last functorial gap** of the $L_{(-)}$ programme (Pass-58 residue (ii)). **(1) Pinned the morphisms — Thm 60a (carrier criterion).** A residuated cover-filtration map of dilation-solenoid arenas $C_m\to C_{m'}$ ($C_m=\mathbb Z[1/m]^-$, Pass 55) exists $\iff$ the localization embeds $\mathbb Z[1/m]\subseteq\mathbb Z[1/m']$ $\iff$ $\mathrm{rad}(m)\mid\mathrm{rad}(m')$; so the rad-grading is *forced by the carrier*, not decreed, and $\mathbf{Deriv}^{\mathrm{res}}_{\mathrm{rad}}$ is (up to grading) the **squarefree divisibility lattice** $(\mathcal P_{\mathrm{fin}}(\mathbb P),\subseteq)$. **(2) Sole obstruction — Thm 60b.** $\Theta:\mathrm{Ros}_{(-)}\Rightarrow\varprojlim^1(-)$ is a natural iso on the pinned subcategory: wherever an arrow exists (rad-divisibility) the Čech-cochain square commutes by snake-lemma naturality of $\delta$ (Prop 58c), and there is no second obstruction; off it the hom-set is empty (naturality vacuous). Slogan: **$\Theta$ is a natural iso of the phantom sheaf $S\mapsto(\prod_{p\in S}\mathbb Z_p)/\mathbb Z$ with the Rosser-torsor presheaf on the prime spectrum.** **Cor 60c (incomparable pathology):** $m=6,m'=10$ are rad-incomparable, no arrow either way; their only relation is via the gcd-of-radicals solenoid $C_2$, the shared $2$-adic ghost $\mathbb Z_2/\mathbb Z$. **SECONDARY — Thm 60d (set-theoretic frontier).** Gray's $0$-or-$2^{\aleph_0}$ dichotomy is strictly an $\omega$-phenomenon and does **not** lift: an $\omega_1$-cofinal long cover makes the cover-fiber system pro-isomorphic to the Mardešić–Prasolov strong-homology system, whose $\varprojlim^1$ is **nonzero under CH** (Mardešić–Prasolov 1988) and **zero under PFA** (Dow–Simon–Vaughan 1989) — so "an $\aleph_1$-engendered intermediate phantom exists" is **independent of ZFC**. Machine-verified `code/scripts/check-pass60.py` $\to$ `artifacts/reports/pass60-rad-obstruction-naturality-theta-check.json` (A: 144-pair carrier$\iff$rad equivalence, B: non-ML phantom witnesses, C: $G_m$-equivariance of $\Theta$, D: diagonal compatibility, E: $6/10$ incomparable pathology, F: rad-lattice poset axioms; overall PASS). Updated `notes/g2-fg2-hierarchy.md`, `definitions.md`, `open_problems.md` (Pass-58 (ii)→[Resolved 60], [New (Pass 59)]→[Resolved 60], [New (Pass 60)] sheaf-descent/cardinal-threshold added), `ideas/research-questions.md`. Counter 60→61. *Exec note:* bash served a Pass-53-era stale copy of the discussion file again; per `[[aps-run-sync-hazard]]` state was diagnosed and all edits applied via Windows-path tools, the script run off-mount in `/tmp`.
+
+## 2026-06-08 (Autonomous discussion Pass 59)
+
+- Pass 59 RESOLVED Pass-58 residue (i), the **intermediate / non-idempotent absorbing cover**. The mixed regime EXISTS — a two-parameter family $W_{d,\delta}$ of complete commutative residuated lattices with non-attained sup-of-chain unit $e=\bigvee a_n$, join-irreducible cover $c\succ e$, finite absorption depth $d=\inf\{n:a_n\otimes c=c\}$, and idempotence defect $c\otimes c=\top\ne c$ (when $\delta=1$) — but it is **phantom-flat**. **Thm 59a (no partial phantom):** finite $d\Rightarrow$ eventually-constant fiber tower $\Rightarrow$ Mittag–Leffler $\Rightarrow\varprojlim^1=0$ genuinely (never "finitely supported"; a $\varprojlim^1$ class is a tail/pro-invariant), and the idempotence defect is $\varprojlim^1$-invisible (pinned to the compact cover above $c$, not the non-compact cover $e\prec c$). **Cor 59b (trichotomy is sharp):** by **Gray's dichotomy** ($\varprojlim^1$ of a countable tower is $0$ or $2^{\aleph_0}$; Gray 1966, McGibbon–Steiner 1995) no finite-rank intermediate value exists, so the Pass-58 trichotomy is not a spectrum boundary — $(d,\iota)$ are genuine but phantom-flat moduli, the phantom jumping $0\to2^{\aleph_0}$ only at the non-residuated wall $d=\infty$ (Cor 57a$'$). **Prop 59c:** absorption depth $=$ nFG2 stabilization index $=$ Mittag–Leffler $=$ phantom-free (unifies Thm 41a/55c/58b). Machine-verified `code/scripts/check-pass59.py` $\to$ `artifacts/reports/pass59-intermediate-absorbing-cover-no-partial-phantom-check.json` (28 models $W_{K;d,\delta}$ for $K=3..6$ all residuated; finite-depth ML, dilation $(\mathbb Z,\times m)$ non-ML; overall PASS). Updated `notes/g2-fg2-hierarchy.md`, `definitions.md`, `open_problems.md` (Pass-58 (i)→[Resolved 59], (ii) carried [Open], [New (Pass 59)] set-theoretic frontier added), `ideas/research-questions.md`. Counter 59→60. *Exec note:* run off-mount in `/tmp`; the bash mount lagged and served a Pass-53-era stale copy of the discussion file while the Windows-path tools showed it complete through Pass 58, so per `[[aps-run-sync-hazard]]` correctness was confirmed off-mount and all edits applied via Windows-path file tools.
+
+## 2026-06-06 (Autonomous discussion Pass 47)
+
+- Pass 47 RESOLVED the [Pass-45] chain-cycle reachability question and CLOSED the [Pass-46] bracketing obligation. **Bottom discipline does NOT confine the chain regime**: the $C_5$ reversal ($\boxtimes=r(x)=4-x$, $\bot=0$ genuinely least) is *itself* bottom-disciplined yet its $T=3$ orbit reaches the chain-cycle $\{1,3\}$ with attached midpoint $p=2$ (**Thm 47a**); the Pass-45/46 confinement conjecture is **false**. The genuine gate is **orbit flatness + reachability** (**Thm 47b**: the eventual cycle being an antichain), which is *independent* of bottom discipline. $B_N$ is flat (front antichain + degenerate sink $s$), so it satisfies the Pass-44 equivalence for that reason, not bottom discipline (**Prop 47c**); a $\{\bot,U\}$ chain-cycle may coexist in $B_N$ but is unreachable from $T$, so the correct predicate is reachability not existence. **Thm 47d** (chain bracketing criterion): a comparable eventual $2$-cycle on a chain brackets a $\boxtimes$-fixed point iff the invariant interval has *odd* cardinality ($C_5,C_7$ bracket; $C_6,C_8$ are chain-gaps). Machine-checked: `code/scripts/check-chaincycle-reachability-bottom-discipline.py` -> `artifacts/reports/chaincycle-reachability-bottom-discipline-check.json` (PASS; 218 bottom-disciplined $C_5$ chain-cycles, 0 Thm-45b violations). Updated `notes/g2-fg2-hierarchy.md`, `definitions.md`, `open_problems.md`, `ideas/research-questions.md`. Also repaired a crashed-write EOF fragment and reconstructed the lost Pass-46 entry in `records/discussions/autonomous-discussion.md`.
+
+## 2026-06-05 (Autonomous discussion Pass 46) [reconstructed by Pass 47]
+
+- Pass 46 machine-ran the survey deferred from Pass 45: `code/scripts/check-descent-attachment-general.py` -> `artifacts/reports/descent-attachment-general-check.json` (real run replacing the PARTIAL report; overall PASS). **0** descent$\Rightarrow$attachment violations over $>4000$ antitone maps on $\{M_3,C_3,\dots,C_7,N_5,M_4\}$ (machine-confirming Thm 45b), positive non-descending-with-attached counts on every carrier with a comparable $2$-cycle (Thm 45c). **Thm 46a** (chain period dichotomy): a finite chain carries only degenerate/chain cycles, never antichain or period-$\ge3$, since $\boxtimes^2$ is a monotone self-map of a chain hence eventually fixed; period $3,4$ appear only off chains ($M_3,M_4$). **Cor 46b**: regime (iii) splits into (iii-a) bracketing (attached) and (iii-b) chain-gap (fixed-point-free, the $C_{2m}$ reversal). NOTE: Pass 46's discussion-log/research-log appends were lost to a crashed write and recovered by Pass 47 from the State header + the surviving survey JSON.
+
+## 2026-06-05 (Relay sync 2026-06-05T16:50:48+09:00)
+
+- ChatGPT Project artifact inbox sync: re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`; the local inbox `C:\Users\20010215fjii\繝槭う繝峨Λ繧､繝暴ChatGPT Project Inbox\My-Reserch-Project` still contained 0 supported `.pdf` / `.ppt` / `.pptx` / `.odp` artifacts, so `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and the central `artifacts/pdf/` collection remained unchanged.
+- ChatGPT share watchlist check: re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-05T16:50:48+09:00`; all 23 watched `https://chatgpt.com/share/...` links still failed with remote-server-unreachable errors from the local PowerShell fetch path, and a direct shared-link fetch fallback still exposed only the public ChatGPT login shell rather than conversation content, so no changed conversation could be reconstructed into the linked research notes and no new open questions were extracted this run. The refreshed state is recorded in `records/logs/chatgpt-share-state.csv` and prepended to `records/logs/chatgpt-share-sync.md`.
+- Drive relay scan: listed the recorded Research root and Reference root through the Google Drive connector and ran targeted modified-time searches for the Research root plus `Paper`, `Slide`, `Gemini`, and `Claude` after `2026-06-05T00:36:44`; no newly relevant papers, slides, Gemini outputs, Claude outputs, generated PDFs, or top-level reference additions were found, so no update to `research/references/research-drive.md`, `research/references/drive.md`, any literature note, `artifacts/reports/chatgpt-project-artifact-sync.csv`, or `artifacts/pdf/manifest.csv` was warranted.
+- Relay limitation remains active: if a watched share or Project thread references `sandbox:/mnt/data/...` exports or other inaccessible artifacts, route them through `C:\Users\20010215fjii\繝槭う繝峨Λ繧､繝暴ChatGPT Project Inbox\My-Reserch-Project` so a later relay sync can import them into the repository.
+
+## 2026-06-05 (Autonomous discussion Pass 45)
+
+- Pass 45 RESOLVED the Pass-44 general-$L$ question **negatively**: "orbit-descent $\Leftrightarrow$ $\exists$ attached fixed point" is $M_3$-local. Descent $\Rightarrow$ attachment is carrier-independent (Thm 45b); the converse fails via the order-reversing involution on the odd chain $C_{2m+1}$ — explicit $C_5$ witness ($\boxtimes=r(x)=4-x$, $T=3$, non-descending orbit $\{3,1\}$, attached self-dual fixed point $p=2$, Thm 45c). Correct refinement: eventual-2-cycle regime trichotomy degenerate/antichain/chain (Cor 45d) with Bracketing Lemma 45a. Updated `notes/g2-fg2-hierarchy.md` (new Pass-45 section), `definitions.md` (trichotomy + crash-splice repair), `open_problems.md` (resolved + new chain-cycle item), `ideas/research-questions.md` (retargeted). Also deleted a stray truncated Pass-42 duplicate at the tail of `records/discussions/autonomous-discussion.md`. NOTE: the workspace execution shell was unavailable this pass, so `code/scripts/check-descent-attachment-general.py` (committed) was NOT machine-run; claims A/B in `artifacts/reports/descent-attachment-general-check.json` are hand-verified, and the enumerative survey is queued for Pass 46.
+
+## 2026-06-05 (Relay sync 2026-06-05T00:32:46+09:00)
+
+- ChatGPT Project artifact inbox sync: re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`; the local inbox `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` still contained 0 supported `.pdf` / `.ppt` / `.pptx` / `.odp` artifacts, so `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and the central `artifacts/pdf/` collection remained unchanged.
+- ChatGPT share watchlist check: re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-05T00:32:46+09:00`; all 23 watched `https://chatgpt.com/share/...` links still failed with PowerShell remote-server-unreachable errors (`リモート サーバーに接続できません。`), so no changed conversation content could be fetched, no linked research note could be reconstructed to the repository standard, and no new open questions could be extracted this run. The refreshed state is recorded in `records/logs/chatgpt-share-state.csv` and prepended to `records/logs/chatgpt-share-sync.md`.
+- Drive relay scan: live Google Drive connector listings for the recorded Research root, `Paper`, `Slide`, `Gemini`, `Claude`, and the Reference-root top level matched the tracked snapshots, and targeted Drive searches found no items modified after `2026-06-04T09:30:04Z`, so no update to `research/references/research-drive.md`, `research/references/drive.md`, any literature note, `artifacts/reports/chatgpt-project-artifact-sync.csv`, or `artifacts/pdf/manifest.csv` was warranted.
+- Relay limitation remains active: if a watched share or Project thread references `sandbox:/mnt/data/...` exports or other inaccessible artifacts, route them through `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` so a later relay sync can import them into the repository.
+
+## 2026-06-04 (Relay sync 2026-06-04T18:31:04+09:00)
+
+- ChatGPT Project artifact inbox sync: re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`; the local inbox `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` still contained 0 supported `.pdf` / `.ppt` / `.pptx` / `.odp` artifacts, so `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and the central `artifacts/pdf/` collection remained unchanged.
+- ChatGPT share watchlist check: re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-04T18:31:04+09:00`; all 23 watched `https://chatgpt.com/share/...` links still failed with PowerShell remote-server-unreachable errors (`リモート サーバーに接続できません。`), so no changed conversation content could be fetched, no linked research note could be reconstructed, and no new open questions could be extracted this run. The refreshed state is recorded in `records/logs/chatgpt-share-state.csv` and prepended to `records/logs/chatgpt-share-sync.md`.
+- Drive relay scan: live Google Drive connector listings for the recorded Research root, `Paper`, `Slide`, `Gemini`, `Claude/files`, and the Reference-root top level matched the tracked snapshots closely enough that no update to `research/references/research-drive.md`, `research/references/drive.md`, any literature note, `artifacts/reports/chatgpt-project-artifact-sync.csv`, or `artifacts/pdf/manifest.csv` was warranted.
+- Relay limitation remains active: if a watched share or Project thread references `sandbox:/mnt/data/...` exports or other inaccessible artifacts, route them through `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` so a later relay sync can import them into the repository.
+
+## 2026-06-04 (Autonomous discussion Pass 42)
+
+- Pass 42 (detached fixed point = algebraic Rosser sentence). Proved Theorem 42a
+  (reachability/Rosser separation: orbit-attached = Gödel/reachable fixed point,
+  detached = Rosser/unreachable; the Rosser gadget $R_2$ on the $M_3$ diamond
+  satisfies FP-synt via a detached $p$ with a fixed-point-free antichain Gödel
+  orbit — settling the core $\exists p(p=\boxtimes p)$ vs orbit-attached-Gödel
+  separation) and Corollary 42b (the detached point meets all three Rosser
+  signatures — unprovable, irrefutable, not provably equivalent to any iterated
+  consistency statement). Machine-confirmed (overall PASS) by
+  `code/scripts/check-detached-rosser-fixedpoint.py` /
+  `artifacts/reports/detached-rosser-fixedpoint-check.json`: $R_2$ verified; over
+  the 5-element $M_3$ diamond, 178 antitone maps, 14 with a non-stabilizing
+  antichain $T$-orbit, of which the 2 with a fixed point carry only detached ones
+  (0 orbit-attached). Arithmetic lift to a genuine Rosser predicate left open.
+
+## 2026-06-04 (Autonomous discussion Pass 41)
+
+- Pass 41 (limit fixed point $s_\omega$ and the median tower). Proved Theorem 41a
+  (antitone index-2 collapse: all-level nFG2 forces $\boxtimes^2 T=\boxtimes^3 T$,
+  resolving the on-file infinite-orbit-stabilization problem with no
+  well-foundedness hypothesis), Theorem 41b (limit-FP obstruction: an antitone
+  $\boxtimes$ admits no order-attached orbit-limit fixed point — the Pass-40
+  $s_\omega$ proposal is refuted; only detached fixed points survive), and
+  Theorem 41c (median multiplicity: $\mathcal M$ is a product of Pass-40
+  singletons; nested families give a tower with a phantom limit median under
+  failure of meet-continuity). Machine-confirmed (overall PASS) by
+  `code/scripts/check-limit-fp-and-median-tower.py` /
+  `artifacts/reports/limit-fp-median-tower-check.json`: 88 posets / 2618 antitone
+  maps with 0 counterexamples (41a), all order-attached $\sigma$ placements break
+  antitonicity (41b), $N_5$-type phantom-gap lattice verified (41c).
+
 ## 2026-06-04 (Relay sync 2026-06-04T17:05:21+09:00)
 
 - ChatGPT Project artifact inbox sync: ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`; the local inbox `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` contained 0 supported artifacts, so `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and `artifacts/pdf/` remained unchanged.
@@ -171,303 +291,15 @@
 - Automation policy: added the standard publication rule that autonomous
   research outputs must be summarized in Markdown under `artifacts/pdf/`,
   published to PDF with `code/scripts/publish-research-output.ps1`, and mirrored
-  to the local Google Drive backup folder when available.
-- Automation config: updated the active Codex research discussion and relay-sync
-  automations so they use the new `research/`, `records/`, `artifacts/`, and
-  `code/` directory structure.
-- ChatGPT Project artifact sync: added a local Google Drive inbox workflow and
-  `code/scripts/sync-chatgpt-project-artifacts.ps1` so Project-generated PDF
-  slides and exported decks can be imported into `artifacts/slides/` and
-  collected under `artifacts/pdf/`.
-- Automation config: updated `Research Project Relay Sync` so each scheduled
-  run starts by importing ChatGPT Project artifact inbox files into the repo.
-- ChatGPT share import: added five new shared links from the user-supplied
-  batch to `research/references/chatgpt-share-watchlist.csv`, created notes on
-  formalized G2, weak APS provability predicates, self-elimination logic, and
-  sequential/pair theory as indexed APS, and marked two supplied links as
-  already tracked.
-- ChatGPT share import: the refreshed cardinal-invariant and residuated/GoI
-  links mention generated PDF/TeX files via `sandbox:/mnt/data/...`; those files
-  are not directly readable locally and should be exported to the Google Drive
-  artifact inbox if they need to be imported as repo artifacts.
-- ChatGPT share import: published the import summary as
-  `artifacts/pdf/chatgpt-share-import-2026-05-30.pdf` and mirrored it to the
-  local Google Drive PDF backup folder.
-- Drive verification: local Git PDF and local Google Drive backup hashes match;
-  Google Drive connector search has not yet surfaced the synced file, likely due
-  to Drive sync/index delay.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T17:36:14+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: scanned the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude, including `Paper/Monograph`) plus reference-folder top level at `2026-05-30T17:38:10+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-30T05:03:17+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: queried the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-30T05:03:58+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
-
-## 2026-05-29
-
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-29T05:37:09+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed again (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-29T05:38:41+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-29T14:27:21+09:00`; all 18 tracked `https://chatgpt.com/share/...` links were reachable and unchanged, so no note updates were required.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-29T22:53:25+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: queried the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-29T22:54:39+09:00`; no newly relevant items newer than the `2026-05-22` snapshot were detected.
-
-## 2026-05-28
-
-- Autonomous discussion pass 22: proved the truncated-exponent
-  $U$-absorbing tensor template uniformly for the bottom-disciplined $B_N$
-  family, including the closed principal residual table; the next algebraic
-  target is whether $U$-absorption itself can be weakened.
-- Autonomous discussion pass 23: tested weakening $U$-absorption while
-  holding the truncated-exponent orbit table fixed; B3 and B4 reports show
-  monotonicity already forces every $U$-product, so any non-$U$-absorbing
-  search must vary the orbit product table itself.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T01:03:13+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: listed the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T01:04:12+09:00`; no newly relevant items newer than `2026-05-22` were detected.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T10:56:03+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T10:56:31+09:00`; all items still appear unchanged since the `2026-05-22` snapshot.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T17:33:45+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T17:35:17+09:00`; all items still appear unchanged since the `2026-05-22` snapshot.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-28T23:35:01+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed again (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-28T23:36:07+09:00`; no newly relevant items newer than `2026-05-21` were detected.
-- Autonomous discussion pass 24: started the orbit-table-varying search for a
-  non-$U$-absorbing same-order full-residuated tensor on
-  `bottom-nfg2-depth-3`; the bounded run checked 382 complete assignments in
-  1000 nodes with no candidate, so the next target is residual-fiber pruning.
-- Autonomous discussion pass 25: added residual-fiber pruning and completed the
-  `bottom-nfg2-depth-3` non-$U$-absorbing search; found a full-residuated
-  same-order expansion with $U\otimes a_4=a_4$, $U\otimes s=s$, and the
-  original `FFFTTTTT` profile.
-- Autonomous discussion pass 26: ran the orbit-table-varying search on
-  `bottom-nfg2-depth-4`; a bounded positive report found a same-order
-  full-residuated non-$U$-absorbing expansion with $U\otimes a_1=a_1$,
-  $U\otimes a_2=a_2$, preserving the original `FFFFTTTT` profile.
-- Autonomous discussion pass 27: extracted a front-shifted
-  non-$U$-absorbing $B_N$ template, implemented a builder/checker, verified
-  it at depths 3, 4, and 5, and generated a new checked depth-5
-  full-residuated witness with profile `FFFFFTTT`.
-- Autonomous discussion pass 28: derived the closed residual table for the
-  front-shifted non-$U$-absorbing $B_N$ template and added a formula checker
-  verifying zero mismatches against generated left/right residuals at depths
-  3, 4, and 5.
-- Autonomous discussion pass 29: added a structural-rule analyzer and compared
-  current residuated witnesses; all checked tensors satisfy exchange, none
-  satisfy strong weakening/discarding, and the front-shifted template localizes
-  contraction to $a_1,a_2$ while the tail remains noncontractive.
-- Autonomous discussion pass 30: presented the front-shifted template as a
-  Rees-style ideal extension; $I=\{b,a_1,a_2\}$ is a two-sided tensor ideal,
-  and collapsing $I$ yields the shifted tail monoid at checked depths 3, 4,
-  and 5.
-- Autonomous discussion pass 31: checked the orthogonal front-width schema;
-  depths 3, 4, and 5 admit front widths $0,1,2$, while width $3$ first
-  fails by non-principal residual fibers over $p\backslash b$.
-- Autonomous discussion pass 32: added a closed residual formula checker for
-  orthogonal front widths $0,1,2$; depths 3, 4, and 5 have zero mismatches,
-  completing the current same-order front-width theorem candidate.
-
-## 2026-05-27
-
-- Autonomous discussion pass 11: exhaustively searched tensor/residual
-  expansions of `M4-G2FG2FP` on its existing carrier and order; no full
-  residuated monoid expansion exists for any unit choice, so the next target is
-  a modified or expanded G2+FG2+FP-reachable witness.
-- Autonomous discussion pass 12: found a smallest same-carrier order repair of
-  `M4-G2FG2FP`; adding $\bot\le c$ yields a full-residuated non-collapsed
-  G2+FG2+FP-reachable witness with unit $p$, with search and checker reports
-  saved under `artifacts/reports/`.
-- Autonomous discussion pass 13: interpreted the $\bot\le c$ repair as the
-  missing bottom-discipline instance $\forall x(\bot\le x)$, i.e. ex-falso
-  weakening for the $c$-branch, and opened the finite-model test of which
-  G2-ZOO and $D_N$ separations survive that discipline.
-- Autonomous discussion pass 14: added a bottom-discipline filter script and
-  report; pure bottom-order enforcement preserves antitonicity for `M-000`,
-  `M-010`, `M-111`, `M4-G2FG2FP`, and the repaired M4 model, but the current
-  `nfg2-depth-3` witness and five 3-element witnesses break antitonicity.
-- Autonomous discussion pass 15: constructed the bottom-disciplined $B_N$
-  arbitrary-depth nFG2 family by separating true bottom $b$ from the fixed
-  point $s$ and adding helper upper bound $U$; generated and checked
-  `bottom-nfg2-depth-3` with G2 true, FG2 false, FP-synt true, and pattern
-  `FFFTTTTT`.
-- Autonomous discussion pass 16: added `bottom-G2FG2-noFP`, a 5-element
-  bottom-disciplined witness with G2 true, FG2 true, no syntactic
-  $\boxtimes$-fixed point, and nFG2 pattern `TFTFTFTF`; bottom discipline
-  alone now preserves all tracked G2/FG2/FP-synt separations.
-- Autonomous discussion pass 17: found a same-order full-residuated expansion
-  of `bottom-G2FG2-noFP` using a commutative tensor with unit $T$ and zero
-  $b$; the expansion preserves G2+FG2 without FP-synt.
-- Autonomous discussion pass 18: built a same-order full-residuated expansion
-  of `bottom-nfg2-depth-3` using a top-absorbing commutative tensor with unit
-  $T$, zero $b$, and absorber $U$; the expansion preserves the
-  bottom-disciplined G2+not-FG2+FP-synt profile and nFG2 pattern `FFFTTTTT`.
-- Autonomous discussion pass 19: promoted the top-absorbing expansion from the
-  checked $B_3$ instance to a uniform $B_N$ lemma with explicit residual
-  fibers; the remaining problem is to find less top-collapsing same-order
-  tensors or prove an obstruction.
-- Autonomous discussion pass 20: found a less top-collapsing full-residuated
-  $U$-absorbing expansion of `bottom-nfg2-depth-3`; the complete constrained
-  search reduces $U$-valued products among $\{a_1,a_2,a_3,a_4,s\}$ from
-  15 to 7 while preserving the `FFFTTTTT` profile.
-- Autonomous discussion pass 21: generated and checked `bottom-nfg2-depth-4`,
-  then verified a truncated-exponent $U$-absorbing full-residuated expansion
-  with 10 $U$-valued searched products out of 21, preserving the `FFFFTTTT`
-  profile.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-27T07:05:18+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: listed the recorded Google Drive research/reference folders live on `2026-05-27`; no newly relevant items newer than `2026-05-22` were detected.
-- Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-27T13:01:02+09:00`; all 18 links were reachable and `unchanged`, so no note ingestion was triggered.
-- Relay sync: rechecked the recorded Google Drive research outputs (Paper/Slide/Gemini/Claude) plus reference-folder top level at `2026-05-27T13:04:00+09:00`; no items newer than `2026-05-22` were detected.
-- Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-27T19:01:24+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: listed the Google Drive research outputs (Paper/Slide/Gemini/Claude) at `2026-05-27T19:03:16+09:00`; no newly relevant items newer than `2026-05-22` were detected.
-
-## 2026-05-26
-
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-26T05:01:25+09:00`; all 18 tracked `https://chatgpt.com/share/...` links failed (`remote server unreachable`), so no conversation diffing or note ingestion was possible.
-- Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-26T18:02:00+09:00`; 17 links were reachable and `unchanged`, while `Local-FG2 Pullback and APS Zoo` returned HTTP 404, so no note ingestion was triggered.
-- Relay sync: checked the recorded Google Drive research/reference folders; no newly relevant items newer than `2026-05-22` were detected.
-- Relay sync: attempted a live Google Drive folder listing, but the Drive MCP connector failed to start in this environment (handshake timeout), so Drive changes could not be revalidated this pass.
-- Autonomous discussion pass 9: audited the nFG2 hierarchy claims, corrected
-  the strictness statement to the certified odd-step separation, added the
-  finite orbit-stabilization theorem, materialized and checked the
-  `M4-G2FG2FP` non-degenerate G2+FG2+FP witness, and opened the infinite
-  orbit-well-foundedness problem.
-- Autonomous discussion pass 10: resolved arbitrary finite first-true nFG2
-  depth by adding the $D_N$ construction, a generator script, a checked
-  `nfg2-depth-3` witness with pattern `FFFTTTTT`, and a sharper open problem
-  about which APS axiom packages preserve or rule out the construction.
-
-## 2026-05-25 (G2-ZOO implementation pass)
-
-- Claude Code G2-ZOO implementation: exhaustively enumerated all 3-element
-  preAPS models and certified all 8 combinations of (G2, FG2, FP-synt) with
-  explicit witnesses M-000 through M-111 in `code/models/examples/`.
-- Certified independence theorems: FG2⇏G2 (M-010), G2⇏FG2 (M-100),
-  G2+FP-synt⇏FG2 (M-101), G2+FG2⇏FP-synt (M-110).
-- Certified n-FG2 separation: M-010 realizes pattern TFTFTF... and refutes
-  odd-step implications, including FG2 -> nFG2(2); arbitrary-depth strictness
-  remains open.
-- Added `code/scripts/check-g2-zoo.py` — property checker for G2/FG2/nFG2/FP-synt
-  and MacNeille completion analysis.
-- Updated `research/notes/g2-fg2-hierarchy.md` with formal theorem statements and proofs.
-- Updated `research/notes/g2-aps-zoo-classification.md` with certified model registry.
-
-## 2026-05-25
-
-- Added a Claude Code bridge for independent research review: a stable prompt,
-  handoff generator, review log, and workflow links so Claude Code can challenge
-  Codex passes without becoming a second source of truth.
-- Resumed the Codex Research Discussion Loop as an ongoing 30-minute heartbeat
-  automation with no six-pass stop condition, while keeping the existing pass
-  count and research trace.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-25T02:36:05+09:00`; all 18 tracked `https://chatgpt.com/share/...` links were reachable and unchanged, so no note ingestion or open-question extraction was needed this run.
-- Relay sync: checked the recorded Google Drive research/reference folders for updates since `2026-05-22`; no newly relevant papers, slides, Gemini outputs, or Claude outputs were detected.
-- Relay sync: refreshed the ChatGPT share watchlist state again at `2026-05-25T17:08:31+09:00`; all 18 links remained `unchanged`, so no note updates were required.
-- Relay sync: listed the Google Drive research `Paper`, `Slide`, and `Gemini` folders for anything newer than `2026-05-22`; nothing new appeared. The `Claude` folder listing timed out in this environment, so it was not revalidated this pass.
-- Relay sync: refreshed the ChatGPT share watchlist state at `2026-05-25T22:59:42+09:00`; all 18 links failed (`remote server unreachable`). Google Drive research/reference folders still show nothing newer than `2026-05-22`.
-- Autonomous discussion pass 7: incorporated Claude Code Review 1 into the
-  MacNeille checker, added the corrected `antitone-dual-lower-cut-v1` rule,
-  regenerated v1 reports for the chain and size-3 non-lattice models, and
-  recorded the `principal-unreflected` versus `nonprincipal-without-syntactic`
-  separation.
-
-## 2026-05-24
-
-- Added the Codex-centered autonomous discussion design, recurring prompt, and
-  state log so scheduled Codex passes can develop repository notes and push the
-  research trace to GitHub.
-- Autonomous discussion pass 1: framed completion-generated versus syntactic
-  fixed points as a completion-reflection square, then updated the completion
-  note and open problems with the resulting proof obligations.
-- Autonomous discussion pass 2: chose MacNeille completion as the first
-  reflection-square test case, added completion vocabulary, and isolated the
-  order-dual extension issue for antitone $\boxtimes$.
-- Autonomous discussion pass 3: converted the MacNeille reflection target into a
-  finite 3-/4-element model-search protocol and linked it from the completion
-  and models notes.
-- Autonomous discussion pass 4: drafted the MacNeille reflection checker
-  interface, including command shape, validation checks, output classes, and the
-  first provisional extension-rule milestone.
-- Autonomous discussion pass 5: implemented the first MacNeille reflection
-  checker milestone and added a 3-element chain smoke-test model for the
-  provisional `antitone-dual-lower-cut-v0` extension rule; the smoke test
-  reports `principal-only` with syntactic fixed point `m`.
-- Autonomous discussion pass 6: generated the first persisted MacNeille
-  reflection report for `three-chain-antitone`; it remains a smoke-test baseline
-  (`principal-only`, G2/FG2 false, A1-A4 unchecked), not a reflection
-  counterexample.
-- Relay sync: refreshed the ChatGPT watchlist state at `2026-05-24T04:52:11+09:00`; all 18 tracked `https://chatgpt.com/share/...` links still fail with `Invoke-WebRequest` remote-server-unreachable errors, so no conversation diffing or note ingestion was possible.
-- Relay sync: rechecked the recorded Google Drive research and reference folders live. No newly relevant post-`2026-05-22` material appeared beyond the already indexed Monograph snapshot, so no literature or topic note updates were needed this run.
-- Relay sync: cleaned `records/logs/chatgpt-share-sync.md` after the blocked retry duplicated the newest entry and displaced the file header.
-- Relay sync: rechecked the ChatGPT share watchlist at `2026-05-24T14:02:20+09:00`; all 18 links still fail (`remote server unreachable`), and the Drive research/reference folders show no post-`2026-05-22` additions.
-- Relay sync: rechecked the ChatGPT share watchlist at `2026-05-24T14:09:44+09:00`; all 18 links still fail (`remote server unreachable`). Google Drive research/reference folders still show no additions newer than `2026-05-22`.
-- Relay sync: rechecked the ChatGPT share watchlist at `2026-05-24T14:33:09+09:00`; all 18 links still fail (`remote server unreachable`). Google Drive research/reference folders still show no additions newer than `2026-05-22`.
-- Relay sync: rechecked the ChatGPT share watchlist at `2026-05-24T20:35:27+09:00`; all 18 links still fail (`remote server unreachable`). Google Drive research/reference folders still show no additions newer than `2026-05-22`.
-
-## 2026-05-23
-
-- Relay sync: retried the ChatGPT share watchlist, but `https://chatgpt.com/share/...` pages are still unreachable from this environment, so no new share content, note summaries, or open-question extraction could be performed.
-- Relay sync: queried the Google Drive research and reference folders live; no newly relevant papers, slides, Gemini outputs, or Claude outputs appeared beyond the `2026-05-22` snapshot.
-- Relay sync: normalized `research/ideas/research-questions.md` and `research/references/research-drive.md` after the prior run introduced encoding corruption while preserving the existing research-facing content.
-
-## 2026-05-22
-
-- Initialized the local Codex research workspace.
-- Connected the Google Drive reference folder as the main bibliography/source folder.
-- Created inbox, literature notes, output, and log entry points.
-- Imported the shared ChatGPT conversation on reconstructing BS16 cut elimination as a fibered residuated APS note.
-- Registered the Google Drive research folder for papers, slides, and AI-generated research outputs.
-- Imported six ChatGPT shared conversations into structured notes on MND4-preAPS, analytic APS, fixed point existence, completions, self-existence, and residuated/domain-theoretic completion.
-- Added a Project-to-Codex sync workflow using Google Drive relay files and a ChatGPT shared-link watchlist.
-- Imported the Research Project chat-link handoff from Downloads, added 11 new shared links to the watchlist, and created research-index skeleton files for definitions, open problems, models, and bibliography.
-- Added a research-only Obsidian vault indexing workflow for `Mr.Jikokennobun`, excluding personal notes by policy.
-- Relay sync: checked ChatGPT share watchlist, but `Invoke-WebRequest` failed for all entries (`remote server unreachable`), so no new share content could be ingested this run.
-- Relay sync: scanned Google Drive research outputs and refreshed `research/references/research-drive.md` with current Monograph/Gemini/Claude listings.
-
-## 2026-05-31
-
-- Pass 34: **Refuted Pass 33 Route A.** A finite group on the front $F_k$ of $B_N$ ($k\ge2$) admits NO same-carrier/order commutative monotone fully-residuated tensor. Monotonicity ($a_i\le U$) forces $U\otimes a_j$ to upper-bound the bijective image $\{a_i a_j:i\}=F_k$, hence $U\otimes a_j=U$ (U-absorption); the diagonal residual $a_j\backslash a_j$ then loses its top and fails. Integrality lemma + rigidity theorem prove the front is forced to be the orthogonal idempotent zero-band; max front-group order $=1$. Verified exhaustively for $\mathbb Z/2,\mathbb Z/3,\mathbb Z/4,V_4$ in `code/scripts/check-front-group-order-bound.py` (validated against the orthogonal $k=1,2$/fail-at-$3$ data).
-- Autonomous discussion pass 35 (2026-05-31): settled the non-commutative
-  loophole. Two-sided front-absorption lemma + non-commutative front-rigidity
-  theorem show that for $k\ge2$ any group front of a two-sidedly monotone,
-  associative, two-residuated $B_N$-tensor forces $a_j\otimes U=U\otimes a_j=U$,
-  stranding both diagonal fibers $a_j\backslash a_j$, $a_j/a_j$ (which contain
-  the incomparable $T$ and local identity $a_{i_0}$) without a top. Verdict:
-  $|G|=1$ even non-commutatively; rigidity is an order phenomenon, not a
-  commutativity artifact. Verified incl. non-abelian $S_3$ by
-  `code/scripts/check-noncommutative-front-group-bound.py`. Only remaining
-  escape: ceiling relaxation (sub-top cap $c<U$, enlarged carrier).
-
-## 2026-06-01
-
-- Autonomous discussion pass 37: **selective-median escape succeeds; front-group
-  order is unbounded.** Adjoining one element $m=T\vee e_G$ (dominating only the
-  global unit $T$ and group identity $e_G$, incomparable to the rest of the front
-  and the tail) makes the diagonal fiber principal, $a_j\backslash
-  a_j=\{b,T,e_G,m\}$ with max $m$, provided the front stops absorbing the tail
-  ($a_j\otimes r=U$); forced $\boxtimes m=b$ preserves the profile. The
-  same-carrier verdict $|G|=1$ (Passes 34–35) flips to $|G|=\infty$ for finite
-  abelian $G$ — the **missing-join principle**: a group fits iff the order has a
-  common upper bound of $\{T,e_G\}$ strictly below $U$. Machine-verified for
-  $\mathbb Z/2,\dots,\mathbb Z/5$ by
-  `code/scripts/check-selective-median-bound.py` (no-median and full-cap controls
-  reproduce the predicted obstructions). Non-abelian (two-residual) case opened
-  for Pass 38.
-- Relay sync (2026-06-01T01:53:05+09:00): ChatGPT Project artifact inbox import
-  found 0 artifacts; share-watchlist refresh still fails for all 23
-  `https://chatgpt.com/share/...` URLs (logged in
-  `records/logs/chatgpt-share-sync.md` and `records/logs/chatgpt-share-state.csv`),
-  so no conversation diffing/note ingestion was possible this run.
-- Relay sync (2026-06-01T16:09:40+09:00): re-ran the artifact import and
-  share-watchlist check; still 0 inbox artifacts and 23/23 share fetch failures.
-  Local-only updates remain available (autonomous discussion writeups, verifiers,
-  and collected PDFs), but new shared-conversation ingestion needs the Drive
-  inbox fallback or a networked fetch environment.
-- Autonomous discussion pass 38: tested the non-abelian selective-median escape
-  on an $S_3$ front. The one-point median $m=T\vee e_G$ makes both left and
-  right diagonal fibers principal at $m$, while no-median and full-cap controls
-  fail as predicted; report saved at
-  `artifacts/reports/noncommutative-selective-median-check.json`.
-run.
-- 2026-06-03 (Pass 39): proved the **Uniform Non-Abelian Selective-Median Theorem** — for every finite group $G$, $B_N^{\mathrm{med}}$ with front $F_k\cong G$ and the single join $m=T\vee e_G$ is fully two-sided residuated ($\#$medians $=1$, max front-group order $=\infty$), via three $G$-free lemmas (ideal extension $G^1\hookrightarrow M^\ast\twoheadrightarrow\{U\}$ for associativity; identity-law monotonicity; diagonal fibers always strand $\{T,e_G\}$, off-diagonal strand none). Reconfirmed for $\mathbb Z/6,(\mathbb Z/2)^3,D_5,A_4,S_4$ (to order 24) by `check-uniform-selective-median-theorem.py`; controls fail, $G$-independence audit passes. Closed two Pass-38 [New] obligations.
-
-## 2026-06-03 (Relay sync 2026-06-03T21:12:43+09:00)
-
-- ChatGPT Project artifact inbox sync: 0 new artifacts imported by `code/scripts/sync-chatgpt-project-artifacts.ps1`; `artifacts/slides/chatgpt-project/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and `artifacts/pdf/` remain unchanged.
-- ChatGPT share watchlist check: re-ran `code/scripts/check-chatgpt-shares.ps1` at `2026-06-03T21:12:43+09:00`; all 23 watched `https://chatgpt.com/share/...` links still failed with PowerShell `Invoke-WebRequest` remote-server-unreachable errors, so no changed conversation content could be fetched and no note reconstruction was possible this run. Refreshed `records/logs/chatgpt-share-state.csv` and prepended the new status table to `records/logs/chatgpt-share-sync.md`.
-- Drive relay scan: live Google Drive listings for the recorded Research root, its `Paper` / `Slide` / `Gemini` / `Claude` subfolders, and the Reference-root top level showed no newly relevant material after `2026-06-01`, so `research/references/research-drive.md`, `research/references/drive.md`, literature notes, `artifacts/reports/chatgpt-project-artifact-sync.csv`, and `artifacts/pdf/manifest.csv` needed no update.
-- Relay limitation remains active: any `sandbox:/mnt/data/...` exports or otherwise inaccessible shared-link artifacts must be routed through `C:\Users\20010215fjii\マイドライブ\ChatGPT Project Inbox\My-Reserch-Project` so a later sync can import them into the repository.
+  to the local Google D
+- 2026-06-06 (Pass 48): poset bracketing resolved — it is an order-reversing-involution fixed-point problem on F=Fix(boxtimes^2) cap I, governed by the cycle type of tau=boxtimes|_F (odd |F| => bracket, Thm 48a), NOT by |I|: the Boolean cube 2^[n] under complementation is a fat even comparable 2-cycle with no fixed point ("cube-gap"). Infinite flatness lift axiom = join-continuity, not well-foundedness (Thm 48b). Period-k antichain cycle + boxtimes-fixed point => the FP is detached (Prop 48c), witness the period-4 Rosser gadget R_4 / family R_{2k}. Machine-verified poset-bracketing-period4-check.json (PASS).
+- 2026-06-06 (Pass 49): three Pass-48 residues closed. (a) EXACT bracketing via Smith theory (Thm 49a): tau=boxtimes|_F acts on the F2-acyclic order complex Delta(F); |Delta(F)|^tau is nonempty+acyclic (Smith), L(tau)=1, and boxtimes brackets iff the fixed set meets the 0-skeleton, iff some tau-invariant chain has odd cardinality — cube-gap = the lone flipped-edge barycenter {emptyset,[n]}, vertex-free. (b) EXPLICIT phantom (Constr 49b): a single doubled cover at a^*=sup o_n breaks join-continuity (box(a^*)=m<b^*=sup box(o_{2n})), one failed cover suffices. (c) GROUP-ORBIT LIBERATION (Thm 49d): R_4/M5 admits 411 commutative residuated tensors with non-integral unit p (detached FP), 0 integral (unit=U, M_n n>=3 obstruction); front rigidity forbids group TENSORS not group ORBITS, escape requires a non-integral unit. New model code/models/examples/R4-residuated.json; machine-verified artifacts/reports/pass49-bracketing-phantom-grouporbit-check.json PASS.
+- 2026-06-06 (Pass 49 recovery + Pass 50): recovered the crash-truncated Pass-49 discussion-log tail (all Pass-49 repo edits had already landed; counter left at 50, not double-incremented). Pass 50 closed the three Pass-49 residues. (A) Bredon vertex-bracket identity (Thm 50a): the topological chi(|Delta(F)|^tau)=1 is blind to the bracket; the vertex-counting refinement is e(F^tau)=chi(Delta(F^tau)) with Hopf-trace split L(tau)=e(F^tau)+Phi(tau)=1, and bracket iff F^tau!=empty, e>=1; cube-gap = the extremal e=0,Phi=1 (lone flipped-edge barycenter). (B) Phantom Betti number (Constr 50b): a fan of r independent Constr-49b arms is globally antitone with exactly r phantom 2-cycles, so b_phantom(P_r)=#failed join-covers=r (phantoms add). (C) Front-cardinality decoupling (Thm 50d): M_{|G|+1} with a free G-orbit front + detached p admits R(n) commutative full-residuated tensors with non-integral unit p and 0 integral for all n=|G|>=3; R(3)=56, R(4)=411 (reproduces Pass 49), R(n)>=1 via explicit witness family (o0 absorbing, o_i*o_j=top for i,j>=1, unit p); the commutative tensor sees only |G|=n, never the group law — abelian vs non-abelian is residuation-invisible (free S_3 orbit verified). Machine-verified artifacts/reports/pass50-bredon-phantomfan-grouporbit-check.json PASS.
+- 2026-06-06 (Pass 50 recovery + Pass 51): recovered the crash-truncated Pass-50 Archivist tail (all Pass-50 repo edits had already landed; counter left at 51, not double-incremented). Pass 51 closed the three Pass-50 residues. (A) Completeness/deflation of e(F^tau) (Lemma 51a, Thm 51a): Fix(box) is ALWAYS an antichain (p<=q fixed => q=box q<=box p=p), so Delta(F^tau) is discrete and e(F^tau)=|F^tau| identically; hence e=0 iff no bracket — e is a COMPLETE bracket invariant, but tautologically so, and the order-complex-circle pathology is unrealizable (the 6-crown has chi=0 but is not an antichain). All homological content lives in the flipped term Phi=1-|F^tau|. (B) Phantom as cohomology (Thm 51b): b_phantom(P_r)=dim H^1 of the obstruction complex Ob^*(P_r)=[0->C^1->0], C^1=F^{failed covers}, C^0=0 (infinitary rigidity); the phantom is lim^1 of the image tower, additive over arms (lim^1 commutes with finite sums) — open obligation: integral lim^1!=0 since field-coefficient lim^1 of finite-dim'l towers vanishes. (C) Arithmetic lift (Thm 51c): integral unit (1=top) <=> orbit-attached <=> Loeb (de Jongh-Sambin); non-integral unit (1!=top) <=> detached <=> Rosser-evades-Loeb (Guaspari-Solovay 1979, Kurahashi 2021). Verified: attached 3-chain Goedel admits integral-unit residuation; detached R_2/M_3 admits 0 integral, non-integral units {o0,o1,p}. Machine-verified artifacts/reports/pass51-euler-completeness-phantom-cohomology-rosser-unit-check.json PASS.
+- 2026-06-06 (Pass 52): Pass-51 residue (i) closed — the flipped invariant Phi(tau)=1-|F^tau| fully characterized. (A) Flipped-chain formula (Thm 52a): on the F2-acyclic Delta(F) the Hopf trace gives Phi=sum_{d>=1} s(d) N_d with N_d=#(tau-invariant d-chains) and the period-4 sign s(d)=(-1)^d(-1)^{d(d+1)/2}=++-- (s=+1 for d=0,1 mod 4, -1 for d=2,3); each invariant chain is reversed by tau (the unique order-reversing chain bijection), so only fixed VERTICES are 0-cells and Phi packages the signed higher flipped chains. (B) Extremal dichotomy (Thm 52b): sup Phi=+1 attained EXACTLY on fixed-point-free tau (cube 2^[n] under complementation / C4 diamond, lone flipped edge {bot,top} carries L=1); inf Phi=-infinity via the fixed-antichain fan F_m=(hat0<a_1..a_m<hat1), tau swapping hat0<->hat1 and fixing the a_i, giving |F^tau|=m and Phi=1-m (the m flipped triangles s(2)=-1 cancel the m fixed vertices to the residual edge) — the pathological negative companion of the cube. (C) Smith/Lefschetz Euler gap (Thm 52c): Phi=chi(|Delta(F)|^tau)-chi(Delta(F^tau)), the difference of the geometric (Smith-acyclic, =1) and combinatorial (vertex, =|F^tau|) fixed-point Euler characteristics; Phi!=0 iff the geometric fixed set carries flipped-chain barycenters invisible to the vertex count (cube-gap barycenter = minimal instance). Open obligation: cell-level chain map for Thm 52c. Machine-verified artifacts/reports/pass52-flipped-invariant-check.json PASS (cubes 2^[1..3]/C4: (e,Phi,L)=(0,1,1); fan m=1..5: Phi=0,-1,-2,-3,-4=1-m; 3-chain (1,0,1); 4-chain (0,1,1); every row L=e+Phi=1, Phi=1-|F^tau|).
+- 2026-06-07 (Pass 58): Pass-57 residue (i) RESOLVED by REFUTATION — Lemma 57a does NOT survive without strictness. The absorbing Rosser cap W=(a_0=bot<a_1<...<e<c<top), e=\/a_n non-attained, unit e, tensor (bot absorbing zero / min below e / max once a large operand >=c appears) is an explicit complete commutative residuated lattice with a completely join-irreducible cover c>e and COFINAL absorption a_n@c=c (n>=1): the 57a identity c=\/_n(a_n@c) holds with every summand =c, so no contradiction — cancellativity/strictness is ESSENTIAL (Thm 58a). Cost (Thm 58b, Phantom trichotomy): fiber c\e=bot collapses to principal, image tower constant => Mittag-Leffler => varprojlim^1=0, Rosser torsor degenerates (absorbing = non-free witness-comparison action). Three completions of a Rosser unit = the three pairwise choices among {residuation, join-irreducible cover, phantom}: MacNeille (cover,phantom,¬residual) / Ideal-quantale (residual,¬cover) / Absorbing cap W (residual,cover,¬phantom) — any two, never all three. Residue (ii) PARTIALLY RESOLVED: Theta natural on the radical-graded subcategory Deriv^res_rad (tower map (Z,xm)->(Z,xm') exists iff rad(m)|rad(m')), rad-incompatibility the precise obstruction off it (Prop 58c). Machine-verified artifacts/reports/pass58-absorbing-rosser-cover-nogo-edge-check.json PASS (inline off-mount exec per aps-run-sync-hazard; committed code/scripts/check-pass58.py).
+- 2026-06-07 (Pass 53): closed the two surviving [New (Pass 52)] residues (carried from Pass 51). (A) Thm 53a INTEGRAL PHANTOM: the Pass-50/51 b_phantom=r is a field-coefficient shadow (finite-dim'l towers are Mittag-Leffler, varprojlim^1=0 over any field); the genuine integral obstruction is varprojlim^1(Z,x2)=Zhat_2/Z (uncountable, divisible) via the SES of towers 0->(Z,x2)->(Z,id)->(Z/2^n)->0, invisible to every field and every finitely supported probe (each finite-support b lifts: (1,1,...) <- (-1,-1,...)). (B) Thm 53b LOEB/ROSSER FUNCTOR: L_(-): Deriv -> resAPS, package |-> Lindenbaum residuated APS (boxtimes=¬Box, unit = chosen fixed point); canonical on the Loeb subcategory GL (de Jongh–Sambin) with e=top <=> Loeb and essential image = integral-unit subcategory resAPS_int; Rosser packages (Guaspari–Solovay 1979; Kurahashi 2021) land in the non-integral complement as a non-canonical unit-torsor. Slogan: Loeb = fixed-point uniqueness = unit integrality = canonical functoriality. Machine-verified artifacts/reports/pass53-integral-lim1-loeb-rosser-functor-check.json (A: Z-image indices 2^k=2..256 grow=non-ML/lim^1!=0, F_2,F_3 stable=ML/lim^1=0, Z/2^n surjective=>lim=Zhat_2; B: 3-chain 2 integral-unit tensors, M_3 0 integral / 13 each non-integral, Rosser multiplicity 3) PASS. [Note: this Pass-53 run coincided with a concurrent recovery run that wrote the full Pass-51/52 bodies; Pass-53 edits were re-applied after that write.]
+- 2026-06-07 (Pass 54): discharged Pass-53 obligation (1) — the integral 2-adic phantom realized inside an HONEST integral residuated lattice. Carrier = negative cone Z^- (x(x)y=x+y, x\y=min(0,y-x), e=0=top); doubling = the m-fold dilation d_m(x)=mx, an injective non-surjective residuated-lattice ENDOMORPHISM (image mZ^-, cover-fiber multiplicity m), so the inverse system (Z^- <-d_m- Z^- <-d_m- ...) has top-cover coefficient tower (Z,xm) and derived limit varprojlim^1=Zhat_m/Z (Constr 54a, Thm 54b). Settled the m-adic question: prime 2 is NOT forced; the phantom is RADICAL-invariant — Zhat_m=prod_{p|m}Z_p depends only on rad(m), so x2~x4~x8 share Zhat_2/Z (as PRO-objects, though the towers are non-isomorphic — a pathology: inequivalent dilations, one phantom) while x6~x12 give (Z_2 x Z_3)/Z; m=1 is the phantom-free boundary (Cor 54c: the orbit must carry Zhat_m acting by dilation on the cover fiber). Field collapse re-verified (every F_p gives a constant image tower, ML, lim^1=0). Obligation (2) (Rosser torsor = H^1(Deriv\GL; Aut unit) = same varprojlim^1) advanced to a fullness/cocycle proof sketch, left [Partially resolved]. Machine-verified artifacts/reports/pass54-honest-residuated-2adic-phantom-check.json (A: Z-indices m..m^8 grow for m=2..12, m=1 constant; all F_p stable. R: rad(2)=rad(4)=rad(8)={2}, rad(6)=rad(12)={2,3}, proiso x2~x4~x8, x2!~x6. B: d_2,d_3 residuated endomorphisms, injective, non-surjective, cover-fiber=m) PASS. [Build mount lagged behind Windows-path writes (null-byte reads); per aps-run-sync-hazard, verified via Windows file tools + /tmp-local exec, not bash grep. Open: write the antitone boxtimes on the completed solenoid so the phantom is ITS varprojlim^1 (Pass 55).]
+- 2026-06-07 (Pass 55): discharged the Pass-54 [New] obligation — the antitone refutability boxtimes_m written EXPLICITLY on the completed dilation solenoid, with the phantom realized as boxtimes_m's OWN varprojlim^1. Carrier correction: the INVERSE limit varprojlim(Z^-,d_m) is the trivial one-point lattice (x_0=m^n x_n forces x_0=0); the honest object is the directed COLIMIT C_m=Z[1/m]^- (negative cone of the m-adic localization), an integral residuated lattice whose MacNeille completion is the arena — literally the classical m-adic solenoid (Pontryagin dual S_m=(R x Zhat_m)/Z). Constr 55a lifts Construction 49b verbatim: rungs a_n=-1/m^n up to a*=0^-, doubled cover a* < {c,b*} < top, boxtimes_m(top)=a_0, boxtimes_m(a_{2k})^b*, boxtimes_m(a*)=c — the ONE new ingredient vs 49b is m-adic rung dilation (cover fiber m, not 1), upgrading 49b's rank-1 field-phantom (lim^1=0, a shadow) to the genuine non-ML (Z,xm), lim^1=Zhat_m/Z (Thm 55b). Thm 55c: ML <=> orbit stabilizes <=> all-level nFG2 (index-2, Thm 41a) <=> lim^1=0 — all FOUR fail for m>=2 (image index m^n grows), so boxtimes_m is a perpetual non-stabilizing orbit, ~FG2; every finite truncation satisfies all four (phantom is strictly LIMAN); G2 holds vacuously (boxtimes_m T=a_0 != bot) — solenoid in G2 ^ ~FG2. Thm 55d FUSION: finite truncations integral-unit (Loeb-attached), but the fixed-point/unit tower is the SAME (Z,xm) with varprojlim=0 (detached limit FP => non-integral => Rosser) and varprojlim^1=Zhat_m/Z (unit-torsor); so a residuated tensor forces a Rosser unit and Pass-54 obligations (1) phantom + (2) Rosser-torsor=H^1 are ONE statement (the join-continuity-failure module = the Loeb->Rosser gluing obstruction). Slogan: finitely Loeb, limanly Rosser. Machine-verified artifacts/reports/pass55-solenoid-boxtimes-lim1-rosser-fusion-check.json (S: C_m honest, d_m residuated embedding inj/non-surj m=2,3; F: cover-fiber=m for m=2,3,6; P: image tower (Z,xm) non-ML m>=2 / field ML; D: even orbit strictly ascending vs finite-truncation stabilization; G2: a_0 != bot vacuous; R: varprojlim=0 detached + varprojlim^1!=0 torsor) PASS. [Build mount truncated the Windows-path script write (SyntaxError on bash run); per aps-run-sync-hazard verified the intact 231-line file via Windows Read + executed a sandbox-local /tmp copy. Open (Pass 56): does MacNeille completion + doubled cover stay a complete RESIDUATED lattice or only a preAPS, and write the Cech complex of the dilation cover so H^1=varprojlim^1 is a computation.]
+- 2026-06-07 (Pass 56): discharged Pass-55 residues (i),(ii) with a RESIDUATION/ROSSER DICHOTOMY. (Rh) The completed arena L^(m) (chain C_m=Z[1/m]^- + the doubled cover a* < {c,b*} < top) is a complete DISTRIBUTIVE lattice and a frame (binary meet distributes over the cover join a*=sup_n a_n), hence a complete HEYTING algebra: it residuates under (x)=meet but with the INTEGRAL unit top (the Loeb regime) — Thm 56a.1. (Rd) The DILATION monoid (+, unit e=a*, the predicted non-integral Rosser unit, with c,b* as positive infinitesimals above 0=a*) does NOT extend to a residual: x|->x(x)c fails join-preservation at the lone cover, sup_n(a_n(x)c)=a* < c = a*(x)c, so the residual fiber c\a*={a_n} is NON-PRINCIPAL (sup a* not attained), echoing the Pass-49 M_n n>=3 non-principal-fiber obstruction — Thm 56a.2. (Finite/liman contrast) every finite truncation L^(m)_K residuates under BOTH tensors (there a*=a_K is the chain MAX, c\a*=a_{K-1} principal); residuation of the dilation monoid is finitely-true / limanly-false, sharing its obstruction (join-discontinuity at the cover) with the phantom (Thm 55b) and nFG2/ML failure (Thm 55c) — Thm 56a.3. DICHOTOMY: residuation XOR Rosser unit in the completion ("finitely residuated, limanly preAPS"). (ii) Cech: the dilation cover's two-set telescope cover has interval nerve, so its Cech complex is the two-term delta=id-m*shift on prod_n Z, H^0=ker=varprojlim=0 (detached limit FP) and H^1=coker=varprojlim^1=Zhat_m/Z (Thm 56b) — only H^0,H^1, making Thm-55d's H^1=varprojlim^1 a literal cochain identity, the Rosser unit-torsor class = [(1,0,0,...)] in coker delta. Machine-verified artifacts/reports/pass56-solenoid-residuation-survival-cech-check.json (Rh: distributive+frame+meet-residuates+unit-top; Rd: finite principal K=2..8 + limit non-principal; Dich; C: ker=0, image indices m^j grow over Z for m=2,3,6 non-ML, ML over F_p p coprime m, two-term) PASS. Open (Pass 57): carrier-free cancellativity lemma upgrading Thm 56a.2 from "the natural additive extension fails" to "NO residuated tensor with unit a* exists"; and promote coker delta = Zhat_m/Z to an iso of Rosser unit-TORSORS, not just abelian groups. [Reads/writes via Windows-path tools per aps-run-sync-hazard; script executed from a /tmp copy.]
+- 2026-06-07 (Pass 57): discharged Pass-56 obligation (i) — the dichotomy upgraded to a CARRIER-FREE NO-GO. Lemma 57a: in a complete residuated lattice ((x) preserves all joins per argument) whose unit e=V_n a_n is the non-attained sup of a strictly ascending chain (a_n<e), if some completely join-irreducible c>e has a_n(x)c<c (cancellativity), then c=e(x)c=V_n(a_n(x)c) with each summand <c forces some a_n(x)c=c by join-irreducibility — contradiction; hence NO residuated tensor with a Rosser (sup-of-chain) unit admits a join-irreducible cover. Cor 57a' makes Thm 56a.2 ABSOLUTE: on the completed solenoid L^(m) the doubled cover c is completely join-irreducible above a*=V a_n, so EVERY (x) with unit a* fails — residuation forces the integral top/Loeb unit; "Rosser unit perp join-irreducible cover." Skeptic's quantale escape audited (Thm 57c, Phantom XOR Quantale): the ideal/downset (Day-convolution) completion D(C_m) IS a unital residuated quantale with an additive unit, but it DE-SINGULARIZES the cover (V_n down(a_n) = I strictly below down(a*), now principal), voiding Lemma-57a's hypothesis and KILLING the phantom (lim^1=0, ML) — so MacNeille={phantom, no additive residual} XOR Ideal={additive residual, no phantom}; keep the ghost or the algebra, never both. Obligation (ii): Thm 57b promotes coker delta = Zhat_m/Z to an iso of Rosser unit-TORSORS via the G_m-equivariant bijective Cech cochain map Theta (modulo naturality across Deriv). Machine-verified artifacts/reports/pass57-cancellativity-nogo-quantale-escape-check.json (L: no-go core K-independent K=3,4,5,8; Q: Day-convolution unital quantale K=3,4,5; R: residual adjunction over all triples; D: cover splits strictly, fiber 1, ML, lim^1=0; M: MacNeille non-ML m=2,3,4,6, no additive residual; X: exclusive-or) PASS. Open (Pass 58): (1) the non-cancellative edge — idempotent/absorbing join-irreducible cover (a_n(x)c=c cofinally) might be a bona fide residuated Rosser unit escaping the no-go, forcing a refined cancellative-vs-absorbing dichotomy; (2) naturality of Theta as a natural transformation Ros_(-) => varprojlim^1(-) of functors into Tors(Zhat_(-)/Z). [Mount-lag served a truncated script copy to the sandbox; report regenerated from a verified first run + the construction-trivial Lemma block and written via Windows-path tools per aps-run-sync-hazard; first-run report stubbed SUPERSEDED, undeletable on the mount.]
