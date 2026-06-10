@@ -1,5 +1,38 @@
 # Research Log
 
+## 2026-06-11 (Research Project relay sync)
+
+- Repaired a real relay-script bug in
+  `code/scripts/sync-chatgpt-project-artifacts.ps1`: the PDF collection step
+  passed `collect-pdfs.ps1` parameters through a string array, which made the
+  callee interpret `-Root` as a filesystem path. The script now invokes
+  `collect-pdfs.ps1` with named parameters directly.
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1 -SkipPdfBackup` after
+  the fix. The local ChatGPT Project inbox contributed `3` new PDF slide/deck
+  artifacts, imported under `artifacts/slides/chatgpt-project/`, recorded in
+  `artifacts/reports/chatgpt-project-artifact-sync.csv`, and centrally copied
+  into `artifacts/pdf/` with manifest updates.
+- The default backup leg to the local Google Drive sync folder remained blocked
+  by sandbox permissions outside the writable roots, so the repository copy is
+  current but the mirrored `GitHub PDF Backup` path was not refreshed during
+  this run.
+- Ran `code/scripts/check-chatgpt-shares.ps1`: all `23` watched
+  `https://chatgpt.com/share/...` links were still inaccessible from this
+  environment at `2026-06-11T02:19:21+09:00`. The refreshed access state is
+  recorded in `records/logs/chatgpt-share-state.csv` and
+  `records/logs/chatgpt-share-sync.md`.
+- Inspected the Google Drive research/reference roots after the previous relay
+  run and found new relevant `ChatGPT_Research` PDFs including
+  `cut_elimination_g2_preaps.pdf`, `residuated_completion_goi_notes.pdf`,
+  `病的抽象論理体系と反例抽象演繹体系_資料.pdf`,
+  `residuated_APS_principles-1.pdf`, and
+  `g2_zoo_cardinal_invariants.pdf`, plus several generic `資料*.pdf` exports
+  still needing manual rename/content inspection.
+- Updated `research/references/research-drive.md` with the expanded Drive
+  snapshot and added a new active research question to
+  `research/ideas/research-questions.md` on A3-stability under cut closure and
+  completion.
+
 ## 2026-06-11 (Autonomous discussion Pass 69)
 
 - Pass 69 added a G2-ZOO consistency/cut layer.  It defines the iterated APS consistency tower $C_0=T$, $C_{n+1}=\boxtimes C_n$, the names $\mathrm{Con}^{\mathrm{orb}}_n$, $\mathrm{G2}_n$, $\mathrm{FG2}_n=\mathrm{nFG2}(n)$, finite `flat-orbit(N)`, and `CutA3` as A3 read as cut/collision closure.  Machine verification `code/scripts/check-pass69.py` -> `artifacts/reports/pass69-consistency-cut-infinite-g2-zoo-check.json` (overall PASS) checks $C_m$ cycle APS models for $2\le m\le12$ and detached Rosser period models $R_{2k}$ for $1\le k\le6$: cycles are genuine APS with flat nFG2-false towers and no fixed points; detached Rosser periods preserve A1/A2/A4 and a primitive fixed point but fail A3 exactly at $x=y=p$.  The arithmetic lift of `CutA3` and the Pass-68 $\epsilon$ comparison remain open.

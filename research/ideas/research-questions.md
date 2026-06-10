@@ -2,6 +2,19 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-11: A3-stability under cut closure and completion)**
+  The new Drive additions `cut_elimination_g2_preaps.pdf` and
+  `residuated_completion_goi_notes.pdf` sharpen the same obstruction from two
+  sides: preAPS cut closure tends to break A3, while completion/quantale/GoI
+  constructions can preserve rich residual structure without yielding genuine
+  $\boxtimes$-fixed points. Open:
+  (i) classify exactly when reflexive-transitive cut closure of a preAPS still
+  satisfies A3;
+  (ii) compare that criterion with MacNeille/canonical/quantale completion and
+  determine which completions preserve or reflect A3/A4;
+  (iii) decide whether the surviving condition is best formulated as
+  contraction, interpolation, or a fibered Beck-Chevalley/exactness law.
+
 - **(Pass 69 retarget: arithmetic lift of consistency tower and CutA3)**
   Pass 69 added the APS-level tower $C_0=T$, $C_{n+1}=\boxtimes C_n$, with
   $\mathrm{Con}^{\mathrm{orb}}_n$, $\mathrm{G2}_n$, $\mathrm{FG2}_n$, finite

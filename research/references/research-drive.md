@@ -64,6 +64,32 @@ Top-level subfolders:
 - abs_aps_g2_relationships.pdf
 - aps_model_zoo_notes.pdf
 - cut_elimination_bs2016.pdf
+- 資料 (1).pdf
+- 資料.pdf
+- cut_elimination_g2_preaps.pdf
+- 資料-1.pdf
+- 病的抽象論理体系と反例抽象演繹体系_資料.pdf
+- residuated_completion_goi_notes.pdf
+- residuated_APS_principles-1.pdf
+- g2_zoo_cardinal_invariants.pdf
+
+### ChatGPT delta on 2026-06-11
+
+- `cut_elimination_g2_preaps.pdf` sharpens the preAPS-to-APS/cut-elimination
+  line: cut closure can destroy A3 unless an additional saturation or
+  contraction-like stability principle is imposed, so A3-stability is the main
+  obstruction.
+- `residuated_completion_goi_notes.pdf` extends the residuated
+  algebra/completion/quantale reading toward an Abstract GoI package rather
+  than a purely order-theoretic completion story.
+- `病的抽象論理体系と反例抽象演繹体系_資料.pdf` acts as a pathology atlas for
+  Tarski/fibered/pathological closure operators, APS/G2 countermodels, and
+  failure modes that should be compared against the existing finite-model zoo.
+- `g2_zoo_cardinal_invariants.pdf` appears to isolate the G2-ZOO/cardinal
+  invariant axis into a dedicated Drive PDF rather than leaving it embedded in
+  broader notes.
+- The generic `資料*.pdf` files are present in Drive but still need manual
+  rename/content inspection before they can be indexed as stable local notes.
 
 `ChatGPT_Study` currently contains:
 
