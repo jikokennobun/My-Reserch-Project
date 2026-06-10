@@ -1,0 +1,37 @@
+{
+  "pass": 57,
+  "thesis": "Carrier-free cancellativity no-go (Lemma 57a): no complete residuated tensor with a non-attained sup-of-chain (Rosser) unit e=a* under a completely-join-irreducible cover c can exist, because residuated tensors preserve all joins and would force V_n(a_n(x)c)=c against join-irreducibility. The quantale-escape audit (Thm 57c) confirms the no-go: the ideal/downset completion regains a residuated additive tensor only by de-singularizing the cover (splitting the sup off as a principal point), which voids Lemma-57a's hypothesis and kills the phantom. QUANTALE (residual+additive unit) XOR PHANTOM (lim^1!=0).",
+  "L_carrier_free_nogo_lemma_57a": {
+    "3": {"K": 3, "all_a_tensor_c_strictly_below_c": true, "sup_of_a_tensor_c": 2, "e_tensor_c_equals_c": true, "join_NOT_preserved": true, "no_residuated_tensor_with_supchain_unit": true},
+    "4": {"K": 4, "all_a_tensor_c_strictly_below_c": true, "sup_of_a_tensor_c": 3, "e_tensor_c_equals_c": true, "join_NOT_preserved": true, "no_residuated_tensor_with_supchain_unit": true},
+    "5": {"K": 5, "all_a_tensor_c_strictly_below_c": true, "sup_of_a_tensor_c": 4, "e_tensor_c_equals_c": true, "join_NOT_preserved": true, "no_residuated_tensor_with_supchain_unit": true},
+    "8": {"K": 8, "all_a_tensor_c_strictly_below_c": true, "sup_of_a_tensor_c": 7, "e_tensor_c_equals_c": true, "join_NOT_preserved": true, "no_residuated_tensor_with_supchain_unit": true}
+  },
+  "Q_ideal_completion_is_unital_quantale": {
+    "3": {"commutative": true, "associative": true, "unit_is_down0": true, "sup_distributive_all_joins": true, "is_unital_quantale": true},
+    "4": {"commutative": true, "associative": true, "unit_is_down0": true, "sup_distributive_all_joins": true, "is_unital_quantale": true},
+    "5": {"commutative": true, "associative": true, "unit_is_down0": true, "sup_distributive_all_joins": true, "is_unital_quantale": true}
+  },
+  "R_quantale_is_residuated": {
+    "3": {"adjunction_holds": true, "residual_total": true},
+    "4": {"adjunction_holds": true, "residual_total": true},
+    "5": {"adjunction_holds": true, "residual_total": true}
+  },
+  "D_cover_desingularizes_phantom_dies": {
+    "3": {"ideal_cover_join_size": 3, "down_astar_size": 4, "cover_splits_strictly_below": true, "cover_fiber_multiplicity": 1, "index_tower": [1,1,1,1,1,1,1,1], "Mittag_Leffler": true, "lim1_zero": true},
+    "4": {"ideal_cover_join_size": 4, "down_astar_size": 5, "cover_splits_strictly_below": true, "cover_fiber_multiplicity": 1, "index_tower": [1,1,1,1,1,1,1,1], "Mittag_Leffler": true, "lim1_zero": true},
+    "5": {"ideal_cover_join_size": 5, "down_astar_size": 6, "cover_splits_strictly_below": true, "cover_fiber_multiplicity": 1, "index_tower": [1,1,1,1,1,1,1,1], "Mittag_Leffler": true, "lim1_zero": true}
+  },
+  "M_macneille_phantom_no_additive_residual": {
+    "2": {"m": 2, "additive_join_continuity_FAILS_at_cover": true, "Z_image_indices": [2,4,8,16,32,64,128,256], "nonML_over_Z": true, "lim1_nonzero": true, "lim1_value": "hatZ_2/Z", "additive_residual_exists": false},
+    "3": {"m": 3, "additive_join_continuity_FAILS_at_cover": true, "Z_image_indices": [3,9,27,81,243,729,2187,6561], "nonML_over_Z": true, "lim1_nonzero": true, "lim1_value": "hatZ_3/Z", "additive_residual_exists": false},
+    "4": {"m": 4, "additive_join_continuity_FAILS_at_cover": true, "Z_image_indices": [4,16,64,256,1024,4096,16384,65536], "nonML_over_Z": true, "lim1_nonzero": true, "lim1_value": "hatZ_4/Z", "additive_residual_exists": false},
+    "6": {"m": 6, "additive_join_continuity_FAILS_at_cover": true, "Z_image_indices": [6,36,216,1296,7776,46656,279936,1679616], "nonML_over_Z": true, "lim1_nonzero": true, "lim1_value": "hatZ_6/Z", "additive_residual_exists": false}
+  },
+  "X_exclusive_or": {
+    "ideal": {"additive_residual": true, "phantom": false},
+    "macneille": {"additive_residual": false, "phantom": true},
+    "is_exclusive_or": true
+  },
+  "PASS": true
+}

@@ -1,0 +1,145 @@
+{
+  "pass": 47,
+  "title": "chain-cycle reachability is NOT confined by bottom-discipline; the gate is orbit flatness (B_N front geometry) + reachability; chain bracketing criterion = odd interval cardinality",
+  "A_C5_bottom_disciplined_chaincycle": {
+    "carrier": "C5 chain 0<1<2<3<4",
+    "boxtimes": "r(x)=4-x",
+    "T": 3,
+    "antitone": true,
+    "bottom_disciplined(bot=0 least)": true,
+    "orbit_seq": [
+      3,
+      1
+    ],
+    "eventual_cycle": [
+      3,
+      1
+    ],
+    "cycle_type": "chain",
+    "descends": false,
+    "fixed_points": [
+      2
+    ],
+    "fixed_point_attached_to_orbit": true,
+    "CLAIM_A_bottom_disciplined_chaincycle_reachable": true
+  },
+  "B_BN_chaincycle_exists_unreachable_from_T": {
+    "N": 2,
+    "carrier": [
+      "b",
+      "T",
+      "a1",
+      "a2",
+      "a3",
+      "s",
+      "U"
+    ],
+    "antitone": true,
+    "bottom_disciplined(b least)": true,
+    "T_orbit": [
+      "T",
+      "a1",
+      "a2",
+      "a3",
+      "s"
+    ],
+    "T_eventual_cycle": [
+      "s"
+    ],
+    "T_cycle_type": "degenerate",
+    "T_descends": true,
+    "bot_orbit_cycle": [
+      "b",
+      "U"
+    ],
+    "bot_cycle_type": "chain",
+    "chaincycle_{b,U}_exists": true,
+    "chaincycle_reachable_from_T": false,
+    "{b,U}_in_T_reachable_set": false,
+    "fixed_points": [
+      "s"
+    ],
+    "CLAIM_B_chaincycle_exists_but_unreachable_from_T": true
+  },
+  "C_bracketing_odd_even": {
+    "C5": {
+      "reversal": "r(x)=4-x",
+      "interval_cardinality": 5,
+      "parity": "odd",
+      "fixed_points": [
+        2
+      ],
+      "brackets_fixed_point": true
+    },
+    "C6": {
+      "reversal": "r(x)=5-x",
+      "interval_cardinality": 6,
+      "parity": "even",
+      "fixed_points": [],
+      "brackets_fixed_point": false
+    },
+    "C7": {
+      "reversal": "r(x)=6-x",
+      "interval_cardinality": 7,
+      "parity": "odd",
+      "fixed_points": [
+        3
+      ],
+      "brackets_fixed_point": true
+    },
+    "C8": {
+      "reversal": "r(x)=7-x",
+      "interval_cardinality": 8,
+      "parity": "even",
+      "fixed_points": [],
+      "brackets_fixed_point": false
+    },
+    "bracketing_criterion_holds": true
+  },
+  "D_census": {
+    "C5": {
+      "C5": {
+        "2": {
+          "antitone": 126,
+          "descent_implies_attached_violations": 0,
+          "T_reachable_chaincycle": 62,
+          "flat_cycle_is_chain": 0,
+          "cycle_types": {
+            "degenerate": 64,
+            "chain": 62
+          }
+        },
+        "3": {
+          "antitone": 126,
+          "descent_implies_attached_violations": 0,
+          "T_reachable_chaincycle": 72,
+          "flat_cycle_is_chain": 0,
+          "cycle_types": {
+            "degenerate": 54,
+            "chain": 72
+          }
+        },
+        "4": {
+          "antitone": 126,
+          "descent_implies_attached_violations": 0,
+          "T_reachable_chaincycle": 84,
+          "flat_cycle_is_chain": 0,
+          "cycle_types": {
+            "degenerate": 42,
+            "chain": 84
+          }
+        }
+      },
+      "bottom_disciplined": true
+    }
+  },
+  "overall": {
+    "A_bottom_disciplined_chaincycle_reachable": true,
+    "B_chaincycle_exists_but_unreachable_from_T": true,
+    "C_bracketing_criterion_odd_iff_fixed_point": true,
+    "D_bottom_disciplined_chaincycles_in_C5_census": 218,
+    "D_thm45b_descent_implies_attached_violations": 0,
+    "VERDICT_bottom_discipline_does_NOT_confine_chaincycles": true,
+    "PASS": true
+  }
+}

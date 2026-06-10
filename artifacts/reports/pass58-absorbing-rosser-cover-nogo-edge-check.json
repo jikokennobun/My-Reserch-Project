@@ -1,0 +1,21 @@
+{
+  "pass": 58,
+  "date": "2026-06-07",
+  "title": "Non-cancellative edge of Lemma 57a: the absorbing Rosser cap refutes unconditional survival",
+  "model": "W = (a_0 < a_1 < ... < e < c < top), unit e, tensor: x@y=bot if x=bot or y=bot; min(x,y) if x,y<=e; max(x,y) otherwise",
+  "claims": {
+    "L57a_survives_without_strictness": false,
+    "mechanism": "cofinal absorption a_n@c=c (n>=1) makes \\/_n(a_n@c)=c=e@c hold WITHOUT join-irreducibility forcing any summand; the Lemma-57a contradiction needs a_n@c<c (strict/cancellative)",
+    "fiber_c_over_e": "principal (= bottom), vs non-principal {a_n} in the cancellative case",
+    "cost": "absorbing cover is idempotent-region; image tower constant => Mittag-Leffler => varprojlim^1=0 => Rosser torsor degenerate (trivial witness-comparison action)"
+  },
+  "results": {
+    "K3": {"comm": true, "assoc": true, "unit": true, "mono": true, "residuated_adjunction": true, "join_preserving": true, "empty_join_law": true, "cofinal_absorb_an_c_eq_c": true, "bottom_zero": true, "c_cpl_join_irred_cover": true, "c_over_e": 0, "c_over_e_is_bottom": true, "join_an_c_eq_c": true, "nogo_evaded": true},
+    "K4": {"comm": true, "assoc": true, "unit": true, "mono": true, "residuated_adjunction": true, "join_preserving": true, "empty_join_law": true, "cofinal_absorb_an_c_eq_c": true, "bottom_zero": true, "c_cpl_join_irred_cover": true, "c_over_e": 0, "c_over_e_is_bottom": true, "join_an_c_eq_c": true, "nogo_evaded": true},
+    "K5": {"comm": true, "assoc": true, "unit": true, "mono": true, "residuated_adjunction": true, "join_preserving": true, "empty_join_law": true, "cofinal_absorb_an_c_eq_c": true, "bottom_zero": true, "c_cpl_join_irred_cover": true, "c_over_e": 0, "c_over_e_is_bottom": true, "join_an_c_eq_c": true, "nogo_evaded": true},
+    "K8": {"comm": true, "assoc": true, "unit": true, "mono": true, "residuated_adjunction": true, "join_preserving": true, "empty_join_law": true, "cofinal_absorb_an_c_eq_c": true, "bottom_zero": true, "c_cpl_join_irred_cover": true, "c_over_e": 0, "c_over_e_is_bottom": true, "join_an_c_eq_c": true, "nogo_evaded": true},
+    "cancellative_contrast_K8": {"fiber_is_all_a_n": true, "fiber": [0,1,2,3,4,5,6,7]}
+  },
+  "PASS": true,
+  "exec_note": "Run via inline python3 heredoc re-deriving the committed check-pass58.py logic; the bash mount lagged behind the Windows-path write (served a 160-line truncated copy, SyntaxError at line 161), so per the aps-run-sync-hazard note correctness was confirmed off-mount. The committed script (code/scripts/check-pass58.py, 169 lines) is the ground-truth source."
+}

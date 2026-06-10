@@ -1,0 +1,94 @@
+{
+  "pass": 51,
+  "A_euler_completeness": {
+    "total_antitone_maps_scanned": 584759,
+    "posets_sizes": "1..5",
+    "violations_Fix_is_antichain": 0,
+    "violations_e_equals_cardinality": 0,
+    "violations_e0_with_nonempty_Fix": 0,
+    "e_values_by_fixcount": {
+      "0": [
+        0
+      ],
+      "1": [
+        1
+      ],
+      "2": [
+        2
+      ],
+      "3": [
+        3
+      ],
+      "4": [
+        4
+      ],
+      "5": [
+        5
+      ]
+    },
+    "crown_order_complex_chi": 0,
+    "crown_is_antichain": false,
+    "note": "Fix(antitone) is always an antichain (p<q fixed => q=box q<=box p=p). Hence Delta(F^tau) is discrete and e(F^tau)=|F^tau|. e=0 iff Fix empty iff no bracket: e is a complete bracket invariant; e=0 with Fix nonempty is impossible. The 6-crown has chi=0 (an order-complex S^1) but is NOT an antichain, so it is the fixed-vertex set of no order-reversing involution.",
+    "PASS": true
+  },
+  "B_phantom_cohomology": {
+    "fans": {
+      "1": {
+        "antitone": true,
+        "failed_covers": 1,
+        "gap_independence": true,
+        "finite_stage_gap_removable": true,
+        "dim_H1_infinite_limit": 1,
+        "b_phantom": 1
+      },
+      "2": {
+        "antitone": true,
+        "failed_covers": 2,
+        "gap_independence": true,
+        "finite_stage_gap_removable": true,
+        "dim_H1_infinite_limit": 2,
+        "b_phantom": 2
+      },
+      "3": {
+        "antitone": true,
+        "failed_covers": 3,
+        "gap_independence": true,
+        "finite_stage_gap_removable": true,
+        "dim_H1_infinite_limit": 3,
+        "b_phantom": 3
+      }
+    },
+    "note": "Ob^*(P_r)=[0->C^1->0], C^1=F^{failed covers}; in the infinite limit C^0=0, so dim H^1 = #failed covers = r = b_phantom. The phantom is the lim^1 of the image tower box(o^i_n), additive over independent arms. At finite truncation the gap is removable (finite_stage_gap_removable=true): the phantom is irreducibly infinitary. Over a field lim^1 of finite-dim'l towers vanishes, so the cohomology is genuine over Z; the check verifies antitonicity, the failed-cover count r, and gap independence.",
+    "PASS": true
+  },
+  "C_rosser_loeb_unit_correspondence": {
+    "rosser_R2_detached": {
+      "antitone": true,
+      "detached": true,
+      "integral_unit_top_tensors": 0,
+      "nonintegral_units_available": [
+        "o0",
+        "o1",
+        "p"
+      ],
+      "join_irreducibles": [
+        "o0",
+        "o1",
+        "p"
+      ]
+    },
+    "loeb_C3_attached": {
+      "antitone": true,
+      "bracketed_attached": true,
+      "integral_unit_top_tensors": 1
+    },
+    "dictionary": "attached <-> Loeb (de Jongh-Sambin) <-> integral unit (1=top); detached <-> Rosser-evades-Loeb <-> non-integral unit (1!=top). R_2: 0 integral tensors, non-integral available. C_3 Goedel chain: integral unit top works. Integral/non-integral is the algebraic image of the Loeb/Rosser gate.",
+    "PASS": true
+  },
+  "overall": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "PASS": true
+  }
+}

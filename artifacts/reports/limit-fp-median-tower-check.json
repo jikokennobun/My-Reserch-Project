@@ -1,0 +1,55 @@
+{
+  "pass": 41,
+  "title": "limit fixed point s_omega and the median tower",
+  "A_antitone_index2_collapse": {
+    "claim": "all-level nFG2 (levels 1,2) + antitone  =>  boxtimes^2 T == boxtimes^3 T",
+    "posets_with_unique_top_checked": 88,
+    "antitone_maps_checked": 2618,
+    "counterexamples": 0,
+    "verdict": "PASS"
+  },
+  "B_limit_fp_obstruction": {
+    "claim": "a fixed point order-related to an antichain orbit breaks antitonicity; only a detached fixed point survives, and it does not cap the orbit",
+    "placements": [
+      {
+        "placement": "sigma_below_orbit (meet s_omega)",
+        "antitone_survives": false,
+        "cyclic_order": false
+      },
+      {
+        "placement": "sigma_above_orbit (join)",
+        "antitone_survives": false,
+        "cyclic_order": false
+      },
+      {
+        "placement": "sigma_sandwiched (a3<=sigma<=a1)",
+        "antitone_survives": false,
+        "cyclic_order": false
+      },
+      {
+        "placement": "sigma_detached (incomparable to orbit)",
+        "antitone_survives": true,
+        "cyclic_order": false
+      }
+    ],
+    "verdict": "PASS"
+  },
+  "C_median_tower_phantom": {
+    "claim": "each obstructing pair {T,e_i} forces median c=T v e_i; the limit pair {T, /\\ e_i} forces only T; the strict gap c>T is a phantom median (failure of join-infinite-distributivity)",
+    "k": 4,
+    "is_lattice": true,
+    "pair_joins_T_e": {
+      "e1": "c",
+      "e2": "c",
+      "e3": "c",
+      "e4": "c"
+    },
+    "all_pair_joins_equal_c": true,
+    "meet_of_all_e": "eps",
+    "join_T_with_meet_of_e (limit median)": "T",
+    "meet_of_all_pair_joins (tower limit)": "c",
+    "phantom_gap_c_strictly_above_T": true,
+    "verdict": "PASS"
+  },
+  "overall_verdict": "PASS"
+}

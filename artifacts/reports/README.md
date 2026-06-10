@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass65-verdier-dual-recollement-functional-equation-check.json`: verifies the
+  Pass-65 finite-model Verdier-dual recollement calculation.  It checks the
+  $i^!$ local-support ranks, the signed transpose rule
+  $\mathbb D(d_S)=-d_S^T$, duality squared, mod-2 sign collapse, and
+  finite-prime naturality.
+
 - `noncommutative-selective-median-check.json`: verifies the Pass-38
   two-residual selective-median construction for an $S_3$ front. The median case
   is fully residuated; the no-median and full-cap controls fail with the

@@ -1,0 +1,321 @@
+{
+  "name": "R4-residuated",
+  "carrier": [
+    "bot",
+    "o0",
+    "o1",
+    "o2",
+    "o3",
+    "p",
+    "U"
+  ],
+  "order": [
+    [
+      "bot",
+      "bot"
+    ],
+    [
+      "o0",
+      "o0"
+    ],
+    [
+      "o1",
+      "o1"
+    ],
+    [
+      "o2",
+      "o2"
+    ],
+    [
+      "o3",
+      "o3"
+    ],
+    [
+      "p",
+      "p"
+    ],
+    [
+      "U",
+      "U"
+    ],
+    [
+      "bot",
+      "o0"
+    ],
+    [
+      "bot",
+      "o1"
+    ],
+    [
+      "bot",
+      "o2"
+    ],
+    [
+      "bot",
+      "o3"
+    ],
+    [
+      "bot",
+      "p"
+    ],
+    [
+      "bot",
+      "U"
+    ],
+    [
+      "o0",
+      "U"
+    ],
+    [
+      "o1",
+      "U"
+    ],
+    [
+      "o2",
+      "U"
+    ],
+    [
+      "o3",
+      "U"
+    ],
+    [
+      "p",
+      "U"
+    ]
+  ],
+  "top": "U",
+  "bottom": "bot",
+  "box": {
+    "bot": "bot",
+    "o0": "o0",
+    "o1": "o1",
+    "o2": "o2",
+    "o3": "o3",
+    "p": "p",
+    "U": "U"
+  },
+  "refutability": {
+    "o0": "o1",
+    "o1": "o2",
+    "o2": "o3",
+    "o3": "o0",
+    "p": "p",
+    "bot": "U",
+    "U": "bot"
+  },
+  "metadata": {
+    "purpose": "Period-4 Rosser gadget R_4 (Pass 48) equipped with a same-carrier/order commutative full-residuated tensor (Pass 49).",
+    "construction": "Bare 5-atom diamond M5 = {bot, o0,o1,o2,o3, p, U}; refutability = the 4-cycle on the o_i plus the DETACHED fixed point p (box p = p). Tensor: non-integral commutative residuated monoid with UNIT = p (the detached fixed point itself).",
+    "FP_synt": "realized at the detached fixed point p, which is also the tensor unit",
+    "detached": true,
+    "eventual_cycle": [
+      "o0",
+      "o1",
+      "o2",
+      "o3"
+    ],
+    "cycle_is_antichain": true,
+    "front_orbit_group": "Z/4 (regular representation; the 4-cycle is the free Z/4 orbit)",
+    "residuation": "full (commutative)",
+    "residuation_count_this_lattice": "411 with unit=o0, 411 with unit=p (S4 front-symmetry classes), 0 integral (unit=U)",
+    "integral_obstruction": "unit=U fails: residual a\\bot has the non-principal fiber {b}+(atoms\\{a}) (the M_n n>=3 obstruction). The escape REQUIRES a non-integral unit.",
+    "contrast": "Front rigidity (Pass 34/35) forbids group TENSORS on B_N fronts (|G|=1); it does NOT forbid a group ORBIT carrying a detached fixed point. On the relation-free diamond the forced orthogonal U-spread band is itself residuated.",
+    "report": "artifacts/reports/pass49-bracketing-phantom-grouporbit-check.json"
+  },
+  "unit": "p",
+  "tensor": {
+    "bot": {
+      "bot": "bot",
+      "o0": "bot",
+      "o1": "bot",
+      "o2": "bot",
+      "o3": "bot",
+      "p": "bot",
+      "U": "bot"
+    },
+    "o0": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "o0",
+      "o2": "o0",
+      "o3": "o0",
+      "p": "o0",
+      "U": "o0"
+    },
+    "o1": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "U",
+      "o2": "U",
+      "o3": "U",
+      "p": "o1",
+      "U": "U"
+    },
+    "o2": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "U",
+      "o2": "U",
+      "o3": "U",
+      "p": "o2",
+      "U": "U"
+    },
+    "o3": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "U",
+      "o2": "U",
+      "o3": "U",
+      "p": "o3",
+      "U": "U"
+    },
+    "p": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "o1",
+      "o2": "o2",
+      "o3": "o3",
+      "p": "p",
+      "U": "U"
+    },
+    "U": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "U",
+      "o2": "U",
+      "o3": "U",
+      "p": "U",
+      "U": "U"
+    }
+  },
+  "leftResidual": {
+    "bot": {
+      "bot": "U",
+      "o0": "U",
+      "o1": "U",
+      "o2": "U",
+      "o3": "U",
+      "p": "U",
+      "U": "U"
+    },
+    "o0": {
+      "bot": "bot",
+      "o0": "U",
+      "o1": "bot",
+      "o2": "bot",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    },
+    "o1": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "p",
+      "o2": "bot",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    },
+    "o2": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "bot",
+      "o2": "p",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    },
+    "o3": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "bot",
+      "o2": "bot",
+      "o3": "p",
+      "p": "bot",
+      "U": "U"
+    },
+    "p": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "o1",
+      "o2": "o2",
+      "o3": "o3",
+      "p": "p",
+      "U": "U"
+    },
+    "U": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "bot",
+      "o2": "bot",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    }
+  },
+  "rightResidual": {
+    "bot": {
+      "bot": "U",
+      "o0": "U",
+      "o1": "U",
+      "o2": "U",
+      "o3": "U",
+      "p": "U",
+      "U": "U"
+    },
+    "o0": {
+      "bot": "bot",
+      "o0": "U",
+      "o1": "bot",
+      "o2": "bot",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    },
+    "o1": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "p",
+      "o2": "bot",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    },
+    "o2": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "bot",
+      "o2": "p",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    },
+    "o3": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "bot",
+      "o2": "bot",
+      "o3": "p",
+      "p": "bot",
+      "U": "U"
+    },
+    "p": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "o1",
+      "o2": "o2",
+      "o3": "o3",
+      "p": "p",
+      "U": "U"
+    },
+    "U": {
+      "bot": "bot",
+      "o0": "o0",
+      "o1": "bot",
+      "o2": "bot",
+      "o3": "bot",
+      "p": "bot",
+      "U": "U"
+    }
+  }
+}

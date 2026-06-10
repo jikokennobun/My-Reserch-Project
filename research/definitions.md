@@ -453,9 +453,667 @@ $\{b,a_{p^{-1}r}\}$) or the whole carrier (cofinal at $U$); no proper infinite
 fiber arises, so full residuation needs no infinitary suprema beyond the
 absorbing top. Residuation transfers verbatim to $\mathbb Z,\mathbb Q,S_\infty$.
 
-**Limit fixed point $s_\omega$ (Pass 40).** When the front is infinite and also
-carries the $\boxtimes$-orbit, the orbit $T\to a_1\to a_2\to\cdots$ has no
-terminal stage; nFG2($k$) is false for all finite $k$ and FP-synt fails unless
-one adjoins $s_\omega:=\bigwedge_{n<\omega}\boxtimes^n T$ (the orbit meet) with
-$\boxtimes s_\omega=s_\omega$. This is the orbit-side (not front/residual-side)
-completion; cf. the on-file infinite-orbit-stabilization problem.
+**Limit fixed point $s_\omega$ (Pass 40, REFUTED Pass 41).** Originally proposed:
+when the front is infinite and carries the $\boxtimes$-orbit, adjoin
+$s_\omega:=\bigwedge_{n<\omega}\boxtimes^n T$ (the orbit meet) with $\boxtimes
+s_\omega=s_\omega$ to recover FP-synt. **Pass 41 refutes this as an order-attached
+fixed point (Theorem 41b):** for an antitone $\boxtimes$, no fresh $\sigma$ with
+$\boxtimes\sigma=\sigma$ that is below all / above all / sandwiche
+
+**Orbit flatness and $T$-reachability of a cycle (Pass 47).** For an antitone
+$\boxtimes$ on a finite poset $L$ and seed $T$, write $o_n=\boxtimes^n T$ and let
+$C\subseteq\{o_n\}$ be the *eventual cycle* (the terminal $\boxtimes$-periodic
+set of the orbit). The orbit is **flat** if $C$ is an antichain (a singleton
+counts). A cycle $K\subseteq L$ is **$T$-reachable** if $K=C$ for the orbit of
+$T$ (equivalently $\exists n\, o_n\in K$). The Pass-44 local equivalence
+"$T$-orbit descends $\Leftrightarrow$ $T$ reaches an attached fixed point" holds
+along $O(T)$ exactly when the orbit is flat (Thm 47b); this gate is *independent*
+of bottom discipline ($C_5$ is bottom-disciplined-but-not-flat; the
+sub-$\bot$-augmented $R_2$ is flat-but-not-bottom-disciplined), and $B_N$
+satisfies it because its front is an antichain with a degenerate sink, not
+because $\bot$ is least (Prop 47c). The correct predicate is *reachability*, not
+*existence*: a $\{\bot,U\}$ chain-cycle may coexist in a flat $B_N$ yet be
+unreachable from $T$.
+
+**Bracketing involution and cube-gap (Pass 48).** For a comparable eventual
+$2$-cycle $\{a,b\}$, $a<b$, on a finite poset, the interval $I=[a,b]$ is
+$\boxtimes$-invariant, $F:=\mathrm{Fix}(\boxtimes^2)\cap I$ contains $a,b$, and
+the **bracketing involution** is $\tau:=\boxtimes|_F$, an order-reversing
+involution of $F$ swapping $a\leftrightarrow b$. The cycle **brackets** a fixed
+point iff $\tau$ has a fixed point; sufficiently, $|F|$ odd (Thm 48a). On a chain
+$F=I$, recovering Thm 47d. A **cube-gap** is a comparable $2$-cycle with
+$\mathrm{Fix}(\boxtimes)\cap I=\varnothing$ on a fat interval; the paradigm is the
+Boolean cube $2^{[n]}$ under complementation $\boxtimes S=S^c$, with comparable
+$2$-cycle $\{\varnothing,[n]\}$, $|I|=2^n$, and no fixed point. The cube shows
+that neither $|I|$ nor its parity controls bracketing (the same $2^2$ carries an
+order-reversing involution with two fixed points); only the cycle type of $\tau$
+does. Cube-gaps are the higher-dimensional analogue of the even-chain Rosser gap
+and of the $M_3$ gadget $R_2$.
+
+**Period-$2k$ Rosser gadget $R_{2k}$ (Pass 48).** The family generalizing the
+Pass-42 gadget $R_2$: carrier $\{b,o_0,\dots,o_{2k-1},p,U\}$ with $b$ least, $U$
+greatest, $\{o_0,\dots,o_{2k-1},p\}$ an antichain, $\boxtimes$ the $2k$-cycle on
+the $o_i$ together with $\boxtimes p=p$, $\boxtimes b=U$, $\boxtimes U=b$. Each
+$R_{2k}$ is antitone, realizes FP-synt via the *detached* fixed point $p$, and has
+a fixed-point-free antichain eventual cycle of even period $2k$ reachable from
+$T=o_0$. By Prop 48c (period-$k$ detachment) any $\boxtimes$-fixed point
+coexisting with an antichain cycle of period $\ge2$ is necessarily detached, so
+$R_{2k}$'s $p$ is forced incomparable to the entire orbit. $R_4$ is the first new
+instance; its $\boxtimes^2$ is a free $\mathbb Z/2$ on the front
+$(o_0\,o_2)(o_1\,o_3)$.
+
+### Smith bracketing / fixed-vertex criterion (Pass 49)
+
+Given an antitone $\boxtimes$ with a comparable eventual $2$-cycle $\{a,b\}$
+($a<b$), invariant interval $I=[a,b]$, fixed-square set
+$F=\mathrm{Fix}(\boxtimes^2)\cap I$, and bracketing involution
+$\tau=\boxtimes|_F$ (order-reversing, $\tau(a)=b$), let $\Delta(F)$ be the
+**order complex** of $F$ (simplices = nonempty chains). $\Delta(F)$ is
+$\mathbb F_2$-acyclic (cone with apex $a=\min F$), and $\tau$ acts simplicially.
+By Smith theory the fixed subcomplex $|\Delta(F)|^{\tau}$ is nonempty and
+$\mathbb F_2$-acyclic with Lefschetz number $L(\tau)=1$. The **Smith bracketing
+criterion** is
+$$
+\boxtimes\text{ brackets in }I\iff |\Delta(F)|^{\tau}\text{ meets the }0\text{-skeleton}
+\iff \exists\ \tau\text{-invariant chain of odd cardinality.}
+$$
+The **cube-gap** is the degenerate witness $F=2^{[n]}$, $\tau=$ complementation,
+where $|\Delta(F)|^{\tau}$ is the lone barycenter of the flipped edge
+$\{\varnothing,[n]\}$ — nonempty/acyclic but vertex-free, hence no bracket; odd
+$|F|$ (Thm 48a) is the special case $F=$ a single odd invariant chain.
+
+### Phantom chain-lattice $P$ (Pass 49)
+
+The complete lattice
+$P=\{o_0<o_1<\cdots\}\cup\{a^{*}=\bigvee_n o_n\}\cup\{m\}\cup\{b^{*}\}\cup\{\top\}$
+with covers $a^{*}\prec m$, $a^{*}\prec b^{*}$, $m\prec\top$, $b^{*}\prec\top$
+(so $a^{*}$ has two covers). An antitone $\boxtimes$ with
+$\boxtimes(o_{2n})\uparrow b^{*}$ and $\boxtimes(a^{*})=m<b^{*}$ fails
+join-continuity at the **single** cover $a^{*}\prec\{m,b^{*}\}$, producing a
+phantom limit $2$-cycle (Construction 49b). Demonstrates: one failed join-cover
+suffices to reinstate the Thm-41c phantom; join-continuity (Thm 48b) is not
+relaxable to "continuous off a finite set."
+
+### Group-orbit Rosser gadget / non-integral unit (Pass 49)
+
+The relation-free diamond $M_5=\{\bot,o_0,o_1,o_2,o_3,p,\top\}$ with box$=\mathrm{id}$,
+refutability the free $\mathbb Z/4$-orbit $(o_0\,o_1\,o_2\,o_3)$, and detached fixed
+point $\boxtimes p=p$, equipped with a commutative full-residuated tensor whose
+**unit is the non-integral element $p$** (equivalently $o_0$). Census:
+$411$ residuated tensors with unit $=p$ (and $411$ with unit $=o_0$, the $S_4$
+front-symmetry classes), $0$ integral (unit $=\top$). Integral obstruction = the
+$M_n$ ($n\ge3$) phenomenon: $\top\backslash\bot$ has the non-principal fiber
+$\{b\}\cup(\text{atoms}\setminus\{a\})$. Establishes (Thm 49d) that front rigidity
+forbids group *tensors* on a $B_N$ front but NOT a free group *orbit* carrying a
+detached fixed point, the escape REQUIRING a non-integral unit. Witness:
+`code/models/examples/R4-residuated.json`.
+
+## Self-dual subposet $F^{\tau}$ and the vertex-counting Euler invariant $e(F^\tau)$ (Pass 50)
+
+For a comparable eventual $2$-cycle with bracketing involution
+$\tau=\boxtimes|_F$ on $F=\mathrm{Fix}(\boxtimes^2)\cap I$, the **self-dual
+subposet** is $F^{\tau}=\{x\in F:\boxtimes x=x\}$ (the $\boxtimes$-fixed elements
+of the interval). Its **vertex-counting Euler invariant** is
+$e(F^{\tau})=\chi(\Delta(F^{\tau}))$, the Euler characteristic of its order
+complex. By the Hopf-trace split of the simplicial Lefschetz number,
+$L(\tau)=e(F^{\tau})+\Phi(\tau)=1$, where $\Phi(\tau)$ is the signed count of
+*flipped* $\tau$-invariant chains (Thm 50a). Unlike the topological
+$\chi(|\Delta(F)|^{\tau})\equiv1$, $e(F^{\tau})$ sees the $0$-skeleton: $e\ne0$
+witnesses the bracket, $e=0$ (with $\Phi=1$) is the cube-gap.
+
+## Phantom Betti number $b_{\mathrm{phantom}}$ (Pass 50)
+
+For an antitone $\boxtimes$ on a complete lattice, $b_{\mathrm{phantom}}$ counts
+the independent phantom $2$-cycles created by failures of join-continuity. On the
+fan $P_r$ of $r$ order-independent even-orbit arms (Constr 50b),
+$b_{\mathrm{phantom}}(P_r)=\#\{\text{failed join-covers}\}=r$; phantoms are
+additive in independent discontinuities (one failed cover $=$ one phantom).
+
+## Front-cardinality decoupling: group-orbit vs group-tensor (Pass 50)
+
+A finite group $G$ can enter a preAPS in two disjoint ways. As a **group tensor**
+on a $B_N$ front it is killed by front rigidity (Pass 34/35: only the orthogonal
+zero-band survives residuation). As a **free group orbit** of refutability on an
+antichain front of $M_{|G|+1}$ (with a detached fixed point $p$) it survives, and
+the accompanying commutative full-residuated tensor depends ONLY on the front
+cardinality $n=|G|$, never on the multiplication of $G$ (Thm 50d). Thus
+abelian/non-abelian fronts of equal size are residuation-indistinguishable: the
+group law is carried entirely by the $\boxtimes$-orbit, the tensor by $n$. The
+escape requires a **non-integral unit** ($p\ne\top$).
+
+## Fixed-point antichain lemma & deflation of $e(F^{\tau})$ (Pass 51)
+
+For any antitone $\boxtimes:L\to L$, $\mathrm{Fix}(\boxtimes)$ is an **antichain**
+(Lemma 51a: $p\le q$ both fixed $\Rightarrow q=\boxtimes q\le\boxtimes p=p$).
+Consequently the self-dual subposet $F^{\tau}=\mathrm{Fix}(\boxtimes)\cap I$ has a
+*discrete* order complex, and the vertex-counting Euler invariant collapses to a
+cardinality:
+$$ e(F^{\tau})=\chi(\Delta(F^{\tau}))=|F^{\tau}|. $$
+Hence $e$ is a **complete** bracket invariant ($e=0\iff F^{\tau}=\varnothing\iff$
+no bracket), but tautologically so — "$e=0$ with $F^{\tau}\ne\varnothing$" is
+impossible and the order-complex-circle pathology is unrealizable as a fixed-vertex
+set (Thm 51a). The genuine homological content is the **flipped invariant**
+$\Phi(\tau)=L(\tau)-e(F^{\tau})=1-|F^{\tau}|$ (the cube-gap is $\Phi=1$).
+
+## Phantom as $\varprojlim^1$ / obstruction complex (Pass 51)
+
+The phantom $2$-cycle of an antitone $\boxtimes$ at a failed join-cover is the
+nonvanishing of $\varprojlim^1$ of the image tower $(\boxtimes o_n)_n$: the failure
+$\boxtimes(\bigvee_n o_n)<\bigwedge_n\boxtimes o_n$ of $\boxtimes$ to commute with a
+directed join. The **obstruction complex** is $\mathrm{Ob}^\bullet(P_r)=[\,0\to
+C^1\to0\,]$ with $C^1=\mathbb F^{\{\text{failed join-covers}\}}$ and $C^0=0$
+(infinitary rigidity), so the **phantom Betti number** is upgraded from a count to
+a cohomology dimension, $b_{\mathrm{phantom}}(P_r)=\dim_{\mathbb F}H^1=r$, additive
+because $\varprojlim^1$ commutes with finite direct sums (Thm 51b). Field
+coefficients make $\varprojlim^1$ of finite-dimensional towers vanish, so the
+genuine cohomology is taken over $\mathbb Z$; $C^0=0$ is a property of the
+completion, not of finite truncations.
+
+## Integral vs non-integral unit = Löb vs Rosser (Pass 51)
+
+The unit of a full residuated tensor on an APS is **integral** if $1=\top$ and
+**non-integral** otherwise. For $\boxtimes=\neg\Box$ with $\boxtimes$-fixed point
+$\phi$: an integral unit exists iff $\phi$ is orbit-**attached** ($\phi=\boxtimes
+\bot$), which arithmetically is the de Jongh–Sambin Löb-coincidence
+$\phi\equiv\mathrm{Con}_T$; the unit is forced non-integral iff $\phi$ is
+**detached**, realized only by a Rosser predicate $\Box_R$ keeping
+$D1+\Sigma_1$-completeness but evading Löb (Guaspari–Solovay 1979; Kurahashi 2021).
+Thus "non-integral unit" is the algebraic shadow of "Rosser predicate evading Löb"
+(Thm 51c). Witnesses: attached 3-chain Gödel (integral unit $\top$); detached
+$R_2/M_3$ ($0$ integral, non-integral units $\{o_0,o_1,p\}$).
+
+## Flipped invariant $\Phi(\tau)$ and the flipped-chain sign $s(d)$ (Pass 52)
+
+For a finite poset $F$ with minimum and an order-reversing involution
+$\tau=\boxtimes|_F$ acting on the $\mathbb F_2$-acyclic order complex $\Delta(F)$,
+the **flipped invariant** is $\Phi(\tau):=L(\tau)-e(F^{\tau})=1-|F^{\tau}|$, the
+genuine homological residue after the Thm-51a deflation $e(F^{\tau})=|F^{\tau}|$.
+Its intrinsic formula (Thm 52a) is $\Phi(\tau)=\sum_{d\ge1}s(d)N_d$, a signed
+count of $\tau$-invariant $d$-chains ($N_d$ of them) weighted by the
+**flipped-chain sign**
+$$ s(d)=(-1)^{d}(-1)^{d(d+1)/2}=+1\ (d\equiv0,1),\ -1\ (d\equiv2,3)\ (\mathrm{mod}\ 4), $$
+the period-4 pattern $+\,+\,-\,-$ arising as the simplicial degree sign times the
+sign of the vertex-reversal permutation of an invariant chain.
+
+## Fixed-antichain fan $F_m$ (Pass 52)
+
+The poset $F_m=(\hat0<a_1,\dots,a_m<\hat1)$ with $a_1,\dots,a_m$ pairwise
+incomparable and the order-reversing involution $\tau$ swapping
+$\hat0\leftrightarrow\hat1$ and fixing every $a_i$. It is the pathological
+extremal-*negative* companion of the cube: $|F^{\tau}|=m$ and $\Phi(\tau)=1-m$,
+so the fan witnesses $\inf\Phi=-\infty$ (Thm 52b) while the cube/$C_4$ witness
+$\sup\Phi=+1$. The $m$ flipped triangles $\{\hat0<a_i<\hat1\}$ ($s(2)=-1$) cancel
+the $m$ fixed vertices to the single residual flipped edge $\{\hat0,\hat1\}$.
+
+## Geometric vs combinatorial fixed-point Euler characteristic (Pass 52)
+
+$\chi(|\Delta(F)|^{\tau})$ is the **geometric** (topological) fixed-point Euler
+characteristic — by Smith theory $=1$ on an $\mathbb F_2$-acyclic complex —
+counting barycenters of *all* $\tau$-invariant simplices; $\chi(\Delta(F^{\tau}))=
+|F^{\tau}|$ is the **combinatorial** one, counting only fixed *vertices*. Their gap
+is exactly $\Phi(\tau)=\chi(|\Delta(F)|^{\tau})-\chi(\Delta(F^{\tau}))$ (Thm 52c);
+$\Phi\ne0$ iff the geometric fixed set carries flipped-chain barycenters invisible
+to the vertex count.
+
+## Dilation solenoid, integral phantom, and the Rosser-unit no-go (Pass 53–57)
+
+*(Consolidated vocabulary for the Pass 53–57 thread; entries 53–56 are recorded here
+compactly to restore the glossary after a mount-lag run skipped their inserts.)*
+
+The **integral phantom** is the derived limit $\varprojlim^1(\mathbb Z,\times m)=
+\widehat{\mathbb Z}_m/\mathbb Z$ ($\widehat{\mathbb Z}_m=\prod_{p\mid m}\mathbb Z_p$),
+uncountable and divisible, of the dilation coefficient tower (Pass 53/54). It is
+**radical-invariant** (depends only on $\mathrm{rad}(m)$) and a *field shadow*: over
+any field the tower is Mittag–Leffler and $\varprojlim^1=0$, so the phantom is purely
+integral and invisible to every finitely supported probe.
+
+The **dilation solenoid** is the honest carrier: $C_m=\varinjlim(\mathbb Z^-,d_m)=
+\mathbb Z[1/m]^-$, the negative cone of the $m$-adic localization (the *inverse* limit
+is the one-point lattice), whose MacNeille completion is the classical $m$-adic
+solenoid $\mathbb S_m=(\mathbb R\times\widehat{\mathbb Z}_m)/\mathbb Z$. The
+**dilation refutability** $\boxtimes_m$ (Constr 55a) is Construction 49b with $m$-adic
+rungs $a_n=-1/m^n\uparrow a^\ast$; its join-continuity fails at the single cover
+$a^\ast$ with failure module $(\mathbb Z,\times m)$, so the phantom is $\boxtimes_m$'s
+own $\varprojlim^1$. **ML $=$ nFG2 dichotomy** (Thm 55c): Mittag–Leffler $\iff$ orbit
+stabilizes $\iff$ all-level nFG2 $\iff\varprojlim^1=0$ — all fail for $m\ge2$
+($G2\wedge\neg$FG2), all hold at every finite truncation (the phantom is **liman**,
+i.e. limit-only). Slogan **finitely Löb, limanly Rosser** (Thm 55d): finite
+truncations carry an integral (Löb) unit, the limit a non-integral (Rosser) one.
+
+The **residuation/Rosser dichotomy** (Thm 56a): the completed arena is a frame, so it
+residuates under $\otimes=\wedge$ with the integral unit $\top$, but the dilation
+monoid $\otimes=+$ (Rosser unit $a^\ast$) has a **non-principal cover fiber**
+$c\backslash a^\ast=\{a_n\}$ (non-attained sup) and does not residuate. The
+**dilation-cover Čech complex** (Thm 56b) is the two-term $\delta=\mathrm{id}-m\cdot
+\mathrm{sh}$ on $\prod_n\mathbb Z$ with $\check H^0=\varprojlim=0$, $\check H^1=
+\varprojlim^1=\widehat{\mathbb Z}_m/\mathbb Z$.
+
+The **carrier-free cancellativity no-go** (Lemma 57a / Cor 57a$'$): in any complete
+residuated lattice, a unit that is the *non-attained* sup of a strictly ascending
+chain admits **no completely join-irreducible cover** above it (else
+$c=e\otimes c=\bigvee_n(a_n\otimes c)<c$). Hence the Rosser (sup-of-chain) unit is
+not merely tensor-shy but **completion-incompatible**: *Rosser unit $\perp$
+join-irreducible cover*. **Phantom $\veebar$ Quantale** (Thm 57c): the ideal/downset
+(Day-convolution) completion is a unital residuated quantale carrying an additive
+unit, but it de-singularizes the cover (the chain's sup splits off as a principal
+point), voiding the no-go's hypothesis and killing the phantom — so a residuated
+additive tensor and the phantom are mutually exclusive across completions.
+
+The **absorbing Rosser cap** $W$ (Pass 58, Thm 58a) is the pathological companion of
+the no-go: the complete chain $a_0=\bot<a_1<\cdots<e<c<\top$ ($e=\bigvee a_n$
+non-attained) with $\otimes$ given by $\bot$ as absorbing zero, $\min$ below the unit
+$e$, and $\max$ once a *large* operand $\ge c$ appears. It is a genuine complete
+commutative residuated lattice with a completely join-irreducible cover $c\succ e$ and
+**cofinal absorption** $a_n\otimes c=c$ ($n\ge1$), so Lemma 57a's contradiction
+$\bigvee_n(a_n\otimes c)=c$ is satisfied *trivially* (every summand already $=c$):
+**cancellativity/strictness in Lemma 57a is essential, not cosmetic.** A residuated
+Rosser unit *can* sit beneath a join-irreducible cover — iff the cover absorbs.
+
+The **cancellative–absorbing dichotomy / Phantom trichotomy** (Thm 58b): for a
+non-attained sup-of-chain unit beneath a join-irreducible cover $c$, the chain acts on
+$c$ either *cancellatively* ($a_n\otimes c<c$ — the Pass-57 no-go, residual forced
+integral/Löb, phantom only in the non-residuated MacNeille arena) or *absorbingly*
+($a_n\otimes c=c$ — the cap $W$, residual present, fiber $c\backslash e=\bot$
+principal, image tower constant/ML, $\varprojlim^1=0$). With the quantale escape this
+makes a **trichotomy** over $\{$residuation, join-irreducible cover, phantom
+$\varprojlim^1\}$: MacNeille keeps (cover, phantom), the ideal/quantale keeps
+(residual, —) de-singularizing the cover, and $W$ keeps (residual, cover) killing the
+phantom — *any two, never all three*. Absorbing $=$ non-free witness-comparison action
+$=$ degenerate Rosser torsor; cancellative $=$ free action $=$ nontrivial torsor. The
+**radical-graded naturality** (Prop 58c): $\Theta:\mathrm{Ros}_{(-)}\Rightarrow
+\varprojlim^1(-)$ is a natural transformation on $\mathbf{Deriv}^{\mathrm{res}}_
+{\mathrm{rad}}$, with a dilation-tower morphism $(\mathbb Z,\times m)\to(\mathbb Z,
+\times m')$ existing **iff** $\mathrm{rad}(m)\mid\mathrm{rad}(m')$ — radical
+divisibility the precise naturality obstruction.
+
+## Integral phantom and the $2$-adic $\varprojlim^1$ (Pass 53)
+
+The **phantom Betti number** $b_{\mathrm{phantom}}(P_r)=r$ (Pass 50/51) is a
+*field-coefficient* invariant: over any field the image tower of a finite-
+dimensional inverse system is **Mittag-Leffler** (the image filtration
+$F_j(A_0)=\mathrm{im}(A_j\to A_0)$ stabilizes), so $\varprojlim^1=0$ and $r$ is
+merely the rank of the finitary cochain $C^1=\mathbb F^{\{\text{failed covers}\}}$.
+
+The **integral phantom** is the genuine derived-limit obstruction at $\mathbb Z$
+coefficients with a **non-Mittag-Leffler** tower. The canonical witness is the
+dyadic tower $(\mathbb Z,\times2):\ \mathbb Z\xleftarrow{\times2}\mathbb Z
+\xleftarrow{\times2}\cdots$, with $F_j(\mathbb Z)=2^j\mathbb Z$ (index $2^j\to
+\infty$) and, by the SES of towers $0\to(\mathbb Z,\times2)\to(\mathbb Z,
+\mathrm{id})\to(\mathbb Z/2^n)\to0$,
+$$\varprojlim(\mathbb Z,\times2)=0,\qquad
+  \varprojlim{}^1(\mathbb Z,\times2)=\widehat{\mathbb Z}_2/\mathbb Z$$
+(uncountable, divisible). It is invisible to every field and to every finitely
+supported probe. More generally the **$m$-adic phantom** is
+$\varprojlim^1(\mathbb Z,\times m)=\widehat{\mathbb Z}_m/\mathbb Z$ for $m\ge2$.
+
+## The Löb/Rosser functor $L_{(-)}$ and the integral-unit subcategory (Pass 53)
+
+$\mathbf{Deriv}$: category of **derivability packages** $(\Box,\Pi)$, $\Pi\subseteq
+\{D1,D2,D3,\Sigma_1\text{-comp.},\text{Rosser witness-comparison}\}$, morphisms
+relative-interpretation translations preserving $\vdash$ and $\Pi$.
+$\mathbf{resAPS}$: residuated APS with $\boxtimes$- and unit-preserving
+homomorphisms; $\mathbf{resAPS}_{\mathrm{int}}\subseteq\mathbf{resAPS}$ the
+**integral-unit** subcategory (commutative integral residuated, tensor unit
+$e=\top$).
+
+$L_{(-)}:\mathbf{Deriv}\to\mathbf{resAPS}$ sends $(\Box,\Pi)$ to its **Lindenbaum
+residuated APS** ($\otimes=\wedge$, $\backslash=\to$, $\boxtimes=\neg\Box$, unit
+$e=$ chosen $\boxtimes$-fixed point). On the **Löb subcategory** $\mathbf{GL}$ it is
+canonical (de Jongh–Sambin uniqueness) with $e=\top\iff$ Löb and essential image
+$\mathbf{resAPS}_{\mathrm{int}}$; **Rosser packages** land in the non-integral
+complement as a **unit-torsor** (non-unique Rosser fixed points). Slogan: Löb $=$
+fixed-point uniqueness $=$ unit integrality $=$ canonical functoriality.
+
+## $m$-adic dilation solenoid and the radical-invariant phantom (Pass 54)
+
+The **$m$-adic dilation solenoid** is the inverse limit $L_\infty^{(m)}=
+\varprojlim_n(\mathbb Z^-,d_m)$ of the negative-cone integral residuated lattice
+$\mathbb Z^-=\{0,-1,-2,\dots\}$ ($x\otimes y=x+y$, residual $x\backslash y=\min(0,
+y-x)$, unit $e=0=\top$) under the **$m$-fold dilation** $d_m(x)=mx$ — an injective,
+non-surjective **residuated-lattice endomorphism** (image $m\mathbb Z^-$,
+cover-fiber multiplicity $m$; the residual identity $d_m(x\backslash y)=d_m x
+\backslash d_m y$ needs $m>0$ to pull through the meet). It is the honest residuated
+realization of Pass 53's abstract coefficient tower: the top-cover coefficient tower
+is $(\mathbb Z,\times m)$, supplied by the $\mathbb Z$-grading of $\otimes$ and never
+by a poset's $\pm1$ incidence. Its derived limit is the **radical-invariant phantom**
+$$ \varprojlim{}^1(\mathbb Z,\times m)=\widehat{\mathbb Z}_m/\mathbb Z,\qquad
+\widehat{\mathbb Z}_m=\prod_{p\mid m}\mathbb Z_p, $$
+depending on $m$ only through $\mathrm{rad}(m)=\{p:p\mid m\}$ (Thm 54b): the towers
+$\times2,\times4,\times8$ are pairwise **non-isomorphic** yet **pro-isomorphic**, so
+share the phantom $\widehat{\mathbb Z}_2/\mathbb Z$, while $\times6,\times12$ give
+$(\mathbb Z_2\times\mathbb Z_3)/\mathbb Z$; $m=1$ (identity tower, Mittag-Leffler) is
+the phantom-free boundary, and over every field the phantom collapses (purely
+integral). Cor 54c: the refutability orbit must carry $\widehat{\mathbb Z}_m$ acting
+by dilation on the single solenoidal cover fiber. See [[aps-run-sync-hazard]] for the
+mount-lag protocol used to verify the Pass-54 edits.
+
+## Dilation-solenoid refutability $\boxtimes_m$; ML $=$ nFG2; liman Rosser unit (Pass 55)
+
+**Carrier correction.** The *inverse* limit $\varprojlim_n(\mathbb Z^-,d_m)$ is the
+**trivial one-point lattice** ($x_0=m^nx_n\Rightarrow x_0=0$); the honest non-trivial
+object is the directed **colimit** $C_m=\varinjlim(\mathbb Z^-,d_m)=\mathbb Z[1/m]^-$,
+the negative cone of the $m$-adic localization (integral residuated lattice, dense
+chain), whose MacNeille completion $\overline{C_m}$ is the genuine arena — *literally*
+the classical $m$-adic solenoid ($\widehat{C_m}=\mathbb S_m=(\mathbb R\times
+\widehat{\mathbb Z}_m)/\mathbb Z$, van Dantzig 1930).
+
+The **dilation-solenoid refutability** $\boxtimes_m$ (Construction 55a) is
+Construction 49b lifted onto $\overline{L}^{(m)}=\overline{C_m}$: rungs $a_n=-1/m^n
+\uparrow a^\ast=0^-$, doubled cover $a^\ast\prec\{c,b^\ast\}\prec\top$, antitone
+$\boxtimes_m\top=a_0$, $\boxtimes_m(a_{2k})\uparrow b^\ast$, $\boxtimes_m(a^\ast)=c$.
+The *one* new ingredient vs 49b is **$m$-adic rung dilation** (cover fiber $m$, not
+$1$), upgrading 49b's rank-$1$ field-phantom ($\varprojlim^1=0$, a shadow) to the
+genuine non-ML $(\mathbb Z,\times m)$ with $\varprojlim^1=\widehat{\mathbb Z}_m/
+\mathbb Z$ realized as the derived limit of $\boxtimes_m$ **itself** (Thm 55b: join-
+continuity fails at the lone cover $a^\ast$, failure module $(\mathbb Z,\times m)$).
+
+**ML $=$ nFG2 dichotomy (Thm 55c).** For the $\boxtimes_m$-image tower: Mittag–Leffler
+$\iff$ orbit stabilizes $\iff$ all-level nFG2 (index-$2$, Thm 41a) $\iff$
+$\varprojlim^1=0$. All four FAIL for $m\ge2$ ($\boxtimes_m$ is a perpetual non-
+stabilizing orbit, $\neg$FG2) while every finite truncation satisfies all four — the
+phantom is strictly **liman** (limit-only). G2 holds **vacuously**
+($\boxtimes_m T=a_0\not\le\bot$); the solenoid lives in $G2\wedge\neg$FG2.
+
+**Liman Rosser unit / fusion (Thm 55d).** Finite truncations are integral-unit (Löb-
+attached); the fixed-point/unit tower is the same $(\mathbb Z,\times m)$ with
+$\varprojlim=0$ (detached limit fixed point $\Rightarrow$ non-integral $\Rightarrow$
+Rosser) and $\varprojlim^1=\widehat{\mathbb Z}_m/\mathbb Z$ (the unit is a **torsor**).
+A residuated tensor forces a Rosser unit, and Pass-54 obligations (1) [phantom] and
+(2) [Rosser torsor $=H^1$] become **one statement**: the join-continuity-failure
+module of $\boxtimes_m$ *is* the Löb$\to$Rosser gluing obstruction
+$H^1(\text{dilation cover};\mathrm{Aut(unit)})=\varprojlim^1$. *Slogan: finitely Löb,
+limanly Rosser — the phantom is the price of gluing consistency across the solenoid.*
+
+## Residuation/Rosser dichotomy; non-principal cover fiber; dilation-cover Čech complex (Pass 56)
+
+**Residuation/Rosser dichotomy (Thm 56a).** The completed arena $\overline{L}^{(m)}$
+(chain $C_m=\mathbb Z[1/m]^-$ Dedekind-completed $+$ the doubled cover $a^\ast\prec\{c,
+b^\ast\}\prec\top$) is a complete **distributive** lattice and a **frame** (binary meet
+distributes over the cover join $a^\ast=\bigvee_n a_n$), hence a complete **Heyting**
+algebra: it residuates under $\otimes=\wedge$ but with the **integral** unit $\top$
+(Löb). The **dilation monoid** $\otimes=+$ (unit $e=a^\ast$, the non-integral Rosser
+unit, $c,b^\ast$ as positive infinitesimals above $0=a^\ast$) does **not** extend to a
+residual: $x\mapsto x\otimes c$ fails join-preservation at the lone cover,
+$\bigvee_n(a_n\otimes c)=a^\ast<c=a^\ast\otimes c$. So residuation and the Rosser unit
+are **mutually exclusive** in the completion — keep $\wedge$ (residuated, integral, Löb)
+or keep $+$ (Rosser unit, but only a preAPS). *Slogan: finitely residuated, limanly
+preAPS.*
+
+**Non-principal cover fiber.** The minimal failing residual is $c\backslash a^\ast=\{z:
+z\otimes c\le a^\ast\}=\{a_n\}_n$, whose supremum $a^\ast$ is **not attained** (the cover
+$a^\ast=\bigvee_n a_n$ is a non-attained sup in the completion). This is the
+non-principal-fiber obstruction of the Pass-49 $M_n$ ($n\ge3$) escape, now at a
+*non-attained* cover; at every finite truncation $a^\ast=a_K$ is the chain maximum, so
+$c\backslash a^\ast=a_{K-1}$ is principal and both tensors residuate (finitely-true,
+limanly-false). Non-principal $=$ non-attained sup $=$ the Mittag–Leffler failure that
+also produces the phantom — one defect, two maps ($\boxtimes_m$ and $\otimes$).
+
+**Dilation-cover Čech complex (Thm 56b).** The even/odd half-telescope cover
+$\mathcal U=\{U_0,U_1\}$ of the dilation telescope has *interval* nerve, so its
+$\check{\mathrm C}$ech complex on $\underline{\mathbb Z}_{\times m}$ (stalk $\mathbb Z=
+\mathrm{Aut(unit)}$, restriction $\times m$) is the **two-term** $0\to\prod_n\mathbb Z
+\xrightarrow{\ \delta=\mathrm{id}-m\cdot\mathrm{sh}\ }\prod_n\mathbb Z\to0$,
+$\delta((x_n))=(x_n-m\,x_{n+1})$, with $\check H^0=\ker\delta=\varprojlim=0$ (detached
+limit fixed point) and $\check H^1=\operatorname{coker}\delta=\varprojlim^1=
+\widehat{\mathbb Z}_m/\mathbb Z$. Only $H^0,H^1$ occur, making Thm-55d's
+$H^1=\varprojlim^1$ a literal cochain identity; the Rosser unit-torsor class is
+$[(1,0,0,\dots)]\in\operatorname{coker}\delta$.
+
+## Absorption depth, idempotence defect, and the no-partial-phantom theorem (Pass 59)
+
+For a complete residuated tensor $\otimes$ with a non-attained sup-of-chain unit
+$e=\bigvee_n a_n$ ($a_n\uparrow e$ strictly) and a completely join-irreducible cover
+$c\succ e$:
+
+**Absorption depth.** $d(\otimes):=\inf\{n\ge1:a_n\otimes c=c\}\in\{1,2,\dots\}\cup
+\{\infty\}$, the first rung at which the cover absorbs the unit-approximants. By
+Cor 57a$'$ the residuated regime is exactly $d<\infty$ (cofinal strict $a_n\otimes c<c$,
+i.e. $d=\infty$, admits no residuation). The cover-fiber image tower $(a_n\otimes c)_n$
+is non-decreasing with sup $e\otimes c=c$ and, for $d<\infty$, **eventually constant**
+$=c$.
+
+**Idempotence defect.** $\iota(\otimes):=[\,c\otimes c\ne c\,]\in\{0,1\}$; in the
+witness family $W_{d,\delta}$ it equals $\delta$, with $c\otimes c=\top$ when $\delta=1$.
+It is independent of $d$ and **$\varprojlim^1$-invisible**: it localizes at the *compact*
+cover above $c$, not at the non-compact cover $e\prec c$ where the phantom is pinned.
+
+**No-partial-phantom (Thm 59a / Cor 59b).** Finite absorption depth $\Rightarrow$
+Mittag–Leffler $\Rightarrow\varprojlim^1=0$ genuinely — a $\varprojlim^1$ class is a
+tail/pro-invariant, so there is no "finitely supported" phantom. By **Gray's dichotomy**
+($\varprojlim^1$ of a tower of countable abelian groups is $0$ or of cardinality
+$2^{\aleph_0}$; Gray 1966, McGibbon–Steiner 1995) no finite-rank intermediate value is
+available to any invariant. Hence the Pass-58 trichotomy is **sharp**: $(d,\iota)$ are
+genuine lattice moduli but *phantom-flat coordinates*; the phantom jumps
+$0\to2^{\aleph_0}$ only at the non-residuated wall $d=\infty$. **Prop 59c:** absorption
+depth $=$ nFG2 stabilization index $=$ Mittag–Leffler $=$ phantom-free (unifying
+Thm 41a, 55c, 58b). *Slogan: a phantom is all-or-nothing — there are no partial ghosts.*
+
+## Carrier criterion, rad-grading, phantom sheaf on $\mathrm{Spec}$, and the $\aleph_1$-phantom (Pass 60)
+
+**Carrier criterion (Thm 60a).** A residuated cover-filtration map of dilation-solenoid
+arenas $C_m\to C_{m'}$ (where $C_m=\mathbb Z[1/m]^-$, Pass 55) exists $\iff$ the
+localization embeds $\mathbb Z[1/m]\subseteq\mathbb Z[1/m']$ $\iff$ $\mathrm{rad}(m)\mid
+\mathrm{rad}(m')$ (every prime of $m$ divides $m'$). The grading on
+$\mathbf{Deriv}^{\mathrm{res}}_{\mathrm{rad}}$ is thus **forced by the carrier**, not
+decreed.
+
+**rad-grading $=$ squarefree divisibility lattice.** Up to the rad-grading,
+$\mathbf{Deriv}^{\mathrm{res}}_{\mathrm{rad}}\cong(\mathcal P_{\mathrm{fin}}(\mathbb P),
+\subseteq)$, finite prime-sets under inclusion, with meet $=\gcd$ of radicals and join
+$=\mathrm{lcm}$. The pinned arrows are the localization inclusions $\iota_{m,m'}$.
+
+**Sole-obstruction naturality (Thm 60b).** $\Theta:\mathrm{Ros}_{(-)}\Rightarrow
+\varprojlim^1(-)$ is a natural isomorphism on this lattice: wherever an arrow exists the
+Čech-cochain square commutes (snake-lemma naturality of $\delta=\mathrm{id}-m\cdot
+\mathrm{sh}$, Prop 58c), and rad-divisibility is the *unique* obstruction — off it the
+hom-set is empty (naturality vacuous), never a square that fails. **Phantom presheaf:**
+$S\mapsto(\prod_{p\in S}\mathbb Z_p)/\mathbb Z$ on $\mathrm{Spec}$; $\Theta$ identifies it
+with the Rosser-torsor presheaf.
+
+**Incomparable pathology (Cor 60c).** $m=6,m'=10$ are rad-incomparable; no arrow either
+way, only a common lower bound $C_2$ (the shared $2$-adic ghost $\mathbb Z_2/\mathbb Z$).
+
+**$\aleph_1$-phantom (Thm 60d).** Gray's $0$-or-$2^{\aleph_0}$ dichotomy is strictly an
+$\omega$-cofinality phenomenon. An $\omega_1$-cofinal long cover makes the cover-fiber
+system pro-isomorphic to the Mardešić–Prasolov strong-homology system, whose
+$\varprojlim^1$ is **nonzero under CH** (Mardešić–Prasolov 1988) and **zero under PFA**
+(Dow–Simon–Vaughan 1989); hence "a genuinely $\aleph_1$-engendered intermediate phantom
+exists" is **independent of ZFC** — a model-dependent ghost, present under CH, exorcised
+by $\mathrm{MA}_{\aleph_1}$. *No partial phantom at $\omega$; a whole undecidable phantom
+at $\omega_1$.*
+
+## Phantom presheaf, stalkwise sheafification, Rosser $=$ descent obstruction (Pass 61)
+
+**Phantom presheaf $P$ and its resolution.** $P(S)=(\prod_{p\in S}\mathbb Z_p)/\mathbb Z$
+on the prime lattice $(\mathcal P_{\mathrm{fin}}(\mathbb P),\subseteq)$ (prime-cover
+topology; **restriction $=$ coordinate projection**), resolved by the presheaf SES
+$0\to\underline{\mathbb Z}\xrightarrow{\Delta}\mathcal F\xrightarrow{\pi}P\to0$ with
+$\mathcal F(S)=\prod_{p\in S}\mathbb Z_p$ a **flasque sheaf** and $\underline{\mathbb Z}$
+the constant presheaf.
+
+**Stalkwise sheafification $L$ (Thm 61a).** $P$ **fails descent**: $P(S)\to\prod_pP(\{p\})$
+is onto with kernel $\mathbb Z^{|S|-1}\ne0$ (the separation defect $\mathbb Z^{S}/\Delta
+\mathbb Z$, $\underline{\mathbb Z}$ being non-separated with sheafification $\mathbb Z^{S}$).
+The sheafification is the stalkwise sheaf $P^{\#}=L$, $L(S)=\prod_{p\in S}(\mathbb Z_p/
+\mathbb Z)$, stalk $\mathbb Z_p/\mathbb Z$ at $p$; the unit $P\twoheadrightarrow L$ has
+kernel $\mathbb Z^{|S|-1}$.
+
+**Rosser $=$ obstruction to descent (Thm 61b, correction of the Pass-60 slogan).** The
+Rosser torsor $\widehat{\mathbb Z}_m/\mathbb Z=P(S)$ is **not** the sheafification $L$;
+sheafification *discards* it. Dictionary split along $P\twoheadrightarrow L$: **Löb $=$
+sheaf** $L$ (stalk-local, "consistency is local at each prime"); **Rosser $=$ failure of
+descent** $\ker(P\to L)$, with a horizontal free part $\mathbb Z^{|S|-1}=\check H^1(
+\underline{\mathbb Z})$ (prime cover) and a vertical $\varprojlim^1=\widehat{\mathbb Z}_p/
+\mathbb Z$ (dilation tower) per stalk. The Pass-60 slogan holds only **dualized**: $P$ is a
+flabby **cosheaf**, Löb $=$ sheaf, Rosser $=$ cosheaf.
+
+## Löb–Rosser bicomplex, mixed class $\epsilon_S$, cosheafification collapse (Pass 62)
+
+**The bicomplex (Thm 62a).** The total phantom $P(S)=\widehat{\mathbb Z}_S/\mathbb Z$
+($S=\mathrm{rad}(m)$, $s=|S|$) is $H^1$ of the double complex $D^{\bullet,\bullet}$ with
+**vertical** differential the per-prime Milnor $\varprojlim$-cochain $[\prod_n\mathbb Z
+\xrightarrow{1-p\,\mathrm{sh}}\prod_n\mathbb Z]$ of the dilation tower $(\mathbb Z,\times p)$
+($H^0=0$, $H^1=\mathbb Z_p/\mathbb Z$) and **horizontal** differential the augmented reduced
+Čech cochain of $\underline{\mathbb Z}$ over the singleton prime cover ($\operatorname{coker}
+\Delta=\mathbb Z^{s-1}$). Both spectral sequences degenerate at $E_2$ to the two cells
+$E_2^{1,0}=\mathbb Z^{s-1}$ (**Rosser/horizontal**) and $E_2^{0,1}=\prod_{p\in S}(\mathbb Z_p/
+\mathbb Z)=L(S)$ (**Löb/vertical**); $E_2^{2,0}=E_2^{0,2}=0$. The Löb/Rosser dictionary **is**
+the $E_2$ page.
+
+**Mixed class $\epsilon_S$ (Thm 62b).** With survivors only at the complementary cells $(1,0)$,
+$(0,1)$ and zero neighbours, $d_r=0$ for $r\ge2$ ($E_2=E_\infty$); the "mixing" is the
+filtration extension
+$$0\to\mathbb Z^{s-1}\xrightarrow{\iota}\widehat{\mathbb Z}_S/\mathbb Z\xrightarrow{\rho}
+\textstyle\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0,$$
+**non-split** for $s\ge2$ — a retraction would restrict to $\mathrm{Hom}(\mathbb Z_p,\mathbb Z)
+=0$ on each stalk and annihilate the integer points $e_p$ generating $\mathbb Z^S/\Delta\mathbb
+Z$. The **mixed Löb–Rosser class** $\epsilon_S\in\mathrm{Ext}^1_{\mathbb Z}(L(S),\mathbb Z^{s-1})
+\setminus\{0\}$ is the connecting $\partial$ of the filtration (no pure-horizontal/pure-vertical
+representative), **not** a page $d_2$; a genuine $d_2:E_2^{0,1}\to E_2^{2,0}$ appears only after
+**unabridging** each $\mathbb Z_p$ into its $\mathbb Z/p^n$-tower. Pathology $S=\{2,3\}$:
+$(\mathbb Z_2\times\mathbb Z_3)/\Delta\mathbb Z$, the horizontal generator $[(1,0)]=[(0,-1)]$ has
+no direct complement (a purely horizontal relation welded to the local ghosts).
+
+**Cosheafification collapse (Thm 62c, correction of the Pass-61 slogan).** On the singleton
+(discrete) prime site the cosheafification is the costalk coproduct $\check P(S)=\bigoplus_{p\in
+S}(\mathbb Z_p/\mathbb Z)$, and for finite $S$ the comparison $\bigoplus\to\prod$ is an iso, so
+$\check P(S)=\prod_{p\in S}(\mathbb Z_p/\mathbb Z)=L(S)=P^{\#}(S)$: **sheafification $=$
+cosheafification $=L$**. The global $\widehat{\mathbb Z}_S/\mathbb Z$ is **neither** — irreducibly
+presheaf-level, the descent defect $\mathbb Z^{s-1}$. "Rosser $=$ cosheaf" is **false on the
+discrete site** (too disconnected for $\mathbf{Sh}\ne\mathbf{coSh}$); a nonzero $\check H^1$ needs
+the coarser **Zariski/cofinite** topology on $\mathrm{Spec}\,\mathbb Z$. Corrected dictionary:
+**Löb $=$ common (co)sheafification $L$; Rosser $=$ descent defect $\mathbb Z^{s-1}=\ker(P\to L)$**,
+glued to the local ghosts by the non-split seam $\epsilon_S$.
+
+**$\mathfrak b$-wall (Thm 61c).** For the $\omega_1$-cofinal long cover: $\mathfrak b=
+\aleph_1\Rightarrow\varprojlim^1\mathbf A_{\omega_1}\ne0$ (weaker than CH);
+$\mathrm{MA}_{\aleph_1}\Rightarrow0$ (forces $\mathfrak b=\aleph_2$). Threshold is
+**bracketed, not a single named cardinal characteristic**; an $\aleph_2$-cofinal cover
+gives a *sequence* of higher-$\varprojlim^s$ ($s\ge2$) independence statements, not a
+$0/\aleph_1/2^{\aleph_0}$ trichotomy.
+
+## Zariski $j_!$-cosheaf, unabridged $d_2$, and the $\mathrm{Ext}^1$ ghost line (Pass 63)
+
+**Zariski generic-point site.** The finite connected space $X=\{\eta\}\cup\{(p):p\in S\}$
+($S=\mathrm{rad}(m)$, $s=|S|$) with the subspace (particular-point) Zariski topology — opens
+$=\varnothing$ and every set containing the generic point $\eta$. The cover $\mathcal U=\{U_p=
+\{\eta,(p)\}\}$ has **all** nonempty overlaps $=\{\eta\}$, so its nerve is the **full simplex**
+$\Delta^{s-1}$ (contractible) — opposite to the discrete singleton cover ($s$ disjoint vertices).
+
+**Zariski relocation / $j_!$-cosheaf Rosser class (Thm 63a).** On the connected site the constant
+sheaf $\underline{\mathbb Z}$ is a genuine sheaf with $\check H^{\ge1}=0$, so the discrete-site
+horizontal defect $\mathbb Z^{s-1}=\check H^0_{\mathrm{red}}$ **vanishes** (connectivity kills
+constant-coefficient $H^1$). The Rosser relations **relocate up one degree** to the
+extension-by-zero from the open generic point $j:\{\eta\}\hookrightarrow X$:
+$$H^1(X,\ j_!\underline{\mathbb Z})=\mathbb Z^s/\Delta\mathbb Z=\mathbb Z^{\,s-1}\ne0,$$
+via $0\to j_!\mathbb Z\to\mathbb Z_X\to i_*\mathbb Z_Z\to0$ ($i:Z\hookrightarrow X$ the closed
+$s$-point complement). Since $j_!$ is the left-adjoint (compact-support/**cosheaf**) extension,
+"Rosser $=$ cosheaf" finally holds, in the precise form **Rosser $=H^1$ of $j_!$ supported at the
+generic point**; Löb $=$ the stalkwise sheaf $L(S)$. (The naive cover-cosheafification still
+returns $L(S)$ — overlaps carry the skyscraper $0$ — so the rescuing functor is specifically
+$j_!$, not $\check{(-)}$ over $\mathcal U$.)
+
+**Unabridged $d_2$ (Thm 63b).** Resolving each $\mathbb Z_p=\varprojlim_n\mathbb Z/p^n$ by its
+$\mathbb Z/p^n$-tower opens a third bicomplex column $E_2^{2,0}=\operatorname{coker}(\Delta:
+\mathbb Z\to\mathbb Z^s)=\mathbb Z^{s-1}$, turning the Pass-62 hidden $E_\infty$ extension into a
+genuine page differential $d_2:E_2^{0,1}=L(S)\to E_2^{2,0}=\mathbb Z^{s-1}$, $(x_p)\mapsto
+[(x_p-x_{p_0})_{p\ne p_0}]$ — the **common-integer-lift obstruction** (image rank $s-1$). The
+class $\epsilon_S=\partial$ and the $d_2$ are *one datum in two resolutions* (a two-column
+$E_\infty$ extension becomes a $d_2$ upon manufacturing a third column).
+
+**Ext$^1$ ghost line; arithmetic vs cardinal (Thm 63c).** $\mathrm{Hom}(\mathbb Z_p,\mathbb Z)=0$
+makes $\delta:\mathbb Z\hookrightarrow\mathrm{Ext}^1(\mathbb Z_p/\mathbb Z,\mathbb Z)$ injective;
+$\delta(1)=\epsilon_p$ is the **ghost class**, of **infinite order** (lacunary witness $u=\sum_k
+p^{k!}$), generating a canonical $\mathbb Z$-line inside the uncountable $\mathrm{Ext}^1(\mathbb Z_p/
+\mathbb Z,\mathbb Z)$ (an extension of the continuum-dimensional $\mathrm{Ext}^1(\mathbb Z_p,\mathbb
+Z)$ by $\mathbb Z$). $\epsilon_S\in\bigoplus_{p\in S}\mathrm{Ext}^1(\mathbb Z_p/\mathbb Z,\mathbb
+Z)^{s-1}$ is nonzero of infinite order for $s\ge2$. **Cardinal vs arithmetic:** the *target* rank
+$s-1$ depends only on $|S|$ (cardinal), but $\epsilon_S$ lives on the pairwise **non-isomorphic**
+ghost groups $\mathbb Z_p/\mathbb Z$ (torsion subgroup $\bigoplus_{q\ne p}\mathbb Z(q^\infty)$,
+uniquely *omitting* the $p$-Prüfer), so it is a genuinely **arithmetic** invariant of the prime
+set: $\epsilon_{\{2,3\}}\ne\epsilon_{\{2,5\}}$. *Slogan: the phantom remembers which primes, not
+just how many.*
+
+## Löb–Rosser recollement, dilation coefficient, $i^*=$ Löb / $j_!=$ Rosser, the prime-spectrum motive (Pass 64)
+
+**The two-stratum space and its six functors.** $X=X_S=\{\eta\}\sqcup Z$, $Z=\{(p):p\in S\}$ the
+closed discrete $s$-point stratum, $j:U=\{\eta\}\hookrightarrow X$ the **open** generic point,
+$i:Z\hookrightarrow X$ the **closed** complement. On this finite (Alexandrov) space the six
+operations exist with $j^*=j^!$ (open immersion) and $i_*=i_!$ (closed immersion), and form a
+**recollement** (Thm 64a, BBD §1.4):
+$$D(Z)\ \underset{i_*=i_!}{\hookrightarrow}\ D(X)\ \underset{j^*=j^!}{\twoheadrightarrow}\ D(U),\qquad
+j_!\dashv j^*\dashv j_*,\quad i^*\dashv i_*\dashv i^!,$$
+with $j^*i_*=0$; $i_*,j_!,j_*$ fully faithful; gluing triangles $j_!j^*\to\mathrm{id}\to i_*i^*
+\xrightarrow{+1}$ and $i_*i^!\to\mathrm{id}\to Rj_*j^*\xrightarrow{+1}$.
+
+**Dilation coefficient $\mathcal V$.** The pro-sheaf on $X$ with generic value $j^*\mathcal V=
+\underline{\mathbb Z}$ and closed costalk at $(p)$ the Milnor pro-system of the dilation tower
+$(\mathbb Z,\times p)$: $i^*\mathcal V$ has $R\varprojlim$ with $H^0=\varprojlim=0$ (the **detached**
+limit fixed point) and $H^1=\varprojlim^1=\mathbb Z_p/\mathbb Z$. The single‑sheaf truncation gives
+only one dilation step; the full $p$-adic ghost is the derived limit, so $\mathcal V$ is honestly a
+tower and $H^1(X,j_!\mathcal V)$ is the continuous/derived $H^1$.
+
+**Phantom $=H^1(j_!\mathcal V)$ (Thm 64b).** Because $j^*j_!=\mathrm{id}$ and $i^*j_!=0$, the
+open/closed triangle on $j_!\mathcal V$ collapses to the short exact sequence
+$$0\to\underbrace{\mathbb Z^{s-1}}_{H^1(j_!\underline{\mathbb Z}),\ \text{Rosser}}\to
+\underbrace{H^1(X,j_!\mathcal V)}_{=\ \widehat{\mathbb Z}_S/\mathbb Z}\to
+\underbrace{\textstyle\prod_p(\mathbb Z_p/\mathbb Z)}_{i^*\!\text{-stalk }\varprojlim^1,\ \text{Löb}}
+\xrightarrow{\partial}0,$$
+whose boundary $\partial:(x_p)\mapsto[(x_p-x_{p_0})]$ (image rank $s-1$, kernel the diagonal
+$\mathbb Z$) is **identically** the Pass-63 $d_2$ and the Pass-62 $\epsilon_S$. Thus the **total
+phantom is a single $j_!$-cohomology**, and the three avatars (filtration $\partial$, page $d_2$,
+recollement boundary) are one morphism in three guises.
+
+**The dictionary as six functors.** **Löb $=i^*$** — the closed-stalk sheaf part, the genuine local
+ghosts $\mathbb Z_p/\mathbb Z$ that descend; **Rosser $=j_!$** — the generic-point, compact-support
+part, the horizontal relations $\mathbb Z^{s-1}$ that survive only with proper support toward
+$\eta$; **mixing $=\partial$** — the recollement boundary gluing $j_!j^*$ to $i_*i^*$, the
+irreducible obstruction to splitting "pure Löb $\oplus$ pure Rosser."
+
+**Prime-spectrum motive $M$ (Thm 64c).** $S\subseteq S'\Rightarrow X_S$ is **open** in $X_{S'}$
+(complement is closed points), giving an open immersion and a restriction on the recollement data;
+$M:S\mapsto j_!\mathcal V_S$ is a functor $(\mathcal P_{\mathrm{fin}}(\mathbb P),\subseteq)\to
+D^b(\mathbb Z)$, weight-filtered ($W_0=$ Löb stalks, $\mathrm{gr}^W_1=$ Rosser horizontal), with
+$\epsilon$ a natural transformation. $M$ is genuinely **arithmetic** (Thm 63c): not a function of
+the cardinal $s$. The name "motive" is a deliberate analogy — $M$ is an honest constructible-sheaf
+/ $D^b(\mathbb Z)$ gluing datum on the arithmetic base, *not* a Voevodsky motive — marking the
+structural niche (functor on a geometric base, graded by the dictionary's two columns).
+
+**Pathologies.** *(i) $s=1$ — pure Löb:* $H^1(j_!\underline{\mathbb Z})=\mathbb Z^0=0$, the
+horizontal stratum is empty, the phantom is the bare $\mathbb Z_p/\mathbb Z$; **Rosser relations
+need $\ge2$ primes** (they are relational). *(ii) Incomparable strata:* $\{2,3\}$ and $\{2,5\}$
+(rad-incomparable, Cor 60c) — neither $X_S$ open in the other, only common open sub-stratum
+$X_{\{2\}}$ (shared $2$-adic ghost), $\epsilon_{\{2,3\}}\ne\epsilon_{\{2,5\}}$. *(iii) The adelic
+punchline:* $S=\mathbb P$ (all primes) makes $X=\mathrm{Spec}\,\mathbb Z$ and
+$$H^1(\mathrm{Spec}\,\mathbb Z,\ j_!\mathcal V)=\widehat{\mathbb Z}/\mathbb Z=\Big(\textstyle\prod_p
+\mathbb Z_p\Big)\big/\mathbb Z=\mathbb A_{\mathbb Q,\mathrm{fin}}^{\mathrm{int}}/\mathbb Z,$$
+the **integral finite-adele class group**. *Smullyan gloss: the ghost haunting every consistency
+statement at once is precisely an adele that is not an integer.*
+
+## Verdier-dual recollement, $i^!$ Rosser lattice, and signed functional equation (Pass 65)
+
+Let $X_S=\{\eta\}\sqcup\{(p):p\in S\}$, with $j:\{\eta\}\hookrightarrow X_S$ open and
+$i:Z\hookrightarrow X_S$ closed. The **Verdier-dual recollement presentation** is the second
+open/closed gluing triangle
+$$i_*i^!F\to F\to Rj_*j^*F\xrightarrow{+1},$$
+dual to the Pass-64 triangle $j_!j^*F\to F\to i_*i^*F\xrightarrow{+1}$.
+
+The **$i^!$ Rosser lattice** is the local-support complex
+$$\mathbb Z\xrightarrow{\Delta}\mathbb Z^S,\qquad 1\mapsto(1,\ldots,1),$$
+with
+$$H^0(i^!)=0,\qquad H^1(i^!)=\operatorname{coker}\Delta\cong\mathbb Z^{|S|-1}.$$
+It is the closed-support counterpart of the Pass-63 presentation
+$H^1(X_S,j_!\underline{\mathbb Z})\cong\mathbb Z^{|S|-1}$.
+
+The **signed functional equation** is the finite-model duality rule for the mixed class
+$\epsilon_S$. If
+$$d_S:\mathbb Z^S\to\mathbb Z^{|S|-1},\qquad
+(x_p)\mapsto(x_p-x_{p_0})_{p\ne p_0}$$
+represents the recollement boundary, then Verdier duality sends
+$$d_S\longmapsto -d_S^T,$$
+so
+$$\mathbb D(\epsilon_S)=-\epsilon_S^\vee.$$
+Duality squared returns $d_S$. The sign is invisible over $\mathbb F_2$ but remains visible over
+$\mathbb Z$ as an orientation datum of the gluing triangle. This statement is presently proved only
+for the finite Alexandrov model; the honest $\mathrm{Spec}\,\mathbb Z$ site lift requires a separate
+dualizing-normalization proof.

@@ -1,0 +1,116 @@
+{
+  "pass": 43,
+  "title": "arithmetic lift of the detached fixed point: the Goedel/Rosser attachment dividing line",
+  "A_GL_forces_attachment_de_jongh_sambin": {
+    "frames_checked": 7,
+    "loeb_valid_everywhere": true,
+    "djs_valid_everywhere": true,
+    "con_nontrivial_somewhere": true,
+    "per_frame": {
+      "single_point": {
+        "worlds": 1,
+        "loeb_valid": true,
+        "djs_fixedpoint_valid": true,
+        "con_truth_by_world": [
+          false
+        ]
+      },
+      "2_chain": {
+        "worlds": 2,
+        "loeb_valid": true,
+        "djs_fixedpoint_valid": true,
+        "con_truth_by_world": [
+          true,
+          false
+        ]
+      },
+      "3_chain": {
+        "worlds": 3,
+        "loeb_valid": true,
+        "djs_fixedpoint_valid": true,
+        "con_truth_by_world": [
+          true,
+          true,
+          false
+        ]
+      },
+      "V_fan": {
+        "worlds": 3,
+        "loeb_valid": true,
+        "djs_fixedpoint_valid": true,
+        "con_truth_by_world": [
+          true,
+          false,
+          false
+        ]
+      },
+      "diamond": {
+        "worlds": 4,
+        "loeb_valid": true,
+        "djs_fixedpoint_valid": true,
+        "con_truth_by_world": [
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "binary_tree_d2": {
+        "worlds": 7,
+        "loeb_valid": true,
+        "djs_fixedpoint_valid": true,
+        "con_truth_by_world": [
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "4_chain": {
+        "worlds": 4,
+        "loeb_valid": true,
+        "djs_fixedpoint_valid": true,
+        "con_truth_by_world": [
+          true,
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    "verdict": "PASS",
+    "interpretation": "Loeb is frame-valid on every GL frame; the de Jongh-Sambin fixed point of x|->not Box x is not Box bot = Con = boxtimes(bot); hence the Goedel fixed point coincides with the FIRST consistency-orbit iterate and is orbit-ATTACHED. The R_2 detached geometry is therefore unrealizable by any D1-D3 (GL) predicate."
+  },
+  "B_detachment_forces_failure_of_D2": {
+    "carrier": [
+      "bot",
+      "o0",
+      "o1",
+      "p",
+      "top"
+    ],
+    "boxtimes_R_antitone": true,
+    "Box_R_definition": {
+      "bot": "bot",
+      "o0": "o1",
+      "o1": "o0",
+      "p": "p",
+      "top": "top"
+    },
+    "Box_R_is_monotone_D2_shadow": true,
+    "Box_R_monotonicity_violated_at": null,
+    "p_is_boxtimes_fixedpoint": true,
+    "T_orbit": [
+      "o0",
+      "o1"
+    ],
+    "p_detached_from_orbit": true,
+    "claim": "monotonicity (D2-shadow) of Box_R is COMPATIBLE with a detached fixed point; therefore monotonicity is not the attachment-forcing ingredient -- Loeb/D3 (Part A) is.",
+    "verdict": "PASS",
+    "interpretation": "Box_R = neg . boxtimes_R is the composite of two antitone maps, hence MONOTONE: the order shadow of D2 HOLDS. Yet boxtimes_R is antitone and p is a DETACHED fixed point. So external monotonicity alone does not force attachment; by (A) it is specifically formalized Loeb/D3 that does. The Rosser lift of R_2 is thus obstructed exactly by formalized Loeb, not by regularity -- a Rosser predicate keeps D1 and Sigma_1-completeness but evades Loeb, which is what lets its fixed point detach from the consistency orbit."
+  },
+  "overall_verdict": "PASS"
+}

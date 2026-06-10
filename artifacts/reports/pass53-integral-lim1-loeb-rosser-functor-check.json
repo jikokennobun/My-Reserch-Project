@@ -1,0 +1,56 @@
+{
+  "A": true,
+  "B": true,
+  "PASS": true,
+  "details": {
+    "A": {
+      "Z_image_index_2^kZ": {
+        "1": 2,
+        "2": 4,
+        "3": 8,
+        "4": 16,
+        "5": 32,
+        "6": 64,
+        "7": 128,
+        "8": 256
+      },
+      "F2_image_dim": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      },
+      "F3_image_dim": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1
+      },
+      "lim_Z2n_surjective_tower(ML)": true,
+      "nonML_over_Z(=>lim1!=0)": true,
+      "ML_over_F2(=>lim1=0)": true,
+      "ML_over_F3(=>lim1=0)": true,
+      "integral_lim1(=Z_2/Z)_nonzero": true,
+      "field_lim1_zero": true
+    },
+    "B": {
+      "3chain_integral_unit_tensors": 2,
+      "M3_integral_unit_tensors": 0,
+      "M3_nonintegral_unit_tensors": {
+        "o0": 13,
+        "o1": 13,
+        "p": 13
+      },
+      "rosser_unit_choice_multiplicity": 3,
+      "loeb_unit_canonical_top": true
+    }
+  }
+}

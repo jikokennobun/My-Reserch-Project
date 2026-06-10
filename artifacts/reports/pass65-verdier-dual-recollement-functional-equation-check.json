@@ -1,0 +1,160 @@
+{
+  "pass_number": 65,
+  "title": "Verdier-dual recollement and signed functional equation of the Loeb-Rosser phantom",
+  "overall": "PASS",
+  "scope": "finite Alexandrov two-stratum model; scheme-site lift remains a proof obligation",
+  "checks": {
+    "A_costalk_complex_iBang_s1": {
+      "pass": true,
+      "detail": "ker(Delta) rank=0, coker(Delta) rank=0; i^!-horizontal rank=s-1"
+    },
+    "A_costalk_complex_iBang_s2": {
+      "pass": true,
+      "detail": "ker(Delta) rank=0, coker(Delta) rank=1; i^!-horizontal rank=s-1"
+    },
+    "A_costalk_complex_iBang_s3": {
+      "pass": true,
+      "detail": "ker(Delta) rank=0, coker(Delta) rank=2; i^!-horizontal rank=s-1"
+    },
+    "A_costalk_complex_iBang_s4": {
+      "pass": true,
+      "detail": "ker(Delta) rank=0, coker(Delta) rank=3; i^!-horizontal rank=s-1"
+    },
+    "A_costalk_complex_iBang_s5": {
+      "pass": true,
+      "detail": "ker(Delta) rank=0, coker(Delta) rank=4; i^!-horizontal rank=s-1"
+    },
+    "A_costalk_complex_iBang_s6": {
+      "pass": true,
+      "detail": "ker(Delta) rank=0, coker(Delta) rank=5; i^!-horizontal rank=s-1"
+    },
+    "A_costalk_complex_iBang_s7": {
+      "pass": true,
+      "detail": "ker(Delta) rank=0, coker(Delta) rank=6; i^!-horizontal rank=s-1"
+    },
+    "B_boundary_and_dual_rank_s1": {
+      "pass": true,
+      "detail": "rank(d)=0, rank(-d^T)=0; same primitive obstruction rank"
+    },
+    "B_dual_squared_identity_s1": {
+      "pass": true,
+      "detail": "D(D(d)) = d for the signed transpose convention"
+    },
+    "B_sign_invisible_mod2_s1": {
+      "pass": true,
+      "detail": "-d^T equals d^T over F_2; sign is an integral orientation datum"
+    },
+    "B_boundary_and_dual_rank_s2": {
+      "pass": true,
+      "detail": "rank(d)=1, rank(-d^T)=1; same primitive obstruction rank"
+    },
+    "B_dual_squared_identity_s2": {
+      "pass": true,
+      "detail": "D(D(d)) = d for the signed transpose convention"
+    },
+    "B_sign_invisible_mod2_s2": {
+      "pass": true,
+      "detail": "-d^T equals d^T over F_2; sign is an integral orientation datum"
+    },
+    "B_boundary_and_dual_rank_s3": {
+      "pass": true,
+      "detail": "rank(d)=2, rank(-d^T)=2; same primitive obstruction rank"
+    },
+    "B_dual_squared_identity_s3": {
+      "pass": true,
+      "detail": "D(D(d)) = d for the signed transpose convention"
+    },
+    "B_sign_invisible_mod2_s3": {
+      "pass": true,
+      "detail": "-d^T equals d^T over F_2; sign is an integral orientation datum"
+    },
+    "B_boundary_and_dual_rank_s4": {
+      "pass": true,
+      "detail": "rank(d)=3, rank(-d^T)=3; same primitive obstruction rank"
+    },
+    "B_dual_squared_identity_s4": {
+      "pass": true,
+      "detail": "D(D(d)) = d for the signed transpose convention"
+    },
+    "B_sign_invisible_mod2_s4": {
+      "pass": true,
+      "detail": "-d^T equals d^T over F_2; sign is an integral orientation datum"
+    },
+    "B_boundary_and_dual_rank_s5": {
+      "pass": true,
+      "detail": "rank(d)=4, rank(-d^T)=4; same primitive obstruction rank"
+    },
+    "B_dual_squared_identity_s5": {
+      "pass": true,
+      "detail": "D(D(d)) = d for the signed transpose convention"
+    },
+    "B_sign_invisible_mod2_s5": {
+      "pass": true,
+      "detail": "-d^T equals d^T over F_2; sign is an integral orientation datum"
+    },
+    "B_boundary_and_dual_rank_s6": {
+      "pass": true,
+      "detail": "rank(d)=5, rank(-d^T)=5; same primitive obstruction rank"
+    },
+    "B_dual_squared_identity_s6": {
+      "pass": true,
+      "detail": "D(D(d)) = d for the signed transpose convention"
+    },
+    "B_sign_invisible_mod2_s6": {
+      "pass": true,
+      "detail": "-d^T equals d^T over F_2; sign is an integral orientation datum"
+    },
+    "B_boundary_and_dual_rank_s7": {
+      "pass": true,
+      "detail": "rank(d)=6, rank(-d^T)=6; same primitive obstruction rank"
+    },
+    "B_dual_squared_identity_s7": {
+      "pass": true,
+      "detail": "D(D(d)) = d for the signed transpose convention"
+    },
+    "B_sign_invisible_mod2_s7": {
+      "pass": true,
+      "detail": "-d^T equals d^T over F_2; sign is an integral orientation datum"
+    },
+    "C_boundary_naturality_1_in_2": {
+      "pass": true,
+      "detail": "r_Ros d_big = d_small r_Loeb"
+    },
+    "C_dual_boundary_naturality_1_in_2": {
+      "pass": true,
+      "detail": "r_Loeb^T (-d_small^T) = (-d_big^T) r_Ros^T"
+    },
+    "C_boundary_naturality_2_in_3": {
+      "pass": true,
+      "detail": "r_Ros d_big = d_small r_Loeb"
+    },
+    "C_dual_boundary_naturality_2_in_3": {
+      "pass": true,
+      "detail": "r_Loeb^T (-d_small^T) = (-d_big^T) r_Ros^T"
+    },
+    "C_boundary_naturality_3_in_5": {
+      "pass": true,
+      "detail": "r_Ros d_big = d_small r_Loeb"
+    },
+    "C_dual_boundary_naturality_3_in_5": {
+      "pass": true,
+      "detail": "r_Loeb^T (-d_small^T) = (-d_big^T) r_Ros^T"
+    },
+    "C_boundary_naturality_4_in_7": {
+      "pass": true,
+      "detail": "r_Ros d_big = d_small r_Loeb"
+    },
+    "C_dual_boundary_naturality_4_in_7": {
+      "pass": true,
+      "detail": "r_Loeb^T (-d_small^T) = (-d_big^T) r_Ros^T"
+    },
+    "D_functional_equation_statement": {
+      "pass": true,
+      "detail": "finite model supports D(epsilon_S) = -epsilon_S^vee; over Z the sign is orientation, over F_2 it vanishes"
+    },
+    "D_scheme_lift_gap_recorded": {
+      "pass": true,
+      "detail": "checker does not prove the honest Spec Z site identity or topological Verdier-duality normalization"
+    }
+  }
+}

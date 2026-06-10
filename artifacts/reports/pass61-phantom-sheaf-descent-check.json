@@ -1,0 +1,44 @@
+{
+  "pass": 61,
+  "timestamp": "2026-06-08T20:41:08Z",
+  "title": "sheaf descent / sheafification of the phantom presheaf on Spec Z",
+  "results": {
+    "coker_rank": {
+      "cases": [
+        {"|S|": 2, "free_rank": 1, "expected": 1, "torsion": [], "ok": true},
+        {"|S|": 3, "free_rank": 2, "expected": 2, "torsion": [], "ok": true},
+        {"|S|": 4, "free_rank": 3, "expected": 3, "torsion": [], "ok": true},
+        {"|S|": 5, "free_rank": 4, "expected": 4, "torsion": [], "ok": true},
+        {"|S|": 6, "free_rank": 5, "expected": 5, "torsion": [], "ok": true}
+      ],
+      "ok": true
+    },
+    "product_presheaf_descent": {
+      "cases": [
+        {"S": [2, 3], "ok": true},
+        {"S": [2, 3, 5], "ok": true},
+        {"S": [3, 5, 7], "ok": true},
+        {"S": [2, 5, 7, 11], "ok": true}
+      ],
+      "ok": true
+    },
+    "sheafification_kernel_rank": {
+      "statement": "ker(P(S)->L(S)) = Z^S/DeltaZ = Z^{|S|-1}",
+      "cases": [
+        {"|S|": 2, "kernel_free_rank": 1, "ok": true},
+        {"|S|": 3, "kernel_free_rank": 2, "ok": true},
+        {"|S|": 4, "kernel_free_rank": 3, "ok": true},
+        {"|S|": 5, "kernel_free_rank": 4, "ok": true},
+        {"|S|": 6, "kernel_free_rank": 5, "ok": true}
+      ],
+      "ok": true
+    },
+    "rad_lattice_glue_restrict": {
+      "note": "join=lcm-of-radicals (glueing), meet=gcd-of-radicals (restriction)",
+      "ok": true,
+      "n_pairs": 64
+    }
+  },
+  "overall": "PASS",
+  "exec_note": "Run off-mount in /tmp per [[aps-run-sync-hazard]]; report written back via Windows-path Write tool. Verifies: (a) coker(Delta: Z -> Z^S) is free of rank |S|-1 via Smith normal form (|S|=2..6); (b) the product presheaf F(S)=prod_p Z_p satisfies descent over the singleton prime cover; (c) the sheafification comparison P(S) ->> L(S) has kernel Z^{|S|-1}; (d) rad-lattice meets/joins = gcd/lcm of radicals (restriction/glueing). The set-theoretic part (ii) of Pass 61 (b=aleph_1 => phantom nonzero) is a literature citation, not machine-checkable."
+}

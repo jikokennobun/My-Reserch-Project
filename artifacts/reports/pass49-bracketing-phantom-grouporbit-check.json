@@ -1,0 +1,152 @@
+{
+  "pass": 49,
+  "A_smith_bracketing": {
+    "cases": {
+      "cube_2^1": {
+        "bracket": false,
+        "odd_invariant_chain": false,
+        "fixed_set_nonempty": true,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1
+      },
+      "cube_2^2": {
+        "bracket": false,
+        "odd_invariant_chain": false,
+        "fixed_set_nonempty": true,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1
+      },
+      "cube_2^3": {
+        "bracket": false,
+        "odd_invariant_chain": false,
+        "fixed_set_nonempty": true,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1
+      },
+      "2^2_alt_involution": {
+        "bracket": true,
+        "odd_invariant_chain": true,
+        "fixed_set_nonempty": true,
+        "num_fixed_vertices": 2,
+        "Lefschetz": 1
+      },
+      "C5_reversal": {
+        "bracket": true,
+        "odd_invariant_chain": true,
+        "fixed_set_nonempty": true,
+        "num_fixed_vertices": 1,
+        "Lefschetz": 1
+      },
+      "C4_reversal": {
+        "bracket": false,
+        "odd_invariant_chain": false,
+        "fixed_set_nonempty": true,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1
+      },
+      "F_3chain": {
+        "bracket": true,
+        "odd_invariant_chain": true,
+        "fixed_set_nonempty": true,
+        "num_fixed_vertices": 1,
+        "Lefschetz": 1
+      }
+    },
+    "PASS": true
+  },
+  "B_phantom_truncations": {
+    "truncations": [
+      {
+        "K": 2,
+        "antitone": true,
+        "even_orbit_ascending": true,
+        "box_astar": "m",
+        "meet_box_cn": "d2",
+        "gap_strict": true,
+        "joincont_fails_only_at_astar": true,
+        "one_failed_cover": true
+      },
+      {
+        "K": 3,
+        "antitone": true,
+        "even_orbit_ascending": true,
+        "box_astar": "m",
+        "meet_box_cn": "d3",
+        "gap_strict": true,
+        "joincont_fails_only_at_astar": true,
+        "one_failed_cover": true
+      },
+      {
+        "K": 4,
+        "antitone": true,
+        "even_orbit_ascending": true,
+        "box_astar": "m",
+        "meet_box_cn": "d4",
+        "gap_strict": true,
+        "joincont_fails_only_at_astar": true,
+        "one_failed_cover": true
+      },
+      {
+        "K": 5,
+        "antitone": true,
+        "even_orbit_ascending": true,
+        "box_astar": "m",
+        "meet_box_cn": "d5",
+        "gap_strict": true,
+        "joincont_fails_only_at_astar": true,
+        "one_failed_cover": true
+      },
+      {
+        "K": 6,
+        "antitone": true,
+        "even_orbit_ascending": true,
+        "box_astar": "m",
+        "meet_box_cn": "d6",
+        "gap_strict": true,
+        "joincont_fails_only_at_astar": true,
+        "one_failed_cover": true
+      }
+    ],
+    "PASS": true
+  },
+  "C_grouporbit_residuation": {
+    "residuated_unital_tensors_unit_p": 411,
+    "residuated_unital_tensors_unit_o0": 411,
+    "residuated_unital_tensors_integral_unit_U": 0,
+    "first_witness_unit_p": {
+      "o0*o0": "o0",
+      "o0*o1": "o0",
+      "o0*o2": "o0",
+      "o0*o3": "o0",
+      "o0*p": "o0",
+      "o1*o0": "o0",
+      "o1*o1": "U",
+      "o1*o2": "U",
+      "o1*o3": "U",
+      "o1*p": "o1",
+      "o2*o0": "o0",
+      "o2*o1": "U",
+      "o2*o2": "U",
+      "o2*o3": "U",
+      "o2*p": "o2",
+      "o3*o0": "o0",
+      "o3*o1": "U",
+      "o3*o2": "U",
+      "o3*o3": "U",
+      "o3*p": "o3"
+    },
+    "box_antitone": true,
+    "box_fixed_points": [
+      "p"
+    ],
+    "p_detached_from_orbit": true,
+    "p_is_box_fixed_point": true,
+    "PASS": true
+  },
+  "overall": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "PASS": true
+  }
+}

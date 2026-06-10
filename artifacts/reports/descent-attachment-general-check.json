@@ -1,0 +1,1092 @@
+{
+  "pass": 45,
+  "title": "descent<=>attachment is FALSE for general finite preAPS: the order-reversing chain involution is the pathological chain-cycle third regime",
+  "explicit_C5_reversal_counterexample": {
+    "carrier": "C5 chain 0<1<2<3<4",
+    "boxtimes": "reversal r(x)=4-x",
+    "T": 3,
+    "antitone": true,
+    "involution": true,
+    "orbit_of_T": [
+      3,
+      1
+    ],
+    "cycle": [
+      3,
+      1
+    ],
+    "cycle_type": "chain",
+    "descends": false,
+    "fixed_points": [
+      2
+    ],
+    "attached": [
+      2
+    ],
+    "detached": [],
+    "verdict": "COUNTEREXAMPLE: non-descending orbit with an ATTACHED fixed point"
+  },
+  "surveys": [
+    {
+      "poset": "M3 diamond",
+      "results": {
+        "x": {
+          "antitone_maps": 178,
+          "descending": 66,
+          "non_descending": 112,
+          "cycle_type_counts": {
+            "degenerate": 66,
+            "chain": 98,
+            "antichain": 12,
+            "period-3": 2
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 22,
+          "counterexample_sample": [
+            {
+              "map": {
+                "bot": "top",
+                "x": "bot",
+                "y": "bot",
+                "z": "z",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "top"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "z"
+              ]
+            },
+            {
+              "map": {
+                "bot": "top",
+                "x": "bot",
+                "y": "x",
+                "z": "z",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "top"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "z"
+              ]
+            },
+            {
+              "map": {
+                "bot": "top",
+                "x": "bot",
+                "y": "y",
+                "z": "bot",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "top"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "y"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "poset": "C3 chain",
+      "results": {
+        "1": {
+          "antitone_maps": 10,
+          "descending": 6,
+          "non_descending": 4,
+          "cycle_type_counts": {
+            "degenerate": 6,
+            "chain": 4
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 0,
+          "counterexample_sample": []
+        },
+        "2": {
+          "antitone_maps": 10,
+          "descending": 5,
+          "non_descending": 5,
+          "cycle_type_counts": {
+            "degenerate": 5,
+            "chain": 5
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 1,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0
+              },
+              "cycle": [
+                2,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "poset": "C4 chain",
+      "results": {
+        "2": {
+          "antitone_maps": 35,
+          "descending": 18,
+          "non_descending": 17,
+          "cycle_type_counts": {
+            "degenerate": 18,
+            "chain": 17
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 2,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0
+              },
+              "cycle": [
+                2,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        },
+        "3": {
+          "antitone_maps": 35,
+          "descending": 14,
+          "non_descending": 21,
+          "cycle_type_counts": {
+            "degenerate": 14,
+            "chain": 21
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 6,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "poset": "C5 chain",
+      "results": {
+        "2": {
+          "antitone_maps": 126,
+          "descending": 64,
+          "non_descending": 62,
+          "cycle_type_counts": {
+            "degenerate": 64,
+            "chain": 62
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 6,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                2,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 4,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                0,
+                4
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        },
+        "3": {
+          "antitone_maps": 126,
+          "descending": 54,
+          "non_descending": 72,
+          "cycle_type_counts": {
+            "degenerate": 54,
+            "chain": 72
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 16,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        },
+        "4": {
+          "antitone_maps": 126,
+          "descending": 42,
+          "non_descending": 84,
+          "cycle_type_counts": {
+            "degenerate": 42,
+            "chain": 84
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 28,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "poset": "C6 chain",
+      "results": {
+        "3": {
+          "antitone_maps": 462,
+          "descending": 214,
+          "non_descending": 248,
+          "cycle_type_counts": {
+            "degenerate": 214,
+            "chain": 248
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 38,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        },
+        "4": {
+          "antitone_maps": 462,
+          "descending": 166,
+          "non_descending": 296,
+          "cycle_type_counts": {
+            "degenerate": 166,
+            "chain": 296
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 86,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        },
+        "5": {
+          "antitone_maps": 462,
+          "descending": 132,
+          "non_descending": 330,
+          "cycle_type_counts": {
+            "degenerate": 132,
+            "chain": 330
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 120,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "poset": "C7 chain",
+      "results": {
+        "3": {
+          "antitone_maps": 1716,
+          "descending": 798,
+          "non_descending": 918,
+          "cycle_type_counts": {
+            "degenerate": 798,
+            "chain": 918
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 126,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                3,
+                0
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        },
+        "5": {
+          "antitone_maps": 1716,
+          "descending": 527,
+          "non_descending": 1189,
+          "cycle_type_counts": {
+            "degenerate": 527,
+            "chain": 1189
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 397,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        },
+        "6": {
+          "antitone_maps": 1716,
+          "descending": 429,
+          "non_descending": 1287,
+          "cycle_type_counts": {
+            "degenerate": 429,
+            "chain": 1287
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 495,
+          "counterexample_sample": [
+            {
+              "map": {
+                "0": 2,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                0,
+                2
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            },
+            {
+              "map": {
+                "0": 3,
+                "1": 1,
+                "2": 1,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0
+              },
+              "cycle": [
+                0,
+                3
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                1
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "poset": "N5",
+      "results": {
+        "top": {
+          "antitone_maps": 136,
+          "descending": 35,
+          "non_descending": 101,
+          "cycle_type_counts": {
+            "degenerate": 35,
+            "chain": 101
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 35,
+          "counterexample_sample": [
+            {
+              "map": {
+                "bot": "c",
+                "a": "a",
+                "c": "bot",
+                "b": "bot",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "c"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "a"
+              ]
+            },
+            {
+              "map": {
+                "bot": "c",
+                "a": "a",
+                "c": "bot",
+                "b": "a",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "c"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "a"
+              ]
+            },
+            {
+              "map": {
+                "bot": "c",
+                "a": "a",
+                "c": "bot",
+                "b": "c",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "c"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "a"
+              ]
+            }
+          ]
+        },
+        "c": {
+          "antitone_maps": 136,
+          "descending": 55,
+          "non_descending": 81,
+          "cycle_type_counts": {
+            "degenerate": 55,
+            "chain": 78,
+            "antichain": 3
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 14,
+          "counterexample_sample": [
+            {
+              "map": {
+                "bot": "c",
+                "a": "a",
+                "c": "bot",
+                "b": "bot",
+                "top": "bot"
+              },
+              "cycle": [
+                "c",
+                "bot"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "a"
+              ]
+            },
+            {
+              "map": {
+                "bot": "c",
+                "a": "a",
+                "c": "bot",
+                "b": "a",
+                "top": "bot"
+              },
+              "cycle": [
+                "c",
+                "bot"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "a"
+              ]
+            },
+            {
+              "map": {
+                "bot": "c",
+                "a": "a",
+                "c": "bot",
+                "b": "c",
+                "top": "bot"
+              },
+              "cycle": [
+                "c",
+                "bot"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "a"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "poset": "M4 diamond",
+      "results": {
+        "a": {
+          "antitone_maps": 1430,
+          "descending": 436,
+          "non_descending": 994,
+          "cycle_type_counts": {
+            "degenerate": 436,
+            "chain": 796,
+            "antichain": 150,
+            "period-3": 42,
+            "period-4": 6
+          },
+          "descent_implies_attachment_violations": 0,
+          "nondescent_with_attached_FP": 260,
+          "counterexample_sample": [
+            {
+              "map": {
+                "bot": "top",
+                "a": "bot",
+                "b": "bot",
+                "c": "bot",
+                "d": "d",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "top"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "d"
+              ]
+            },
+            {
+              "map": {
+                "bot": "top",
+                "a": "bot",
+                "b": "bot",
+                "c": "a",
+                "d": "d",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "top"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "d"
+              ]
+            },
+            {
+              "map": {
+                "bot": "top",
+                "a": "bot",
+                "b": "bot",
+                "c": "b",
+                "d": "d",
+                "top": "bot"
+              },
+              "cycle": [
+                "bot",
+                "top"
+              ],
+              "cycle_type": "chain",
+              "attached_fixed_points": [
+                "d"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "overall": {
+    "explicit_counterexample_found": true,
+    "survey_counterexample_found": true,
+    "descent_implies_attachment_half_holds_everywhere": true,
+    "conclusion": "The clean equivalence is REFUTED: descent => attachment is universally valid (carrier-independent), but attachment => descent FAILS via chain-cycles. The eventual-2-cycle order type (degenerate/antichain/chain) is the correct refinement.",
+    "verdict": "PASS"
+  }
+}

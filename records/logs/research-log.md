@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-10 (Autonomous discussion Pass 65)
+
+- Pass 65 used the second recollement triangle to give a finite-model Verdier-dual form of the Loeb-Rosser dictionary.  The local-support complex $\mathbb Z\xrightarrow{\Delta}\mathbb Z^S$ has $H^0=0$ and $H^1\cong\mathbb Z^{s-1}$, so the Rosser lattice also appears as an $i^!$ costalk/support object.  The recollement boundary $d_S:(x_p)\mapsto(x_p-x_{p_0})$ dualizes to $-d_S^T$, giving the finite functional equation $\mathbb D(\epsilon_S)=-\epsilon_S^\vee$; the sign disappears over $\mathbb F_2$ but is an integral orientation datum.  Machine-verified `code/scripts/check-pass65.py` -> `artifacts/reports/pass65-verdier-dual-recollement-functional-equation-check.json` (overall PASS: costalk ranks, signed transpose, $\mathbb D^2$, mod-2 sign collapse, finite-prime naturality).  The actual $\mathrm{Spec}\,\mathbb Z$ site lift and dualizing normalization remain open and are the Pass 66 target.
+
 ## 2026-06-10 (Research Project relay sync)
 
 - Ran `code/scripts/sync-chatgpt-project-artifacts.ps1`: the local Google Drive

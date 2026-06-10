@@ -1,0 +1,57 @@
+{
+  "pass": 44,
+  "title": "attachment / Loeb dividing line: orbit-descent is the exact attachment gate; ~FG2(1) is necessary but not sufficient for detached-only fixed points",
+  "carrier": "M3 = {bot, x, y, z, top}, T = x",
+  "antitone_maps_total": 178,
+  "A_descent_implies_attachment": {
+    "descending_maps": 66,
+    "violations": [],
+    "verdict": "PASS",
+    "interpretation": "Every antitone map with a descending consistency orbit has its stable value as an ATTACHED fixed point (the algebraic shadow of de Jongh-Sambin uniqueness, Pass 43 Part A)."
+  },
+  "B_detached_only_implies_nondescent_and_FG2_failure": {
+    "detached_only_maps": 2,
+    "violations": [],
+    "R_2_witness": {
+      "antitone": true,
+      "z_is_fixed": true,
+      "z_detached": true,
+      "orbit_of_T": [
+        "x",
+        "y",
+        "x"
+      ],
+      "no_attached_fixed_point": true,
+      "fg2_holds": false
+    },
+    "verdict": "PASS",
+    "interpretation": "A detached-only model necessarily has a non-descending (cyclic-antichain) orbit; FG2(1) fails on it."
+  },
+  "C_sharpness_FG2_failure_not_sufficient": {
+    "witness": {
+      "map": {
+        "bot": "top",
+        "top": "bot",
+        "x": "y",
+        "y": "z",
+        "z": "z"
+      },
+      "antitone": true,
+      "orbit_of_T": [
+        "x",
+        "y",
+        "z",
+        "z"
+      ],
+      "fg2_holds": false,
+      "fixed_points": [
+        "z"
+      ],
+      "z_attached": true,
+      "z_reached_at_index": 2
+    },
+    "verdict": "PASS",
+    "interpretation": "Same carrier M3: the map x->y->z->z FAILS FG2(1) yet stabilizes at the ATTACHED fixed point z. Hence ~FG2(1) does NOT force detachment; the genuine dividing line is orbit DESCENT (eventual constancy), strictly finer than ~FG2(1)."
+  },
+  "overall_verdict": "PASS"
+}

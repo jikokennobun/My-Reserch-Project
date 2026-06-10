@@ -1,0 +1,20 @@
+{
+  "Rh_lattice_distributive": true,
+  "Rh_frame_law_holds_at_cover": true,
+  "Rh_meet_residuates": true,
+  "Rh_unit_top_integral_Loeb": true,
+  "Rh_completion_is_complete_Heyting": true,
+  "Rd_finite_truncation_additive_residuates_principal_cover": true,
+  "Rd_dilation_residual_FAILS_at_nonprincipal_cover": true,
+  "Dich_residuation_xor_Rosser_unit": true,
+  "C_ker_delta_lim_zero_detached": true,
+  "C_coker_delta_nonML_over_Z_lim1_nonzero": true,
+  "C_field_collapse_ML_Fp_coprime": true,
+  "C_two_term_only_H0_H1": true,
+  "C_detail": {
+    "2": {"image_indices": [1, 2, 4, 8, 16, 32, 64, 128], "nonML_over_Z": true},
+    "3": {"image_indices": [1, 3, 9, 27, 81, 243, 729, 2187], "nonML_over_Z": true},
+    "6": {"image_indices": [1, 6, 36, 216, 1296, 7776, 46656, 279936], "nonML_over_Z": true}
+  },
+  "PASS": true
+}

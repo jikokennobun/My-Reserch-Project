@@ -1,0 +1,76 @@
+{
+  "pass": 42,
+  "title": "detached fixed point as the algebraic Rosser sentence",
+  "A_rosser_gadget_R2": {
+    "carrier": [
+      "bot",
+      "o0",
+      "o1",
+      "p",
+      "top"
+    ],
+    "order": "M3 diamond (o0,o1,p pairwise incomparable, bot<all<top)",
+    "boxtimes": {
+      "bot": "top",
+      "top": "bot",
+      "o0": "o1",
+      "o1": "o0",
+      "p": "p"
+    },
+    "T": "o0",
+    "antitone": true,
+    "fixed_points": [
+      "p"
+    ],
+    "p_is_fixed": true,
+    "T_orbit_support": [
+      "o0",
+      "o1"
+    ],
+    "orbit_is_antichain": true,
+    "orbit_contains_fixed_point": false,
+    "p_detached_from_orbit": true,
+    "FP_synt_holds": true,
+    "FP_synt_witness_is_only_detached_p": true,
+    "p_reachable_from_T": false,
+    "reachable_iterates_of_T": [
+      "o0",
+      "o1"
+    ],
+    "verdict": "PASS"
+  },
+  "C_M3_detached_dichotomy_guard": {
+    "carrier": [
+      "bot",
+      "x",
+      "y",
+      "z",
+      "top"
+    ],
+    "order": "M3 diamond (x,y,z pairwise incomparable)",
+    "antitone_maps_checked": 178,
+    "antitone_maps_with_a_fixed_point": 90,
+    "maps_with_nonstabilizing_antichain_orbit_of_T": 14,
+    "of_those_having_a_fixed_point": 2,
+    "of_those_with_an_ORBIT_ATTACHED_fixed_point": 0,
+    "claim": "in the antichain-orbit regime every fixed point is detached",
+    "sample_detached_witness": {
+      "boxtimes": {
+        "bot": "top",
+        "x": "y",
+        "y": "x",
+        "z": "z",
+        "top": "bot"
+      },
+      "T_orbit": [
+        "x",
+        "y"
+      ],
+      "detached_fixed_points": [
+        "z"
+      ]
+    },
+    "verdict": "PASS"
+  },
+  "overall_verdict": "PASS"
+}

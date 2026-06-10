@@ -1,0 +1,36 @@
+{
+  "pass": 62,
+  "title": "Loeb-Rosser bicomplex; non-split extension (mixed class); no-d2 degeneration; cosheafification collapse",
+  "coker_rank": [
+    {"s": 2, "free_rank": 1, "torsion": false},
+    {"s": 3, "free_rank": 2, "torsion": false},
+    {"s": 4, "free_rank": 3, "torsion": false},
+    {"s": 5, "free_rank": 4, "torsion": false},
+    {"s": 6, "free_rank": 5, "torsion": false}
+  ],
+  "no_retraction_Hom_Zp_Z_zero": [
+    {"p": 2, "obstruction_confirmed": true},
+    {"p": 3, "obstruction_confirmed": true},
+    {"p": 5, "obstruction_confirmed": true},
+    {"p": 7, "obstruction_confirmed": true},
+    {"p": 11, "obstruction_confirmed": true}
+  ],
+  "tower_higher_derived": {"milnor_cochain_degrees": [0, 1], "lim_q_ge_2": 0},
+  "reduced_cech_no_d2": [
+    {"S": [2, 3], "all_pairwise_intersections_empty": true, "E2_2_0": 0, "d2_can_act": false},
+    {"S": [2, 3, 5], "all_pairwise_intersections_empty": true, "E2_2_0": 0, "d2_can_act": false},
+    {"S": [3, 5, 7], "all_pairwise_intersections_empty": true, "E2_2_0": 0, "d2_can_act": false},
+    {"S": [2, 5, 7, 11], "all_pairwise_intersections_empty": true, "E2_2_0": 0, "d2_can_act": false}
+  ],
+  "cosheaf_collapse": [
+    {"S": [2, 3], "oplus_equals_prod": true, "cosheafification_equals_sheafification": true},
+    {"S": [2, 3, 5], "oplus_equals_prod": true, "cosheafification_equals_sheafification": true},
+    {"S": [3, 5, 7], "oplus_equals_prod": true, "cosheafification_equals_sheafification": true}
+  ],
+  "crt_radical": {
+    "rad_classes": {"2": [2, 4, 8], "3": [3], "6": [6, 12], "30": [30]}
+  },
+  "checks": [true, true, true, true, true],
+  "PASS": true,
+  "exec_note": "Run off-mount in /tmp per [[aps-run-sync-hazard]]; bash mount served a Pass-53-era stale copy of the discussion file (and an undercount of open_problems/hierarchy line counts) while the Windows-path tools showed the repo complete through Pass 61. State diagnosed and all edits applied via Windows-path file tools."
+}

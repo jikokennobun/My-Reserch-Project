@@ -1,0 +1,32 @@
+{
+  "pass_number": 64,
+  "title": "recollement / six-functor realization of the total Loeb-Rosser phantom; prime-spectrum motive",
+  "overall": "PASS",
+  "exec_note": "run off-mount in /tmp per [[aps-run-sync-hazard]]; report written back via the Windows-path Write tool. Bash mount served a Pass-53-era stale copy of the discussion file at run start (true tail = Pass 63, counter 64); state diagnosed and all edits applied via Windows-path file tools.",
+  "checks": {
+    "A_horizontal_H1_jShriek_s1": {"pass": true, "detail": "H^1(j_! underline Z)=Z^0 (expected Z^0)"},
+    "A_horizontal_H1_jShriek_s2": {"pass": true, "detail": "H^1(j_! underline Z)=Z^1 (expected Z^1)"},
+    "A_horizontal_H1_jShriek_s3": {"pass": true, "detail": "H^1(j_! underline Z)=Z^2 (expected Z^2)"},
+    "A_horizontal_H1_jShriek_s4": {"pass": true, "detail": "H^1(j_! underline Z)=Z^3 (expected Z^3)"},
+    "A_horizontal_H1_jShriek_s5": {"pass": true, "detail": "H^1(j_! underline Z)=Z^4 (expected Z^4)"},
+    "A_horizontal_H1_jShriek_s6": {"pass": true, "detail": "H^1(j_! underline Z)=Z^5 (expected Z^5)"},
+    "D_s1_degeneration_pure_Loeb": {"pass": true, "detail": "s=1: H^1(j_!Z)=0, no Rosser/horizontal part -> phantom purely vertical (pure Loeb ghost)"},
+    "A_vertical_detached_lim0": {"pass": true, "detail": "ker(1-p*shift)=0 for p in {2,3,5}, N in {3,6,9}: lim=0 detached limit fixed point"},
+    "A_vertical_nonML_index_growth": {"pass": true, "detail": "image filtration index p^n strictly increasing -> non-Mittag-Leffler -> lim^1 != 0 (= Z_p/Z)"},
+    "B_connecting_d2_rank": {"pass": true, "detail": "recollement boundary d: prod_p Z -> Z^{s-1} has image rank s-1 for s=1..6 (common-integer-lift obstruction = epsilon_S = Pass-63 d_2)"},
+    "B_connecting_kernel_diagonal": {"pass": true, "detail": "ker d = Z (diagonal global integer) dim 1 for s=2,3,4"},
+    "C_adj_jShriek_jStar": {"pass": true, "detail": "|Hom(j_!L,F)| = |Hom(L,j^*F)| over F_2 for all tested (L,F): j_! dashv j^* adjunction holds on Alexandrov X"},
+    "C_closed_iStar_eq_iShriek": {"pass": true, "detail": "i closed immersion on finite space: i_*=i_!; recollement (j_!,j^*,j_*) dashv (i^*,i_*,i^!) valid"},
+    "E_open_immersion_chain": {"pass": true, "detail": "X_{2} open in X_{2,3} open in X_{2,3,5}: restriction commutes with epsilon (functor on subset lattice)"},
+    "E_restriction_surjective": {"pass": true, "detail": "Z^{|S'|-1} ->> Z^{|S|-1} by forgetting primes in S'\\S"},
+    "E_incomparable_no_arrow": {"pass": true, "detail": "S={2,3},S'={2,5} rad-incomparable: no open immersion either way; only common sub-arena {2} (Cor 60c)"},
+    "E_arithmetic_not_cardinal": {"pass": true, "detail": "|S1|=|S2|=2 but epsilon_{2,3} != epsilon_{2,5} on non-isomorphic Z_p/Z (Thm 63c): motive is ARITHMETIC"},
+    "F_full_spec_adelic_punchline": {"pass": true, "detail": "S=P (all primes): X=Spec Z; total phantom = (prod_p Z_p)/Z = Zhat/Z = integral finite-adele class group"}
+  },
+  "literature": [
+    "Beilinson-Bernstein-Deligne, Faisceaux pervers, Asterisque 100 (1982) (recollement (j_!,j^*,j_*) dashv (i^*,i_*,i^!))",
+    "Kashiwara-Schapira, Sheaves on Manifolds (1990), §2.6-3.1 (six operations, open/closed decomposition)",
+    "Curry, Sheaves, Cosheaves and Applications (2014) (cosheaf / j_! compact-support extension)",
+    "Weibel, An Introduction to Homological Algebra (1994), §3.5/§5.6 (lim^1, spectral sequence vs extension)"
+  ]
+}

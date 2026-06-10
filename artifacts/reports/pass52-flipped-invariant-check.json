@@ -1,0 +1,222 @@
+{
+  "PASS": true,
+  "extremal": {
+    "sup_Phi_attained_at_1": true,
+    "fan_Phi_sequence (m=1..5)": [
+      0,
+      -1,
+      -2,
+      -3,
+      -4
+    ],
+    "fan_realizes_Phi=1-m": true
+  },
+  "cases": [
+    {
+      "name": "cube 2^[1] (complementation)",
+      "|F|": 2,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 0,
+        "1": 1
+      },
+      "|F^tau| (=N_0=e)": 0,
+      "Phi (signed flipped-chain sum)": 1,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": 1,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": 1,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "cube 2^[2] (complementation)",
+      "|F|": 4,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 0,
+        "1": 1
+      },
+      "|F^tau| (=N_0=e)": 0,
+      "Phi (signed flipped-chain sum)": 1,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": 1,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": 1,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "cube 2^[3] (complementation)",
+      "|F|": 8,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 0,
+        "1": 1
+      },
+      "|F^tau| (=N_0=e)": 0,
+      "Phi (signed flipped-chain sum)": 1,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": 1,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": 1,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "fixed-antichain fan m=1",
+      "|F|": 3,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "|F^tau| (=N_0=e)": 1,
+      "Phi (signed flipped-chain sum)": 0,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": 0,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": 0,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "fixed-antichain fan m=2",
+      "|F|": 4,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 2,
+        "1": 1,
+        "2": 2
+      },
+      "|F^tau| (=N_0=e)": 2,
+      "Phi (signed flipped-chain sum)": -1,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": -1,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": -1,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "fixed-antichain fan m=3",
+      "|F|": 5,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 3,
+        "1": 1,
+        "2": 3
+      },
+      "|F^tau| (=N_0=e)": 3,
+      "Phi (signed flipped-chain sum)": -2,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": -2,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": -2,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "fixed-antichain fan m=4",
+      "|F|": 6,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 4,
+        "1": 1,
+        "2": 4
+      },
+      "|F^tau| (=N_0=e)": 4,
+      "Phi (signed flipped-chain sum)": -3,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": -3,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": -3,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "fixed-antichain fan m=5",
+      "|F|": 7,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 5,
+        "1": 1,
+        "2": 5
+      },
+      "|F^tau| (=N_0=e)": 5,
+      "Phi (signed flipped-chain sum)": -4,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": -4,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": -4,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "3-chain (reversal)",
+      "|F|": 3,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "|F^tau| (=N_0=e)": 1,
+      "Phi (signed flipped-chain sum)": 0,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": 0,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": 0,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "4-chain (reversal)",
+      "|F|": 4,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 0,
+        "1": 2,
+        "2": 0,
+        "3": 1
+      },
+      "|F^tau| (=N_0=e)": 0,
+      "Phi (signed flipped-chain sum)": 1,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": 1,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": 1,
+      "Phi_matches_expected": true
+    },
+    {
+      "name": "C4 diamond (a1<->a2, b<->t)",
+      "|F|": 4,
+      "fixed_is_antichain": true,
+      "N_d": {
+        "0": 0,
+        "1": 1
+      },
+      "|F^tau| (=N_0=e)": 0,
+      "Phi (signed flipped-chain sum)": 1,
+      "L(tau) (Hopf trace)": 1,
+      "1 - |F^tau|": 1,
+      "chi(|Delta(F)|^tau)": 1,
+      "identity_L=e+Phi=1": true,
+      "identity_Phi=1-e": true,
+      "expected_Phi": 1,
+      "Phi_matches_expected": true
+    }
+  ]
+}

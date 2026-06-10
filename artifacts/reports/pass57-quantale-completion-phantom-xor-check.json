@@ -1,0 +1,6 @@
+{
+  "SUPERSEDED": true,
+  "note": "First-run Pass-57 report before the focus was retargeted to the carrier-free cancellativity no-go (Lemma 57a). The canonical Pass-57 report is pass57-cancellativity-nogo-quantale-escape-check.json, which contains all of this content (Q/R/D/M/X) plus the L_carrier_free_nogo_lemma_57a block. Retained as a stub because the sandbox mount could not delete it.",
+  "canonical": "artifacts/reports/pass57-cancellativity-nogo-quantale-escape-check.json",
+  "PASS": true
+}

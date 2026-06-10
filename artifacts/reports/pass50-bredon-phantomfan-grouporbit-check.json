@@ -1,0 +1,176 @@
+{
+  "pass": 50,
+  "A_bredon_vertex_bracket": {
+    "cases": {
+      "cube_2^1": {
+        "bracket": false,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1,
+        "e_FtauEuler": 0,
+        "Phi_flipped": 1,
+        "identity_e_plus_Phi": 1,
+        "e_detects_bracket": true
+      },
+      "cube_2^2": {
+        "bracket": false,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1,
+        "e_FtauEuler": 0,
+        "Phi_flipped": 1,
+        "identity_e_plus_Phi": 1,
+        "e_detects_bracket": true
+      },
+      "cube_2^3": {
+        "bracket": false,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1,
+        "e_FtauEuler": 0,
+        "Phi_flipped": 1,
+        "identity_e_plus_Phi": 1,
+        "e_detects_bracket": true
+      },
+      "2^2_alt_involution": {
+        "bracket": true,
+        "num_fixed_vertices": 2,
+        "Lefschetz": 1,
+        "e_FtauEuler": 2,
+        "Phi_flipped": -1,
+        "identity_e_plus_Phi": 1,
+        "e_detects_bracket": true
+      },
+      "C5_reversal": {
+        "bracket": true,
+        "num_fixed_vertices": 1,
+        "Lefschetz": 1,
+        "e_FtauEuler": 1,
+        "Phi_flipped": 0,
+        "identity_e_plus_Phi": 1,
+        "e_detects_bracket": true
+      },
+      "C4_reversal": {
+        "bracket": false,
+        "num_fixed_vertices": 0,
+        "Lefschetz": 1,
+        "e_FtauEuler": 0,
+        "Phi_flipped": 1,
+        "identity_e_plus_Phi": 1,
+        "e_detects_bracket": true
+      },
+      "F_3chain": {
+        "bracket": true,
+        "num_fixed_vertices": 1,
+        "Lefschetz": 1,
+        "e_FtauEuler": 1,
+        "Phi_flipped": 0,
+        "identity_e_plus_Phi": 1,
+        "e_detects_bracket": true
+      }
+    },
+    "PASS": true
+  },
+  "B_multicover_phantom_fan": {
+    "fans": [
+      {
+        "r": 1,
+        "antitone": true,
+        "failed_covers": 1,
+        "phantom_2cycles": 1,
+        "b_phantom_equals_r": true
+      },
+      {
+        "r": 2,
+        "antitone": true,
+        "failed_covers": 2,
+        "phantom_2cycles": 2,
+        "b_phantom_equals_r": true
+      },
+      {
+        "r": 3,
+        "antitone": true,
+        "failed_covers": 3,
+        "phantom_2cycles": 3,
+        "b_phantom_equals_r": true
+      }
+    ],
+    "PASS": true
+  },
+  "C_grouporbit_general_front": {
+    "R_n_exact_unit_p": {
+      "n=3": 56,
+      "n=4": 411
+    },
+    "integral_unit_U": {
+      "n=3": 0,
+      "n=4": 0
+    },
+    "witness_family_ok": true,
+    "witness_family": {
+      "n=3": {
+        "residuated": true,
+        "associative": true,
+        "commutative": true,
+        "unit": "p",
+        "non_integral": true
+      },
+      "n=4": {
+        "residuated": true,
+        "associative": true,
+        "commutative": true,
+        "unit": "p",
+        "non_integral": true
+      },
+      "n=5": {
+        "residuated": true,
+        "associative": true,
+        "commutative": true,
+        "unit": "p",
+        "non_integral": true
+      },
+      "n=6": {
+        "residuated": true,
+        "associative": true,
+        "commutative": true,
+        "unit": "p",
+        "non_integral": true
+      },
+      "n=7": {
+        "residuated": true,
+        "associative": true,
+        "commutative": true,
+        "unit": "p",
+        "non_integral": true
+      }
+    },
+    "decoupling_free_S3_orbit_box_ok": true,
+    "witness_n4_unit_p": {
+      "o0*o0": "o0",
+      "o0*o1": "o0",
+      "o0*o2": "o0",
+      "o0*o3": "o0",
+      "o0*p": "o0",
+      "o1*o0": "o0",
+      "o1*o1": "U",
+      "o1*o2": "U",
+      "o1*o3": "U",
+      "o1*p": "o1",
+      "o2*o0": "o0",
+      "o2*o1": "U",
+      "o2*o2": "U",
+      "o2*o3": "U",
+      "o2*p": "o2",
+      "o3*o0": "o0",
+      "o3*o1": "U",
+      "o3*o2": "U",
+      "o3*o3": "U",
+      "o3*p": "o3"
+    },
+    "note": "Exact enumeration: R(3)=56, R(4)=411 (reproduces Pass 49). Explicit witness family proves R(n)>=1 with non-integral unit p for all n. Commutative tensor sees only front size n, never the group law: abelian vs non-abelian G is invisible (decoupling).",
+    "PASS": true
+  },
+  "overall": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "PASS": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "pass": 54,
+  "A_field_collapse_integral_nonvanishing": {
+    "ok": true,
+    "rows": [
+      {"m": 1, "Z_indices": [1,1,1,1,1,1,1,1], "Z_nonMittagLeffler": false, "Z_lim1_nonzero": false, "Z_ML_(m=1)": true, "field_ML_all": true, "field_ML": {"2": true, "3": true, "5": true, "7": true}},
+      {"m": 2, "Z_indices": [2,4,8,16,32,64,128,256], "Z_nonMittagLeffler": true, "Z_lim1_nonzero": true, "Z_ML_(m=1)": false, "field_ML_all": true, "field_ML": {"2": true, "3": true, "5": true, "7": true}},
+      {"m": 3, "Z_indices": [3,9,27,81,243,729,2187,6561], "Z_nonMittagLeffler": true, "Z_lim1_nonzero": true, "Z_ML_(m=1)": false, "field_ML_all": true, "field_ML": {"2": true, "3": true, "5": true, "7": true}},
+      {"m": 4, "Z_indices": [4,16,64,256,1024,4096,16384,65536], "Z_nonMittagLeffler": true, "Z_lim1_nonzero": true, "Z_ML_(m=1)": false, "field_ML_all": true, "field_ML": {"2": true, "3": true, "5": true, "7": true}},
+      {"m": 6, "Z_indices": [6,36,216,1296,7776,46656,279936,1679616], "Z_nonMittagLeffler": true, "Z_lim1_nonzero": true, "Z_ML_(m=1)": false, "field_ML_all": true, "field_ML": {"2": true, "3": true, "5": true, "7": true}},
+      {"m": 8, "Z_indices": [8,64,512,4096,32768,262144,2097152,16777216], "Z_nonMittagLeffler": true, "Z_lim1_nonzero": true, "Z_ML_(m=1)": false, "field_ML_all": true, "field_ML": {"2": true, "3": true, "5": true, "7": true}},
+      {"m": 12, "Z_indices": [12,144,1728,20736,248832,2985984,35831808,429981696], "Z_nonMittagLeffler": true, "Z_lim1_nonzero": true, "Z_ML_(m=1)": false, "field_ML_all": true, "field_ML": {"2": true, "3": true, "5": true, "7": true}}
+    ]
+  },
+  "R_radical_invariance": {
+    "ok": true,
+    "radicals": {
+      "2": {"rad": [2], "Zhat_m_primes": [2]},
+      "3": {"rad": [3], "Zhat_m_primes": [3]},
+      "4": {"rad": [2], "Zhat_m_primes": [2]},
+      "6": {"rad": [2,3], "Zhat_m_primes": [2,3]},
+      "8": {"rad": [2], "Zhat_m_primes": [2]},
+      "12": {"rad": [2,3], "Zhat_m_primes": [2,3]}
+    },
+    "checks": {
+      "rad2_eq_rad4_eq_rad8": true,
+      "rad6_eq_rad12": true,
+      "rad2_ne_rad6": true,
+      "proiso_x2_x4": true,
+      "proiso_x2_x8": true,
+      "not_proiso_x2_x6": true,
+      "Zhat6_is_2x3": true
+    }
+  },
+  "B_honest_residuated_tower_cover_fiber": {
+    "ok": true,
+    "m2": {"m": 2, "window": [-12, 0], "residuated_endomorphism": true, "injective": true, "non_surjective": true, "cover_fiber_multiplier": 2, "expected": 2},
+    "m3": {"m": 3, "window": [-12, 0], "residuated_endomorphism": true, "injective": true, "non_surjective": true, "cover_fiber_multiplier": 3, "expected": 3}
+  },
+  "A": true,
+  "R": true,
+  "B": true,
+  "PASS": true
+}

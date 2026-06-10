@@ -1,0 +1,123 @@
+{
+  "pass": 48,
+  "A_parity_bracketing": [
+    {
+      "carrier": "C2",
+      "comparable_2cycle_maps_examined": 1,
+      "odd_F_cases": 0,
+      "violations": 0
+    },
+    {
+      "carrier": "C3",
+      "comparable_2cycle_maps_examined": 5,
+      "odd_F_cases": 1,
+      "violations": 0
+    },
+    {
+      "carrier": "C4",
+      "comparable_2cycle_maps_examined": 21,
+      "odd_F_cases": 6,
+      "violations": 0
+    },
+    {
+      "carrier": "C5",
+      "comparable_2cycle_maps_examined": 84,
+      "odd_F_cases": 28,
+      "violations": 0
+    },
+    {
+      "carrier": "2^2",
+      "comparable_2cycle_maps_examined": 24,
+      "odd_F_cases": 6,
+      "violations": 0
+    }
+  ],
+  "B_boolean_cube": {
+    "2^1": {
+      "antitone": true,
+      "seed_empty_cycle_len": 2,
+      "empty_top_comparable_2cycle": true,
+      "interval_size": 2,
+      "boxtimes_fixed_points": [],
+      "num_comparable_2cycles": 1,
+      "num_antichain_2cycles": 0
+    },
+    "2^2": {
+      "antitone": true,
+      "seed_empty_cycle_len": 2,
+      "empty_top_comparable_2cycle": true,
+      "interval_size": 4,
+      "boxtimes_fixed_points": [],
+      "num_comparable_2cycles": 1,
+      "num_antichain_2cycles": 1
+    },
+    "2^3": {
+      "antitone": true,
+      "seed_empty_cycle_len": 2,
+      "empty_top_comparable_2cycle": true,
+      "interval_size": 8,
+      "boxtimes_fixed_points": [],
+      "num_comparable_2cycles": 1,
+      "num_antichain_2cycles": 3
+    },
+    "2^4": {
+      "antitone": true,
+      "seed_empty_cycle_len": 2,
+      "empty_top_comparable_2cycle": true,
+      "interval_size": 16,
+      "boxtimes_fixed_points": [],
+      "num_comparable_2cycles": 1,
+      "num_antichain_2cycles": 7
+    },
+    "2^2_alt_involution": {
+      "antitone": true,
+      "is_involution": true,
+      "fixed_points": [
+        1,
+        2
+      ],
+      "comment": "same poset 2^2, order-reversing involution with FPs => |I| parity not the invariant"
+    }
+  },
+  "C_period_detachment": {
+    "R_4": {
+      "antitone": true,
+      "eventual_cycle": [
+        "o0",
+        "o1",
+        "o2",
+        "o3"
+      ],
+      "cycle_len": 4,
+      "cycle_is_antichain": true,
+      "fixed_points": [
+        "p"
+      ],
+      "p_detached_from_cycle": true
+    },
+    "forced_comparability_breaks_antitone": {
+      "k=2": {
+        "forced_p<=o0_keeps_antitone": false,
+        "expected": false
+      },
+      "k=3": {
+        "forced_p<=o0_keeps_antitone": false,
+        "expected": false
+      },
+      "k=4": {
+        "forced_p<=o0_keeps_antitone": false,
+        "expected": false
+      },
+      "k=5": {
+        "forced_p<=o0_keeps_antitone": false,
+        "expected": false
+      }
+    }
+  },
+  "overall": {
+    "A_parity": true,
+    "B_cube": true,
+    "C_detachment": true,
+    "PASS": true
+  }
+}

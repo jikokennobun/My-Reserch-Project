@@ -1,0 +1,44 @@
+{
+  "pass": 60,
+  "title": "rad(m)|rad(m') is the sole obstruction to naturality of Theta: Ros_(-) => varprojlim^1(-)",
+  "checks": {
+    "A_carrier_iff_rad": {
+      "claim": "residuated cover-filtration map C_m->C_m' exists <=> Z[1/m] subset Z[1/m'] <=> rad(m)|rad(m')",
+      "violations": [],
+      "n_pairs": 144,
+      "pass": true
+    },
+    "B_nonML_iff_m_ge_2": {
+      "claim": "image-index tower m^k strictly increases (non-ML, phantom present) iff m>=2; m=1 phantom-free",
+      "violations": [],
+      "pass": true
+    },
+    "C_endomorphism_naturality": {
+      "claim": "Theta is G_m=(Z/m^K)^x-equivariant (witness-comparison automorphism naturality)",
+      "violations": [],
+      "pass": true
+    },
+    "D_crossmod_diagonal_compat": {
+      "claim": "diagonal Z sent compatibly into both completions for rad-divisible pairs (sanity for the snake-lemma naturality)",
+      "violations": [],
+      "pass": true
+    },
+    "E_incomparable_pathology": {
+      "claim": "m=6,m'=10: neither rad divides the other => no map either way; shared sub-arena is C_2 (gcd of radicals), mapping into both",
+      "data": {
+        "rad6": [2, 3], "rad10": [2, 5],
+        "6_to_10": false, "10_to_6": false,
+        "shared_primes": [2], "shared_modulus": 2,
+        "shared_into_6": true, "shared_into_10": true
+      },
+      "pass": true
+    },
+    "F_rad_grading_poset": {
+      "claim": "rad-grading is the squarefree divisibility lattice (reflexive, antisymmetric on radicals, transitive)",
+      "violations": [],
+      "pass": true
+    }
+  },
+  "PASS": true,
+  "exec_note": "Run off-mount in /tmp per [[aps-run-sync-hazard]]; report written to the repo via the Windows-path Write tool, not read back through the lagging bash mount."
+}

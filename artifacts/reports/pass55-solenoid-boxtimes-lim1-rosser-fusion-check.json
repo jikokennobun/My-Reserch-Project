@@ -1,0 +1,251 @@
+{
+  "pass": 55,
+  "S_solenoid_carrier_honest": {
+    "ok": true,
+    "m2": {
+      "m": 2,
+      "residuated_embedding": true,
+      "injective": true,
+      "non_surjective": true
+    },
+    "m3": {
+      "m": 3,
+      "residuated_embedding": true,
+      "injective": true,
+      "non_surjective": true
+    }
+  },
+  "F_cover_fiber_m": {
+    "ok": true,
+    "rows": [
+      {
+        "m": 2,
+        "cover_fibers": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "expected": 2,
+        "ok": true
+      },
+      {
+        "m": 3,
+        "cover_fibers": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "expected": 3,
+        "ok": true
+      },
+      {
+        "m": 6,
+        "cover_fibers": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "expected": 6,
+        "ok": true
+      }
+    ]
+  },
+  "P_phantom_is_boxtimes_own_lim1": {
+    "ok": true,
+    "rows": [
+      {
+        "m": 1,
+        "Z_indices": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Z_nonML": false,
+        "lim1_nonzero": false,
+        "field_ML_all": true
+      },
+      {
+        "m": 2,
+        "Z_indices": [
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "Z_nonML": true,
+        "lim1_nonzero": true,
+        "field_ML_all": true
+      },
+      {
+        "m": 3,
+        "Z_indices": [
+          3,
+          9,
+          27,
+          81,
+          243,
+          729,
+          2187,
+          6561
+        ],
+        "Z_nonML": true,
+        "lim1_nonzero": true,
+        "field_ML_all": true
+      },
+      {
+        "m": 4,
+        "Z_indices": [
+          4,
+          16,
+          64,
+          256,
+          1024,
+          4096,
+          16384,
+          65536
+        ],
+        "Z_nonML": true,
+        "lim1_nonzero": true,
+        "field_ML_all": true
+      },
+      {
+        "m": 6,
+        "Z_indices": [
+          6,
+          36,
+          216,
+          1296,
+          7776,
+          46656,
+          279936,
+          1679616
+        ],
+        "Z_nonML": true,
+        "lim1_nonzero": true,
+        "field_ML_all": true
+      },
+      {
+        "m": 8,
+        "Z_indices": [
+          8,
+          64,
+          512,
+          4096,
+          32768,
+          262144,
+          2097152,
+          16777216
+        ],
+        "Z_nonML": true,
+        "lim1_nonzero": true,
+        "field_ML_all": true
+      },
+      {
+        "m": 12,
+        "Z_indices": [
+          12,
+          144,
+          1728,
+          20736,
+          248832,
+          2985984,
+          35831808,
+          429981696
+        ],
+        "Z_nonML": true,
+        "lim1_nonzero": true,
+        "field_ML_all": true
+      }
+    ]
+  },
+  "D_ML_eq_nFG2_dichotomy": {
+    "ok": true,
+    "m2": {
+      "m": 2,
+      "depth_K": 6,
+      "even_strict": true,
+      "finite_stab_nFG2": true,
+      "limit_no_stab": true
+    },
+    "m3": {
+      "m": 3,
+      "depth_K": 6,
+      "even_strict": true,
+      "finite_stab_nFG2": true,
+      "limit_no_stab": true
+    }
+  },
+  "G2_vacuity": {
+    "ok": true,
+    "boxtimes_T": -1.0,
+    "bot": -Infinity,
+    "antecedent": false,
+    "G2_vacuous": true
+  },
+  "R_fusion_phantom_eq_rosser_torsor": {
+    "ok": true,
+    "rows": [
+      {
+        "m": 2,
+        "varprojlim=0_detached": true,
+        "varprojlim1_nonzero_rosser": true,
+        "finite_integral_loeb": true,
+        "phantom_eq_unit_torsor": "Zhat_2/Z=(Z_2)/Z"
+      },
+      {
+        "m": 3,
+        "varprojlim=0_detached": true,
+        "varprojlim1_nonzero_rosser": true,
+        "finite_integral_loeb": true,
+        "phantom_eq_unit_torsor": "Zhat_3/Z=(Z_3)/Z"
+      },
+      {
+        "m": 4,
+        "varprojlim=0_detached": true,
+        "varprojlim1_nonzero_rosser": true,
+        "finite_integral_loeb": true,
+        "phantom_eq_unit_torsor": "Zhat_4/Z=(Z_2)/Z"
+      },
+      {
+        "m": 6,
+        "varprojlim=0_detached": true,
+        "varprojlim1_nonzero_rosser": true,
+        "finite_integral_loeb": true,
+        "phantom_eq_unit_torsor": "Zhat_6/Z=(Z_2xZ_3)/Z"
+      },
+      {
+        "m": 8,
+        "varprojlim=0_detached": true,
+        "varprojlim1_nonzero_rosser": true,
+        "finite_integral_loeb": true,
+        "phantom_eq_unit_torsor": "Zhat_8/Z=(Z_2)/Z"
+      },
+      {
+        "m": 12,
+        "varprojlim=0_detached": true,
+        "varprojlim1_nonzero_rosser": true,
+        "finite_integral_loeb": true,
+        "phantom_eq_unit_torsor": "Zhat_12/Z=(Z_2xZ_3)/Z"
+      }
+    ]
+  },
+  "S": true,
+  "F": true,
+  "P": true,
+  "D": true,
+  "G2": true,
+  "R": true,
+  "PASS": true
+}
