@@ -110,10 +110,10 @@ $$
 $$
 
 Thus $\mathrm{FG2}_n$ is exactly $\mathrm{nFG2}(n)$.  The statement
-$\mathrm{Flat}_{\le N}$ means that the checked finite orbit
-$C_0,\ldots,C_N$ has no comparable distinct elements except those explicitly
-listed as equal.  This is a finite shadow of the infinite star-dynamic
-consistency tower.
+$\mathrm{Flat}_{\le N}$ means that the distinct values occurring in the checked
+finite orbit $C_0,\ldots,C_N$ are pairwise incomparable.  Equality is allowed
+when a finite cycle returns to an earlier value.  This is a finite shadow of the
+infinite star-dynamic consistency tower.
 
 The cut/collision consistency statement is:
 

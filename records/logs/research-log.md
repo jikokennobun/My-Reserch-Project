@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-11 (Autonomous discussion Pass 69)
+
+- Pass 69 added a G2-ZOO consistency/cut layer.  It defines the iterated APS consistency tower $C_0=T$, $C_{n+1}=\boxtimes C_n$, the names $\mathrm{Con}^{\mathrm{orb}}_n$, $\mathrm{G2}_n$, $\mathrm{FG2}_n=\mathrm{nFG2}(n)$, finite `flat-orbit(N)`, and `CutA3` as A3 read as cut/collision closure.  Machine verification `code/scripts/check-pass69.py` -> `artifacts/reports/pass69-consistency-cut-infinite-g2-zoo-check.json` (overall PASS) checks $C_m$ cycle APS models for $2\le m\le12$ and detached Rosser period models $R_{2k}$ for $1\le k\le6$: cycles are genuine APS with flat nFG2-false towers and no fixed points; detached Rosser periods preserve A1/A2/A4 and a primitive fixed point but fail A3 exactly at $x=y=p$.  The arithmetic lift of `CutA3` and the Pass-68 $\epsilon$ comparison remain open.
+
 ## 2026-06-11 (Autonomous discussion Pass 68)
 
 - Pass 68 recovered the all-prime phantom as a derived pro-cokernel.  For the cofinal modulus tower $N_n=\mathrm{lcm}(1,\ldots,n)$, the levelwise sequence $0\to N_n\mathbb Z\to\mathbb Z\to\mathbb Z/N_n\mathbb Z\to0$ has zero finite cokernel by CRT, but the kernel tower is non-Mittag-Leffler with $\varprojlim N_n\mathbb Z=0$.  The derived long exact sequence gives $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$.  This separates the algebraic phantom (derived pro-Ab quotient) from the naive Hausdorff LCA quotient, where $\mathbb Z$ is dense in $\widehat{\mathbb Z}$.  Machine-verified `code/scripts/check-pass68.py` -> `artifacts/reports/pass68-derived-pro-cokernel-phantom-check.json` (overall PASS).

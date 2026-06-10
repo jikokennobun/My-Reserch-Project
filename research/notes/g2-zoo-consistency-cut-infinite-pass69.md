@@ -28,7 +28,7 @@ The following names are now used in G2-ZOO.
 | $\mathrm{Con}^{\mathrm{orb}}_n$ | $C_n\nleq\bot$ | the $n$th iterated consistency assertion is not refutable |
 | $\mathrm{G2}_n$ | $C_n\le\bot\Rightarrow T\le\bot$ | $n$th second-incompleteness implication |
 | $\mathrm{FG2}_n$ | $C_{n+1}\le C_n$ | formalized descent at level $n$; this is $\mathrm{nFG2}(n)$ |
-| $\mathrm{Flat}_{\le N}$ | $C_i,C_j$ are incomparable for checked $0\le i<j\le N$ | no finite consistency iterate has stabilized or descended |
+| $\mathrm{Flat}_{\le N}$ | distinct values among $C_0,\ldots,C_N$ are pairwise incomparable | no checked consistency iterate has descended; equality is allowed after a finite cycle repeats |
 | $\mathrm{CutA3}$ | $x\le\Box y$ and $x\le\boxtimes y$ imply $x\le C_1$ | no provability/refutability collision survives cut closure |
 
 The old arithmetic statements still sit above this layer:
@@ -156,7 +156,7 @@ The finite certificate is:
 It checks:
 
 - $C_m$ for $2\le m\le12$: APS, no fixed point, G2 true, all checked nFG2
-  false, flat orbit;
+  false, pairwise-incomparable orbit support;
 - $R_{2k}$ for $1\le k\le6$: A1/A2/A4 true, A3 false at the detached fixed
   point, FP-synt true only at $p$, all checked nFG2 false;
 - the new statement names $C_n$, $\mathrm{Con}^{\mathrm{orb}}_n$,

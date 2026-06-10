@@ -65,7 +65,7 @@ $C_0=T$, $C_{n+1}=\boxtimes C_n$:
 | `Con-orb(n)` | $C_n\nleq\bot$ | the $n$th consistency iterate is not refutable |
 | `G2(n)` | $C_n\le\bot\Rightarrow T\le\bot$ | $n$th G2 implication |
 | `FG2(n)` | $C_{n+1}\le C_n$ | formalized descent; same as `nFG2(n)` |
-| `flat-orbit(N)` | checked $C_0,\ldots,C_N$ have no distinct comparabilities | finite shadow of an infinite flat consistency tower |
+| `flat-orbit(N)` | distinct checked values among $C_0,\ldots,C_N$ are pairwise incomparable | finite shadow of an infinite flat consistency tower; equality may occur after a finite cycle repeats |
 | `CutA3` | $x\le\Box y$ and $x\le\boxtimes y$ imply $x\le\boxtimes T$ | A3 read as cut/collision consistency |
 
 The report `artifacts/reports/pass69-consistency-cut-infinite-g2-zoo-check.json`

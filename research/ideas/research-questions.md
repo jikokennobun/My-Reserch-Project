@@ -2,6 +2,17 @@
 
 ## Active
 
+- **(Pass 69 retarget: arithmetic lift of consistency tower and CutA3)**
+  Pass 69 added the APS-level tower $C_0=T$, $C_{n+1}=\boxtimes C_n$, with
+  $\mathrm{Con}^{\mathrm{orb}}_n$, $\mathrm{G2}_n$, $\mathrm{FG2}_n$, finite
+  `flat-orbit(N)`, and `CutA3`.  Machine checks separate cycle APS models
+  $C_m$ (flat, fixed-point-free, nFG2-false) from detached Rosser period
+  preAPS models $R_{2k}$ (primitive fixed point, A1/A2/A4, but A3 failure at
+  $p$).  Open: identify the arithmetic counterpart of `CutA3`; locate
+  $\mathrm{Con}^{\mathrm{orb}}_n$ in $ConLat_T$; and decide whether residuation,
+  integrality, and contraction force a detached Rosser fixed point back into
+  the consistency orbit.
+
 - **(Pass 68 retarget: compare derived pro-cokernel with recollement $\epsilon$)**
   Pass 68 recovered $\widehat{\mathbb Z}/\mathbb Z$ algebraically as
   $\varprojlim^1(N_n\mathbb Z)$ for $N_n=\operatorname{lcm}(1,\ldots,n)$: every finite CRT quotient
