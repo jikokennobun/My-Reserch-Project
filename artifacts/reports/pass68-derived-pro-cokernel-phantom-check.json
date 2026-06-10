@@ -1,0 +1,179 @@
+{
+  "pass_number": 68,
+  "title": "derived pro-cokernel recovery of the Loeb-Rosser phantom Zhat/Z",
+  "overall": "PASS",
+  "conclusion": {
+    "levelwise": "CRT makes every finite quotient by the diagonal zero",
+    "kernel_tower": "K_n=N_n Z is non-Mittag-Leffler with lim K_n=0",
+    "derived_cokernel": "R^1 lim K_n recovers the phantom Zhat/Z",
+    "next": "identify the same class with the recollement epsilon and signed duality in the derived pro category"
+  },
+  "moduli_samples": {
+    "N_1": 1,
+    "N_2": 2,
+    "N_3": 6,
+    "N_4": 12,
+    "N_5": 60,
+    "N_6": 60,
+    "N_7": 420,
+    "N_8": 840,
+    "N_9": 2520,
+    "N_10": 2520,
+    "N_11": 27720,
+    "N_12": 27720
+  },
+  "checks": {
+    "A_cofinal_modulus_1": {
+      "pass": true,
+      "detail": "1 divides N_1=1"
+    },
+    "A_cofinal_modulus_2": {
+      "pass": true,
+      "detail": "2 divides N_2=2"
+    },
+    "A_cofinal_modulus_3": {
+      "pass": true,
+      "detail": "3 divides N_3=6"
+    },
+    "A_cofinal_modulus_4": {
+      "pass": true,
+      "detail": "4 divides N_4=12"
+    },
+    "A_cofinal_modulus_5": {
+      "pass": true,
+      "detail": "5 divides N_5=60"
+    },
+    "A_cofinal_modulus_6": {
+      "pass": true,
+      "detail": "6 divides N_3=6"
+    },
+    "A_cofinal_modulus_7": {
+      "pass": true,
+      "detail": "7 divides N_7=420"
+    },
+    "A_cofinal_modulus_8": {
+      "pass": true,
+      "detail": "8 divides N_8=840"
+    },
+    "A_cofinal_modulus_9": {
+      "pass": true,
+      "detail": "9 divides N_9=2520"
+    },
+    "A_cofinal_modulus_10": {
+      "pass": true,
+      "detail": "10 divides N_5=60"
+    },
+    "A_cofinal_modulus_11": {
+      "pass": true,
+      "detail": "11 divides N_11=27720"
+    },
+    "A_cofinal_modulus_12": {
+      "pass": true,
+      "detail": "12 divides N_4=12"
+    },
+    "A_cofinal_modulus_13": {
+      "pass": true,
+      "detail": "13 divides N_13=360360"
+    },
+    "A_cofinal_modulus_14": {
+      "pass": true,
+      "detail": "14 divides N_7=420"
+    },
+    "A_cofinal_modulus_15": {
+      "pass": true,
+      "detail": "15 divides N_5=60"
+    },
+    "A_cofinal_modulus_16": {
+      "pass": true,
+      "detail": "16 divides N_16=720720"
+    },
+    "A_cofinal_modulus_17": {
+      "pass": true,
+      "detail": "17 divides N_17=12252240"
+    },
+    "A_cofinal_modulus_18": {
+      "pass": true,
+      "detail": "18 divides N_9=2520"
+    },
+    "A_cofinal_modulus_19": {
+      "pass": true,
+      "detail": "19 divides N_19=232792560"
+    },
+    "A_cofinal_modulus_20": {
+      "pass": true,
+      "detail": "20 divides N_5=60"
+    },
+    "A_cofinal_modulus_21": {
+      "pass": true,
+      "detail": "21 divides N_7=420"
+    },
+    "A_cofinal_modulus_22": {
+      "pass": true,
+      "detail": "22 divides N_11=27720"
+    },
+    "A_cofinal_modulus_23": {
+      "pass": true,
+      "detail": "23 divides N_23=5354228880"
+    },
+    "A_cofinal_modulus_24": {
+      "pass": true,
+      "detail": "24 divides N_8=840"
+    },
+    "B_CRT_levelwise_cokernel_zero_N2": {
+      "pass": true,
+      "detail": "N_2=2, product prime-power size=2; diagonal Z/N is onto"
+    },
+    "B_CRT_levelwise_cokernel_zero_N3": {
+      "pass": true,
+      "detail": "N_3=6, product prime-power size=6; diagonal Z/N is onto"
+    },
+    "B_CRT_levelwise_cokernel_zero_N4": {
+      "pass": true,
+      "detail": "N_4=12, product prime-power size=12; diagonal Z/N is onto"
+    },
+    "B_CRT_levelwise_cokernel_zero_N5": {
+      "pass": true,
+      "detail": "N_5=60, product prime-power size=60; diagonal Z/N is onto"
+    },
+    "B_CRT_levelwise_cokernel_zero_N6": {
+      "pass": true,
+      "detail": "N_6=60, product prime-power size=60; diagonal Z/N is onto"
+    },
+    "B_CRT_levelwise_cokernel_zero_N8": {
+      "pass": true,
+      "detail": "N_8=840, product prime-power size=840; diagonal Z/N is onto"
+    },
+    "B_CRT_levelwise_cokernel_zero_N10": {
+      "pass": true,
+      "detail": "N_10=2520, product prime-power size=2520; diagonal Z/N is onto"
+    },
+    "B_CRT_levelwise_cokernel_zero_N12": {
+      "pass": true,
+      "detail": "N_12=27720, product prime-power size=27720; diagonal Z/N is onto"
+    },
+    "C_kernel_tower_strictly_refines_often": {
+      "pass": true,
+      "detail": "N_n has 14 distinct values through n=24; kernels keep shrinking"
+    },
+    "C_image_indices_unbounded": {
+      "pass": true,
+      "detail": "indices of K_n inside K_2 along samples: [6, 30, 420, 1260, 13860, 360360, 116396280, 2677114440]"
+    },
+    "C_nonML_ratio_witnesses": {
+      "pass": true,
+      "detail": "nontrivial transition ratios through n=24: [2, 3, 2, 5, 7, 2, 3, 11, 13, 2, 17, 19, 23]"
+    },
+    "D_lim_kernel_zero_by_unbounded_moduli": {
+      "pass": true,
+      "detail": "N_24=5354228880 is already > 1e9; only integer divisible by all N_n is 0"
+    },
+    "E_derived_cokernel_exact_sequence": {
+      "pass": true,
+      "detail": "0 -> Z -> lim Z/N_n -> lim^1(N_n Z) -> 0; derived cokernel is Zhat/Z"
+    },
+    "F_completion_prefixes_grow": {
+      "pass": true,
+      "detail": "|Z/N_n| at n=4,6,8,10,12: [12, 60, 840, 2520, 27720]; coker remains zero levelwise"
+    }
+  }
+}

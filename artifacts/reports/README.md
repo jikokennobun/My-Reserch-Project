@@ -37,6 +37,11 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass68-derived-pro-cokernel-phantom-check.json`: verifies the Pass-68
+  derived pro-cokernel recovery of `Zhat/Z`.  It checks lcm-tower cofinality,
+  CRT levelwise-zero quotients, non-Mittag-Leffler kernel behavior, zero kernel
+  inverse limit, and growth of profinite completion prefixes.
+
 - `pass67-restricted-product-adelic-duality-check.json`: verifies the Pass-67
   restricted-product finite conductor model.  It checks local conductor
   self-duality, self-annihilating integral lattices, product compatibility,

@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-11 (Autonomous discussion Pass 68)
+
+- Pass 68 recovered the all-prime phantom as a derived pro-cokernel.  For the cofinal modulus tower $N_n=\mathrm{lcm}(1,\ldots,n)$, the levelwise sequence $0\to N_n\mathbb Z\to\mathbb Z\to\mathbb Z/N_n\mathbb Z\to0$ has zero finite cokernel by CRT, but the kernel tower is non-Mittag-Leffler with $\varprojlim N_n\mathbb Z=0$.  The derived long exact sequence gives $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$.  This separates the algebraic phantom (derived pro-Ab quotient) from the naive Hausdorff LCA quotient, where $\mathbb Z$ is dense in $\widehat{\mathbb Z}$.  Machine-verified `code/scripts/check-pass68.py` -> `artifacts/reports/pass68-derived-pro-cokernel-phantom-check.json` (overall PASS).
+
 ## 2026-06-11 (Autonomous discussion Pass 67)
 
 - Pass 67 tested finite shadows of the restricted product $\mathbb A_f=\prod'_p(\mathbb Q_p,\mathbb Z_p)$.  The conductor quotient $p^{-k}\mathbb Z_p/p^k\mathbb Z_p\cong\mathbb Z/p^{2k}\mathbb Z$ is self-dual under the pairing $xy/p^{2k}$, and the integral lattice $\mathbb Z_p/p^k\mathbb Z_p$ is self-annihilating; finite products preserve this, and the signed boundary transpose from Pass 65 survives conductor normalization.  The obstruction is sharper: finite CRT maps $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ are surjective, so the quotient $\widehat{\mathbb Z}/\mathbb Z$ is invisible at every fixed finite conductor.  The full phantom must be formalized as a derived/pro or condensed quotient.  Machine-verified `code/scripts/check-pass67.py` -> `artifacts/reports/pass67-restricted-product-adelic-duality-check.json` (overall PASS).

@@ -3405,3 +3405,53 @@ makes $\mathbb Z$ dense in $\widehat{\mathbb Z}$. The Loeb-Rosser phantom is the
 derived/pro quotient phenomenon. Pass 68 should identify the exact category, pro-category, or
 condensed/solid setting in which the levelwise-zero CRT quotients assemble into the nonzero
 extension class.
+
+## Pass 68 - The derived pro-cokernel of the diagonal
+
+Pass 67 showed that fixed finite conductor quotients cannot see the all-prime phantom: CRT kills
+the finite quotient by the diagonal.  Pass 68 identifies the missing functor.  The phantom appears
+as an $R^1\varprojlim$ of the kernel tower.
+
+Let
+$$N_n=\operatorname{lcm}(1,\ldots,n).$$
+The tower $\{N_n\}$ is cofinal among positive integer moduli under divisibility.  At level $n$,
+there is a short exact sequence
+$$0\to K_n=N_n\mathbb Z\to\mathbb Z\to\mathbb Z/N_n\mathbb Z\to0.$$
+The final map is levelwise surjective; equivalently, after prime-power factorization, CRT gives
+$$\mathbb Z/N_n\mathbb Z\cong\prod_{p\mid N_n}\mathbb Z/p^{v_p(N_n)}\mathbb Z.$$
+Thus the finite cokernel is zero at every fixed level.
+
+However, the kernel tower $K_n=N_n\mathbb Z$ is not Mittag-Leffler.  Its transition maps are
+inclusions $N_{n+1}\mathbb Z\subseteq N_n\mathbb Z$, equivalently multiplication by
+$N_{n+1}/N_n$ after identifying each $K_n$ with $\mathbb Z$.  These image indices are unbounded,
+and
+$$\varprojlim_n K_n=\bigcap_n N_n\mathbb Z=0.$$
+Applying $\varprojlim$ to the levelwise short exact sequence gives
+$$0\to\mathbb Z\to\varprojlim_n\mathbb Z/N_n\mathbb Z\to
+\varprojlim\nolimits^1 K_n\to0.$$
+Since $\varprojlim_n\mathbb Z/N_n\mathbb Z=\widehat{\mathbb Z}$, this yields
+$$\boxed{\ \varprojlim\nolimits^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z\ }.$$
+
+> **Theorem 68a (levelwise CRT zero).** The diagonal quotient is zero at every fixed finite
+> conductor $N_n$.
+>
+> **Theorem 68b (derived pro-cokernel).** The all-prime Loeb-Rosser phantom is
+> $\varprojlim^1(N_n\mathbb Z)$ for the cofinal lcm tower.  Equivalently, it is the derived
+> cokernel of $\mathbb Z\to\{\mathbb Z/N_n\}_n$ in pro-abelian bookkeeping.
+>
+> **Theorem 68c (topology vs exactness).** The algebraic phantom is not an ordinary Hausdorff LCA
+> quotient: $\mathbb Z$ is dense in $\widehat{\mathbb Z}$.  The derived pro-Ab category retains the
+> extension data that Hausdorff quotienting would collapse.
+
+**Machine verification** (`code/scripts/check-pass68.py` ->
+`artifacts/reports/pass68-derived-pro-cokernel-phantom-check.json`, PASS): $N_n$ is cofinal for
+moduli $1,\ldots,24$; CRT levelwise-zero checks pass for $N_2,N_3,N_4,N_5,N_6,N_8,N_{10},N_{12}$;
+the kernel tower has 14 distinct values through $n=24$, unbounded image indices in $K_2$, and many
+nontrivial transition ratios; $\varprojlim K_n=0$ is certified by unbounded $N_n$; completion
+prefixes grow while the finite cokernel remains zero.
+
+**Reading.** The all-prime object is now located algebraically: it is a derived pro-cokernel.
+Restricted products handle local duality; $R^1\varprojlim$ handles the global diagonal phantom.
+The next missing comparison is not "where does $\widehat{\mathbb Z}/\mathbb Z$ live?" but "is this
+$R^1\varprojlim$ class the same morphism as the Pass-62/63/64 recollement $\epsilon$, with the
+same signed Verdier duality?"

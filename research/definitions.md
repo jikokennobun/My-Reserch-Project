@@ -1160,3 +1160,24 @@ $$\mathbb Z/N\mathbb Z\to\prod_{p\mid N}\mathbb Z/p^{e_p}\mathbb Z$$
 is an isomorphism. Thus the quotient by the diagonal is zero at each fixed finite conductor. The
 phantom $\widehat{\mathbb Z}/\mathbb Z$ cannot be recovered from any single finite level; it is a
 derived/pro quotient phenomenon of the limiting system.
+
+## Derived pro-cokernel of the diagonal (Pass 68)
+
+Let $N_n=\operatorname{lcm}(1,\ldots,n)$.  The **kernel tower** of the diagonal finite quotient is
+$$K_n=N_n\mathbb Z\subset\mathbb Z,$$
+with transition $K_{n+1}\hookrightarrow K_n$.  The levelwise exact sequence
+$$0\to K_n\to\mathbb Z\to\mathbb Z/N_n\mathbb Z\to0$$
+has zero ordinary cokernel at each finite stage, because $\mathbb Z\to\mathbb Z/N_n\mathbb Z$ is
+surjective and CRT identifies $\mathbb Z/N_n\mathbb Z$ with its prime-power product.
+
+The **derived pro-cokernel** is the failure of $\varprojlim$ to preserve this levelwise
+surjectivity:
+$$0\to\mathbb Z\to\widehat{\mathbb Z}\to\varprojlim\nolimits^1 K_n\to0,$$
+so
+$$\varprojlim\nolimits^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z.$$
+The kernel tower is non-Mittag-Leffler: after identifying $K_n\cong\mathbb Z$, the transition
+indices $N_{n+1}/N_n$ are nontrivial infinitely often and the image indices grow without bound.
+
+The **levelwise-zero / derived-nonzero distinction** is the core all-prime phantom mechanism:
+finite CRT quotients see no quotient, but the derived inverse-limit sequence records the nonzero
+Loeb-Rosser class.

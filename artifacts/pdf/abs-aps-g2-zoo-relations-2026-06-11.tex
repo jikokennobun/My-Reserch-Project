@@ -1,0 +1,924 @@
+﻿\documentclass[a4paper,10pt]{ltjsarticle}
+
+\usepackage[top=23mm,bottom=24mm,left=21mm,right=21mm]{geometry}
+\usepackage{luatexja-fontspec}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array,multirow}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Yu Mincho}{\setmainjfont{Yu Mincho}}{}
+\IfFontExistsTF{Yu Gothic}{\setsansjfont{Yu Gothic}}{}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=MidnightBlue,
+  citecolor=MidnightBlue,
+  urlcolor=MidnightBlue,
+  pdftitle={ABS/APS上のG2, Consistency, Loeb, fixed points, cut elimination zoo},
+  pdfauthor={My-Reserch-Project},
+  pdfsubject={Abstract bimodal/provability structures and residuated APS},
+  pdfkeywords={APS, ABS, G2, FG2, Loeb, Rosser, Jeroslow, fixed point, residuation}
+}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.2em}
+\setlist[itemize]{leftmargin=2.1em,itemsep=0.12em}
+\setlist[enumerate]{leftmargin=2.1em,itemsep=0.12em}
+\renewcommand{\arraystretch}{1.15}
+
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+\newtheorem{question}[theorem]{問題}
+
+\newcommand{\ABS}{\mathrm{ABS}}
+\newcommand{\APS}{\mathrm{APS}}
+\newcommand{\RAPS}{\mathrm{RAPS}}
+\newcommand{\Gtwo}{\mathrm{G2}}
+\newcommand{\FGtwo}{\mathrm{FG2}}
+\newcommand{\nFGtwo}{\mathrm{nFG2}}
+\newcommand{\Con}{\mathrm{Con}}
+\newcommand{\Ros}{\mathrm{Ros}}
+\newcommand{\Boxop}{\Box}
+\newcommand{\Btx}{\boxtimes}
+\newcommand{\Dia}{\Diamond}
+\newcommand{\PrT}{\mathrm{Pr}_T}
+\newcommand{\Fml}{\mathrm{Fml}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\True}{\mathrm{Tr}}
+\newcommand{\cut}{\mathrm{cut}}
+\newcommand{\cf}{\mathrm{cf}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\resl}{\backslash}
+\newcommand{\resr}{/}
+\newcommand{\Top}{T}
+\newcommand{\Bot}{\bot}
+\newcommand{\Repo}{\texttt{My-Reserch-Project}}
+
+\title{ABS/APS上のG2・Consistency・Löb・不動点・cut elimination zoo}
+\author{My-Reserch-Project}
+\date{2026年6月11日}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本稿は，二重様相代数構造 \(\ABS\)，抽象的証明可能性構造 \(\APS\)，および剰余付き
+\(\APS\)（本稿では \(\RAPS\) と略す）上で，さまざまな無矛盾性 statement，
+\(\Gtwo/\FGtwo\)，Löb と formalized Löb，cut elimination，および
+Gödel・Henkin・Santa Claus・Jeroslow 型不動点がどのように絡むかを整理するための
+研究ノートである。結論を一行で言えば，\(\Gtwo\) は order-theoretic な外部原理，
+\(\FGtwo\) はその内部化，Löb は consistency orbit の付着性，Rosser はその脱付着性，
+cut elimination は剰余付き構造での資源合成の安定性として現れる。有限反例モデルは
+\texttt{code/models/examples} と \texttt{artifacts/reports} に機械検証済みの形で残し，
+本稿ではその読解表を与える。
+\end{abstract}
+
+\tableofcontents
+
+\section{記法と基本構造}
+
+\begin{definition}[ABS, APS, RAPS]
+本稿で \(\ABS\) と呼ぶものは，少なくとも
+\[
+S=(L,\le,\Top,\Bot,\Boxop,\Btx)
+\]
+からなる二重様相的な順序構造である。\(\Boxop\) は証明可能性，
+\(\Btx\) は反証可能性または refutability を表す。順序は
+\[
+\Top\le x \quad\text{を「\(x\) は証明される」},\qquad
+x\le\Bot \quad\text{を「\(x\) は反証される」}
+\]
+と読む。
+
+\(\APS\) は \(\ABS\) に，典型的には次の A1--A4 を課したものである。
+\[
+\tag{A1}
+x\le y\Rightarrow \Boxop x\le\Boxop y,\qquad
+x\le y\Rightarrow \Btx y\le\Btx x,
+\]
+\[
+\tag{A2}
+\Top\le \Btx\Bot,
+\]
+\[
+\tag{A3}
+x\le\Boxop y,\ x\le\Btx y\Rightarrow x\le\Btx\Top,
+\]
+\[
+\tag{A4}
+\Btx x\le\Boxop\Btx x.
+\]
+ただしこのリポジトリの finite zoo では，A1--A4 の一部だけを満たす
+preAPS も明示的に扱う。
+
+\(\RAPS\) は，さらに資源合成と剰余
+\[
+(L,\le,\otimes,\mathbf 1,\resl,\resr)
+\]
+を持ち，
+\[
+a\otimes b\le c
+\quad\Longleftrightarrow\quad
+b\le a\resl c
+\quad\Longleftrightarrow\quad
+a\le c\resr b
+\]
+を満たす \(\APS\) または preAPS である。
+\end{definition}
+
+\begin{remark}[top/bottom discipline]
+有限モデル検索では，\(\Top\) が最大元，\(\Bot\) が最小元であるとは限らない。
+特に bottom discipline
+\[
+\forall x\in L,\quad \Bot\le x
+\]
+は追加条件として扱う。これは ex falso 型の弱化であり，剰余付きモデルを作るときに
+決定的な役割を持つ。
+\end{remark}
+
+\begin{definition}[\(\Gtwo,\FGtwo,\nFGtwo\)]
+整合性軌道の第一要素を
+\[
+d:=\Btx\Top
+\]
+と書く。このとき
+\[
+\Gtwo(S):\quad d\le\Bot\Rightarrow \Top\le\Bot,
+\]
+\[
+\FGtwo(S):\quad \Btx d=\Btx\Btx\Top\le \Btx\Top=d,
+\]
+\[
+\nFGtwo(k):\quad \Btx^{k+1}\Top\le \Btx^k\Top\qquad(k\ge1)
+\]
+と定義する。通常の \(\FGtwo\) は \(\nFGtwo(1)\) である。
+\end{definition}
+
+\begin{remark}
+非崩壊モデル，すなわち \(\Top\not\le\Bot\) では，
+\(\Gtwo\) は \(d\not\le\Bot\) と同値になりうる。この場合の \(\Gtwo\) は
+「反例がまだ出ていない」という意味で vacuous であり，\(\FGtwo\) や不動点存在とは
+分離して読む必要がある。
+\end{remark}
+
+\section{Consistency statement の階層}
+
+以下では \(T\) を算術理論，\(\PrT(x)\) を証明可能性述語，
+\[
+\Boxop\varphi:=\PrT(\ulcorner\varphi\urcorner),\qquad
+\Dia\varphi:=\neg\Boxop\neg\varphi
+\]
+とする。ABS/APS では，これらの statement は単一の命題というより，
+どの構造まで内部化できるかを測るためのテスト族である。
+
+\begin{definition}[主な consistency statement]
+本稿では次を用いる。
+\[
+\Con_T^L:=\neg\PrT(\ulcorner\Bot\urcorner)
+\]
+を Löb-style consistency と呼ぶ。
+\[
+\Con_T^{EG}:=\exists x\in\Fml\ \neg\PrT(x)
+\]
+を external Gödel-style consistency と呼ぶ。これは数としてコードされた式全体を
+外側から量化する形である。
+\[
+\Con_T^{IG}:=\exists \varphi\ \neg\PrT(\ulcorner\varphi\urcorner)
+\]
+を internal/formula-level Gödel-style consistency と呼ぶ。実際に APS 内で扱うには，
+式コード・有限結合・可算結合のどれを許すかを別途指定する必要がある。
+本稿では両者をまとめて \(\Con_T^G\) と書く場合がある。
+
+Strong/Hilbert 型は
+\[
+\Con_T^S:=\forall\varphi\,
+\bigl(\PrT(\ulcorner\varphi\urcorner)
+\to
+\neg\PrT(\ulcorner\neg\varphi\urcorner)\bigr),
+\]
+Hilbert--Bernays 型は
+\[
+\Con_T^H:=\forall x\in\Fml\,
+\neg\bigl(\PrT(x)\land\PrT(\mathrm{neg}(x))\bigr)
+\]
+である。Rosser 型 \(\Ros\) は，Rosser proof predicate による無矛盾性，
+または rule
+\[
+\neg\varphi\quad\Longrightarrow\quad \neg\Boxop\varphi
+\]
+として読む。
+\end{definition}
+
+\begin{proposition}[基本的な強さの目安]
+標準的な証明可能性述語と通常の算術化のもとでは，おおまかに
+\[
+\Con_T^G
+\ <\
+\Con_T^L
+\ <\
+\Ros
+\ <\
+\Con_T^S
+\ <\
+\Con_T^H
+\]
+という順に強くなる。ここで \(<\) は「右側がより強い consistency statement」
+という目安であり，具体的な導出には \(E,M,C,D3,CB\) などの条件が関与する。
+\end{proposition}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.20\linewidth}
+>{\raggedright\arraybackslash}p{0.34\linewidth}
+>{\raggedright\arraybackslash}X}
+\toprule
+statement & 典型的な形 & 読み方 \\
+\midrule
+\(\Con_T^L\) & \(\neg\Boxop\Bot\) & 単一の矛盾定数が証明されない。Löb/G2 の標準入口。\\
+\(\Con_T^{IG}\) & \(\exists\varphi\,\neg\Boxop\varphi\) & 証明されない式がある。内部化には式空間の扱いが必要。\\
+\(\Con_T^{EG}\) & \(\exists x\in\Fml\,\neg\PrT(x)\) & コード化された式全体への外部量化。\\
+\(\Con_T^S\) & \(\forall\varphi(\Boxop\varphi\to\Dia\varphi)\) & 証明された式は同時に反証されない。\\
+\(\Con_T^H\) & \(\forall x\,\neg(\PrT(x)\land\PrT(\neg x))\) & Hilbert--Bernays 型の全式無矛盾性。\\
+\(\Ros\) & Rosser consistency/rule & 反証側の「早い証明」を比較する。Löb から脱付着する余地を持つ。\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{G2 の算術的 variant}
+
+既存ノート \path{research/notes/g2-zoo-arithmetic.md} の比較表を，証明可能性条件の
+観点で読み直すと次のようになる。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\linewidth}
+>{\raggedright\arraybackslash}p{0.32\linewidth}
+>{\raggedright\arraybackslash}p{0.31\linewidth}}
+\toprule
+結論 & 十分条件 & コメント \\
+\midrule
+\endfirsthead
+\toprule
+結論 & 十分条件 & コメント \\
+\midrule
+\endhead
+\(T\nvdash\Con_T^L\) &
+\(\Sigma_1\)-predicate \(+\ D2+D3\) &
+標準 HBL/Löb 経路。Gödel 文 \(\pi\leftrightarrow\neg\Boxop\pi\) を使う。\\
+\(T\nvdash\Con_T^L\) &
+\(\Sigma_1\)-predicate \(+\ TM+D3\) &
+\(D2\) を transfer monotonicity へ弱める方向。\\
+\(\exists\varphi\,T\nvdash(\Boxop\varphi\to\Dia\varphi)\) &
+\(\Sigma_1 C\) &
+Jeroslow 型。結論を \(\Con_T^L\) まで強めることは一般には不可。\\
+\(\exists\varphi\,T\nvdash(\Boxop\varphi\to\Dia\varphi)\) &
+\(M+D3\) &
+Kurahashi 型。Rosser 述語との境界を示す。\\
+\(T\nvdash\Con_T^S\) &
+\(E+D3\) &
+等値置換 \(E\) と introspection \(D3\) で strong consistency へ届く。\\
+\(T\nvdash\Con_T^H\) &
+\(M+CB+\Delta_0 C^U\) &
+Hilbert--Bernays 型。全式量化を扱うため \(CB\) が現れる。\\
+\(T\nvdash\Con_T^G\) &
+\(D2^G+PC^G\) &
+Montagna 型。global 条件を使う。\\
+\(\Sigma_1 C^U\) と G2 系 & \(D1^U+D2^U\) &
+Buchholz 型。uniform 条件から provable \(\Sigma_1\)-completeness へ。\\
+\bottomrule
+\end{longtable}
+
+\section{\(\Gtwo\), \(\FGtwo\), 固定点の第一関係}
+
+\begin{theorem}[Beklemishev--Shamkanov 型の抽象 G2]
+\(\APS\) が A1--A4 を満たし，\(\Btx\)-固定点
+\[
+\exists p\in L,\quad p=\Btx p
+\]
+を持つとする。このとき \(\Gtwo\) と \(\FGtwo\) が成り立つ。
+\end{theorem}
+
+\begin{proof}
+\(\Gtwo\). \(d=\Btx\Top\le\Bot\) とする。A2 と A1 の反単調性より
+\[
+\Top\le\Btx\Bot\le\Btx p=p.
+\]
+さらに \(\Top\le p\) から \(\Btx p\le\Btx\Top=d\) なので
+\[
+\Top\le p=\Btx p\le d\le\Bot.
+\]
+
+\(\FGtwo\). A4 より
+\[
+p=\Btx p\le\Boxop\Btx p=\Boxop p.
+\]
+また \(p\le\Btx p\) であるから，A3 により \(p\le\Btx\Top=d\)。
+反単調性で
+\[
+\Btx d=\Btx\Btx\Top\le\Btx p=p\le d
+\]
+となる。
+\end{proof}
+
+\begin{lemma}[\(\FGtwo\Rightarrow\Gtwo\)]
+A1 と A2 のもとで \(\FGtwo\) は \(\Gtwo\) を導く。
+\end{lemma}
+
+\begin{proof}
+\(d=\Btx\Top\le\Bot\) とする。反単調性より \(\Btx\Bot\le\Btx d\)。
+A2 と \(\FGtwo\) から
+\[
+\Top\le\Btx\Bot\le\Btx d\le d\le\Bot.
+\]
+\end{proof}
+
+\begin{remark}[逆向きは反例で壊れる]
+有限 preAPS zoo には \(\Gtwo\) だが \(\FGtwo\) でないモデル，\(\FGtwo\) だが
+\(\Gtwo\) でないモデル，\(\Gtwo+\FGtwo\) だが syntactic fixed point を持たない
+モデルが存在する。ただしどの APS axioms を保持するか，bottom discipline を課すか，
+剰余付きにするかで witness は変わる。
+\end{remark}
+
+\section{Formalized G2 と local G2}
+
+\(\Gtwo\) は外部 implication である一方，\(\FGtwo\) は「その implication を
+\(\Btx\)-軌道内で内部化したもの」と読める。より細かい中間層として，
+既存ノート \path{research/notes/formalized-g2-implicational-aps.md} では
+local G2 が提案されている。
+
+\begin{definition}[local G2]
+\(d=\Btx\Top\) とする。各 \(a\in L\) に対し
+\[
+\mathrm{LG2}(a):\quad d\le a\Rightarrow \Btx a\le d
+\]
+と定義する。
+\end{definition}
+
+\begin{proposition}[局所化された鎖]
+A1 のもとで
+\[
+\FGtwo
+\Rightarrow
+\forall a\,\mathrm{LG2}(a)
+\Rightarrow
+\mathrm{LG2}(\Bot)
+\Rightarrow
+\Gtwo
+\]
+が成り立つ。
+\end{proposition}
+
+\begin{proof}
+\(\FGtwo\) と \(d\le a\) から，反単調性により
+\[
+\Btx a\le \Btx d\le d.
+\]
+よって \(\mathrm{LG2}(a)\)。\(\mathrm{LG2}(\Bot)\Rightarrow\Gtwo\) は，
+\(d\le\Bot\) のとき A2 と \(\Btx\Bot\le d\) から
+\[
+\Top\le\Btx\Bot\le d\le\Bot
+\]
+となるため。
+\end{proof}
+
+\begin{remark}
+\(\mathrm{LG2}(a)\) は order-only APS でも述べられるが，
+\[
+\Top\le (d\to a)\to(\Btx a\to d)
+\]
+のような単一命題として扱うには，implication や internal sequent object が必要である。
+この違いが \(\Gtwo\) と \(\FGtwo\) の間にある「まだ名前のない中間層」である。
+\end{remark}
+
+\section{Löb と formalized Löb}
+
+\begin{definition}[Löb rule と GL axiom]
+順序的には Löb rule を
+\[
+\Boxop a\le a\quad\Longrightarrow\quad \Top\le a
+\]
+と読む。modal/provability logic では，formalized Löb は
+\[
+\Boxop(\Boxop\varphi\to\varphi)\to\Boxop\varphi
+\]
+すなわち GL axiom である。
+\end{definition}
+
+\begin{proposition}[Löb は固定点を consistency orbit に付着させる]
+標準的な D1--D3/HBL 条件，あるいは GL のもとでは，
+\[
+g\leftrightarrow\neg\Boxop g
+\]
+で与えられる Gödel 型固定点は
+\[
+\neg\Boxop\Bot=\Con_T^L
+\]
+と同一視される。APS 的には，固定点が \(\Top\) から始まる consistency orbit の
+第一段に付着する。
+\end{proposition}
+
+\begin{remark}[Rosser は脱付着として読む]
+Rosser 型証明可能性述語は D1 や provable \(\Sigma_1\)-completeness を保ちながら，
+formalized Löb/D3 の付着強制から逃げる。リポジトリ内の
+\path{artifacts/reports/rosser-arithmetic-lift-check.json} は，
+「monotonicity だけでは detached fixed point を排除できず，排除しているのは
+formalized Löb/D3 である」ことを有限 GL frame と \(R_2\) 型順序で検証している。
+\end{remark}
+
+\subsection{軌道降下としての Löb}
+
+有限順序では，\(\Top\)-軌道
+\[
+\Top,\Btx\Top,\Btx^2\Top,\ldots
+\]
+が最終的に安定化することを orbit descent と呼ぶ。検証済みレポート
+\begin{quote}\small
+\path{artifacts/reports/attachment-loeb-dividing-line-check.json}
+\end{quote}
+は，M3 型 carrier 上で次を確認している。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.27\linewidth}
+>{\raggedright\arraybackslash}X}
+\toprule
+有限検証結果 & 読み方 \\
+\midrule
+descending orbit \(\Rightarrow\) attached fixed point &
+軌道が止まるなら，その停止値は orbit-attached な固定点である。これは de Jongh--Sambin/Löb 側の影。\\
+detached-only fixed point \(\Rightarrow\) non-descent \(+\ \neg\FGtwo\) &
+Rosser 型の detached fixed point は，\(\Top\)-軌道の非降下・循環として現れる。\\
+\(\neg\FGtwo\) だけでは detachment を強制しない &
+\(\FGtwo\) 失敗後に attached fixed point へ到達するモデルもある。真の境界は orbit descent。\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{不動点 zoo}
+
+\subsection{四つの代表型}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.17\linewidth}
+>{\raggedright\arraybackslash}p{0.27\linewidth}
+>{\raggedright\arraybackslash}p{0.43\linewidth}}
+\toprule
+名前 & 典型方程式 & G2/APS 上の読み方 \\
+\midrule
+\endfirsthead
+\toprule
+名前 & 典型方程式 & G2/APS 上の読み方 \\
+\midrule
+\endhead
+Gödel 文 &
+\(g\leftrightarrow\neg\Boxop g\) &
+\(\Btx=\neg\Boxop\) と定義できる古典的環境では \(\Btx\)-固定点。
+GL/Löb の下では consistency orbit に付着する。\\
+Henkin 文 &
+\(h\leftrightarrow\Boxop h\) &
+「自分は証明可能」と言う文。Löb により，Henkin 文であることが証明されれば
+\(T\vdash h\) となる。\\
+Santa Claus 文 &
+\(s_\psi\leftrightarrow(\Boxop s_\psi\to\psi)\) &
+パラメータ \(\psi\) に対する固定点族。\(\forall\exists SC\) は強い固定点存在原理だが，
+それ単独では Löb を含意しない。\\
+Jeroslow 文 &
+\(j\leftrightarrow\Boxop\neg j\), または \(j=\Btx j\) &
+primitive \(\Btx\) を許すと，Gödel 型より弱い構造で存在しうる。
+BS16/APS では fixed point が \(\Gtwo,\FGtwo\) を導くが，contraction-free な剰余付き読解では
+formalized G2 と分離される。\\
+\bottomrule
+\end{longtable}
+
+\begin{remark}[primitive refutability と negated provability を混同しない]
+既存ノート
+\begin{quote}\small
+\path{research/notes/mnd4-preaps-fixedpoint-obstruction.md}
+\end{quote}
+の重要点は
+\[
+p=\Btx p
+\quad\text{と}\quad
+p=\neg\Boxop p
+\]
+が別物だということである。古典否定，爆発，D/4 型 introspection，十分な contraction を
+入れると後者は崩壊に近い力を持つ。一方，primitive \(\Btx\)-固定点は，
+preAPS や substructural setting では非自明に存在できる。
+\end{remark}
+
+\subsection{Santa Claus は Löb を含意しない}
+
+既存ノート \path{research/notes/shibuya-seminar-2026-05-08.md} の連続区間例は，
+\(\exists SC\not\Rightarrow\) Löb を示す。
+
+\[
+L=[0,1],\qquad
+x\to y=\min(1,1-x+y)
+\]
+を Łukasiewicz implication とし，\(\Boxop=\id\) とする。このとき
+\[
+\varphi=\Boxop\varphi\to\psi
+\]
+は \(\varphi=\varphi\to\psi\) であり，右辺は連続写像なので中間値の定理から固定点が存在する。
+したがって \(\exists SC\) は成り立つ。一方 Löb は
+\[
+\Boxop a\le a\Rightarrow \Top\le a
+\]
+だが，\(\Boxop=\id\) なので前提は全ての \(a\) で真であり，結論は
+\(a<1\) で偽となる。したがって Löb は失敗する。
+
+\section{Cut elimination zoo と剰余付き APS}
+
+\subsection{A3 は隠れた contraction}
+
+BS16 型の contraction-free provability logic を剰余付き preAPS として読むと，
+\[
+\Btx A:=\Boxop(A\to\Bot)
+\]
+であり，
+\[
+\FGtwo:\quad \Btx\Btx\Top\le\Btx\Top
+\]
+は
+\[
+\Boxop(\Boxop\Bot\to\Bot)\le \Boxop\Bot
+\]
+になる。これは formalized G2 の形そのものである。
+
+一方，APS A3
+\[
+x\le\Boxop y,\quad x\le\Btx y\Rightarrow x\le\Btx\Top
+\]
+は，資源敏感に読むと，二つの仮定を同じ \(x\) から同時に使っている。
+剰余付き世界では自然には
+\[
+x\otimes x\le\Boxop y\otimes\Btx y
+\]
+となり，そこから \(x\) に戻るには diagonal contraction 的な原理が必要である。
+したがって
+\[
+\text{A3}
+=
+\text{provability/refutability collision}
++\text{hidden contraction}
+\]
+と読むのが自然である。
+
+\subsection{cut elimination の読解}
+
+cut-free proof values を fiber
+\[
+\mathcal E^{\cf}_{\Gamma,\Delta}
+\]
+として持つとき，cut elimination は
+\[
+\pi_1\in\mathcal E^{\cf}_{\Gamma;\Delta,A},\quad
+\pi_2\in\mathcal E^{\cf}_{A,\Sigma;\Pi}
+\Rightarrow
+\pi_2\circ_{\cut}\pi_1\in
+\mathcal E^{\cf}_{\Gamma,\Sigma;\Pi,\Delta}
+\]
+へ正規化できるという安定性である。代数的には，これは MacNeille/canonical completion
+に対する閉性，または residuated completion に対する安定性として現れる。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.25\linewidth}
+>{\raggedright\arraybackslash}p{0.31\linewidth}
+>{\raggedright\arraybackslash}X}
+\toprule
+proof-theoretic 側 & algebraic 側 & G2 zoo で見る量 \\
+\midrule
+cut elimination & cut-free order の合成閉性 & MacNeille/canonical completion の安定性 \\
+contraction なし & non-idempotent \(\otimes\) & fixed point はあっても \(\FGtwo\) が失敗しうる \\
+restricted contraction & 局所的な \(a\otimes a\le a\) & front ideal の局所 contraction \\
+full contraction & idempotent/Heyting 的構造 & A3 と formalized G2 が復活しやすい \\
+weakening & \(a\le b\Rightarrow a\otimes c\le b\) & bottom discipline，discarding rule \\
+exchange & \(a\otimes b=b\otimes a\) & 現在の \(B_N\) residuated witnesses では多くが満たす \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{抽象的導出可能性条件}
+
+本稿で使う主要条件をまとめる。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.13\linewidth}
+>{\raggedright\arraybackslash}p{0.47\linewidth}
+>{\raggedright\arraybackslash}p{0.27\linewidth}}
+\toprule
+記号 & 形式 & 役割 \\
+\midrule
+\endfirsthead
+\toprule
+記号 & 形式 & 役割 \\
+\midrule
+\endhead
+\(C\) &
+\(\Boxop(\varphi\to\psi)\to(\Boxop\varphi\to\Boxop\psi)\) &
+K axiom，internal modus ponens。\\
+\(M\) &
+\(\varphi\to\psi\) ならば \(\Boxop\varphi\to\Boxop\psi\) &
+local monotonicity。\\
+\(E\) &
+\(\varphi\leftrightarrow\psi\) ならば \(\Boxop\varphi\leftrightarrow\Boxop\psi\) &
+extensionality，等値置換。\\
+\(D3\) &
+\(\Boxop\varphi\to\Boxop\Boxop\varphi\) &
+introspection，modal \(4\)。\\
+\(\Sigma_1 C^U\) &
+\(\theta(x)\to\Boxop\theta(\dot x)\) for \(\Sigma_1\ \theta\) &
+Jeroslow/Kurahashi 型の入口。\\
+\(\Delta_0 C^U\) &
+\(\theta(x)\to\Boxop\theta(\dot x)\) for \(\Delta_0\ \theta\) &
+Hilbert--Bernays 型で使う。\\
+\(CB\) &
+\(\Boxop\forall x\,\varphi(x)\to\forall x\,\Boxop\varphi(\dot x)\) &
+全称文の box collection。\\
+\(PC^G\) &
+\(\forall x(Pr_{\emptyset}(x)\to Pr_T(x))\) &
+global predicate calculus completeness。\\
+\(TM\) &
+\(\varphi\to(\psi\to\gamma)\) ならば
+\(\Boxop\varphi\to(\Boxop\psi\to\Boxop\gamma)\) &
+\(D2\) の transfer 型弱化。\\
+\(\Ros\) &
+\(\neg\varphi\Rightarrow\neg\Boxop\varphi\) &
+Rosser rule，detached fixed point 側。\\
+\(\mathrm{Loeb}^U\) &
+\(\forall x(\Boxop\varphi(x)\to\varphi(x))\Rightarrow\forall x\,\varphi(x)\) &
+uniform Löb rule。\\
+\bottomrule
+\end{longtable}
+
+\begin{proposition}[条件間の基本関係]
+標準的な読みでは
+\[
+D2\quad\Longleftrightarrow\quad M+C
+\]
+であり，また
+\[
+\mathrm{Global}\Rightarrow\mathrm{Uniform}\Rightarrow\mathrm{Local}
+\]
+という強さの方向がある。ただし \(M,TM,wM\) の細部は，Rosser 述語や non-normal
+modal logic の例で分離されうる。
+\end{proposition}
+
+\section{反例モデル表}
+
+\subsection{有限モデル zoo}
+
+以下は \Repo{} 内の machine-checked reports から，今回の関係整理に必要なものだけを
+抜き出した表である。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\linewidth}
+>{\raggedright\arraybackslash}p{0.18\linewidth}
+>{\raggedright\arraybackslash}p{0.25\linewidth}
+>{\raggedright\arraybackslash}p{0.25\linewidth}}
+\toprule
+モデル & 構造クラス & 成立/失敗 & 何を分離するか \\
+\midrule
+\endfirsthead
+\toprule
+モデル & 構造クラス & 成立/失敗 & 何を分離するか \\
+\midrule
+\endhead
+\texttt{M-010} &
+3-element preAPS &
+\(\FGtwo\) true, \(\Gtwo\) false, no FP-synt &
+\(\FGtwo\not\Rightarrow\Gtwo\) の小 witness。ただし bottom discipline 修復後はプロファイルが変わる。\\
+\texttt{M-100} &
+3-element preAPS &
+\(\Gtwo\) true, \(\FGtwo\) false, no FP-synt &
+\(\Gtwo\not\Rightarrow\FGtwo\)。\\
+\texttt{M-101} &
+3-element preAPS &
+\(\Gtwo\) true, \(\FGtwo\) false, FP-synt true &
+\(\Gtwo+\) fixed point でも \(\FGtwo\) へ届かないことを，A3/A4 パッケージ外で示す。\\
+\texttt{M-110} &
+3-element preAPS &
+\(\Gtwo\) true, \(\FGtwo\) true, FP-synt false &
+\(\Gtwo+\FGtwo\not\Rightarrow\) syntactic fixed point。\\
+\texttt{bottom-nfg2-depth-5-front-shifted-non-u-absorbing} &
+bottom-disciplined full-residuated preAPS &
+\(\Gtwo\) true, \(\FGtwo\) false, first true \(\nFGtwo\) depth \(6\), FP-synt \(s\) &
+\(\nFGtwo\) 階層を任意深く遅らせられる。front-shifted tensor は \(U\)-absorbing でない。\\
+\texttt{bottom-G2FG2-noFP-residuated} &
+bottom-disciplined full-residuated preAPS &
+\(\Gtwo\) true, \(\FGtwo\) true, FP-synt false &
+剰余付きでも \(\Gtwo+\FGtwo\) が fixed point を強制しない。\\
+\texttt{R\_2} gadget &
+M3 diamond order &
+detached FP \(p\), orbit \(o_0\leftrightarrow o_1\), \(\FGtwo\) false &
+Rosser 文の代数的影。固定点が consistency orbit から完全に外れる。\\
+3-chain attached model &
+chain/order-attached model &
+orbit descends to fixed point &
+Löb/de Jongh--Sambin 側。固定点が consistency orbit に付着する。\\
+\([0,1]\) Łukasiewicz SC model &
+implication-extended continuous ABS &
+\(\exists SC\) true, Löb false &
+Santa Claus fixed points do not imply Löb。\\
+\bottomrule
+\end{longtable}
+
+\subsection{無限モデルまたは無限 family}
+
+\begin{enumerate}
+\item \textbf{\(B_N\) family.}
+リポジトリの \texttt{bottom-nfg2-depth-\(N\)} 系列は，任意の有限深さまで
+\(\nFGtwo\) の初回成立を遅らせる。したがって単一の有限 bound では
+\(\FGtwo\) と全階層 \(\nFGtwo(k)\) の差を潰せない。
+
+\item \textbf{period-\(2k\) Rosser gadgets.}
+M3 diamond の \(R_2\) を \(2k\)-周期の antichain orbit に拡張すると，
+detached fixed point と非降下 orbit を保ったまま周期を任意に大きくできる。
+これは Rosser 側の「偶数周期 gap」の有限 family である。
+
+\item \textbf{infinite antichain Rosser template.}
+ABS/preAPS レベルなら，
+\[
+L=\{\Bot,\Top,p\}\cup\mathbb Z
+\]
+で \(\Bot\) を最小，\(\Top\) を最大，\(\mathbb Z\cup\{p\}\) を antichain とし，
+\[
+\Btx\Bot=\Top,\quad \Btx\Top=\Bot,\quad
+\Btx n=n+1,\quad \Btx p=p
+\]
+と置くことで，detached fixed point \(p\) と無限に降下しない consistency orbit を
+同時に持つ無限 \(\ABS\) が得られる。これは A3 を満たす \(\APS\) witness ではなく，
+Rosser geometry だけを取り出すための反例テンプレートである。
+\end{enumerate}
+
+\section{完成と固定点の反映問題}
+
+MacNeille completion などの completion は固定点を作ることがある。しかし本プロジェクトの
+基本 slogan は
+\[
+\text{completion fixed point}
+\neq
+\text{syntactic fixed point}
+\]
+である。
+
+\begin{definition}[MacNeille completion]
+\[
+X^u=\{a:\forall x\in X,\ x\le a\},\qquad
+X^l=\{a:\forall x\in X,\ a\le x\}.
+\]
+MacNeille completion \(\widehat L\) は \(C=(C^u)^l\) を満たす closed lower cut 全体であり，
+principal embedding は
+\[
+i(a)=(\{a\}^u)^l
+\]
+である。
+\end{definition}
+
+反単調な \(\Btx:L\to L\) は，まず \(L\to L^{op}\) の単調写像として extension すべきである。
+現在の checker convention は
+\[
+\widehat{\Btx}(C)=\bigl((\Btx[C])^{l_L}\bigr)^{u_L}
+\]
+であり，これは \(L^{op}\)-MacNeille closure として読む。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.25\linewidth}
+>{\raggedright\arraybackslash}X}
+\toprule
+completion FP の型 & 意味 \\
+\midrule
+reflected principal & \(q=i(p)\) かつ \(p=\Btx p\)。構文的固定点へ戻る。\\
+principal-unreflected & \(q=i(a)\) だが \(a\ne\Btx a\)。主成分だが固定点ではない。\\
+non-principal & cut/ideal としてのみ存在し，式としては戻らない。\\
+none & completion 後にも固定点なし。\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+有限検証では，\texttt{bottom-G2FG2-noFP-residuated} などが
+principal-unreflected completion fixed point を持つ。これは，\(\Gtwo+\FGtwo\) と
+completion fixed point があっても，syntactic fixed point が戻るとは限らないことを示す。
+
+\section{全体関係図}
+
+現在安全に使える関係を，条件付きの矢印としてまとめる。
+\[
+\exists p(p=\Btx p)+\mathrm{A1\text{--}A4}
+\Longrightarrow
+\FGtwo
+\Longrightarrow
+\forall a\,\mathrm{LG2}(a)
+\Longrightarrow
+\mathrm{LG2}(\Bot)
+\Longrightarrow
+\Gtwo.
+\]
+\[
+\mathrm{GL/Loeb}
+\Longrightarrow
+\text{Gödel fixed point is orbit-attached}
+\Longrightarrow
+\text{Rosser }R_2\text{ geometry is impossible}.
+\]
+\[
+\begin{aligned}
+&\text{Rosser/detached fixed point}\\
+&\qquad\Longrightarrow
+\text{failure of formalized Loeb/D3 package}\\
+&\qquad\text{but not necessarily failure of monotonicity}.
+\end{aligned}
+\]
+\[
+\begin{aligned}
+&\text{cut elimination in a residuated/fibered calculus}\\
+&\qquad\Longleftrightarrow
+\text{closure of cut-free order under cut composition}\\
+&\qquad\Longrightarrow
+\text{completion stability questions for }\Gtwo,\FGtwo,\Fix.
+\end{aligned}
+\]
+\[
+\exists SC\not\Rightarrow\mathrm{Loeb},
+\qquad
+\Gtwo+\FGtwo\not\Rightarrow\exists p(p=\Btx p).
+\]
+The last separation is witnessed in the finite preAPS/RAPS zoo.
+
+\section{未解決問題}
+
+\begin{enumerate}
+\item \(\Con_T^L\), \(\Ros\), \(\Con_T^S\), \(\Con_T^H\) の間を，導出可能性条件
+\(C,M,E,D3,CB,\Sigma_1C\) の最小パッケージで完全分類する。
+\item \(\Con_T^{IG}\) と \(\Con_T^{EG}\) を，APS 内部の可算 join，式コード object，
+または indexed/fibred APS として厳密に分離する。
+\item \(\mathrm{LG2}(a)\) と \(\FGtwo[q]\) を finite checker に入れ，
+\[
+\FGtwo\Rightarrow \forall a\,\mathrm{LG2}(a)\Rightarrow\mathrm{LG2}(\Bot)\Rightarrow\Gtwo
+\]
+の各矢印の strictness を検証する。
+\item BS16 cut elimination を，fibered residuated APS の MacNeille/canonical completion
+安定性として定式化する。
+\item completion fixed point が syntactic fixed point へ反映されるための compactness，
+definability，または diagonalization 条件を抽出する。
+\item 無限 \(B_\omega\) 型または \(\omega\)-orbit 型 RAPS で，全ての有限 \(\nFGtwo(k)\)
+を失敗させる剰余付き witness を構成できるか調べる。
+\end{enumerate}
+
+\section*{参照したローカル成果物}
+
+\begin{itemize}
+\item \path{research/definitions.md}
+\item \path{research/notes/consistency-notions-hierarchy.md}
+\item \path{research/notes/derivability-conditions.md}
+\item \path{research/notes/g2-zoo-arithmetic.md}
+\item \path{research/notes/formalized-g2-implicational-aps.md}
+\item \path{research/notes/g2-aps-zoo-classification.md}
+\item \path{research/notes/bs16-fiber-residuated-aps.md}
+\item \path{research/notes/mnd4-preaps-fixedpoint-obstruction.md}
+\item \path{research/notes/completion-and-fixed-points.md}
+\item \path{research/notes/shibuya-seminar-2026-05-08.md}
+\item \path{artifacts/reports/detached-rosser-fixedpoint-check.json}
+\item \path{artifacts/reports/attachment-loeb-dividing-line-check.json}
+\item \path{artifacts/reports/rosser-arithmetic-lift-check.json}
+\item \path{artifacts/reports/g2-zoo-bottom-nfg2-depth-5-front-shifted-non-u-absorbing.json}
+\item \path{artifacts/reports/g2-zoo-bottom-G2FG2-noFP-residuated.json}
+\end{itemize}
+
+\section*{外部文献}
+
+\begin{itemize}
+\item L. Beklemishev and D. Shamkanov,
+``Some abstract versions of Gödel's second incompleteness theorem based on non-classical logics,''
+\emph{Logic, Methods and Philosophy of Science}, 12(2), 2016.
+\href{https://arxiv.org/abs/1602.05728}{arXiv:1602.05728}.
+\item T. Kurahashi,
+``A note on derivability conditions,''
+\href{https://arxiv.org/abs/1902.00895}{arXiv:1902.00895}.
+\item T. Kurahashi,
+``Rosser provability and the second incompleteness theorem,''
+\href{https://arxiv.org/abs/1902.06863}{arXiv:1902.06863}.
+\item T. Kurahashi,
+``Refinements of provability and consistency principles for the second incompleteness theorem,''
+\href{https://arxiv.org/abs/2507.00955}{arXiv:2507.00955}.
+\item R. G. Jeroslow,
+``Redundancies in the Hilbert-Bernays derivability conditions for Gödel's second incompleteness theorem,''
+\emph{Journal of Symbolic Logic}, 1973.
+\item D. Hilbert and P. Bernays, \emph{Grundlagen der Mathematik II}, 1939.
+\item M. H. Löb,
+``Solution of a problem of Leon Henkin,''
+\emph{Journal of Symbolic Logic}, 1955.
+\item C. Smoryński, \emph{Self-Reference and Modal Logic}, Springer, 1985.
+\item G. Boolos, \emph{The Logic of Provability}, Cambridge University Press, 1993.
+\item D. Guaspari and R. Solovay,
+``Rosser sentences,''
+\emph{Annals of Mathematical Logic}, 16, 1979.
+\item N. Galatos, P. Jipsen, T. Kowalski, and H. Ono,
+\emph{Residuated Lattices: An Algebraic Glimpse at Substructural Logics},
+Elsevier, 2007.
+\item A. Ciabattoni, N. Galatos, and K. Terui,
+work on algebraic proof theory, analytic rules, cut elimination, and completions for substructural logics.
+\item S. Iwata and T. Kurahashi,
+``Fixed-point properties for predicate modal logics,''
+\href{https://arxiv.org/abs/1907.00306}{arXiv:1907.00306}.
+\end{itemize}
+
+\end{document}

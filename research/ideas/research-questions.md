@@ -2,14 +2,13 @@
 
 ## Active
 
-- **(Pass 67 retarget: derived/pro quotient for $\widehat{\mathbb Z}/\mathbb Z$)**
-  Pass 67 verified the finite conductor shadows of restricted-product adelic duality:
-  $p^{-k}\mathbb Z_p/p^k\mathbb Z_p$ is self-dual, the integral lattice is self-annihilating, finite
-  products preserve the signed boundary equation, and fixed finite CRT quotients collapse the
-  diagonal. Now open: identify the exact category that recovers the nonzero phantom
-  $\widehat{\mathbb Z}/\mathbb Z$ from a system whose finite quotients are all zero. Candidate
-  routes are a pro-abelian derived cokernel, a condensed/solid quotient by dense $\mathbb Z$, or an
-  exact-category extension class matching $\epsilon_S$.
+- **(Pass 68 retarget: compare derived pro-cokernel with recollement $\epsilon$)**
+  Pass 68 recovered $\widehat{\mathbb Z}/\mathbb Z$ algebraically as
+  $\varprojlim^1(N_n\mathbb Z)$ for $N_n=\operatorname{lcm}(1,\ldots,n)$: every finite CRT quotient
+  is zero, but the kernel tower is non-Mittag-Leffler, so the derived cokernel is nonzero. Now open:
+  build an explicit comparison map from the Pass-62 bicomplex / Pass-64 recollement boundary to the
+  lcm-tower derived inverse-limit sequence, and check that this identifies the derived
+  pro-cokernel class with $\epsilon$ and sends it under character duality to $-\epsilon^\vee$.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

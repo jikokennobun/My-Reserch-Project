@@ -665,13 +665,25 @@
   conductor quotients do not see $\widehat{\mathbb Z}/\mathbb Z$, because CRT makes
   $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. The all-prime phantom needs a
   derived/pro, condensed, or exact-category quotient formalism.
-- **[New (Pass 67)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
+- **[Resolved at algebraic level (Pass 68)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
   Identify the exact category in which the levelwise-zero CRT quotients assemble into the nonzero
   Loeb-Rosser phantom. Candidate formalisms: (a) pro-abelian derived cokernel of
   $\mathbb Z\to\{\mathbb Z/N\}_N$; (b) condensed/solid quotient of $\widehat{\mathbb Z}$ by dense
   $\mathbb Z$; (c) exact-category extension class recovering the Pass-62/63 $\epsilon_S$ as a
   derived boundary. Required test: recover $\widehat{\mathbb Z}/\mathbb Z$ from the inverse system
   while every finite CRT quotient remains zero.
+  **Resolution (Pass 68):** using $N_n=\operatorname{lcm}(1,\ldots,n)$, the levelwise exact sequence
+  $0\to N_n\mathbb Z\to\mathbb Z\to\mathbb Z/N_n\mathbb Z\to0$ has zero finite cokernel by CRT, but
+  the kernel tower is non-Mittag-Leffler with $\varprojlim N_n\mathbb Z=0$, so the derived exact
+  sequence gives $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$. The algebraic
+  category is therefore derived pro-Ab; topology/Hausdorff refinements may require condensed/LCA
+  language but are not needed to recover the group.
+- **[New (Pass 68)]** **Identify the derived pro-cokernel with the recollement class $\epsilon$.**
+  Build an explicit comparison between the derived inverse-limit boundary
+  $\widehat{\mathbb Z}\to\varprojlim^1(N_n\mathbb Z)$ and the Pass-62/63/64 Loeb-Rosser boundary
+  $\epsilon$ (filtration extension / $d_2$ / recollement boundary). Required test: construct a
+  chain map from the bicomplex or recollement long exact sequence to the lcm-tower derived
+  sequence, and verify that character duality sends the resulting class to $-\epsilon^\vee$.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."
