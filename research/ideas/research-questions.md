@@ -2,16 +2,14 @@
 
 ## Active
 
-- **(Pass 66 retarget: restricted-product adelic duality for $S=\mathbb P$)**
-  Pass 66 resolved the finite-prime duality normalization: plain unshifted
-  $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ is shifted, while character duality
-  $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite cyclic layers and
-  gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The remaining obstruction is
-  the full spectrum: the continuous dual of a bare infinite product is a finite-support direct sum.
-  Now open: formulate the Loeb-Rosser coefficient as a restricted-product/LCA sheaf over
-  $\mathrm{Spec}\,\mathbb Z$, prove the finite-adele coefficient is self-dual with the chosen
-  additive character, and check whether the global boundary class transforms as
-  $-\epsilon^\vee$ or absorbs the sign by orientation.
+- **(Pass 67 retarget: derived/pro quotient for $\widehat{\mathbb Z}/\mathbb Z$)**
+  Pass 67 verified the finite conductor shadows of restricted-product adelic duality:
+  $p^{-k}\mathbb Z_p/p^k\mathbb Z_p$ is self-dual, the integral lattice is self-annihilating, finite
+  products preserve the signed boundary equation, and fixed finite CRT quotients collapse the
+  diagonal. Now open: identify the exact category that recovers the nonzero phantom
+  $\widehat{\mathbb Z}/\mathbb Z$ from a system whose finite quotients are all zero. Candidate
+  routes are a pro-abelian derived cokernel, a condensed/solid quotient by dense $\mathbb Z$, or an
+  exact-category extension class matching $\epsilon_S$.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

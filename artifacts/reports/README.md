@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass67-restricted-product-adelic-duality-check.json`: verifies the Pass-67
+  restricted-product finite conductor model.  It checks local conductor
+  self-duality, self-annihilating integral lattices, product compatibility,
+  signed boundary transpose, and CRT finite-level collapse of the diagonal
+  quotient.
+
 - `pass66-duality-normalization-scheme-lift-check.json`: verifies the Pass-66
   duality-normalization split.  It checks that plain
   `RHom_Z(-, Z)` is shifted on finite cyclic layers, character duality preserves

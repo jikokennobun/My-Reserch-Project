@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 67
+- Current pass: 68
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -7626,3 +7626,84 @@ with respect to the integral lattices $\mathbb Z_p$, show its character dual is 
 restricted product up to the standard additive character, and then re-check whether the boundary
 class still transforms as $-\epsilon^\vee$.  Keep this separate from the carried $\aleph_1$ tower
 problem.
+
+---
+
+### Pass 67 - 2026-06-11 JST
+
+Focus:
+Replace the all-prime bare product from Pass 66 with finite shadows of the restricted product
+$$\mathbb A_f=\prod_p'(\mathbb Q_p,\mathbb Z_p).$$
+The goal is to verify the local conductor self-duality that the full LCA statement needs, while
+also identifying what still prevents a direct proof of the Loeb-Rosser phantom
+$\widehat{\mathbb Z}/\mathbb Z$ as an ordinary topological quotient.
+
+Proposer:
+Use the finite conductor quotient
+$$p^{-k}\mathbb Z_p/p^k\mathbb Z_p\cong\mathbb Z/p^{2k}\mathbb Z$$
+with pairing $\langle x,y\rangle=xy/p^{2k}\in\mathbb Q/\mathbb Z$.  The integral lattice
+$\mathbb Z_p/p^k\mathbb Z_p$ is represented by $p^k\mathbb Z/p^{2k}\mathbb Z$, and its annihilator
+is itself.  Hence the restricted-product normalization has the correct local finite shadow:
+each conductor window is self-dual and the integral lattice is self-annihilating.  Products of
+finitely many such windows remain self-dual, and in conductor-normalized coordinates the
+Loeb-Rosser boundary still dualizes by the Pass-65 signed transpose $d\mapsto-d^T$.
+
+Skeptic:
+This does **not** prove that $\widehat{\mathbb Z}/\mathbb Z$ is an honest Hausdorff LCA quotient.
+In fact, every fixed finite conductor quotient collapses the diagonal by CRT:
+$$\mathbb Z/N\mathbb Z\ \xrightarrow{\sim}\ \prod_{p\mid N}\mathbb Z/p^{v_p(N)}\mathbb Z.$$
+So the finite-level quotient by the diagonal is zero.  The phantom is not present at any one
+finite level; it is a pro/derived phenomenon of the limiting diagonal embedding.  Also, in the
+topological profinite group $\widehat{\mathbb Z}$, the image of $\mathbb Z$ is dense, so the naive
+topological quotient $\widehat{\mathbb Z}/\mathbb Z$ is non-Hausdorff.  The full statement needs a
+derived-pro, condensed, or exact-category treatment of the quotient, not just LCA Pontryagin
+duality.
+
+Formalist:
+> **Theorem 67a (finite conductor self-duality).** For each prime $p$ and $k\ge1$, the finite group
+> $p^{-k}\mathbb Z_p/p^k\mathbb Z_p\cong\mathbb Z/p^{2k}\mathbb Z$ with pairing
+> $xy/p^{2k}$ is nondegenerate, and the integral lattice
+> $\mathbb Z_p/p^k\mathbb Z_p$ is self-annihilating.
+>
+> **Theorem 67b (restricted-product finite shadow).** Finite products of the conductor windows in
+> Theorem 67a remain self-dual, with product integral lattice self-annihilating.  In normalized
+> finite coordinates, the mixed boundary satisfies the same signed equation
+> $D(d_S)=-d_S^T$ and $D^2(d_S)=d_S$.
+>
+> **Theorem 67c (CRT collapse and derived quotient obligation).** For any finite conductor
+> $N=\prod p^{e_p}$, the diagonal map $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{e_p}$ is
+> surjective.  Therefore $\widehat{\mathbb Z}/\mathbb Z$ is invisible at every fixed finite
+> conductor level.  The all-prime phantom must be represented as a derived/pro quotient of the
+> limiting system, not as an ordinary finite-stage quotient.
+
+Machine-verified `code/scripts/check-pass67.py` ->
+`artifacts/reports/pass67-restricted-product-adelic-duality-check.json` (overall PASS): local
+quotients $\mathbb Z/4,\mathbb Z/16,\mathbb Z/9,\mathbb Z/81,\mathbb Z/25,\mathbb Z/49$ have
+nondegenerate pairings and self-annihilating integral lattices; product windows of orders
+$36,144,900,4900$ have self-annihilating product lattices; signed boundary transpose checks pass for
+$s=1,\ldots,7$; CRT diagonal maps for $N=6,12,90,420$ are surjective, confirming finite-level
+collapse.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-67 entry; State counter
+  $67\to68$.
+- `records/logs/research-log.md`: Pass-67 one-line entry.
+- `research/open_problems.md`: [New (Pass 66)] split into finite-conductor restricted-product
+  resolution and a derived/pro quotient residue for $\widehat{\mathbb Z}/\mathbb Z$.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-67 section (Thms 67a, 67b, 67c).
+- `research/definitions.md`: finite conductor window, self-annihilating integral lattice, CRT
+  collapse, derived/pro quotient obligation.
+- `research/ideas/research-questions.md`: active question retargeted to derived-pro/condensed
+  quotient formalization.
+- `code/scripts/check-pass67.py`,
+  `artifacts/reports/pass67-restricted-product-adelic-duality-check.json`: new.
+- `artifacts/pdf/restricted-product-adelic-duality-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 68 should build the exact categorical home for the quotient
+$\widehat{\mathbb Z}/\mathbb Z$: either as a pro-object quotient with a nonzero derived cokernel,
+as a condensed/solid abelian group quotient, or as an exact-category extension class.  The concrete
+test is to recover the phantom from the inverse system whose finite CRT quotients are zero, i.e.
+identify precisely which derived functor turns the levelwise-zero quotient into the nonzero
+Loeb-Rosser class.

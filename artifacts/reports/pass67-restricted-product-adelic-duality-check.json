@@ -1,0 +1,125 @@
+{
+  "pass_number": 67,
+  "title": "restricted-product finite shadows and the adelic Loeb-Rosser duality obstruction",
+  "overall": "PASS",
+  "conclusion": {
+    "finite_conductor": "p^{-k}Z_p/p^kZ_p has nondegenerate self-dual pairing",
+    "integral_lattice": "Z_p/p^kZ_p is self-annihilating in the finite conductor quotient",
+    "boundary": "signed transpose survives conductor-normalized finite prefixes",
+    "phantom": "Zhat/Z is not a fixed finite quotient; it requires pro/derived bookkeeping"
+  },
+  "checks": {
+    "A_local_pairing_nondegenerate_p2_k1": {
+      "pass": true,
+      "detail": "Z/4 with pairing xy/4 is nondegenerate"
+    },
+    "A_local_lattice_self_annihilating_p2_k1": {
+      "pass": true,
+      "detail": "integral lattice step p^k=2 has annihilator step 2"
+    },
+    "A_local_pairing_nondegenerate_p2_k2": {
+      "pass": true,
+      "detail": "Z/16 with pairing xy/16 is nondegenerate"
+    },
+    "A_local_lattice_self_annihilating_p2_k2": {
+      "pass": true,
+      "detail": "integral lattice step p^k=4 has annihilator step 4"
+    },
+    "A_local_pairing_nondegenerate_p3_k1": {
+      "pass": true,
+      "detail": "Z/9 with pairing xy/9 is nondegenerate"
+    },
+    "A_local_lattice_self_annihilating_p3_k1": {
+      "pass": true,
+      "detail": "integral lattice step p^k=3 has annihilator step 3"
+    },
+    "A_local_pairing_nondegenerate_p3_k2": {
+      "pass": true,
+      "detail": "Z/81 with pairing xy/81 is nondegenerate"
+    },
+    "A_local_lattice_self_annihilating_p3_k2": {
+      "pass": true,
+      "detail": "integral lattice step p^k=9 has annihilator step 9"
+    },
+    "A_local_pairing_nondegenerate_p5_k1": {
+      "pass": true,
+      "detail": "Z/25 with pairing xy/25 is nondegenerate"
+    },
+    "A_local_lattice_self_annihilating_p5_k1": {
+      "pass": true,
+      "detail": "integral lattice step p^k=5 has annihilator step 5"
+    },
+    "A_local_pairing_nondegenerate_p7_k1": {
+      "pass": true,
+      "detail": "Z/49 with pairing xy/49 is nondegenerate"
+    },
+    "A_local_lattice_self_annihilating_p7_k1": {
+      "pass": true,
+      "detail": "integral lattice step p^k=7 has annihilator step 7"
+    },
+    "B_product_lattice_self_annihilating_case1": {
+      "pass": true,
+      "detail": "group order=36, lattice order=6, square=36"
+    },
+    "B_product_lattice_self_annihilating_case2": {
+      "pass": true,
+      "detail": "group order=144, lattice order=12, square=144"
+    },
+    "B_product_lattice_self_annihilating_case3": {
+      "pass": true,
+      "detail": "group order=900, lattice order=30, square=900"
+    },
+    "B_product_lattice_self_annihilating_case4": {
+      "pass": true,
+      "detail": "group order=4900, lattice order=70, square=4900"
+    },
+    "C_boundary_signed_transpose_restricted_prefix_s1": {
+      "pass": true,
+      "detail": "rank and D^2 agree after conductor normalization"
+    },
+    "C_boundary_signed_transpose_restricted_prefix_s2": {
+      "pass": true,
+      "detail": "rank and D^2 agree after conductor normalization"
+    },
+    "C_boundary_signed_transpose_restricted_prefix_s3": {
+      "pass": true,
+      "detail": "rank and D^2 agree after conductor normalization"
+    },
+    "C_boundary_signed_transpose_restricted_prefix_s4": {
+      "pass": true,
+      "detail": "rank and D^2 agree after conductor normalization"
+    },
+    "C_boundary_signed_transpose_restricted_prefix_s5": {
+      "pass": true,
+      "detail": "rank and D^2 agree after conductor normalization"
+    },
+    "C_boundary_signed_transpose_restricted_prefix_s6": {
+      "pass": true,
+      "detail": "rank and D^2 agree after conductor normalization"
+    },
+    "C_boundary_signed_transpose_restricted_prefix_s7": {
+      "pass": true,
+      "detail": "rank and D^2 agree after conductor normalization"
+    },
+    "D_CRT_diagonal_surjective_case1": {
+      "pass": true,
+      "detail": "Z/6 maps onto product of prime-power quotients; fixed-level quotient is 0"
+    },
+    "D_CRT_diagonal_surjective_case2": {
+      "pass": true,
+      "detail": "Z/12 maps onto product of prime-power quotients; fixed-level quotient is 0"
+    },
+    "D_CRT_diagonal_surjective_case3": {
+      "pass": true,
+      "detail": "Z/90 maps onto product of prime-power quotients; fixed-level quotient is 0"
+    },
+    "D_CRT_diagonal_surjective_case4": {
+      "pass": true,
+      "detail": "Z/420 maps onto product of prime-power quotients; fixed-level quotient is 0"
+    },
+    "D_phantom_requires_derived_pro_quotient": {
+      "pass": true,
+      "detail": "Zhat/Z is invisible at every fixed finite conductor; it is a pro/derived quotient phenomenon"
+    }
+  }
+}

@@ -1139,3 +1139,24 @@ $S=\mathbb P$ by bare products. Continuous characters of an infinite product hav
 so the dual of $\prod_p A_p$ is naturally $\bigoplus_p D(A_p)$, not another product. Consequently
 the full adelic Loeb-Rosser duality must be formulated using restricted products / locally compact
 abelian sheaves, where finite adeles carry their own self-duality normalization.
+
+## Finite conductor window, self-annihilating lattice, and CRT collapse (Pass 67)
+
+For a prime $p$ and conductor $k\ge1$, the **finite conductor window** is
+$$W_{p,k}=p^{-k}\mathbb Z_p/p^k\mathbb Z_p\cong\mathbb Z/p^{2k}\mathbb Z,$$
+equipped with the pairing
+$$\langle x,y\rangle=\frac{xy}{p^{2k}}\in\mathbb Q/\mathbb Z.$$
+It is the finite quotient that models the local self-duality of the restricted product
+$\prod'_p(\mathbb Q_p,\mathbb Z_p)$.
+
+The **self-annihilating integral lattice** inside $W_{p,k}$ is
+$$\mathbb Z_p/p^k\mathbb Z_p\cong p^k\mathbb Z/p^{2k}\mathbb Z.$$
+Its annihilator under the conductor pairing is itself. Finite products of such windows retain this
+self-annihilating lattice property.
+
+The **CRT collapse** is the finite-level fact that for
+$N=\prod_{p\mid N}p^{e_p}$, the diagonal map
+$$\mathbb Z/N\mathbb Z\to\prod_{p\mid N}\mathbb Z/p^{e_p}\mathbb Z$$
+is an isomorphism. Thus the quotient by the diagonal is zero at each fixed finite conductor. The
+phantom $\widehat{\mathbb Z}/\mathbb Z$ cannot be recovered from any single finite level; it is a
+derived/pro quotient phenomenon of the limiting system.

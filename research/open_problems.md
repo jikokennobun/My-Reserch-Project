@@ -652,12 +652,26 @@
   layers and gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The all-prime
   case remains [Open]: the bare infinite product dualizes to a finite-support direct sum, so
   $S=\mathbb P$ needs a restricted-product / locally compact abelian sheaf normalization.
-- **[New (Pass 66)]** **Restricted-product adelic duality for the full spectrum.** Define the
+- **[Partially resolved (Pass 67)]** **Restricted-product adelic duality for the full spectrum.** Define the
   Loeb-Rosser coefficient for $S=\mathbb P$ as a restricted product of local objects rather than a
   bare product. Prove that the finite-adele coefficient is self-dual under a chosen additive
   character, identify the integral lattice annihilator, and check whether the global boundary class
   transforms as $-\epsilon^\vee$ or whether the sign is absorbed by the global orientation
   convention. This is the necessary replacement for the naive all-prime product statement.
+  **Finite-conductor resolution (Pass 67):** the conductor windows
+  $p^{-k}\mathbb Z_p/p^k\mathbb Z_p\cong\mathbb Z/p^{2k}$ are self-dual, with
+  $\mathbb Z_p/p^k\mathbb Z_p$ self-annihilating; finite products preserve this and the signed
+  boundary transpose survives conductor normalization. **Remaining obstruction:** fixed finite
+  conductor quotients do not see $\widehat{\mathbb Z}/\mathbb Z$, because CRT makes
+  $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. The all-prime phantom needs a
+  derived/pro, condensed, or exact-category quotient formalism.
+- **[New (Pass 67)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
+  Identify the exact category in which the levelwise-zero CRT quotients assemble into the nonzero
+  Loeb-Rosser phantom. Candidate formalisms: (a) pro-abelian derived cokernel of
+  $\mathbb Z\to\{\mathbb Z/N\}_N$; (b) condensed/solid quotient of $\widehat{\mathbb Z}$ by dense
+  $\mathbb Z$; (c) exact-category extension class recovering the Pass-62/63 $\epsilon_S$ as a
+  derived boundary. Required test: recover $\widehat{\mathbb Z}/\mathbb Z$ from the inverse system
+  while every finite CRT quotient remains zero.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

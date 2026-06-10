@@ -3357,3 +3357,51 @@ exhibit the infinite product/direct-sum gap.
 survives.  The full spectrum is not a formal limit of those finite statements in the category of
 bare groups.  It must be stated in a topological category of restricted products, the natural home
 of finite adeles.
+
+## Pass 67 - Restricted-product finite shadows and the derived quotient gap
+
+Pass 66 showed that the all-prime duality cannot be a bare product statement. Pass 67 moves to the
+finite conductor windows of the restricted product
+$$\mathbb A_f=\prod_p'(\mathbb Q_p,\mathbb Z_p).$$
+This proves the finite local self-duality needed by the restricted-product formulation, but also
+shows that the Loeb-Rosser phantom $\widehat{\mathbb Z}/\mathbb Z$ is not an ordinary finite-stage
+quotient.
+
+### Finite conductor windows
+
+At prime $p$ and conductor $k\ge1$, use
+$$p^{-k}\mathbb Z_p/p^k\mathbb Z_p\cong\mathbb Z/p^{2k}\mathbb Z$$
+with pairing
+$$\langle x,y\rangle=\frac{xy}{p^{2k}}\in\mathbb Q/\mathbb Z.$$
+The integral lattice $\mathbb Z_p/p^k\mathbb Z_p$ corresponds to
+$p^k\mathbb Z/p^{2k}\mathbb Z$ and is self-annihilating. Finite products of these conductor
+windows remain self-dual, with product integral lattice self-annihilating. In coordinates
+normalized by this conductor pairing, the Pass-65 boundary still dualizes by signed transpose:
+$$D(d_S)=-d_S^T,\qquad D^2(d_S)=d_S.$$
+
+> **Theorem 67a (finite conductor self-duality).** The finite conductor group
+> $p^{-k}\mathbb Z_p/p^k\mathbb Z_p$ is self-dual, and its integral lattice
+> $\mathbb Z_p/p^k\mathbb Z_p$ is self-annihilating.
+>
+> **Theorem 67b (restricted-product finite shadow).** Finite products of these local conductor
+> windows retain self-duality and the Pass-65 signed boundary equation.
+>
+> **Theorem 67c (CRT collapse).** For every finite conductor
+> $N=\prod p^{e_p}$, the diagonal map
+> $$\mathbb Z/N\mathbb Z\longrightarrow\prod_{p\mid N}\mathbb Z/p^{e_p}\mathbb Z$$
+> is surjective. Hence the quotient by the diagonal is zero at every fixed finite conductor.
+
+**Machine verification** (`code/scripts/check-pass67.py` ->
+`artifacts/reports/pass67-restricted-product-adelic-duality-check.json`, PASS): local quotients
+$\mathbb Z/4,\mathbb Z/16,\mathbb Z/9,\mathbb Z/81,\mathbb Z/25,\mathbb Z/49$ have nondegenerate
+pairings and self-annihilating integral lattices; product windows of orders $36,144,900,4900$ have
+self-annihilating product lattices; signed boundary transpose checks pass for $s=1,\ldots,7$; CRT
+diagonal maps for $N=6,12,90,420$ are surjective.
+
+**Reading.** Restricted-product duality fixes the product/direct-sum problem at the level of
+finite conductor windows. It does not by itself produce the phantom quotient
+$\widehat{\mathbb Z}/\mathbb Z$: fixed finite levels see zero by CRT, while the profinite topology
+makes $\mathbb Z$ dense in $\widehat{\mathbb Z}$. The Loeb-Rosser phantom is therefore a
+derived/pro quotient phenomenon. Pass 68 should identify the exact category, pro-category, or
+condensed/solid setting in which the levelwise-zero CRT quotients assemble into the nonzero
+extension class.

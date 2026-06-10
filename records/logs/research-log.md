@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-11 (Autonomous discussion Pass 67)
+
+- Pass 67 tested finite shadows of the restricted product $\mathbb A_f=\prod'_p(\mathbb Q_p,\mathbb Z_p)$.  The conductor quotient $p^{-k}\mathbb Z_p/p^k\mathbb Z_p\cong\mathbb Z/p^{2k}\mathbb Z$ is self-dual under the pairing $xy/p^{2k}$, and the integral lattice $\mathbb Z_p/p^k\mathbb Z_p$ is self-annihilating; finite products preserve this, and the signed boundary transpose from Pass 65 survives conductor normalization.  The obstruction is sharper: finite CRT maps $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ are surjective, so the quotient $\widehat{\mathbb Z}/\mathbb Z$ is invisible at every fixed finite conductor.  The full phantom must be formalized as a derived/pro or condensed quotient.  Machine-verified `code/scripts/check-pass67.py` -> `artifacts/reports/pass67-restricted-product-adelic-duality-check.json` (overall PASS).
+
 ## 2026-06-10 (Autonomous discussion Pass 66)
 
 - Pass 66 resolved the finite-prime duality normalization and isolated the all-prime obstruction.  Plain unshifted $R\mathrm{Hom}_{\mathbb Z}(-,\mathbb Z)$ is not the degree-preserving duality: $\operatorname{Hom}_{\mathbb Z}(\mathbb Z/n,\mathbb Z)=0$ while $\operatorname{Ext}^1_{\mathbb Z}(\mathbb Z/n,\mathbb Z)\cong\mathbb Z/n$.  Character duality $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite cyclic truncations and supports the finite-$S$ equation $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$.  For $S=\mathbb P$, the bare product fails because continuous characters have finite support; the full adelic statement needs a restricted-product/LCA sheaf formulation.  Machine-verified `code/scripts/check-pass66.py` -> `artifacts/reports/pass66-duality-normalization-scheme-lift-check.json` (overall PASS).
