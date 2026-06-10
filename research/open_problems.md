@@ -661,8 +661,9 @@
   $\operatorname{Ext}^1_{\mathbb Z}(-,\mathbb Z)$. Character duality
   $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite $\mathbb Z/p^n$
   layers and gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The all-prime
-  case remains [Open]: the bare infinite product dualizes to a finite-support direct sum, so
-  $S=\mathbb P$ needs a restricted-product / locally compact abelian sheaf normalization.
+  case was formulated in Pass 71 as a pro-restricted finite-shadow law; the remaining [Open] part
+  is to construct the ambient LCA-sheaf, condensed/solid, or hybrid exact category where that law
+  becomes an honest duality theorem.
 - **[Partially resolved (Pass 67)]** **Restricted-product adelic duality for the full spectrum.** Define the
   Loeb-Rosser coefficient for $S=\mathbb P$ as a restricted product of local objects rather than a
   bare product. Prove that the finite-adele coefficient is self-dual under a chosen additive
@@ -674,8 +675,9 @@
   $\mathbb Z_p/p^k\mathbb Z_p$ self-annihilating; finite products preserve this and the signed
   boundary transpose survives conductor normalization. **Remaining obstruction:** fixed finite
   conductor quotients do not see $\widehat{\mathbb Z}/\mathbb Z$, because CRT makes
-  $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. The all-prime phantom needs a
-  derived/pro, condensed, or exact-category quotient formalism.
+  $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. Pass 68 supplied the derived
+  pro-Ab quotient, and Pass 71 supplied the support-preserving finite-shadow formulation; the
+  remaining task is the full categorical duality proof.
 - **[Resolved at algebraic level (Pass 68)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
   Identify the exact category in which the levelwise-zero CRT quotients assemble into the nonzero
   Loeb-Rosser phantom. Candidate formalisms: (a) pro-abelian derived cokernel of
@@ -689,7 +691,7 @@
   sequence gives $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$. The algebraic
   category is therefore derived pro-Ab; topology/Hausdorff refinements may require condensed/LCA
   language but are not needed to recover the group.
-- **[Resolved algebraically (Pass 70); topological duality remains open]** **Identify the derived
+- **[Resolved algebraically (Pass 70); pro-restricted finite-shadow formulation added in Pass 71]** **Identify the derived
   pro-cokernel with the recollement class $\epsilon$.**
   Build an explicit comparison between the derived inverse-limit boundary
   $\widehat{\mathbb Z}\to\varprojlim^1(N_n\mathbb Z)$ and the Pass-62/63/64 Loeb-Rosser boundary
@@ -703,9 +705,15 @@
   $\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}$.  This is exactly the Pass-62 filtration and
   Pass-64 recollement extension $\epsilon_S$.  The boundary matrix
   $d_S(x)=(x_p-x_{p_0})_{p\ne p_0}$ has kernel $\Delta\mathbb Z$ and dualizes in finite
-  character-normalized shadows to $-d_S^T$.  **Remaining open part:** formulate the all-prime
-  restricted-product/LCA or condensed Verdier/Pontryagin duality statement without losing the
-  product/direct-sum support data.
+  character-normalized shadows to $-d_S^T$.
+  **Pro-restricted formulation (Pass 71):** $\epsilon_{\mathbb P}$ is the compatible finite-prime
+  family $\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$ plus the derived pro-cokernel
+  $\widehat{\mathbb Z}/\mathbb Z$.  The signed law
+  $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ means that every finite
+  prime/conductor shadow sends $d_S$ to $-d_S^T$, duality squared returns $d_S$, and all restriction
+  squares commute.  The bare product duality is rejected because it keeps only finite-support
+  characters.  **Remaining open part:** build the actual LCA-sheaf, condensed/solid, or hybrid
+  exact category where this finite-shadow statement is a full duality theorem.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

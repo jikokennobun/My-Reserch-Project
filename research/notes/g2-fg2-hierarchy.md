@@ -3506,3 +3506,59 @@ $-d_S^T$ double-dualizes back to $d_S$.
 **Limit of the pass.** This closes the algebraic comparison between the derived pro-cokernel and
 the recollement $\epsilon_S$.  It does not by itself prove the honest all-prime restricted-product
 Verdier/Pontryagin functional equation; that remains a topological duality normalization problem.
+
+## Pass 71 - Pro-restricted all-prime epsilon duality
+
+Pass 70 identified the finite-prime derived pro-cokernel with the recollement class
+$\epsilon_S$.  Pass 71 fixes the correct status of the all-prime signed statement:
+it is not a theorem about the ordinary Pontryagin dual of the bare quotient
+$\widehat{\mathbb Z}/\mathbb Z$.  Since $\mathbb Z$ is dense in
+$\widehat{\mathbb Z}$, the ordinary topological quotient is not a Hausdorff LCA
+object, and ordinary continuous characters of an infinite product see only
+finite-support data.  The all-prime statement therefore has to live in a
+restricted-product/pro-object presentation.
+
+The proposed object is
+$$\epsilon_{\mathbb P}=\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$$
+together with the derived pro-cokernel
+$$\varprojlim\nolimits^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z.$$
+Its topology and duality normalization are carried by finite conductor windows
+$$p^{-k}\mathbb Z_p/p^k\mathbb Z_p$$
+with self-annihilating integral lattices
+$$\mathbb Z_p/p^k\mathbb Z_p.$$
+The signed functional equation is then stated as a compatible finite-shadow law:
+for every finite $S$ and every conductor window, the boundary
+$$d_S(x)=(x_p-x_{p_0})_{p\ne p_0}$$
+dualizes to $-d_S^T$, and these equations commute with finite-prime restrictions.
+
+> **Theorem 71a (support-preserving criterion).** Any all-prime duality theorem for
+> $\epsilon_{\mathbb P}$ must be formulated in a support-preserving category:
+> restricted products with conductor/lattice data, or an equivalent exact
+> pro/condensed/solid formalism.  The bare product duality is not admissible
+> because it replaces all-prime product support by finite-support characters.
+>
+> **Theorem 71b (pro-restricted epsilon object).** The all-prime Loeb-Rosser
+> class is the compatible finite-prime family $\{\epsilon_S\}_S$ plus the
+> derived pro-Ab quotient $\widehat{\mathbb Z}/\mathbb Z$.  The finite shadows
+> are the Pass-70 extensions
+> $$0\to\mathbb Z^S/\Delta\mathbb Z\to
+> \widehat{\mathbb Z}_S/\mathbb Z\to
+> \prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.$$
+>
+> **Theorem 71c (global signed law as finite-shadow theorem).** The expression
+> $$D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$$
+> means that every finite-prime/conductor shadow satisfies
+> $D(d_S)=-d_S^T$, duality squared returns $d_S$, and all restriction squares
+> commute.  This is a precise pro-restricted formulation, not yet a completed
+> LCA-sheaf or condensed proof.
+
+**Machine verification** (`code/scripts/check-pass71.py` ->
+`artifacts/reports/pass71-restricted-product-epsilon-duality-check.json`, PASS): finite boundary
+matrices and signed transposes commute with prefix restrictions through six primes; conductor
+windows for $p=2,3,5,7$ and $k=1,2$ have self-annihilating integral lattices; finite-prefix support
+counts separate restricted-product product profiles from bounded finite-support dual profiles.
+
+**Limit of the pass.** Pass 71 gives a disciplined all-prime formulation and a finite-shadow test
+suite.  The remaining task is to choose and prove the ambient exact category: LCA sheaves over
+finite adeles, condensed/solid abelian groups, or an explicit hybrid exact category combining
+restricted products with derived pro-Ab quotients.

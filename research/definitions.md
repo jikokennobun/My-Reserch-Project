@@ -1251,3 +1251,37 @@ Its kernel is the diagonal $\Delta\mathbb Z$ and it is surjective.  Under the
 finite character-normalized duality convention, the dual boundary is represented
 by $-d_S^T$, so finite shadows satisfy
 $$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee.$$
+
+## Restricted-product epsilon duality package (Pass 71)
+
+A **support-preserving restricted-product duality** for the all-prime
+Loeb-Rosser class is a duality formalism which remembers conductor and lattice
+data.  Locally it uses self-dual pairs $(A_p,L_p)$, with $L_p$ an integral
+lattice, and globally it uses restricted products
+$$\prod_p'(A_p,L_p)$$
+rather than the bare product $\prod_p A_p$.  This condition is necessary
+because ordinary continuous characters of an infinite product have finite
+support, so bare product duality collapses the all-prime product information to
+a direct-sum shadow.
+
+The **all-prime epsilon object** is the compatible family
+$$\epsilon_{\mathbb P}:=\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$$
+together with the derived pro-cokernel
+$$\varprojlim\nolimits^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z.$$
+Here each finite shadow is the Pass-70 extension
+$$0\to\mathbb Z^S/\Delta\mathbb Z\to
+\widehat{\mathbb Z}_S/\mathbb Z\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.$$
+The topology is not carried by the non-Hausdorff quotient
+$\widehat{\mathbb Z}/\mathbb Z$ alone; it is carried by the finite-conductor
+restricted-product presentation plus the derived pro-Ab quotient.
+
+The **pro-restricted signed law** is the finite-shadow statement
+$$D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$$
+meaning: for every finite prime set $S$, every finite conductor window, and
+every restriction $S\subset S'$, the boundary
+$$d_S(x)=(x_p-x_{p_0})_{p\ne p_0}$$
+dualizes to $-d_S^T$, duality squared returns $d_S$, and the restriction
+squares commute.  This is presently a precise finite-shadow/pro-object
+formulation, not yet a full theorem in a chosen LCA-sheaf, condensed, or solid
+category.

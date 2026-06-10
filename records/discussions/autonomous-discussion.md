@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 71
+- Current pass: 72
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -7960,3 +7960,88 @@ condensed/solid abelian groups, or another exact category that keeps both the pr
 the signed boundary.  The test is whether the finite laws
 $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ assemble into a global statement for
 $\epsilon_{\mathbb P}$ without replacing products by finite-support direct sums.
+
+---
+
+### Pass 71 - 2026-06-11 JST
+
+Focus:
+Formulate the all-prime signed duality statement without overclaiming an ordinary
+Pontryagin-dual theorem for the non-Hausdorff quotient
+$\widehat{\mathbb Z}/\mathbb Z$.  The target is a support-preserving
+restricted-product/pro-object package whose finite shadows are the Pass-70
+extensions $\epsilon_S$.
+
+Proposer:
+The correct all-prime object should be written as
+$$\epsilon_{\mathbb P}:=\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$$
+together with the derived pro-cokernel
+$$\varprojlim\nolimits^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z.$$
+The finite-prime shadows are
+$$0\to\mathbb Z^S/\Delta\mathbb Z\to
+\widehat{\mathbb Z}_S/\mathbb Z\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0,$$
+and the local duality normalization is supplied by finite conductor windows
+$$p^{-k}\mathbb Z_p/p^k\mathbb Z_p$$
+with self-annihilating integral lattice
+$$\mathbb Z_p/p^k\mathbb Z_p.$$
+Thus the all-prime formula
+$$D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$$
+should mean: for every finite $S$ and every conductor window, the boundary
+$$d_S(x)=(x_p-x_{p_0})_{p\ne p_0}$$
+dualizes to $-d_S^T$, duality squared returns $d_S$, and these equations commute
+with restriction $S\subset S'$.
+
+Skeptic:
+Do not topologize $\widehat{\mathbb Z}/\mathbb Z$ as an ordinary Hausdorff LCA
+quotient; $\mathbb Z$ is dense in $\widehat{\mathbb Z}$.  Also do not dualize
+the bare product $\prod_p A_p$ and call the result all-prime self-duality:
+ordinary continuous characters of an infinite product have finite support, so
+that operation replaces product support by a direct-sum shadow.  Pass 71
+therefore gives a precise pro-restricted finite-shadow formulation, not a
+completed theorem in a selected sheaf or condensed category.  The remaining
+mathematical obligation is to build that category and prove exactness of the
+duality functor inside it.
+
+Formalist:
+> **Theorem 71a (support-preserving criterion).** Any all-prime duality theorem
+> for $\epsilon_{\mathbb P}$ must use restricted products with conductor/lattice
+> data, or an equivalent exact pro/condensed/solid formalism.  Bare product
+> duality is inadmissible because it retains only finite-support characters.
+>
+> **Theorem 71b (pro-restricted epsilon object).** The all-prime Loeb-Rosser
+> class is the compatible family $\{\epsilon_S\}_S$ plus the derived pro-Ab
+> quotient $\widehat{\mathbb Z}/\mathbb Z$.  Each finite shadow is the Pass-70
+> recollement extension with kernel $\mathbb Z^S/\Delta\mathbb Z$.
+>
+> **Theorem 71c (finite-shadow signed law).** The statement
+> $$D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$$
+> means that every finite prime/conductor shadow satisfies $D(d_S)=-d_S^T$,
+> $D^2(d_S)=d_S$, and all restriction squares commute.
+
+Machine-verified `code/scripts/check-pass71.py` ->
+`artifacts/reports/pass71-restricted-product-epsilon-duality-check.json` (overall PASS): finite
+boundary matrices and signed transposes commute with prefix restriction through six primes;
+conductor windows for $p=2,3,5,7$ and $k=1,2$ have self-annihilating integral lattices; finite
+support-profile counts separate restricted-product prefix profiles from bounded finite-support
+dual profiles.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-71 entry; State counter
+  $71\to72$.
+- `records/logs/research-log.md`: Pass-71 one-line entry.
+- `research/definitions.md`: support-preserving restricted-product duality,
+  $\epsilon_{\mathbb P}$, and the pro-restricted signed law.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-71 section (Thms 71a, 71b, 71c).
+- `research/open_problems.md` and `research/ideas/research-questions.md`: retargeted the residue
+  to constructing the ambient LCA-sheaf, condensed/solid, or hybrid exact category.
+- `code/scripts/check-pass71.py`,
+  `artifacts/reports/pass71-restricted-product-epsilon-duality-check.json`: new.
+- `artifacts/pdf/restricted-product-epsilon-duality-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 72 should choose one ambient formalism and test it seriously.  The most constrained route is
+to define a small hybrid exact category whose objects are finite-conductor restricted products
+plus derived pro-Ab quotient data, then prove whether the duality functor is exact and sends
+$\epsilon_{\mathbb P}$ to $-\epsilon_{\mathbb P}^{\vee}$.

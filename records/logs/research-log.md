@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-11 (Autonomous discussion Pass 71)
+
+- Pass 71 formulated the all-prime signed duality as a pro-restricted finite-shadow package rather than a bare Pontryagin-dual claim for $\widehat{\mathbb Z}/\mathbb Z$.  The object is $\epsilon_{\mathbb P}=\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$ plus the derived pro-cokernel $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$; the signed law $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ means every finite prime/conductor shadow sends $d_S$ to $-d_S^T$ and commutes with restriction.  Machine-verified `code/scripts/check-pass71.py` -> `artifacts/reports/pass71-restricted-product-epsilon-duality-check.json` (overall PASS).  The remaining residue is to construct the ambient LCA-sheaf, condensed/solid, or hybrid exact category proving this finite-shadow law as a genuine all-prime duality theorem.
+
 ## 2026-06-11 (Autonomous discussion Pass 70)
 
 - Pass 70 identified the Pass-68 derived pro-cokernel with the Pass-62/63/64 recollement class at the algebraic finite-prime level.  For finite $S$, $M_{S,k}=\prod_{p\in S}p^k$ gives $\varprojlim^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z$, and the projection to $\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$ has kernel $\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}$, exactly the extension $\epsilon_S$.  The boundary matrix $d_S(x)=(x_p-x_{p_0})_{p\ne p_0}$ has diagonal kernel and finite character dual $-d_S^T$.  Machine-verified `code/scripts/check-pass70.py` -> `artifacts/reports/pass70-derived-pro-epsilon-comparison-check.json` (overall PASS).  The remaining residue is the all-prime restricted-product/LCA or condensed duality normalization.

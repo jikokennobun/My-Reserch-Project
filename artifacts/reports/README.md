@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass71-restricted-product-epsilon-duality-check.json`: verifies the Pass-71
+  pro-restricted all-prime epsilon package. It checks finite-prime boundary
+  naturality, signed-dual naturality, finite conductor self-annihilating
+  lattices, and the support-profile gap that rejects bare infinite-product
+  duality as the all-prime statement.
+
 - `pass70-derived-pro-epsilon-comparison-check.json`: verifies the Pass-70
   algebraic comparison between the derived pro-cokernel and the Loeb-Rosser
   recollement class. It checks finite CRT shadows, the primitive diagonal

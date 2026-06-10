@@ -1,0 +1,318 @@
+{
+  "pass_number": 71,
+  "title": "restricted-product epsilon duality finite-shadow package",
+  "scope": "finite-shadow verification for a pro-restricted all-prime epsilon class; not a proof of an ordinary Hausdorff quotient duality for Zhat/Z",
+  "statements": {
+    "all_prime_object": "epsilon_P is the compatible finite-prime family {epsilon_S}_S plus the derived pro-cokernel Zhat/Z",
+    "support_rule": "duality must be support-preserving: restricted products are dualized with conductor/lattice data, not as bare products",
+    "signed_law": "D_res(epsilon_P)=-epsilon_P^vee means that every finite prime/conductor shadow has d_S -> -d_S^T and all restriction squares commute",
+    "rejected_naive_claim": "the checker rejects using the ordinary dual of prod_p A_p as the all-prime statement, since it only sees finite-support characters"
+  },
+  "boundary_naturality": [
+    {
+      "small_size": 1,
+      "large_size": 1,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 1,
+      "large_size": 2,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 1,
+      "large_size": 3,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 1,
+      "large_size": 4,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 1,
+      "large_size": 5,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 1,
+      "large_size": 6,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 2,
+      "large_size": 2,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 2,
+      "large_size": 3,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 2,
+      "large_size": 4,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 2,
+      "large_size": 5,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 2,
+      "large_size": 6,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 3,
+      "large_size": 3,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 3,
+      "large_size": 4,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 3,
+      "large_size": 5,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 3,
+      "large_size": 6,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 4,
+      "large_size": 4,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 4,
+      "large_size": 5,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 4,
+      "large_size": 6,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 5,
+      "large_size": 5,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 5,
+      "large_size": 6,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "small_size": 6,
+      "large_size": 6,
+      "boundary_restricts": true,
+      "signed_dual_restricts": true,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    }
+  ],
+  "finite_conductor_windows": [
+    {
+      "prime": 2,
+      "conductor": 1,
+      "window": "p^(-1)Z_p / p^1Z_p",
+      "window_order": 4,
+      "integral_lattice_order": 2,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    },
+    {
+      "prime": 2,
+      "conductor": 2,
+      "window": "p^(-2)Z_p / p^2Z_p",
+      "window_order": 16,
+      "integral_lattice_order": 4,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    },
+    {
+      "prime": 3,
+      "conductor": 1,
+      "window": "p^(-1)Z_p / p^1Z_p",
+      "window_order": 9,
+      "integral_lattice_order": 3,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    },
+    {
+      "prime": 3,
+      "conductor": 2,
+      "window": "p^(-2)Z_p / p^2Z_p",
+      "window_order": 81,
+      "integral_lattice_order": 9,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    },
+    {
+      "prime": 5,
+      "conductor": 1,
+      "window": "p^(-1)Z_p / p^1Z_p",
+      "window_order": 25,
+      "integral_lattice_order": 5,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    },
+    {
+      "prime": 5,
+      "conductor": 2,
+      "window": "p^(-2)Z_p / p^2Z_p",
+      "window_order": 625,
+      "integral_lattice_order": 25,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    },
+    {
+      "prime": 7,
+      "conductor": 1,
+      "window": "p^(-1)Z_p / p^1Z_p",
+      "window_order": 49,
+      "integral_lattice_order": 7,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    },
+    {
+      "prime": 7,
+      "conductor": 2,
+      "window": "p^(-2)Z_p / p^2Z_p",
+      "window_order": 2401,
+      "integral_lattice_order": 49,
+      "annihilator_equals_integral_lattice": true,
+      "verdict": "PASS"
+    }
+  ],
+  "support_profile_gap": [
+    {
+      "prefix_size": 1,
+      "nonzero_conductor_levels_per_prime": 3,
+      "restricted_product_prefix_profiles": 4,
+      "bare_product_dual_profiles_with_support_at_most_bound": 4,
+      "support_bound": 2,
+      "all_prefix_product_profiles_available": true,
+      "bounded_support_is_strict_once_prefix_exceeds_bound": true,
+      "verdict": "PASS"
+    },
+    {
+      "prefix_size": 2,
+      "nonzero_conductor_levels_per_prime": 3,
+      "restricted_product_prefix_profiles": 16,
+      "bare_product_dual_profiles_with_support_at_most_bound": 16,
+      "support_bound": 2,
+      "all_prefix_product_profiles_available": true,
+      "bounded_support_is_strict_once_prefix_exceeds_bound": true,
+      "verdict": "PASS"
+    },
+    {
+      "prefix_size": 3,
+      "nonzero_conductor_levels_per_prime": 3,
+      "restricted_product_prefix_profiles": 64,
+      "bare_product_dual_profiles_with_support_at_most_bound": 37,
+      "support_bound": 2,
+      "all_prefix_product_profiles_available": true,
+      "bounded_support_is_strict_once_prefix_exceeds_bound": true,
+      "verdict": "PASS"
+    },
+    {
+      "prefix_size": 4,
+      "nonzero_conductor_levels_per_prime": 3,
+      "restricted_product_prefix_profiles": 256,
+      "bare_product_dual_profiles_with_support_at_most_bound": 67,
+      "support_bound": 2,
+      "all_prefix_product_profiles_available": true,
+      "bounded_support_is_strict_once_prefix_exceeds_bound": true,
+      "verdict": "PASS"
+    },
+    {
+      "prefix_size": 5,
+      "nonzero_conductor_levels_per_prime": 3,
+      "restricted_product_prefix_profiles": 1024,
+      "bare_product_dual_profiles_with_support_at_most_bound": 106,
+      "support_bound": 2,
+      "all_prefix_product_profiles_available": true,
+      "bounded_support_is_strict_once_prefix_exceeds_bound": true,
+      "verdict": "PASS"
+    },
+    {
+      "prefix_size": 6,
+      "nonzero_conductor_levels_per_prime": 3,
+      "restricted_product_prefix_profiles": 4096,
+      "bare_product_dual_profiles_with_support_at_most_bound": 154,
+      "support_bound": 2,
+      "all_prefix_product_profiles_available": true,
+      "bounded_support_is_strict_once_prefix_exceeds_bound": true,
+      "verdict": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

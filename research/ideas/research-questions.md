@@ -26,14 +26,18 @@
   integrality, and contraction force a detached Rosser fixed point back into
   the consistency orbit.
 
-- **(Pass 70 retarget: all-prime restricted-product duality for $\epsilon$)**
-  Pass 70 closed the algebraic comparison left by Pass 68.  For finite $S$,
-  $\varprojlim^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z$, and the projection to
-  $\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$ has kernel
-  $\mathbb Z^S/\Delta\mathbb Z$, exactly the recollement extension $\epsilon_S$.  Finite
-  character-normalized shadows still satisfy $D(\epsilon_S)=-\epsilon_S^\vee$.  Now open: formulate
-  the all-prime restricted-product/LCA or condensed duality statement so that the same signed law
-  survives without collapsing products to finite-support direct sums.
+- **(Pass 71 retarget: exact category for pro-restricted $\epsilon_{\mathbb P}$)**
+  Pass 71 formulated the all-prime signed law as a pro-restricted finite-shadow
+  theorem: $\epsilon_{\mathbb P}$ is the compatible family
+  $\{\epsilon_S\}_{S\subset\mathbb P,\ |S|<\infty}$ together with the derived
+  pro-cokernel $\widehat{\mathbb Z}/\mathbb Z$, and
+  $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ means
+  that every finite-prime/conductor shadow sends $d_S$ to $-d_S^T$ compatibly
+  with restrictions.  Open: construct the ambient exact category in which this
+  is a genuine duality theorem.  Candidate targets are LCA sheaves over finite
+  adeles, condensed/solid abelian groups, or a hybrid exact category combining
+  restricted products with derived pro-Ab quotients; the proof must preserve
+  product support and not replace it by finite-support direct sums.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the
