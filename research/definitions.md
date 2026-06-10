@@ -1221,3 +1221,33 @@ indices $N_{n+1}/N_n$ are nontrivial infinitely often and the image indices grow
 The **levelwise-zero / derived-nonzero distinction** is the core all-prime phantom mechanism:
 finite CRT quotients see no quotient, but the derived inverse-limit sequence records the nonzero
 Loeb-Rosser class.
+
+## Derived pro-cokernel filtration and $\epsilon_S$ (Pass 70)
+
+For a finite prime set $S$, put
+$$M_{S,k}:=\prod_{p\in S}p^k.$$
+The finite-prime derived pro-cokernel is
+$$\varprojlim\nolimits^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z,$$
+where
+$$\widehat{\mathbb Z}_S=\prod_{p\in S}\mathbb Z_p.$$
+
+The comparison to local derived cokernels is the projection
+$$\widehat{\mathbb Z}_S/\mathbb Z\longrightarrow
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).$$
+Its kernel is
+$$\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1},$$
+where $\Delta(1)=(1,\ldots,1)$.  Thus the recollement class
+$$\epsilon_S:\quad
+0\to\mathbb Z^S/\Delta\mathbb Z\to
+\widehat{\mathbb Z}_S/\mathbb Z\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0$$
+is the finite-prime filtration of the derived pro-cokernel by local derived
+cokernels.
+
+With a chosen base prime $p_0\in S$, the boundary matrix is
+$$d_S:\mathbb Z^S\to\mathbb Z^{|S|-1},\qquad
+(x_p)\mapsto (x_p-x_{p_0})_{p\ne p_0}.$$
+Its kernel is the diagonal $\Delta\mathbb Z$ and it is surjective.  Under the
+finite character-normalized duality convention, the dual boundary is represented
+by $-d_S^T$, so finite shadows satisfy
+$$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee.$$

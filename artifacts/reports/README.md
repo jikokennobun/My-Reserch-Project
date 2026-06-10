@@ -37,6 +37,13 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass70-derived-pro-epsilon-comparison-check.json`: verifies the Pass-70
+  algebraic comparison between the derived pro-cokernel and the Loeb-Rosser
+  recollement class. It checks finite CRT shadows, the primitive diagonal
+  $\Delta:\mathbb Z\to\mathbb Z^S$, the surjective boundary
+  $d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ with diagonal kernel, and the finite
+  signed-dual shadow $d_S\mapsto-d_S^T$.
+
 - `pass69-consistency-cut-infinite-g2-zoo-check.json`: verifies the Pass-69
   G2-ZOO expansion layer. It checks cycle APS models with flat consistency
   towers, detached Rosser period preAPS models, the A3/cut boundary, and the

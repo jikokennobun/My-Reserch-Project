@@ -1,0 +1,440 @@
+{
+  "pass_number": 70,
+  "title": "derived pro-cokernel comparison with recollement epsilon",
+  "scope": "finite-prime algebraic comparison plus finite CRT shadows; full all-prime topological duality remains a restricted-product question",
+  "statements": {
+    "global_tower": "M_{S,k}=prod_{p in S} p^k and 0->M_{S,k}Z->Z->Z/M_{S,k}Z->0",
+    "derived_cokernel": "lim^1(M_{S,k}Z) = Zhat_S/Z",
+    "local_cokernels": "prod_p lim^1(p^k Z) = prod_p(Z_p/Z)",
+    "epsilon_sequence": "0 -> Z^S/Delta Z -> Zhat_S/Z -> prod_p(Z_p/Z) -> 0",
+    "dual_sign": "D(epsilon_S) is represented by -d_S^T on finite S"
+  },
+  "finite_prime_sets": [
+    {
+      "S": [
+        2
+      ],
+      "size": 1,
+      "delta_matrix_rank": 1,
+      "delta_image_primitive": true,
+      "coker_delta_rank": 0,
+      "boundary_matrix_rank": 0,
+      "boundary_matrix_surjective": true,
+      "boundary_kills_diagonal": true,
+      "kernel_boundary_is_diagonal_by_rank": true,
+      "epsilon_kernel_rank": 0,
+      "derived_middle_group": "Zhat_[2]/Z",
+      "recollement_extension": "0 -> Z^S/Delta Z -> Zhat_S/Z -> prod_p(Z_p/Z) -> 0",
+      "comparison_claim": "The projection from the derived pro-cokernel Zhat_S/Z to the product of local derived cokernels has kernel coker(Delta).",
+      "signed_dual_shape": {
+        "d_rows": 0,
+        "d_cols": 1,
+        "minus_d_transpose_rows": 0,
+        "minus_d_transpose_cols": 0,
+        "double_dual_returns_d": true
+      },
+      "finite_crt_shadows": [
+        {
+          "primes": [
+            2
+          ],
+          "exponent": 1,
+          "global_modulus": 2,
+          "product_order": 2,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 2,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2
+          ],
+          "exponent": 2,
+          "global_modulus": 4,
+          "product_order": 4,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 4,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2
+          ],
+          "exponent": 3,
+          "global_modulus": 8,
+          "product_order": 8,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 8,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2
+          ],
+          "exponent": 4,
+          "global_modulus": 16,
+          "product_order": 16,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 16,
+          "bijective": true
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "S": [
+        2,
+        3
+      ],
+      "size": 2,
+      "delta_matrix_rank": 1,
+      "delta_image_primitive": true,
+      "coker_delta_rank": 1,
+      "boundary_matrix_rank": 1,
+      "boundary_matrix_surjective": true,
+      "boundary_kills_diagonal": true,
+      "kernel_boundary_is_diagonal_by_rank": true,
+      "epsilon_kernel_rank": 1,
+      "derived_middle_group": "Zhat_[2, 3]/Z",
+      "recollement_extension": "0 -> Z^S/Delta Z -> Zhat_S/Z -> prod_p(Z_p/Z) -> 0",
+      "comparison_claim": "The projection from the derived pro-cokernel Zhat_S/Z to the product of local derived cokernels has kernel coker(Delta).",
+      "signed_dual_shape": {
+        "d_rows": 1,
+        "d_cols": 2,
+        "minus_d_transpose_rows": 2,
+        "minus_d_transpose_cols": 1,
+        "double_dual_returns_d": true
+      },
+      "finite_crt_shadows": [
+        {
+          "primes": [
+            2,
+            3
+          ],
+          "exponent": 1,
+          "global_modulus": 6,
+          "product_order": 6,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 6,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3
+          ],
+          "exponent": 2,
+          "global_modulus": 36,
+          "product_order": 36,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 36,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3
+          ],
+          "exponent": 3,
+          "global_modulus": 216,
+          "product_order": 216,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 216,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3
+          ],
+          "exponent": 4,
+          "global_modulus": 1296,
+          "product_order": 1296,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 1296,
+          "bijective": true
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "S": [
+        2,
+        3,
+        5
+      ],
+      "size": 3,
+      "delta_matrix_rank": 1,
+      "delta_image_primitive": true,
+      "coker_delta_rank": 2,
+      "boundary_matrix_rank": 2,
+      "boundary_matrix_surjective": true,
+      "boundary_kills_diagonal": true,
+      "kernel_boundary_is_diagonal_by_rank": true,
+      "epsilon_kernel_rank": 2,
+      "derived_middle_group": "Zhat_[2, 3, 5]/Z",
+      "recollement_extension": "0 -> Z^S/Delta Z -> Zhat_S/Z -> prod_p(Z_p/Z) -> 0",
+      "comparison_claim": "The projection from the derived pro-cokernel Zhat_S/Z to the product of local derived cokernels has kernel coker(Delta).",
+      "signed_dual_shape": {
+        "d_rows": 2,
+        "d_cols": 3,
+        "minus_d_transpose_rows": 3,
+        "minus_d_transpose_cols": 2,
+        "double_dual_returns_d": true
+      },
+      "finite_crt_shadows": [
+        {
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "exponent": 1,
+          "global_modulus": 30,
+          "product_order": 30,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 30,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "exponent": 2,
+          "global_modulus": 900,
+          "product_order": 900,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 900,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "exponent": 3,
+          "global_modulus": 27000,
+          "product_order": 27000,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 27000,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "exponent": 4,
+          "global_modulus": 810000,
+          "product_order": 810000,
+          "pairwise_coprime_moduli": true,
+          "enumerated": false,
+          "image_size": 810000,
+          "bijective": true
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "S": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "size": 4,
+      "delta_matrix_rank": 1,
+      "delta_image_primitive": true,
+      "coker_delta_rank": 3,
+      "boundary_matrix_rank": 3,
+      "boundary_matrix_surjective": true,
+      "boundary_kills_diagonal": true,
+      "kernel_boundary_is_diagonal_by_rank": true,
+      "epsilon_kernel_rank": 3,
+      "derived_middle_group": "Zhat_[2, 3, 5, 7]/Z",
+      "recollement_extension": "0 -> Z^S/Delta Z -> Zhat_S/Z -> prod_p(Z_p/Z) -> 0",
+      "comparison_claim": "The projection from the derived pro-cokernel Zhat_S/Z to the product of local derived cokernels has kernel coker(Delta).",
+      "signed_dual_shape": {
+        "d_rows": 3,
+        "d_cols": 4,
+        "minus_d_transpose_rows": 4,
+        "minus_d_transpose_cols": 3,
+        "double_dual_returns_d": true
+      },
+      "finite_crt_shadows": [
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "exponent": 1,
+          "global_modulus": 210,
+          "product_order": 210,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 210,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "exponent": 2,
+          "global_modulus": 44100,
+          "product_order": 44100,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 44100,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "exponent": 3,
+          "global_modulus": 9261000,
+          "product_order": 9261000,
+          "pairwise_coprime_moduli": true,
+          "enumerated": false,
+          "image_size": 9261000,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "exponent": 4,
+          "global_modulus": 1944810000,
+          "product_order": 1944810000,
+          "pairwise_coprime_moduli": true,
+          "enumerated": false,
+          "image_size": 1944810000,
+          "bijective": true
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "S": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "size": 5,
+      "delta_matrix_rank": 1,
+      "delta_image_primitive": true,
+      "coker_delta_rank": 4,
+      "boundary_matrix_rank": 4,
+      "boundary_matrix_surjective": true,
+      "boundary_kills_diagonal": true,
+      "kernel_boundary_is_diagonal_by_rank": true,
+      "epsilon_kernel_rank": 4,
+      "derived_middle_group": "Zhat_[2, 3, 5, 7, 11]/Z",
+      "recollement_extension": "0 -> Z^S/Delta Z -> Zhat_S/Z -> prod_p(Z_p/Z) -> 0",
+      "comparison_claim": "The projection from the derived pro-cokernel Zhat_S/Z to the product of local derived cokernels has kernel coker(Delta).",
+      "signed_dual_shape": {
+        "d_rows": 4,
+        "d_cols": 5,
+        "minus_d_transpose_rows": 5,
+        "minus_d_transpose_cols": 4,
+        "double_dual_returns_d": true
+      },
+      "finite_crt_shadows": [
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7,
+            11
+          ],
+          "exponent": 1,
+          "global_modulus": 2310,
+          "product_order": 2310,
+          "pairwise_coprime_moduli": true,
+          "enumerated": true,
+          "image_size": 2310,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7,
+            11
+          ],
+          "exponent": 2,
+          "global_modulus": 5336100,
+          "product_order": 5336100,
+          "pairwise_coprime_moduli": true,
+          "enumerated": false,
+          "image_size": 5336100,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7,
+            11
+          ],
+          "exponent": 3,
+          "global_modulus": 12326391000,
+          "product_order": 12326391000,
+          "pairwise_coprime_moduli": true,
+          "enumerated": false,
+          "image_size": 12326391000,
+          "bijective": true
+        },
+        {
+          "primes": [
+            2,
+            3,
+            5,
+            7,
+            11
+          ],
+          "exponent": 4,
+          "global_modulus": 28473963210000,
+          "product_order": 28473963210000,
+          "pairwise_coprime_moduli": true,
+          "enumerated": false,
+          "image_size": 28473963210000,
+          "bijective": true
+        }
+      ],
+      "verdict": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

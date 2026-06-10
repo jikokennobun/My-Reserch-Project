@@ -26,13 +26,14 @@
   integrality, and contraction force a detached Rosser fixed point back into
   the consistency orbit.
 
-- **(Pass 68 retarget: compare derived pro-cokernel with recollement $\epsilon$)**
-  Pass 68 recovered $\widehat{\mathbb Z}/\mathbb Z$ algebraically as
-  $\varprojlim^1(N_n\mathbb Z)$ for $N_n=\operatorname{lcm}(1,\ldots,n)$: every finite CRT quotient
-  is zero, but the kernel tower is non-Mittag-Leffler, so the derived cokernel is nonzero. Now open:
-  build an explicit comparison map from the Pass-62 bicomplex / Pass-64 recollement boundary to the
-  lcm-tower derived inverse-limit sequence, and check that this identifies the derived
-  pro-cokernel class with $\epsilon$ and sends it under character duality to $-\epsilon^\vee$.
+- **(Pass 70 retarget: all-prime restricted-product duality for $\epsilon$)**
+  Pass 70 closed the algebraic comparison left by Pass 68.  For finite $S$,
+  $\varprojlim^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z$, and the projection to
+  $\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$ has kernel
+  $\mathbb Z^S/\Delta\mathbb Z$, exactly the recollement extension $\epsilon_S$.  Finite
+  character-normalized shadows still satisfy $D(\epsilon_S)=-\epsilon_S^\vee$.  Now open: formulate
+  the all-prime restricted-product/LCA or condensed duality statement so that the same signed law
+  survives without collapsing products to finite-support direct sums.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

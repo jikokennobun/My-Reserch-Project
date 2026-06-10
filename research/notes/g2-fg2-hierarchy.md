@@ -3455,3 +3455,54 @@ Restricted products handle local duality; $R^1\varprojlim$ handles the global di
 The next missing comparison is not "where does $\widehat{\mathbb Z}/\mathbb Z$ live?" but "is this
 $R^1\varprojlim$ class the same morphism as the Pass-62/63/64 recollement $\epsilon$, with the
 same signed Verdier duality?"
+
+## Pass 70 - The derived pro-cokernel filtration is the recollement class
+
+Pass 68 located the all-prime phantom as a derived pro-cokernel.  Pass 70 compares that object with
+the Pass-62/63/64 recollement class.
+
+For a finite prime set $S$, let
+$$M_{S,k}=\prod_{p\in S}p^k.$$
+Then
+$$0\to M_{S,k}\mathbb Z\to\mathbb Z\to\mathbb Z/M_{S,k}\mathbb Z\to0$$
+is the finite-prime version of the lcm-tower exact sequence, and
+$$\varprojlim_k \mathbb Z/M_{S,k}\mathbb Z=\widehat{\mathbb Z}_S=\prod_{p\in S}\mathbb Z_p.$$
+Since $\bigcap_k M_{S,k}\mathbb Z=0$, the derived exact sequence gives
+$$\varprojlim\nolimits^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z.$$
+
+The map from the global derived pro-cokernel to the product of local derived cokernels is
+$$\widehat{\mathbb Z}_S/\mathbb Z\longrightarrow
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).$$
+Its kernel consists of tuples represented by ordinary integers in each coordinate, modulo the
+single diagonal integer.  Hence
+$$\ker=\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.$$
+This gives exactly the Pass-62 filtration extension and the Pass-64 recollement boundary:
+$$0\to\mathbb Z^S/\Delta\mathbb Z\to
+\widehat{\mathbb Z}_S/\mathbb Z\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.$$
+
+> **Theorem 70a (finite-prime comparison).** For finite $S$, the derived pro-cokernel
+> $\varprojlim^1(M_{S,k}\mathbb Z)$ is the middle term of the Loeb-Rosser recollement extension.
+> The projection to local derived cokernels has kernel $\mathbb Z^S/\Delta\mathbb Z$, so the
+> extension class is $\epsilon_S$.
+>
+> **Theorem 70b (cofinal all-prime compatibility).** The all-prime lcm tower restricts to the
+> finite-prime towers above.  Thus $\widehat{\mathbb Z}/\mathbb Z$ is the compatible all-prime
+> derived pro-cokernel whose finite-prime restrictions are the classes $\epsilon_S$.
+>
+> **Theorem 70c (finite signed shadow).** With
+> $$d_S(x)=(x_p-x_{p_0})_{p\ne p_0},$$
+> finite character-normalized duality sends the boundary to $-d_S^T$ and
+> $D^2(d_S)=d_S$.  Therefore every finite-prime shadow satisfies
+> $$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee.$$
+
+**Machine verification** (`code/scripts/check-pass70.py` ->
+`artifacts/reports/pass70-derived-pro-epsilon-comparison-check.json`, PASS): for
+$|S|=1,\ldots,5$, the CRT shadows for $M_{S,k}$, $1\le k\le4$, are bijective; the diagonal
+matrix $\Delta:\mathbb Z\to\mathbb Z^S$ is primitive; the boundary
+$d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ is surjective with kernel the diagonal by rank; and
+$-d_S^T$ double-dualizes back to $d_S$.
+
+**Limit of the pass.** This closes the algebraic comparison between the derived pro-cokernel and
+the recollement $\epsilon_S$.  It does not by itself prove the honest all-prime restricted-product
+Verdier/Pontryagin functional equation; that remains a topological duality normalization problem.

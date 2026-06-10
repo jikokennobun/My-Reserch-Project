@@ -689,12 +689,23 @@
   sequence gives $\varprojlim^1(N_n\mathbb Z)\cong\widehat{\mathbb Z}/\mathbb Z$. The algebraic
   category is therefore derived pro-Ab; topology/Hausdorff refinements may require condensed/LCA
   language but are not needed to recover the group.
-- **[New (Pass 68)]** **Identify the derived pro-cokernel with the recollement class $\epsilon$.**
+- **[Resolved algebraically (Pass 70); topological duality remains open]** **Identify the derived
+  pro-cokernel with the recollement class $\epsilon$.**
   Build an explicit comparison between the derived inverse-limit boundary
   $\widehat{\mathbb Z}\to\varprojlim^1(N_n\mathbb Z)$ and the Pass-62/63/64 Loeb-Rosser boundary
   $\epsilon$ (filtration extension / $d_2$ / recollement boundary). Required test: construct a
   chain map from the bicomplex or recollement long exact sequence to the lcm-tower derived
   sequence, and verify that character duality sends the resulting class to $-\epsilon^\vee$.
+  **Resolution (Pass 70):** for finite $S$, use $M_{S,k}=\prod_{p\in S}p^k$.  The derived
+  pro-cokernel is $\varprojlim^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z$, and the
+  projection to the product of local derived cokernels
+  $\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$ has kernel
+  $\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}$.  This is exactly the Pass-62 filtration and
+  Pass-64 recollement extension $\epsilon_S$.  The boundary matrix
+  $d_S(x)=(x_p-x_{p_0})_{p\ne p_0}$ has kernel $\Delta\mathbb Z$ and dualizes in finite
+  character-normalized shadows to $-d_S^T$.  **Remaining open part:** formulate the all-prime
+  restricted-product/LCA or condensed Verdier/Pontryagin duality statement without losing the
+  product/direct-sum support data.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

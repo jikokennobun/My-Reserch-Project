@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 70
+- Current pass: 71
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -7871,3 +7871,92 @@ Next step:
 Pass 70 should return to the deferred Pass-68 obligation: compare the lcm-tower class
 $\varprojlim^1(N_n\mathbb Z)$ with the Pass-62/63/64 recollement boundary $\epsilon$, while keeping
 the new Pass-69 vocabulary separate as the APS/G2-ZOO consistency layer.
+
+---
+
+### Pass 70 - 2026-06-11 JST
+
+Focus:
+Close the algebraic comparison between the Pass-68 derived pro-cokernel and the Pass-62/63/64
+recollement class $\epsilon_S$.  The target is not a new group isomorphism but the exact filtration
+that identifies the derived pro-cokernel with the recollement extension.
+
+Proposer:
+For a finite prime set $S$, replace the all-prime lcm tower by the cofinal finite-prime conductor
+tower
+$$M_{S,k}=\prod_{p\in S}p^k.$$
+The exact sequence
+$$0\to M_{S,k}\mathbb Z\to\mathbb Z\to\mathbb Z/M_{S,k}\mathbb Z\to0$$
+gives
+$$\varprojlim_k\mathbb Z/M_{S,k}\mathbb Z=\widehat{\mathbb Z}_S=\prod_{p\in S}\mathbb Z_p,$$
+and hence
+$$\varprojlim\nolimits^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z.$$
+Now compare this global derived cokernel with the product of local derived cokernels:
+$$\widehat{\mathbb Z}_S/\mathbb Z\longrightarrow
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).$$
+The kernel is precisely tuples represented by integers in each coordinate, modulo the single
+diagonal integer:
+$$\ker=\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.$$
+Therefore the Pass-62 filtration extension and Pass-64 recollement boundary are the same exact
+sequence:
+$$0\to\mathbb Z^S/\Delta\mathbb Z\to
+\widehat{\mathbb Z}_S/\mathbb Z\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.$$
+This identifies $\epsilon_S$ as the finite-prime filtration of the derived pro-cokernel by local
+derived cokernels.
+
+Skeptic:
+This resolves the algebraic comparison, not the full topological duality problem.  The all-prime
+object $\widehat{\mathbb Z}/\mathbb Z$ is still non-Hausdorff as an ordinary quotient because
+$\mathbb Z$ is dense in $\widehat{\mathbb Z}$.  Also, finite character duality can check the signed
+matrix $d_S\mapsto-d_S^T$, but the all-prime dual statement still needs a restricted-product/LCA or
+condensed normalization to avoid collapsing products to finite-support direct sums.  So the right
+claim is: $\epsilon_S$ is the finite-prime algebraic filtration of the derived pro-cokernel; the
+global Verdier/Pontryagin functional equation remains a separate normalization task.
+
+Formalist:
+> **Theorem 70a (finite-prime comparison).** For finite $S$,
+> $$\varprojlim\nolimits^1(M_{S,k}\mathbb Z)\cong\widehat{\mathbb Z}_S/\mathbb Z.$$
+> The projection to $\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$ has kernel
+> $\mathbb Z^S/\Delta\mathbb Z$.  Hence its extension class is the recollement
+> class $\epsilon_S$.
+>
+> **Theorem 70b (all-prime compatibility).** The all-prime lcm tower restricts to the finite-prime
+> conductor towers.  Consequently $\widehat{\mathbb Z}/\mathbb Z$ is the compatible all-prime
+> derived pro-cokernel whose finite-prime restrictions are the classes $\epsilon_S$.
+>
+> **Theorem 70c (finite signed shadow).** For
+> $$d_S(x)=(x_p-x_{p_0})_{p\ne p_0},$$
+> one has $\ker d_S=\Delta\mathbb Z$ and $d_S$ is surjective.  Finite
+> character-normalized duality sends $d_S$ to $-d_S^T$ and $D^2(d_S)=d_S$, so
+> $$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$$
+> on every finite-prime shadow.
+
+Machine-verified `code/scripts/check-pass70.py` ->
+`artifacts/reports/pass70-derived-pro-epsilon-comparison-check.json` (overall PASS): for
+$|S|=1,\ldots,5$, CRT finite shadows for $M_{S,k}$, $1\le k\le4$, are bijective; the diagonal
+$\Delta:\mathbb Z\to\mathbb Z^S$ is primitive; the boundary
+$d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ is surjective with diagonal kernel by rank; and the signed
+dual shape $-d_S^T$ double-dualizes back to $d_S$.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-70 entry; State counter
+  $70\to71$.
+- `records/logs/research-log.md`: Pass-70 one-line entry.
+- `research/definitions.md`: added derived pro-cokernel filtration and $\epsilon_S$.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-70 section (Thms 70a, 70b, 70c).
+- `research/open_problems.md`: Pass-68 comparison marked algebraically resolved, with
+  restricted-product topological duality retained as the residue.
+- `research/ideas/research-questions.md`: active question retargeted to all-prime
+  restricted-product/condensed signed duality for $\epsilon$.
+- `code/scripts/check-pass70.py`,
+  `artifacts/reports/pass70-derived-pro-epsilon-comparison-check.json`: new.
+- `artifacts/pdf/derived-pro-epsilon-comparison-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 71 should formulate the actual all-prime duality category: restricted-product LCA sheaves,
+condensed/solid abelian groups, or another exact category that keeps both the product support and
+the signed boundary.  The test is whether the finite laws
+$D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ assemble into a global statement for
+$\epsilon_{\mathbb P}$ without replacing products by finite-support direct sums.
