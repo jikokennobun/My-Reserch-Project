@@ -1,0 +1,564 @@
+\documentclass[uplatex,dvipdfmx,a4paper,10pt]{jsarticle}
+\usepackage[top=24mm,bottom=24mm,left=22mm,right=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage[dvipdfmx]{xcolor}
+\usepackage{enumitem}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  urlcolor=blue!45!black,
+  pdftitle={AMS/APS/RAPSモデルの分類表と分類定理},
+  pdfauthor={My-Reserch-Project}
+}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.25em}
+\setlist[itemize]{leftmargin=2.2em,itemsep=0.15em}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=0.15em}
+
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+
+\newcommand{\AMS}{\mathrm{AMS}}
+\newcommand{\APS}{\mathrm{APS}}
+\newcommand{\RAPS}{\mathrm{RAPS}}
+\newcommand{\Gtwo}{\mathrm{G2}}
+\newcommand{\FGtwo}{\mathrm{FG2}}
+\newcommand{\nFGtwo}{\mathrm{nFG2}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\bt}{\boxtimes}
+\newcommand{\resl}{\backslash}
+\newcommand{\resr}{/}
+
+\title{AMS/APS/RAPSモデルの分類表と分類定理\\
+{\large 有限・可算・連続モデル、および本質的に複雑なモデル候補}}
+\author{My-Reserch-Project}
+\date{2026年6月11日}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本資料は、AMS、APS、および剰余付きAPS/RAPSのモデルを、有限モデル、
+可算モデル、非可算・連続モデルに分けて整理する。結論は次である。
+3値モデルは \(\Gtwo,\FGtwo,\Fix_{\bt}\) の独立性を示す最小証人として有用だが、
+分類論としては浅い。数学的に肥沃なのは、任意の \(\nFGtwo\) 深度を実現して
+完全剰余化できる \(B_N\) 系列、全ての有限モデルと区別される可算シフトRAPS、
+Scott/domain/orthogonality由来の大きな反例族、そして
+profinite tower、solenoid、\(\varprojlim^1\)、sheafificationに基づく
+集合論的・ホモロジー的モデルである。
+\end{abstract}
+
+\section{基本語彙}
+
+\begin{definition}[AMS, APS, RAPS]
+本資料では
+\[
+S=(L,\le,\Box,\bt,T,\bot)
+\]
+を抽象様相構造、すなわち \(\AMS\) と呼ぶ。\(T\) は証明可能性の指定点、
+\(\bot\) は矛盾・反証の指定点であり、必ずしも順序の最大元・最小元ではない。
+\(\APS\) は次を満たす \(\AMS\) である。
+\[
+x\le y\Rightarrow \Box x\le\Box y,\qquad
+x\le y\Rightarrow \bt y\le\bt x,
+\]
+\[
+T\le\bt\bot,
+\]
+\[
+x\le\Box y\ \text{かつ}\ x\le\bt y\Rightarrow x\le\bt T,
+\]
+\[
+\bt x\le\Box\bt x.
+\]
+さらに順序モノイドと左右剰余
+\[
+(L,\le,\otimes,\mathbf 1,\resl,\resr)
+\]
+をもち、
+\[
+a\otimes b\le c
+\iff
+b\le a\resl c
+\iff
+a\le c\resr b
+\]
+を満たすとき、これを剰余付きAMS/APS、ここでは \(\RAPS\) と呼ぶ。
+\end{definition}
+
+\begin{definition}[G2, FG2, nFG2]
+\[
+\Gtwo(S):\quad \bt T\le\bot\Rightarrow T\le\bot,
+\]
+\[
+\FGtwo(S):\quad \bt\bt T\le\bt T,
+\]
+\[
+\nFGtwo(k):\quad \bt^{k+1}T\le\bt^kT\qquad(k\ge1).
+\]
+また \(\Fix_{\bt}(S)=\{p\in L:p=\bt p\}\) と書く。
+\end{definition}
+
+\begin{remark}[3値還元について]
+3値モデルに還元できる例が多い、という印象は正しい。ただし、それは
+\(\Gtwo,\FGtwo,\Fix_{\bt}\) という粗い真偽プロファイルを見る限りである。
+3値では、\(\bt\)-軌道の任意深度、残余ファイバーの主性、completionで生じる
+非主成分、\(\varprojlim^1\)-phantom、基数不変量は見えない。
+したがって3値モデルは分類表の入口であって、主役ではない。
+\end{remark}
+
+\section{全体分類表}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.16\linewidth}
+                  >{\raggedright\arraybackslash}p{0.20\linewidth}
+                  >{\raggedright\arraybackslash}p{0.22\linewidth}
+                  >{\raggedright\arraybackslash}p{0.22\linewidth}
+                  >{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+階層 & 代表モデル & 主要性質 & 面白さの源泉 & 有限還元性 \\
+\midrule
+\endfirsthead
+\toprule
+階層 & 代表モデル & 主要性質 & 面白さの源泉 & 有限還元性 \\
+\midrule
+\endhead
+有限3値 &
+\(\texttt{M-000}\) から \(\texttt{M-111}\) &
+\(\Gtwo,\FGtwo,\Fix_{\bt}\) の全組合せを分離 &
+独立性の最小証人 &
+高い \\
+\midrule
+有限4値 &
+\(\texttt{M4-G2FG2FP}\) と底修復 &
+\(\Gtwo+\FGtwo+\Fix_{\bt}\)。元の順序では完全剰余化不能 &
+証明枝 \(p\) と反証枝 \(c\) の分離。矛盾許容型論理との接点 &
+中 \\
+\midrule
+任意有限深度 &
+\(\texttt{bottom-nfg2-depth-}N\), \(B_N\) &
+\(\Gtwo\) 真、\(\FGtwo\) 偽、\(\nFGtwo(k)\) を任意深度まで偽にできる &
+\(\bt\)-軌道深度を任意に伸ばせる &
+族として低い \\
+\midrule
+有限RAPS &
+truncated \(U\)-absorbing, front-shifted \(B_N\) &
+同じ台集合・同じ順序で完全剰余を追加 &
+残余ファイバーの主性、局所収縮、front幅障害 &
+低い \\
+\midrule
+可算シフト &
+\(C_\omega\) &
+\(\bt^nT\) が全て相異なる。全 \(\nFGtwo(k)\) 偽、固定点なし &
+非周期的軌道、有限モデル非同値性 &
+本質的無限 \\
+\midrule
+Scott/domain &
+\(\mathcal O(D)\), stable domains, prefix domains &
+自然なRAPS反例族。多くは \(\Gtwo,\FGtwo,\Fix_{\bt}\) を壊す &
+位相・近似・直交性による反証意味論 &
+連続的 \\
+\midrule
+集合論/完成 &
+profinite tower, solenoid, \(\varprojlim^1\), sheaf &
+有限段では消えるが極限でphantomが出る &
+Mittag--Leffler性、radical grading、層化、双対性 &
+本質的無限 \\
+\bottomrule
+\end{longtable}
+
+\section{有限モデル}
+
+\subsection{3値モデル}
+
+\begin{theorem}[3値分離表]
+現在の \(\texttt{M-000},\ldots,\texttt{M-111}\) は、
+\(\Gtwo,\FGtwo,\Fix_{\bt}\) の3つの真偽について全ての組合せを実現する。
+したがって、これら3原理だけを見る限り、3値preAPSは完全な独立性証人族である。
+\end{theorem}
+
+\begin{proof}[証明スケッチ]
+各 \(\texttt{M-abc}\) は、添字 \(a,b,c\in\{0,1\}\) がそれぞれ
+\(\Gtwo,\FGtwo,\Fix_{\bt}\) の真偽を表すように保存されている。
+検証は \(\texttt{code/scripts/check-g2-zoo.py}\) と
+\(\texttt{artifacts/reports}\) 以下の機械検査で行う。
+\end{proof}
+
+\begin{remark}
+この定理は便利だが、深い分類定理ではない。多くの3値モデルは
+MacNeille完成で非主固定点を持つ、bottom disciplineを入れるとプロファイルが変わる、
+また剰余付き構造としては残余ファイバーの主性を反映できない。
+\end{remark}
+
+\subsection{4値モデルと矛盾許容型論理}
+
+4値モデルの中心は \(\texttt{M4-G2FG2FP}\) である。元のモデルでは
+\[
+\Gtwo,\qquad \FGtwo,\qquad \exists p(p=\bt p)
+\]
+が同時に成立するが、同じ順序・同じ台集合上では完全剰余モノイドに拡張できない。
+これは残余ファイバーが主にならないことを示す有限障害である。
+
+\begin{theorem}[M4の底修復]
+\(\texttt{M4-G2FG2FP}\) に唯一不足しているbottom disciplineの枝
+\[
+\bot\le c
+\]
+を加えると、diamond型の4値順序となり、\(\Gtwo+\FGtwo+\Fix_{\bt}\)
+のプロファイルを保ったまま完全剰余付きモデルへ拡張できる。
+\end{theorem}
+
+\begin{proof}[証明スケッチ]
+元の順序では \(\bot\le p,T\) はあるが \(\bot\le c\) がない。
+このため、\(c\)-枝を含む残余ファイバーに最大元が存在しない。
+\(\bot\le c\) を足すと、\(\bot<p<T\) と \(\bot<c<T\)、\(p\parallel c\)
+のdiamondになる。検証済みモデル
+\(\texttt{M4-G2FG2FP-order-plus-bot-c-residuated}\) は、単位 \(p\) を持つ
+完全剰余モノイドを備える。
+\end{proof}
+
+\begin{remark}[矛盾許容型論理との関係]
+この4値diamondは、Belnap--Dunn型の四値構造と似た絵を持つ。
+ただし同一視してはいけない。APSの順序は真理順序そのものではなく、
+証明可能性・反証可能性の到達順序である。類似点は、証明枝 \(p\) と反証枝 \(c\)
+を不可比較に保てる点にある。相違点は、bottom discipline \(\bot\le x\)
+を入れるとex falso型の弱化をかなり強く認める点にある。
+\end{remark}
+
+\subsection{任意深度有限モデル \(B_N\)}
+
+\begin{definition}[\(B_N\)]
+\(N\ge1\) に対し、
+\[
+B_N=\{b,T,U,s,a_1,\ldots,a_{N+1}\}
+\]
+とする。順序は
+\[
+b\le x\le U\quad(x\in B_N),\qquad s\le a_{N+1}
+\]
+を基本とし、\(\Box=\mathrm{id}\)、
+\[
+\bt b=U,\quad \bt U=b,\quad \bt T=a_1,\quad
+\bt a_i=a_{i+1}\ (1\le i\le N),\quad
+\bt a_{N+1}=s,\quad \bt s=s
+\]
+とする。
+\end{definition}
+
+\begin{theorem}[\(B_N\) の任意深度分離]
+\(B_N\) はbottom disciplineを満たす有限\(\APS\)であり、
+\[
+\Gtwo \text{ は真},\qquad \FGtwo \text{ は偽},\qquad \Fix_{\bt}\ne\varnothing,
+\]
+さらに
+\[
+\nFGtwo(k) \text{ は } k\le N \text{ で偽、} k\ge N+1 \text{ で真}
+\]
+である。
+\end{theorem}
+
+\begin{proof}[証明スケッチ]
+\(\bt\)-軌道は
+\[
+T\mapsto a_1\mapsto a_2\mapsto\cdots\mapsto a_{N+1}\mapsto s\mapsto s
+\]
+である。\(a_{i+1}\le a_i\) は \(i<N+1\) では成立しないため、初期の
+\(\nFGtwo\) は失敗する。最後に \(s\le a_{N+1}\) かつ \(s=s\) なので
+以後は成立する。固定点は \(s\)。また \(\bt T=a_1\not\le b=\bot\) なので
+\(\Gtwo\) は非崩壊かつ空虚に真である。
+\end{proof}
+
+\subsection{有限RAPSとしての \(B_N\)}
+
+\begin{theorem}[truncated \(U\)-absorbing剰余化]
+各 \(B_N\) は、同じ台集合・同じ順序のまま完全剰余付きにできる。
+具体的には \(T\) を単位、\(b\) を零、\(U\) を非零非単位上の吸収元とし、
+\[
+e(s)=e(a_{N+1})=1,\qquad e(a_i)=i+1\quad(1\le i\le N)
+\]
+と置く。非零非単位 \(x,y\) に対し、
+\[
+x\otimes y=
+\begin{cases}
+a_{e(x)+e(y)-1} & e(x)+e(y)\le N+1,\\
+U & e(x)+e(y)>N+1
+\end{cases}
+\]
+と定めると、結合律、単調性、左右剰余が成立する。
+\end{theorem}
+
+\begin{proof}[証明スケッチ]
+積は指数の切り詰め加法である。結合律はoverflow付き加法の結合律に帰着される。
+単調性は \(b\le x\le U\) と唯一の内部分岐 \(s\le a_{N+1}\) から従う。
+剰余は指数差で与えられ、存在しない差は \(b\)、目標 \(U\) は \(U\) に送る。
+有限検査は \(\texttt{residuated-truncated-u-absorbing-bottom-nfg2-depth-4.json}\)
+および関連レポートで確認済みである。
+\end{proof}
+
+\begin{theorem}[front-shifted非 \(U\)-absorbing剰余化]
+\(N\ge3\) では、\(B_N\) はさらに非 \(U\)-absorbingな完全剰余付きモデルを持つ。
+front
+\[
+F=\{a_1,a_2\}
+\]
+を直交冪等零帯
+\[
+a_1^2=a_1,\qquad a_2^2=a_2,\qquad a_1a_2=b
+\]
+とし、\(U\otimes a_i=a_i\ (i=1,2)\) とする。tail側はshifted truncated
+productで定める。この構成は \(N=3,4,5\) で機械検証され、残余表は閉形式で一致している。
+\end{theorem}
+
+\begin{theorem}[front幅の障害]
+直交冪等front \(F_k=\{a_1,\ldots,a_k\}\) を同じ方式で入れると、
+同じ順序上で完全剰余が存在するのは検証済み範囲で \(k=0,1,2\) までであり、
+\(k=3\) で最初に失敗する。失敗の原因は、\(p\resl b\) の候補が
+\(F_k\setminus\{p\}\) に複数の不可比較最大元を持ち、残余ファイバーが主にならないことである。
+\end{theorem}
+
+\section{可算モデル}
+
+\begin{definition}[可算シフト \(C_\omega\)]
+台集合を
+\[
+C_\omega=\{b,T,U,a_1,a_2,\ldots\}
+\]
+とし、順序を
+\[
+b\le x\le U\qquad(x\in C_\omega)
+\]
+以外は離散とする。\(\Box=\mathrm{id}\)、
+\[
+\bt b=U,\quad \bt U=b,\quad \bt T=a_1,\quad \bt a_n=a_{n+1}
+\]
+と定める。積は \(T\) を単位、\(b\) を零、\(U\) を吸収元とし、
+\[
+a_i\otimes a_j=a_{i+j},\qquad a_i\otimes U=U
+\]
+で定める。
+\end{definition}
+
+\begin{theorem}[可算シフトの本質的無限性]
+\(C_\omega\) は可算な完全剰余付き\(\APS\)であり、
+\[
+\Gtwo \text{ は真},\qquad
+\nFGtwo(k) \text{ は全て偽},\qquad
+\Fix_{\bt}(C_\omega)=\varnothing.
+\]
+さらに、モーダル等式理論
+\[
+\{\bt^iT\ne \bt^jT:0\le i<j<\omega\}
+\]
+を含めて見る限り、\(C_\omega\) はどの有限モデルとも同値ではない。
+\end{theorem}
+
+\begin{proof}[証明スケッチ]
+\(\bt\)-軌道
+\[
+T,a_1,a_2,\ldots
+\]
+は全て相異なり、内部点は互いに不可比較なので \(\bt^{k+1}T\le\bt^kT\)
+は成立しない。固定点もない。剰余は
+\[
+a_i\resl a_k=
+\begin{cases}
+a_{k-i} & k\ge i,\\
+b & k<i,
+\end{cases}
+\quad
+a_i\resl U=U,\quad
+U\resl U=U,\quad
+U\resl a_k=b
+\]
+で与えられ、右剰余も同じである。有限モデルでは \(\bt^nT\) の列は必ず反復するため、
+全ての不等式 \(\bt^iT\ne\bt^jT\) を同時には満たせない。
+\end{proof}
+
+\section{非可算・連続モデル}
+
+\begin{theorem}[非自明フレームは大きな負のRAPSを与える]
+任意の非自明フレーム \(H\) に対し、
+\[
+(H,\le,\mathrm{id},(\_)^\ast,1,0)
+\]
+を考える。ここで \(x^\ast=x\Rightarrow0\) は擬補元である。この構造は自然な
+\(\RAPS\) であるが、
+\[
+\neg\Gtwo,\qquad \neg\FGtwo,\qquad \Fix_{\bt}=\varnothing
+\]
+を満たす。
+\end{theorem}
+
+\begin{proof}
+\(\bt1=1^\ast=0\) なので \(\Gtwo\) の前件は成り立つが、非自明性により
+\(1\not\le0\)。したがって \(\Gtwo\) は失敗する。また
+\[
+\bt\bt1=0^\ast=1\not\le0=\bt1
+\]
+なので \(\FGtwo\) も失敗する。固定点 \(p=p^\ast\) があれば
+\[
+p=p\wedge p^\ast\le0
+\]
+より \(p=0\) だが、\(0^\ast=1\ne0\) で矛盾する。
+\end{proof}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\linewidth}
+                  >{\raggedright\arraybackslash}p{0.28\linewidth}
+                  >{\raggedright\arraybackslash}p{0.24\linewidth}
+                  >{\raggedright\arraybackslash}p{0.16\linewidth}}
+\toprule
+構成 & \(\bt\) の意味 & 典型的挙動 & 研究価値 \\
+\midrule
+\endfirsthead
+\toprule
+構成 & \(\bt\) の意味 & 典型的挙動 & 研究価値 \\
+\midrule
+\endhead
+Scott frame \(\mathcal O(D)\) &
+擬補元 \(U^\ast\) &
+\(\Gtwo,\FGtwo,\Fix\) を壊す &
+反例の大規模供給源 \\
+\midrule
+flat domain \(\mathbb N_\bot\) &
+未定義性と観測の分離 &
+可算・計算的なRAPS反例 &
+部分情報と反証の分離 \\
+\midrule
+prefix domain \(\Sigma^{\le\omega}\) &
+prefix incompatibility &
+分岐計算の衝突意味論 &
+event structure APSへの橋 \\
+\midrule
+stable/coherence spaces &
+直交性・双直交閉包 &
+A3がボトルネック &
+線形論理・資源意味論との接続 \\
+\midrule
+interval/metric models &
+連続写像や収縮写像由来 &
+固定点は出るがA3が壊れやすい &
+解析的APSの試験場 \\
+\bottomrule
+\end{longtable}
+
+\section{集合論・完成・phantomモデル}
+
+有限段では消えているが、逆極限や導来極限で現れる成分は、3値・4値モデルより
+ずっと分類論的に豊かである。整数係数のtower
+\[
+\mathbb Z \xleftarrow{\times m} \mathbb Z
+\xleftarrow{\times m} \mathbb Z
+\xleftarrow{\times m}\cdots
+\]
+は \(m\ge2\) のとき非Mittag--Lefflerとなり、
+\[
+\varprojlim\nolimits^1\ne0
+\]
+を生む。一方、体係数ではMittag--Leffler性が回復し、phantomは消える。
+
+\begin{theorem}[radical grading]
+profinite/solenoid型のRosser--phantom構成では、自然変換やcover-filtration写像の
+存在障害は
+\[
+\mathrm{rad}(m)\mid\mathrm{rad}(m')
+\]
+で制御される。したがって、分類の基礎posetは平方自由整数の割り切り束である。
+\end{theorem}
+
+\begin{proof}[証明スケッチ]
+\(\mathbb Z[1/m]\subseteq\mathbb Z[1/m']\) は、\(m\) の素因子集合が
+\(m'\) の素因子集合に含まれることと同値である。検証レポート
+\(\texttt{pass60-rad-obstruction-naturality-theta-check.json}\) は、
+144組の組合せでこの条件の違反がないことを確認している。
+\end{proof}
+
+\begin{theorem}[QUANTALE XOR PHANTOM]
+Rosser unitが非到達上限として現れる状況では、完全剰余付きquantale構造と
+\(\varprojlim^1\)-phantomは同じ完成で同時には保存されない。
+ideal/downset完成はunital quantaleと全剰余を回復するが、coverを主点として分裂させるため
+phantomを殺す。MacNeille型のphantom保存完成は \(\varprojlim^1\ne0\) を保つが、
+加法的剰余を失う。
+\end{theorem}
+
+\begin{proof}[証明スケッチ]
+完全剰余付きテンソルは結合を保存する。非到達上限 \(e=\sup a_n\) の下で
+\(a_n\otimes c<c\) だが \(e\otimes c=c\) となると、join保存に反する。
+ideal完成ではjoin保存と剰余は回復するが、上限が主イデアルとして実体化され、
+cover fiber multiplicityは1に落ち、Mittag--Leffler性が回復する。
+検証は \(\texttt{pass57-cancellativity-nogo-quantale-escape-check.json}\) に保存されている。
+\end{proof}
+
+\begin{proposition}[Spec \(\mathbb Z\) 上のphantom presheaf]
+有限な素数集合 \(S\) に対し、phantom presheafのsheafification比較の核は
+\[
+\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}
+\]
+である。制限と貼り合わせは、radical束のmeet/gcdとjoin/lcmに対応する。
+\end{proposition}
+
+\section{分類定理としてのまとめ}
+
+\begin{theorem}[AMS/APS/RAPSモデル分類の暫定主定理]
+現在のAMS/APS/RAPSモデルは、次の5階層に分けると、既存の有限検査・構成・完成現象を
+最もよく説明できる。
+\begin{enumerate}
+  \item \textbf{有限真理表層}: 3値モデル。原理独立性は完全に見えるが、剰余・完成・無限軌道は見えない。
+  \item \textbf{有限構造層}: 4値diamondと \(B_N\)。bottom discipline、剰余化、残余ファイバー主性が現れる。
+  \item \textbf{任意深度有限RAPS層}: \(B_N\) のtruncated/front-shifted剰余化。3値還元不能な資源感度を持つ。
+  \item \textbf{本質的無限層}: \(C_\omega\)、profinite tower、solenoid。有限段のプロファイルでは検出できない軌道・phantom・\(\varprojlim^1\) を持つ。
+  \item \textbf{連続・集合論層}: Scott/domain/orthogonality/sheaf/cardinal invariantモデル。A3、固定点、剰余、完成安定性のどれを保存するかで細分される。
+\end{enumerate}
+この分類で数学的に最も肥沃なのは、3値層ではなく、第3--5層である。
+\end{theorem}
+
+\section{積極的に調べるべきモデル}
+
+\begin{enumerate}
+  \item \textbf{\(B_N\)-front-shifted RAPS の完全な手書き証明}。
+  既に深度3--5で検証され、残余表も閉形式で一致している。
+  \item \textbf{可算シフト \(C_\omega\)}。
+  全有限モデルと区別される最小級の本質的無限RAPSであり、有限深度分類から無限分類へ進む橋になる。
+  \item \textbf{periodic Rosser gadget \(R_4\)}。
+  4周期軌道とdetached固定点を持ち、非integral単位で完全剰余化される。
+  \item \textbf{Scott frame negative zoo}。
+  固定点を作ると思われがちな領域意味論が、実は大規模な反例族を作ることを定理化できる。
+  \item \textbf{profinite/solenoid phantom APS}。
+  \(\varprojlim^1\)、radical grading、sheafification、duality normalizationを持ち、
+  有限モデル分類を本質的に超える。
+  \item \textbf{cardinal invariant / bouquet APS}。
+  \(\Fix_{\bt}\) の濃度だけでなく、Tukey型の支配数・被覆数としてG2-ZOOを再分類する方向。
+\end{enumerate}
+
+\section{未解決問題}
+
+\begin{enumerate}
+  \item \(B_N\)-front-shifted RAPS の \(N\ge3\) 一般について、機械検査に依存しない残余表証明を書く。
+  \item 可算シフト \(C_\omega\) を、BS16風のfibered/resource-sensitive APSから自然に導出できるか調べる。
+  \item Scott/domainモデルで、A3を保ちながら非自明な \(\bt\)-固定点を持つ例を作る。
+  \item QUANTALE XOR PHANTOMの仮定を最小化する。可換性、完全性、join保存性のどれが本質かを分離する。
+  \item 矛盾許容型4値論理とM4 diamondの間に、保守拡大またはforgetful functorの形の正確な対応を作る。
+  \item cardinal invariant APSで、\(\Fix_{\bt}\) の濃度、Tukey次数、radical gradingを同じ表で比較する。
+\end{enumerate}
+
+\section*{参照したローカル資料}
+
+\begin{itemize}
+  \item \(\texttt{research/definitions.md}\)
+  \item \(\texttt{research/notes/g2-aps-zoo-classification.md}\)
+  \item \(\texttt{research/notes/residuated-algebra-domain-completion.md}\)
+  \item \(\texttt{research/notes/predicate-topology-fixed-points.md}\)
+  \item \(\texttt{research/notes/aps-cardinal-invariants-fixed-points.md}\)
+  \item \(\texttt{research/notes/bs16-fiber-residuated-aps.md}\)
+  \item \(\texttt{code/models/examples/bottom-nfg2-depth-*.json}\)
+  \item \(\texttt{code/models/examples/M4-G2FG2FP*.json}\)
+  \item \(\texttt{code/models/examples/R4-residuated.json}\)
+  \item \(\texttt{artifacts/reports/pass54--pass66*.json}\)
+\end{itemize}
+
+\end{document}
