@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-11 (Autonomous discussion Pass 73)
+
+- Pass 73 proved the presentation-level universal property of $\mathcal H_\epsilon$: it is initial among admissible support-preserving certificate targets receiving finite conductor windows, Loeb-Rosser boundaries, finite-prime restrictions, signed duality, and the derived pro-Ab lcm tower.  Machine-verified `code/scripts/check-pass73.py` -> `artifacts/reports/pass73-h-epsilon-universal-property-check.json` (overall PASS): finite/pro normal forms, restriction and signed-dual relations, admissible target initiality, and minimality obstructions all pass.  The remaining residue is faithful exact realization in LCA sheaves, condensed/solid groups, or an exact pro-category, or a no-go theorem for such a realization.
+
 ## 2026-06-11 (Autonomous discussion Pass 72)
 
 - Pass 72 defined the hybrid exact-category candidate $\mathcal H_\epsilon$ for the all-prime Loeb-Rosser class.  Objects carry finite conductor restricted-product shadows $(S,k,W_{S,k},L_{S,k},d_S)$ plus the derived pro-Ab lcm kernel tower $K_n=N_n\mathbb Z$; hybrid-exactness means exact finite shadows together with $\varprojlim^1K_n\cong\widehat{\mathbb Z}/\mathbb Z$.  Machine-verified `code/scripts/check-pass72.py` -> `artifacts/reports/pass72-hybrid-exact-epsilon-category-check.json` (overall PASS): exact shadows through six primes, restriction composition, conductor layers through $k=3$, and non-ML pro growth all pass.  The remaining residue is a universal property or faithful embedding into LCA sheaves, condensed/solid groups, or an exact pro-category.

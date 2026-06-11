@@ -1316,3 +1316,33 @@ finite exactness, restriction functoriality, conductor bookkeeping, and the
 non-ML pro witness; the remaining task is to prove a universal property or
 embed $\mathcal H_\epsilon$ fully into an established LCA-sheaf,
 condensed/solid, or exact pro-category framework.
+
+## Presentation-level universal property of $\mathcal H_\epsilon$ (Pass 73)
+
+A **support-preserving certificate target** for $\epsilon_{\mathbb P}$ is a
+category-like target equipped with images of five generator families:
+
+1. finite conductor windows $W_{S,k}$ and lattices $L_{S,k}$;
+2. Loeb-Rosser boundaries $d_S$;
+3. restriction morphisms for $S\subset S'$;
+4. signed duality morphisms $d_S\mapsto -d_S^T$;
+5. the derived pro-Ab lcm tower $K_n=N_n\mathbb Z$.
+
+The target is **admissible** when these images satisfy the finite exactness,
+restriction, signed-dual, conductor, and non-Mittag-Leffler pro relations
+checked in Pass 72.
+
+The **presentation-level universal property** says that
+$\mathcal H_\epsilon$ is initial among admissible support-preserving certificate
+targets: any admissible target receives a unique generator-preserving functor
+from $\mathcal H_\epsilon$.  This is a universal property of the presented
+bookkeeping category.  It is not yet a proof that $\mathcal H_\epsilon$ embeds
+fully faithfully into LCA sheaves, condensed/solid abelian groups, or a
+canonical exact pro-category.
+
+The **minimality obstruction** is that omitting any generator family destroys
+one part of $\epsilon_{\mathbb P}$: without conductor windows there is no
+support-preserving local duality; without $d_S$ there is no $\epsilon_S$;
+without restrictions the finite shadows do not assemble; without signed
+duality the functional equation is untyped; without the lcm tower finite CRT
+levels remain zero and $\widehat{\mathbb Z}/\mathbb Z$ is lost.

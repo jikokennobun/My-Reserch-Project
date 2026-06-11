@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass73-h-epsilon-universal-property-check.json`: verifies the Pass-73
+  presentation-level universal property for $\mathcal H_\epsilon$. It checks
+  finite/pro normal forms, restriction and signed-dual relations, admissible
+  certificate-target initiality, and minimality obstructions when any required
+  generator family is omitted.
+
 - `pass72-hybrid-exact-epsilon-category-check.json`: verifies the Pass-72
   hybrid exact-category candidate for $\epsilon_{\mathbb P}$. It checks finite
   exact shadows, restriction composition, signed-dual restriction compatibility,

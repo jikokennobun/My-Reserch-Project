@@ -1,0 +1,625 @@
+{
+  "pass_number": 73,
+  "title": "presentation-level universal property for H_epsilon",
+  "scope": "finite verification of initiality among support-preserving certificate targets; not a full embedding into LCA sheaves or condensed abelian groups",
+  "required_generators": [
+    "finite_conductor_windows",
+    "loeb_rosser_boundaries",
+    "restriction_functoriality",
+    "signed_duality",
+    "derived_pro_lcm_tower"
+  ],
+  "finite_shadow_normal_forms_count": 18,
+  "pro_tower_normal_forms_count": 24,
+  "restriction_relations": [
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 1,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 2,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 3,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 1,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 2,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 3,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 2,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 3,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 3,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 2,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 3,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 2,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 3,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 3,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 3,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 3,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 4,
+      "large": 4,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 4,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 4,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "middle": 5,
+      "large": 5,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "middle": 5,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 6,
+      "middle": 6,
+      "large": 6,
+      "boundary_restriction_relation": true,
+      "dual_restriction_relation": true,
+      "verdict": "PASS"
+    }
+  ],
+  "signed_dual_relations": [
+    {
+      "size": 1,
+      "d_rows": 0,
+      "d_cols": 1,
+      "dual_rows": 1,
+      "dual_cols": 0,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 2,
+      "d_rows": 1,
+      "d_cols": 2,
+      "dual_rows": 2,
+      "dual_cols": 1,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 3,
+      "d_rows": 2,
+      "d_cols": 3,
+      "dual_rows": 3,
+      "dual_cols": 2,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 4,
+      "d_rows": 3,
+      "d_cols": 4,
+      "dual_rows": 4,
+      "dual_cols": 3,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 5,
+      "d_rows": 4,
+      "d_cols": 5,
+      "dual_rows": 5,
+      "dual_cols": 4,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 6,
+      "d_rows": 5,
+      "d_cols": 6,
+      "dual_rows": 6,
+      "dual_cols": 5,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    }
+  ],
+  "pro_relation": {
+    "max_n": 24,
+    "cofinal_for_moduli_up_to_max_n": true,
+    "non_mittag_leffler_growth_witness": true,
+    "derived_pro_relation_available": true,
+    "verdict": "PASS"
+  },
+  "target_initiality_checks": [
+    {
+      "target": "complete_support_preserving_target",
+      "missing_generators": [],
+      "unique_generator_preserving_functor_from_H_epsilon": true,
+      "faithful_for_epsilon_P": true,
+      "obstruction_witnesses": [],
+      "verdict": "PASS"
+    },
+    {
+      "target": "finite_shadow_only_target",
+      "missing_generators": [
+        "derived_pro_lcm_tower"
+      ],
+      "unique_generator_preserving_functor_from_H_epsilon": false,
+      "faithful_for_epsilon_P": false,
+      "obstruction_witnesses": [
+        "Finite CRT levels remain zero and Zhat/Z is lost."
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "target": "pro_only_target",
+      "missing_generators": [
+        "finite_conductor_windows",
+        "loeb_rosser_boundaries",
+        "restriction_functoriality",
+        "signed_duality"
+      ],
+      "unique_generator_preserving_functor_from_H_epsilon": false,
+      "faithful_for_epsilon_P": false,
+      "obstruction_witnesses": [
+        "No local self-dual lattice data; support-preserving finite restricted-product shadows cannot be typed.",
+        "No boundary d_S, so epsilon_S and the signed equation are undefined.",
+        "Finite-prime shadows do not assemble into epsilon_P.",
+        "The relation d_S -> -d_S^T is unavailable."
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "target": "unsigned_support_target",
+      "missing_generators": [
+        "signed_duality"
+      ],
+      "unique_generator_preserving_functor_from_H_epsilon": false,
+      "faithful_for_epsilon_P": false,
+      "obstruction_witnesses": [
+        "The relation d_S -> -d_S^T is unavailable."
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "target": "nonfunctorial_shadow_target",
+      "missing_generators": [
+        "restriction_functoriality"
+      ],
+      "unique_generator_preserving_functor_from_H_epsilon": false,
+      "faithful_for_epsilon_P": false,
+      "obstruction_witnesses": [
+        "Finite-prime shadows do not assemble into epsilon_P."
+      ],
+      "verdict": "PASS"
+    }
+  ],
+  "minimality_checks": [
+    {
+      "omitted_generator_family": "finite_conductor_windows",
+      "obstruction": "No local self-dual lattice data; support-preserving finite restricted-product shadows cannot be typed.",
+      "presentation_still_certifies_epsilon_P": false,
+      "verdict": "PASS"
+    },
+    {
+      "omitted_generator_family": "loeb_rosser_boundaries",
+      "obstruction": "No boundary d_S, so epsilon_S and the signed equation are undefined.",
+      "presentation_still_certifies_epsilon_P": false,
+      "verdict": "PASS"
+    },
+    {
+      "omitted_generator_family": "restriction_functoriality",
+      "obstruction": "Finite-prime shadows do not assemble into epsilon_P.",
+      "presentation_still_certifies_epsilon_P": false,
+      "verdict": "PASS"
+    },
+    {
+      "omitted_generator_family": "signed_duality",
+      "obstruction": "The relation d_S -> -d_S^T is unavailable.",
+      "presentation_still_certifies_epsilon_P": false,
+      "verdict": "PASS"
+    },
+    {
+      "omitted_generator_family": "derived_pro_lcm_tower",
+      "obstruction": "Finite CRT levels remain zero and Zhat/Z is lost.",
+      "presentation_still_certifies_epsilon_P": false,
+      "verdict": "PASS"
+    }
+  ],
+  "presentation_universal_property": "Any target that supplies all required generator images satisfying the listed relations receives a unique generator-preserving functor from H_epsilon. Targets omitting any generator family fail to certify epsilon_P.",
+  "overall": "PASS"
+}

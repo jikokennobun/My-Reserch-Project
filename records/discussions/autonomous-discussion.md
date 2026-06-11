@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 73
+- Current pass: 74
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -8122,3 +8122,86 @@ Next step:
 Pass 73 should try to prove a universal property for $\mathcal H_\epsilon$: it should be initial
 among support-preserving exact targets receiving the finite conductor windows and the lcm derived
 pro-cokernel, or else exhibit the obstruction that prevents such an initial property.
+
+---
+
+### Pass 73 - 2026-06-11 JST
+
+Focus:
+Prove the universal property currently available for $\mathcal H_\epsilon$.
+The target is not a faithful embedding into LCA sheaves or condensed groups,
+but a presentation-level initiality theorem among support-preserving certificate
+targets.
+
+Proposer:
+Define a support-preserving certificate target $C$ for
+$\epsilon_{\mathbb P}$ as a target equipped with images of five generator
+families:
+1. finite conductor windows $W_{S,k}$ and lattices $L_{S,k}$;
+2. Loeb-Rosser boundaries $d_S$;
+3. finite-prime restriction maps;
+4. signed duality maps $d_S\mapsto -d_S^T$;
+5. the derived pro-Ab lcm tower $K_n=N_n\mathbb Z$.
+
+The target is admissible when those images satisfy the Pass-72 relations:
+finite exactness, restriction composition, signed-dual compatibility, conductor
+bookkeeping, and non-Mittag-Leffler pro growth.  Since
+$\mathcal H_\epsilon$ is defined by exactly these generators and relations, any
+admissible target receives a unique generator-preserving functor
+$$\mathcal H_\epsilon\to C.$$
+This proves initiality in the category of support-preserving certificates.
+
+Skeptic:
+This is the right universal property for the current formal object, but it does
+not solve the analytic realization problem.  The proof is by presentation:
+unique maps are forced because the target supplies images of all generators and
+satisfies all relations.  It does not prove that a natural LCA-sheaf,
+condensed/solid, or exact pro-category target is admissible, nor that the
+resulting functor is faithful.  The honest next obligation is external
+realization: either build such a faithful exact functor or prove that one of the
+five generator families cannot be preserved in any proposed target.
+
+Formalist:
+> **Definition 73a (support-preserving certificate target).** A target $C$ is
+> support-preserving for $\epsilon_{\mathbb P}$ if it supplies images of the
+> finite conductor windows, Loeb-Rosser boundaries, restriction maps, signed
+> duality maps, and the derived pro-Ab lcm tower, satisfying the finite/pro
+> relations of $\mathcal H_\epsilon$.
+>
+> **Theorem 73b (presentation initiality).** $\mathcal H_\epsilon$ is initial
+> among admissible support-preserving certificate targets.  Equivalently, every
+> admissible $C$ receives a unique generator-preserving functor
+> $\mathcal H_\epsilon\to C$.
+>
+> **Theorem 73c (minimality obstruction).** Omitting any generator family
+> prevents certification of $\epsilon_{\mathbb P}$: without conductor windows
+> local support is untyped; without $d_S$ there is no $\epsilon_S$; without
+> restrictions the shadows do not assemble; without signed duality the
+> functional equation is untyped; without the lcm tower the derived quotient
+> $\widehat{\mathbb Z}/\mathbb Z$ is lost.
+
+Machine-verified `code/scripts/check-pass73.py` ->
+`artifacts/reports/pass73-h-epsilon-universal-property-check.json` (overall PASS): finite conductor
+normal forms are generated through six primes and $k\le3$; pro normal forms are generated through
+$N_{24}$; restriction and signed-dual relations commute; the lcm tower is cofinal and non-ML;
+complete support-preserving targets receive a unique generator-preserving functor; targets omitting
+any generator family fail with the expected obstruction.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-73 entry; State counter
+  $73\to74$.
+- `records/logs/research-log.md`: Pass-73 one-line entry.
+- `research/definitions.md`: support-preserving certificate target, presentation-level universal
+  property, and minimality obstruction.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-73 section (Definition 73a, Thms 73b/73c).
+- `research/open_problems.md` and `research/ideas/research-questions.md`: retargeted the residue
+  to faithful exact realization or a no-go theorem.
+- `code/scripts/check-pass73.py`,
+  `artifacts/reports/pass73-h-epsilon-universal-property-check.json`: new.
+- `artifacts/pdf/h-epsilon-universal-property-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 74 should attempt the first external realization test: define a candidate functor from
+$\mathcal H_\epsilon$ to a concrete exact pro-category with restricted-product generators, and
+check whether it is faithful on the five generator families.

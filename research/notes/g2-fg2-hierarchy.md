@@ -3616,3 +3616,52 @@ finite-CRT-zero/pro-derived-nonzero split.
 The remaining issue is external validation: prove a universal property for it, or embed it into an
 established category such as LCA sheaves, condensed/solid abelian groups, or an exact pro-category
 with restricted-product generators.
+
+## Pass 73 - Presentation-level universal property of $\mathcal H_\epsilon$
+
+Pass 73 proves the universal property available at the current level of
+precision: $\mathcal H_\epsilon$ is initial among support-preserving certificate
+targets.  A certificate target is not yet an ambient analytic category; it is a
+target carrying images of the five generator families needed to type
+$\epsilon_{\mathbb P}$:
+
+1. finite conductor windows $W_{S,k}$ and lattices $L_{S,k}$;
+2. Loeb-Rosser boundaries $d_S$;
+3. finite-prime restriction maps;
+4. signed duality maps $d_S\mapsto -d_S^T$;
+5. the derived pro-Ab lcm tower $K_n=N_n\mathbb Z$.
+
+An admissible certificate target is one where these images satisfy the
+relations checked in Pass 72: finite exactness, restriction composition,
+signed-dual compatibility, conductor bookkeeping, and non-Mittag-Leffler pro
+growth.  Since $\mathcal H_\epsilon$ was defined by exactly these generators
+and relations, any admissible target receives a unique generator-preserving
+functor from $\mathcal H_\epsilon$.
+
+> **Definition 73a (support-preserving certificate target).** A target $C$ is
+> support-preserving for $\epsilon_{\mathbb P}$ if it supplies images of the
+> five generator families above and satisfies the finite/pro relations.
+>
+> **Theorem 73b (presentation initiality).** $\mathcal H_\epsilon$ is initial
+> among admissible support-preserving certificate targets: every such target
+> receives a unique generator-preserving functor
+> $\mathcal H_\epsilon\to C$.
+>
+> **Theorem 73c (minimality obstruction).** If any one of the five generator
+> families is omitted, the target no longer certifies $\epsilon_{\mathbb P}$:
+> omitting windows loses local support; omitting $d_S$ loses $\epsilon_S$;
+> omitting restrictions loses assembly; omitting signed duality loses the
+> functional equation; omitting the lcm tower loses
+> $\widehat{\mathbb Z}/\mathbb Z$.
+
+**Machine verification** (`code/scripts/check-pass73.py` ->
+`artifacts/reports/pass73-h-epsilon-universal-property-check.json`, PASS): finite normal forms are
+generated for conductor shadows through six primes and $k\le3$; pro normal forms are generated
+through $N_{24}$; restriction and signed-dual relations commute; the lcm tower remains cofinal and
+non-ML; admissible certificate targets receive a unique generator-preserving functor; and targets
+omitting any generator family record the expected obstruction.
+
+**Limit of the pass.** The universal property is now proved for the presented certificate
+category.  The next problem is not more finite bookkeeping; it is external realization: construct a
+faithful exact functor from $\mathcal H_\epsilon$ into an established analytic/categorical target,
+or prove why no such faithful realization can preserve all five generator families.

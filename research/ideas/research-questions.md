@@ -26,18 +26,16 @@
   integrality, and contraction force a detached Rosser fixed point back into
   the consistency orbit.
 
-- **(Pass 72 retarget: universal property or embedding of $\mathcal H_\epsilon$)**
-  Pass 72 defined a concrete hybrid exact-category candidate
-  $\mathcal H_\epsilon$ for $\epsilon_{\mathbb P}$: finite conductor
-  restricted-product shadows $(S,k,W_{S,k},L_{S,k},d_S)$ plus the derived
-  pro-Ab lcm kernel tower $K_n=N_n\mathbb Z$.  Hybrid-exactness means exactness
-  on all finite shadows together with the derived quotient
-  $\varprojlim^1K_n\cong\widehat{\mathbb Z}/\mathbb Z$; the duality sends
-  $d_S$ to $-d_S^T$ and does not treat $\widehat{\mathbb Z}/\mathbb Z$ as a
-  Hausdorff LCA quotient.  Open: prove a universal property for
-  $\mathcal H_\epsilon$, or embed it faithfully into LCA sheaves,
-  condensed/solid abelian groups, or an exact pro-category with
-  restricted-product generators.
+- **(Pass 73 retarget: faithful realization of $\mathcal H_\epsilon$)**
+  Pass 73 proved the presentation-level universal property:
+  $\mathcal H_\epsilon$ is initial among admissible support-preserving
+  certificate targets receiving the five generator families needed for
+  $\epsilon_{\mathbb P}$ (finite conductor windows, boundaries, restrictions,
+  signed duality, and the derived pro-Ab lcm tower).  Open: construct a
+  faithful exact realization functor from $\mathcal H_\epsilon$ into LCA
+  sheaves, condensed/solid abelian groups, or an exact pro-category with
+  restricted-product generators; or prove an obstruction showing that no such
+  target can preserve all five generator families simultaneously.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

@@ -662,9 +662,10 @@
   $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite $\mathbb Z/p^n$
   layers and gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The all-prime
   case was formulated in Pass 71 as a pro-restricted finite-shadow law. Pass 72 introduced the
-  hybrid exact-category candidate $\mathcal H_\epsilon$; the remaining [Open] part is to prove a
-  universal property for it or embed it faithfully into an LCA-sheaf, condensed/solid, or exact
-  pro-category framework where the law becomes an honest duality theorem.
+  hybrid exact-category candidate $\mathcal H_\epsilon$, and Pass 73 proved its presentation-level
+  universal property among admissible support-preserving certificate targets. The remaining [Open]
+  part is faithful exact realization inside an LCA-sheaf, condensed/solid, or exact pro-category
+  framework where the law becomes an honest duality theorem.
 - **[Partially resolved (Pass 67)]** **Restricted-product adelic duality for the full spectrum.** Define the
   Loeb-Rosser coefficient for $S=\mathbb P$ as a restricted product of local objects rather than a
   bare product. Prove that the finite-adele coefficient is self-dual under a chosen additive
@@ -677,9 +678,10 @@
   boundary transpose survives conductor normalization. **Remaining obstruction:** fixed finite
   conductor quotients do not see $\widehat{\mathbb Z}/\mathbb Z$, because CRT makes
   $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. Pass 68 supplied the derived
-  pro-Ab quotient, Pass 71 supplied the support-preserving finite-shadow formulation, and Pass 72
-  packaged both layers into $\mathcal H_\epsilon$.  The remaining task is the full categorical
-  duality proof or a faithful embedding into an established exact category.
+  pro-Ab quotient, Pass 71 supplied the support-preserving finite-shadow formulation, Pass 72
+  packaged both layers into $\mathcal H_\epsilon$, and Pass 73 proved presentation-initiality.
+  The remaining task is the full categorical duality proof or a faithful embedding into an
+  established exact category.
 - **[Resolved at algebraic level (Pass 68)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
   Identify the exact category in which the levelwise-zero CRT quotients assemble into the nonzero
   Loeb-Rosser phantom. Candidate formalisms: (a) pro-abelian derived cokernel of
@@ -720,9 +722,12 @@
   $K_n=N_n\mathbb Z$.  A sequence is hybrid-exact when every finite shadow is exact and the pro
   layer supplies $\varprojlim^1K_n\cong\widehat{\mathbb Z}/\mathbb Z$.  Machine verification checks
   finite exactness, restriction composition, conductor bookkeeping, and non-ML pro growth.
-  **Remaining open part:** prove that $\mathcal H_\epsilon$ has the right universal property, or
-  realize it faithfully inside LCA sheaves, condensed/solid abelian groups, or an exact
-  pro-category with restricted-product generators.
+  **Presentation initiality (Pass 73):** $\mathcal H_\epsilon$ is initial among admissible
+  support-preserving certificate targets receiving the five generator families: finite conductor
+  windows, Loeb-Rosser boundaries, restrictions, signed duality, and the derived pro-Ab lcm tower.
+  Omitting any family destroys part of $\epsilon_{\mathbb P}$.  **Remaining open part:** realize
+  $\mathcal H_\epsilon$ faithfully inside LCA sheaves, condensed/solid abelian groups, or an exact
+  pro-category with restricted-product generators, or prove a no-go theorem for such a realization.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."
