@@ -1,0 +1,626 @@
+{
+  "pass_number": 75,
+  "title": "intrinsic projector realization of support and stage data",
+  "scope": "finite generator-family faithfulness test after replacing external tags by internal Boolean support projectors and stage projectors",
+  "candidate_target": {
+    "name": "projector-enriched restricted pro-Ab certificate target",
+    "support_structure": "commuting Boolean idempotents e_p",
+    "stage_structure": "chain projectors q_n with q_n q_m = q_min(n,m)",
+    "limitation": "still a projector-enriched certificate target; the next step is realization of these projectors in LCA sheaves, condensed objects, or an exact pro-category"
+  },
+  "generator_count": 75,
+  "projector_global_injectivity": {
+    "signature_key": "projector_signature",
+    "generator_count": 75,
+    "unique_signature_count": 75,
+    "collision_count": 0,
+    "collisions": [],
+    "injective": true
+  },
+  "plain_global_injectivity": {
+    "signature_key": "plain_signature",
+    "generator_count": 75,
+    "unique_signature_count": 50,
+    "collision_count": 12,
+    "collisions": [
+      {
+        "signature": "('restriction', (1, 0, 0, 0, 0, 0), ())",
+        "names": [
+          "res_1_to_1",
+          "res_2_to_1",
+          "res_3_to_1",
+          "res_4_to_1",
+          "res_5_to_1",
+          "res_6_to_1"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 0, 0, 0, 0), ((-1, 1),))",
+        "names": [
+          "res_2_to_2",
+          "res_3_to_2",
+          "res_4_to_2",
+          "res_5_to_2",
+          "res_6_to_2"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 1, 0, 0, 0), ((-1, 1, 0), (-1, 0, 1)))",
+        "names": [
+          "res_3_to_3",
+          "res_4_to_3",
+          "res_5_to_3",
+          "res_6_to_3"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 1, 1, 0, 0), ((-1, 1, 0, 0), (-1, 0, 1, 0), (-1, 0, 0, 1)))",
+        "names": [
+          "res_4_to_4",
+          "res_5_to_4",
+          "res_6_to_4"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 1, 1, 1, 0), ((-1, 1, 0, 0, 0), (-1, 0, 1, 0, 0), (-1, 0, 0, 1, 0), (-1, 0, 0, 0, 1)))",
+        "names": [
+          "res_5_to_5",
+          "res_6_to_5"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 60)",
+        "names": [
+          "K_5",
+          "K_6"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 2520)",
+        "names": [
+          "K_9",
+          "K_10"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 27720)",
+        "names": [
+          "K_11",
+          "K_12"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 360360)",
+        "names": [
+          "K_13",
+          "K_14",
+          "K_15"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 12252240)",
+        "names": [
+          "K_17",
+          "K_18"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 232792560)",
+        "names": [
+          "K_19",
+          "K_20",
+          "K_21",
+          "K_22"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 5354228880)",
+        "names": [
+          "K_23",
+          "K_24"
+        ]
+      }
+    ],
+    "injective": false
+  },
+  "projector_family_faithfulness": [
+    {
+      "signature_key": "projector_signature",
+      "generator_count": 24,
+      "unique_signature_count": 24,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "derived_pro_lcm_tower",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "projector_signature",
+      "generator_count": 18,
+      "unique_signature_count": 18,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "finite_conductor_windows",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "projector_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "loeb_rosser_boundaries",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "projector_signature",
+      "generator_count": 21,
+      "unique_signature_count": 21,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "restriction_functoriality",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "projector_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "signed_duality",
+      "verdict": "PASS"
+    }
+  ],
+  "support_projector_relations": [
+    {
+      "left_size": 1,
+      "right_size": 1,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 1,
+      "right_size": 2,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 1,
+      "right_size": 3,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 1,
+      "right_size": 4,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 1,
+      "right_size": 5,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 1,
+      "right_size": 6,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 2,
+      "right_size": 1,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 2,
+      "right_size": 2,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 2,
+      "right_size": 3,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 2,
+      "right_size": 4,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 2,
+      "right_size": 5,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 2,
+      "right_size": 6,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 3,
+      "right_size": 1,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 3,
+      "right_size": 2,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 3,
+      "right_size": 3,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 3,
+      "right_size": 4,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 3,
+      "right_size": 5,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 3,
+      "right_size": 6,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 4,
+      "right_size": 1,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 4,
+      "right_size": 2,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 4,
+      "right_size": 3,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 4,
+      "right_size": 4,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 4,
+      "right_size": 5,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 4,
+      "right_size": 6,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 5,
+      "right_size": 1,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 5,
+      "right_size": 2,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 5,
+      "right_size": 3,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 5,
+      "right_size": 4,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 5,
+      "right_size": 5,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 5,
+      "right_size": 6,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 6,
+      "right_size": 1,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 6,
+      "right_size": 2,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 6,
+      "right_size": 3,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 6,
+      "right_size": 4,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 6,
+      "right_size": 5,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "left_size": 6,
+      "right_size": 6,
+      "idempotent_when_equal": true,
+      "meet_is_intersection": true,
+      "commutes": true,
+      "verdict": "PASS"
+    }
+  ],
+  "stage_projector_relations_sample_count": 576,
+  "stage_projector_relations_all_pass": true,
+  "restriction_projector_actions": [
+    {
+      "small": 1,
+      "large": 1,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "large": 2,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "large": 3,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "large": 4,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "large": 5,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "large": 6,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "large": 2,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "large": 3,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "large": 4,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "large": 5,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "large": 6,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "large": 3,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "large": 4,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "large": 5,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "large": 6,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "large": 4,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "large": 5,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "large": 6,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "large": 5,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "large": 6,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 6,
+      "large": 6,
+      "target_meet_source_is_target": true,
+      "source_records_domain": true,
+      "verdict": "PASS"
+    }
+  ],
+  "conclusion": {
+    "projector_realization_faithful_on_five_families": true,
+    "plain_target_still_not_faithful": true,
+    "projector_relations_valid": true,
+    "next_obligation": "interpret the Boolean support and stage projectors as natural structure in an established analytic/categorical target"
+  },
+  "overall": "PASS"
+}

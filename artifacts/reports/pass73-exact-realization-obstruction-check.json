@@ -1,0 +1,151 @@
+{
+  "pass_number": 73,
+  "title": "no-go for exact-category realization of H_epsilon",
+  "thesis": "H_epsilon's free-presentation initiality is real but deflationary. Genuine initiality among support-preserving EXACT targets FAILS: the pro datum lim^1 is a derived-functor value (Roos dimension 1, non-exactness of lim), not a finite (co)limit.  The honest universal home of the finite + pro-object layer is Pro(Ab_fg); the phantom Zhat/Z is recovered as R^1 lim, a delta-functor datum, and becomes an internal Ext^1 only after passing to D^b(Pro(Ab)) or the solid/condensed abelian category.",
+  "pillars": {
+    "A": {
+      "name": "A_lim1_genuine_derived_obstruction",
+      "lcm_tower_values": [
+        1,
+        2,
+        6,
+        12,
+        60,
+        60,
+        420,
+        840,
+        2520,
+        2520,
+        27720,
+        27720,
+        360360,
+        360360,
+        360360,
+        720720,
+        12252240,
+        12252240,
+        232792560,
+        232792560,
+        232792560,
+        232792560,
+        5354228880,
+        5354228880
+      ],
+      "transition_ratios": [
+        2,
+        3,
+        2,
+        5,
+        1,
+        7,
+        2,
+        3,
+        1,
+        11,
+        1,
+        13,
+        1,
+        1,
+        2,
+        17,
+        1,
+        19,
+        1,
+        1,
+        1,
+        23,
+        1
+      ],
+      "image_indices": [
+        1,
+        2,
+        6,
+        12,
+        60,
+        60,
+        420,
+        840,
+        2520,
+        2520,
+        27720,
+        27720,
+        360360,
+        360360,
+        360360,
+        720720,
+        12252240,
+        12252240,
+        232792560,
+        232792560,
+        232792560,
+        232792560,
+        5354228880,
+        5354228880
+      ],
+      "index_unbounded_non_mittag_leffler": true,
+      "finite_crt_cofinal": true,
+      "lim_is_zero": true,
+      "lim1_nonzero": true,
+      "interpretation": "lim^1 = coker(id - shift) != 0 with cofinal finite shadows: a derived pro-invariant, not a finite (co)limit of conductor shadows.",
+      "verdict": "PASS"
+    },
+    "B": {
+      "name": "B_roos_cohomological_dimension_one",
+      "milnor_complex_nonzero_degrees": [
+        0,
+        1
+      ],
+      "lim_s_vanishes_for_s_ge_2": true,
+      "interpretation": "Countable inverse systems have cohomological dimension 1 (Roos 1961); lim^1 is the sole higher datum, a delta-functor value not expressible by a finite (co)limit.",
+      "verdict": "PASS"
+    },
+    "C": {
+      "name": "C_lim_non_exact",
+      "dilation": 6,
+      "radical": 6,
+      "finite_quotients_all_onto": true,
+      "inverse_limit_cokernel_orders": [
+        6,
+        36,
+        216,
+        1296,
+        7776,
+        46656
+      ],
+      "lim_fails_right_exactness": true,
+      "lim1_equals": "Zhat_6 / Z",
+      "interpretation": "lim is left exact, not exact; right-exactness fails by lim^1 = Zhat_m/Z.  'Initial among EXACT targets' cannot transport lim^1.",
+      "verdict": "PASS"
+    },
+    "D": {
+      "name": "D_pro_iso_radical_coarsening",
+      "dilations": [
+        2,
+        4,
+        8,
+        6,
+        12,
+        30
+      ],
+      "pro_isomorphism_classes_by_radical": {
+        "2": [
+          2,
+          4,
+          8
+        ],
+        "6": [
+          6,
+          12
+        ],
+        "30": [
+          30
+        ]
+      },
+      "same_radical_equal_lim1": true,
+      "distinct_radical_distinct_lim1": true,
+      "interpretation": "Pro(Ab_fg) is iso-invariant: x2 ~ x4 ~ x8 collapse (equal lim^1), x6 separates.  H_epsilon records the literal dilation -- strictly finer than pro-iso -- so it is not the initial object; only the underlying pro-object is.",
+      "verdict": "PASS"
+    }
+  },
+  "overall": "PASS"
+}

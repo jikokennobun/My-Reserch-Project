@@ -1377,3 +1377,25 @@ and repeated lcm stages collide after the tags are forgotten.  Thus Pass 74
 gives the first concrete faithful realization test, but the next task is to
 justify the tags intrinsically inside an LCA-sheaf, condensed/solid, or
 canonical exact pro-category framework.
+
+## Projector-enriched restricted pro-Ab realization (Pass 75)
+
+The **projector-enriched restricted pro-Ab realization** replaces the external
+support and stage tags of Pass 74 by internal projectors.  It has:
+
+1. commuting Boolean support idempotents $e_p$ for primes, with
+   $$e_S=\prod_{p\in S}e_p,\qquad e_Se_T=e_{S\cap T};$$
+2. stage projectors $q_n$ for the lcm tower, with
+   $$q_nq_m=q_{\min(n,m)}.$$
+
+The realization
+$$\rho_{\mathrm{proj}}:\mathcal H_\epsilon\to\mathcal R_\epsilon^{\mathrm{proj}}$$
+sends finite conductor windows, boundaries, restrictions, signed duals, and
+lcm stages to the same finite/pro abelian data as $\rho_{\mathrm{tag}}$, but
+source support and stage are now recovered from the action of $e_S$ and $q_n$.
+
+Pass 75 verifies generator faithfulness after this replacement on the same
+finite/pro window as Pass 74.  The plain target that forgets both projector
+actions remains non-faithful, so the projectors are not optional.  The remaining
+task is to realize these idempotents as natural support and stage structure in
+an established LCA-sheaf, condensed/solid, or exact pro-category setting.

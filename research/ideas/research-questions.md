@@ -26,15 +26,15 @@
   integrality, and contraction force a detached Rosser fixed point back into
   the consistency orbit.
 
-- **(Pass 74 retarget: intrinsic support/stage tags for $\mathcal R_\epsilon$)**
-  Pass 74 constructed a faithful tagged restricted pro-Ab realization
-  $\rho_{\mathrm{tag}}:\mathcal H_\epsilon\to\mathcal R_\epsilon$ on the five
-  generator families.  The test also showed that the plain tag-forgetting
-  target is not faithful: restriction source support and repeated lcm stages
-  collide.  Open: internalize those tags as genuine support/stage structure in
-  LCA sheaves, condensed/solid abelian groups, or a canonical exact
-  pro-category; or prove that any tag-free realization must identify
-  generators needed to certify $\epsilon_{\mathbb P}$.
+- **(Pass 75 retarget: natural realization of support and stage projectors)**
+  Pass 75 replaced the explicit tags of $\mathcal R_\epsilon$ by internal
+  projectors: Boolean support idempotents $e_p$ with
+  $e_Se_T=e_{S\cap T}$ and lcm-stage projectors $q_n$ with
+  $q_nq_m=q_{\min(n,m)}$.  The projector-enriched realization remains faithful
+  on the five generator families, while the plain target remains non-faithful.
+  Open: realize $e_p$ and $q_n$ as natural idempotent/support and stage
+  structure in LCA sheaves, condensed/solid abelian groups, or a derived exact
+  pro-category carrying $\varprojlim^1$.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

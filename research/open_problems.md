@@ -663,10 +663,11 @@
   layers and gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The all-prime
   case was formulated in Pass 71 as a pro-restricted finite-shadow law. Pass 72 introduced the
   hybrid exact-category candidate $\mathcal H_\epsilon$, Pass 73 proved its presentation-level
-  universal property among admissible support-preserving certificate targets, and Pass 74 built a
-  faithful tagged restricted pro-Ab realization on the five generator families. The remaining
-  [Open] part is to internalize the support/stage tags inside an LCA-sheaf, condensed/solid, or
-  canonical exact pro-category framework where the law becomes an honest duality theorem.
+  universal property among admissible support-preserving certificate targets, Pass 74 built a
+  faithful tagged restricted pro-Ab realization on the five generator families, and Pass 75
+  replaced those tags by internal support/stage projectors. The remaining [Open] part is to realize
+  those projectors inside an LCA-sheaf, condensed/solid, or derived exact pro-category framework
+  where the law becomes an honest duality theorem.
 - **[Partially resolved (Pass 67)]** **Restricted-product adelic duality for the full spectrum.** Define the
   Loeb-Rosser coefficient for $S=\mathbb P$ as a restricted product of local objects rather than a
   bare product. Prove that the finite-adele coefficient is self-dual under a chosen additive
@@ -681,8 +682,9 @@
   $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. Pass 68 supplied the derived
   pro-Ab quotient, Pass 71 supplied the support-preserving finite-shadow formulation, Pass 72
   packaged both layers into $\mathcal H_\epsilon$, Pass 73 proved presentation-initiality, and
-  Pass 74 verified a faithful tagged pro-Ab realization.  The remaining task is the full
-  categorical duality proof or an intrinsic version of the tags in an established exact category.
+  Pass 74 verified a faithful tagged pro-Ab realization, and Pass 75 internalized the tags as
+  projectors.  The remaining task is the full categorical duality proof or a natural realization of
+  those projectors in an established derived/pro exact category.
 - **[Resolved at algebraic level (Pass 68)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
   Identify the exact category in which the levelwise-zero CRT quotients assemble into the nonzero
   Loeb-Rosser phantom. Candidate formalisms: (a) pro-abelian derived cokernel of
@@ -733,9 +735,13 @@
   \times\mathbf{Pro}_{\mathrm{tag}}(\mathbf{Ab})$ is faithful on the five generator families in
   the checked finite/pro window, while the corresponding tag-forgetting target is not faithful
   because restriction source support and repeated lcm stages collide.  **Remaining open part:**
-  internalize these tags as genuine support/stage structure in LCA sheaves, condensed/solid
-  abelian groups, or a canonical exact pro-category, or prove a no-go theorem for tag-free faithful
-  realization.
+  **Projector refinement (Pass 75):** explicit tags can be replaced by internal Boolean support
+  projectors $e_p$ and lcm-stage projectors $q_n$, with $e_Se_T=e_{S\cap T}$ and
+  $q_nq_m=q_{\min(n,m)}$; the projector-enriched realization is faithful on the checked generator
+  families.  The companion exact-obstruction report records that an ordinary exact 1-category
+  target still cannot carry the $\varprojlim^1$ phantom as a finite exact-cone value.  **Remaining
+  open part:** realize $e_p$ and $q_n$ naturally in LCA sheaves, condensed/solid abelian groups, or
+  a derived exact pro-category.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

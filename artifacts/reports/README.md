@@ -37,6 +37,16 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass75-intrinsic-projector-realization-check.json`: verifies the Pass-75
+  projector-enriched realization. It replaces explicit support/stage tags by
+  Boolean support idempotents and lcm-stage projectors, checks generator-family
+  faithfulness, and verifies the projector relations.
+
+- `pass73-exact-realization-obstruction-check.json`: companion no-go check
+  integrated during Pass 75. It records why ordinary exact 1-category
+  initiality is too strong for $\mathcal H_\epsilon$: the
+  $\varprojlim^1$ phantom is derived pro-data, not a finite exact-cone value.
+
 - `pass74-tagged-proab-realization-check.json`: verifies the Pass-74 tagged
   restricted pro-Ab realization test. It checks that tagged signatures are
   faithful on finite conductor windows, Loeb-Rosser boundaries, restrictions,

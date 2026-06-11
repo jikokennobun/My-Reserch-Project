@@ -1,5 +1,9 @@
 # Research Log
 
+## 2026-06-11 (Autonomous discussion Pass 75)
+
+- Pass 75 replaced the explicit support/stage tags of Pass 74 by internal projector structure: Boolean support idempotents $e_p$ with $e_Se_T=e_{S\cap T}$ and lcm-stage projectors $q_n$ with $q_nq_m=q_{\min(n,m)}$.  Machine-verified `code/scripts/check-pass75.py` -> `artifacts/reports/pass75-intrinsic-projector-realization-check.json` (overall PASS): 75 projector-enriched generators through six primes, $k\le3$, and $N_{24}$ have zero collisions, the plain target still has 12 collisions, and all support/stage projector relations pass.  Integrated the previously untracked companion no-go report `code/scripts/check-pass73-exact-obstruction.py` -> `artifacts/reports/pass73-exact-realization-obstruction-check.json` (overall PASS) as support for the claim that ordinary exact 1-category realization is insufficient for the $\varprojlim^1$ phantom.  The remaining residue is to realize these projectors naturally in LCA sheaves, condensed/solid groups, or a derived exact pro-category.
+
 ## 2026-06-11 (Autonomous discussion Pass 74)
 
 - Pass 74 built the first concrete external realization test for $\mathcal H_\epsilon$: a tagged restricted pro-Ab certificate target $\mathcal R_\epsilon=\mathbf{Pro}^{\mathrm{rp}}_{\mathrm{tag}}(\mathbf{Ab}_{\mathrm{fin}})\times\mathbf{Pro}_{\mathrm{tag}}(\mathbf{Ab})$.  Machine-verified `code/scripts/check-pass74.py` -> `artifacts/reports/pass74-tagged-proab-realization-check.json` (overall PASS): 75 tagged generators through six primes, $k\le3$, and $N_{24}$ have zero collisions across the five generator families, while the plain tag-forgetting target has collisions.  The remaining residue is to internalize the support/stage tags in a natural LCA-sheaf, condensed/solid, or exact pro-category target, or prove a tag-free no-go theorem.

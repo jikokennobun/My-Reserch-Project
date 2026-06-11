@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 75
+- Current pass: 76
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -8280,3 +8280,78 @@ Next step:
 Pass 75 should try to make the tags intrinsic.  The concrete test is to replace explicit support
 tags by idempotent support projectors or a finite-prime stratification and check whether the
 result remains faithful without external labels.
+
+---
+
+### Pass 75 - 2026-06-11 JST
+
+Focus:
+Replace the external tags in the Pass-74 realization by internal structure.
+The concrete test is whether Boolean support projectors and lcm-stage
+projectors recover the same faithfulness without textual support/stage labels.
+
+Proposer:
+Define a projector-enriched realization
+$$\rho_{\mathrm{proj}}:\mathcal H_\epsilon\to
+\mathcal R_\epsilon^{\mathrm{proj}}.$$
+The target has commuting Boolean support idempotents $e_p$ and stage projectors
+$q_n$, satisfying
+$$e_Se_T=e_{S\cap T},\qquad q_nq_m=q_{\min(n,m)}.$$
+Finite conductor windows, boundaries, restrictions, signed duals, and lcm
+stages are sent to finite/pro abelian data equipped with these projectors.
+Restriction source support is now recovered from the pair $(e_{S'},e_S)$, and
+repeated lcm stages are separated by $q_n$ even when $N_n=N_{n+1}$.
+
+Skeptic:
+This removes external labels, but it still does not prove an LCA-sheaf or
+condensed realization.  The projectors are internal to a certificate target.
+They must still be realized as actual support or stratification idempotents in
+an established category.  The previously untracked Pass-73 companion no-go
+checker also matters here: ordinary exact 1-category realization is too weak,
+because $\varprojlim^1$ is a derived pro datum, not a finite exact-cone value.
+So the next target must be projector-enriched and derived/pro-aware.
+
+Formalist:
+> **Theorem 75a (projector faithfulness).** On the checked finite/pro window,
+> $\rho_{\mathrm{proj}}$ is faithful on all five generator families.
+>
+> **Theorem 75b (projector algebra).** The support projectors form the finite
+> Boolean intersection algebra $e_Se_T=e_{S\cap T}$, and the stage projectors
+> form the chain algebra $q_nq_m=q_{\min(n,m)}$.
+>
+> **Theorem 75c (ordinary exact-target obstruction).** The companion exact
+> obstruction shows that $\mathcal H_\epsilon$ cannot be faithfully realized as
+> an ordinary exact 1-category target carrying only finite exact cones; the
+> $\widehat{\mathbb Z}/\mathbb Z$ term is recovered through
+> $R^1\varprojlim$.
+
+Machine-verified `code/scripts/check-pass75.py` ->
+`artifacts/reports/pass75-intrinsic-projector-realization-check.json` (overall PASS): 75
+projector-enriched generators are tested through six primes, conductors $k\le3$, and lcm stages
+through $N_{24}$; projector signatures have zero collisions; the plain target still has 12
+collisions; Boolean support-projector relations pass; 576 stage-projector relations pass; and
+restriction projector actions recover source/target support.  The companion no-go checker
+`code/scripts/check-pass73-exact-obstruction.py` ->
+`artifacts/reports/pass73-exact-realization-obstruction-check.json` also passes and is integrated
+as supporting evidence.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-75 entry; State counter
+  $75\to76$.
+- `records/logs/research-log.md`: Pass-75 one-line entry.
+- `research/definitions.md`: projector-enriched restricted pro-Ab realization.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-75 section (Thms 75a/75b/75c).
+- `research/open_problems.md` and `research/ideas/research-questions.md`: retargeted the residue
+  to natural realization of $e_p$ and $q_n$ in an established derived/pro exact target.
+- `code/scripts/check-pass75.py`,
+  `artifacts/reports/pass75-intrinsic-projector-realization-check.json`: new.
+- `code/scripts/check-pass73-exact-obstruction.py`,
+  `artifacts/reports/pass73-exact-realization-obstruction-check.json`: integrated companion
+  no-go artifact.
+- `artifacts/pdf/intrinsic-projector-realization-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 76 should construct the first natural model for the projectors: interpret $e_p$ as clopen or
+locally closed support projectors on a finite-prime stratified site, interpret $q_n$ as a pro-stage
+filtration, and test whether $\rho_{\mathrm{proj}}$ factors through that model.

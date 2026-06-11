@@ -3710,3 +3710,50 @@ collisions and repeated lcm-stage collisions.
 **Limit of the pass.** The first concrete realization succeeds only with tags.  The remaining
 problem is to make those tags intrinsic: either construct them as support/stage structure in an
 established exact target, or prove a no-go theorem for tag-free faithful realization.
+
+## Pass 75 - Intrinsic support and stage projectors
+
+Pass 75 replaces the explicit support/stage tags from Pass 74 by internal
+projector structure.  The new target
+$$\mathcal R_\epsilon^{\mathrm{proj}}$$
+is still a certificate target, but the formerly external labels are encoded by
+endomorphisms:
+
+1. Boolean support idempotents $e_p$ with
+   $$e_Se_T=e_{S\cap T};$$
+2. lcm-stage projectors $q_n$ with
+   $$q_nq_m=q_{\min(n,m)}.$$
+
+The realization
+$$\rho_{\mathrm{proj}}:\mathcal H_\epsilon\to\mathcal R_\epsilon^{\mathrm{proj}}$$
+sends finite windows, boundaries, restrictions, signed duals, and pro stages to
+finite/pro abelian data equipped with these projector actions.  Restriction
+source support is recovered from the pair $(e_{S'},e_S)$ rather than from a
+textual source tag; repeated lcm stages are separated by $q_n$ even when
+$N_n=N_{n+1}$.
+
+> **Theorem 75a (projector faithfulness).** On the checked finite/pro window,
+> $\rho_{\mathrm{proj}}$ is faithful on all five generator families.
+>
+> **Theorem 75b (projector algebra).** The support projectors form the finite
+> Boolean intersection algebra $e_Se_T=e_{S\cap T}$, and the stage projectors
+> form the chain algebra $q_nq_m=q_{\min(n,m)}$.
+>
+> **Theorem 75c (plain exact-target warning).** The companion exact-obstruction
+> check shows that an ordinary exact 1-category target is still insufficient:
+> the $\varprojlim^1$ phantom is derived data, not a finite exact-cone value.
+> Thus the projectors must live in a derived/pro or similarly enriched exact
+> setting.
+
+**Machine verification** (`code/scripts/check-pass75.py` ->
+`artifacts/reports/pass75-intrinsic-projector-realization-check.json`, PASS): 75 generators are
+tested through six primes, $k\le3$, and $N_{24}$; projector-enriched signatures have zero
+collisions, while the plain target still has 12; Boolean support-projector relations pass; 576
+stage-projector relations pass; and restriction projectors recover source/target support.
+The previously untracked companion `code/scripts/check-pass73-exact-obstruction.py` ->
+`artifacts/reports/pass73-exact-realization-obstruction-check.json` is integrated as a supporting
+no-go check for ordinary exact-category initiality.
+
+**Limit of the pass.** Tags are now internal projector structure.  The remaining problem is to
+interpret $e_p$ and $q_n$ naturally in an established target: clopen/idempotent support in an
+LCA-sheaf or condensed setting, and a derived pro-stage filtration carrying $\varprojlim^1$.
