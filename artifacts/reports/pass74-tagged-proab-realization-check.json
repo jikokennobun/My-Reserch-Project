@@ -1,0 +1,474 @@
+{
+  "pass_number": 74,
+  "title": "tagged restricted pro-Ab realization test",
+  "scope": "finite generator-family faithfulness test for a tagged pro-Ab certificate target with restricted-product generators",
+  "candidate_target": {
+    "name": "Pro_tag^rp(Ab_fin) x Pro_tag(Ab)",
+    "description": "finite conductor windows, boundaries, restrictions, signed duals, and lcm tower stages are realized as tagged finite abelian group data and tagged pro-system stages",
+    "limitation": "faithfulness uses support and stage tags; this is not yet a tag-free LCA-sheaf or condensed realization"
+  },
+  "generator_count": 75,
+  "tagged_global_injectivity": {
+    "signature_key": "tagged_signature",
+    "generator_count": 75,
+    "unique_signature_count": 75,
+    "collision_count": 0,
+    "collisions": [],
+    "injective": true
+  },
+  "plain_global_injectivity": {
+    "signature_key": "plain_signature",
+    "generator_count": 75,
+    "unique_signature_count": 50,
+    "collision_count": 12,
+    "collisions": [
+      {
+        "signature": "('restriction', 1, ())",
+        "names": [
+          "res_1_to_1",
+          "res_2_to_1",
+          "res_3_to_1",
+          "res_4_to_1",
+          "res_5_to_1",
+          "res_6_to_1"
+        ]
+      },
+      {
+        "signature": "('restriction', 2, ((-1, 1),))",
+        "names": [
+          "res_2_to_2",
+          "res_3_to_2",
+          "res_4_to_2",
+          "res_5_to_2",
+          "res_6_to_2"
+        ]
+      },
+      {
+        "signature": "('restriction', 3, ((-1, 1, 0), (-1, 0, 1)))",
+        "names": [
+          "res_3_to_3",
+          "res_4_to_3",
+          "res_5_to_3",
+          "res_6_to_3"
+        ]
+      },
+      {
+        "signature": "('restriction', 4, ((-1, 1, 0, 0), (-1, 0, 1, 0), (-1, 0, 0, 1)))",
+        "names": [
+          "res_4_to_4",
+          "res_5_to_4",
+          "res_6_to_4"
+        ]
+      },
+      {
+        "signature": "('restriction', 5, ((-1, 1, 0, 0, 0), (-1, 0, 1, 0, 0), (-1, 0, 0, 1, 0), (-1, 0, 0, 0, 1)))",
+        "names": [
+          "res_5_to_5",
+          "res_6_to_5"
+        ]
+      },
+      {
+        "signature": "('pro_lcm_stage', 60)",
+        "names": [
+          "K_5",
+          "K_6"
+        ]
+      },
+      {
+        "signature": "('pro_lcm_stage', 2520)",
+        "names": [
+          "K_9",
+          "K_10"
+        ]
+      },
+      {
+        "signature": "('pro_lcm_stage', 27720)",
+        "names": [
+          "K_11",
+          "K_12"
+        ]
+      },
+      {
+        "signature": "('pro_lcm_stage', 360360)",
+        "names": [
+          "K_13",
+          "K_14",
+          "K_15"
+        ]
+      },
+      {
+        "signature": "('pro_lcm_stage', 12252240)",
+        "names": [
+          "K_17",
+          "K_18"
+        ]
+      },
+      {
+        "signature": "('pro_lcm_stage', 232792560)",
+        "names": [
+          "K_19",
+          "K_20",
+          "K_21",
+          "K_22"
+        ]
+      },
+      {
+        "signature": "('pro_lcm_stage', 5354228880)",
+        "names": [
+          "K_23",
+          "K_24"
+        ]
+      }
+    ],
+    "injective": false
+  },
+  "tagged_family_faithfulness": [
+    {
+      "signature_key": "tagged_signature",
+      "generator_count": 24,
+      "unique_signature_count": 24,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "derived_pro_lcm_tower",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "tagged_signature",
+      "generator_count": 18,
+      "unique_signature_count": 18,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "finite_conductor_windows",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "tagged_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "loeb_rosser_boundaries",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "tagged_signature",
+      "generator_count": 21,
+      "unique_signature_count": 21,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "restriction_functoriality",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "tagged_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "signed_duality",
+      "verdict": "PASS"
+    }
+  ],
+  "plain_family_faithfulness": [
+    {
+      "signature_key": "plain_signature",
+      "generator_count": 24,
+      "unique_signature_count": 14,
+      "collision_count": 7,
+      "collisions": [
+        {
+          "signature": "('pro_lcm_stage', 60)",
+          "names": [
+            "K_5",
+            "K_6"
+          ]
+        },
+        {
+          "signature": "('pro_lcm_stage', 2520)",
+          "names": [
+            "K_9",
+            "K_10"
+          ]
+        },
+        {
+          "signature": "('pro_lcm_stage', 27720)",
+          "names": [
+            "K_11",
+            "K_12"
+          ]
+        },
+        {
+          "signature": "('pro_lcm_stage', 360360)",
+          "names": [
+            "K_13",
+            "K_14",
+            "K_15"
+          ]
+        },
+        {
+          "signature": "('pro_lcm_stage', 12252240)",
+          "names": [
+            "K_17",
+            "K_18"
+          ]
+        },
+        {
+          "signature": "('pro_lcm_stage', 232792560)",
+          "names": [
+            "K_19",
+            "K_20",
+            "K_21",
+            "K_22"
+          ]
+        },
+        {
+          "signature": "('pro_lcm_stage', 5354228880)",
+          "names": [
+            "K_23",
+            "K_24"
+          ]
+        }
+      ],
+      "injective": false,
+      "family": "derived_pro_lcm_tower",
+      "verdict": "FAIL"
+    },
+    {
+      "signature_key": "plain_signature",
+      "generator_count": 18,
+      "unique_signature_count": 18,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "finite_conductor_windows",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "plain_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "loeb_rosser_boundaries",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "plain_signature",
+      "generator_count": 21,
+      "unique_signature_count": 6,
+      "collision_count": 5,
+      "collisions": [
+        {
+          "signature": "('restriction', 1, ())",
+          "names": [
+            "res_1_to_1",
+            "res_2_to_1",
+            "res_3_to_1",
+            "res_4_to_1",
+            "res_5_to_1",
+            "res_6_to_1"
+          ]
+        },
+        {
+          "signature": "('restriction', 2, ((-1, 1),))",
+          "names": [
+            "res_2_to_2",
+            "res_3_to_2",
+            "res_4_to_2",
+            "res_5_to_2",
+            "res_6_to_2"
+          ]
+        },
+        {
+          "signature": "('restriction', 3, ((-1, 1, 0), (-1, 0, 1)))",
+          "names": [
+            "res_3_to_3",
+            "res_4_to_3",
+            "res_5_to_3",
+            "res_6_to_3"
+          ]
+        },
+        {
+          "signature": "('restriction', 4, ((-1, 1, 0, 0), (-1, 0, 1, 0), (-1, 0, 0, 1)))",
+          "names": [
+            "res_4_to_4",
+            "res_5_to_4",
+            "res_6_to_4"
+          ]
+        },
+        {
+          "signature": "('restriction', 5, ((-1, 1, 0, 0, 0), (-1, 0, 1, 0, 0), (-1, 0, 0, 1, 0), (-1, 0, 0, 0, 1)))",
+          "names": [
+            "res_5_to_5",
+            "res_6_to_5"
+          ]
+        }
+      ],
+      "injective": false,
+      "family": "restriction_functoriality",
+      "verdict": "FAIL"
+    },
+    {
+      "signature_key": "plain_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "signed_duality",
+      "verdict": "PASS"
+    }
+  ],
+  "boundary_relations": [
+    {
+      "size": 1,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 2,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 3,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 4,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 5,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    },
+    {
+      "size": 6,
+      "double_dual_returns_boundary": true,
+      "verdict": "PASS"
+    }
+  ],
+  "pro_growth": {
+    "max_n": 24,
+    "lcm_values": [
+      1,
+      2,
+      6,
+      12,
+      60,
+      60,
+      420,
+      840,
+      2520,
+      2520,
+      27720,
+      27720,
+      360360,
+      360360,
+      360360,
+      720720,
+      12252240,
+      12252240,
+      232792560,
+      232792560,
+      232792560,
+      232792560,
+      5354228880,
+      5354228880
+    ],
+    "transition_ratios": [
+      2,
+      3,
+      2,
+      5,
+      1,
+      7,
+      2,
+      3,
+      1,
+      11,
+      1,
+      13,
+      1,
+      1,
+      2,
+      17,
+      1,
+      19,
+      1,
+      1,
+      1,
+      23,
+      1
+    ],
+    "plain_stage_repetitions": [
+      [
+        5,
+        6,
+        60
+      ],
+      [
+        9,
+        10,
+        2520
+      ],
+      [
+        11,
+        12,
+        27720
+      ],
+      [
+        13,
+        14,
+        360360
+      ],
+      [
+        14,
+        15,
+        360360
+      ],
+      [
+        17,
+        18,
+        12252240
+      ],
+      [
+        19,
+        20,
+        232792560
+      ],
+      [
+        20,
+        21,
+        232792560
+      ],
+      [
+        21,
+        22,
+        232792560
+      ],
+      [
+        23,
+        24,
+        5354228880
+      ]
+    ],
+    "has_plain_stage_collisions": true,
+    "non_mittag_leffler_growth_witness": true
+  },
+  "conclusion": {
+    "tagged_realization_faithful_on_five_families": true,
+    "plain_untagged_target_not_faithful": true,
+    "next_obligation": "remove or justify the support/stage tags by embedding them in a natural LCA-sheaf, condensed, or exact pro-category target"
+  },
+  "overall": "PASS"
+}

@@ -1346,3 +1346,34 @@ support-preserving local duality; without $d_S$ there is no $\epsilon_S$;
 without restrictions the finite shadows do not assemble; without signed
 duality the functional equation is untyped; without the lcm tower finite CRT
 levels remain zero and $\widehat{\mathbb Z}/\mathbb Z$ is lost.
+
+## Tagged restricted pro-Ab realization (Pass 74)
+
+The **tagged restricted pro-Ab realization target**
+$$\mathcal R_\epsilon:=\mathbf{Pro}^{\mathrm{rp}}_{\mathrm{tag}}(\mathbf{Ab}_{\mathrm{fin}})
+\times\mathbf{Pro}_{\mathrm{tag}}(\mathbf{Ab})$$
+is a concrete certificate category for $\mathcal H_\epsilon$.  It realizes the
+five generator families as tagged finite/pro abelian data:
+
+1. $(S,k,W_{S,k},L_{S,k})$ is sent to the finite abelian group presentation
+   with support tag $S$, conductor tag $k$, elementary divisors
+   $(p,2k)_{p\in S}$, and lattice divisors $(p,k)_{p\in S}$;
+2. $d_S$ is sent to its integer boundary matrix together with source and
+   target support tags;
+3. each restriction $S\subseteq S'$ is sent to the corresponding tagged
+   coordinate-restriction matrix;
+4. signed duality is sent to the tagged matrix $-d_S^T$;
+5. $K_n=N_n\mathbb Z$ is sent to the tagged pro-stage $(n,N_n)$.
+
+The realization functor
+$$\rho_{\mathrm{tag}}:\mathcal H_\epsilon\to\mathcal R_\epsilon$$
+is **generator-faithful** when these tagged signatures distinguish all five
+generator families.  Pass 74 verifies this on finite shadows through six primes,
+conductors $k\le3$, and lcm stages through $N_{24}$.
+
+The **tag-forgetting obstruction** is that the corresponding plain pro-Ab
+target is not faithful on the same samples: source support for restrictions
+and repeated lcm stages collide after the tags are forgotten.  Thus Pass 74
+gives the first concrete faithful realization test, but the next task is to
+justify the tags intrinsically inside an LCA-sheaf, condensed/solid, or
+canonical exact pro-category framework.

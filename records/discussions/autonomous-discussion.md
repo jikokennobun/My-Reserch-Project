@@ -6,7 +6,7 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 74
+- Current pass: 75
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -8205,3 +8205,78 @@ Next step:
 Pass 74 should attempt the first external realization test: define a candidate functor from
 $\mathcal H_\epsilon$ to a concrete exact pro-category with restricted-product generators, and
 check whether it is faithful on the five generator families.
+
+---
+
+### Pass 74 - 2026-06-11 JST
+
+Focus:
+Test a concrete external realization of $\mathcal H_\epsilon$.  The candidate
+is a tagged restricted pro-Ab target.  The point is to see whether the five
+generator families are faithfully represented, and whether the tags are
+actually necessary.
+
+Proposer:
+Define
+$$\mathcal R_\epsilon:=
+\mathbf{Pro}^{\mathrm{rp}}_{\mathrm{tag}}(\mathbf{Ab}_{\mathrm{fin}})
+\times\mathbf{Pro}_{\mathrm{tag}}(\mathbf{Ab}).$$
+The realization functor
+$$\rho_{\mathrm{tag}}:\mathcal H_\epsilon\to\mathcal R_\epsilon$$
+sends finite conductor windows to tagged finite abelian group presentations
+with support tag $S$, conductor tag $k$, elementary divisors $(p,2k)$, and
+lattice divisors $(p,k)$; sends $d_S$ to its tagged integer matrix; sends
+restrictions to tagged coordinate-restriction matrices; sends signed duality to
+$-d_S^T$; and sends $K_n=N_n\mathbb Z$ to the tagged pro-stage $(n,N_n)$.
+This is a concrete faithful realization on the certificate data, provided the
+tags are retained.
+
+Skeptic:
+The tags are not cosmetic.  If source support and pro-stage tags are forgotten,
+plain pro-Ab data identify different generators.  For example, restrictions
+with different source support can have the same visible target matrix, and lcm
+stages can repeat as finite abelian groups when $N_n=N_{n+1}$.  Thus Pass 74
+does not yet give a tag-free natural LCA or condensed realization.  It proves
+the first external realization only in a tagged certificate target, and the next
+question is whether these tags can be internalized as genuine support/stage
+structure.
+
+Formalist:
+> **Theorem 74a (tagged generator faithfulness).** On the checked finite/pro
+> window, $\rho_{\mathrm{tag}}$ is faithful on all five generator families:
+> finite conductor windows, Loeb-Rosser boundaries, restrictions, signed
+> duality, and lcm pro-stages.
+>
+> **Theorem 74b (tag-forgetting obstruction).** The corresponding plain
+> untagged pro-Ab target is not faithful: restriction source support and
+> repeated lcm stages collide.
+>
+> **Corollary 74c (intrinsic-tag constraint).** Any natural exact realization
+> of $\mathcal H_\epsilon$ must internalize support and stage tags as structure,
+> rather than discard them.
+
+Machine-verified `code/scripts/check-pass74.py` ->
+`artifacts/reports/pass74-tagged-proab-realization-check.json` (overall PASS): 75 generators are
+tested through six primes, conductors $k\le3$, and lcm stages through $N_{24}$; tagged global
+injectivity has zero collisions; tagged family faithfulness passes for all five generator
+families; the plain tag-forgetting comparison has 12 collisions, including restriction-source
+collisions and repeated lcm-stage collisions.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-74 entry; State counter
+  $74\to75$.
+- `records/logs/research-log.md`: Pass-74 one-line entry.
+- `research/definitions.md`: tagged restricted pro-Ab realization target, realization functor,
+  generator faithfulness, and tag-forgetting obstruction.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-74 section (Thms 74a/74b and Cor 74c).
+- `research/open_problems.md` and `research/ideas/research-questions.md`: retargeted the residue
+  to intrinsic support/stage tags or a tag-free no-go theorem.
+- `code/scripts/check-pass74.py`,
+  `artifacts/reports/pass74-tagged-proab-realization-check.json`: new.
+- `artifacts/pdf/tagged-proab-realization-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 75 should try to make the tags intrinsic.  The concrete test is to replace explicit support
+tags by idempotent support projectors or a finite-prime stratification and check whether the
+result remains faithful without external labels.

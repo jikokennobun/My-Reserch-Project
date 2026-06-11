@@ -3665,3 +3665,48 @@ omitting any generator family record the expected obstruction.
 category.  The next problem is not more finite bookkeeping; it is external realization: construct a
 faithful exact functor from $\mathcal H_\epsilon$ into an established analytic/categorical target,
 or prove why no such faithful realization can preserve all five generator families.
+
+## Pass 74 - Tagged restricted pro-Ab realization test
+
+Pass 74 performs the first external realization test.  The target is not yet an
+LCA-sheaf or condensed category; it is the concrete tagged restricted pro-Ab
+certificate category
+$$\mathcal R_\epsilon
+=\mathbf{Pro}^{\mathrm{rp}}_{\mathrm{tag}}(\mathbf{Ab}_{\mathrm{fin}})
+\times\mathbf{Pro}_{\mathrm{tag}}(\mathbf{Ab}).$$
+The realization functor
+$$\rho_{\mathrm{tag}}:\mathcal H_\epsilon\to\mathcal R_\epsilon$$
+sends:
+
+1. $(S,k,W_{S,k},L_{S,k})$ to finite abelian group data with support tag $S$,
+   conductor tag $k$, and elementary/lattice divisor data;
+2. $d_S$ to its tagged integer matrix;
+3. each restriction $S\subseteq S'$ to a tagged coordinate-restriction matrix;
+4. signed duality to the tagged matrix $-d_S^T$;
+5. $K_n=N_n\mathbb Z$ to the tagged pro-stage $(n,N_n)$.
+
+> **Theorem 74a (tagged generator faithfulness).** On the checked finite
+> window, $\rho_{\mathrm{tag}}$ is faithful on all five generator families:
+> no two tagged generator signatures collide.
+>
+> **Theorem 74b (tag-forgetting obstruction).** The same realization is not
+> faithful after forgetting source/support/stage tags.  Restriction maps with
+> different source support but the same visible target matrix collide, and lcm
+> stages with repeated $N_n$ collide.  Therefore a plain untagged pro-Ab target
+> cannot be the desired faithful realization.
+>
+> **Corollary 74c (next exact target constraint).** Any natural LCA-sheaf,
+> condensed/solid, or exact pro-category realization must internalize the
+> support and stage tags as mathematical structure, rather than discard them as
+> bookkeeping.
+
+**Machine verification** (`code/scripts/check-pass74.py` ->
+`artifacts/reports/pass74-tagged-proab-realization-check.json`, PASS): 75 generators are tested
+through six primes, $k\le3$, and $N_{24}$; tagged global injectivity has zero collisions; tagged
+family faithfulness passes for finite conductor windows, boundaries, restrictions, signed duality,
+and the lcm tower; the plain untagged comparison has collisions, including restriction-source
+collisions and repeated lcm-stage collisions.
+
+**Limit of the pass.** The first concrete realization succeeds only with tags.  The remaining
+problem is to make those tags intrinsic: either construct them as support/stage structure in an
+established exact target, or prove a no-go theorem for tag-free faithful realization.

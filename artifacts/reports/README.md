@@ -37,6 +37,12 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass74-tagged-proab-realization-check.json`: verifies the Pass-74 tagged
+  restricted pro-Ab realization test. It checks that tagged signatures are
+  faithful on finite conductor windows, Loeb-Rosser boundaries, restrictions,
+  signed duality, and lcm pro-stages, and records collisions after forgetting
+  support/stage tags.
+
 - `pass73-h-epsilon-universal-property-check.json`: verifies the Pass-73
   presentation-level universal property for $\mathcal H_\epsilon$. It checks
   finite/pro normal forms, restriction and signed-dual relations, admissible

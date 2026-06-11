@@ -26,16 +26,15 @@
   integrality, and contraction force a detached Rosser fixed point back into
   the consistency orbit.
 
-- **(Pass 73 retarget: faithful realization of $\mathcal H_\epsilon$)**
-  Pass 73 proved the presentation-level universal property:
-  $\mathcal H_\epsilon$ is initial among admissible support-preserving
-  certificate targets receiving the five generator families needed for
-  $\epsilon_{\mathbb P}$ (finite conductor windows, boundaries, restrictions,
-  signed duality, and the derived pro-Ab lcm tower).  Open: construct a
-  faithful exact realization functor from $\mathcal H_\epsilon$ into LCA
-  sheaves, condensed/solid abelian groups, or an exact pro-category with
-  restricted-product generators; or prove an obstruction showing that no such
-  target can preserve all five generator families simultaneously.
+- **(Pass 74 retarget: intrinsic support/stage tags for $\mathcal R_\epsilon$)**
+  Pass 74 constructed a faithful tagged restricted pro-Ab realization
+  $\rho_{\mathrm{tag}}:\mathcal H_\epsilon\to\mathcal R_\epsilon$ on the five
+  generator families.  The test also showed that the plain tag-forgetting
+  target is not faithful: restriction source support and repeated lcm stages
+  collide.  Open: internalize those tags as genuine support/stage structure in
+  LCA sheaves, condensed/solid abelian groups, or a canonical exact
+  pro-category; or prove that any tag-free realization must identify
+  generators needed to certify $\epsilon_{\mathbb P}$.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

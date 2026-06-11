@@ -662,10 +662,11 @@
   $D_{\mathrm{ch}}=\operatorname{Hom}(-,\mathbb Q/\mathbb Z)$ preserves finite $\mathbb Z/p^n$
   layers and gives $D_{\mathrm{ch}}(\epsilon_S)=-\epsilon_S^\vee$ for finite $S$. The all-prime
   case was formulated in Pass 71 as a pro-restricted finite-shadow law. Pass 72 introduced the
-  hybrid exact-category candidate $\mathcal H_\epsilon$, and Pass 73 proved its presentation-level
-  universal property among admissible support-preserving certificate targets. The remaining [Open]
-  part is faithful exact realization inside an LCA-sheaf, condensed/solid, or exact pro-category
-  framework where the law becomes an honest duality theorem.
+  hybrid exact-category candidate $\mathcal H_\epsilon$, Pass 73 proved its presentation-level
+  universal property among admissible support-preserving certificate targets, and Pass 74 built a
+  faithful tagged restricted pro-Ab realization on the five generator families. The remaining
+  [Open] part is to internalize the support/stage tags inside an LCA-sheaf, condensed/solid, or
+  canonical exact pro-category framework where the law becomes an honest duality theorem.
 - **[Partially resolved (Pass 67)]** **Restricted-product adelic duality for the full spectrum.** Define the
   Loeb-Rosser coefficient for $S=\mathbb P$ as a restricted product of local objects rather than a
   bare product. Prove that the finite-adele coefficient is self-dual under a chosen additive
@@ -679,9 +680,9 @@
   conductor quotients do not see $\widehat{\mathbb Z}/\mathbb Z$, because CRT makes
   $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. Pass 68 supplied the derived
   pro-Ab quotient, Pass 71 supplied the support-preserving finite-shadow formulation, Pass 72
-  packaged both layers into $\mathcal H_\epsilon$, and Pass 73 proved presentation-initiality.
-  The remaining task is the full categorical duality proof or a faithful embedding into an
-  established exact category.
+  packaged both layers into $\mathcal H_\epsilon$, Pass 73 proved presentation-initiality, and
+  Pass 74 verified a faithful tagged pro-Ab realization.  The remaining task is the full
+  categorical duality proof or an intrinsic version of the tags in an established exact category.
 - **[Resolved at algebraic level (Pass 68)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
   Identify the exact category in which the levelwise-zero CRT quotients assemble into the nonzero
   Loeb-Rosser phantom. Candidate formalisms: (a) pro-abelian derived cokernel of
@@ -725,9 +726,16 @@
   **Presentation initiality (Pass 73):** $\mathcal H_\epsilon$ is initial among admissible
   support-preserving certificate targets receiving the five generator families: finite conductor
   windows, Loeb-Rosser boundaries, restrictions, signed duality, and the derived pro-Ab lcm tower.
-  Omitting any family destroys part of $\epsilon_{\mathbb P}$.  **Remaining open part:** realize
-  $\mathcal H_\epsilon$ faithfully inside LCA sheaves, condensed/solid abelian groups, or an exact
-  pro-category with restricted-product generators, or prove a no-go theorem for such a realization.
+  Omitting any family destroys part of $\epsilon_{\mathbb P}$.
+  **Tagged realization test (Pass 74):** the functor
+  $\rho_{\mathrm{tag}}:\mathcal H_\epsilon\to
+  \mathbf{Pro}^{\mathrm{rp}}_{\mathrm{tag}}(\mathbf{Ab}_{\mathrm{fin}})
+  \times\mathbf{Pro}_{\mathrm{tag}}(\mathbf{Ab})$ is faithful on the five generator families in
+  the checked finite/pro window, while the corresponding tag-forgetting target is not faithful
+  because restriction source support and repeated lcm stages collide.  **Remaining open part:**
+  internalize these tags as genuine support/stage structure in LCA sheaves, condensed/solid
+  abelian groups, or a canonical exact pro-category, or prove a no-go theorem for tag-free faithful
+  realization.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."
