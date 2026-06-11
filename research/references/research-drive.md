@@ -82,6 +82,7 @@ Top-level subfolders:
 - residuated_completion_goi_notes.pdf
 - residuated_APS_principles-1.pdf
 - g2_zoo_cardinal_invariants.pdf
+- relative_ams_variable_model.pdf
 
 ### ChatGPT delta on 2026-06-11
 
@@ -113,6 +114,22 @@ Top-level subfolders:
   content-level deduplication pass before being promoted to stable local notes.
 - The generic `資料*.pdf` files are present in Drive but still need manual
   rename/content inspection before they can be indexed as stable local notes.
+
+### ChatGPT delta on 2026-06-11 (later run)
+
+- `relative_ams_variable_model.pdf` was newly visible after the previous relay
+  run (`created 2026-06-11T06:21:18Z`). It sharpens the
+  local-comparison/pullback line into a relative semantics problem: the
+  comparison map should preserve `\Box`, `\boxtimes`, `T`, and `\bot`, but only
+  as a theoremhood-preserving valuation map, not as a full order embedding on
+  arbitrary variable-bearing elements.
+- The same PDF explains why variable-bearing elements must stay outside the core
+  theoremhood region: if some free-variable element is already above `T` in the
+  source, arbitrary valuations force every ambient point to become provable.
+- It also isolates an A4-friction principle relevant to the APS zoo: an ambient
+  layer that satisfies full APS-style A4 cannot host a nontrivial primitive
+  `\boxtimes`-fixed point, because `p=\boxtimes p` together with A4 and the
+  incompatibility axiom collapses `p` to `\bot`.
 
 `ChatGPT_Study` currently contains:
 
