@@ -57,6 +57,16 @@ Top-level subfolders:
 
 `ChatGPT_Research` currently contains:
 
+- Double APS と MND4-preAPS における
+  固定点・崩壊・定義可能性
+- Relative MND4-APS
+- mugen_APS_model_catalog.pdf
+- 資料_改訂版.pdf
+- ams_aps_raps_classification_notes.pdf
+- aps_domain_cut_g2_synthesis.pdf
+- aps_domain_cut_g2_synthesis (1).pdf
+- 資料 (2).pdf
+- 資料.pdf
 - aps_abs_cutfree_consistency_exposition.pdf
 - domain_stable_ams_aps_raps_models.pdf
 - residuated_aps_monoid_properties.pdf
@@ -75,6 +85,15 @@ Top-level subfolders:
 
 ### ChatGPT delta on 2026-06-11
 
+- `Double APS と MND4-preAPS における固定点・崩壊・定義可能性` and
+  `Relative MND4-APS` materially strengthen the old MND4 handoff line.  The
+  key new point is a precise two-level semantics: a safe fragment carries the
+  MND4 rules, while self-referential fixed points are forced to live in the
+  ambient complement.  This reframes the problem as a `no-leak` obstruction,
+  not merely a vague "fixed points outside the core" slogan.
+- `aps_domain_cut_g2_synthesis.pdf` reinforces the cut-elimination/A3 line from
+  the proof-search side: plain cut closure handles vertical composition but
+  does not by itself preserve the horizontal A3 intersection principle.
 - `cut_elimination_g2_preaps.pdf` sharpens the preAPS-to-APS/cut-elimination
   line: cut closure can destroy A3 unless an additional saturation or
   contraction-like stability principle is imposed, so A3-stability is the main
@@ -88,6 +107,10 @@ Top-level subfolders:
 - `g2_zoo_cardinal_invariants.pdf` appears to isolate the G2-ZOO/cardinal
   invariant axis into a dedicated Drive PDF rather than leaving it embedded in
   broader notes.
+- `mugen_APS_model_catalog.pdf`, `資料.pdf`, `資料 (2).pdf`, and
+  `資料_改訂版.pdf` appear to be further AMS/APS/infinite-model export
+  variants.  They are relevant enough to index, but still need a later
+  content-level deduplication pass before being promoted to stable local notes.
 - The generic `資料*.pdf` files are present in Drive but still need manual
   rename/content inspection before they can be indexed as stable local notes.
 

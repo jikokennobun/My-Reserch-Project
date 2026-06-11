@@ -2,6 +2,20 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-11: safe fragments and no-leak self-reference for MND4)**
+  The accessible Drive PDFs `Double APS と MND4-preAPS における固定点・崩壊・定義可能性`
+  and `Relative MND4-APS` sharpen the old MND4 note from a vague "fixed points
+  outside the core" slogan into a concrete two-level semantics problem.  Open:
+  (i) find an arithmetically natural safe class $D$ with
+  $MND4 \subseteq PL_D(\operatorname{Pr})$ while diagonal fixed points still
+  exist in the ambient sentence universe;
+  (ii) formalize the no-leak condition
+  $\operatorname{Diag}_{\boxtimes}(S)\cap i[D]=\varnothing$ in algebraic,
+  fibred, or categorical terms;
+  (iii) compare this safe-fragment obstruction with the repository's A3 and
+  cut-stability obstructions to see whether they are the same saturation
+  phenomenon in different guises.
+
 - **(Drive supplement 2026-06-11: A3-stability under cut closure and completion)**
   The new Drive additions `cut_elimination_g2_preaps.pdf` and
   `residuated_completion_goi_notes.pdf` sharpen the same obstruction from two
