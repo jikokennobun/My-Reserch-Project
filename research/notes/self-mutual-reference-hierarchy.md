@@ -14,6 +14,11 @@ Relay update on 2026-06-12:
 - A new Drive artifact, `ams_aps_self_reference_hierarchy.pdf`
   (`ChatGPT_Research`, created `2026-06-12T19:30:42Z`), gives a durable
   long-form reconstruction of the same line.
+- Two later 2026-06-12 supplements sharpen different parts of the same axis:
+  `相互不動点階層_反例モデル.pdf` gives a strict `FP_n`-hierarchy countermodel
+  program, while Claude's `selfref_mutref.pdf` isolates the `SR` versus
+  `MR_2` separation through a finite APS witness `M_5` and a Lopez-style
+  product fixed-point obstruction.
 - The supplement is broader than the original handoff note: it places mutual
   reference inside a full incompleteness hierarchy running from tautological
   validity up to full self-reference.
@@ -561,6 +566,48 @@ $$
 
 So `SR /\ not MR_2` becomes a product-instability phenomenon rather than a
 mere syntactic accident.
+
+### Strict Finite-Variable Hierarchy
+
+The companion countermodel supplement `相互不動点階層_反例モデル.pdf` strengthens
+the hierarchy in a different direction. It does not only separate unary from
+binary reference. It claims that for every `r >= 2` there are computable
+infinite AMS/APS models satisfying
+
+$$
+\mathrm{FP}_1,\dots,\mathrm{FP}_{r-1}
+\qquad\text{but not}\qquad
+\mathrm{FP}_r,
+$$
+
+where `FP_n` means existence of simultaneous fixed points for every definable
+`n`-variable system. In that reading the descending chain
+
+$$
+\mathrm{FP}_{<\omega}
+\Rightarrow
+\cdots
+\Rightarrow
+\mathrm{FP}_{n+1}
+\Rightarrow
+\mathrm{FP}_n
+\Rightarrow
+\cdots
+\Rightarrow
+\mathrm{FP}_2
+\Rightarrow
+\mathrm{FP}_1
+$$
+
+is strict at every stage over suitable AMS/APS classes.
+
+The proposed mechanism is combinatorial rather than modal: a regular
+non-well-founded tree model can be built so that cycles of width `< r` are
+solvable, but a full `r`-variable simultaneous reference system forces cycle
+width `r` and therefore has no solution. This gives a stronger version of the
+user's original intuition: mutual reference is not just "self-reference with
+two names", and higher-arity simultaneous reference need not collapse back to
+the unary case unless pairing/projection/diagonalization resources are added.
 
 ## Relation to Existing Notes (Updated)
 
