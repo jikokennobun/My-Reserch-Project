@@ -4,12 +4,16 @@
 
 - Original Project share: <https://chatgpt.com/share/69fbf42a-8de0-83e8-8cff-9b51f13a16c0>
 - Imported from Research Project handoff: `2026-05-22`
-- Access status on `2026-06-10`: the watched ChatGPT share remained unreachable
-  from this environment, so the reconstruction below separates prior handoff
-  material from a directly accessible Drive artifact.
-- Drive supplement: `domain_stable_ams_aps_raps_models.pdf`
-  (`https://drive.google.com/file/d/1dSzWJT0EnT4fHONge6gajqk1wWBKJrkK/view`)
-  fetched through the Google Drive connector on `2026-06-10`.
+- Rechecked from the watchlist on `2026-06-14`: reachable and unchanged at
+  `2026-06-14T06:41:52+09:00`.
+- Drive supplements:
+  - `domain_stable_ams_aps_raps_models.pdf`
+    (`https://drive.google.com/file/d/1dSzWJT0EnT4fHONge6gajqk1wWBKJrkK/view`)
+    fetched through the Google Drive connector on `2026-06-10`.
+  - `ams_aps_domain_theory_research_note.pdf` (Drive created
+    `2026-06-13T18:51:38Z`)
+  - `unary_operator_fixed_point_spaces.pdf` (Drive created
+    `2026-06-13T19:44:23Z`)
 
 ## Abstract
 
@@ -17,12 +21,15 @@ This note studies the topological and domain-theoretic line inside the APS
 program: can one build large families of APS or residuated APS models from
 Scott opens, stable domains, event structures, coherence spaces, and related
 semantic objects, and what do those models say about G2, FG2, and
-$\boxtimes$-fixed points? The main conclusion of the Drive supplement is
-negative in a precise way: many natural domain-theoretic constructions give
-complete APS or RAPS models, but in nontrivial cases they typically refute G2,
-refute FG2, and admit no $\boxtimes$-fixed point. This turns domain semantics
-into a systematic source of counterexamples and sharpens the role of A3/A4 and
-fixed-point hypotheses.
+$\boxtimes$-fixed points? The June 10 and June 13 Drive supplements force a
+two-sided answer. On the negative side, many natural domain-theoretic
+constructions give complete APS or RAPS models that in nontrivial cases refute
+G2, refute FG2, and admit no $\boxtimes$-fixed point. On the positive side,
+the later June 13 notes show that specially engineered algebraic Scott-APS
+objects can realize arbitrary fixed-point anti-chains and amplify spectra by
+function-space constructions. Domain semantics is therefore not a single
+fixed-point source; it is the place where one can see exactly which continuity,
+compactness, and A3-locality hypotheses create or block self-reference.
 
 ## Background and Notation
 
@@ -193,6 +200,64 @@ This shows that domain theory is best understood here as a control parameter:
 it tells us exactly which completion or continuity assumptions are strong enough
 to manufacture fixed points and which are not.
 
+### Proposition 5. In algebraic Scott-APS, A3 becomes a compact-basis condition
+
+The June 13 domain-theory memo recasts A3 as a local Horn condition on compact
+approximants. If $L$ is an algebraic dcpo and $S=(L,\le,\Box,\boxtimes,T,\bot)$
+is Scott-continuous, then the global clause
+
+$$
+x\le \Box y \text{ and } x\le \boxtimes y \Rightarrow x\le \boxtimes T
+$$
+
+should be checked on compact elements first:
+
+$$
+k\in K(L),\ k\le \Box y,\ k\le \boxtimes y \Rightarrow k\le \boxtimes T.
+$$
+
+Because every $x$ is the directed join of compact $k\le x$, Scott continuity
+then upgrades the compact test to the full A3 law. This is the domain-theoretic
+reason A3 behaves more like a local consistency-of-approximants condition than
+like a global algebraic identity.
+
+### Proposition 6. Antitone Scott operators have an anti-chain fixed-point geometry
+
+The June 13 supplements also isolate a general principle extending the old APS
+anti-chain observation. For any order-reversing Scott-continuous
+$f:L^{op}\to L$ on a complete or algebraic domain,
+
+$$
+\mathrm{Fix}(f)=\{x : f(x)=x\}
+$$
+
+is an anti-chain. Moreover, if $a$ is the least fixed point of $f^2$, then the
+interval
+
+$$
+[a,f(a)]
+$$
+
+is the canonical two-cycle kernel containing every genuine $f$-fixed point.
+Transferred back to APS, this says that $\boxtimes$-fixed points never form a
+chain-like positive theory region; they sit inside a narrow self-dual kernel of
+the antitone dynamics.
+
+### Proposition 7. Engineered Scott-APS can realize arbitrary fixed-point widths
+
+The negative Scott-frame examples are not the whole story. The June 13 memo
+constructs algebraic Scott-APS models `Star_\kappa` with
+
+$$
+|\mathrm{Fix}_{\boxtimes}(S)|=\kappa
+$$
+
+for arbitrary cardinals $\kappa$, and then amplifies spectra by function-space
+constructions of the shape $D^X$. So plain frame pseudocomplements kill
+fixed points, but custom algebraic Scott-APS domains can realize them sharply.
+The real divide is not "domain semantics versus syntax"; it is "natural
+extensional negation versus engineered antitone self-duality."
+
 ## Examples and Counterexamples
 
 The Drive supplement contains concrete infinite countermodel families worth
@@ -275,6 +340,9 @@ The Drive supplement raises several concrete follow-up tasks.
    $\boxtimes$-fixed point, rather than a syntactically imported one.
 5. Determine which completions create fixed points that are semantic only and
    which reflect back to definable elements of the original APS.
+6. Give necessary and sufficient compact-basis conditions for A3 in algebraic
+   Scott-APS, then compare them with the engineered `Star_\kappa` models that
+   realize arbitrary anti-chain fixed-point spectra.
 
 ## Verification Tasks
 

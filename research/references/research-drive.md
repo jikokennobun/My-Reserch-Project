@@ -233,6 +233,45 @@ Top-level subfolders:
   thin relay stub using those PDFs. No new standalone note was created because
   the new material fits the existing fixed-point-spectrum home.
 
+### ChatGPT delta on 2026-06-14 (later relay review)
+
+- A later same-day relay pass rechecked all `23` watched shares at
+  `2026-06-14T06:41:52+09:00`; every watched `chatgpt.com/share/...` link
+  remained `unchanged`, so there was still no share-side transcript delta to
+  reconstruct.
+- The research root did, however, contain several additional June 13 durable
+  PDFs created after the previous automation run (`2026-06-13T15:06:26Z`):
+  `aps_algebraic_reverse_math_exposition.pdf`,
+  `fixed_point_spectrum_APS_AMS.pdf`,
+  `self_reflection_residuated_ams_aps.pdf`,
+  `ams_aps_domain_theory_research_note.pdf`,
+  `unary_operator_fixed_point_spaces.pdf`,
+  `aps_fg2_g2_classification.pdf`, and two copies of
+  `residuated_ams_interrelations.pdf`.
+- `ams_aps_domain_theory_research_note.pdf` and
+  `unary_operator_fixed_point_spaces.pdf` are the most immediately usable
+  additions. Together they sharpen the domain-theoretic line in two directions:
+  natural Scott/open and stable-semantic constructions usually give
+  `\neg G2`, `\neg FG2`, and no `\boxtimes`-fixed points, while specially
+  engineered algebraic Scott-APS constructions can realize arbitrary
+  anti-chain fixed-point spectra and function-space amplifications.
+- `fixed_point_spectrum_APS_AMS.pdf` reinforces rather than replaces the
+  earlier fixed-point-spectrum supplements: it confirms that the right
+  invariant package must track cardinality, order type, definability, and
+  periodic-orbit data of `Fix_{\boxtimes}(S)`, not just a yes/no diagonal
+  existence claim.
+- `aps_fg2_g2_classification.pdf` and
+  `self_reflection_residuated_ams_aps.pdf` are relevant to the hierarchy and
+  reflection lines, but the current repository already has unrelated dirty
+  local edits in those areas. They were therefore indexed here for the next
+  relay pass rather than merged into those notes mid-stream.
+- `residuated_ams_interrelations.pdf` appears twice in Drive with separate file
+  IDs but the same title. It looks like a duplicate export pair and should be
+  deduplicated before being promoted into a stable local note.
+- `資料-2.pdf` was also created in the same window, but its generic filename
+  makes it unsuitable as a stable citation target until it is manually renamed
+  or inspected.
+
 `ChatGPT_Study` currently contains:
 
 - aal_japanese_notes.pdf

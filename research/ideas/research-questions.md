@@ -2,6 +2,19 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
+  The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and
+  `ams_aps_domain_theory_research_note.pdf` suggest a sharper meta-question
+  behind several existing notes. Open:
+  (i) isolate which properties of `Fix(f)` for an antitone or Scott-continuous
+  operator `f` transfer to APS statements about `Fix_{\boxtimes}(S)` and
+  `\boxtimes^2`-orbits;
+  (ii) determine when compact-basis locality of A3 is enough to recover global
+  APS behavior in algebraic Scott-APS;
+  (iii) separate the natural negative domain models (Scott opens,
+  orthogonality, stable conflict) from engineered `Star_\kappa`-style positive
+  models that realize arbitrary fixed-point anti-chains.
+
 - **(Drive supplement 2026-06-14: fixed-point spectrum under APS axiom packages)**
   The June 13 Drive PDFs `aps_classification.pdf`,
   `ams_aps_fixed_point_classification.pdf`, and
