@@ -2,6 +2,40 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-14: fixed-point spectrum under APS axiom packages)**
+  The June 13 Drive PDFs `aps_classification.pdf`,
+  `ams_aps_fixed_point_classification.pdf`, and
+  `ams_aps_infinite_models_research_note.pdf` sharpen the old cardinal-spectrum
+  idea into a concrete classification problem. Open:
+  (i) determine `SpecFix_{\boxtimes}(\Gamma)` for core axiom packages `\Gamma`
+  built from A1-A4, G2, FG2, C5, and residuation;
+  (ii) separate cardinality, order type, definability, and periodic-orbit data
+  of `Fix_{\boxtimes}(S)` rather than collapsing them to one count;
+  (iii) formalize the share's Tukey-style witness-family invariant
+  `\kappa(R)` by building bouquet APS realizations of small relational systems.
+
+- **(Pass 80 -> 81: automorphic shadow of the solid Borel; the functional-equation wall)**
+  Pass 80 computed $\mathrm{Sp}(H)$ for the hyperbolic plane $H=\epsilon\oplus\mathbb Q$ and settled
+  the metaplectic question. **Resolved:** $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$ forces
+  every solid endomorphism of $H$ to be upper-triangular (Thm 80a), so $\mathrm{Sp}(H)=B=\mathbb
+  Q^{\times}\ltimes\epsilon$ is the solid **Borel** / affine "$ax+b$" group fixing the polarization
+  $\epsilon$ — **not** $\mathrm{SL}_2$, **not** a nonabelian Heisenberg group (Thm 80b); the Weyl flip
+  $w$ has no solid model. The finite-adele Weil representation of $\mathrm{SL}_2(\mathbb A_f)$
+  **does not descend** to $\epsilon$ (Thm 80c): at level $N$ the flip is the finite Fourier $F_N$
+  ($F_N^4=I$, $|g_N|^2=N$), but its only candidate limit lies in $\mathrm{Hom}(\epsilon,\mathbb Q)=0$.
+  The **precise wall** is that one-sided vanishing ($\epsilon$ reflexive but not $\otimes$-dualizable)
+  — explicitly **not** the degeneracy of $b$, which the Pass-79 Next step had guessed; the shear-by-$b$
+  unipotent survives in $B$, only the inverse intertwiner $\epsilon\to\mathbb Q$ is absent.
+  **Now open:**
+  (i) realize the $B$-action on sections over the fixed polarization $\epsilon$ and decide whether $B$
+  carries the algebraic shadow of a *degenerate principal series* / Eisenstein datum;
+  (ii) is the absent cross-polarization intertwiner $\in\mathrm{Hom}(\epsilon,\mathbb Q)=0$ exactly the
+  obstruction to a *self-dual functional equation* relating the two polarizations;
+  (iii) is "no Fourier flip" the representation-theoretic face of the Pass-51 Löb (integral) vs Rosser
+  (non-integral-unit) dividing line, one functor-level up;
+  (iv) is *reflexive-but-not-dualizable* a clean structural invariant separating $\epsilon$ from
+  genuinely dualizable phantoms?
+
 - **(Drive supplement 2026-06-13: extensionality-collapse dichotomy for APS comprehension)**
   The new Drive PDF `material_predicative_comprehension_nonclassical.pdf`
   turns the old monad/effects line into a sharper obstruction question. Open:

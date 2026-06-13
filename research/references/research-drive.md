@@ -210,6 +210,29 @@ Top-level subfolders:
   selective extraction into existing notes rather than creating a new standalone
   note for every section.
 
+### ChatGPT delta on 2026-06-14 relay review
+
+- A fresh relay review on `2026-06-14` found no newer watched-share deltas, but
+  it did isolate three already-created June 13 Drive PDFs as the next
+  note-worthy durable inputs:
+  `aps_classification.pdf`,
+  `ams_aps_fixed_point_classification.pdf`, and
+  `ams_aps_infinite_models_research_note.pdf`.
+- `aps_classification.pdf` is the broad synthesis document: finite/countable /
+  continuum model classes, tame-versus-wild slogans, and a cross-note index for
+  AMS/APS/ResAPS.
+- `ams_aps_fixed_point_classification.pdf` is the sharpest local supplement for
+  the fixed-point/cardinal-invariant line. It reframes the problem as a spectrum
+  question for `Fix_{\boxtimes}(S)` rather than a single yes/no diagonal lemma.
+- `ams_aps_infinite_models_research_note.pdf` pushes the same line into
+  computable, non-computable, topological, domain-theoretic, and set-theoretic
+  infinite models. The key lesson is that fixed-point existence, definability,
+  continuity, and cardinality must be separated.
+- The fixed-point spectrum note
+  `research/notes/aps-cardinal-invariants-fixed-points.md` was upgraded from a
+  thin relay stub using those PDFs. No new standalone note was created because
+  the new material fits the existing fixed-point-spectrum home.
+
 `ChatGPT_Study` currently contains:
 
 - aal_japanese_notes.pdf
