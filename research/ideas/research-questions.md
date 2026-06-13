@@ -2,6 +2,30 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-13: extensionality-collapse dichotomy for APS comprehension)**
+  The new Drive PDF `material_predicative_comprehension_nonclassical.pdf`
+  turns the old monad/effects line into a sharper obstruction question. Open:
+  (i) define a precise `AMS/MPC^\delta_R` semantics in which comprehension
+  objects, observation, and APS modalities coexist;
+  (ii) identify the exact threshold where observation/extensionality restores
+  enough hidden contraction for self-comprehension to become a genuine G2-style
+  obstruction;
+  (iii) compare that threshold against the repository's existing safe-fragment,
+  A3-stability, and cut-stability obstructions to decide whether these are
+  equivalent or only analogous failure mechanisms.
+
+- **(Drive supplement 2026-06-12: strictness of the self/mutual-reference hierarchy)**
+  The new Drive PDF `ams_aps_self_reference_hierarchy.pdf` turns the old
+  self/mutual-reference handoff into an explicit implication chain
+  `FSR => MR_omega => MR_<omega => SR(C) => J => FG2 => G2 => Taut`. Open:
+  (i) find a clean finite or computable APS/preAPS witness separating
+  `Per_2` from `Per_1`, hence mutual/periodic reference from primitive
+  Jeroslow self-reference;
+  (ii) decide which parts of the chain can already be separated inside the
+  existing G2-ZOO finite models and which require indexed/code-space structure;
+  (iii) align the repository's `nFG2`, fixed-point cardinal, and
+  Lawvere/Smullyan notes with one common hierarchy of principles.
+
 - **(Drive supplement 2026-06-11: safe fragments and no-leak self-reference for MND4)**
   The accessible Drive PDFs `Double APS と MND4-preAPS における固定点・崩壊・定義可能性`
   and `Relative MND4-APS` sharpen the old MND4 note from a vague "fixed points
@@ -29,6 +53,36 @@
   (iii) decide whether the surviving condition is best formulated as
   contraction, interpolation, or a fibered Beck-Chevalley/exactness law.
 
+- **(Drive supplement 2026-06-11: no-leak relative comparison for local FG2)**
+  The new Drive PDF `relative_ams_variable_model.pdf` adds a sharper failure
+  mode to the local-FG2/pullback line.  A relative comparison
+  $f:M\to A$ should preserve `\Box`, `\boxtimes`, `T`, and `\bot`, but only as
+  a theoremhood-preserving valuation map.  If a variable-bearing source element
+  already lies above `T`, arbitrary valuations collapse the ambient model by
+  forcing every target element to become provable.  Open:
+  (i) formalize a `no-leak` pullback condition separating the closed theorem
+  chain from the variable-generated region;
+  (ii) characterize which local-FG2 profiles survive pullback under this
+  weaker theoremhood-only comparison notion;
+  (iii) decide whether the resulting obstruction is equivalent to the
+  MND4 safe-fragment/no-leak condition or to the repository's A3-stability
+  failure in disguise.
+
+- **(Drive supplement 2026-06-13: separating self-reference from mutual reference)**
+  The new Drive PDF `selfref_mutref.pdf` sharpens the reference hierarchy in a
+  way the older handoff note did not.  With weakening/projections in the
+  definable clone one has `MR_2 => SR`, and in a pure unary APS signature one
+  even gets `SR <=> MR`; yet the same source claims a finite five-point APS
+  model `M_5` with `SR /\ not MR_2` and a continuous Lopez-style witness
+  `ALop` showing the same separation from fixed-point-property failure of
+  products. Open:
+  (i) reconstruct `M_5` explicitly inside `code/models/` and verify `SR`,
+  `not MR_2`, and A1-A4 in repository notation;
+  (ii) identify the weakest non-unary definability resource needed for
+  `SR /\ not MR_2`;
+  (iii) decide whether the topological `ALop` obstruction can be reformulated
+  as a fibred/pullback or no-leak condition alongside the local-FG2 program.
+
 - **(Pass 69 retarget: arithmetic lift of consistency tower and CutA3)**
   Pass 69 added the APS-level tower $C_0=T$, $C_{n+1}=\boxtimes C_n$, with
   $\mathrm{Con}^{\mathrm{orb}}_n$, $\mathrm{G2}_n$, $\mathrm{FG2}_n$, finite
@@ -40,15 +94,20 @@
   integrality, and contraction force a detached Rosser fixed point back into
   the consistency orbit.
 
-- **(Pass 75 retarget: natural realization of support and stage projectors)**
-  Pass 75 replaced the explicit tags of $\mathcal R_\epsilon$ by internal
-  projectors: Boolean support idempotents $e_p$ with
-  $e_Se_T=e_{S\cap T}$ and lcm-stage projectors $q_n$ with
-  $q_nq_m=q_{\min(n,m)}$.  The projector-enriched realization remains faithful
-  on the five generator families, while the plain target remains non-faithful.
-  Open: realize $e_p$ and $q_n$ as natural idempotent/support and stage
-  structure in LCA sheaves, condensed/solid abelian groups, or a derived exact
-  pro-category carrying $\varprojlim^1$.
+- **(Pass 76 retarget: all-prime upgrade of the stratified pro-site model)**
+  Pass 76 realized the Pass-75 projectors geometrically on the finite-prime
+  stratified pro-site $\mathrm{StratPro}_\epsilon(U,N)$: support idempotents
+  $e_p=(\cdot)\mathbf 1_{\{p\}}$ are multiplication by characteristic functions of
+  clopen prime strata ($e_Se_T=e_{S\cap T}$), and stage idempotents $q_n$ are
+  prefix truncations of the non-ML lcm tower ($q_nq_m=q_{\min(n,m)}$); the
+  projector realization $\rho_{\mathrm{proj}}$ factors through this site
+  faithfully on all five generator families.  The model is finite, discrete in
+  $U$, and truncated at depth $N$.  Open: upgrade $\mathrm{StratPro}_\epsilon(U,N)$
+  to an all-prime derived exact target -- an LCA sheaf on the profinite prime
+  space, a condensed/solid abelian object, or a canonical exact pro-category
+  carrying $\varprojlim^1$ -- and prove the signed duality law
+  $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ there, or
+  exhibit the derived/non-Hausdorff barrier that blocks it.
 
 - **(Drive supplement 2026-06-10: domain/stable APS models and the A3 bottleneck)**
   The new Drive PDF `domain_stable_ams_aps_raps_models.pdf` sharpens the

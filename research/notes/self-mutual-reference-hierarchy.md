@@ -9,6 +9,25 @@ reference`. The reconstruction below keeps the mathematical distinctions from
 that Project line: single self-reference, mutual reference, networked
 reference, and their APS fixed-point shadows.
 
+Relay update on 2026-06-12:
+
+- A new Drive artifact, `ams_aps_self_reference_hierarchy.pdf`
+  (`ChatGPT_Research`, created `2026-06-12T19:30:42Z`), gives a durable
+  long-form reconstruction of the same line.
+- The supplement is broader than the original handoff note: it places mutual
+  reference inside a full incompleteness hierarchy running from tautological
+  validity up to full self-reference.
+- The additions below mark content that is now directly supported by the Drive
+  PDF rather than only inferred from the old share title and thin handoff.
+
+Relay update on 2026-06-13:
+
+- A second Drive artifact, `selfref_mutref.pdf`
+  (`ChatGPT_Research`, created `2026-06-12T07:23:11Z`), gives a more focused
+  separation result for self-reference versus mutual reference.
+- The additions below marked with `MR`/`SR` are reconstructed from that newer
+  supplement rather than from the original share snapshot.
+
 ## Abstract
 
 Ordinary diagonalization gives one formula that refers to itself. APS records
@@ -98,6 +117,41 @@ $$
 The existence of such a $p$ is `FP-synt` in
 `g2-aps-zoo-classification.md`.
 
+### Proposition 1A: Mutual Reference Collapses to Self-Reference Under Weakening
+
+Let the definable operations form a clone, so projections and weakening are
+available. Then:
+
+$$
+\mathrm{MR}_{2}\Longrightarrow \mathrm{SR},
+$$
+
+and more generally:
+
+$$
+\mathrm{MR}_{n+1}\Longrightarrow \mathrm{MR}_{n}.
+$$
+
+Proof sketch. Given a unary operator $f$, define:
+
+$$
+F(p,q)=f(q),
+\qquad
+G(p,q)=f(q).
+$$
+
+These are definable from $f$ by ignoring the first variable. A mutual pair for
+$F,G$ gives:
+
+$$
+p=_S f(q),
+\qquad
+q=_S f(q),
+$$
+
+so $q$ is an ordinary fixed point of $f$. The $(n+1)\to n$ reduction is the
+same padding argument with a dummy coordinate.
+
 ## Mutual Reference
 
 ### Definition 2: Mutual Pair
@@ -127,6 +181,26 @@ q=\boxtimes p.
 $$
 
 If $p\ne q$, the system has mutual reference without single self-reference.
+
+### Proposition 2A: Pure Unary Signatures Force SR and MR to Coincide
+
+Assume every definable $n$-ary operation is generated from unary operators,
+constants, and composition alone. Then:
+
+$$
+\mathrm{SR}\Longleftrightarrow \mathrm{MR}.
+$$
+
+Proof sketch. The implication $\mathrm{MR}\Rightarrow\mathrm{SR}$ is
+Proposition 1A. Conversely, in a pure unary signature every defining term
+depends on at most one coordinate, so a simultaneous system
+
+$$
+p_i=_S F_i(p_1,\dots,p_n)
+$$
+
+decomposes into unary chains and constants. Each strongly connected component
+therefore reduces to an ordinary unary fixed-point problem, which SR solves.
 
 ### Lemma 1: Mutual Reference Gives Composite Fixed Points
 
@@ -240,6 +314,265 @@ $$
 The inclusions should not be assumed strict in every semantics. Strictness is a
 model-theoretic question.
 
+## Stronger Hierarchy from the 2026-06-12 Drive Supplement
+
+The Drive supplement makes the intended hierarchy substantially more explicit.
+Besides self-reference, mutual reference, and network reference, it introduces
+intermediate principles for periodicity, cardinality of fixed points,
+computable closure stages, continuous spectra, and code-space diagonalization.
+
+Write:
+
+$$
+\mathrm{FSR}(S):
+\quad
+\forall F\in \mathrm{Def}_1(S)\ \exists p\in S\ (p =_S F(p)).
+$$
+
+For mutual-reference of arity $n$, write informally:
+
+$$
+\mathrm{MR}_n(S):
+\quad
+\exists (p_0,\dots,p_{n-1})
+\ \forall i<n\
+p_i =_S F_i(p_{i+1 \bmod n}).
+$$
+
+The supplement's organizing chain is:
+
+$$
+\mathrm{FSR}
+\Longrightarrow
+\mathrm{MR}_\omega
+\Longrightarrow
+\mathrm{MR}_{<\omega}
+\Longrightarrow
+\mathrm{SR}(C)
+\Longrightarrow
+J
+\Longrightarrow
+\mathrm{FG2}
+\Longrightarrow
+\mathrm{G2}
+\Longrightarrow
+\mathrm{Taut}.
+$$
+
+Here:
+
+- $\mathrm{SR}(C)$ is self-reference restricted to a chosen class of operators
+  $C$;
+- $J$ is the Jeroslow/refutability fixed-point principle
+  $\exists p\,(p =_S \boxtimes p)$;
+- `Taut` is the tautological or purely structural bottom layer.
+
+The forward implications are intended as strength inclusions, not equivalences.
+The supplement repeatedly stresses that most reverse implications fail without
+extra coding, pairing, or continuity assumptions.
+
+### Proposition 1: Mutual Reference Sits Strictly Above Single Fixed-Point Data
+
+The implication
+
+$$
+\mathrm{Fix}_S(\boxtimes)\subseteq \mathrm{Fix}_S(\boxtimes^2)
+$$
+
+records only the unary shadow of mutual reference. A genuine mutual-reference
+principle remembers ordered pairs, dependency shape, and the distinction
+between primitive $\boxtimes$-fixed points and periodic $\boxtimes$-orbits.
+
+Proof sketch. A primitive fixed point $p=\boxtimes p$ gives the degenerate pair
+$(p,p)$. But a nontrivial pair $(p,q)$ with
+$p=\boxtimes q,\ q=\boxtimes p,\ p\neq q$ determines an orbit of period two,
+not a unary fixed point of $\boxtimes$. It is only after passage to
+$\boxtimes^2$ that the pair collapses to ordinary fixed-point data.
+
+## Periodic and Orbit Hierarchies
+
+The Drive supplement treats periodic self-reference as a separate axis rather
+than a minor variant of the single-point case. For $n\ge 1$, define:
+
+$$
+\mathrm{Per}_n(S):
+\quad
+\exists p\in S\ (\boxtimes^n p =_S p).
+$$
+
+The $n=1$ case is exactly the Jeroslow fixed-point principle. For $n>1$ one
+gets periodic reference without primitive self-reference. This is the natural
+semantic home for even-cycle ZOO models and for the repository's `nFG2` line.
+
+### Proposition 2: Periodic Reference Need Not Collapse to Jeroslow Reference
+
+There are finite preAPS candidates where:
+
+$$
+\mathrm{Per}_2(S)\ \text{holds},\qquad
+\mathrm{Per}_1(S)\ \text{fails}.
+$$
+
+Proof sketch. Any finite model with a genuine two-cycle
+$p\mapsto q\mapsto p$ under $\boxtimes$ and no fixed point yields such a
+separation. The supplement treats this as a core reason to track cycle length
+and not merely existence of one fixed point.
+
+The associated orbit spectrum is:
+
+$$
+\mathrm{Spec}_{\boxtimes}(S)
+:=
+\{n\ge 1:\mathrm{Per}_n(S)\}.
+$$
+
+This suggests refining the old reference-rank invariant by eventual period,
+preperiod, and location relative to the orbit of $T$.
+
+## Cardinal and Closure-Ordinal Layers
+
+The Drive supplement also isolates two further axes that were only implicit in
+the original handoff note.
+
+### Fixed-Point Cardinal Layer
+
+Instead of asking only whether $\mathrm{Fix}_S(\boxtimes)$ is empty, ask for
+its size:
+
+$$
+\mathrm{Fix}_{\ge \kappa}(S):
+\quad
+|\mathrm{Fix}_S(\boxtimes)/{=_S}|\ge \kappa.
+$$
+
+This covers star-like or branching APS models with many inequivalent detached
+fixed points and links directly to the repository's G2-ZOO/cardinal-invariant
+line.
+
+### Closure-Ordinal Layer
+
+Let $F:S\to S$ be monotone or antitone and form its transfinite closure tower
+from a seed $x_0$:
+
+$$
+x_{\alpha+1}=F(x_\alpha),
+\qquad
+x_\lambda=\sup_{\beta<\lambda}x_\beta
+\ \text{when defined}.
+$$
+
+The least ordinal at which stabilization occurs is the closure ordinal:
+
+$$
+\operatorname{clOrd}_F(x_0)
+:=
+\min\{\alpha:x_{\alpha+1}=x_\alpha\}.
+$$
+
+The supplement treats delayed stabilization and doubled-ordinal constructions
+as evidence that "eventual self-reference" has a genuine ordinal hierarchy, not
+just a finite cycle hierarchy.
+
+## Finite Counterexample Program from the Supplement
+
+The Drive PDF organizes several now-familiar repository examples into one
+single separation table. The key patterns are:
+
+- a two-point inversion APS witnessing that APS axioms alone do not force a
+  fixed point;
+- a three-point chain or lock model witnessing that G2 can hold while FG2 and
+  primitive fixed points fail;
+- A3-dropping countermodels showing that a fixed point need not yield FG2
+  without the horizontal intersection principle;
+- star-like models with arbitrarily many detached fixed points;
+- periodic/cycle models realizing nontrivial $\mathrm{Per}_n$ behavior.
+
+### Proposition 3: The Mutual-Reference Line Is a Finite-Model Search Program
+
+The supplement reframes the hierarchy as a search problem over small models:
+find finite preAPS or APS witnesses separating
+
+$$
+\mathrm{Per}_1,\ \mathrm{Per}_2,\ \mathrm{MR}_n,\ \mathrm{FG2},\ \mathrm{G2},
+\ \mathrm{Fix}_{\ge \kappa}.
+$$
+
+Proof sketch. Each implication in the hierarchy becomes meaningful only when a
+countermodel separates it from the next stronger principle. The supplement's
+examples and tables are explicitly arranged as such separation witnesses rather
+than only as motivational anecdotes.
+
+## Continuous and Code-Space Layers
+
+The Drive supplement broadens the note beyond finite combinatorics.
+
+### Continuous / Topological Layer
+
+It treats continuous interval models, domain-theoretic fixed-point principles,
+and periodic spectra of continuous operators as an intermediate region between
+finite combinatorial APS and full syntactic diagonalization.
+
+The point is not that continuity gives full self-reference. Rather:
+
+$$
+\text{continuous fixed-point principle}
+\not\Rightarrow
+\mathrm{FSR},
+$$
+
+even though it may force nontrivial fixed points for restricted operator
+classes.
+
+### Lawvere-Smullyan / Code-Space Layer
+
+The supplement also locates mutual and full self-reference in a code-space
+environment: quotation, substitution, pairing, repeat/diagonal operators, and
+weak point-surjectivity.
+
+This suggests the refined implication:
+
+$$
+\text{weak point-surjectivity / code space}
+\Longrightarrow
+\mathrm{SR}(C),
+$$
+
+with full FSR appearing when the class $C$ is rich enough to represent all
+definable unary operators.
+
+### Product-Fixed-Point Reading of the Separation
+
+The focused `selfref_mutref.pdf` supplement recasts the same issue in
+topological/order-theoretic language. A space or poset may have the unary
+fixed-point property needed for SR while its square fails the corresponding
+product fixed-point property, which blocks MR2.
+
+In that reading:
+
+$$
+\mathrm{SR}\ \text{corresponds to FPP on the base space},
+$$
+
+while:
+
+$$
+\mathrm{MR}_2\ \text{corresponds to FPP on the square}.
+$$
+
+So `SR /\ not MR_2` becomes a product-instability phenomenon rather than a
+mere syntactic accident.
+
+## Relation to Existing Notes (Updated)
+
+- `g2-fg2-hierarchy.md` controls the orbit/preperiod data that the supplement
+  promotes to a first-class invariant.
+- `aps-cardinal-invariants-fixed-points.md` matches the new fixed-point
+  cardinal layer $\mathrm{Fix}_{\ge \kappa}$.
+- `predicate-topology-fixed-points.md` carries the continuous/domain side of
+  the hierarchy.
+- `smullyan-lawvere-categorical-diagonalization.md` supplies the code-space and
+  weak-point-surjectivity background for the top end of the hierarchy.
+
 ## Separation Questions
 
 ### Question 1: Mutual Without Self
@@ -321,6 +654,20 @@ $X\to X\times X$; it also needs quotation, substitution, and reindexing. See
 
 ## Conjectures
 
+### Drive Separation Witnesses
+
+The newer Drive supplement isolates a stronger claim than the original "find a
+2-cycle" task: there are APS models satisfying A1-A4 in which:
+
+$$
+\mathrm{SR}\wedge\neg\mathrm{MR}_2.
+$$
+
+Its finite witness is a five-point APS model $M_5$, built over a three-point
+core and reported as machine-checked by exhaustive search. The same supplement
+also gives a continuous/topological witness `ALop`, reframing
+`SR` versus `MR_2` as a fixed-point-property failure for products.
+
 ### Conjecture 1: Periodic Reference Spectrum
 
 For finite preAPS models, the hierarchy of reference strengths is captured by
@@ -349,6 +696,49 @@ A graph-shaped reference system is best represented as an indexed APS over the
 category of finite dependency graphs. Reindexing along graph morphisms should
 model forgetting variables, duplicating variables, or merging reference nodes.
 
+### Conjecture 4: The Main Hierarchy Is Strict over Natural Finite or Computable Classes
+
+The hierarchy
+
+$$
+\mathrm{FSR}
+\Rightarrow
+\mathrm{MR}_\omega
+\Rightarrow
+\mathrm{MR}_{<\omega}
+\Rightarrow
+\mathrm{SR}(C)
+\Rightarrow
+J
+\Rightarrow
+\mathrm{FG2}
+\Rightarrow
+\mathrm{G2}
+\Rightarrow
+\mathrm{Taut}
+$$
+
+should admit strict separations by a mixture of finite APS/preAPS models,
+computable periodic models, and continuous/domain-theoretic models.
+
+### Conjecture 5: The SR/MR Axis Is Independent from the G2 Axis
+
+There should be APS/preAPS models realizing the following combinations:
+
+$$
+\mathrm{SR}\wedge\neg\mathrm{MR}_2,
+\qquad
+\neg\mathrm{SR}\wedge\mathrm{MR}_2,
+\qquad
+\mathrm{FG2}\wedge\neg\mathrm{MR}_2,
+\qquad
+\mathrm{MR}_2\wedge\neg\mathrm{FG2}.
+$$
+
+The new Drive material strongly suggests that the first combination is already
+realized by finite APS models, while the broad hierarchy PDF gives instance
+level examples motivating the second.
+
 ## Relation to Existing Notes
 
 - `self-existence-sentences.md` treats self-existence and diagonal sentences.
@@ -359,6 +749,9 @@ model forgetting variables, duplicating variables, or merging reference nodes.
   parameterized and graph-indexed reference.
 - `smullyan-lawvere-categorical-diagonalization.md` gives the substitution and
   quotation machinery needed to construct such systems.
+- `local-fg2-pullback-aps-zoo.md` now gives a theoremhood-only comparison
+  semantics that may be relevant when mutual-reference systems fail to collapse
+  back into ordinary self-reference.
 
 ## Verification Tasks
 
@@ -370,6 +763,18 @@ model forgetting variables, duplicating variables, or merging reference nodes.
    - mutual reference from FG2;
    - all-level nFG2 from syntactic fixed-point existence away from the
      $T$-orbit.
-4. Formalize graph-shaped reference systems as an indexed APS construction.
-5. Re-export the source share and insert any missing examples or terminology
+4. Reconstruct the finite APS witness $M_5$ from `selfref_mutref.pdf` directly
+   in `code/models/`, together with a checker for `SR`, `MR_2`, and the
+   unary-signature collapse conditions.
+5. Translate the Lopez/product obstruction into repository language:
+   - identify the precise fixed-point property used by the continuous witness;
+   - record how product failure corresponds to `SR` without `MR_2`.
+6. Formalize graph-shaped reference systems as an indexed APS construction.
+7. Re-export the source share and insert any missing examples or terminology
    from the original Project discussion.
+8. Record an explicit hierarchy of principles
+   $\mathrm{FSR}, \mathrm{MR}_n, \mathrm{Per}_n, \mathrm{Fix}_{\ge \kappa}$ in
+   the repository definitions file and align the note names with that scheme.
+9. Search for a finite witness with
+   $\mathrm{Per}_2$ but not $\mathrm{Per}_1$, and compare it to the existing
+   `nFG2` and detached-fixed-point zoo models.

@@ -131,6 +131,85 @@ Top-level subfolders:
   `\boxtimes`-fixed point, because `p=\boxtimes p` together with A4 and the
   incompatibility axiom collapses `p` to `\bot`.
 
+### ChatGPT delta on 2026-06-13
+
+- `selfref_mutref.pdf` (`created 2026-06-12T07:23:11Z`) directly advances the
+  self-vs-mutual-reference line. Its durable claims are:
+  `MR_2 => SR` whenever weakening/projections are available in the definable
+  clone; `SR <=> MR` in pure unary APS signatures; and a finite five-point APS
+  witness `M_5` satisfying `SR /\ not MR_2`, separating the two schemes even
+  under A1-A4.
+- The same PDF also gives a topological/continuous witness `ALop`, reframing
+  `SR` versus `MR_2` as a fixed-point-property failure for products. This is a
+  new bridge between the repository's syntax-side hierarchy and the
+  topology/domain semantics line.
+- `ams_aps_self_reference_hierarchy.pdf` (`created 2026-06-12T19:30:42Z`) is a
+  broader survey-style synthesis from `Taut` up to full self-reference,
+  periodic and mutual reference, cardinal fixed-point strata, and
+  Lawvere-Smullyan code-space principles. It overlaps substantially with
+  existing local notes, but it is still a useful durable index item for the
+  hierarchy program.
+
+### ChatGPT delta on 2026-06-12
+
+- `ams_aps_self_reference_hierarchy.pdf` was newly created in
+  `ChatGPT_Research` at `2026-06-12T19:30:42Z`. It upgrades the old
+  self/mutual-reference handoff into a broad survey of the incompleteness
+  hierarchy from tautological validity up to full self-reference.
+- The key new structural line is an explicit implication chain
+  `FSR => MR_omega => MR_<omega => SR(C) => J => FG2 => G2 => Taut`, together
+  with separation tasks showing that periodic self-reference, mutual
+  reference, fixed-point cardinality, closure ordinals, and code-space
+  diagonalization are distinct axes rather than minor variants of one unary
+  fixed-point principle.
+- The same PDF consolidates the finite-model search program already spread
+  across repository notes: two-point inversion, three-point chain/lock,
+  A3-dropping fixed-point countermodels, star-like many-fixed-point models, and
+  periodic APS/cycle models all serve as witnesses separating the hierarchy's
+  layers.
+
+- `abstract_self_reference_classification_ams_aps_residuated.pdf` and
+  `aps_abs_resaps_g2_zoo_report.pdf` were created later on `2026-06-12`. They
+  reorganize the repository's existing ABS/APS/ResAPS landscape into a layered
+  "G2-ZOO" format, with explicit separation tables for Jeroslow fixed points,
+  Loeb, Santa Claus, cut phenomena, and analytic/residuated countermodels. They
+  appear to be synthesis documents rather than single new theorems, but they
+  are useful as durable cross-note indexes.
+
+- `mnd4_relative_ams_variable_research_notes.pdf` (`created 2026-06-12T21:33:47Z`)
+  extends the earlier `Relative MND4-APS` line to domains with proposition
+  variables. Its main new point is that variables themselves are not the
+  obstacle: the collapse occurs only when variable-bearing formulas become
+  theoremhood elements of the safe fragment, or when full APS-style A4 is
+  imposed on the ambient layer. This refines the no-leak obstruction from a
+  fixed-point-only issue into a definability/axiomatization issue.
+
+- `material_predicative_comprehension_nonclassical.pdf`
+  (`created 2026-06-12T21:55:10Z`) broadens the old APS/monad/effects line into
+  an `AMS/MPC` package linking Pakhomov-Visser predicative comprehension,
+  Beklemishev-Shamkanov APS, and resource-sensitive membership. The key new
+  proposal is an extensionality-collapse dichotomy: self-comprehension becomes a
+  G2-style obstruction exactly when observation, extensionality, and hidden
+  duplication are strong enough to turn membership tokens back into ordinary
+  truth.
+
+### ChatGPT delta on 2026-06-13
+
+- `aps_classification.pdf` was created in `ChatGPT_Research` at
+  `2026-06-13T08:21:54Z`. It is a large classification draft spanning finite,
+  countable, and continuum-sized AMS/APS/ResAPS models. The most useful durable
+  points for the current repository are:
+  - explicit finite-count claims for small cardinalities and finite residuated
+    chains;
+  - a tame-versus-wild classification slogan for APS isomorphism problems;
+  - a sharper split between finite-model enumeration, countable essential
+    infinitude via closed-term algebras, and continuum/domain/set-theoretic
+    semantics.
+- The same PDF looks closer to a synthesis/monograph chapter than to a single
+  note-local theorem, so the immediate repository action is indexing plus
+  selective extraction into existing notes rather than creating a new standalone
+  note for every section.
+
 `ChatGPT_Study` currently contains:
 
 - aal_japanese_notes.pdf
