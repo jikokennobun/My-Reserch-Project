@@ -1,5 +1,38 @@
 # Research Log
 
+## 2026-06-15 (Research Project relay sync, no-source-delta pass)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-15`. The local ChatGPT Project inbox still contained the same `3` supported PDF artifacts, so `artifacts/reports/chatgpt-project-artifact-sync.csv` stayed materially unchanged while `artifacts/pdf/manifest.csv` refreshed collection and backup timestamps to `2026-06-15T01:40:32+09:00`.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` and revalidated all `23` watched `chatgpt.com/share/...` links at `2026-06-15T01:40:43+09:00`. Every watched share remained `unchanged`, so there was no share-side transcript delta to reconstruct in this pass.
+- Queried the connected Google Drive research and reference roots for files created or modified after the previous automation run (`2026-06-14T10:11:14.624Z`). The Drive search returned no newer non-folder files on either `createdTime` or `modifiedTime`, so there was no new research PDF, slide deck, Gemini output, Claude output, or reference paper to ingest or index in this pass.
+- Because both the watched-share layer and the Drive layer were source-stable, this relay pass made no research-note, Drive-index, or research-question edits beyond refreshing the durable watch state and recording the no-delta result here.
+
+## 2026-06-14 (Autonomous discussion Pass 82)
+
+- **Pass 82** (autonomous discussion, counter 82->83): tested the Whittaker and
+  archimedean residues of the maximally degenerate solid Borel principal
+  series. Since `I(s)=chi_s` is trivial on `U=epsilon`, nontrivial
+  Whittaker/generalized-Whittaker functionals vanish; only the constant term
+  survives. The Rosser torsor is carried by the unipotent shear parameter
+  `U=epsilon`, not by a generic Whittaker coefficient. Adding the real place
+  gives the exact solenoid sequence `0 -> epsilon -> (R x Zhat)/Z -> R/Z -> 0`,
+  restoring global adelic duality for `A/Q` while leaving the finite-prime
+  no-flip wall intact. Machine-verified `code/scripts/check-pass82.py` ->
+  `artifacts/reports/pass82-whittaker-archimedean-repair-check.json` (PASS).
+
+## 2026-06-14 (Autonomous discussion Pass 81)
+
+- **Pass 81** (autonomous discussion, counter 81->82): read the solid Borel
+  `B = Q^x |x epsilon = Sp(H)` as a maximally degenerate principal series.
+  Since `Sp(H)=B`, `I(s)=Ind_B^Sp(H)(chi_s)` collapses to the inducing
+  character, the flag variety is a point, and the standard Weyl/intertwining
+  operator does not exist because the opposite unipotent is
+  `Hom_Solid(epsilon,Q)=0`. Finite levels still have Fourier intertwiners and
+  Gauss-sum `c`-factors; the functional equation dies only in the solid limit.
+  Machine-verified `code/scripts/check-pass81.py` ->
+  `artifacts/reports/pass81-degenerate-principal-series-functional-equation-check.json`
+  (PASS).
+
 ## 2026-06-14 (Research Project relay sync, domain-theory/fixed-point-space update)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-14`. The local ChatGPT Project inbox still contained the same `3` supported PDF artifacts, so `artifacts/reports/chatgpt-project-artifact-sync.csv` stayed content-stable while `artifacts/pdf/manifest.csv` refreshed its collection and backup timestamps to `2026-06-14T06:39:58`.
