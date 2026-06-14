@@ -1,5 +1,13 @@
 # Research Log
 
+## 2026-06-15 (Research Project relay sync, MND4/collapse update)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-15`. The local ChatGPT Project inbox still contained the same `3` supported PDF artifacts, so `artifacts/reports/chatgpt-project-artifact-sync.csv` had no material content change while `artifacts/pdf/manifest.csv` refreshed collection and backup timestamps.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` and revalidated all `23` watched `chatgpt.com/share/...` links at `2026-06-15T07:40:51+09:00`. Every watched share remained `unchanged`, so there was no share-side transcript delta to reconstruct in this pass.
+- Queried the connected Google Drive research and reference roots for files created or modified after the previous automation run (`2026-06-14T16:39:40.833Z`). The reference root had no newer relevant files, while `ChatGPT_Research` contained two new durable PDFs: `mnd4_residuated_ams_independence_report.pdf` and `box_neg_vs_boxtimes_models.pdf`.
+- Used those two PDFs to deepen `research/notes/mnd4-preaps-fixedpoint-obstruction.md` and `research/notes/provability-predicate-weak-aps.md`. The local notes now distinguish primitive `\boxtimes` from collapsed `\Box\neg`, record explicit finite and computable countermodels to the collapse axiom, and isolate the single-premise sharpness of the `M + N + D + 4 + FP + Ctr` contradiction together with the special role of non-extensional preorder countermodels for omitting `M`.
+- Updated `research/references/research-drive.md` with a new `2026-06-15 relay review` section indexing those PDFs and added a new active question to `research/ideas/research-questions.md` on the weakest conditions forcing `\boxtimes = \Box\neg`.
+
 ## 2026-06-15 (Research Project relay sync, no-source-delta pass)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-15`. The local ChatGPT Project inbox still contained the same `3` supported PDF artifacts, so `artifacts/reports/chatgpt-project-artifact-sync.csv` stayed materially unchanged while `artifacts/pdf/manifest.csv` refreshed collection and backup timestamps to `2026-06-15T01:40:32+09:00`.

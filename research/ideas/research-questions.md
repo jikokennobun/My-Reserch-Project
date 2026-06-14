@@ -2,6 +2,38 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-15: when does primitive refutability collapse to provability of negation?)**
+  The new Drive PDFs `box_neg_vs_boxtimes_models.pdf` and
+  `mnd4_residuated_ams_independence_report.pdf` expose a gap that several older
+  notes blurred. Open:
+  (i) classify the weakest extra hypotheses on a negation-equipped APS forcing
+  `\boxtimes x = \Box\neg x` for all `x`;
+  (ii) determine whether the needed hypotheses are best expressed as
+  extensionality of `\Box` on provable equivalence classes, as a classical
+  explosion package, or as a reflective/no-leak condition on a safe fragment;
+  (iii) build finite witness families separating primitive `\boxtimes` fixed
+  points, collapsed `\Box\neg` fixed points, and full six-condition MND4
+  inconsistency.
+
+- **(Pass 82 -> 83: global solenoid versus finite-prime phantom)**
+  Passes 80-82 settled the automorphic side of the solid phantom line.  Pass 80
+  showed $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, not
+  $\mathrm{SL}_2$; Pass 81 showed the principal series is maximally
+  degenerate, $I(s)=\chi_s$, with no Weyl functional equation; Pass 82 showed
+  nontrivial Whittaker functionals vanish because $I(s)$ is trivial on
+  $U=\epsilon$.  Adding the real place gives the full adelic solenoid
+  $$\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\cong\mathbb A/\mathbb Q$$
+  with exact sequence
+  $$0\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to\Sigma\to\mathbb R/\mathbb Z\to0.$$
+  Open:
+  (i) decide whether $\Sigma\to\mathbb R/\mathbb Z$ splits in any
+  solid/condensed sense compatible with the Borel action;
+  (ii) determine whether global Fourier transform on $\Sigma$ induces only the
+  constant term on $\epsilon$, or a boundary class measuring the lost
+  finite-prime Weyl flip;
+  (iii) formulate the exact triangle comparing global adelic self-duality with
+  the finite-prime no-flip wall.
+
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and
   `ams_aps_domain_theory_research_note.pdf` suggest a sharper meta-question
@@ -27,7 +59,7 @@
   (iii) formalize the share's Tukey-style witness-family invariant
   `\kappa(R)` by building bouquet APS realizations of small relational systems.
 
-- **(Pass 80 -> 81: automorphic shadow of the solid Borel; the functional-equation wall)**
+- **(Resolved Passes 80-82: automorphic shadow of the solid Borel; functional-equation wall)**
   Pass 80 computed $\mathrm{Sp}(H)$ for the hyperbolic plane $H=\epsilon\oplus\mathbb Q$ and settled
   the metaplectic question. **Resolved:** $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$ forces
   every solid endomorphism of $H$ to be upper-triangular (Thm 80a), so $\mathrm{Sp}(H)=B=\mathbb
@@ -39,15 +71,12 @@
   The **precise wall** is that one-sided vanishing ($\epsilon$ reflexive but not $\otimes$-dualizable)
   — explicitly **not** the degeneracy of $b$, which the Pass-79 Next step had guessed; the shear-by-$b$
   unipotent survives in $B$, only the inverse intertwiner $\epsilon\to\mathbb Q$ is absent.
-  **Now open:**
-  (i) realize the $B$-action on sections over the fixed polarization $\epsilon$ and decide whether $B$
-  carries the algebraic shadow of a *degenerate principal series* / Eisenstein datum;
-  (ii) is the absent cross-polarization intertwiner $\in\mathrm{Hom}(\epsilon,\mathbb Q)=0$ exactly the
-  obstruction to a *self-dual functional equation* relating the two polarizations;
-  (iii) is "no Fourier flip" the representation-theoretic face of the Pass-51 Löb (integral) vs Rosser
-  (non-integral-unit) dividing line, one functor-level up;
-  (iv) is *reflexive-but-not-dualizable* a clean structural invariant separating $\epsilon$ from
-  genuinely dualizable phantoms?
+  **Resolved by Passes 81-82:**
+  the $B$-action is the maximally degenerate principal series $I(s)=\chi_s$;
+  $\bar U=\mathrm{Hom}(\epsilon,\mathbb Q)=0$ is exactly the missing standard intertwiner and functional
+  equation wall; nontrivial Whittaker functionals vanish, leaving only the constant term; the remaining
+  question is now the global solenoid $\Sigma=\mathbb A/\mathbb Q$ versus finite phantom $\epsilon$
+  comparison tracked above.
 
 - **(Drive supplement 2026-06-13: extensionality-collapse dichotomy for APS comprehension)**
   The new Drive PDF `material_predicative_comprehension_nonclassical.pdf`

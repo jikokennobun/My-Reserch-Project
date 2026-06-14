@@ -272,6 +272,31 @@ Top-level subfolders:
   makes it unsuitable as a stable citation target until it is manually renamed
   or inspected.
 
+### ChatGPT delta on 2026-06-15 relay review
+
+- A new relay review on `2026-06-15` rechecked all `23` watched shares at
+  `2026-06-15T07:40:51+09:00`; every watched share remained `unchanged`, so the
+  relay delta came entirely from new durable Drive PDFs rather than from a
+  changed shared conversation snapshot.
+- `mnd4_residuated_ams_independence_report.pdf`
+  (`created 2026-06-14T19:23:41.684Z`) is the sharpest durable follow-up to the
+  MND4/no-leak line. It proves that the six-condition contradiction
+  `M + N + D + 4 + FP + Ctr => T <= bot` is single-premise sharp inside the
+  appropriate class of internal residuated AMS structures, and it isolates the
+  omission of `M` as the unique case that requires a genuinely preorder-valued,
+  non-extensional countermodel.
+- `box_neg_vs_boxtimes_models.pdf`
+  (`created 2026-06-14T19:22:05.809Z`) records a parallel but distinct point:
+  the collapse axiom `\boxtimes x = \Box \neg x` is not forced by APS A1--A4,
+  even in tiny complete models and even when a classical involutive negation is
+  externally available. The note provides two-point, three-point, Boolean, and
+  computable interval countermodels.
+- The right local repository landing sites for these PDFs are
+  `research/notes/mnd4-preaps-fixedpoint-obstruction.md` and
+  `research/notes/provability-predicate-weak-aps.md`, because the new material
+  is about no-leak/extensional transport and the primitive-refutability versus
+  provability-of-negation split, not about a new standalone hierarchy note.
+
 `ChatGPT_Study` currently contains:
 
 - aal_japanese_notes.pdf

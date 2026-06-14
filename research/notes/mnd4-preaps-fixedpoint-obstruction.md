@@ -8,6 +8,9 @@
 - Drive supplements used for mathematical reconstruction on 2026-06-11:
   - [Double APS と MND4-preAPS における固定点・崩壊・定義可能性](https://drive.google.com/file/d/1AwBiM1z2A7fOL4RSe3izVG6w7P64Pc84/view?usp=drivesdk)
   - [Relative MND4-APS](https://drive.google.com/file/d/1dCRpoENyBwlS8Xzqc6YYI935nXgSyScM/view?usp=drivesdk)
+- Additional Drive supplements used on 2026-06-15:
+  - [mnd4_residuated_ams_independence_report.pdf](https://drive.google.com/file/d/1leGBdBmDmDe0uVOJdraM1o1M-omLrNzB)
+  - [box_neg_vs_boxtimes_models.pdf](https://drive.google.com/file/d/1iLdy6exa3Wixuvdnqiofyjkyv03aT7wn)
 - The discussion below separates direct extraction from these Drive PDFs from reconstruction of how they refine the original shared-link topic.
 
 ## Abstract
@@ -64,6 +67,28 @@ The main ambiguity is whether $\boxtimes$ is:
 The Drive supplements use "MND4-preAPS" for a weaker structure than a full APS.
 Following that convention, I will write $\Box$ for provability and reserve
 $\boxtimes$ for abstract refutability.
+
+### Collapse Axiom for Negated Provability
+
+The new June 14 Drive note isolates an additional principle that the older
+handoff only used informally:
+
+$$
+\boxtimes x = \Box \neg x.
+$$
+
+Call this the **collapse axiom**. The point of the new supplement is that the
+bare APS axioms A1--A4 do not imply it, even in tiny complete models, and even
+when a classical involutive negation is externally available. Thus the two
+fixed-point problems
+
+$$
+p = \boxtimes p
+\qquad\text{and}\qquad
+p = \neg\Box p
+$$
+
+must be kept separate until the collapse axiom is explicitly imposed.
 
 ## Definitions
 
@@ -230,6 +255,61 @@ $$
 Equivalently: the semantic space supporting self-reference must be larger than
 the syntactic or theorem-safe core.
 
+### Proposition 4. The six-condition contradiction is single-premise sharp.
+
+Let
+
+$$
+\Gamma=\{M,N,D,4,FP,Ctr\}.
+$$
+
+The June 14 independence report shows that inside the class of internal
+preorder-based residuated AMS structures, every \(\Sigma\in\Gamma\) can be
+omitted while keeping the remaining five conditions and avoiding collapse
+\(T\le\bot\). Hence
+
+$$
+M+N+D+4+FP+Ctr \Longrightarrow T\le\bot
+$$
+
+is single-premise sharp.
+
+#### Proof sketch
+
+The report gives explicit witnesses:
+
+$$
+\begin{aligned}
+&A_{-N} &&\text{: two-point Boolean algebra with } \Box x=0,\\
+&A_{-D} &&\text{: two-point Boolean algebra with } \Box x=1,\\
+&A_{-4} &&\text{: four-point Boolean algebra with } \Box p=q,\ \Box q=0,\\
+&A_{-FP} &&\text{: two-point Boolean algebra with } \Box=\mathrm{id},\\
+&A_{-Ctr} &&\text{: three-point Lukasiewicz chain with } \Box=\mathrm{id},\\
+&A_{-M} &&\text{: a preorder-valued up-set/Heyting witness where }x={}_S y
+\text{ does not force }\Box x={}_S \Box y.
+\end{aligned}
+$$
+
+The first five already live in ordinary finite ordered algebras. The
+\(M\)-countermodel is the delicate one: it requires a genuinely preorder-valued
+presentation where provable equivalence is weaker than equality of points.
+
+### Proposition 5. The role of \(M\) is extensional transport, not mere monotonicity.
+
+The same report separates three ambient classes:
+
+1. internal preorder AMS, where \(x={}_S y\) does not force
+   \(\Box x={}_S \Box y\);
+2. \(\Box\)-extensional AMS, where
+   \(x={}_S y \Rightarrow \Box x={}_S \Box y\);
+3. fully monotone/extensional AMS, where
+   \(x\le y \Rightarrow \Box x\le \Box y\).
+
+In class (1), \(M\) is genuinely independent. In classes (2) and (3), the
+Godel-style contradiction can be recovered without postulating \(M\) as a
+separate schema, because the fixed-point equivalence
+\(p={}_S\neg\Box p\) already transports through \(\Box\).
+
 ## Examples and Counterexamples
 
 ### Example 1. Three-valued Lukasiewicz witness
@@ -287,6 +367,54 @@ The relative MND4 note builds small two-level toy models where:
 
 Such models witness that "external self-reference" is algebraically coherent
 provided the rules cannot leak from $D$ onto $p$.
+
+### Example 4. Collapse failure in tiny APS models
+
+The second June 14 supplement gives direct counterexamples to the collapse
+axiom \(\boxtimes x=\Box\neg x\).
+
+- Two-point APS:
+
+  $$
+  L=\{\bot<T\},\qquad \Box=\mathrm{id},\qquad \boxtimes x=T.
+  $$
+
+  Then
+
+  $$
+  \Box\neg T=\Box\bot=\bot\neq T=\boxtimes T.
+  $$
+
+- Three-point APS:
+
+  $$
+  L=\{\bot<a<T\},\qquad \Box=\mathrm{id},\qquad
+  \boxtimes T=a,\ \boxtimes a=T,\ \boxtimes\bot=T.
+  $$
+
+  With \(\neg a=a\), one gets
+
+  $$
+  \Box\neg a=a\neq T=\boxtimes a.
+  $$
+
+- Rational interval model:
+
+  $$
+  L=\mathbb Q\cap[0,1],\qquad \Box=\mathrm{id},\qquad
+  \boxtimes x=\max\!\left(\tfrac12,1-x\right).
+  $$
+
+  For every \(x>\tfrac12\),
+
+  $$
+  \Box\neg x = 1-x < \tfrac12 = \boxtimes x.
+  $$
+
+These examples explain why the MND4 collapse theorem is not merely a theorem
+about primitive APS refutability. It is a theorem about a stronger
+identification of refutability with negated provability, together with the
+six-condition package above.
 
 ### Counterexample schema
 
@@ -353,3 +481,10 @@ one modal axiom.
 4. Relate the relative-fragment formulation to the repository's broader A3/A4
    and cut-stability program: is "safe fragment versus ambient self-reference"
    another instance of the same saturation-versus-closure tension?
+5. Determine the weakest additional hypotheses under which the collapse axiom
+
+   $$
+   \boxtimes x=\Box\neg x
+   $$
+
+   becomes derivable from APS-style structure rather than imposed by hand.

@@ -4,6 +4,11 @@ Source: https://chatgpt.com/share/6a1ac9ff-0b20-83a5-8adf-2ce37a8708d1
 
 Imported: 2026-05-30
 
+Drive supplements used on 2026-06-15:
+
+- [box_neg_vs_boxtimes_models.pdf](https://drive.google.com/file/d/1iLdy6exa3Wixuvdnqiofyjkyv03aT7wn)
+- [mnd4_residuated_ams_independence_report.pdf](https://drive.google.com/file/d/1leGBdBmDmDe0uVOJdraM1o1M-omLrNzB)
+
 ## Core Idea
 
 This thread treats Feferman-, Shavrukov-, Rosser-, and KD-style provability
@@ -32,6 +37,17 @@ thread is sharper: nonstandard provability predicates should be used as a
 calibration scale for weakened APS axioms. They are not merely failures of the
 standard theorem; they mark which exact derivability or introspection
 conditions are doing the work.
+
+The new June 14 Drive supplements sharpen this further. Even when an APS is
+equipped with a classical involutive negation, the identity
+
+$$
+\boxtimes x=\Box\neg x
+$$
+
+is not automatic. Weak-APS analysis must therefore distinguish primitive
+refutability, negated provability, and additional collapse axioms identifying
+the two.
 
 ## APS Translation
 
@@ -214,6 +230,86 @@ $$
 
 behavior.
 
+## Collapse Axiom Versus Primitive Refutability
+
+The new Drive note `box_neg_vs_boxtimes_models.pdf` can be summarized as the
+claim that
+
+$$
+\forall x\ (\boxtimes x=\Box\neg x)
+$$
+
+is an extra principle about a negation-equipped APS, not a theorem of A1--A4.
+
+### Proposition: APS does not force \(\boxtimes=\Box\neg\)
+
+There are complete APS models satisfying A1--A4 together with an involutive
+negation \(\neg\) for which \(\boxtimes x\neq\Box\neg x\) for some \(x\).
+
+#### Example 1. Two-point APS
+
+Let
+
+$$
+L=\{\bot<T\},\qquad \Box=\mathrm{id},\qquad \boxtimes x=T,
+$$
+
+with \(\neg T=\bot\) and \(\neg\bot=T\). Then A1--A4 hold, but
+
+$$
+\Box\neg T=\Box\bot=\bot\neq T=\boxtimes T.
+$$
+
+#### Example 2. Three-point APS
+
+Let
+
+$$
+L=\{\bot<a<T\},\qquad \Box=\mathrm{id},
+$$
+
+and define
+
+$$
+\boxtimes T=a,\qquad \boxtimes a=T,\qquad \boxtimes\bot=T,
+$$
+
+with \(\neg a=a\). Then the APS axioms still hold, while
+
+$$
+\Box\neg a=a\neq T=\boxtimes a.
+$$
+
+#### Example 3. Computable interval APS
+
+Let
+
+$$
+L=\mathbb Q\cap[0,1],\qquad \Box=\mathrm{id},\qquad
+\boxtimes x=\max\!\left(\tfrac12,1-x\right),\qquad \neg x=1-x.
+$$
+
+This is a computable complete APS. For every \(x>\tfrac12\),
+
+$$
+\Box\neg x=1-x<\tfrac12=\boxtimes x.
+$$
+
+Hence the collapse fails on an infinite but elementary analytic model as well.
+
+### Why this matters for weak provability predicates
+
+Weak or nonstandard provability predicates are often presented as failures of
+introspection or necessitation. The new supplements show there is another axis:
+whether refutability is treated as a primitive operator or forced to collapse
+to provability of negation. Rosser- and KD-like examples can therefore fail
+full APS behavior in at least three logically distinct ways:
+
+1. A4 can fail while \(\boxtimes\) remains primitive.
+2. The collapse \(\boxtimes=\Box\neg\) can fail even when A1--A4 hold.
+3. The six-condition MND4 contradiction can fail because the ambient semantics
+   does not transport fixed-point equivalences through \(\Box\).
+
 ## Research Reading
 
 The thread suggests a "weak APS" layer:
@@ -233,3 +329,5 @@ The thread suggests a "weak APS" layer:
 - Avoid treating Feferman/Shavrukov predicates as standard APS examples until
   the A4 failure mode is explicitly marked.
 - Extend `check-g2-zoo.py` with an `A4Profile` or weak-APS report.
+- Add a `CollapseProfile(S)=\{x:\boxtimes x=\Box\neg x\}` computation for
+  negation-equipped finite models, separate from `A4Profile`.
