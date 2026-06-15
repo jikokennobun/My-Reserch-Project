@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-15 (Research Project relay sync, no-delta verification pass)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-15`. The local ChatGPT Project inbox still contained the same `3` supported PDF artifacts, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` refreshed collection and backup timestamps only.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` and revalidated all `23` watched `chatgpt.com/share/...` links at `2026-06-15T14:30:31+09:00`. Every watched share remained `unchanged`, so there was no share-side transcript delta to reconstruct in this pass.
+- Queried the connected Google Drive research and reference roots for non-folder files created or modified after the last committed relay pass (`2026-06-15T07:48:56+09:00`). Both the folder-scoped and broader Drive searches returned no newer relevant files, so there was no new research PDF, slide deck, Gemini output, Claude output, or reference paper to ingest or index in this pass.
+- Because the watched-share layer and the Drive layer were both source-stable, this relay pass made no research-note, Drive-index, or research-question edits beyond refreshing the durable watch state and recording the no-delta result here.
+
 ## 2026-06-15 (Research Project relay sync, MND4/collapse update)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-15`. The local ChatGPT Project inbox still contained the same `3` supported PDF artifacts, so `artifacts/reports/chatgpt-project-artifact-sync.csv` had no material content change while `artifacts/pdf/manifest.csv` refreshed collection and backup timestamps.
