@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-17 (Research Project relay sync, changed-share but no durable delta)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-17T01:09:37+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` and revalidated all `23` watched `chatgpt.com/share/...` links at `2026-06-17T01:10:11+09:00`. The watch state moved to `21` `unchanged` shares and `2` `changed` shares: `research/notes/aps-monad-computational-effects.md` and `research/notes/local-fg2-pullback-aps-zoo.md`.
+- Direct transcript extraction of those two changed shares was not possible from the current automation sandbox: local `Invoke-WebRequest` and `curl.exe` attempts to `chatgpt.com` failed, and no newer durable PDF, slide deck, Gemini output, Claude output, or reference file appeared in the connected Google Drive research/reference roots after the previous run timestamp `2026-06-16T10:07:16Z`.
+- Updated the two linked notes with exact provenance for the `2026-06-17` fingerprint change and explicitly recorded that a fresh shared export or `sandbox:/mnt/data/...` artifact now needs to be routed through the ChatGPT Project inbox before any mathematically faithful transcript reconstruction can proceed.
+
 ## 2026-06-16 (Research Project relay sync, evening no-delta pass)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-16T18:56:27+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.

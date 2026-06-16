@@ -10,6 +10,13 @@
   below rather than from a fresh transcript export.
 - Drive supplement used for the 2026-06-13 upgrade:
   [material_predicative_comprehension_nonclassical.pdf](https://drive.google.com/file/d/1D7BxuD6ZufI2P6mCaJyAAhvRIk9OEGeV/view?usp=drivesdk)
+- Relay watch update on 2026-06-17: the shared link fingerprint changed again
+  at `2026-06-17T01:10:11+09:00` in `records/logs/chatgpt-share-state.csv`,
+  but the current automation sandbox could not fetch the changed share body
+  directly from `chatgpt.com` for transcript-level extraction.
+- Drive check on 2026-06-17: no newer research or reference Drive files were
+  visible after `2026-06-16T10:07:16Z`, so this note still reflects the latest
+  durable reconstruction rather than a fresh share snapshot.
 - The discussion below separates the older monad/effects handoff theme from the
   newer Drive reconstruction, which reframes that theme through abstract monadic
   structure, predicative comprehension, and resource-sensitive self-reference.
@@ -393,3 +400,7 @@ is close to sufficient for G2. The necessary extra ingredients are:
 4. Decide whether the resource-sensitive comprehension story can be connected
    directly to the repository's A3-stability/cut-stability program, or whether
    it constitutes a genuinely different obstruction mechanism.
+5. Route a fresh export of the changed 2026-06-17 share snapshot, or any
+   `sandbox:/mnt/data/...` artifact referenced by it, through the ChatGPT
+   Project inbox so this note can be upgraded from durable reconstruction to a
+   direct transcript-backed import.

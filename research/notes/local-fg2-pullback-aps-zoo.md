@@ -19,6 +19,17 @@ Relay update on 2026-06-11:
   `relative_ams_variable_model.pdf` in the Drive `ChatGPT_Research` folder
   (created `2026-06-11T06:21:18Z`).
 
+Relay update on 2026-06-17:
+
+- `records/logs/chatgpt-share-state.csv` again marked this share as `changed`
+  at `2026-06-17T01:10:11+09:00`.
+- The current automation sandbox could not fetch the changed `chatgpt.com`
+  payload directly, so the new delta is presently known only as a fingerprint
+  change rather than as an extractable transcript body.
+- The connected Google Drive research and reference roots had no newer
+  relevant files after `2026-06-16T10:07:16Z`, so there was no durable PDF or
+  slide supplement available to refine the reconstruction further in this pass.
+
 ## Abstract
 
 This note develops a local and relative version of FG2 suitable for comparing
