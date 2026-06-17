@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-18 (Research Project relay sync, watch state normalized)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-18T00:59+09:00`. The local ChatGPT Project inbox again exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` stayed materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` and revalidated all `23` watched `chatgpt.com/share/...` links at `2026-06-18T01:03:13+09:00`. Every watched share is now back to `unchanged`, so the transient `2026-06-17T01:10:11+09:00` two-share delta no longer has a durable changed-share payload requiring mathematical reconstruction in this pass.
+- Queried the connected Google Drive research/reference layer for non-folder files with `createdTime` or `modifiedTime` later than the previous automation handoff (`2026-06-17T10:01:47Z`). Those searches returned no newer relevant PDFs, slides, Gemini outputs, Claude outputs, or reference papers, so there was no new durable source material to ingest, index, or route through the artifact inbox.
+- Because the artifact inbox, watched-share layer, and Drive layer were all source-stable in this pass, the scoped relay update is limited to refreshing `records/logs/chatgpt-share-state.csv`, prepending the new durable watch snapshot to `records/logs/chatgpt-share-sync.md`, and recording the no-delta result here. The refreshed `artifacts/pdf/manifest.csv` was intentionally left out of the scoped relay commit because it reflects timestamp-only collection churn in an already dirty worktree.
+
 ## 2026-06-17 (Research Project relay sync, new residuated-AMS Drive supplement)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root in the current relay pass. The local ChatGPT Project inbox again exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
