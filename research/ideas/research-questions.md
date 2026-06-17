@@ -2,6 +2,19 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-17: when do Santa Claus, formalized Loeb, and primitive fixed points separate?)**
+  The new Drive PDF `ams_residuated_complete_analysis.pdf` shows that bounded
+  residuated AMS cleanly separates three diagonal packages that several older
+  notes blurred together: `SC_\Box`, `FL_\Box/L_\Box`, and
+  `FP_{\boxtimes} <=> FG2_{\boxtimes}`. Open:
+  (i) classify the weakest non-bounded or non-residuated settings where the
+  bounded equivalence `FP_{\boxtimes} <=> FG2_{\boxtimes}` breaks again;
+  (ii) isolate a sharp finite-model or proof-theoretic witness for
+  `SC_\Box /\ not FL_\Box` under weak `K/C` or weak `4`;
+  (iii) decide whether Rosser- or Feferman-style weak provability predicates
+  realize a stable region with `SC_\Box`, primitive `\boxtimes`, and
+  `\neg FG2_{\boxtimes}` simultaneously.
+
 - **(Drive supplement 2026-06-15: when does primitive refutability collapse to provability of negation?)**
   The new Drive PDFs `box_neg_vs_boxtimes_models.pdf` and
   `mnd4_residuated_ams_independence_report.pdf` expose a gap that several older

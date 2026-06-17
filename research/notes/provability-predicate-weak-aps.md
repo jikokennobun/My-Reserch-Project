@@ -9,6 +9,10 @@ Drive supplements used on 2026-06-15:
 - [box_neg_vs_boxtimes_models.pdf](https://drive.google.com/file/d/1iLdy6exa3Wixuvdnqiofyjkyv03aT7wn)
 - [mnd4_residuated_ams_independence_report.pdf](https://drive.google.com/file/d/1leGBdBmDmDe0uVOJdraM1o1M-omLrNzB)
 
+Drive supplement used on 2026-06-17:
+
+- [ams_residuated_complete_analysis.pdf](https://drive.google.com/file/d/16eUowaemXhBty7G90Z7SpgVIVlbR_g0p/view?usp=drivesdk)
+
 ## Core Idea
 
 This thread treats Feferman-, Shavrukov-, Rosser-, and KD-style provability
@@ -310,6 +314,180 @@ full APS behavior in at least three logically distinct ways:
 3. The six-condition MND4 contradiction can fail because the ambient semantics
    does not transport fixed-point equivalences through \(\Box\).
 
+## Residuated AMS Implication Package
+
+The new Drive note `ams_residuated_complete_analysis.pdf` organizes the
+provability/refutability landscape inside a bounded residuated AMS
+
+$$
+A=(L,\le,T,\bot,\wedge,\vee,\to,\Box,\boxtimes)
+$$
+
+with Heyting residual `\to`, provability operator `\Box`, and primitive
+refutability operator `\boxtimes`. Its main contribution is a cleaned-up
+implication diagram separating:
+
+- the APS axioms A1--A4;
+- modal closure principles `K_\Box`, `C_\Box`, and `4_\Box`;
+- the rule-level and formula-level Loeb principles;
+- primitive fixed points for `\boxtimes`;
+- Santa Claus solvability;
+- the G2 / FG2 package.
+
+### Definitions isolated by the supplement
+
+The supplement works with:
+
+$$
+L_\Box:\quad \forall x\,(\Box x\le x \Rightarrow T\le x),
+$$
+
+$$
+FL_\Box:\quad \forall x\, \Box(\Box x\to x)\le \Box x,
+$$
+
+$$
+FG2_{\boxtimes}:\quad \boxtimes\boxtimes T\le \boxtimes T,
+$$
+
+$$
+FP_{\boxtimes}:\quad \exists p\in L\ (p=\boxtimes p),
+$$
+
+and the Santa Claus scheme
+
+$$
+SC_\Box:\quad \forall y\in L\,\exists x\in L\ (x=\Box x\to y).
+$$
+
+This matters for weak APS because it keeps three distinct diagonal phenomena
+apart:
+
+1. `\boxtimes`-fixed points used in Beklemishev-Shamkanov style G2 arguments;
+2. `\Box`-based Santa Claus equations `x=\Box x\to y`;
+3. the collapse axiom `\boxtimes x=\Box\neg x`, which is still extra.
+
+### Proposition 1. In bounded residuated AMS, \(FP_{\boxtimes}\) and \(FG2_{\boxtimes}\) coincide under A1, A3, A4.
+
+The supplement gives the exact bounded-residuated version of the usual
+Beklemishev-Shamkanov kernel:
+
+$$
+A1+A3+A4 \vdash FP_{\boxtimes}\Rightarrow FG2_{\boxtimes}.
+$$
+
+If `p=\boxtimes p`, then A4 gives `p\le\Box p`, A3 pushes `p` below
+`\boxtimes T`, and A1 antitonicity yields
+`\boxtimes\boxtimes T\le \boxtimes p=p\le \boxtimes T`.
+
+What is new for this note is the converse direction in the bounded residuated
+setting. If the lattice has a genuine top `T`, then
+
+$$
+FG2_{\boxtimes}:\ \boxtimes\boxtimes T\le\boxtimes T
+$$
+
+already produces a fixed point by setting
+
+$$
+p:=\boxtimes T.
+$$
+
+Since `p\le T`, A1 antitonicity gives `\boxtimes T\le\boxtimes p`, while FG2
+gives `\boxtimes p=\boxtimes\boxtimes T\le p`. Hence
+
+$$
+p=\boxtimes p.
+$$
+
+So in this bounded residuated regime the correct package is
+
+$$
+A1+A3+A4 \vdash FP_{\boxtimes}\Longleftrightarrow FG2_{\boxtimes}.
+$$
+
+This is stronger than the old weak-APS slogan "fixed points may or may not
+yield FG2": they may fail in preAPS or non-bounded settings, but once the
+residuated Heyting structure and a top element are built in, the gap closes.
+
+### Proposition 2. \(FL_\Box\) is the strongest source among the \(\Box\)-side principles.
+
+The supplement proves
+
+$$
+FL_\Box \Rightarrow L_\Box,\qquad FL_\Box \Rightarrow SC_\Box,
+$$
+
+and, assuming A1, A3, A4,
+
+$$
+FL_\Box \Rightarrow FG2_{\boxtimes}.
+$$
+
+The second implication gives an explicit Santa Claus witness:
+
+$$
+s_y:=\Box y\to y,
+$$
+
+and shows
+
+$$
+s_y=\Box s_y\to y
+$$
+
+for each `y`. Santa Claus solvability is therefore not an alternative to
+formalized Loeb strength, but a consequence of it.
+
+Combined with the previous proposition and the standard A1+A2 step
+
+$$
+FG2_{\boxtimes}\Rightarrow G2,
+$$
+
+one gets the chain
+
+$$
+FL_\Box \Rightarrow L_\Box,\ SC_\Box,\ FG2_{\boxtimes},\ G2.
+$$
+
+### Proposition 3. Santa Claus is weak by itself, and \(D\) conflicts with nontrivial G2.
+
+The same supplement sharpens two points that matter for weak provability
+predicates.
+
+First, Santa Claus existence alone is too weak. It does not imply Loeb, FG2,
+or G2 without additional closure. The precise repair is:
+
+$$
+SC_\Box + K_\Box/C_\Box + 4_\Box \Rightarrow FL_\Box.
+$$
+
+So the missing strength is not diagonalization but positive introspection and
+modus-ponens closure on the `\Box` side.
+
+Second, the consistency-style collision axiom
+
+$$
+D_{\Box\boxtimes}:\quad \Box x\wedge \boxtimes x\le \bot
+$$
+
+is not a helper for G2. Under A2 and A4 it already yields
+
+$$
+\boxtimes T\le \bot,
+$$
+
+so if G2 also holds then
+
+$$
+T\le \bot.
+$$
+
+In other words, `D` lives on the consistency-statement side whose
+unprovability G2 is supposed to express. Treating `D` as if it strengthened a
+G2 package is conceptually backwards.
+
 ## Research Reading
 
 The thread suggests a "weak APS" layer:
@@ -331,3 +509,6 @@ The thread suggests a "weak APS" layer:
 - Extend `check-g2-zoo.py` with an `A4Profile` or weak-APS report.
 - Add a `CollapseProfile(S)=\{x:\boxtimes x=\Box\neg x\}` computation for
   negation-equipped finite models, separate from `A4Profile`.
+- Separate three axes in the checker and notes:
+  `SC_\Box`, `FL_\Box`, and `FP_{\boxtimes}/FG2_{\boxtimes}` should no longer
+  be treated as interchangeable diagonal phenomena.

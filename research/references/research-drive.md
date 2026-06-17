@@ -297,6 +297,41 @@ Top-level subfolders:
   is about no-leak/extensional transport and the primitive-refutability versus
   provability-of-negation split, not about a new standalone hierarchy note.
 
+### ChatGPT delta on 2026-06-17 relay review
+
+- The local ChatGPT Project artifact inbox was re-synced on `2026-06-17`. It
+  still contained the same `3` supported PDF artifacts, with `0` refreshed
+  slide imports, so there was no new artifact-inbox delta beyond
+  timestamp-level PDF collection churn.
+- The most recent successful watched-share pass remains the relay state at
+  `2026-06-17T01:10:11+09:00`: `21` shares unchanged and `2` shares changed
+  (`aps-monad-computational-effects.md`,
+  `local-fg2-pullback-aps-zoo.md`). In the current automation environment,
+  direct transcript extraction from those changed `chatgpt.com/share/...`
+  links is still blocked: the logged-out browser shell exposes no conversation
+  payload, and the PowerShell watcher stalls on live `Invoke-WebRequest`
+  calls.
+- The connected research/reference roots showed no newer top-level files after
+  the automation handoff timestamp `2026-06-16T22:08:33.884Z`, but the
+  `ChatGPT_Research` subtree did contain one new durable PDF:
+  `ams_residuated_complete_analysis.pdf`
+  (`created 2026-06-16T23:34:42.879Z`,
+  file id `16eUowaemXhBty7G90Z7SpgVIVlbR_g0p`).
+- That PDF is a substantial residuated-AMS synthesis rather than a duplicate
+  export. Its main durable contribution is a clean implication diagram for
+  A1--A4, `K`, `C`, `D`, Loeb, formalized Loeb, Santa Claus solvability,
+  primitive `\boxtimes`-fixed points, `FG2`, and `G2`.
+- The most useful extracted points are:
+  `FP_{\boxtimes} <=> FG2_{\boxtimes}` in bounded residuated AMS under
+  `A1+A3+A4`; `FL_\Box => L_\Box`, `SC_\Box`, and `FG2_{\boxtimes}`;
+  `SC_\Box + K/C + 4 => FL_\Box`; and `D` conflicts with any nontrivial `G2`
+  package rather than supporting it.
+- The natural local landing site is
+  `research/notes/provability-predicate-weak-aps.md`, because the new PDF
+  clarifies weak-provability calibration, Santa Claus versus Loeb strength, and
+  the exact place where primitive refutability diverges from
+  provability-of-negation collapse.
+
 `ChatGPT_Study` currently contains:
 
 - aal_japanese_notes.pdf

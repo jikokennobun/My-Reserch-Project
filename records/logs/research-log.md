@@ -1,5 +1,13 @@
 # Research Log
 
+## 2026-06-17 (Research Project relay sync, new residuated-AMS Drive supplement)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root in the current relay pass. The local ChatGPT Project inbox again exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
+- The watched-share layer did not yield a newer durable transcript snapshot in this pass. The most recent successful watch result remained the `2026-06-17T01:10:11+09:00` state (`21` unchanged, `2` changed), but fresh extraction of the two changed `chatgpt.com/share/...` bodies was still blocked in the current environment: the browser surface exposed only the logged-out shell, and the PowerShell watcher stalled on live `Invoke-WebRequest` calls.
+- Google Drive inspection after the automation handoff timestamp `2026-06-16T22:08:33.884Z` found no newer top-level research/reference-root files, but the nested `ChatGPT_Research` folder did contain one new durable PDF: `ams_residuated_complete_analysis.pdf` (`created 2026-06-16T23:34:42.879Z`).
+- Used that PDF to deepen `research/notes/provability-predicate-weak-aps.md`. The note now records the bounded-residuated equivalence `FP_{\boxtimes} <=> FG2_{\boxtimes}` under `A1+A3+A4`, the chain `FL_\Box => L_\Box`, `SC_\Box`, `FG2_{\boxtimes}`, and the fact that `SC_\Box` needs `K/C` plus `4` to recover formalized Loeb, while `D` conflicts with nontrivial G2 instead of strengthening it.
+- Updated `research/references/research-drive.md` to index the new PDF and added a new active question to `research/ideas/research-questions.md` on separating Santa Claus, formalized Loeb, and primitive `\boxtimes`-fixed-point packages outside the bounded residuated regime.
+
 ## 2026-06-17 (Research Project relay sync, changed-share but no durable delta)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-17T01:09:37+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
