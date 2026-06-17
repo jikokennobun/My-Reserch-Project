@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-18 (Research Project relay sync, share transport failure)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-18T07:02:00+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-18T07:02:00+09:00`. This pass did not produce a content delta: all `23` watched links fell back to `error` with `リモート サーバーに接続できません。`, while preserving the prior hashes in `records/logs/chatgpt-share-state.csv`. The most recent durable successful snapshot therefore remains the `2026-06-18T01:03:13+09:00` watch state in which all `23` shares were `unchanged`.
+- Queried the connected Google Drive research/reference layer for non-folder files with `createdTime` or `modifiedTime` later than the automation handoff timestamp `2026-06-17T16:01:40.279Z`, including the recorded research root, reference root, and the indexed ChatGPT/Claude/Gemini/Paper/Slide subfolders. Those searches returned no newer relevant PDFs, slides, Gemini outputs, Claude outputs, or reference papers.
+- Because this pass surfaced no newer durable source material from the artifact inbox, watched-share layer, or Drive layer, there was no mathematically grounded note reconstruction to apply, no new open question to add, and no Drive index or literature-note update beyond recording the transient share-access failure. The refreshed `artifacts/pdf/manifest.csv` was intentionally left out of the scoped relay commit because it reflects timestamp-only collection churn in an already dirty worktree.
+
 ## 2026-06-18 (Research Project relay sync, watch state normalized)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-18T00:59+09:00`. The local ChatGPT Project inbox again exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` stayed materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
