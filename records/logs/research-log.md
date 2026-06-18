@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-18 (Research Project relay sync, midday no-delta verification)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-18T13:03+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` stayed materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-18T13:04:01+09:00`. All `23` watched `chatgpt.com/share/...` links now resolve back to `unchanged`, so there is no changed shared-conversation snapshot requiring note reconstruction in this pass.
+- Queried the connected Google Drive layer for non-folder files with `createdTime` or `modifiedTime` later than the automation handoff timestamp `2026-06-17T22:01:06Z`. That search returned no newer relevant PDFs, slides, Gemini outputs, Claude outputs, or reference papers in the recorded research/reference relay sources.
+- Because the artifact inbox, watched-share layer, and Drive layer were all source-stable in this pass, there was no mathematically grounded note update, no new open question to add, and no Drive-index or literature-note edit beyond refreshing the durable share-watch state. The refreshed `artifacts/pdf/manifest.csv` is left out of the scoped relay commit because it reflects timestamp-only collection churn.
+
 ## 2026-06-18 (Research Project relay sync, share transport failure)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-18T07:02:00+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
