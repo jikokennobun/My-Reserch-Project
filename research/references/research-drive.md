@@ -338,6 +338,30 @@ Top-level subfolders:
 - unified_logic_sheaf_aal_geminal.pdf
 - 解説資料.pdf
 
+- karazeris_categorical_domain_theory_commentary.pdf
+
+### ChatGPT_Study delta on 2026-06-18
+
+- `karazeris_categorical_domain_theory_commentary.pdf`
+  (`created 2026-06-18T04:27:40.455Z`) is a substantial commentary on
+  Karazeris's categorical domain theory paper rather than a short summary. Its
+  durable contribution for this repository is a categorical reframing of the
+  existing domain-semantics line:
+  `\sigma K = \mathbf{Set}^{K_f}` as a Scott-topos replacement for Scott
+  topology, `PU(K)=\mathrm{LexCont}(\sigma K,\mathbf{Set})` and
+  `PL(K)=\mathrm{Colim}(\sigma K,\mathbf{Set})` as upper/lower powercategory
+  constructions, and coherence of finitely presentable approximants via the
+  `2/3-SFP` finite-cocone criterion.
+- For the APS repository, the main use is not a new standalone fixed-point
+  theorem but a better semantic explanation of the A3 bottleneck: if finite
+  approximants fail to control products/cocones coherently, Scott-style or
+  powerdomain-style semantics can still model refutation/conflict while
+  failing to preserve the intersection behavior needed for APS explosion.
+- The local landing site for this source is
+  `research/notes/predicate-topology-fixed-points.md`, because it deepens the
+  domain-theoretic and categorical semantics line rather than introducing a
+  separate note family.
+
 Gemini includes:
 
 - 不完全性現象の代数的逆数学_総合モノグラフ_コピー.pdf

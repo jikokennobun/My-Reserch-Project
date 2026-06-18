@@ -2,6 +2,20 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-18: when does Scott-topos coherence force APS A3?)**
+  The new Drive PDF `karazeris_categorical_domain_theory_commentary.pdf`
+  sharpens the domain-semantics line into a categorical approximation problem.
+  Open:
+  (i) identify the weakest finitely accessible/coherent hypotheses on a
+  category `K` that let Scott-topos or powercategory semantics support
+  APS-style A3/A4 rather than only refutability/conflict structure;
+  (ii) decide whether Karazeris's `2/3-SFP` coherence condition is the exact
+  categorical shadow of the repository's repeated A3-stability obstruction
+  under cut closure, completion, and domain semantics;
+  (iii) build finite or algebraic Scott-APS witnesses where coherence holds
+  but `FG2` still fails, to separate finite-limit stability from genuine
+  diagonal fixed-point creation.
+
 - **(Drive supplement 2026-06-17: when do Santa Claus, formalized Loeb, and primitive fixed points separate?)**
   The new Drive PDF `ams_residuated_complete_analysis.pdf` shows that bounded
   residuated AMS cleanly separates three diagonal packages that several older

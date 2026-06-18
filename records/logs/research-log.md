@@ -1,5 +1,13 @@
 # Research Log
 
+## 2026-06-18 (Research Project relay sync, categorical domain theory supplement)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-18`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-18T13:04:01+09:00`. All `23` watched `chatgpt.com/share/...` links were `unchanged`, so there was no changed shared-conversation snapshot requiring direct note reconstruction in this pass.
+- Queried the connected Google Drive research/reference relay sources for non-folder files created or modified after the previous automation handoff timestamp `2026-06-18T04:02:50.972Z`. The recorded research root and reference root themselves had no newer top-level files, but a broader Drive search surfaced one new durable AI-study PDF under `ChatGPT_Study`: `karazeris_categorical_domain_theory_commentary.pdf` (`created 2026-06-18T04:27:40.455Z`).
+- Used that PDF to deepen `research/notes/predicate-topology-fixed-points.md`. The note now records the Scott-topos replacement `\sigma K = \mathbf{Set}^{K_f}`, the upper/lower powercategory constructions `PU(K)=\mathrm{LexCont}(\sigma K,\mathbf{Set})` and `PL(K)=\mathrm{Colim}(\sigma K,\mathbf{Set})`, and the categorical explanation of the A3 bottleneck via coherence of finitely presentable approximants and Karazeris's `2/3-SFP` condition.
+- Added a new active question on whether Scott-topos coherence is the exact categorical shadow of the repository's recurrent A3-stability obstruction.
+
 ## 2026-06-18 (Research Project relay sync, midday no-delta verification)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-18T13:03+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` stayed materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
