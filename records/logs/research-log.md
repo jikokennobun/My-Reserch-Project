@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-19 (Research Project relay sync, no-delta verification pass)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-19T01:35+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-19T01:35:52+09:00`. All `23` watched `chatgpt.com/share/...` links remained `unchanged`, so there is no changed shared-conversation snapshot requiring mathematical reconstruction in this pass.
+- Queried the connected Google Drive relay sources recorded in `research/references/research-drive.md` and `research/references/drive.md` for non-folder files created or modified after the last automation handoff timestamp `2026-06-18T10:33:19Z`. Those folder-scoped searches returned no newer relevant PDFs, slides, Gemini outputs, Claude outputs, or reference papers. A broader Drive recency check surfaced one newer file, `individual_seminar_resume_v5.pdf`, but its parent folder lies outside the recorded research/reference relay roots, so it is not a relay ingest target for this repository pass.
+- Because the artifact inbox, watched-share layer, and recorded Drive relay roots were all source-stable in this pass, there was no research-note reconstruction, no new open question to add, and no Drive-index or literature-note update beyond refreshing the durable share-watch state and recording the no-delta result here. The refreshed `artifacts/pdf/manifest.csv` is left out of the scoped relay commit because it reflects timestamp-only collection churn in an already dirty worktree.
+
 ## 2026-06-18 (Research Project relay sync, categorical domain theory supplement)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root on `2026-06-18`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps.
