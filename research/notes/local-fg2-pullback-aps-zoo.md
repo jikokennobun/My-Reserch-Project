@@ -30,6 +30,27 @@ Relay update on 2026-06-17:
   relevant files after `2026-06-16T10:07:16Z`, so there was no durable PDF or
   slide supplement available to refine the reconstruction further in this pass.
 
+Relay update on 2026-06-19:
+
+- `records/logs/chatgpt-share-state.csv` again marked this share as `changed`
+  at `2026-06-19T14:08:22+09:00`.
+- The committed prior relay state at `2026-06-19T01:35:52+09:00` used hash
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`, while the
+  current watch pass records
+  `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518`.
+- Direct extraction of the changed `chatgpt.com/share/...` payload remains
+  blocked in the current automation environment: the browser surface exposes
+  only the logged-out shell, and direct `Invoke-WebRequest` access is
+  intermittent rather than durable enough to recover the conversation body.
+- The connected Google Drive research and reference relay roots had no newer
+  relevant PDFs, slides, Gemini outputs, Claude outputs, or other durable
+  supplements after the automation handoff timestamp
+  `2026-06-18T23:05:51.672Z`, so there is still no source-stable mathematical
+  payload beyond the fingerprint change itself.
+- Until a fresh shared export or a `sandbox:/mnt/data/...` artifact is routed
+  through the ChatGPT Project inbox, the current reconstruction below remains
+  the best durable note-level reconstruction of this line.
+
 ## Abstract
 
 This note develops a local and relative version of FG2 suitable for comparing
