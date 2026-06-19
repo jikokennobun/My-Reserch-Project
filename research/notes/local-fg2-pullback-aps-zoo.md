@@ -51,6 +51,27 @@ Relay update on 2026-06-19:
   through the ChatGPT Project inbox, the current reconstruction below remains
   the best durable note-level reconstruction of this line.
 
+Later relay recheck on 2026-06-19:
+
+- A second same-day watch pass again marked this share as `changed` at
+  `2026-06-19T22:08:54+09:00`.
+- The watch fingerprint did not advance monotonically. The earlier
+  `2026-06-19T14:08:22+09:00` pass recorded hash
+  `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518`, while the
+  later `2026-06-19T22:08:54+09:00` pass recorded
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`, the same
+  fingerprint that had previously appeared in the durable `2026-06-19T01:35`
+  baseline.
+- This makes the relay fact pattern stricter, not looser: the share URL is
+  currently exposing at least two incompatible snapshots to the watcher, but
+  neither snapshot body is durably retrievable in the current automation
+  environment.
+- The connected Google Drive research and reference relay roots still had no
+  newer relevant PDFs, slides, Gemini outputs, Claude outputs, or reference
+  papers after the last automation handoff timestamp
+  `2026-06-19T05:06:57.572Z`, so there is still no durable side artifact from
+  which to reconstruct the mathematical delta faithfully.
+
 ## Abstract
 
 This note develops a local and relative version of FG2 suitable for comparing
