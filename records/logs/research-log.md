@@ -1,5 +1,13 @@
 # Research Log
 
+## 2026-06-20 (Research Project relay sync, watched shares normalized)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-20T04:09+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` again reflected PDF collection/back-up churn rather than a scoped relay delta.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-20T04:09:18+09:00`. This pass normalized the watched-share layer back to `23` `unchanged` links, including `research/notes/local-fg2-pullback-aps-zoo.md`, whose durable watch hash is again `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Queried the recorded Google Drive research and reference relay roots after the automation handoff timestamp `2026-06-19T13:07:31.102Z`. No newer relevant PDFs, slides, Gemini outputs, Claude outputs, or reference papers appeared inside the recorded relay folders, including `ChatGPT_Research`, `ChatGPT_Study`, `Paper`, `Slide`, `Claude`, `Gemini`, or the top-level reference root.
+- A broader recency search surfaced one newer PDF, `kaisetsu_solutions_problemwise_appendix.pdf` (`created 2026-06-19T17:13:36.130Z`), but its parent folder id `10vGyRuXdZaVIXArhA17Ws4JSK5N5XYza` is outside the relay roots recorded in `research/references/research-drive.md` and `research/references/drive.md`. It is therefore not a repository relay ingest target for this pass.
+- Because the artifact inbox, watched-share layer, and recorded Drive relay roots yielded no durable mathematical delta in this run, there was no justified research-note reconstruction, no new open question to add, and no Drive-index or literature-note update beyond refreshing the watched-share state and logging the no-delta result here. `artifacts/pdf/manifest.csv` is intentionally left out of the scoped relay commit because it now also reflects pre-existing untracked local PDFs in an already dirty worktree.
+
 ## 2026-06-19 (Research Project relay sync, oscillating changed-share fingerprint without durable payload)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-19T22:08+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` again reflected only PDF collection and backup churn.
