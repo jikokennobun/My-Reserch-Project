@@ -42,25 +42,25 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 91 -> 92: Zariski/generic Borel descent)**
-  Pass 91 resolved the discrete-site descent status of the Borel torsor.  On
-  the finite singleton-prime cover site, the global-Levi Borel prestack
-  $$B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes
-  \left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z$$
-  is not a sheaf for $|S|\ge2$: it retains the unipotent Rosser descent kernel
-  $\mathbb Z^S/\Delta\mathbb Z$.  Sheafification/stackification gives the
-  local Loeb object
-  $$(\mathbb Q^\times)^S\ltimes
-  \prod_{p\in S}(\mathbb Z_p/\mathbb Z),$$
-  losing the horizontal Rosser kernel.  The hyperbolic shear action transports
-  the descent-kernel lifts but does not choose a canonical zero section.
-  Open:
-  (i) relocate this Borel descent obstruction to the Zariski/generic-point
-  site used in Pass 63;
-  (ii) define the Borel analogue of the $j_!\mathbb Z$ ghost line and compute
-  its $H^1$ class;
-  (iii) compare the Zariski/generic Borel class with the finite-adele extension
-  line and the hyperbolic Borel shear orbit.
+- **(Pass 92 -> 93: all-prime Spec-$\mathbb Z$ Borel $j_!$ upgrade)**
+  Pass 92 resolved the finite-support Zariski/generic relocation of the Borel
+  descent obstruction.  On
+  $$X_S=\{\eta\}\cup\{(p):p\in S\},$$
+  constant Borel coefficients have no horizontal $H^1$ defect; the obstruction
+  is the unipotent $j_!$ class in the semidirect coefficient
+  $$\underline{\mathbb Q^\times}\ltimes j_!\underline{\mathbb Z},\qquad
+  H^1(X_S,j_!\mathbb Z)=\mathbb Z^S/\Delta\mathbb Z.$$
+  With the dilation coefficient $\mathcal V$ this embeds into
+  $$H^1(X_S,j_!\mathcal V)=\widehat{\mathbb Z}_S/\mathbb Z,$$
+  whose pushout along $\mathbb Z\to\mathbb Q$ is the finite-adele extension
+  line.  Open:
+  (i) upgrade the finite-support computation to the honest all-prime
+  $\mathrm{Spec}\,\mathbb Z$ site;
+  (ii) decide whether ordinary sheaf cohomology is enough or whether
+  continuous/pro/solid coefficients are needed to make
+  $H^1(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)=\widehat{\mathbb Z}/\mathbb Z$;
+  (iii) prove functorial compatibility of the all-prime Borel $j_!$ class with
+  the finite-adele extension line and hyperbolic shear orbit.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

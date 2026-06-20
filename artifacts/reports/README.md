@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass92-zariski-generic-borel-descent-check.json`: verifies the Pass-92
+  finite certificate for Zariski/generic Borel descent. It checks that
+  constant coefficients have no horizontal $H^1$ on the full-simplex
+  Zariski cover, that the unipotent $j_!$ ghost has rank $|S|-1$, that finite
+  mod-$N$ class sets have size $N^{|S|-1}$, and that the Borel relocation keeps
+  the Levi in degree $0$ while comparing the unipotent class with the total
+  phantom, finite-adele pushout, and hyperbolic shear orbit.
+
 - `pass91-borel-torsor-descent-obstruction-check.json`: verifies the Pass-91
   finite certificate for the Borel torsor descent obstruction. It checks the
   rank $|S|-1$ horizontal descent defect, finite diagonal-kernel sizes

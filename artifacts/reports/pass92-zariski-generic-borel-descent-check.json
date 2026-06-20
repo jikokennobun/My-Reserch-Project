@@ -1,0 +1,745 @@
+{
+  "pass": 92,
+  "title": "Zariski/generic Borel descent",
+  "A_zariski_relocation": {
+    "statement": "On X_S={eta} union S, the cover nerve is a full simplex. Constant coefficients have H^1=0, while j_!Z has H^1=coker(Delta: Z->Z^S) of rank |S|-1.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "zariski_cover_nerve": "full simplex Delta^0",
+        "constant_h1_rank": 0,
+        "jshriek_h1_rank": 0,
+        "discrete_kernel_rank": 0,
+        "relocation_matches_discrete_defect": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "zariski_cover_nerve": "full simplex Delta^1",
+        "constant_h1_rank": 0,
+        "jshriek_h1_rank": 1,
+        "discrete_kernel_rank": 1,
+        "relocation_matches_discrete_defect": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "zariski_cover_nerve": "full simplex Delta^1",
+        "constant_h1_rank": 0,
+        "jshriek_h1_rank": 1,
+        "discrete_kernel_rank": 1,
+        "relocation_matches_discrete_defect": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "zariski_cover_nerve": "full simplex Delta^2",
+        "constant_h1_rank": 0,
+        "jshriek_h1_rank": 2,
+        "discrete_kernel_rank": 2,
+        "relocation_matches_discrete_defect": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "zariski_cover_nerve": "full simplex Delta^2",
+        "constant_h1_rank": 0,
+        "jshriek_h1_rank": 2,
+        "discrete_kernel_rank": 2,
+        "relocation_matches_discrete_defect": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "zariski_cover_nerve": "full simplex Delta^3",
+        "constant_h1_rank": 0,
+        "jshriek_h1_rank": 3,
+        "discrete_kernel_rank": 3,
+        "relocation_matches_discrete_defect": true
+      }
+    ],
+    "constant_h1_vanishes": true,
+    "jshriek_rank_ok": true
+  },
+  "B_finite_jshriek_borel_ghost": {
+    "statement": "Modulo N, H^1(X_S,j_! Z/N) has size N^(|S|-1), matching the finite diagonal descent kernel from the discrete site.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 2,
+        "closed_stratum_sections": 2,
+        "diagonal_global_sections": 2,
+        "jshriek_h1_size": 1,
+        "expected_size": 1,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 3,
+        "closed_stratum_sections": 3,
+        "diagonal_global_sections": 3,
+        "jshriek_h1_size": 1,
+        "expected_size": 1,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 4,
+        "closed_stratum_sections": 4,
+        "diagonal_global_sections": 4,
+        "jshriek_h1_size": 1,
+        "expected_size": 1,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 6,
+        "closed_stratum_sections": 6,
+        "diagonal_global_sections": 6,
+        "jshriek_h1_size": 1,
+        "expected_size": 1,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 8,
+        "closed_stratum_sections": 8,
+        "diagonal_global_sections": 8,
+        "jshriek_h1_size": 1,
+        "expected_size": 1,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 12,
+        "closed_stratum_sections": 12,
+        "diagonal_global_sections": 12,
+        "jshriek_h1_size": 1,
+        "expected_size": 1,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 2,
+        "closed_stratum_sections": 4,
+        "diagonal_global_sections": 2,
+        "jshriek_h1_size": 2,
+        "expected_size": 2,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 3,
+        "closed_stratum_sections": 9,
+        "diagonal_global_sections": 3,
+        "jshriek_h1_size": 3,
+        "expected_size": 3,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 4,
+        "closed_stratum_sections": 16,
+        "diagonal_global_sections": 4,
+        "jshriek_h1_size": 4,
+        "expected_size": 4,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 6,
+        "closed_stratum_sections": 36,
+        "diagonal_global_sections": 6,
+        "jshriek_h1_size": 6,
+        "expected_size": 6,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 8,
+        "closed_stratum_sections": 64,
+        "diagonal_global_sections": 8,
+        "jshriek_h1_size": 8,
+        "expected_size": 8,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 12,
+        "closed_stratum_sections": 144,
+        "diagonal_global_sections": 12,
+        "jshriek_h1_size": 12,
+        "expected_size": 12,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 2,
+        "closed_stratum_sections": 4,
+        "diagonal_global_sections": 2,
+        "jshriek_h1_size": 2,
+        "expected_size": 2,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 3,
+        "closed_stratum_sections": 9,
+        "diagonal_global_sections": 3,
+        "jshriek_h1_size": 3,
+        "expected_size": 3,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 4,
+        "closed_stratum_sections": 16,
+        "diagonal_global_sections": 4,
+        "jshriek_h1_size": 4,
+        "expected_size": 4,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 6,
+        "closed_stratum_sections": 36,
+        "diagonal_global_sections": 6,
+        "jshriek_h1_size": 6,
+        "expected_size": 6,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 8,
+        "closed_stratum_sections": 64,
+        "diagonal_global_sections": 8,
+        "jshriek_h1_size": 8,
+        "expected_size": 8,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 12,
+        "closed_stratum_sections": 144,
+        "diagonal_global_sections": 12,
+        "jshriek_h1_size": 12,
+        "expected_size": 12,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 2,
+        "closed_stratum_sections": 8,
+        "diagonal_global_sections": 2,
+        "jshriek_h1_size": 4,
+        "expected_size": 4,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 3,
+        "closed_stratum_sections": 27,
+        "diagonal_global_sections": 3,
+        "jshriek_h1_size": 9,
+        "expected_size": 9,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 4,
+        "closed_stratum_sections": 64,
+        "diagonal_global_sections": 4,
+        "jshriek_h1_size": 16,
+        "expected_size": 16,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 6,
+        "closed_stratum_sections": 216,
+        "diagonal_global_sections": 6,
+        "jshriek_h1_size": 36,
+        "expected_size": 36,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 8,
+        "closed_stratum_sections": 512,
+        "diagonal_global_sections": 8,
+        "jshriek_h1_size": 64,
+        "expected_size": 64,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 12,
+        "closed_stratum_sections": 1728,
+        "diagonal_global_sections": 12,
+        "jshriek_h1_size": 144,
+        "expected_size": 144,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 2,
+        "closed_stratum_sections": 8,
+        "diagonal_global_sections": 2,
+        "jshriek_h1_size": 4,
+        "expected_size": 4,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 3,
+        "closed_stratum_sections": 27,
+        "diagonal_global_sections": 3,
+        "jshriek_h1_size": 9,
+        "expected_size": 9,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 4,
+        "closed_stratum_sections": 64,
+        "diagonal_global_sections": 4,
+        "jshriek_h1_size": 16,
+        "expected_size": 16,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 6,
+        "closed_stratum_sections": 216,
+        "diagonal_global_sections": 6,
+        "jshriek_h1_size": 36,
+        "expected_size": 36,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 8,
+        "closed_stratum_sections": 512,
+        "diagonal_global_sections": 8,
+        "jshriek_h1_size": 64,
+        "expected_size": 64,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 12,
+        "closed_stratum_sections": 1728,
+        "diagonal_global_sections": 12,
+        "jshriek_h1_size": 144,
+        "expected_size": 144,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 2,
+        "closed_stratum_sections": 16,
+        "diagonal_global_sections": 2,
+        "jshriek_h1_size": 8,
+        "expected_size": 8,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 3,
+        "closed_stratum_sections": 81,
+        "diagonal_global_sections": 3,
+        "jshriek_h1_size": 27,
+        "expected_size": 27,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 4,
+        "closed_stratum_sections": 256,
+        "diagonal_global_sections": 4,
+        "jshriek_h1_size": 64,
+        "expected_size": 64,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 6,
+        "closed_stratum_sections": 1296,
+        "diagonal_global_sections": 6,
+        "jshriek_h1_size": 216,
+        "expected_size": 216,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 8,
+        "closed_stratum_sections": 4096,
+        "diagonal_global_sections": 8,
+        "jshriek_h1_size": 512,
+        "expected_size": 512,
+        "matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 12,
+        "closed_stratum_sections": 20736,
+        "diagonal_global_sections": 12,
+        "jshriek_h1_size": 1728,
+        "expected_size": 1728,
+        "matches_expected": true
+      }
+    ],
+    "finite_jshriek_ok": true
+  },
+  "C_borel_location": {
+    "statement": "The Zariski/generic Borel relocation keeps the constant Levi in degree 0 and places the Rosser defect in the unipotent j_! cohomology.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "global_levi_proxy_order": 4,
+        "constant_levi_h1_size": 1,
+        "unipotent_jshriek_rank": 0,
+        "finite_borel_ghost_order_at_level_6": 1,
+        "borel_obstruction_location": "Levi stays in H^0 of the connected constant sheaf; the Rosser/Borel obstruction is H^1(X_S, j_! U)."
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "global_levi_proxy_order": 4,
+        "constant_levi_h1_size": 1,
+        "unipotent_jshriek_rank": 1,
+        "finite_borel_ghost_order_at_level_6": 6,
+        "borel_obstruction_location": "Levi stays in H^0 of the connected constant sheaf; the Rosser/Borel obstruction is H^1(X_S, j_! U)."
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "global_levi_proxy_order": 4,
+        "constant_levi_h1_size": 1,
+        "unipotent_jshriek_rank": 1,
+        "finite_borel_ghost_order_at_level_6": 6,
+        "borel_obstruction_location": "Levi stays in H^0 of the connected constant sheaf; the Rosser/Borel obstruction is H^1(X_S, j_! U)."
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "global_levi_proxy_order": 4,
+        "constant_levi_h1_size": 1,
+        "unipotent_jshriek_rank": 2,
+        "finite_borel_ghost_order_at_level_6": 36,
+        "borel_obstruction_location": "Levi stays in H^0 of the connected constant sheaf; the Rosser/Borel obstruction is H^1(X_S, j_! U)."
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "global_levi_proxy_order": 4,
+        "constant_levi_h1_size": 1,
+        "unipotent_jshriek_rank": 2,
+        "finite_borel_ghost_order_at_level_6": 36,
+        "borel_obstruction_location": "Levi stays in H^0 of the connected constant sheaf; the Rosser/Borel obstruction is H^1(X_S, j_! U)."
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "global_levi_proxy_order": 4,
+        "constant_levi_h1_size": 1,
+        "unipotent_jshriek_rank": 3,
+        "finite_borel_ghost_order_at_level_6": 216,
+        "borel_obstruction_location": "Levi stays in H^0 of the connected constant sheaf; the Rosser/Borel obstruction is H^1(X_S, j_! U)."
+      }
+    ],
+    "borel_location_ok": true
+  },
+  "D_comparison": {
+    "statement": "The horizontal j_! ghost injects into the total dilation phantom H^1(j_!V), whose pushout/localization gives the finite-adele extension line; the hyperbolic Borel shear acts on representatives without splitting the class.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "horizontal_jshriek_rank": 0,
+        "total_phantom_symbol": "H^1(X_2, j_! V) = Zhat_2/Z",
+        "finite_adele_pushout": "push out 0->Z->Zhat_S->Zhat_S/Z along Z->Q",
+        "hyperbolic_borel_effect": "Q^x rescales the class; the epsilon shear changes representatives but supplies no canonical zero section",
+        "comparison_ok": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "horizontal_jshriek_rank": 1,
+        "total_phantom_symbol": "H^1(X_2*3, j_! V) = Zhat_2*3/Z",
+        "finite_adele_pushout": "push out 0->Z->Zhat_S->Zhat_S/Z along Z->Q",
+        "hyperbolic_borel_effect": "Q^x rescales the class; the epsilon shear changes representatives but supplies no canonical zero section",
+        "comparison_ok": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "horizontal_jshriek_rank": 1,
+        "total_phantom_symbol": "H^1(X_2*5, j_! V) = Zhat_2*5/Z",
+        "finite_adele_pushout": "push out 0->Z->Zhat_S->Zhat_S/Z along Z->Q",
+        "hyperbolic_borel_effect": "Q^x rescales the class; the epsilon shear changes representatives but supplies no canonical zero section",
+        "comparison_ok": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "horizontal_jshriek_rank": 2,
+        "total_phantom_symbol": "H^1(X_2*3*5, j_! V) = Zhat_2*3*5/Z",
+        "finite_adele_pushout": "push out 0->Z->Zhat_S->Zhat_S/Z along Z->Q",
+        "hyperbolic_borel_effect": "Q^x rescales the class; the epsilon shear changes representatives but supplies no canonical zero section",
+        "comparison_ok": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "horizontal_jshriek_rank": 2,
+        "total_phantom_symbol": "H^1(X_3*5*7, j_! V) = Zhat_3*5*7/Z",
+        "finite_adele_pushout": "push out 0->Z->Zhat_S->Zhat_S/Z along Z->Q",
+        "hyperbolic_borel_effect": "Q^x rescales the class; the epsilon shear changes representatives but supplies no canonical zero section",
+        "comparison_ok": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "horizontal_jshriek_rank": 3,
+        "total_phantom_symbol": "H^1(X_2*5*7*11, j_! V) = Zhat_2*5*7*11/Z",
+        "finite_adele_pushout": "push out 0->Z->Zhat_S->Zhat_S/Z along Z->Q",
+        "hyperbolic_borel_effect": "Q^x rescales the class; the epsilon shear changes representatives but supplies no canonical zero section",
+        "comparison_ok": true
+      }
+    ],
+    "comparison_ok": true
+  },
+  "conclusion": {
+    "classification": "On the Zariski/generic site the Borel descent obstruction is not a failure of the constant Borel sheaf. It is the unipotent Borel j_! class in H^1(X_S,j_!U).",
+    "next_task": "Upgrade the j_! Borel class from finite supports to the honest all-prime Spec Z site and identify which finiteness or derived-continuity hypotheses are needed."
+  },
+  "overall": "PASS"
+}

@@ -1987,3 +1987,47 @@ not choose a canonical zero lift.  Therefore the shear **transports** the
 Rosser descent kernel rather than killing it.  On the discrete prime-cover
 site, the Borel torsor is consequently a prestack/descent-obstruction object,
 not a genuine sheaf; its sheafification is the local Loeb object.
+
+## Zariski/generic Borel ghost line (Pass 92)
+
+For a finite prime support $S$, let
+$$
+X_S=\{\eta\}\cup\{(p):p\in S\}
+$$
+with the finite Zariski/generic-point topology, and let
+$j:\{\eta\}\hookrightarrow X_S$ be the open generic point.  The minimal-open
+cover $U_p=\{\eta,(p)\}$ has full-simplex nerve, so constant coefficients on
+$X_S$ have no horizontal $H^1$ defect.
+
+The Zariski relocation of the Borel descent obstruction is the unipotent
+$j_!$ cohomology group
+$$
+H^1(X_S,j_!\underline{\mathbb Z})
+\cong \operatorname{coker}(\Delta:\mathbb Z\to\mathbb Z^S)
+\cong \mathbb Z^S/\Delta\mathbb Z
+\cong \mathbb Z^{|S|-1}.
+$$
+Thus the Borel analogue of the Pass-63 $j_!\mathbb Z$ ghost line is the
+low-degree semidirect coefficient
+$$
+\mathfrak b_{j!}(S)=\underline{\mathbb Q^\times}\ltimes
+j_!\underline{\mathbb Z}.
+$$
+The constant Levi $\mathbb Q^\times$ remains degree-$0$ global data on the
+connected site; the Rosser/Borel obstruction lives in the unipotent radical.
+
+Modulo $N$,
+$$
+|H^1(X_S,j_!\mathbb Z/N)|=N^{|S|-1},
+$$
+matching the finite diagonal descent kernel from the discrete prime-cover site.
+With the dilation coefficient $\mathcal V$, the horizontal Borel ghost embeds
+in the total phantom
+$$
+H^1(X_S,j_!\mathcal V)\cong\widehat{\mathbb Z}_S/\mathbb Z.
+$$
+Pushing out the integral row along $\mathbb Z\to\mathbb Q$ gives the
+finite-adele extension line, while the hyperbolic Borel
+$\mathbb Q^\times\ltimes\epsilon$ reads the same datum as a shear orbit.  The
+Levi rescales representatives and the unipotent shear transports them, but no
+canonical zero section is selected.

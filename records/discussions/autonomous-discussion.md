@@ -6,23 +6,38 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 92
-- Last pass note: Pass 91 (2026-06-21) decided the descent status of the
-  restriction/span Borel torsor on the finite prime-cover site.  The
-  unipotent phantom presheaf
+- Current pass: 93
+- Last pass note: Pass 92 (2026-06-21) relocated the Borel descent obstruction
+  from the discrete singleton-prime cover to the finite Zariski/generic-point
+  site $X_S=\{\eta\}\cup\{(p):p\in S\}$.  On this connected site, the constant
+  Borel sheaf has no horizontal $H^1$ defect; the Rosser/Borel obstruction is
+  the unipotent $j_!$ class:
+  $$H^1(X_S,j_!\underline{\mathbb Z})\cong
+  \mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.$$
+  Thus the Borel analogue of the Pass-63 ghost line is the low-degree
+  semidirect coefficient
+  $\underline{\mathbb Q^\times}\ltimes j_!\underline{\mathbb Z}$: the Levi
+  remains degree-$0$ global data, while the unipotent radical carries the
+  $j_!$ cohomology class.  Modulo $N$, the finite class set has size
+  $N^{|S|-1}$, exactly matching the Pass-91 finite diagonal descent kernel.
+  With the dilation coefficient $\mathcal V$, the horizontal ghost injects into
+  $$H^1(X_S,j_!\mathcal V)\cong\widehat{\mathbb Z}_S/\mathbb Z,$$
+  whose pushout along $\mathbb Z\to\mathbb Q$ gives the finite-adele extension
+  line.  The hyperbolic Borel shear transports representatives and the Levi
+  rescales the class; neither supplies a canonical zero section.  Machine-
+  verified `check-pass92.py` ->
+  `pass92-zariski-generic-borel-descent-check.json` PASS. Counter 92->93.
+- Earlier note: Pass 91 (2026-06-21) decided the descent status of the
+  restriction/span Borel torsor on the finite prime-cover site.  The unipotent
+  phantom presheaf
   $$P(S)=(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z$$
   is not separated for multi-prime supports: its singleton-prime descent
   kernel is the horizontal Rosser defect
   $$\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.$$
-  Adding the global-Levi Borel does not turn it into a sheaf.  The global
-  Borel prestack $B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes P(S)$ still
-  carries the same unipotent descent kernel, and its constant Levi
-  $\mathbb Q^\times$ sheafifies to local Levi data $(\mathbb Q^\times)^S$.
-  The hyperbolic shear action transports the descent-kernel lifts but does not
-  choose a canonical zero section, so it preserves rather than kills the
-  Rosser defect.  Stackification/sheafification gives the local Borel sheaf
-  with stalkwise unipotents and local Levi data; the Rosser class is precisely
-  the kernel lost in that process.  Machine-verified `check-pass91.py` ->
+  Adding the global-Levi Borel does not turn it into a sheaf.  Stackification
+  gives the local Borel sheaf with stalkwise unipotents and local Levi data;
+  the Rosser class is precisely the kernel lost in that process.  Machine-
+  verified `check-pass91.py` ->
   `pass91-borel-torsor-descent-obstruction-check.json` PASS. Counter 91->92.
 - Earlier note: Pass 90 (2026-06-21) made the Pass-89 Borel-torsor theorem
   functorial over conductor/radical supports, with a direction correction.
@@ -10433,3 +10448,125 @@ Repository updates this pass:
 Next step:
 Pass 92 should relocate the Borel descent obstruction to the Zariski/generic
 prime site and compare it with the Pass-63 $j_!$ ghost line.
+
+---
+
+### Pass 92 - 2026-06-21 JST
+
+Focus:
+Relocate the Borel descent obstruction from the finite discrete prime-cover
+site to the Zariski/generic-point site and compare it with the Pass-63 $j_!$
+ghost line.
+
+Proposer:
+The discrete-site Borel obstruction should not be carried into the Zariski
+site as non-separatedness of the constant Borel sheaf.  On
+$$
+X_S=\{\eta\}\cup\{(p):p\in S\},
+$$
+the minimal-open cover $U_p=\{\eta,(p)\}$ has all nonempty intersections equal
+to $\{\eta\}$, hence full-simplex nerve.  Constant coefficients are connected:
+$$
+H^1(X_S,\underline{\mathbb Z})=0.
+$$
+So the global-Levi constant Borel no longer has the discrete horizontal defect.
+
+The defect relocates exactly as in Pass 63.  Let
+$j:\{\eta\}\hookrightarrow X_S$ be the open generic point.  The Borel analogue
+of the $j_!\mathbb Z$ ghost line is the low-degree semidirect coefficient
+$$
+\mathfrak b_{j!}(S)=\underline{\mathbb Q^\times}\ltimes j_!\underline{\mathbb Z},
+$$
+where the Levi is constant and the unipotent radical is extension-by-zero from
+the generic point.  Its nontrivial low-degree invariant is unipotent:
+$$
+H^1(X_S,j_!\underline{\mathbb Z})
+\cong\operatorname{coker}(\Delta:\mathbb Z\to\mathbb Z^S)
+\cong\mathbb Z^S/\Delta\mathbb Z.
+$$
+Thus the Pass-91 descent kernel becomes a genuine $j_!$ cohomology group, not
+a failure of the constant Borel sheaf.
+
+With the dilation coefficient $\mathcal V$, this horizontal ghost is the free
+part of the total class
+$$
+H^1(X_S,j_!\mathcal V)\cong\widehat{\mathbb Z}_S/\mathbb Z.
+$$
+Pushing out the integral row along $\mathbb Z\to\mathbb Q$ recovers the
+finite-adele extension line, and passing to the hyperbolic plane reads the same
+class as the Borel shear orbit.  The Levi $\mathbb Q^\times$ rescales classes;
+the unipotent shear changes representatives.  Neither operation produces a
+canonical zero section.
+
+Skeptic:
+This pass should explicitly avoid two overstatements.  First, the Zariski
+relocation does not say the constant Borel sheaf is non-separated.  Connectivity
+kills that constant-coefficient defect.  Second, $H^1(X_S,j_!\mathbb Z)$ is a
+rank $|S|-1$ lattice of horizontal relations, not a distinguished singleton
+class before choosing a basis or witness section.  The canonical datum is the
+boundary sequence
+$$
+0\to j_!\mathbb Z\to\mathbb Z_X\to i_*\mathbb Z_Z\to0
+$$
+and its cokernel $\mathbb Z^S/\Delta\mathbb Z$.  The Borel language is justified
+only because the solid Borel's unipotent radical is abelian and can carry this
+ordinary $j_!$ cohomology.
+
+Formalist:
+> **Theorem 92a (Zariski relocation of the Borel defect).** On
+> $X_S=\{\eta\}\cup S$ with the generic-point topology, constant coefficients
+> have no horizontal $H^1$ defect, while
+> $$H^1(X_S,j_!\underline{\mathbb Z})\cong
+> \mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.$$
+> This group is the Zariski relocation of the Pass-91 discrete descent kernel.
+>
+> **Theorem 92b (Borel $j_!$ ghost coefficient).** The finite-support Borel
+> ghost coefficient is
+> $$\mathfrak b_{j!}(S)=\underline{\mathbb Q^\times}\ltimes
+> j_!\underline{\mathbb Z}.$$
+> The Levi part stays in degree $0$ on the connected site; the only nontrivial
+> low-degree Borel obstruction is the unipotent group
+> $H^1(X_S,j_!\underline{\mathbb Z})$.
+>
+> **Theorem 92c (finite shadows).** Modulo $N$,
+> $$|H^1(X_S,j_!\mathbb Z/N)|=N^{|S|-1},$$
+> matching the finite diagonal kernel of the discrete Borel prestack from
+> Pass 91.
+>
+> **Theorem 92d (comparison with finite adeles and shear).** The horizontal
+> $j_!$ ghost injects into
+> $H^1(X_S,j_!\mathcal V)\cong\widehat{\mathbb Z}_S/\mathbb Z$; the pushout
+> along $\mathbb Z\to\mathbb Q$ gives the finite-adele extension line, and the
+> hyperbolic Borel realizes the same datum as a shear orbit without a canonical
+> splitting.
+
+Machine-verified `code/scripts/check-pass92.py` ->
+`artifacts/reports/pass92-zariski-generic-borel-descent-check.json` (overall
+PASS): constant-coefficient $H^1$ vanishes on the full-simplex Zariski cover;
+$j_!$-cohomology has rank $|S|-1$ for all tested supports; finite mod-$N$
+class sets have size $N^{|S|-1}$; the Borel proxy keeps the Levi in degree $0$
+and places only the unipotent ghost in $H^1$; and the comparison rows align the
+horizontal ghost with the total phantom, finite-adele pushout, and hyperbolic
+Borel shear orbit.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-92 entry;
+  State counter $92\to93$.
+- `records/logs/research-log.md`: Pass-92 entry.
+- `research/definitions.md`: added the Zariski/generic Borel ghost
+  terminology.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-92 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  marked Zariski/generic Borel descent resolved and retargeted the next pass to
+  all-prime Spec-$\mathbb Z$ continuity/derived-site hypotheses.
+- `code/scripts/check-pass92.py`,
+  `artifacts/reports/pass92-zariski-generic-borel-descent-check.json`: new.
+- `artifacts/pdf/zariski-generic-borel-descent-2026-06-21.md`: publication
+  summary source.
+
+Next step:
+Pass 93 should upgrade the finite-support $j_!$ Borel class to the honest
+all-prime $\mathrm{Spec}\,\mathbb Z$ site and identify the finiteness,
+continuity, or derived-completion hypotheses needed for
+$H^1(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)=\widehat{\mathbb Z}/\mathbb Z$.

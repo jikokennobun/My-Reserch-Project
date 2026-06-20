@@ -978,12 +978,35 @@
   Rosser defect.  Machine-verified
   `artifacts/reports/pass91-borel-torsor-descent-obstruction-check.json`
   (PASS).
-- **[New (Pass 91)]** **Zariski/generic Borel descent.** Relocate the Borel
+- **[Resolved (Pass 92)]** **Zariski/generic Borel descent.** Relocate the Borel
   descent obstruction from the discrete singleton-prime cover site to the
   Zariski/generic-point site of Pass 63.  Define the Borel analogue of the
   $j_!\mathbb Z$ ghost line, decide whether the global-Levi Borel prestack has
   a genuine $H^1(j_!)$ obstruction there, and compare the resulting class with
   the finite-adele extension line and hyperbolic shear orbit.
+  **Resolution:** on the connected finite Zariski/generic site
+  $X_S=\{\eta\}\cup S$, constant Borel coefficients have no horizontal
+  $H^1$ defect.  The Borel obstruction relocates to the unipotent
+  $j_!$ ghost coefficient
+  $\underline{\mathbb Q^\times}\ltimes j_!\underline{\mathbb Z}$, with
+  $$H^1(X_S,j_!\mathbb Z)=\mathbb Z^S/\Delta\mathbb Z.$$
+  Modulo $N$ the finite class set has size $N^{|S|-1}$, matching the
+  Pass-91 discrete kernel.  With the dilation coefficient $\mathcal V$, this
+  horizontal ghost embeds in
+  $H^1(X_S,j_!\mathcal V)=\widehat{\mathbb Z}_S/\mathbb Z$; pushout along
+  $\mathbb Z\to\mathbb Q$ gives the finite-adele extension line, and the
+  hyperbolic Borel shear orbit changes representatives without selecting a
+  canonical zero section.  Machine-verified
+  `artifacts/reports/pass92-zariski-generic-borel-descent-check.json` (PASS).
+- **[New (Pass 92)]** **All-prime Spec-$\mathbb Z$ Borel $j_!$ upgrade.**
+  Upgrade the finite-support $j_!$ Borel class to the honest all-prime
+  $\mathrm{Spec}\,\mathbb Z$ site.  Identify which finiteness, compact-support,
+  continuous-cohomology, or derived-completion hypotheses are needed for
+  $$H^1(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)=\widehat{\mathbb Z}/\mathbb Z,$$
+  and decide whether the Borel coefficient
+  $\underline{\mathbb Q^\times}\ltimes j_!\underline{\mathbb Z}$ must be replaced
+  by a pro/solid/condensed coefficient to keep the finite-adele extension line
+  and hyperbolic shear comparison functorial.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."
