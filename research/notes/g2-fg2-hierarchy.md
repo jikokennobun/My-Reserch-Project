@@ -5101,3 +5101,92 @@ global-Levi Borel coefficient with unipotent limit $\widehat{\mathbb Z}/\mathbb 
 **Limit of the pass.**  The next task is to compute the Verdier/solid dual of
 this continuous Borel $j_!$ coefficient and decide whether the antipode sign
 gives a functional-equation shadow without producing a forbidden Weyl flip.
+
+## Pass 94 - Solid dual of the all-prime Borel $j_!$ class
+
+Pass 94 computes the dual requested at the end of Pass 93.  The all-prime
+unipotent class is
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+By the solid duality computation of Passes 77--79,
+$$
+D\epsilon\simeq\mathbb Q[-1],
+\qquad
+D\mathbb Q\simeq\epsilon[-1].
+$$
+Therefore the dual of the all-prime Borel $j_!$ coefficient is not an opposite
+Borel group in degree $0$.  It is a Levi-marked boundary object: the global
+Levi $\mathbb Q^\times$ remains, while the unipotent dual is the shifted
+boundary $\mathbb Q[-1]$ with contragredient Levi action.
+
+This is exactly the all-prime continuation of the finite signed Verdier rule.
+For a finite support $S$, let
+$$
+d_S:\mathbb Z^S\to\mathbb Z^{|S|-1},
+\qquad
+(x_p)\mapsto(x_p-x_{p_0})_{p\ne p_0}.
+$$
+Finite Verdier duality sends
+$$
+d_S\longmapsto -d_S^T,
+\qquad
+D^2(d_S)=d_S.
+$$
+The sign is a genuine integral orientation datum, although it collapses modulo
+$2$.
+
+All-prime, this becomes the antipode sign on the solid bidual:
+$$
+\eta_\epsilon=-\mathrm{id}_\epsilon.
+$$
+The surviving object that replaces the finite Fourier/Weyl flip is the
+degree-$1$ finite-adele boundary
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0,
+$$
+or equivalently the class in
+$$
+\operatorname{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q).
+$$
+This is a functional-equation shadow only in the boundary sense.
+
+The no-flip wall remains intact:
+$$
+\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.
+$$
+Thus there is still no opposite unipotent, no standard intertwiner, and no
+degree-$0$ Weyl/Fourier operator.  The phrase "functional equation" is
+therefore safe only when it means signed boundary duality, not an actual
+$s\mapsto -s$ operator on a solid principal series.
+
+> **Theorem 94a (all-prime solid dual).** For the unipotent limit
+> $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ of
+> $\mathfrak B^{\mathrm{cont}}_{j!}$, one has
+> $$D\epsilon\simeq\mathbb Q[-1].$$
+>
+> **Theorem 94b (signed finite shadows).** Finite recollement boundaries obey
+> $$D(d_S)=-d_S^T,\qquad D^2(d_S)=d_S,$$
+> with sign visible over $\mathbb Z$ and invisible modulo $2$.
+>
+> **Theorem 94c (boundary-only functional equation).** The Pass-65/77 sign
+> survives all-prime as $\eta_\epsilon=-\mathrm{id}_\epsilon$, represented by
+> the degree-$1$ finite-adele boundary
+> $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
+>
+> **Theorem 94d (no Weyl flip).**
+> $\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$, so the dual
+> boundary does not create an opposite Borel or a standard Weyl/Fourier
+> intertwiner.
+
+**Machine verification** (`code/scripts/check-pass94.py` ->
+`artifacts/reports/pass94-all-prime-borel-jshriek-solid-dual-check.json`, PASS):
+finite boundary matrices satisfy the signed transpose rule, rank preservation,
+duality squared, and mod-$2$ sign collapse; support restriction dualizes from
+surjections to injections without creating a degree-$0$ flip; the all-prime
+solid row records $D\epsilon=\mathbb Q[-1]$, the finite-adele boundary, the
+biduality sign $-1$, and the absence of a degree-$0$ Weyl map.
+
+**Limit of the pass.**  The next task is to package this boundary-shadow
+functional equation as a constant-term or two-term Borel complex natural under
+conductor restriction, while keeping the no-Weyl-flip wall explicit.

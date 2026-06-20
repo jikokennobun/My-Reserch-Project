@@ -6,8 +6,27 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 94
-- Last pass note: Pass 93 (2026-06-21) upgraded the finite-support Borel
+- Current pass: 95
+- Last pass note: Pass 94 (2026-06-21) computed the Verdier/solid dual of the
+  all-prime Borel $j_!$ coefficient from Pass 93.  The unipotent all-prime
+  class is
+  $$\epsilon=\widehat{\mathbb Z}/\mathbb Z,$$
+  so solid duality gives
+  $$D\epsilon\simeq\mathbb Q[-1].$$
+  Thus the dual of
+  $$\mathfrak B^{\mathrm{cont}}_{j!}
+  =\mathbb Q^\times\ltimes R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S$$
+  is a Levi-marked boundary object with unipotent part $\mathbb Q[-1]$ and
+  contragredient $\mathbb Q^\times$ action, not an opposite Borel in degree
+  $0$.  The Pass-65 finite sign and Pass-77 all-prime antipode remain:
+  finite boundaries satisfy $D(d_S)=-d_S^T$, and the biduality sign on
+  $\epsilon$ is $-\mathrm{id}$.  This is a functional-equation shadow only in
+  the boundary sense.  It does not create a Weyl/Fourier flip, since
+  $$\mathrm{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.$$
+  Machine-verified `check-pass94.py` ->
+  `pass94-all-prime-borel-jshriek-solid-dual-check.json` PASS. Counter
+  94->95.
+- Earlier note: Pass 93 (2026-06-21) upgraded the finite-support Borel
   $j_!$ class to the all-prime Spec-$\mathbb Z$ setting.  The key correction is
   topological: in the honest all-prime Zariski site, the generic point
   $\{\eta\}$ is not open, since every nonempty basic open contains all but
@@ -10711,3 +10730,117 @@ Next step:
 Pass 94 should compute the Verdier/solid dual of the all-prime Borel $j_!$
 coefficient and decide whether the antipode sign gives a functional-equation
 shadow without creating a forbidden Weyl flip.
+
+---
+
+### Pass 94 - 2026-06-21 JST
+
+Focus:
+Compute the Verdier/solid dual of the all-prime Borel $j_!$ coefficient and
+decide exactly what remains of the finite signed functional equation.
+
+Proposer:
+Pass 93 turned the all-prime Borel coefficient into
+$$
+\mathfrak B^{\mathrm{cont}}_{j!}
+=\mathbb Q^\times\ltimes
+R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S,
+$$
+whose unipotent cohomology is
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+Therefore the solid dual is forced by Passes 77--79:
+$$
+D\epsilon\simeq\mathbb Q[-1],
+\qquad
+D\mathbb Q\simeq\epsilon[-1].
+$$
+The dual of the unipotent part is not an opposite unipotent group in degree
+$0$; it is the degree-$1$ finite-adele boundary represented by
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+Keeping the global Levi, the dual Borel shadow is consequently a
+Levi-marked boundary object
+$$
+\mathbb Q^\times\ltimes\mathbb Q[-1],
+$$
+with the $\mathbb Q^\times$ action contragredient to the action on
+$\epsilon$.  This is the all-prime continuation of the finite Verdier rule
+$$
+D(d_S)=-d_S^T.
+$$
+So the antipode sign does survive, but only as a signed boundary equation.
+
+Skeptic:
+The word "functional equation" is dangerous here.  In a usual principal
+series, the functional equation is carried by a Weyl/Fourier intertwiner.  The
+solid phantom line has no such degree-$0$ operator:
+$$
+\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.
+$$
+Equivalently, the opposite unipotent
+$\bar U=\operatorname{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)$ remains zero.
+Thus Pass 94 must not say that the Borel coefficient has acquired an
+$s\mapsto -s$ intertwiner or a genuine Weyl flip.  The finite shadows still
+see $d_S\mapsto-d_S^T$, and the all-prime object still has biduality sign
+$-\mathrm{id}_\epsilon$, but the honest statement is boundary-level:
+the missing flip is replaced by the shifted Ext class, not repaired.
+
+Formalist:
+> **Theorem 94a (solid dual of the all-prime unipotent).** Let
+> $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ be the unipotent limit of
+> $\mathfrak B^{\mathrm{cont}}_{j!}$.  In $D(\mathrm{Solid}_{\mathbb Z})$,
+> $$D\epsilon\simeq\mathbb Q[-1].$$
+> Hence the dual unipotent of the all-prime Borel $j_!$ class is a shifted
+> boundary object, not a degree-$0$ group.
+>
+> **Theorem 94b (finite signed shadows survive).** For every finite support
+> $S$, if $d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ is the recollement boundary,
+> then finite Verdier duality sends
+> $$d_S\longmapsto-d_S^T,\qquad D^2(d_S)=d_S.$$
+> The sign is visible over $\mathbb Z$ and collapses modulo $2$.
+>
+> **Theorem 94c (boundary functional-equation shadow).** The Pass-65/77
+> antipode sign survives all-prime as the biduality sign
+> $$\eta_\epsilon=-\mathrm{id}_\epsilon.$$
+> This is a functional-equation shadow only after replacing the Weyl operator
+> by the degree-$1$ finite-adele boundary
+> $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
+>
+> **Theorem 94d (no forbidden Weyl flip).** Since
+> $$\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0,$$
+> the duality does not create an opposite unipotent, a standard intertwiner,
+> or a degree-$0$ Weyl/Fourier flip.
+
+Machine-verified `code/scripts/check-pass94.py` ->
+`artifacts/reports/pass94-all-prime-borel-jshriek-solid-dual-check.json`
+(overall PASS): finite boundary matrices satisfy $D(d_S)=-d_S^T$,
+$D^2(d_S)=d_S$, rank preservation, and mod-$2$ sign collapse; support
+restriction dualizes from surjections to injections without producing an
+opposite degree-$0$ unipotent; the all-prime solid row records
+$D\epsilon=\mathbb Q[-1]$, degree-$1$ finite-adele boundary, biduality sign
+$-1$, and $\operatorname{Hom}^0(\epsilon,\mathbb Q)=0$.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-94 entry;
+  State counter $94\to95$.
+- `records/logs/research-log.md`: Pass-94 entry.
+- `research/definitions.md`: added the all-prime Borel $j_!$ solid-dual
+  boundary terminology.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-94 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  marked the Verdier/solid duality task resolved and retargeted the next pass
+  to a boundary-only constant-term / two-term Borel complex.
+- `code/scripts/check-pass94.py`,
+  `artifacts/reports/pass94-all-prime-borel-jshriek-solid-dual-check.json`:
+  new.
+- `artifacts/pdf/all-prime-borel-jshriek-solid-dual-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 95 should package the boundary-shadow functional equation as a
+constant-term or two-term Borel complex natural under conductor restriction,
+without reintroducing a degree-$0$ Weyl flip.

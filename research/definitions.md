@@ -2079,3 +2079,46 @@ $$
 $$
 and the hyperbolic Borel $\mathbb Q^\times\ltimes\epsilon$ acts on the same
 continuous shear class.
+
+## All-prime Borel $j_!$ solid-dual boundary (Pass 94)
+
+Let
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z
+$$
+be the unipotent all-prime class of the continuous Borel $j_!$ coefficient.
+In $D(\mathrm{Solid}_{\mathbb Z})$ its dual is
+$$
+D\epsilon\simeq\mathbb Q[-1].
+$$
+Thus the Verdier/solid dual of
+$$
+\mathfrak B^{\mathrm{cont}}_{j!}
+=\mathbb Q^\times\ltimes
+R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S
+$$
+is a Levi-marked boundary object whose unipotent part is $\mathbb Q[-1]$
+with contragredient $\mathbb Q^\times$ action.  It is not an opposite Borel
+in degree $0$.
+
+The finite signed Verdier rule survives:
+$$
+D(d_S)=-d_S^T,\qquad D^2(d_S)=d_S,
+$$
+where $d_S:\mathbb Z^S\to\mathbb Z^{|S|-1}$ is the recollement boundary from
+the finite $X_S$ model.  The sign is visible over $\mathbb Z$ and invisible
+modulo $2$.
+
+All-prime, the same sign is the boundary-level antipode:
+$$
+\eta_\epsilon=-\mathrm{id}_\epsilon.
+$$
+It gives a functional-equation shadow only after replacing the missing
+Weyl/Fourier operator by the degree-$1$ finite-adele extension
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+No forbidden degree-$0$ flip is created, since
+$$
+\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.
+$$

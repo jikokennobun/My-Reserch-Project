@@ -1,0 +1,502 @@
+{
+  "pass": 94,
+  "title": "All-prime Borel j_! solid dual and boundary functional-equation shadow",
+  "A_finite_signed_verdier_shadow": {
+    "statement": "Finite recollement boundaries satisfy D(d_S)=-d_S^T, D^2(d_S)=d_S, with the sign visible over Z and invisible mod 2.",
+    "rows": [
+      {
+        "support_size": 2,
+        "boundary_shape": [
+          1,
+          2
+        ],
+        "signed_dual_shape": [
+          2,
+          1
+        ],
+        "boundary_rank": 1,
+        "signed_dual_rank": 1,
+        "duality_squared_returns_boundary": true,
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true
+      },
+      {
+        "support_size": 3,
+        "boundary_shape": [
+          2,
+          3
+        ],
+        "signed_dual_shape": [
+          3,
+          2
+        ],
+        "boundary_rank": 2,
+        "signed_dual_rank": 2,
+        "duality_squared_returns_boundary": true,
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true
+      },
+      {
+        "support_size": 4,
+        "boundary_shape": [
+          3,
+          4
+        ],
+        "signed_dual_shape": [
+          4,
+          3
+        ],
+        "boundary_rank": 3,
+        "signed_dual_rank": 3,
+        "duality_squared_returns_boundary": true,
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true
+      },
+      {
+        "support_size": 5,
+        "boundary_shape": [
+          4,
+          5
+        ],
+        "signed_dual_shape": [
+          5,
+          4
+        ],
+        "boundary_rank": 4,
+        "signed_dual_rank": 4,
+        "duality_squared_returns_boundary": true,
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true
+      },
+      {
+        "support_size": 6,
+        "boundary_shape": [
+          5,
+          6
+        ],
+        "signed_dual_shape": [
+          6,
+          5
+        ],
+        "boundary_rank": 5,
+        "signed_dual_rank": 5,
+        "duality_squared_returns_boundary": true,
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true
+      },
+      {
+        "support_size": 7,
+        "boundary_shape": [
+          6,
+          7
+        ],
+        "signed_dual_shape": [
+          7,
+          6
+        ],
+        "boundary_rank": 6,
+        "signed_dual_rank": 6,
+        "duality_squared_returns_boundary": true,
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true
+      }
+    ],
+    "signed_boundary_ok": true
+  },
+  "B_support_duality": {
+    "statement": "Support restrictions are surjective on primal j_! ghosts and injective after duality; this does not create an opposite degree-0 unipotent.",
+    "rows": [
+      {
+        "smaller_support_size": 1,
+        "larger_support_size": 2,
+        "primal_restriction_surjective": true,
+        "primal_kernel_rank": 1,
+        "dual_corestriction_injective": true,
+        "dual_cokernel_rank": 1,
+        "support_direction_creates_degree_zero_flip": false
+      },
+      {
+        "smaller_support_size": 2,
+        "larger_support_size": 3,
+        "primal_restriction_surjective": true,
+        "primal_kernel_rank": 1,
+        "dual_corestriction_injective": true,
+        "dual_cokernel_rank": 1,
+        "support_direction_creates_degree_zero_flip": false
+      },
+      {
+        "smaller_support_size": 3,
+        "larger_support_size": 4,
+        "primal_restriction_surjective": true,
+        "primal_kernel_rank": 1,
+        "dual_corestriction_injective": true,
+        "dual_cokernel_rank": 1,
+        "support_direction_creates_degree_zero_flip": false
+      },
+      {
+        "smaller_support_size": 4,
+        "larger_support_size": 5,
+        "primal_restriction_surjective": true,
+        "primal_kernel_rank": 1,
+        "dual_corestriction_injective": true,
+        "dual_cokernel_rank": 1,
+        "support_direction_creates_degree_zero_flip": false
+      },
+      {
+        "smaller_support_size": 5,
+        "larger_support_size": 6,
+        "primal_restriction_surjective": true,
+        "primal_kernel_rank": 1,
+        "dual_corestriction_injective": true,
+        "dual_cokernel_rank": 1,
+        "support_direction_creates_degree_zero_flip": false
+      },
+      {
+        "smaller_support_size": 6,
+        "larger_support_size": 7,
+        "primal_restriction_surjective": true,
+        "primal_kernel_rank": 1,
+        "dual_corestriction_injective": true,
+        "dual_cokernel_rank": 1,
+        "support_direction_creates_degree_zero_flip": false
+      }
+    ],
+    "support_duality_ok": true
+  },
+  "C_finite_boundary_counts": {
+    "statement": "Finite mod-N boundary class counts are preserved by signed duality, while the antipode sign collapses at N=2.",
+    "rows": [
+      {
+        "support_size": 2,
+        "level_n": 2,
+        "finite_boundary_class_count": 2,
+        "signed_dual_class_count": 2,
+        "counts_match": true,
+        "mod_2_antipode_collapses": true
+      },
+      {
+        "support_size": 2,
+        "level_n": 3,
+        "finite_boundary_class_count": 3,
+        "signed_dual_class_count": 3,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 2,
+        "level_n": 4,
+        "finite_boundary_class_count": 4,
+        "signed_dual_class_count": 4,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 2,
+        "level_n": 5,
+        "finite_boundary_class_count": 5,
+        "signed_dual_class_count": 5,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 2,
+        "level_n": 8,
+        "finite_boundary_class_count": 8,
+        "signed_dual_class_count": 8,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 2,
+        "level_n": 12,
+        "finite_boundary_class_count": 12,
+        "signed_dual_class_count": 12,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 3,
+        "level_n": 2,
+        "finite_boundary_class_count": 4,
+        "signed_dual_class_count": 4,
+        "counts_match": true,
+        "mod_2_antipode_collapses": true
+      },
+      {
+        "support_size": 3,
+        "level_n": 3,
+        "finite_boundary_class_count": 9,
+        "signed_dual_class_count": 9,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 3,
+        "level_n": 4,
+        "finite_boundary_class_count": 16,
+        "signed_dual_class_count": 16,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 3,
+        "level_n": 5,
+        "finite_boundary_class_count": 25,
+        "signed_dual_class_count": 25,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 3,
+        "level_n": 8,
+        "finite_boundary_class_count": 64,
+        "signed_dual_class_count": 64,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 3,
+        "level_n": 12,
+        "finite_boundary_class_count": 144,
+        "signed_dual_class_count": 144,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 4,
+        "level_n": 2,
+        "finite_boundary_class_count": 8,
+        "signed_dual_class_count": 8,
+        "counts_match": true,
+        "mod_2_antipode_collapses": true
+      },
+      {
+        "support_size": 4,
+        "level_n": 3,
+        "finite_boundary_class_count": 27,
+        "signed_dual_class_count": 27,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 4,
+        "level_n": 4,
+        "finite_boundary_class_count": 64,
+        "signed_dual_class_count": 64,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 4,
+        "level_n": 5,
+        "finite_boundary_class_count": 125,
+        "signed_dual_class_count": 125,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 4,
+        "level_n": 8,
+        "finite_boundary_class_count": 512,
+        "signed_dual_class_count": 512,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 4,
+        "level_n": 12,
+        "finite_boundary_class_count": 1728,
+        "signed_dual_class_count": 1728,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 5,
+        "level_n": 2,
+        "finite_boundary_class_count": 16,
+        "signed_dual_class_count": 16,
+        "counts_match": true,
+        "mod_2_antipode_collapses": true
+      },
+      {
+        "support_size": 5,
+        "level_n": 3,
+        "finite_boundary_class_count": 81,
+        "signed_dual_class_count": 81,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 5,
+        "level_n": 4,
+        "finite_boundary_class_count": 256,
+        "signed_dual_class_count": 256,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 5,
+        "level_n": 5,
+        "finite_boundary_class_count": 625,
+        "signed_dual_class_count": 625,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 5,
+        "level_n": 8,
+        "finite_boundary_class_count": 4096,
+        "signed_dual_class_count": 4096,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 5,
+        "level_n": 12,
+        "finite_boundary_class_count": 20736,
+        "signed_dual_class_count": 20736,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 6,
+        "level_n": 2,
+        "finite_boundary_class_count": 32,
+        "signed_dual_class_count": 32,
+        "counts_match": true,
+        "mod_2_antipode_collapses": true
+      },
+      {
+        "support_size": 6,
+        "level_n": 3,
+        "finite_boundary_class_count": 243,
+        "signed_dual_class_count": 243,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 6,
+        "level_n": 4,
+        "finite_boundary_class_count": 1024,
+        "signed_dual_class_count": 1024,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 6,
+        "level_n": 5,
+        "finite_boundary_class_count": 3125,
+        "signed_dual_class_count": 3125,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 6,
+        "level_n": 8,
+        "finite_boundary_class_count": 32768,
+        "signed_dual_class_count": 32768,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 6,
+        "level_n": 12,
+        "finite_boundary_class_count": 248832,
+        "signed_dual_class_count": 248832,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 7,
+        "level_n": 2,
+        "finite_boundary_class_count": 64,
+        "signed_dual_class_count": 64,
+        "counts_match": true,
+        "mod_2_antipode_collapses": true
+      },
+      {
+        "support_size": 7,
+        "level_n": 3,
+        "finite_boundary_class_count": 729,
+        "signed_dual_class_count": 729,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 7,
+        "level_n": 4,
+        "finite_boundary_class_count": 4096,
+        "signed_dual_class_count": 4096,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 7,
+        "level_n": 5,
+        "finite_boundary_class_count": 15625,
+        "signed_dual_class_count": 15625,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 7,
+        "level_n": 8,
+        "finite_boundary_class_count": 262144,
+        "signed_dual_class_count": 262144,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      },
+      {
+        "support_size": 7,
+        "level_n": 12,
+        "finite_boundary_class_count": 2985984,
+        "signed_dual_class_count": 2985984,
+        "counts_match": true,
+        "mod_2_antipode_collapses": false
+      }
+    ],
+    "finite_shadow_ok": true
+  },
+  "D_solid_dual": {
+    "statement": "The all-prime unipotent epsilon has solid dual Q[-1].  The nonzero datum is the degree-1 finite-adele boundary, not a degree-0 morphism epsilon -> Q.",
+    "rows": [
+      {
+        "object_name": "epsilon = Zhat/Z",
+        "solid_dual": "D epsilon = Q[-1]",
+        "degree_zero_hom_to_q_exists": false,
+        "degree_one_boundary_exists": true,
+        "biduality_sign": -1,
+        "interpretation": "The all-prime dual is the finite-adele boundary class 0 -> Q -> A_f -> epsilon -> 0, not a degree-0 map epsilon -> Q."
+      },
+      {
+        "object_name": "Q",
+        "solid_dual": "D Q = epsilon[-1]",
+        "degree_zero_hom_to_q_exists": true,
+        "degree_one_boundary_exists": true,
+        "biduality_sign": -1,
+        "interpretation": "Q is the shifted dual partner of epsilon in the hyperbolic plane H = epsilon plus Q."
+      }
+    ],
+    "solid_dual_ok": true
+  },
+  "E_borel_dual_verdict": {
+    "statement": "The dual of the all-prime Borel j_! coefficient is a Levi-marked boundary object.  It has a functional-equation shadow, but no Weyl flip or standard intertwiner.",
+    "row": {
+      "primal_coefficient": "B_cont = Q^x semidirect Rlim_{S finite} j_{S,!} V_S",
+      "dual_unipotent": "Q[-1] with contragredient Q^x action",
+      "global_levi_retained": true,
+      "levi_action_is_contragredient": true,
+      "opposite_degree_zero_unipotent_exists": false,
+      "standard_weyl_intertwiner_exists": false,
+      "functional_equation_status": "boundary-shadow only: finite signed transpose and all-prime antipode survive, but no degree-0 Weyl/Fourier operator exists"
+    },
+    "borel_dual_ok": true
+  },
+  "conclusion": {
+    "dual_coefficient": "D(B_cont,j!) has unipotent part Q[-1] with contragredient Q^x action; it is not an opposite Borel in degree 0.",
+    "functional_equation_shadow": "The Pass-65/77 antipode survives as signed boundary duality D(d_S)=-d_S^T and biduality sign -1.",
+    "forbidden_map": "Hom^0_Solid(epsilon,Q)=0, so no Weyl/Fourier flip epsilon -> Q is produced.",
+    "next_task": "Package the boundary-shadow functional equation as a constant-term or two-term Borel complex natural under conductor restriction."
+  },
+  "overall": "PASS"
+}

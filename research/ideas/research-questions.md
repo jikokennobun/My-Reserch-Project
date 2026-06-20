@@ -42,23 +42,25 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 93 -> 94: duality of the all-prime Borel $j_!$ class)**
-  Pass 93 resolved the all-prime upgrade.  Since $\{\eta\}$ is not open in
-  honest $\mathrm{Spec}\,\mathbb Z$, the finite-support $j_!$ notation becomes
-  the continuous/pro-open/solid coefficient
-  $$\mathfrak B^{\mathrm{cont}}_{j!}
-  =\mathbb Q^\times\ltimes R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S.$$
-  The support direction is Mittag-Leffler and contributes no extra
-  $\varprojlim^1$, so
-  $$H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
-  \cong\widehat{\mathbb Z}/\mathbb Z.$$
+- **(Pass 94 -> 95: boundary-only functional equation for the all-prime Borel class)**
+  Pass 94 computed the Verdier/solid dual of the all-prime Borel $j_!$ class.
+  The unipotent limit is $\epsilon=\widehat{\mathbb Z}/\mathbb Z$, and
+  $$D\epsilon\simeq\mathbb Q[-1].$$
+  Finite shadows still obey the signed Verdier rule
+  $$D(d_S)=-d_S^T,$$
+  and all-prime biduality gives the antipode sign
+  $\eta_\epsilon=-\mathrm{id}_\epsilon$.  However, the result is only a
+  boundary-level functional-equation shadow: no degree-$0$ Weyl/Fourier flip is
+  created because
+  $$\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.$$
   Open:
-  (i) compute the Verdier/solid dual of
-  $\mathfrak B^{\mathrm{cont}}_{j!}$;
-  (ii) decide whether the Pass-65/77 antipode sign gives a functional-equation
-  shadow for the all-prime Borel class;
-  (iii) prove that any such duality remains a degree-shifted boundary statement
-  and does not create a forbidden degree-$0$ Weyl flip $\epsilon\to\mathbb Q$.
+  (i) package the signed boundary shadow as a two-term Borel or constant-term
+  complex, probably using $[\mathbb Q\to\mathbb A_f]$ with its
+  $\mathbb Q^\times$ action;
+  (ii) prove naturality of that complex under conductor restriction and finite
+  support projection;
+  (iii) state a clean "functional equation without Weyl operator" theorem that
+  preserves the Pass-81 no-intertwiner wall.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

@@ -1021,13 +1021,35 @@
   $0\to\mathbb Q\to\mathbb A_f\to\widehat{\mathbb Z}/\mathbb Z\to0$, and
   hyperbolic Borel shear compatibility.  Machine-verified
   `artifacts/reports/pass93-all-prime-borel-jshriek-upgrade-check.json` (PASS).
-- **[New (Pass 93)]** **Verdier/solid dual of the all-prime Borel $j_!$ class.**
+- **[Resolved (Pass 94)]** **Verdier/solid dual of the all-prime Borel $j_!$ class.**
   Compute the Verdier or solid dual of
   $\mathfrak B^{\mathrm{cont}}_{j!}$ and decide whether the antipode sign from
   Passes 65 and 77 yields a functional-equation shadow for the all-prime Borel
   class.  The key constraint is to recover the signed dual boundary without
   creating a forbidden degree-$0$ Weyl flip
   $\epsilon\to\mathbb Q$, which Passes 80-82 ruled out.
+  **Resolution:** the unipotent all-prime class is
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$, so
+  $$D\epsilon\simeq\mathbb Q[-1].$$
+  Hence the dual of the all-prime Borel $j_!$ coefficient is a Levi-marked
+  boundary object with unipotent part $\mathbb Q[-1]$ and contragredient
+  $\mathbb Q^\times$ action, not an opposite Borel in degree $0$.  Finite
+  shadows retain the signed Verdier rule $D(d_S)=-d_S^T$, and all-prime
+  biduality gives the antipode sign $\eta_\epsilon=-\mathrm{id}_\epsilon$.
+  This is only a boundary-level functional-equation shadow: the finite-adele
+  extension $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$ replaces the missing
+  flip, while
+  $\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$ keeps the
+  no-Weyl wall intact.  Machine-verified
+  `artifacts/reports/pass94-all-prime-borel-jshriek-solid-dual-check.json`
+  (PASS).
+- **[New (Pass 94)]** **Boundary-only functional equation as a Borel complex.**
+  Package the signed boundary shadow from Pass 94 as a two-term Borel or
+  constant-term complex, probably built from
+  $[\mathbb Q\to\mathbb A_f]$ with its $\mathbb Q^\times$ action.  Prove that
+  it is natural under conductor restriction and finite support projection, and
+  formulate a "functional equation without Weyl operator" theorem that keeps
+  the Pass-81 no-standard-intertwiner wall explicit.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass94-all-prime-borel-jshriek-solid-dual-check.json`: verifies the
+  Pass-94 finite certificate for the Verdier/solid dual of the all-prime Borel
+  $j_!$ class. It checks finite signed boundary duality
+  $D(d_S)=-d_S^T$, duality squared, rank preservation, mod-$2$ sign collapse,
+  support-dual behavior, the solid identity $D\epsilon=\mathbb Q[-1]$, the
+  degree-$1$ finite-adele boundary, and the absence of a degree-$0$ Weyl flip
+  $\epsilon\to\mathbb Q$.
+
 - `pass93-all-prime-borel-jshriek-upgrade-check.json`: verifies the Pass-93
   finite certificate for the all-prime Spec-$\mathbb Z$ Borel $j_!$ upgrade.
   It checks that the generic point is open only on finite subspaces, verifies

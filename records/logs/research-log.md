@@ -1,5 +1,17 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 94)
+
+- Computed the Verdier/solid dual of the all-prime Borel $j_!$ coefficient.
+  The unipotent all-prime class is
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$, so
+  $D\epsilon\simeq\mathbb Q[-1]$.  The finite Pass-65 sign
+  $D(d_S)=-d_S^T$ survives all-prime as a boundary-level antipode sign, but it
+  does not create a degree-$0$ Weyl/Fourier flip because
+  $\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$.  Added
+  checker/report and retargeted Pass 95 to a boundary-only constant-term or
+  two-term Borel complex natural under conductor restriction.
+
 ## 2026-06-21 (Research Project relay sync, no-delta verification)
 
 - Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-21T04:03+09:00`. The ChatGPT Project artifact inbox exposed `3` supported PDF artifacts, with `0` copied or refreshed slide/deck imports. The central PDF collection was refreshed, but no new ChatGPT Project slide/deck payload was imported.
