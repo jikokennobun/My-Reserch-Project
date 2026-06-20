@@ -37,6 +37,15 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass100-orientation-torsor-support-functoriality-check.json`: verifies the
+  Pass-100 finite certificate for primitive zero-sum orientation torsors. It
+  checks that `O_S={c in Z^S : sum c=0, gcd(c)=1}` is preserved by
+  zero-extension along support inclusions, that zero-extension is functorial
+  and antipode-equivariant, that restriction from larger to smaller supports
+  can fail the zero-sum descent condition, that finite kernel sizes factor
+  under support enlargement, and that no nonzero support-symmetric primitive
+  orientation exists.
+
 - `pass99-torsion-boundary-constant-term-triangle-check.json`: verifies the
   Pass-99 finite certificate for the exact bridge from
   `T_S=(Q/Z)^S/Delta(Q/Z)` to the all-prime constant-term complex

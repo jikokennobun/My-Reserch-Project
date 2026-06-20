@@ -5614,3 +5614,90 @@ constant-term target.
 **Limit of the pass.**  The next task is to study the orientation torsor of
 primitive zero-sum boundary functionals under support inclusions and decide
 which transition maps preserve, negate, or destabilize chosen collapses.
+
+## Pass 100 - Orientation torsor under support functoriality
+
+Pass 100 studies the collapse choices introduced in Pass 99.  For a finite
+support $S$ with $|S|\ge2$, define
+$$
+\mathcal O_S=
+\{c=(c_p)_{p\in S}\in\mathbb Z^S:
+\sum_{p\in S}c_p=0,\ \gcd_{p\in S}(c_p)=1\}.
+$$
+This is the primitive orientation torsor of collapses
+$$
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+\twoheadrightarrow\mathbb Q/\mathbb Z.
+$$
+The antipode acts freely by $c\mapsto -c$.
+
+For an inclusion $S\subseteq T$, the correct transition is contravariant with
+respect to the boundary projection $T_T\to T_S$.  Pulling a collapse back
+along this projection extends the functional by zero:
+$$
+e_{S,T}(c)_p=
+\begin{cases}
+c_p,&p\in S,\\
+0,&p\in T\setminus S.
+\end{cases}
+$$
+This preserves zero-sum and primitivity.  It is strictly functorial:
+$$
+e_{T,U}\circ e_{S,T}=e_{S,U},
+$$
+and it commutes with the antipode:
+$$
+e_{S,T}(-c)=-e_{S,T}(c).
+$$
+
+The reverse direction is not canonical.  If $d\in\mathcal O_T$, restriction
+to $S$ can fail the zero-sum condition.  For example,
+$$
+(1,1,-2)\in\mathcal O_{\{2,3,5\}}
+$$
+restricts to $(1,1)$ on $\{2,3\}$, whose sum is nonzero.  Thus there is no
+natural projection $\mathcal O_T\to\mathcal O_S$.
+
+The finite kernel also behaves exactly as expected under zero-extension.  For
+$c\in\mathcal O_S$ and $S\subseteq T$, the extended collapse on $T_T$ has
+$N$-torsion kernel
+$$
+N^{|T|-2}=N^{|S|-2}\cdot N^{|T|-|S|}.
+$$
+The factor $N^{|S|-2}$ is the old collapse kernel; the factor
+$N^{|T|-|S|}$ is the new support kernel introduced by $T_T\to T_S$.
+
+Finally, no support-symmetric primitive orientation exists.  A symmetric
+integral functional is constant on $S$, and the zero-sum condition forces it
+to be zero.  Therefore the all-prime constant-term generator is not selected
+by any canonical symmetric collapse.  One must work with an oriented-support
+groupoid/stack, or pass to the antipode quotient / forgetful quotient when
+only the single shifted generator $D\epsilon\simeq\mathbb Q[-1]$ is needed.
+
+> **Theorem 100a (orientation torsor).** Primitive collapses
+> $T_S\to\mathbb Q/\mathbb Z$ are represented by
+> $\mathcal O_S=\{c\in\mathbb Z^S:\sum c_p=0,\gcd(c_p)=1\}$, with free
+> antipode action $c\mapsto -c$.
+>
+> **Theorem 100b (zero-extension functoriality).** For $S\subseteq T$,
+> zero-extension gives a functorial, antipode-equivariant map
+> $\mathcal O_S\to\mathcal O_T$ compatible with pulling collapses back along
+> $T_T\to T_S$.
+>
+> **Theorem 100c (restriction instability).** There is no canonical
+> projection $\mathcal O_T\to\mathcal O_S$; restriction can fail zero-sum
+> descent.
+>
+> **Theorem 100d (no symmetric orientation).** The only support-symmetric
+> zero-sum functional is zero, so no distinguished all-prime primitive
+> orientation exists.
+
+**Machine verification** (`code/scripts/check-pass100.py` ->
+`artifacts/reports/pass100-orientation-torsor-support-functoriality-check.json`,
+PASS): the checker verifies primitive orientation objects, zero-extension
+functoriality, antipode equivariance, restriction instability, finite kernel
+factorization, and absence of a nonzero symmetric orientation.
+
+**Limit of the pass.**  The next task is to package the oriented-support
+groupoid/stack explicitly and compare its antipode quotient with the Pass-94
+functional-equation sign.

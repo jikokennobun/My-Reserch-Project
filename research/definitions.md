@@ -2353,3 +2353,63 @@ The antipode acts on the chosen functional by $c\mapsto -c$, negating the
 boundary class.  This sign is visible over $\mathbb Z$ and invisible mod $2$.
 The construction remains shifted through $D\epsilon\simeq\mathbb Q[-1]$ and
 does not create a degree-$0$ Weyl/Fourier morphism $\epsilon\to\mathbb Q$.
+
+## Orientation torsor under support change (Pass 100)
+
+For finite support $S$ with $|S|\ge2$, the **primitive orientation torsor** is
+$$
+\mathcal O_S=
+\{c=(c_p)_{p\in S}\in\mathbb Z^S:
+\sum_{p\in S}c_p=0,\ \gcd_{p\in S}(c_p)=1\}.
+$$
+An element $c\in\mathcal O_S$ represents a primitive collapse
+$$
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+\twoheadrightarrow\mathbb Q/\mathbb Z.
+$$
+The antipode acts freely by
+$$
+c\longmapsto -c.
+$$
+
+For an inclusion $S\subseteq T$, the canonical operation is pullback along the
+boundary projection $T_T\to T_S$.  On orientations it is **zero-extension**
+$$
+e_{S,T}(c)_p=
+\begin{cases}
+c_p,&p\in S,\\
+0,&p\in T\setminus S.
+\end{cases}
+$$
+This preserves zero-sum, primitivity, and the collapse to
+$\mathbb Q/\mathbb Z$.  It is strictly functorial:
+$$
+e_{T,U}\circ e_{S,T}=e_{S,U}.
+$$
+It is also antipode-equivariant:
+$$
+e_{S,T}(-c)=-e_{S,T}(c).
+$$
+
+The reverse operation is not canonical.  Restricting
+$d\in\mathcal O_T$ to $S$ may fail the zero-sum condition and therefore may
+not descend to a collapse on $T_S$.  For example,
+$$
+(1,1,-2)\in\mathcal O_{\{2,3,5\}}
+$$
+restricts to $(1,1)$ on $\{2,3\}$, whose sum is $2$.
+
+If $c\in\mathcal O_S$ and $e_{S,T}(c)\in\mathcal O_T$ is its zero-extension,
+then the finite-shadow kernel under collapse factors as
+$$
+N^{|T|-2}=N^{|S|-2}\cdot N^{|T|-|S|}.
+$$
+The first factor is the old collapse kernel and the second is the new support
+kernel of $T_T\to T_S$.
+
+There is no nonzero support-symmetric orientation: a support-symmetric
+integral functional is constant, and zero-sum forces it to be zero.  Hence the
+all-prime constant-term generator is not selected by a canonical symmetric
+orientation.  It is obtained only after choosing an element of the
+orientation torsor, quotienting by the antipode, or forgetting the orientation
+data.

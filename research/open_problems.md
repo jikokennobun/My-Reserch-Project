@@ -1155,7 +1155,7 @@
   Weyl map is created.  Machine-verified
   `artifacts/reports/pass99-torsion-boundary-constant-term-triangle-check.json`
   (PASS).
-- **[New (Pass 99)]** **Orientation torsor for primitive boundary collapse.**
+- **[Resolved (Pass 100)]** **Orientation torsor for primitive boundary collapse.**
   Describe the torsor of primitive zero-sum functionals
   $$\{c\in\mathbb Z^S:\sum c_p=0,\ \gcd(c_p)=1\}$$
   under support inclusions, support projections, and antipode sign.  Determine
@@ -1163,6 +1163,26 @@
   the collapse $T_S\to\mathbb Q/\mathbb Z$ functorial up to sign, and decide
   how this orientation data survives, or is quotiented, in the all-prime
   constant-term generator $D\epsilon\simeq\mathbb Q[-1]$.
+  **Resolution:** for
+  $$\mathcal O_S=\{c\in\mathbb Z^S:\sum c_p=0,\ \gcd(c_p)=1\},$$
+  the canonical transition for $S\subseteq T$ is zero-extension
+  $\mathcal O_S\to\mathcal O_T$, i.e. pullback along the boundary projection
+  $T_T\to T_S$.  It preserves primitivity, collapse compatibility, finite
+  kernel factorization, and the antipode $c\mapsto-c$.  There is no canonical
+  reverse projection $\mathcal O_T\to\mathcal O_S$, since restriction can fail
+  zero-sum descent; and no support-symmetric primitive orientation exists.
+  Therefore the all-prime generator is obtained only after choosing,
+  quotienting, or forgetting the orientation torsor.  Machine-verified
+  `artifacts/reports/pass100-orientation-torsor-support-functoriality-check.json`
+  (PASS).
+- **[New (Pass 100)]** **Oriented-support groupoid and antipode quotient.**
+  Define the groupoid or stack whose objects are oriented supports $(S,c)$
+  with $c\in\mathcal O_S$, whose transition morphisms include zero-extension
+  and antipode $c\mapsto-c$.  Compute its antipode quotient and decide whether
+  that quotient retains exactly the Pass-94 functional-equation sign or loses
+  essential orientation data.  Use this to present the all-prime
+  constant-term generator $D\epsilon\simeq\mathbb Q[-1]$ as a quotient or
+  colimit of oriented finite-support boundary data.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

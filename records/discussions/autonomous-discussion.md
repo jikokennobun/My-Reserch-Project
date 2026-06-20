@@ -6,8 +6,24 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 100
-- Last pass note: Pass 99 (2026-06-21) constructed the exact bridge from the
+- Current pass: 101
+- Last pass note: Pass 100 (2026-06-21) studied the orientation torsor of
+  primitive zero-sum collapse functionals
+  $$\mathcal O_S=\{c\in\mathbb Z^S:\sum_{p\in S}c_p=0,\ \gcd(c_p)=1\}.$$
+  For $S\subseteq T$, the canonical operation is pullback along the boundary
+  projection $T_T\to T_S$: extend $c$ by zero to $T$.  This preserves
+  zero-sum, primitivity, the collapse $T_S\to\mathbb Q/\mathbb Z$, and the
+  antipode action $c\mapsto -c$, and it is strictly functorial along support
+  chains.  The reverse direction is not canonical: restricting an orientation
+  on $T$ to $S$ may fail the zero-sum descent condition, so there is no
+  natural projection $\mathcal O_T\to\mathcal O_S$.  The only
+  support-symmetric zero-sum functional is $0$, hence no distinguished
+  primitive all-prime orientation exists.  Therefore the all-prime
+  constant-term generator is obtained only after choosing, quotienting, or
+  forgetting this orientation torsor.  Machine-verified `check-pass100.py` ->
+  `pass100-orientation-torsor-support-functoriality-check.json` PASS. Counter
+  100->101.
+- Earlier note: Pass 99 (2026-06-21) constructed the exact bridge from the
   finite-support torsion boundary
   $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
   to the all-prime constant-term complex.  The intrinsic exact triangle is
@@ -24,22 +40,6 @@
   $\epsilon\to\mathbb Q$ is produced.  Machine-verified `check-pass99.py` ->
   `pass99-torsion-boundary-constant-term-triangle-check.json` PASS. Counter
   99->100.
-- Earlier note: Pass 98 (2026-06-21) compared the Pass-97 torsion boundary
-  $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
-  with the Pass-94 all-prime solid-dual identity
-  $$D\epsilon\simeq\mathbb Q[-1],\qquad \epsilon=\widehat{\mathbb Z}/\mathbb Z.$$
-  The verdict is not raw object equality: $T_S$ is a degree-$0$ torsion
-  coefficient with $|T_S[N]|=N^{|S|-1}$, while $D\epsilon$ is the shifted
-  all-prime solid dual.  The identification is mediated by the canonical unit
-  extension
-  $$0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0.$$
-  Applying the extension/solid-dual passage sends each independent
-  $\mathbb Q/\mathbb Z$ boundary coefficient to a shifted
-  $\mathbb Q[-1]$ constant-term obstruction generator.  Thus the multiplicity
-  $|S|-1$ is finite-support/local-Loeb bookkeeping, but the coefficient is not
-  a separate artifact: it is the finite-support torsion shadow of the same
-  shifted obstruction.  Machine-verified `check-pass98.py` ->
-  `pass98-torsion-boundary-solid-dual-check.json` PASS. Counter 98->99.
 - Earlier note: Pass 93 (2026-06-21) upgraded the finite-support Borel
   $j_!$ class to the all-prime Spec-$\mathbb Z$ setting.  The key correction is
   topological: in the honest all-prime Zariski site, the generic point
@@ -11430,3 +11430,112 @@ Next step:
 Pass 100 should study the orientation torsor of primitive zero-sum boundary
 functionals and determine how choices of $c$ transform under support
 inclusions, support projections, and the all-prime limit.
+
+### Pass 100 - 2026-06-21 JST
+
+Focus:
+Study the orientation torsor of primitive zero-sum boundary functionals under
+support change.
+
+Proposer:
+For each finite support $S$ with $|S|\ge2$, define
+$$
+\mathcal O_S=\{c=(c_p)_{p\in S}\in\mathbb Z^S:
+\sum_{p\in S}c_p=0,\ \gcd_{p\in S}(c_p)=1\}.
+$$
+This is the set of primitive collapses
+$$
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+\twoheadrightarrow \mathbb Q/\mathbb Z.
+$$
+For an inclusion $S\subseteq T$, the canonical operation is not restriction
+but pullback along the boundary projection $T_T\to T_S$.  On functionals it is
+extension by zero:
+$$
+e_{S,T}(c)_p=
+\begin{cases}
+c_p,&p\in S,\\
+0,&p\in T\setminus S.
+\end{cases}
+$$
+This preserves the zero-sum condition, primitivity, and the induced collapse.
+It is strictly functorial:
+$$
+e_{T,U}\circ e_{S,T}=e_{S,U}.
+$$
+
+Skeptic:
+The reverse direction fails.  If $d\in\mathcal O_T$, its restriction to
+$S$ need not sum to zero, so it may not define any collapse on $T_S$.  Example:
+for $S=\{2,3\}$ and $T=\{2,3,5\}$,
+$$
+d=(1,1,-2)\in\mathcal O_T
+$$
+restricts to $(1,1)$ on $S$, whose sum is $2$.  Thus there is no canonical
+projection $\mathcal O_T\to\mathcal O_S$.  Also, no support-symmetric
+primitive orientation exists: a symmetric integral functional is constant,
+and zero-sum forces it to be $0$.
+
+Formalist:
+For zero-extended orientations, finite kernels factor exactly.  If
+$r_S=|S|-1$ and $r_T=|T|-1$, then the primitive collapse on $T_S$ has
+$N$-torsion kernel of size $N^{r_S-1}$; after extension to $T$, the kernel has
+size
+$$
+N^{r_T-1}=N^{r_S-1}\cdot N^{|T|-|S|}.
+$$
+The second factor is precisely the new support kernel introduced by
+$T_T\to T_S$.  The antipode action is compatible with support pullback:
+$$
+e_{S,T}(-c)=-e_{S,T}(c).
+$$
+Hence the natural finite object is not a single chosen collapse but the
+oriented-support groupoid/stack whose objects are pairs $(S,c)$ and whose
+morphisms are generated by zero-extension and the antipode.
+
+> **Theorem 100a (orientation objects).** For $|S|\ge2$, primitive collapses
+> $T_S\to\mathbb Q/\mathbb Z$ are represented by
+> $\mathcal O_S=\{c\in\mathbb Z^S:\sum c_p=0,\gcd(c_p)=1\}$, with free
+> antipode action $c\mapsto -c$.
+>
+> **Theorem 100b (zero-extension functoriality).** For $S\subseteq T$,
+> $e_{S,T}:\mathcal O_S\to\mathcal O_T$ given by zero-extension preserves
+> primitivity, collapse compatibility, and antipode sign, and is strictly
+> functorial along support chains.
+>
+> **Theorem 100c (no projection of orientations).** There is no canonical
+> projection $\mathcal O_T\to\mathcal O_S$: restriction can fail the zero-sum
+> descent condition.
+>
+> **Theorem 100d (no symmetric all-prime orientation).** The only
+> support-symmetric zero-sum functional is $0$, so the all-prime
+> constant-term generator is obtained only after choosing, quotienting, or
+> forgetting the orientation torsor.
+
+Machine verification (`code/scripts/check-pass100.py` ->
+`artifacts/reports/pass100-orientation-torsor-support-functoriality-check.json`,
+PASS): the checker verifies primitive orientation objects, zero-extension
+functoriality and antipode equivariance, restriction instability, kernel
+factorization under support enlargement, absence of nonzero symmetric
+orientation, and the all-prime interpretation as a nonempty but undistinguished
+orientation torsor.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-100
+  entry; State counter $100\to101$.
+- `records/logs/research-log.md`: Pass-100 entry.
+- `research/definitions.md`: added the orientation torsor under support
+  change.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-100 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  resolved the primitive-collapse orientation task and retargeted the next
+  pass to the oriented-support groupoid/stack and antipode quotient.
+- `code/scripts/check-pass100.py`,
+  `artifacts/reports/pass100-orientation-torsor-support-functoriality-check.json`:
+  new.
+- `artifacts/pdf/orientation-torsor-support-functoriality-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 101 should package the oriented-support groupoid/stack explicitly and
+compare its antipode quotient with the Pass-94 functional-equation sign.

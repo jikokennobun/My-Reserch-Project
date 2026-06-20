@@ -1,0 +1,1160 @@
+{
+  "pass": 100,
+  "title": "Orientation torsor under support functoriality",
+  "A_orientation_objects": {
+    "statement": "Primitive zero-sum functionals form an antipode-free orientation torsor over each finite support of size at least 2.",
+    "rows": [
+      {
+        "support": [
+          2,
+          3
+        ],
+        "functional": [
+          -1,
+          1
+        ],
+        "zero_sum": true,
+        "primitive": true,
+        "antipode": [
+          1,
+          -1
+        ],
+        "antipode_zero_sum": true,
+        "antipode_primitive": true,
+        "antipode_free": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "functional": [
+          -1,
+          1
+        ],
+        "zero_sum": true,
+        "primitive": true,
+        "antipode": [
+          1,
+          -1
+        ],
+        "antipode_zero_sum": true,
+        "antipode_primitive": true,
+        "antipode_free": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "functional": [
+          -1,
+          0,
+          1
+        ],
+        "zero_sum": true,
+        "primitive": true,
+        "antipode": [
+          1,
+          0,
+          -1
+        ],
+        "antipode_zero_sum": true,
+        "antipode_primitive": true,
+        "antipode_free": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "functional": [
+          -1,
+          0,
+          1
+        ],
+        "zero_sum": true,
+        "primitive": true,
+        "antipode": [
+          1,
+          0,
+          -1
+        ],
+        "antipode_zero_sum": true,
+        "antipode_primitive": true,
+        "antipode_free": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "functional": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "zero_sum": true,
+        "primitive": true,
+        "antipode": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "antipode_zero_sum": true,
+        "antipode_primitive": true,
+        "antipode_free": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "functional": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "zero_sum": true,
+        "primitive": true,
+        "antipode": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "antipode_zero_sum": true,
+        "antipode_primitive": true,
+        "antipode_free": true
+      }
+    ],
+    "orientation_ok": true
+  },
+  "B_zero_extension": {
+    "statement": "Pullback along T_T -> T_S is zero-extension of functionals. It preserves zero-sum, primitivity, antipode sign, and collapse compatibility.",
+    "rows": [
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "functional_on_smaller": [
+          -1,
+          1
+        ],
+        "zero_extended_functional": [
+          -1,
+          1,
+          0
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_equivariant": true,
+        "collapse_compatible_with_projection": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "functional_on_smaller": [
+          -1,
+          1
+        ],
+        "zero_extended_functional": [
+          -1,
+          1,
+          0
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_equivariant": true,
+        "collapse_compatible_with_projection": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "functional_on_smaller": [
+          -1,
+          0,
+          1
+        ],
+        "zero_extended_functional": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_equivariant": true,
+        "collapse_compatible_with_projection": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "functional_on_smaller": [
+          -1,
+          0,
+          1
+        ],
+        "zero_extended_functional": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_equivariant": true,
+        "collapse_compatible_with_projection": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "functional_on_smaller": [
+          -1,
+          0,
+          1
+        ],
+        "zero_extended_functional": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_equivariant": true,
+        "collapse_compatible_with_projection": true
+      }
+    ],
+    "extension_ok": true
+  },
+  "C_functoriality": {
+    "statement": "Zero-extension is strictly functorial along support chains.",
+    "rows": [
+      {
+        "small_support": [
+          2,
+          3
+        ],
+        "middle_support": [
+          2,
+          3,
+          5
+        ],
+        "large_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "direct_extension": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "stepwise_extension": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "functorial": true
+      },
+      {
+        "small_support": [
+          2,
+          5
+        ],
+        "middle_support": [
+          2,
+          5,
+          7
+        ],
+        "large_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "direct_extension": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "stepwise_extension": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "functorial": true
+      }
+    ],
+    "functoriality_ok": true
+  },
+  "D_restriction_instability": {
+    "statement": "Restriction of a primitive orientation on a larger support to a smaller support need not have zero sum, so there is no canonical pushforward/projection of orientations.",
+    "rows": [
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "functional_on_larger": [
+          1,
+          1,
+          -2
+        ],
+        "restricted_functional": [
+          1,
+          1
+        ],
+        "restriction_zero_sum": false,
+        "restriction_descends_to_smaller_boundary": false,
+        "canonical_projection_orientation_exists": false
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "functional_on_larger": [
+          1,
+          1,
+          -2
+        ],
+        "restricted_functional": [
+          1,
+          1
+        ],
+        "restriction_zero_sum": false,
+        "restriction_descends_to_smaller_boundary": false,
+        "canonical_projection_orientation_exists": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "functional_on_larger": [
+          1,
+          1,
+          1,
+          -3
+        ],
+        "restricted_functional": [
+          1,
+          1,
+          1
+        ],
+        "restriction_zero_sum": false,
+        "restriction_descends_to_smaller_boundary": false,
+        "canonical_projection_orientation_exists": false
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "functional_on_larger": [
+          2,
+          -1,
+          2,
+          -3
+        ],
+        "restricted_functional": [
+          2,
+          -1,
+          2
+        ],
+        "restriction_zero_sum": false,
+        "restriction_descends_to_smaller_boundary": false,
+        "canonical_projection_orientation_exists": false
+      }
+    ],
+    "restriction_instability_ok": true
+  },
+  "E_kernel_factorization": {
+    "statement": "For zero-extended orientations, the finite kernel factors as old collapse kernel times the new support kernel.",
+    "rows": [
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 2,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 2,
+        "extended_collapse_kernel_size": 2,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 3,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 3,
+        "extended_collapse_kernel_size": 3,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 4,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 4,
+        "extended_collapse_kernel_size": 4,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 5,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 5,
+        "extended_collapse_kernel_size": 5,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 6,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 6,
+        "extended_collapse_kernel_size": 6,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 8,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 8,
+        "extended_collapse_kernel_size": 8,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 12,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 12,
+        "extended_collapse_kernel_size": 12,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 2,
+        "extended_collapse_kernel_size": 2,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 3,
+        "extended_collapse_kernel_size": 3,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 4,
+        "extended_collapse_kernel_size": 4,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 5,
+        "extended_collapse_kernel_size": 5,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 6,
+        "extended_collapse_kernel_size": 6,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 8,
+        "extended_collapse_kernel_size": 8,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "old_collapse_kernel_size": 1,
+        "new_support_kernel_size": 12,
+        "extended_collapse_kernel_size": 12,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "old_collapse_kernel_size": 2,
+        "new_support_kernel_size": 2,
+        "extended_collapse_kernel_size": 4,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "old_collapse_kernel_size": 3,
+        "new_support_kernel_size": 3,
+        "extended_collapse_kernel_size": 9,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "old_collapse_kernel_size": 4,
+        "new_support_kernel_size": 4,
+        "extended_collapse_kernel_size": 16,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "old_collapse_kernel_size": 5,
+        "new_support_kernel_size": 5,
+        "extended_collapse_kernel_size": 25,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "old_collapse_kernel_size": 6,
+        "new_support_kernel_size": 6,
+        "extended_collapse_kernel_size": 36,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "old_collapse_kernel_size": 8,
+        "new_support_kernel_size": 8,
+        "extended_collapse_kernel_size": 64,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "old_collapse_kernel_size": 12,
+        "new_support_kernel_size": 12,
+        "extended_collapse_kernel_size": 144,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 2,
+        "old_collapse_kernel_size": 2,
+        "new_support_kernel_size": 2,
+        "extended_collapse_kernel_size": 4,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 3,
+        "old_collapse_kernel_size": 3,
+        "new_support_kernel_size": 3,
+        "extended_collapse_kernel_size": 9,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 4,
+        "old_collapse_kernel_size": 4,
+        "new_support_kernel_size": 4,
+        "extended_collapse_kernel_size": 16,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 5,
+        "old_collapse_kernel_size": 5,
+        "new_support_kernel_size": 5,
+        "extended_collapse_kernel_size": 25,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 6,
+        "old_collapse_kernel_size": 6,
+        "new_support_kernel_size": 6,
+        "extended_collapse_kernel_size": 36,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 8,
+        "old_collapse_kernel_size": 8,
+        "new_support_kernel_size": 8,
+        "extended_collapse_kernel_size": 64,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 12,
+        "old_collapse_kernel_size": 12,
+        "new_support_kernel_size": 12,
+        "extended_collapse_kernel_size": 144,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 2,
+        "old_collapse_kernel_size": 2,
+        "new_support_kernel_size": 2,
+        "extended_collapse_kernel_size": 4,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 3,
+        "old_collapse_kernel_size": 3,
+        "new_support_kernel_size": 3,
+        "extended_collapse_kernel_size": 9,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 4,
+        "old_collapse_kernel_size": 4,
+        "new_support_kernel_size": 4,
+        "extended_collapse_kernel_size": 16,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 5,
+        "old_collapse_kernel_size": 5,
+        "new_support_kernel_size": 5,
+        "extended_collapse_kernel_size": 25,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 6,
+        "old_collapse_kernel_size": 6,
+        "new_support_kernel_size": 6,
+        "extended_collapse_kernel_size": 36,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 8,
+        "old_collapse_kernel_size": 8,
+        "new_support_kernel_size": 8,
+        "extended_collapse_kernel_size": 64,
+        "factorization_holds": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 12,
+        "old_collapse_kernel_size": 12,
+        "new_support_kernel_size": 12,
+        "extended_collapse_kernel_size": 144,
+        "factorization_holds": true
+      }
+    ],
+    "kernel_factorization_ok": true
+  },
+  "F_no_symmetric_orientation": {
+    "statement": "The only support-symmetric zero-sum functional is zero, so no nonzero primitive symmetric orientation exists.",
+    "rows": [
+      {
+        "support_size": 2,
+        "symmetric_functional": [
+          0,
+          0
+        ],
+        "zero_sum": true,
+        "primitive": false,
+        "nonzero_support_symmetric_orientation_exists": false
+      },
+      {
+        "support_size": 3,
+        "symmetric_functional": [
+          0,
+          0,
+          0
+        ],
+        "zero_sum": true,
+        "primitive": false,
+        "nonzero_support_symmetric_orientation_exists": false
+      },
+      {
+        "support_size": 4,
+        "symmetric_functional": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero_sum": true,
+        "primitive": false,
+        "nonzero_support_symmetric_orientation_exists": false
+      },
+      {
+        "support_size": 5,
+        "symmetric_functional": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero_sum": true,
+        "primitive": false,
+        "nonzero_support_symmetric_orientation_exists": false
+      },
+      {
+        "support_size": 6,
+        "symmetric_functional": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero_sum": true,
+        "primitive": false,
+        "nonzero_support_symmetric_orientation_exists": false
+      },
+      {
+        "support_size": 7,
+        "symmetric_functional": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zero_sum": true,
+        "primitive": false,
+        "nonzero_support_symmetric_orientation_exists": false
+      }
+    ],
+    "symmetry_ok": true
+  },
+  "G_all_prime_reading": {
+    "statement": "The all-prime orientation object is a nonempty torsor of finite-support primitive zero-sum functionals, not a distinguished generator.",
+    "row": {
+      "direct_limit_model": "finite-support primitive zero-sum integer functionals on the set of all primes, with transition maps given by zero-extension",
+      "nonempty": true,
+      "distinguished_element_exists": false,
+      "antipode_quotient_available": true,
+      "single_generator_requires_orientation_forgetting": true,
+      "recommended_next_structure": "oriented-support groupoid/stack whose objects are pairs (S,c), c primitive zero-sum, and whose morphisms are generated by zero-extension and antipode"
+    },
+    "all_prime_ok": true
+  },
+  "conclusion": {
+    "support_functoriality": "Orientations pull back functorially by zero-extension along surjective boundary projections T_T -> T_S.",
+    "failure_of_reverse_functor": "There is no canonical orientation projection from T to S; restriction may fail the zero-sum descent condition.",
+    "all_prime_status": "The all-prime constant-term generator is obtained only after choosing or quotienting the orientation torsor.",
+    "next_task": "Package the oriented-support groupoid/stack and compare its antipode quotient with the Pass-94 functional-equation sign."
+  },
+  "overall": "PASS"
+}

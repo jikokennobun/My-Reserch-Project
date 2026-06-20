@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 100)
+
+- Studied the orientation torsor of primitive zero-sum collapse functionals
+  $\mathcal O_S=\{c\in\mathbb Z^S:\sum c_p=0,\gcd(c_p)=1\}$.  For
+  $S\subseteq T$, orientations pull back canonically by zero-extension along
+  the boundary projection $T_T\to T_S$, preserving primitivity, the antipode
+  $c\mapsto-c$, and finite kernel factorization.  The reverse direction is
+  not canonical because restriction can fail the zero-sum condition.  No
+  support-symmetric primitive orientation exists, so the all-prime generator
+  is obtained only after choosing, quotienting, or forgetting the orientation
+  torsor.  Added checker/report and retargeted Pass 101 to the
+  oriented-support groupoid/stack and antipode quotient.
+
 ## 2026-06-21 (Autonomous discussion Pass 99)
 
 - Constructed the exact bridge from finite-support torsion boundaries to the
