@@ -5273,3 +5273,92 @@ $$
 $$
 and identify exactly which kernel is lost when global Levi data are replaced
 by local Levi data.
+
+## Pass 96 - Constant-term complex versus local Loebification
+
+Pass 96 compares the Pass-95 constant-term complex with the local Loeb object
+from Pass 91.  The comparison is clearest on the compact finite-support
+skeleton.  For finite support $S$, define
+$$
+C_B^{\mathrm{int}}(S)
+=\mathbb Q^\times\ltimes
+\left[\mathbb Z\to\prod_{p\in S}\mathbb Z_p\right]
+$$
+with $\mathbb Z$ embedded diagonally.  The local Loebified complex is
+$$
+C_L(S)=(\mathbb Q^\times)^S\ltimes
+\left[\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p\right],
+$$
+where $\mathbb Z^S$ maps coordinatewise.
+
+There is a canonical map
+$$
+\alpha_S:C_B^{\mathrm{int}}(S)\to C_L(S)
+$$
+given by diagonal Levi, diagonal degree-$0$ unipotent, and identity on the
+degree-$1$ compact adele product.  Hence the unipotent comparison on
+cohomology is
+$$
+(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z
+\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).
+$$
+Its exact kernel is
+$$
+K_S=\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1},
+$$
+so
+$$
+0\to K_S\to(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.
+$$
+Modulo $N$, this kernel has size $N^{|S|-1}$; it vanishes for singleton
+supports and appears exactly when there is a multi-prime horizontal descent
+defect.
+
+The Levi comparison is not a kernel computation.  The diagonal map
+$$
+\mathbb Q^\times\to(\mathbb Q^\times)^S
+$$
+is injective.  What local Loebification forgets is the global coherence
+condition tying the local Levi factors together, measured by
+$$
+\Lambda_S=(\mathbb Q^\times)^S/\Delta\mathbb Q^\times.
+$$
+In a finite constant-group proxy $G$, the corresponding quotient has size
+$|G|^{|S|-1}$.
+
+> **Theorem 96a (two-term comparison).** The map from global constant-term
+> data to local Loeb data is the two-term complex map
+> $$[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\to
+> [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p],$$
+> diagonal in degree $0$ and identity in degree $1$.
+>
+> **Theorem 96b (unipotent kernel lost by Loebification).**
+> The kernel of the induced $H^1$ map is
+> $$K_S=\mathbb Z^S/\Delta\mathbb Z.$$
+>
+> **Theorem 96c (finite shadow size).**
+> At finite level $N$, the lost unipotent kernel has size $N^{|S|-1}$.
+>
+> **Theorem 96d (Levi quotient, not Levi kernel).**
+> The diagonal Levi map has trivial kernel.  The new local Levi freedom is
+> the quotient $(\mathbb Q^\times)^S/\Delta\mathbb Q^\times$.
+>
+> **Theorem 96e (formulation).**
+> The comparison is a map of two-term complexes plus stackification/local
+> constant-term projection.  Pure Hausdorff reflection captures only the
+> unipotent quotient.
+
+**Machine verification** (`code/scripts/check-pass96.py` ->
+`artifacts/reports/pass96-constant-term-local-loebification-check.json`,
+PASS): the checker verifies the rank $|S|-1$ kernel of the complex map,
+finite sizes $N^{|S|-1}$, singleton vanishing, multi-prime nontriviality,
+triviality of the Levi kernel, and the finite-proxy local Levi quotient size
+$|G|^{|S|-1}$.
+
+**Limit of the pass.**  The next task is to lift this compact comparison to
+the full finite-adele row $[\mathbb Q\to\mathbb A_f]$ and decide whether
+rationalization kills, regrades, or turns the free kernel
+$\mathbb Z^S/\Delta\mathbb Z$ into $\mathbb Q^S/\Delta\mathbb Q$ boundary
+data.

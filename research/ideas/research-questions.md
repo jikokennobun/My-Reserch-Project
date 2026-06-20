@@ -42,23 +42,26 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 95 -> 96: constant-term Borel complex versus local Loeb sheafification)**
-  Pass 95 packaged the boundary-only functional-equation shadow as the
-  two-term Borel constant-term complex
-  $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f].$$
-  Fixed finite conductor shadows are CRT-acyclic, while the all-prime solid
-  boundary has
-  $$H^1(C_B)=\mathbb A_f/\mathbb Q\cong\widehat{\mathbb Z}/\mathbb Z=\epsilon.$$
-  Conductor reduction is natural and support projection is canonical; support
-  enlargement remains a finite-conductor choice/span.
+- **(Pass 96 -> 97: rationalized finite-adele row versus compact Loebification kernel)**
+  Pass 96 compared the compact finite-support skeleton of the constant-term
+  complex with local Loebification by the map
+  $$[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\to
+  [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p].$$
+  Its $H^1$ kernel is exactly the horizontal Rosser defect
+  $$K_S=\mathbb Z^S/\Delta\mathbb Z,$$
+  with finite shadow size $N^{|S|-1}$.  The diagonal Levi map
+  $\mathbb Q^\times\to(\mathbb Q^\times)^S$ has trivial kernel; local
+  Loebification instead loses global Levi coherence as the quotient
+  $$(\mathbb Q^\times)^S/\Delta\mathbb Q^\times.$$
   Open:
-  (i) compare $C_B$ with the local Loeb sheafification
-  $$(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z);$$
-  (ii) identify exactly which kernel is lost when global Levi and the
-  finite-adele boundary are replaced by local Levi/stalk data;
-  (iii) decide whether this loss is best described as stackification,
-  Hausdorff reflection, local constant-term projection, or a map of two-term
-  complexes.
+  (i) lift the compact comparison to the full finite-adele row
+  $$[\mathbb Q\to\mathbb A_f];$$
+  (ii) decide whether rationalization kills, regrades, or turns
+  $\mathbb Z^S/\Delta\mathbb Z$ into $\mathbb Q^S/\Delta\mathbb Q$ boundary
+  data;
+  (iii) determine whether the all-prime rationalized cone is better modeled
+  in solid cohomology, condensed sheaves, or a filtered colimit of finite
+  support comparisons.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

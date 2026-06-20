@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass96-constant-term-local-loebification-check.json`: verifies the Pass-96
+  finite certificate for comparing the constant-term Borel complex with local
+  Loebification. It checks the map
+  `[Z -> product Z_p] -> [Z^S -> product Z_p]`, the lost unipotent kernel
+  `Z^S/Delta Z`, finite shadow sizes `N^(|S|-1)`, singleton vanishing,
+  multi-prime nontriviality, triviality of the diagonal Levi kernel, and the
+  local Levi quotient proxy of size `|G|^(|S|-1)`.
+
 - `pass95-boundary-only-borel-constant-term-complex-check.json`: verifies the
   Pass-95 finite certificate for the boundary-only Borel constant-term
   complex. It checks that finite conductor complexes

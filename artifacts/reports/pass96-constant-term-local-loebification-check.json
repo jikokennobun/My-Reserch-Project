@@ -1,0 +1,1275 @@
+{
+  "pass": 96,
+  "title": "Constant-term Borel complex versus local Loebification",
+  "A_two_term_complex_map": {
+    "statement": "The compact support comparison is [Z -> prod Z_p] -> [Z^S -> prod Z_p], diagonal in degree 0 and identity in degree 1.  Its H^1 kernel is Z^S/Delta Z.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "global_degree0_rank": 1,
+        "local_degree0_rank": 1,
+        "quotient_degree0_rank": 0,
+        "degree1_map_is_identity": true,
+        "global_h0_rank": 0,
+        "local_h0_rank": 0,
+        "h1_map_surjective_to_local_loeb": true,
+        "lost_unipotent_kernel_rank": 0,
+        "cone_records_lost_kernel_in_degree0": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "global_degree0_rank": 1,
+        "local_degree0_rank": 2,
+        "quotient_degree0_rank": 1,
+        "degree1_map_is_identity": true,
+        "global_h0_rank": 0,
+        "local_h0_rank": 0,
+        "h1_map_surjective_to_local_loeb": true,
+        "lost_unipotent_kernel_rank": 1,
+        "cone_records_lost_kernel_in_degree0": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "global_degree0_rank": 1,
+        "local_degree0_rank": 2,
+        "quotient_degree0_rank": 1,
+        "degree1_map_is_identity": true,
+        "global_h0_rank": 0,
+        "local_h0_rank": 0,
+        "h1_map_surjective_to_local_loeb": true,
+        "lost_unipotent_kernel_rank": 1,
+        "cone_records_lost_kernel_in_degree0": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "global_degree0_rank": 1,
+        "local_degree0_rank": 3,
+        "quotient_degree0_rank": 2,
+        "degree1_map_is_identity": true,
+        "global_h0_rank": 0,
+        "local_h0_rank": 0,
+        "h1_map_surjective_to_local_loeb": true,
+        "lost_unipotent_kernel_rank": 2,
+        "cone_records_lost_kernel_in_degree0": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "global_degree0_rank": 1,
+        "local_degree0_rank": 3,
+        "quotient_degree0_rank": 2,
+        "degree1_map_is_identity": true,
+        "global_h0_rank": 0,
+        "local_h0_rank": 0,
+        "h1_map_surjective_to_local_loeb": true,
+        "lost_unipotent_kernel_rank": 2,
+        "cone_records_lost_kernel_in_degree0": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "global_degree0_rank": 1,
+        "local_degree0_rank": 4,
+        "quotient_degree0_rank": 3,
+        "degree1_map_is_identity": true,
+        "global_h0_rank": 0,
+        "local_h0_rank": 0,
+        "h1_map_surjective_to_local_loeb": true,
+        "lost_unipotent_kernel_rank": 3,
+        "cone_records_lost_kernel_in_degree0": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "global_degree0_rank": 1,
+        "local_degree0_rank": 4,
+        "quotient_degree0_rank": 3,
+        "degree1_map_is_identity": true,
+        "global_h0_rank": 0,
+        "local_h0_rank": 0,
+        "h1_map_surjective_to_local_loeb": true,
+        "lost_unipotent_kernel_rank": 3,
+        "cone_records_lost_kernel_in_degree0": true
+      }
+    ],
+    "complex_map_ok": true,
+    "singleton_vanishes_ok": true,
+    "multiprime_nontrivial_ok": true
+  },
+  "B_finite_level_kernels": {
+    "statement": "At finite level N, the global quotient has size N^(|S|-1) and the local quotient is zero, so the lost kernel has size N^(|S|-1).",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 2,
+        "global_h1_size": 1,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 3,
+        "global_h1_size": 1,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 4,
+        "global_h1_size": 1,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 5,
+        "global_h1_size": 1,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 6,
+        "global_h1_size": 1,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 8,
+        "global_h1_size": 1,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 12,
+        "global_h1_size": 1,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 2,
+        "global_h1_size": 2,
+        "local_h1_size": 1,
+        "lost_kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 3,
+        "global_h1_size": 3,
+        "local_h1_size": 1,
+        "lost_kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 4,
+        "global_h1_size": 4,
+        "local_h1_size": 1,
+        "lost_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 5,
+        "global_h1_size": 5,
+        "local_h1_size": 1,
+        "lost_kernel_size": 5,
+        "expected_kernel_size": 5,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 6,
+        "global_h1_size": 6,
+        "local_h1_size": 1,
+        "lost_kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 8,
+        "global_h1_size": 8,
+        "local_h1_size": 1,
+        "lost_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 12,
+        "global_h1_size": 12,
+        "local_h1_size": 1,
+        "lost_kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 2,
+        "global_h1_size": 2,
+        "local_h1_size": 1,
+        "lost_kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 3,
+        "global_h1_size": 3,
+        "local_h1_size": 1,
+        "lost_kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 4,
+        "global_h1_size": 4,
+        "local_h1_size": 1,
+        "lost_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 5,
+        "global_h1_size": 5,
+        "local_h1_size": 1,
+        "lost_kernel_size": 5,
+        "expected_kernel_size": 5,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 6,
+        "global_h1_size": 6,
+        "local_h1_size": 1,
+        "lost_kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 8,
+        "global_h1_size": 8,
+        "local_h1_size": 1,
+        "lost_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 12,
+        "global_h1_size": 12,
+        "local_h1_size": 1,
+        "lost_kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 2,
+        "global_h1_size": 4,
+        "local_h1_size": 1,
+        "lost_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 3,
+        "global_h1_size": 9,
+        "local_h1_size": 1,
+        "lost_kernel_size": 9,
+        "expected_kernel_size": 9,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 4,
+        "global_h1_size": 16,
+        "local_h1_size": 1,
+        "lost_kernel_size": 16,
+        "expected_kernel_size": 16,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 5,
+        "global_h1_size": 25,
+        "local_h1_size": 1,
+        "lost_kernel_size": 25,
+        "expected_kernel_size": 25,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 6,
+        "global_h1_size": 36,
+        "local_h1_size": 1,
+        "lost_kernel_size": 36,
+        "expected_kernel_size": 36,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 8,
+        "global_h1_size": 64,
+        "local_h1_size": 1,
+        "lost_kernel_size": 64,
+        "expected_kernel_size": 64,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 12,
+        "global_h1_size": 144,
+        "local_h1_size": 1,
+        "lost_kernel_size": 144,
+        "expected_kernel_size": 144,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 2,
+        "global_h1_size": 4,
+        "local_h1_size": 1,
+        "lost_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 3,
+        "global_h1_size": 9,
+        "local_h1_size": 1,
+        "lost_kernel_size": 9,
+        "expected_kernel_size": 9,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 4,
+        "global_h1_size": 16,
+        "local_h1_size": 1,
+        "lost_kernel_size": 16,
+        "expected_kernel_size": 16,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 5,
+        "global_h1_size": 25,
+        "local_h1_size": 1,
+        "lost_kernel_size": 25,
+        "expected_kernel_size": 25,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 6,
+        "global_h1_size": 36,
+        "local_h1_size": 1,
+        "lost_kernel_size": 36,
+        "expected_kernel_size": 36,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 8,
+        "global_h1_size": 64,
+        "local_h1_size": 1,
+        "lost_kernel_size": 64,
+        "expected_kernel_size": 64,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 12,
+        "global_h1_size": 144,
+        "local_h1_size": 1,
+        "lost_kernel_size": 144,
+        "expected_kernel_size": 144,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 2,
+        "global_h1_size": 8,
+        "local_h1_size": 1,
+        "lost_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 3,
+        "global_h1_size": 27,
+        "local_h1_size": 1,
+        "lost_kernel_size": 27,
+        "expected_kernel_size": 27,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 4,
+        "global_h1_size": 64,
+        "local_h1_size": 1,
+        "lost_kernel_size": 64,
+        "expected_kernel_size": 64,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 5,
+        "global_h1_size": 125,
+        "local_h1_size": 1,
+        "lost_kernel_size": 125,
+        "expected_kernel_size": 125,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 6,
+        "global_h1_size": 216,
+        "local_h1_size": 1,
+        "lost_kernel_size": 216,
+        "expected_kernel_size": 216,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 8,
+        "global_h1_size": 512,
+        "local_h1_size": 1,
+        "lost_kernel_size": 512,
+        "expected_kernel_size": 512,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 12,
+        "global_h1_size": 1728,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1728,
+        "expected_kernel_size": 1728,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 2,
+        "global_h1_size": 8,
+        "local_h1_size": 1,
+        "lost_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 3,
+        "global_h1_size": 27,
+        "local_h1_size": 1,
+        "lost_kernel_size": 27,
+        "expected_kernel_size": 27,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 4,
+        "global_h1_size": 64,
+        "local_h1_size": 1,
+        "lost_kernel_size": 64,
+        "expected_kernel_size": 64,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 5,
+        "global_h1_size": 125,
+        "local_h1_size": 1,
+        "lost_kernel_size": 125,
+        "expected_kernel_size": 125,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 6,
+        "global_h1_size": 216,
+        "local_h1_size": 1,
+        "lost_kernel_size": 216,
+        "expected_kernel_size": 216,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 8,
+        "global_h1_size": 512,
+        "local_h1_size": 1,
+        "lost_kernel_size": 512,
+        "expected_kernel_size": 512,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 12,
+        "global_h1_size": 1728,
+        "local_h1_size": 1,
+        "lost_kernel_size": 1728,
+        "expected_kernel_size": 1728,
+        "kernel_matches_expected": true
+      }
+    ],
+    "finite_kernels_ok": true
+  },
+  "C_levi_comparison": {
+    "statement": "The diagonal Levi map has trivial kernel.  The lost global coherence is instead the local quotient (G^S)/Delta G, represented by finite proxy size |G|^(|S|-1).",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "levi_proxy_order": 2,
+        "global_levi_order": 2,
+        "local_levi_order": 2,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 1,
+        "expected_quotient_size": 1,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "levi_proxy_order": 3,
+        "global_levi_order": 3,
+        "local_levi_order": 3,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 1,
+        "expected_quotient_size": 1,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "levi_proxy_order": 4,
+        "global_levi_order": 4,
+        "local_levi_order": 4,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 1,
+        "expected_quotient_size": 1,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "levi_proxy_order": 6,
+        "global_levi_order": 6,
+        "local_levi_order": 6,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 1,
+        "expected_quotient_size": 1,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 2,
+        "global_levi_order": 2,
+        "local_levi_order": 4,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 2,
+        "expected_quotient_size": 2,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 3,
+        "global_levi_order": 3,
+        "local_levi_order": 9,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 3,
+        "expected_quotient_size": 3,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 4,
+        "global_levi_order": 4,
+        "local_levi_order": 16,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 4,
+        "expected_quotient_size": 4,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 6,
+        "global_levi_order": 6,
+        "local_levi_order": 36,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 6,
+        "expected_quotient_size": 6,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 2,
+        "global_levi_order": 2,
+        "local_levi_order": 4,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 2,
+        "expected_quotient_size": 2,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 3,
+        "global_levi_order": 3,
+        "local_levi_order": 9,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 3,
+        "expected_quotient_size": 3,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 4,
+        "global_levi_order": 4,
+        "local_levi_order": 16,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 4,
+        "expected_quotient_size": 4,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "levi_proxy_order": 6,
+        "global_levi_order": 6,
+        "local_levi_order": 36,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 6,
+        "expected_quotient_size": 6,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 2,
+        "global_levi_order": 2,
+        "local_levi_order": 8,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 4,
+        "expected_quotient_size": 4,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 3,
+        "global_levi_order": 3,
+        "local_levi_order": 27,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 9,
+        "expected_quotient_size": 9,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 4,
+        "global_levi_order": 4,
+        "local_levi_order": 64,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 16,
+        "expected_quotient_size": 16,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 6,
+        "global_levi_order": 6,
+        "local_levi_order": 216,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 36,
+        "expected_quotient_size": 36,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 2,
+        "global_levi_order": 2,
+        "local_levi_order": 8,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 4,
+        "expected_quotient_size": 4,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 3,
+        "global_levi_order": 3,
+        "local_levi_order": 27,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 9,
+        "expected_quotient_size": 9,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 4,
+        "global_levi_order": 4,
+        "local_levi_order": 64,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 16,
+        "expected_quotient_size": 16,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "levi_proxy_order": 6,
+        "global_levi_order": 6,
+        "local_levi_order": 216,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 36,
+        "expected_quotient_size": 36,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 2,
+        "global_levi_order": 2,
+        "local_levi_order": 16,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 8,
+        "expected_quotient_size": 8,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 3,
+        "global_levi_order": 3,
+        "local_levi_order": 81,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 27,
+        "expected_quotient_size": 27,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 4,
+        "global_levi_order": 4,
+        "local_levi_order": 256,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 64,
+        "expected_quotient_size": 64,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 6,
+        "global_levi_order": 6,
+        "local_levi_order": 1296,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 216,
+        "expected_quotient_size": 216,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 2,
+        "global_levi_order": 2,
+        "local_levi_order": 16,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 8,
+        "expected_quotient_size": 8,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 3,
+        "global_levi_order": 3,
+        "local_levi_order": 81,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 27,
+        "expected_quotient_size": 27,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 4,
+        "global_levi_order": 4,
+        "local_levi_order": 256,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 64,
+        "expected_quotient_size": 64,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "levi_proxy_order": 6,
+        "global_levi_order": 6,
+        "local_levi_order": 1296,
+        "diagonal_levi_kernel_size": 1,
+        "local_levi_quotient_size": 216,
+        "expected_quotient_size": 216,
+        "levi_kernel_is_trivial": true,
+        "levi_loss_is_quotient_not_kernel": true
+      }
+    ],
+    "levi_comparison_ok": true
+  },
+  "D_classification": {
+    "statement": "The comparison is a stackification/local sheafification map of two-term complexes.  Pure Hausdorff reflection sees only the unipotent quotient and misses the Levi decentralization.",
+    "row": {
+      "formulation": "The comparison is best read as a map of two-term complexes plus stackification/local sheafification.  Hausdorff reflection captures the unipotent quotient, but not the diagonal-to-local Levi change.",
+      "map_of_two_term_complexes": true,
+      "stackification_or_sheafification": true,
+      "pure_hausdorff_reflection": false,
+      "local_constant_term_projection": true,
+      "preserves_global_rosser_boundary": false
+    },
+    "classification_ok": true
+  },
+  "conclusion": {
+    "global_complex": "C_B^int(S)=Q^x semidirect [Z -> prod_{p in S} Z_p]",
+    "local_complex": "C_L(S)=(Q^x)^S semidirect [Z^S -> prod_{p in S} Z_p]",
+    "h1_exact_sequence": "0 -> Z^S/Delta Z -> (prod Z_p)/Delta Z -> prod (Z_p/Z) -> 0",
+    "lost_kernel": "K_S=Z^S/Delta Z, finite shadow size N^(|S|-1)",
+    "levi_change": "Q^x -> (Q^x)^S is injective; the lost global coherence is the quotient (Q^x)^S/Delta Q^x, not a kernel.",
+    "best_formulation": "Map of two-term complexes plus stackification/local constant-term projection.",
+    "next_task": "Lift this compact comparison to the full finite-adele row [Q -> A_f] and decide whether rationalization kills or regrades the free kernel Z^S/Delta Z."
+  },
+  "overall": "PASS"
+}

@@ -1,5 +1,21 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 96)
+
+- Compared the compact finite-support skeleton of the constant-term Borel
+  complex with local Loeb sheafification.  The comparison is the map
+  $[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\to
+  [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p]$, diagonal in degree $0$ and
+  identity in degree $1$, giving
+  $0\to\mathbb Z^S/\Delta\mathbb Z\to
+  (\prod\mathbb Z_p)/\Delta\mathbb Z\to
+  \prod(\mathbb Z_p/\mathbb Z)\to0$.  The lost unipotent kernel is
+  $\mathbb Z^S/\Delta\mathbb Z$ with finite shadow size $N^{|S|-1}$; the
+  diagonal Levi map has trivial kernel and loses global coherence only as the
+  quotient $(\mathbb Q^\times)^S/\Delta\mathbb Q^\times$.  Added
+  checker/report and retargeted Pass 97 to the rationalized full finite-adele
+  row.
+
 ## 2026-06-21 (Autonomous discussion Pass 95)
 
 - Packaged the boundary-only functional-equation shadow as the two-term Borel

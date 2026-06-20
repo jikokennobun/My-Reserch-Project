@@ -2156,3 +2156,49 @@ complexes and preserves the Borel unit class.  For supports $S\subseteq T$,
 projection $T\to S$ is canonical.  Support enlargement $S\to T$ is only a
 finite-conductor CRT choice/span: exact zero-insertion does not preserve the
 diagonal copy of $\mathbb Z$ in the all-prime product.
+
+## Constant-term local Loebification comparison (Pass 96)
+
+For finite prime support $S$, the compact skeleton of the Pass-95
+constant-term complex is
+$$
+C_B^{\mathrm{int}}(S)=\mathbb Q^\times\ltimes
+\left[\mathbb Z\to\prod_{p\in S}\mathbb Z_p\right],
+$$
+with diagonal degree-$0$ map.  The local Loebification target is
+$$
+C_L(S)=(\mathbb Q^\times)^S\ltimes
+\left[\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p\right],
+$$
+with coordinatewise degree-$0$ map.
+
+The canonical comparison
+$$
+\alpha_S:C_B^{\mathrm{int}}(S)\to C_L(S)
+$$
+is diagonal on the Levi and on degree $0$, and identity on
+$\prod_{p\in S}\mathbb Z_p$.  On unipotent $H^1$ it gives
+$$
+0\to\mathbb Z^S/\Delta\mathbb Z\to
+(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z\to
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.
+$$
+Thus the lost unipotent kernel is
+$$
+K_S=\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.
+$$
+Modulo $N$, this kernel has size $N^{|S|-1}$.
+
+The Levi comparison has a different character:
+$$
+\mathbb Q^\times\hookrightarrow(\mathbb Q^\times)^S
+$$
+has trivial kernel.  The local-Levi freedom created by sheafification is the
+quotient
+$$
+\Lambda_S=(\mathbb Q^\times)^S/\Delta\mathbb Q^\times,
+$$
+not a second kernel.  Therefore the best formulation is a map of two-term
+complexes plus stackification/local constant-term projection.  Pure
+Hausdorff reflection describes only the unipotent quotient and misses the
+Levi decentralization.

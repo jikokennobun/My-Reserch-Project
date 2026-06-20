@@ -6,8 +6,29 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 96
-- Last pass note: Pass 95 (2026-06-21) packaged the boundary-only functional
+- Current pass: 97
+- Last pass note: Pass 96 (2026-06-21) compared the compact finite-support
+  skeleton of the boundary-only constant-term complex with the local Loeb
+  sheafification.  For finite support $S$, the comparison is the map of
+  two-term complexes
+  $$[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\longrightarrow
+  [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p],$$
+  diagonal in degree $0$ and identity in degree $1$.  On $H^1$ it gives the
+  exact sequence
+  $$0\to\mathbb Z^S/\Delta\mathbb Z\to
+  (\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z\to
+  \prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.$$
+  Thus the precise unipotent kernel lost by local Loebification is
+  $K_S=\mathbb Z^S/\Delta\mathbb Z$, with finite shadow size
+  $N^{|S|-1}$.  The Levi comparison
+  $\mathbb Q^\times\to(\mathbb Q^\times)^S$ has trivial kernel; what is lost
+  there is the diagonal coherence, measured by the quotient
+  $(\mathbb Q^\times)^S/\Delta\mathbb Q^\times$.  The best formulation is a
+  map of two-term complexes plus stackification/local constant-term
+  projection, not pure Hausdorff reflection.  Machine-verified
+  `check-pass96.py` ->
+  `pass96-constant-term-local-loebification-check.json` PASS. Counter 96->97.
+- Earlier note: Pass 95 (2026-06-21) packaged the boundary-only functional
   equation shadow as the two-term Borel constant-term complex
   $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f].$$
   It is placed in cohomological degrees $0\to1$.  Every fixed finite
@@ -26,25 +47,6 @@
   Machine-verified `check-pass95.py` ->
   `pass95-boundary-only-borel-constant-term-complex-check.json` PASS. Counter
   95->96.
-- Earlier note: Pass 94 (2026-06-21) computed the Verdier/solid dual of the
-  all-prime Borel $j_!$ coefficient from Pass 93.  The unipotent all-prime
-  class is
-  $$\epsilon=\widehat{\mathbb Z}/\mathbb Z,$$
-  so solid duality gives
-  $$D\epsilon\simeq\mathbb Q[-1].$$
-  Thus the dual of
-  $$\mathfrak B^{\mathrm{cont}}_{j!}
-  =\mathbb Q^\times\ltimes R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S$$
-  is a Levi-marked boundary object with unipotent part $\mathbb Q[-1]$ and
-  contragredient $\mathbb Q^\times$ action, not an opposite Borel in degree
-  $0$.  The Pass-65 finite sign and Pass-77 all-prime antipode remain:
-  finite boundaries satisfy $D(d_S)=-d_S^T$, and the biduality sign on
-  $\epsilon$ is $-\mathrm{id}$.  This is a functional-equation shadow only in
-  the boundary sense.  It does not create a Weyl/Fourier flip, since
-  $$\mathrm{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.$$
-  Machine-verified `check-pass94.py` ->
-  `pass94-all-prime-borel-jshriek-solid-dual-check.json` PASS. Counter
-  94->95.
 - Earlier note: Pass 93 (2026-06-21) upgraded the finite-support Borel
   $j_!$ class to the all-prime Spec-$\mathbb Z$ setting.  The key correction is
   topological: in the honest all-prime Zariski site, the generic point
@@ -10972,3 +10974,133 @@ Pass 96 should compare the constant-term complex $C_B$ with the local Loeb
 sheafification $(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$
 and identify exactly which kernel is lost when global Levi data are replaced
 by local Levi data.
+
+---
+
+### Pass 96 - 2026-06-21 JST
+
+Focus:
+Compare the constant-term Borel complex with local Loeb sheafification and
+identify the exact data lost by passing from global to local Levi/stalk data.
+
+Proposer:
+For a finite prime support $S$, the comparison should be made before
+rationalizing all the way to the full finite-adele row.  The compact
+finite-support skeleton of Pass 95 is
+$$
+C_B^{\mathrm{int}}(S)
+=\mathbb Q^\times\ltimes
+\left[\mathbb Z\to\prod_{p\in S}\mathbb Z_p\right],
+$$
+where $\mathbb Z$ maps diagonally.  The local Loeb sheafification is
+$$
+C_L(S)=(\mathbb Q^\times)^S\ltimes
+\left[\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p\right],
+$$
+where $\mathbb Z^S$ maps coordinatewise.  There is a canonical map of
+two-term complexes
+$$
+\alpha_S:C_B^{\mathrm{int}}(S)\longrightarrow C_L(S)
+$$
+given by diagonal Levi
+$\mathbb Q^\times\to(\mathbb Q^\times)^S$, diagonal degree-$0$ unipotent
+$\mathbb Z\to\mathbb Z^S$, and the identity on
+$\prod_{p\in S}\mathbb Z_p$.
+
+On unipotent $H^1$, this is exactly the old Loeb/Rosser descent map:
+$$
+(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z
+\longrightarrow
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).
+$$
+Its kernel is
+$$
+K_S=\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.
+$$
+Thus the kernel lost by local Loebification is not vague: it is the
+horizontal Rosser kernel from Passes 61, 91, and 92, now presented as the
+degree-$0$ quotient of a map of two-term constant-term complexes.
+
+Skeptic:
+There is a second loss, but it should not be misnamed as a kernel.  The Levi
+map
+$$
+\mathbb Q^\times\to(\mathbb Q^\times)^S
+$$
+is diagonal and injective.  Local Loebification does not quotient out a
+Levi kernel; it adds independent local Levi choices.  The measuring object is
+therefore the quotient
+$$
+\Lambda_S=(\mathbb Q^\times)^S/\Delta\mathbb Q^\times,
+$$
+or, in a finite proxy $G$ for the Levi, a quotient of size $|G|^{|S|-1}$.
+So the comparison has two components:
+$$
+K_S=\mathbb Z^S/\Delta\mathbb Z
+\quad\text{on the unipotent boundary,}
+$$
+and
+$$
+\Lambda_S=(\mathbb Q^\times)^S/\Delta\mathbb Q^\times
+\quad\text{on Levi coherence.}
+$$
+Only the first is literally the kernel of the $H^1$ map.
+
+Formalist:
+> **Theorem 96a (two-term Loebification map).** For finite $S$, the canonical
+> comparison from global constant-term data to local Loeb data is the map
+> $$\alpha_S:[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\to
+> [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p],$$
+> diagonal in degree $0$ and the identity in degree $1$.
+>
+> **Theorem 96b (lost unipotent kernel).** The induced map on $H^1$ sits in
+> the exact sequence
+> $$0\to\mathbb Z^S/\Delta\mathbb Z\to
+> (\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z\to
+> \prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.$$
+> Hence the lost unipotent kernel is
+> $K_S=\mathbb Z^S/\Delta\mathbb Z$.
+>
+> **Theorem 96c (finite shadows).** Modulo $N$, the lost kernel has size
+> $$|K_{S,N}|=N^{|S|-1}.$$
+> It vanishes for singleton support and is nontrivial exactly for
+> multi-prime support.
+>
+> **Theorem 96d (Levi decentralization is quotient data).** The diagonal Levi
+> map $\mathbb Q^\times\to(\mathbb Q^\times)^S$ has trivial kernel.  The
+> local-Levi freedom created by sheafification is the quotient
+> $(\mathbb Q^\times)^S/\Delta\mathbb Q^\times$, not a second kernel.
+>
+> **Theorem 96e (best formulation).** The comparison is best described as a
+> map of two-term complexes plus stackification/local constant-term
+> projection.  A pure Hausdorff-reflection slogan captures only the
+> unipotent quotient and misses the Levi decentralization.
+
+Machine-verified `code/scripts/check-pass96.py` ->
+`artifacts/reports/pass96-constant-term-local-loebification-check.json`
+(overall PASS): the checker verifies the two-term complex map, the rank
+$|S|-1$ lost kernel, finite shadow sizes $N^{|S|-1}$, singleton vanishing,
+multi-prime nontriviality, the trivial kernel of the diagonal Levi map, and
+the finite-proxy quotient size $|G|^{|S|-1}$ for local Levi freedom.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-96 entry;
+  State counter $96\to97$.
+- `records/logs/research-log.md`: Pass-96 entry.
+- `research/definitions.md`: added the constant-term local Loebification
+  comparison.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-96 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  marked the Pass-95 comparison resolved and retargeted the next pass to the
+  rationalized full finite-adele row.
+- `code/scripts/check-pass96.py`,
+  `artifacts/reports/pass96-constant-term-local-loebification-check.json`: new.
+- `artifacts/pdf/constant-term-local-loebification-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 97 should lift the compact comparison to the full finite-adele complex
+$[\mathbb Q\to\mathbb A_f]$ and decide whether rationalization kills,
+regrades, or turns the free kernel $\mathbb Z^S/\Delta\mathbb Z$ into
+$\mathbb Q^S/\Delta\mathbb Q$ boundary data.

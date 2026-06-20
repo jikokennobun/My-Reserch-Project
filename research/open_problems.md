@@ -1063,7 +1063,7 @@
   standard Weyl/Fourier intertwiner.  Machine-verified
   `artifacts/reports/pass95-boundary-only-borel-constant-term-complex-check.json`
   (PASS).
-- **[New (Pass 95)]** **Constant-term Borel complex versus local Loeb sheafification.**
+- **[Resolved (Pass 96)]** **Constant-term Borel complex versus local Loeb sheafification.**
   Compare
   $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f]$$
   with the local Loeb sheafification
@@ -1072,6 +1072,30 @@
   finite-adele boundary are replaced by local Levi/stalk data, and decide
   whether this comparison is best formulated as stackification, Hausdorff
   reflection, local constant-term projection, or a map of two-term complexes.
+  **Resolution:** on the compact finite-support skeleton, the comparison is
+  the map of two-term complexes
+  $$[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\to
+  [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p],$$
+  diagonal in degree $0$ and identity in degree $1$.  The induced $H^1$ map
+  has exact kernel
+  $$K_S=\mathbb Z^S/\Delta\mathbb Z,$$
+  with finite shadow size $N^{|S|-1}$.  The Levi map
+  $\mathbb Q^\times\to(\mathbb Q^\times)^S$ has trivial kernel; local
+  Loebification loses global Levi coherence as the quotient
+  $(\mathbb Q^\times)^S/\Delta\mathbb Q^\times$.  Thus the best formulation is
+  a map of two-term complexes plus stackification/local constant-term
+  projection, not pure Hausdorff reflection.  Machine-verified
+  `artifacts/reports/pass96-constant-term-local-loebification-check.json`
+  (PASS).
+- **[New (Pass 96)]** **Rationalized finite-adele row versus compact Loebification kernel.**
+  Lift the compact Pass-96 comparison to the full finite-adele row
+  $$[\mathbb Q\to\mathbb A_f].$$
+  Decide whether rationalizing the degree-$0$ compact skeleton kills,
+  regrades, or transforms the free horizontal kernel
+  $\mathbb Z^S/\Delta\mathbb Z$ into $\mathbb Q^S/\Delta\mathbb Q$ boundary
+  data.  Determine whether the correct all-prime comparison is a solid
+  cohomology cone, a condensed sheafification statement, or a filtered colimit
+  of the finite-support maps.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."
