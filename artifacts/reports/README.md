@@ -37,6 +37,13 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass84-dense-phantom-boundary-action-check.json`: verifies the Pass-84
+  dense quotient and action obstruction. It checks that finite shadows of
+  $\widehat{\mathbb Z}/\mathbb Z$ have only empty/all saturated opens, that
+  continuous maps from the resulting indiscrete quotient to finite Hausdorff
+  targets are constant, that only the trivial finite character descends, and
+  that finite degree-$0$ Weyl shadows into $\mathbb Q$ vanish.
+
 - `pass83-solenoid-exact-triangle-correction-check.json`: verifies the Pass-83
   correction to the adelic solenoid row. It checks the dual finite rows
   $0\to\mathbb Z\xrightarrow{\times N}\mathbb Z\to\mathbb Z/N\to0$, the

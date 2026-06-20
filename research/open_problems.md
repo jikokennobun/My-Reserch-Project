@@ -864,12 +864,25 @@
   $\mathbb Q$.  Global Fourier theory restricts to $\mathbb Q/\mathbb Z$ on the closed profinite
   kernel, but only the trivial character descends to $\epsilon$ in degree $0$. Machine-verified
   `artifacts/reports/pass83-solenoid-exact-triangle-correction-check.json` (PASS).
-- **[New (Pass 83)]** **Derived-solid boundary of the finite phantom.** Formulate the exact triangle
+- **[Resolved (Pass 84)]** **Derived-solid boundary of the finite phantom.** Formulate the exact triangle
   behind the dense quotient $\mathbb R\to\Sigma\to\epsilon$ in the solid/condensed derived category.
   Decide whether the boundary quotient $\mathbb Q/\mathbb Z$ (or its shifted solid dual) is precisely
   the replacement for the missing finite-prime Weyl flip $\epsilon\to\mathbb Q$, and whether the
   Borel unipotent $U=\epsilon$ acts only on this quotient boundary rather than by continuous
   translations on $\Sigma$.
+  **Resolution:** topologically, $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ is indiscrete, so its
+  Hausdorff reflection is $0$ and every continuous homomorphism from $\epsilon$ to a Hausdorff group
+  is zero.  Thus $U=\epsilon$ has no nontrivial continuous translation action on $\Sigma$.  The
+  replacement for the missing Weyl flip is the degree-$1$ solid boundary
+  $D\epsilon\simeq\mathbb Q[-1]$ / $\mathrm{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\simeq\mathbb Q$,
+  represented by $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.  Machine-verified
+  `artifacts/reports/pass84-dense-phantom-boundary-action-check.json` (PASS).
+- **[New (Pass 84)]** **Two-term complex model of the phantom boundary.** Build explicit complexes
+  $[\mathbb Z\to\widehat{\mathbb Z}]$, $[\mathbb R\to\Sigma]$, and
+  $[\mathbb Q\to\mathbb A_f]$ representing the same finite-prime boundary in the relevant
+  solid/condensed derived category.  Prove which maps are quasi-isomorphisms after Hausdorff
+  reflection, after solidification, and after applying the Borel shear functor, and isolate the exact
+  class preserving $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -1689,3 +1689,33 @@ $\widehat{\mathbb Z}$ descends to the quotient by dense $\mathbb Z$ exactly
 when it kills $\mathbb Z$.  Thus the global Fourier transform gives a genuine
 finite-character boundary $\mathbb Q/\mathbb Z$, but not a degree-$0$
 Whittaker/Fourier character of $\epsilon$.
+
+## Dense phantom quotient and shifted solid boundary (Pass 84)
+
+The quotient topology on
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z
+$$
+is **indiscrete**.  Indeed, $\mathbb Z$ is dense in $\widehat{\mathbb Z}$, so
+the saturation of any nonempty open set under addition by $\mathbb Z$ is all of
+$\widehat{\mathbb Z}$.  Hence the Hausdorff reflection of $\epsilon$ is $0$,
+and every continuous homomorphism from $\epsilon$ to a Hausdorff group is zero.
+In particular, the Borel unipotent $U=\epsilon$ does **not** act by nontrivial
+continuous translations on the compact Hausdorff solenoid $\Sigma$.
+
+The nonzero finite-prime phantom is therefore not a topological degree-$0$
+character object.  It is the solid derived boundary
+$$
+D\epsilon\simeq\mathbb Q[-1],
+\qquad
+\mathrm{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\simeq\mathbb Q.
+$$
+The generator is the finite-adele extension
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+Thus the missing finite-prime Weyl flip $\epsilon\to\mathbb Q$ is replaced by a
+degree-$1$ boundary/shear class, not by a degree-$0$ morphism.  The object
+$\mathbb Q/\mathbb Z$ remains the finite-character boundary of the closed
+kernel $\widehat{\mathbb Z}\subset\Sigma$; its solid arithmetic completion is
+the shifted boundary $\mathbb Q[-1]$ attached to $\epsilon$.

@@ -4354,3 +4354,73 @@ derived/non-Hausdorff rather than an ordinary finite cokernel.
 triangle behind the dense quotient $\mathbb R\to\Sigma\to\epsilon$ and identify
 the boundary object $\mathbb Q/\mathbb Z$ (or its shifted solid dual) as the
 precise replacement for the missing finite-prime Weyl flip.
+
+## Pass 84 - Dense phantom boundary and the action obstruction
+
+Pass 84 separates the topological quotient from the solid derived boundary.
+The quotient
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z
+$$
+is indiscrete as a topological group: because $\mathbb Z$ is dense in
+$\widehat{\mathbb Z}$, the saturation of any nonempty open subset is all of
+$\widehat{\mathbb Z}$.  Therefore the Hausdorff reflection of $\epsilon$ is
+$0$, and every continuous homomorphism $\epsilon\to H$ into a Hausdorff group
+$H$ is zero.
+
+Consequently the unipotent radical
+$$
+U=\epsilon
+$$
+of the solid Borel cannot act by nontrivial continuous translations on the
+compact Hausdorff solenoid $\Sigma$.  A translation action would require a
+nonzero continuous homomorphism $U\to\Sigma$, which the indiscrete quotient
+forbids.  This is the topological face of the same degree-$0$ vanishing already
+seen in Passes 82-83: finite characters live on the closed kernel
+$\widehat{\mathbb Z}$, but only the trivial character descends to
+$\epsilon=\widehat{\mathbb Z}/\mathbb Z$.
+
+The phantom survives only after passing to the solid derived category:
+$$
+D\epsilon\simeq\mathbb Q[-1],
+\qquad
+\mathrm{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\simeq\mathbb Q.
+$$
+The generator is the finite-adele extension
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+Thus the missing finite-prime Weyl flip is not a morphism
+$\epsilon\to\mathbb Q$ but a degree-$1$ boundary/shear class.  The finite group
+$\mathbb Q/\mathbb Z$ is still visible as the character boundary of the closed
+kernel $\widehat{\mathbb Z}$ in the compact row; the solid arithmetic boundary
+attached to $\epsilon$ is its shifted completion $\mathbb Q[-1]$.
+
+> **Theorem 84a (indiscrete quotient).**
+> The topological quotient $\widehat{\mathbb Z}/\mathbb Z$ is indiscrete.
+> Hence its Hausdorff reflection is $0$, and every continuous homomorphism from
+> $\epsilon$ to a Hausdorff group is zero.
+>
+> **Theorem 84b (no topological $U$-translation on $\Sigma$).**
+> The Borel unipotent $U=\epsilon$ has no nontrivial continuous translation
+> action on the compact Hausdorff solenoid $\Sigma$.  Its action is a solid
+> shear/boundary parameter of the hyperbolic plane $H=\epsilon\oplus\mathbb Q$.
+>
+> **Theorem 84c (derived Weyl replacement).**
+> $D\epsilon\simeq\mathbb Q[-1]$ and
+> $\mathrm{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\simeq\mathbb Q$.
+> The missing Weyl flip $\epsilon\to\mathbb Q$ is replaced by the degree-$1$
+> finite-adele extension $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
+
+**Machine verification** (`code/scripts/check-pass84.py` ->
+`artifacts/reports/pass84-dense-phantom-boundary-action-check.json`, PASS):
+finite quotient shadows have only empty/all saturated opens; continuous maps
+from the indiscrete quotient to checked discrete Hausdorff targets are
+constant, and continuous group homomorphisms are only the zero homomorphism;
+finite characters on $\widehat{\mathbb Z}/N$ descend across the dense diagonal
+only for the trivial character; finite degree-$0$ Hom/Ext shadows into
+$\mathbb Q$ vanish at all checked stages.
+
+**Limit of the pass.**  The next task is to write an explicit two-term complex
+model for the boundary, comparing $[\mathbb Z\to\widehat{\mathbb Z}]$,
+$[\mathbb R\to\Sigma]$, and $[\mathbb Q\to\mathbb A_f]$.

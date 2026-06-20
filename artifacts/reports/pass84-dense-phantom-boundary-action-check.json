@@ -1,0 +1,1019 @@
+{
+  "pass": 84,
+  "title": "Dense finite-phantom boundary and Borel action obstruction",
+  "A_indiscrete_quotient_shadow": {
+    "statement": "Since Z is dense in Zhat, finite shadows of epsilon=Zhat/Z have only empty/all saturated opens.",
+    "rows": [
+      {
+        "N": 1,
+        "diagonal_image_size": 1,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 2,
+        "diagonal_image_size": 2,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 6,
+        "diagonal_image_size": 6,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 12,
+        "diagonal_image_size": 12,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 60,
+        "diagonal_image_size": 60,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 60,
+        "diagonal_image_size": 60,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 420,
+        "diagonal_image_size": 420,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 840,
+        "diagonal_image_size": 840,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 2520,
+        "diagonal_image_size": 2520,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 2520,
+        "diagonal_image_size": 2520,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 27720,
+        "diagonal_image_size": 27720,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      },
+      {
+        "N": 27720,
+        "diagonal_image_size": 27720,
+        "saturated_subset_count": 2,
+        "only_empty_and_all": true
+      }
+    ],
+    "all_only_empty_and_all": true
+  },
+  "B_no_continuous_translation_action_on_Sigma": {
+    "statement": "A continuous homomorphism from the indiscrete quotient epsilon to a Hausdorff/discrete target is forced to be zero; therefore the Borel unipotent U=epsilon cannot act by nontrivial continuous translations on the Hausdorff solenoid Sigma.",
+    "rows": [
+      {
+        "source_level": 1,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 1,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 1,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 1,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 1,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 1,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 1,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 1,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 6,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 12,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 60,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 420,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 840,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 2520,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 2,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 2,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 3,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 3,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 4,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 4,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 5,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 5,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 6,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 6,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 8,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 8,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 9,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 9,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      },
+      {
+        "source_level": 27720,
+        "target_size": 12,
+        "maps_to_discrete_target": 1,
+        "group_homomorphisms_to_discrete_target": 12,
+        "continuous_group_homomorphisms": 1,
+        "only_zero_hom_continuous": true
+      }
+    ],
+    "all_only_zero_hom_continuous": true
+  },
+  "C_only_constant_character_descends": {
+    "statement": "Finite characters on Zhat restrict nontrivially before the quotient, but only the trivial character kills the dense diagonal Z and descends to epsilon in degree 0.",
+    "rows": [
+      {
+        "N": 1,
+        "finite_characters_on_Zhat_mod_N": 1,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 2,
+        "finite_characters_on_Zhat_mod_N": 2,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 6,
+        "finite_characters_on_Zhat_mod_N": 6,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 12,
+        "finite_characters_on_Zhat_mod_N": 12,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 60,
+        "finite_characters_on_Zhat_mod_N": 60,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 60,
+        "finite_characters_on_Zhat_mod_N": 60,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 420,
+        "finite_characters_on_Zhat_mod_N": 420,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 840,
+        "finite_characters_on_Zhat_mod_N": 840,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 2520,
+        "finite_characters_on_Zhat_mod_N": 2520,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 2520,
+        "finite_characters_on_Zhat_mod_N": 2520,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 27720,
+        "finite_characters_on_Zhat_mod_N": 27720,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      },
+      {
+        "N": 27720,
+        "finite_characters_on_Zhat_mod_N": 27720,
+        "characters_descending_to_epsilon": 1,
+        "only_trivial_descends": true
+      }
+    ],
+    "all_only_trivial_descends": true
+  },
+  "D_no_degree0_weyl_shadow_into_Q": {
+    "statement": "At every finite Z/N stage Hom(Z/N,Q)=0 and Ext^1(Z/N,Q)=0 because Q is torsion-free and divisible.  The nonzero solid information is therefore not a degree-0 Weyl map but the derived Ext^1(epsilon,Q)=Q boundary class.",
+    "rows": [
+      {
+        "N": 1,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 2,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 6,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 12,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 60,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 60,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 420,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 840,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 2520,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 2520,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 27720,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      },
+      {
+        "N": 27720,
+        "hom_ZmodN_to_Q": 0,
+        "ext1_ZmodN_to_Q": 0,
+        "degree0_weyl_shadow_exists": false
+      }
+    ],
+    "all_degree0_weyl_shadows_absent": true
+  },
+  "conclusion": {
+    "topological_degree0_epsilon": "Hausdorff reflection is zero; only constant maps/characters descend.",
+    "solid_derived_replacement": "D(epsilon)=Q[-1] and Ext^1(epsilon,Q)=Q, represented by 0 -> Q -> A_f -> epsilon -> 0.",
+    "borel_unipotent": "U=epsilon acts as a solid shear/boundary parameter, not as a nontrivial continuous translation group of Sigma.",
+    "q_mod_z_role": "Q/Z is the finite-character boundary on the closed kernel Zhat; the solid Weyl replacement is its degree-shifted extension to Q[-1]."
+  },
+  "overall": "PASS"
+}

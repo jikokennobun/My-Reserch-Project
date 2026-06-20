@@ -42,7 +42,7 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 83 -> 84: derived-solid boundary of the finite-prime phantom)**
+- **(Pass 84 -> 85: two-term complex model of the finite-prime boundary)**
   Passes 80-82 settled the automorphic side of the solid phantom line.  Pass 80
   showed $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, not
   $\mathrm{SL}_2$; Pass 81 showed the principal series is maximally
@@ -57,15 +57,19 @@
   $$\mathbb R\to\Sigma\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to0.$$
   The compact row is nonsplit, and global characters restrict to
   $\mathbb Q/\mathbb Z$ on $\widehat{\mathbb Z}$ but descend to $\epsilon$ only
-  trivially in degree $0$.
+  trivially in degree $0$.  Pass 84 showed why: the quotient topology on
+  $\epsilon$ is indiscrete, so $U=\epsilon$ cannot act by nontrivial continuous
+  translations on $\Sigma$; the nonzero replacement is the degree-$1$ solid
+  boundary $D\epsilon\simeq\mathbb Q[-1]$, represented by
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
   Open:
-  (i) formulate the derived/solid exact triangle behind
-  $\mathbb R\to\Sigma\to\epsilon$;
-  (ii) prove whether the boundary quotient $\mathbb Q/\mathbb Z$ (or its
-  shifted solid dual) is exactly the replacement for the missing finite-prime
-  Weyl flip $\epsilon\to\mathbb Q$;
-  (iii) decide whether the Borel unipotent $U=\epsilon$ acts only on the
-  quotient boundary, rather than by continuous translations on $\Sigma$.
+  (i) write explicit two-term complexes
+  $[\mathbb Z\to\widehat{\mathbb Z}]$, $[\mathbb R\to\Sigma]$, and
+  $[\mathbb Q\to\mathbb A_f]$ for the same boundary;
+  (ii) prove which comparison maps are quasi-isomorphisms after Hausdorff
+  reflection, after solidification, and after applying the Borel shear functor;
+  (iii) isolate the exact class preserving the finite-adele extension and show
+  whether it is the universal replacement for the missing Weyl flip.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

@@ -1,5 +1,19 @@
 # Research Log
 
+## 2026-06-20 (Autonomous discussion Pass 84)
+
+- Formulated the dense quotient $\mathbb R\to\Sigma\to\epsilon$ as a
+  topological/solid boundary: $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ is
+  indiscrete as a topological quotient, so continuous maps from $\epsilon$ to
+  Hausdorff targets are zero and $U=\epsilon$ cannot act by nontrivial
+  continuous translations on $\Sigma$.  The nonzero replacement for the
+  missing Weyl flip is the degree-$1$ solid boundary
+  $D\epsilon\simeq\mathbb Q[-1]$, represented by
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.  Verified with
+  `code/scripts/check-pass84.py` ->
+  `artifacts/reports/pass84-dense-phantom-boundary-action-check.json` (PASS)
+  and added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-20 (Autonomous discussion Pass 83)
 
 - Corrected the Pass-82 solenoid exact row: for
