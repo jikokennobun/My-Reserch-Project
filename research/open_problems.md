@@ -1214,12 +1214,30 @@
   or degree-$0$ Weyl morphism is produced.  Machine-verified
   `artifacts/reports/pass102-sign-local-system-adele-boundary-check.json`
   (PASS).
-- **[New (Pass 102)]** **Signed boundary naturality under conductor reduction.**
+- **[Resolved (Pass 103)]** **Signed boundary naturality under conductor reduction.**
   Package the signed boundary/Yoneda class as a natural transformation over
   finite conductor reductions $M\mid N$.  Compare this with the Pass-95
   CRT-acyclic finite constant-term complexes, and decide whether conductor
   reduction introduces any sign-twisted obstruction beyond the mod-$2$
   collapse already recorded.
+  **Resolution:** for finite conductor $N$, the signed Bockstein class is
+  $b_N^\sigma=\sigma\in\mathbb Z/N$.  For $M\mid N$ it reduces naturally:
+  $\rho_{N,M}(b_N^\sigma)=b_M^\sigma$.  Twisting the finite CRT diagonal by
+  $\sigma=\pm1$ gives
+  $d_N^\sigma(x)=(\sigma x\bmod p^e)_{p^e\parallel N}$, still an isomorphism
+  because $\sigma$ is a unit.  Hence fixed finite signed conductor shadows
+  are acyclic and conductor reduction introduces no sign-twisted obstruction
+  beyond reduction to modulus $2$.  Support enlargement remains only a
+  finite CRT choice/span.  Machine-verified
+  `artifacts/reports/pass103-signed-boundary-conductor-naturality-check.json`
+  (PASS).
+- **[New (Pass 103)]** **Signed pro/solid all-prime boundary object.**
+  Assemble the signed finite conductor system into a pro/solid all-prime
+  boundary object over $\epsilon=\widehat{\mathbb Z}/\mathbb Z$.  Decide
+  whether the orientation double cover survives the all-prime limit as a
+  genuine cover/torsor or is absorbed by the $\mathbb Z/2$ local system on the
+  boundary line, and identify the minimal categorical package carrying
+  support, conductor, and sign without reintroducing a degree-$0$ Weyl map.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

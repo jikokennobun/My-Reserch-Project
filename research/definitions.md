@@ -2512,3 +2512,50 @@ forgets whether the boundary class is $+\delta_\epsilon$ or
 $-\delta_\epsilon$.  The $\mathbb Z/2$ local system is sufficient for the
 finite sign bookkeeping and does not create any degree-$0$ Weyl/Fourier map
 $\epsilon\to\mathbb Q$.
+
+## Signed boundary naturality under conductor reduction (Pass 103)
+
+For a finite conductor $N$, the signed finite Bockstein class is
+$$
+b_N^\sigma=\sigma\in\mathbb Z/N,\qquad \sigma\in\{\pm1\}.
+$$
+If $M\mid N$, the conductor-reduction map
+$$
+\rho_{N,M}:\mathbb Z/N\to\mathbb Z/M
+$$
+satisfies
+$$
+\rho_{N,M}(b_N^\sigma)=b_M^\sigma.
+$$
+Thus the sign local system is natural over finite conductor reductions.  The
+only finite conductor reduction that erases the distinction between the two
+signs is reduction to modulus $2$.
+
+The signed finite conductor version of the Pass-95 constant-term complex is
+$$
+C^\sigma_{B,N}=(\mathbb Z/N)^\times\ltimes
+\left[\mathbb Z/N
+\xrightarrow{d_N^\sigma}
+\prod_{p^e\parallel N}\mathbb Z/p^e\right],
+$$
+where
+$$
+d_N^\sigma(x)=(\sigma x\bmod p^e)_{p^e\parallel N}.
+$$
+Since $\sigma=\pm1$ is a unit modulo every $N$, $d_N^\sigma$ is a CRT
+isomorphism.  Therefore
+$$
+H^0(C^\sigma_{B,N})=H^1(C^\sigma_{B,N})=0
+$$
+for every fixed finite conductor $N$.
+
+For $M\mid N$, the square formed by $d_N^\sigma$, $d_M^\sigma$, and conductor
+reduction on source and prime-power target coordinates commutes.  Hence
+conductor reduction introduces no sign-twisted finite cohomology class.  The
+all-prime boundary $\epsilon$ is still a pro/solid phenomenon, not a fixed
+finite CRT cokernel.
+
+This conductor result does not change the support warning from Pass 95:
+support projection is canonical, but support enlargement remains only a
+finite-conductor CRT choice/span and is not a canonical all-prime
+diagonal-preserving morphism.

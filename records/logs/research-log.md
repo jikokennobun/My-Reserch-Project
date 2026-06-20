@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 103)
+
+- Packaged the signed boundary class as a natural finite-conductor system.
+  For $M\mid N$, the signed Bockstein class $\sigma\bmod N$ reduces to
+  $\sigma\bmod M$, with sign collapse only at target modulus $2$.  The signed
+  finite conductor differential
+  $d_N^\sigma:\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e$,
+  $x\mapsto(\sigma x\bmod p^e)_p$, remains a CRT isomorphism for
+  $\sigma=\pm1$, so every fixed signed finite conductor shadow is acyclic.
+  Conductor reduction adds no sign-twisted finite obstruction, and support
+  enlargement remains only a finite CRT choice/span.  Added checker/report
+  and retargeted Pass 104 to the signed pro/solid all-prime boundary object.
+
 ## 2026-06-21 (Autonomous discussion Pass 102)
 
 - Pushed the Pass-101 $\mathbb Z/2$ sign local system through the primitive

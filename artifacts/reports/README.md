@@ -37,6 +37,15 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass103-signed-boundary-conductor-naturality-check.json`: verifies the
+  Pass-103 finite certificate for signed boundary naturality under conductor
+  reduction. It checks that multiplying the finite CRT diagonal by
+  `sigma = +/-1` remains an isomorphism, so signed finite conductor shadows
+  are acyclic; that for `M | N`, the class `sigma mod N` reduces to
+  `sigma mod M`; that signed CRT reduction squares commute; that sign loss is
+  explained exactly by target modulus `2`; and that support enlargement
+  remains only a finite CRT choice/span, not a canonical all-prime map.
+
 - `pass102-sign-local-system-adele-boundary-check.json`: verifies the
   Pass-102 finite certificate for pushing the `Z/2` sign local system through
   the primitive collapse and finite-adele boundary. It checks that finite

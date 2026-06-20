@@ -42,22 +42,21 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 102 -> 103: signed boundary naturality over conductor reductions)**
-  Pass 102 identified the sign local system action on the unit extension
-  $\beta=[0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0]$ and the
-  finite-adele boundary
-  $\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0]$:
-  a signed orientation sends these classes to $\sigma\beta$ and
-  $\sigma\delta_\epsilon$.  Finite shadows are Bockstein classes
-  $\pm1\in\mathbb Z/N$, visible exactly for $N>2$ and collapsed at $N=2$.
-  The shifted class $D\epsilon\simeq\mathbb Q[-1]$ carries the same one-sided
-  sign, while two-sided sign change squares to $+1$.  Open:
-  (i) package the signed boundary class as a natural transformation over
-  finite conductor reductions $M\mid N$;
-  (ii) compare this signed boundary naturality with the CRT-acyclic finite
-  constant-term complexes from Pass 95;
-  (iii) decide whether conductor reduction introduces any sign-twisted
-  obstruction beyond the already recorded mod-$2$ collapse.
+- **(Pass 103 -> 104: signed pro/solid all-prime boundary object)**
+  Pass 103 showed that the signed boundary class is natural under finite
+  conductor reductions: for $M\mid N$, $\sigma\bmod N$ reduces to
+  $\sigma\bmod M$, with sign collapse only at target modulus $2$.  The signed
+  finite conductor complex
+  $d_N^\sigma:\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e$ remains a
+  CRT isomorphism for $\sigma=\pm1$, so fixed finite signed conductor shadows
+  are acyclic and introduce no new sign-twisted obstruction.  Open:
+  (i) assemble the signed conductor system into a pro/solid all-prime boundary
+  object over $\epsilon=\widehat{\mathbb Z}/\mathbb Z$;
+  (ii) decide whether the orientation double cover survives the all-prime
+  limit as a genuine cover/torsor or is completely absorbed by the
+  $\mathbb Z/2$ local system on the boundary line;
+  (iii) identify the minimal categorical package carrying support, conductor,
+  and sign without reintroducing a forbidden degree-$0$ Weyl map.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

@@ -5843,3 +5843,66 @@ of the local-system package.
 **Limit of the pass.**  The next task is to package the signed boundary class
 as a natural transformation over finite conductor reductions and compare it
 with the CRT-acyclic finite constant-term complexes from Pass 95.
+
+## Pass 103 - Signed boundary naturality under conductor reduction
+
+Pass 103 compares the signed boundary class with the Pass-95 finite conductor
+complexes.  For a finite conductor $N$, write
+$$
+b_N^\sigma=\sigma\in\mathbb Z/N,\qquad \sigma\in\{\pm1\}.
+$$
+If $M\mid N$, conductor reduction satisfies
+$$
+\rho_{N,M}(b_N^\sigma)=b_M^\sigma.
+$$
+Thus the signed Bockstein/Yoneda class is natural over the finite conductor
+category.  The sign disappears only when the target modulus is $2$.
+
+Now twist the Pass-95 finite conductor differential by the sign:
+$$
+d_N^\sigma:\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e,
+\qquad
+d_N^\sigma(x)=(\sigma x\bmod p^e)_p.
+$$
+Because $\sigma=\pm1$ is a unit, $d_N^\sigma$ is still a CRT isomorphism.
+Therefore every fixed signed finite conductor shadow remains acyclic:
+$$
+H^0(C^\sigma_{B,N})=H^1(C^\sigma_{B,N})=0.
+$$
+
+For $M\mid N$, the signed CRT squares commute: reducing $x$ first and then
+applying $d_M^\sigma$ gives the same prime-power residues as applying
+$d_N^\sigma$ and then reducing every target coordinate.  Hence conductor
+reduction introduces no new sign-twisted finite obstruction.  The nonzero
+class remains the all-prime pro/solid boundary, not a fixed finite cokernel.
+
+The Pass-95 support caveat persists.  Conductor reduction and support
+projection are canonical, but support enlargement is still only a
+finite-conductor CRT choice/span.  The signed naturality result does not
+create a canonical all-prime zero-insertion map.
+
+> **Theorem 103a (signed conductor naturality).** For $M\mid N$,
+> $\rho_{N,M}(\sigma\bmod N)=\sigma\bmod M$.
+>
+> **Theorem 103b (signed CRT acyclicity).** The signed finite conductor
+> differential $d_N^\sigma$ is a CRT isomorphism for $\sigma=\pm1$, so fixed
+> finite signed shadows have zero ordinary cohomology.
+>
+> **Theorem 103c (no finite sign obstruction).** Signed conductor-reduction
+> squares commute.  No sign-twisted finite conductor obstruction appears
+> beyond the known modulus-$2$ sign collapse.
+>
+> **Theorem 103d (support caveat).** Signed conductor naturality does not make
+> support enlargement into a canonical all-prime diagonal-preserving map.
+
+**Machine verification** (`code/scripts/check-pass103.py` ->
+`artifacts/reports/pass103-signed-boundary-conductor-naturality-check.json`,
+PASS): the checker verifies signed finite CRT isomorphism/acyclicity,
+naturality of signed Bockstein classes under conductor reductions, commutation
+of signed CRT squares, modulus-$2$ sign collapse, and persistence of the
+support-enlargement caveat.
+
+**Limit of the pass.**  The next task is to assemble the signed conductor
+system into a pro/solid all-prime boundary object and decide whether the
+orientation double cover survives the all-prime limit or is absorbed by the
+local system on $\epsilon$.

@@ -1,0 +1,1358 @@
+{
+  "pass": 103,
+  "title": "Signed boundary naturality under conductor reduction",
+  "A_signed_finite_conductor_complexes": {
+    "statement": "Multiplying the finite CRT diagonal by +/-1 remains an isomorphism, so signed finite conductor shadows are acyclic.",
+    "rows": [
+      {
+        "conductor": 2,
+        "sign": 1,
+        "prime_powers": [
+          2
+        ],
+        "source_size": 2,
+        "target_size": 2,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 2,
+        "sign": -1,
+        "prime_powers": [
+          2
+        ],
+        "source_size": 2,
+        "target_size": 2,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 3,
+        "sign": 1,
+        "prime_powers": [
+          3
+        ],
+        "source_size": 3,
+        "target_size": 3,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 3,
+        "sign": -1,
+        "prime_powers": [
+          3
+        ],
+        "source_size": 3,
+        "target_size": 3,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 4,
+        "sign": 1,
+        "prime_powers": [
+          4
+        ],
+        "source_size": 4,
+        "target_size": 4,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 4,
+        "sign": -1,
+        "prime_powers": [
+          4
+        ],
+        "source_size": 4,
+        "target_size": 4,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 5,
+        "sign": 1,
+        "prime_powers": [
+          5
+        ],
+        "source_size": 5,
+        "target_size": 5,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 5,
+        "sign": -1,
+        "prime_powers": [
+          5
+        ],
+        "source_size": 5,
+        "target_size": 5,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 6,
+        "sign": 1,
+        "prime_powers": [
+          2,
+          3
+        ],
+        "source_size": 6,
+        "target_size": 6,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 6,
+        "sign": -1,
+        "prime_powers": [
+          2,
+          3
+        ],
+        "source_size": 6,
+        "target_size": 6,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 8,
+        "sign": 1,
+        "prime_powers": [
+          8
+        ],
+        "source_size": 8,
+        "target_size": 8,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 8,
+        "sign": -1,
+        "prime_powers": [
+          8
+        ],
+        "source_size": 8,
+        "target_size": 8,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 9,
+        "sign": 1,
+        "prime_powers": [
+          9
+        ],
+        "source_size": 9,
+        "target_size": 9,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 9,
+        "sign": -1,
+        "prime_powers": [
+          9
+        ],
+        "source_size": 9,
+        "target_size": 9,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 10,
+        "sign": 1,
+        "prime_powers": [
+          2,
+          5
+        ],
+        "source_size": 10,
+        "target_size": 10,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 10,
+        "sign": -1,
+        "prime_powers": [
+          2,
+          5
+        ],
+        "source_size": 10,
+        "target_size": 10,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 12,
+        "sign": 1,
+        "prime_powers": [
+          4,
+          3
+        ],
+        "source_size": 12,
+        "target_size": 12,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 12,
+        "sign": -1,
+        "prime_powers": [
+          4,
+          3
+        ],
+        "source_size": 12,
+        "target_size": 12,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 18,
+        "sign": 1,
+        "prime_powers": [
+          2,
+          9
+        ],
+        "source_size": 18,
+        "target_size": 18,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 18,
+        "sign": -1,
+        "prime_powers": [
+          2,
+          9
+        ],
+        "source_size": 18,
+        "target_size": 18,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 24,
+        "sign": 1,
+        "prime_powers": [
+          8,
+          3
+        ],
+        "source_size": 24,
+        "target_size": 24,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 24,
+        "sign": -1,
+        "prime_powers": [
+          8,
+          3
+        ],
+        "source_size": 24,
+        "target_size": 24,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 30,
+        "sign": 1,
+        "prime_powers": [
+          2,
+          3,
+          5
+        ],
+        "source_size": 30,
+        "target_size": 30,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 30,
+        "sign": -1,
+        "prime_powers": [
+          2,
+          3,
+          5
+        ],
+        "source_size": 30,
+        "target_size": 30,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 60,
+        "sign": 1,
+        "prime_powers": [
+          4,
+          3,
+          5
+        ],
+        "source_size": 60,
+        "target_size": 60,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      },
+      {
+        "conductor": 60,
+        "sign": -1,
+        "prime_powers": [
+          4,
+          3,
+          5
+        ],
+        "source_size": 60,
+        "target_size": 60,
+        "signed_diagonal_bijective": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_signed_shadow_acyclic": true
+      }
+    ],
+    "signed_crt_acyclic_ok": true
+  },
+  "B_conductor_reduction_naturality": {
+    "statement": "For M|N, signed Bockstein classes and signed CRT diagonals reduce naturally.",
+    "rows": [
+      {
+        "larger_conductor": 4,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 4,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 3,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 6,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 6,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 5,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 6,
+        "smaller_conductor": 3,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 6,
+        "smaller_conductor": 3,
+        "sign": -1,
+        "signed_class_large_mod_n": 5,
+        "reduced_signed_class_mod_m": 2,
+        "direct_signed_class_mod_m": 2,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 8,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 8,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 7,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 8,
+        "smaller_conductor": 4,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 8,
+        "smaller_conductor": 4,
+        "sign": -1,
+        "signed_class_large_mod_n": 7,
+        "reduced_signed_class_mod_m": 3,
+        "direct_signed_class_mod_m": 3,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 9,
+        "smaller_conductor": 3,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 9,
+        "smaller_conductor": 3,
+        "sign": -1,
+        "signed_class_large_mod_n": 8,
+        "reduced_signed_class_mod_m": 2,
+        "direct_signed_class_mod_m": 2,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 10,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 10,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 9,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 10,
+        "smaller_conductor": 5,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 10,
+        "smaller_conductor": 5,
+        "sign": -1,
+        "signed_class_large_mod_n": 9,
+        "reduced_signed_class_mod_m": 4,
+        "direct_signed_class_mod_m": 4,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 11,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 3,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 3,
+        "sign": -1,
+        "signed_class_large_mod_n": 11,
+        "reduced_signed_class_mod_m": 2,
+        "direct_signed_class_mod_m": 2,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 4,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 4,
+        "sign": -1,
+        "signed_class_large_mod_n": 11,
+        "reduced_signed_class_mod_m": 3,
+        "direct_signed_class_mod_m": 3,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 6,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 6,
+        "sign": -1,
+        "signed_class_large_mod_n": 11,
+        "reduced_signed_class_mod_m": 5,
+        "direct_signed_class_mod_m": 5,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 17,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 3,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 3,
+        "sign": -1,
+        "signed_class_large_mod_n": 17,
+        "reduced_signed_class_mod_m": 2,
+        "direct_signed_class_mod_m": 2,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 6,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 6,
+        "sign": -1,
+        "signed_class_large_mod_n": 17,
+        "reduced_signed_class_mod_m": 5,
+        "direct_signed_class_mod_m": 5,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 9,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 9,
+        "sign": -1,
+        "signed_class_large_mod_n": 17,
+        "reduced_signed_class_mod_m": 8,
+        "direct_signed_class_mod_m": 8,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 23,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 3,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 3,
+        "sign": -1,
+        "signed_class_large_mod_n": 23,
+        "reduced_signed_class_mod_m": 2,
+        "direct_signed_class_mod_m": 2,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 4,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 4,
+        "sign": -1,
+        "signed_class_large_mod_n": 23,
+        "reduced_signed_class_mod_m": 3,
+        "direct_signed_class_mod_m": 3,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 6,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 6,
+        "sign": -1,
+        "signed_class_large_mod_n": 23,
+        "reduced_signed_class_mod_m": 5,
+        "direct_signed_class_mod_m": 5,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 8,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 8,
+        "sign": -1,
+        "signed_class_large_mod_n": 23,
+        "reduced_signed_class_mod_m": 7,
+        "direct_signed_class_mod_m": 7,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 12,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 12,
+        "sign": -1,
+        "signed_class_large_mod_n": 23,
+        "reduced_signed_class_mod_m": 11,
+        "direct_signed_class_mod_m": 11,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 29,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 3,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 3,
+        "sign": -1,
+        "signed_class_large_mod_n": 29,
+        "reduced_signed_class_mod_m": 2,
+        "direct_signed_class_mod_m": 2,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 5,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 5,
+        "sign": -1,
+        "signed_class_large_mod_n": 29,
+        "reduced_signed_class_mod_m": 4,
+        "direct_signed_class_mod_m": 4,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 6,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 6,
+        "sign": -1,
+        "signed_class_large_mod_n": 29,
+        "reduced_signed_class_mod_m": 5,
+        "direct_signed_class_mod_m": 5,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 10,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 10,
+        "sign": -1,
+        "signed_class_large_mod_n": 29,
+        "reduced_signed_class_mod_m": 9,
+        "direct_signed_class_mod_m": 9,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 2,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 2,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 3,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 3,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 2,
+        "direct_signed_class_mod_m": 2,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 4,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 4,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 3,
+        "direct_signed_class_mod_m": 3,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 5,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 5,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 4,
+        "direct_signed_class_mod_m": 4,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 6,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 6,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 5,
+        "direct_signed_class_mod_m": 5,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 10,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 10,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 9,
+        "direct_signed_class_mod_m": 9,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 12,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 12,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 11,
+        "direct_signed_class_mod_m": 11,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 30,
+        "sign": 1,
+        "signed_class_large_mod_n": 1,
+        "reduced_signed_class_mod_m": 1,
+        "direct_signed_class_mod_m": 1,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 30,
+        "sign": -1,
+        "signed_class_large_mod_n": 59,
+        "reduced_signed_class_mod_m": 29,
+        "direct_signed_class_mod_m": 29,
+        "sign_reduction_commutes": true,
+        "crt_square_commutes": true
+      }
+    ],
+    "reduction_naturality_ok": true
+  },
+  "C_sign_visibility_under_reduction": {
+    "statement": "Conductor reduction can only erase the sign when the target modulus is 2.",
+    "rows": [
+      {
+        "larger_conductor": 4,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 6,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 6,
+        "smaller_conductor": 3,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 8,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 8,
+        "smaller_conductor": 4,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 9,
+        "smaller_conductor": 3,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 10,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 10,
+        "smaller_conductor": 5,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 3,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 4,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 12,
+        "smaller_conductor": 6,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 3,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 6,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 18,
+        "smaller_conductor": 9,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 3,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 4,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 6,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 8,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 24,
+        "smaller_conductor": 12,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 3,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 5,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 6,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 30,
+        "smaller_conductor": 10,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 2,
+        "sign_visible_large": true,
+        "sign_visible_small": false,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 3,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 4,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 5,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 6,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 10,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 12,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      },
+      {
+        "larger_conductor": 60,
+        "smaller_conductor": 30,
+        "sign_visible_large": true,
+        "sign_visible_small": true,
+        "collapse_explained_by_mod_2_target": true
+      }
+    ],
+    "visibility_reduction_ok": true
+  },
+  "D_support_caution": {
+    "statement": "The conductor result does not turn support enlargement into a canonical all-prime map.",
+    "row": {
+      "statement": "Conductor reduction is canonical; support enlargement remains only a finite CRT choice/span.",
+      "conductor_reduction_canonical": true,
+      "support_projection_canonical": true,
+      "support_enlargement_canonical_all_prime_map": false,
+      "finite_crt_zero_insertion_choice_exists": true
+    },
+    "support_caution_ok": true
+  },
+  "E_verdict": {
+    "statement": "The signed boundary class is natural over finite conductor reductions and has no new finite CRT obstruction.",
+    "row": {
+      "natural_transformation": "For M|N, sigma mod N reduces to sigma mod M and the signed CRT square commutes.",
+      "finite_complex": "The signed finite conductor complex [Z/N -> product Z/p^e] remains a CRT isomorphism complex.",
+      "conductor_reduction_effect": "No new sign-twisted finite cohomology appears under conductor reduction.",
+      "finite_obstruction": "Only the target M=2 identifies +1 and -1.",
+      "remaining_gap": "This is finite-conductor naturality, not yet the pro/solid all-prime signed inverse system.",
+      "next_task": "Assemble the signed conductor system into a pro/solid boundary object and test whether the orientation double cover survives the all-prime limit."
+    }
+  },
+  "conclusion": {
+    "signed_naturality": "For M|N, sigma mod N reduces to sigma mod M and the signed CRT square commutes.",
+    "finite_complex": "The signed finite conductor complex [Z/N -> product Z/p^e] remains a CRT isomorphism complex.",
+    "obstruction": "Only the target M=2 identifies +1 and -1.",
+    "next_task": "Assemble the signed conductor system into a pro/solid boundary object and test whether the orientation double cover survives the all-prime limit."
+  },
+  "checks": {
+    "signed_crt_acyclic_ok": true,
+    "reduction_naturality_ok": true,
+    "visibility_reduction_ok": true,
+    "support_caution_ok": true
+  },
+  "overall": "PASS"
+}
