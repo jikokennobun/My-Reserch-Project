@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass97-rationalized-finite-adele-row-check.json`: verifies the Pass-97
+  finite certificate for the rationalized finite-adele Loebification row. It
+  checks that `Z^S/Delta Z` injects into `Q^S/Delta Q`, that the rational
+  kernel has dimension `|S|-1`, that finite quotients of the divisible rational
+  kernel vanish, that the old `N^(|S|-1)` finite shadow reappears as
+  `N`-torsion in `(Q/Z)^S/Delta(Q/Z)`, and that support projections remain
+  surjective/Mittag-Leffler.
+
 - `pass96-constant-term-local-loebification-check.json`: verifies the Pass-96
   finite certificate for comparing the constant-term Borel complex with local
   Loebification. It checks the map

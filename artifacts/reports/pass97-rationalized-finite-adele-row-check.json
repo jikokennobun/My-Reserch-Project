@@ -1,0 +1,939 @@
+{
+  "pass": 97,
+  "title": "Rationalized finite-adele row versus compact Loebification kernel",
+  "A_rational_kernel": {
+    "statement": "Rationalization maps K_Z(S)=Z^S/Delta Z injectively to K_Q(S)=Q^S/Delta Q.  The horizontal kernel survives as a Q-vector boundary of dimension |S|-1.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "integral_kernel_rank": 0,
+        "rational_kernel_q_dimension": 0,
+        "integral_to_rational_kernel_injective": true,
+        "rationalization_kills_kernel": false,
+        "rationalization_regrades_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "integral_kernel_rank": 1,
+        "rational_kernel_q_dimension": 1,
+        "integral_to_rational_kernel_injective": true,
+        "rationalization_kills_kernel": false,
+        "rationalization_regrades_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "integral_kernel_rank": 1,
+        "rational_kernel_q_dimension": 1,
+        "integral_to_rational_kernel_injective": true,
+        "rationalization_kills_kernel": false,
+        "rationalization_regrades_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "integral_kernel_rank": 2,
+        "rational_kernel_q_dimension": 2,
+        "integral_to_rational_kernel_injective": true,
+        "rationalization_kills_kernel": false,
+        "rationalization_regrades_kernel": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "integral_kernel_rank": 2,
+        "rational_kernel_q_dimension": 2,
+        "integral_to_rational_kernel_injective": true,
+        "rationalization_kills_kernel": false,
+        "rationalization_regrades_kernel": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "integral_kernel_rank": 3,
+        "rational_kernel_q_dimension": 3,
+        "integral_to_rational_kernel_injective": true,
+        "rationalization_kills_kernel": false,
+        "rationalization_regrades_kernel": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "integral_kernel_rank": 3,
+        "rational_kernel_q_dimension": 3,
+        "integral_to_rational_kernel_injective": true,
+        "rationalization_kills_kernel": false,
+        "rationalization_regrades_kernel": true
+      }
+    ],
+    "rational_kernel_ok": true,
+    "singleton_vanishes_ok": true,
+    "multiprime_survives_ok": true
+  },
+  "B_finite_shadow_regrading": {
+    "statement": "Since K_Q is divisible, K_Q/NK_Q is zero.  The old finite N^(|S|-1) shadow reappears as N-torsion in K_Q/K_Z.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 2,
+        "integral_kernel_mod_n_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 3,
+        "integral_kernel_mod_n_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 4,
+        "integral_kernel_mod_n_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 5,
+        "integral_kernel_mod_n_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 6,
+        "integral_kernel_mod_n_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 8,
+        "integral_kernel_mod_n_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "level_n": 12,
+        "integral_kernel_mod_n_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 2,
+        "integral_kernel_mod_n_size": 2,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 2,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 3,
+        "integral_kernel_mod_n_size": 3,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 3,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 4,
+        "integral_kernel_mod_n_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 4,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 5,
+        "integral_kernel_mod_n_size": 5,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 5,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 6,
+        "integral_kernel_mod_n_size": 6,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 6,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 8,
+        "integral_kernel_mod_n_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 8,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "level_n": 12,
+        "integral_kernel_mod_n_size": 12,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 12,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 2,
+        "integral_kernel_mod_n_size": 2,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 2,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 3,
+        "integral_kernel_mod_n_size": 3,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 3,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 4,
+        "integral_kernel_mod_n_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 4,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 5,
+        "integral_kernel_mod_n_size": 5,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 5,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 6,
+        "integral_kernel_mod_n_size": 6,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 6,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 8,
+        "integral_kernel_mod_n_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 8,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "level_n": 12,
+        "integral_kernel_mod_n_size": 12,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 12,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 2,
+        "integral_kernel_mod_n_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 4,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 3,
+        "integral_kernel_mod_n_size": 9,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 9,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 4,
+        "integral_kernel_mod_n_size": 16,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 16,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 5,
+        "integral_kernel_mod_n_size": 25,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 25,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 6,
+        "integral_kernel_mod_n_size": 36,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 36,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 8,
+        "integral_kernel_mod_n_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 64,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "level_n": 12,
+        "integral_kernel_mod_n_size": 144,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 144,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 2,
+        "integral_kernel_mod_n_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 4,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 3,
+        "integral_kernel_mod_n_size": 9,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 9,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 4,
+        "integral_kernel_mod_n_size": 16,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 16,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 5,
+        "integral_kernel_mod_n_size": 25,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 25,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 6,
+        "integral_kernel_mod_n_size": 36,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 36,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 8,
+        "integral_kernel_mod_n_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 64,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "level_n": 12,
+        "integral_kernel_mod_n_size": 144,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 144,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 2,
+        "integral_kernel_mod_n_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 8,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 3,
+        "integral_kernel_mod_n_size": 27,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 27,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 4,
+        "integral_kernel_mod_n_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 64,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 5,
+        "integral_kernel_mod_n_size": 125,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 125,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 6,
+        "integral_kernel_mod_n_size": 216,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 216,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 8,
+        "integral_kernel_mod_n_size": 512,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 512,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "level_n": 12,
+        "integral_kernel_mod_n_size": 1728,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1728,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 2,
+        "integral_kernel_mod_n_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 8,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 3,
+        "integral_kernel_mod_n_size": 27,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 27,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 4,
+        "integral_kernel_mod_n_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 64,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 5,
+        "integral_kernel_mod_n_size": 125,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 125,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 6,
+        "integral_kernel_mod_n_size": 216,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 216,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 8,
+        "integral_kernel_mod_n_size": 512,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 512,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "level_n": 12,
+        "integral_kernel_mod_n_size": 1728,
+        "rational_kernel_mod_n_size": 1,
+        "quotient_torsion_n_size": 1728,
+        "finite_shadow_reappears_in_quotient_torsion": true
+      }
+    ],
+    "finite_regrading_ok": true
+  },
+  "C_rational_h1_exact_sequence": {
+    "statement": "The rationalized H^1 map has kernel Q^S/Delta Q and target prod(Q_p/Q).",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "global_rational_h1": "(prod_{p in S} Q_p) / Delta Q",
+        "local_rational_h1": "prod_{p in S} (Q_p / Q)",
+        "kernel": "Q^S / Delta Q",
+        "h1_map_surjective": true,
+        "exact_sequence_holds": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "global_rational_h1": "(prod_{p in S} Q_p) / Delta Q",
+        "local_rational_h1": "prod_{p in S} (Q_p / Q)",
+        "kernel": "Q^S / Delta Q",
+        "h1_map_surjective": true,
+        "exact_sequence_holds": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "global_rational_h1": "(prod_{p in S} Q_p) / Delta Q",
+        "local_rational_h1": "prod_{p in S} (Q_p / Q)",
+        "kernel": "Q^S / Delta Q",
+        "h1_map_surjective": true,
+        "exact_sequence_holds": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "global_rational_h1": "(prod_{p in S} Q_p) / Delta Q",
+        "local_rational_h1": "prod_{p in S} (Q_p / Q)",
+        "kernel": "Q^S / Delta Q",
+        "h1_map_surjective": true,
+        "exact_sequence_holds": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "global_rational_h1": "(prod_{p in S} Q_p) / Delta Q",
+        "local_rational_h1": "prod_{p in S} (Q_p / Q)",
+        "kernel": "Q^S / Delta Q",
+        "h1_map_surjective": true,
+        "exact_sequence_holds": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "global_rational_h1": "(prod_{p in S} Q_p) / Delta Q",
+        "local_rational_h1": "prod_{p in S} (Q_p / Q)",
+        "kernel": "Q^S / Delta Q",
+        "h1_map_surjective": true,
+        "exact_sequence_holds": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "global_rational_h1": "(prod_{p in S} Q_p) / Delta Q",
+        "local_rational_h1": "prod_{p in S} (Q_p / Q)",
+        "kernel": "Q^S / Delta Q",
+        "h1_map_surjective": true,
+        "exact_sequence_holds": true
+      }
+    ],
+    "exact_sequences_ok": true
+  },
+  "D_support_projection": {
+    "statement": "Support projections remain surjective after rationalization; their kernels have Q-dimension |T|-|S|, so the support inverse direction remains Mittag-Leffler.",
+    "rows": [
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_q_dimension": 0,
+        "larger_q_dimension": 1,
+        "projection_surjective": true,
+        "projection_kernel_q_dimension": 1,
+        "expected_projection_kernel_q_dimension": 1,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_q_dimension": 1,
+        "larger_q_dimension": 2,
+        "projection_surjective": true,
+        "projection_kernel_q_dimension": 1,
+        "expected_projection_kernel_q_dimension": 1,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_q_dimension": 1,
+        "larger_q_dimension": 2,
+        "projection_surjective": true,
+        "projection_kernel_q_dimension": 1,
+        "expected_projection_kernel_q_dimension": 1,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_q_dimension": 2,
+        "larger_q_dimension": 3,
+        "projection_surjective": true,
+        "projection_kernel_q_dimension": 1,
+        "expected_projection_kernel_q_dimension": 1,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_q_dimension": 2,
+        "larger_q_dimension": 3,
+        "projection_surjective": true,
+        "projection_kernel_q_dimension": 1,
+        "expected_projection_kernel_q_dimension": 1,
+        "support_direction_mittag_leffler": true
+      }
+    ],
+    "support_projection_ok": true
+  },
+  "E_all_prime_interpretation": {
+    "statement": "The rationalized all-prime comparison is not a pure finite quotient calculation.  It is a filtered support comparison with finite shadows regraded into Q/Z torsion.",
+    "row": {
+      "formulation": "Rationalization sends K_Z(S)=Z^S/Delta Z to K_Q(S)=Q^S/Delta Q.  Finite mod-N shadows vanish inside K_Q because K_Q is divisible, but the same N^(|S|-1) shadow appears as N-torsion in K_Q/K_Z ~= (Q/Z)^S/Delta(Q/Z).",
+      "rationalized_kernel_survives": true,
+      "finite_mod_n_shadow_survives_inside_kq": false,
+      "finite_shadow_regraded_to_qz_torsion": true,
+      "filtered_support_colimit_model": true,
+      "pure_finite_quotient_model": false,
+      "suggested_next_task": "Compare the Q/Z torsion boundary with the solid dual D epsilon = Q[-1] and decide whether it is the same shifted constant-term obstruction."
+    },
+    "all_prime_interpretation_ok": true
+  },
+  "conclusion": {
+    "rational_kernel": "K_Q(S)=Q^S/Delta Q",
+    "relation_to_integral_kernel": "K_Z(S)=Z^S/Delta Z injects into K_Q(S); the quotient is (Q/Z)^S/Delta(Q/Z).",
+    "finite_shadow": "K_Q/NK_Q=0, but (K_Q/K_Z)[N] has size N^(|S|-1).",
+    "support_behavior": "Projection from larger support to smaller support remains surjective and Mittag-Leffler after rationalization.",
+    "next_task": "Compare the Q/Z torsion boundary with the solid dual D epsilon = Q[-1] and decide whether it is the same shifted constant-term obstruction."
+  },
+  "overall": "PASS"
+}

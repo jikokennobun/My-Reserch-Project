@@ -5362,3 +5362,85 @@ the full finite-adele row $[\mathbb Q\to\mathbb A_f]$ and decide whether
 rationalization kills, regrades, or turns the free kernel
 $\mathbb Z^S/\Delta\mathbb Z$ into $\mathbb Q^S/\Delta\mathbb Q$ boundary
 data.
+
+## Pass 97 - Rationalized finite-adele row
+
+Pass 97 lifts the compact comparison from Pass 96 to the rationalized
+finite-adele skeleton.  For finite support $S$, the map is
+$$
+[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+[\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p],
+$$
+with diagonal degree $0$ and identity in degree $1$.  On $H^1$ this gives
+$$
+(\prod_{p\in S}\mathbb Q_p)/\Delta\mathbb Q
+\to
+\prod_{p\in S}(\mathbb Q_p/\mathbb Q).
+$$
+The kernel is
+$$
+K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q.
+$$
+
+Thus rationalization does not eliminate the Pass-96 kernel
+$$
+K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z.
+$$
+Instead, it embeds $K_{\mathbb Z,S}$ into the divisible
+$\mathbb Q$-vector boundary $K_{\mathbb Q,S}$, with the same rank/dimension
+$|S|-1$.
+
+The finite shadow changes location.  Because $K_{\mathbb Q,S}$ is divisible,
+$$
+K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0.
+$$
+But
+$$
+K_{\mathbb Q,S}/K_{\mathbb Z,S}
+\cong
+(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+$$
+has $N$-torsion of size $N^{|S|-1}$.  So the old finite kernel shadow is not
+destroyed; it is regraded into $\mathbb Q/\mathbb Z$ torsion.
+
+Support behavior remains controlled.  If $S\subseteq T$, then projection
+$$
+K_{\mathbb Q,T}\to K_{\mathbb Q,S}
+$$
+is surjective, with kernel of $\mathbb Q$-dimension $|T|-|S|$.  Hence the
+support inverse direction remains Mittag-Leffler after rationalization.
+
+> **Theorem 97a (rationalized comparison).** The finite-support rationalized
+> Loebification map is
+> $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+> [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p].$$
+>
+> **Theorem 97b (rational kernel survives).** The $H^1$ kernel is
+> $$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q,$$
+> and $K_{\mathbb Z,S}$ injects into it.
+>
+> **Theorem 97c (finite shadow regrading).** For $N\ge2$,
+> $$K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0,$$
+> while
+> $$|(K_{\mathbb Q,S}/K_{\mathbb Z,S})[N]|=N^{|S|-1}.$$
+>
+> **Theorem 97d (support Mittag-Leffler after rationalization).** For
+> $S\subseteq T$, the map $K_{\mathbb Q,T}\to K_{\mathbb Q,S}$ is surjective
+> with kernel dimension $|T|-|S|$.
+>
+> **Theorem 97e (all-prime reading).** The all-prime rationalized comparison
+> should be treated as a filtered support comparison with finite shadows
+> regraded into $\mathbb Q/\mathbb Z$ torsion, not as a pure finite quotient
+> calculation.
+
+**Machine verification** (`code/scripts/check-pass97.py` ->
+`artifacts/reports/pass97-rationalized-finite-adele-row-check.json`, PASS):
+the checker verifies the dimension of $K_{\mathbb Q,S}$, injectivity of
+$K_{\mathbb Z,S}\to K_{\mathbb Q,S}$, vanishing of finite quotients of the
+divisible rational kernel, recovery of $N^{|S|-1}$ as torsion in
+$K_{\mathbb Q,S}/K_{\mathbb Z,S}$, and support-projection surjectivity.
+
+**Limit of the pass.**  The next task is to compare the torsion boundary
+$(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$ with the solid dual
+$D\epsilon=\mathbb Q[-1]$ and decide whether they are two presentations of
+the same shifted constant-term obstruction.

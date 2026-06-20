@@ -1087,7 +1087,7 @@
   projection, not pure Hausdorff reflection.  Machine-verified
   `artifacts/reports/pass96-constant-term-local-loebification-check.json`
   (PASS).
-- **[New (Pass 96)]** **Rationalized finite-adele row versus compact Loebification kernel.**
+- **[Resolved (Pass 97)]** **Rationalized finite-adele row versus compact Loebification kernel.**
   Lift the compact Pass-96 comparison to the full finite-adele row
   $$[\mathbb Q\to\mathbb A_f].$$
   Decide whether rationalizing the degree-$0$ compact skeleton kills,
@@ -1096,6 +1096,30 @@
   data.  Determine whether the correct all-prime comparison is a solid
   cohomology cone, a condensed sheafification statement, or a filtered colimit
   of the finite-support maps.
+  **Resolution:** for finite support $S$, rationalization gives the map
+  $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+  [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p].$$
+  Its $H^1$ kernel is
+  $$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q.$$
+  The integral kernel $K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z$ injects
+  into it, so the kernel is not killed.  It is regraded: because
+  $K_{\mathbb Q,S}$ is divisible, $K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0$, but
+  $$K_{\mathbb Q,S}/K_{\mathbb Z,S}
+  \cong(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
+  has $N$-torsion of size $N^{|S|-1}$.  Support projections remain
+  surjective and Mittag-Leffler.  Machine-verified
+  `artifacts/reports/pass97-rationalized-finite-adele-row-check.json`
+  (PASS).
+- **[New (Pass 97)]** **Torsion boundary versus solid dual.**
+  Compare the regraded torsion boundary
+  $$(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
+  with the Pass-94 solid dual identity
+  $$D\epsilon=\mathbb Q[-1].$$
+  Decide whether the torsion boundary is the finite-support shadow of the
+  same shifted constant-term obstruction, or whether it is only a local-Loeb
+  artifact introduced by rationalizing the compact comparison.  Formulate the
+  exact functor from finite-support torsion quotients to the all-prime solid
+  boundary.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

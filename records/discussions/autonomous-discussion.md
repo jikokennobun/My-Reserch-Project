@@ -6,8 +6,25 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 97
-- Last pass note: Pass 96 (2026-06-21) compared the compact finite-support
+- Current pass: 98
+- Last pass note: Pass 97 (2026-06-21) lifted the Pass-96 compact comparison
+  to the rationalized finite-adele skeleton
+  $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+  [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p].$$
+  The rationalized $H^1$ map has kernel
+  $$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q.$$
+  Thus rationalization does not kill the horizontal kernel
+  $K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z$; it embeds it into a
+  $\mathbb Q$-vector boundary of the same rank $|S|-1$.  Because
+  $K_{\mathbb Q,S}$ is divisible, its finite quotient
+  $K_{\mathbb Q,S}/N K_{\mathbb Q,S}$ is zero.  The old finite shadow
+  $N^{|S|-1}$ is regraded as the $N$-torsion of
+  $$K_{\mathbb Q,S}/K_{\mathbb Z,S}\cong
+  (\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).$$
+  Support projections remain surjective after rationalization, so the support
+  direction is still Mittag-Leffler.  Machine-verified `check-pass97.py` ->
+  `pass97-rationalized-finite-adele-row-check.json` PASS. Counter 97->98.
+- Earlier note: Pass 96 (2026-06-21) compared the compact finite-support
   skeleton of the boundary-only constant-term complex with the local Loeb
   sheafification.  For finite support $S$, the comparison is the map of
   two-term complexes
@@ -28,25 +45,6 @@
   projection, not pure Hausdorff reflection.  Machine-verified
   `check-pass96.py` ->
   `pass96-constant-term-local-loebification-check.json` PASS. Counter 96->97.
-- Earlier note: Pass 95 (2026-06-21) packaged the boundary-only functional
-  equation shadow as the two-term Borel constant-term complex
-  $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f].$$
-  It is placed in cohomological degrees $0\to1$.  Every fixed finite
-  conductor shadow
-  $$[\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e]$$
-  is CRT-acyclic, so no ordinary finite conductor quotient carries the
-  phantom.  In the all-prime solid boundary, however,
-  $$H^0(C_B)=0,\qquad H^1(C_B)=\mathbb A_f/\mathbb Q\cong
-  \widehat{\mathbb Z}/\mathbb Z=\epsilon.$$
-  Conductor reductions commute with the diagonal complex and preserve the
-  Borel unit class; support projections are canonical, while support
-  enlargement remains a finite-conductor choice/span rather than an exact
-  all-prime diagonal-preserving map.  Thus the "functional equation" is a
-  constant-term boundary theorem, not a Weyl-intertwiner theorem: nontrivial
-  Whittaker coefficients and standard Weyl operators are still absent.
-  Machine-verified `check-pass95.py` ->
-  `pass95-boundary-only-borel-constant-term-complex-check.json` PASS. Counter
-  95->96.
 - Earlier note: Pass 93 (2026-06-21) upgraded the finite-support Borel
   $j_!$ class to the all-prime Spec-$\mathbb Z$ setting.  The key correction is
   topological: in the honest all-prime Zariski site, the generic point
@@ -11104,3 +11102,119 @@ Pass 97 should lift the compact comparison to the full finite-adele complex
 $[\mathbb Q\to\mathbb A_f]$ and decide whether rationalization kills,
 regrades, or turns the free kernel $\mathbb Z^S/\Delta\mathbb Z$ into
 $\mathbb Q^S/\Delta\mathbb Q$ boundary data.
+
+---
+
+### Pass 97 - 2026-06-21 JST
+
+Focus:
+Lift the compact Loebification comparison to the rationalized finite-adele
+row and decide what happens to the free horizontal kernel.
+
+Proposer:
+For finite support $S$, rationalizing the Pass-96 comparison gives the map
+of two-term complexes
+$$
+[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]
+\longrightarrow
+[\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p],
+$$
+diagonal in degree $0$ and identity in degree $1$.  The induced map on
+$H^1$ is
+$$
+(\prod_{p\in S}\mathbb Q_p)/\Delta\mathbb Q
+\longrightarrow
+\prod_{p\in S}(\mathbb Q_p/\mathbb Q).
+$$
+Its kernel is
+$$
+K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q.
+$$
+Therefore rationalization does not kill the Pass-96 kernel.  It sends
+$$
+K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z
+$$
+injectively into the divisible $\mathbb Q$-vector boundary
+$$
+K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q,
+$$
+both of rank/dimension $|S|-1$.
+
+Skeptic:
+The finite shadows now move.  Since $K_{\mathbb Q,S}$ is uniquely divisible,
+$$
+K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0.
+$$
+So if one looks only at finite quotients of the rational kernel, it falsely
+looks as though the obstruction disappeared.  The correct statement is a
+regrading:
+$$
+K_{\mathbb Q,S}/K_{\mathbb Z,S}
+\cong
+(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z),
+$$
+whose $N$-torsion has size
+$$
+N^{|S|-1}.
+$$
+Thus the old compact finite shadow survives not as a quotient of
+$K_{\mathbb Q,S}$ but as torsion in the rational/integral boundary quotient.
+
+Formalist:
+> **Theorem 97a (rationalized Loebification map).** For finite support $S$,
+> the rationalized comparison is
+> $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+> [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p],$$
+> diagonal in degree $0$ and identity in degree $1$.
+>
+> **Theorem 97b (rational kernel).** The induced $H^1$ map has kernel
+> $$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q.$$
+> The integral kernel $K_{\mathbb Z,S}$ injects into it, and both have
+> rank/dimension $|S|-1$.
+>
+> **Theorem 97c (finite shadow regrading).** For every $N\ge2$,
+> $$K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0,$$
+> but
+> $$|(K_{\mathbb Q,S}/K_{\mathbb Z,S})[N]|=N^{|S|-1}.$$
+>
+> **Theorem 97d (support behavior).** If $S\subseteq T$, projection
+> $K_{\mathbb Q,T}\to K_{\mathbb Q,S}$ is surjective with kernel of
+> $\mathbb Q$-dimension $|T|-|S|$.  Hence rationalization preserves the
+> support-direction Mittag-Leffler behavior.
+>
+> **Theorem 97e (all-prime reading).** The rationalized all-prime comparison
+> is not a pure finite-quotient calculation.  It should be modeled as a
+> filtered finite-support comparison in which finite shadows are regraded into
+> $\mathbb Q/\mathbb Z$ torsion.
+
+Machine-verified `code/scripts/check-pass97.py` ->
+`artifacts/reports/pass97-rationalized-finite-adele-row-check.json`
+(overall PASS): the checker verifies the dimension equality
+$\dim_{\mathbb Q}K_{\mathbb Q,S}=|S|-1$, injectivity of
+$K_{\mathbb Z,S}\to K_{\mathbb Q,S}$, vanishing of
+$K_{\mathbb Q,S}/N K_{\mathbb Q,S}$, recovery of $N^{|S|-1}$ as
+$N$-torsion in $K_{\mathbb Q,S}/K_{\mathbb Z,S}$, and surjective support
+projections with $\mathbb Q$-dimension kernel $|T|-|S|$.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-97 entry;
+  State counter $97\to98$.
+- `records/logs/research-log.md`: Pass-97 entry.
+- `research/definitions.md`: added the rationalized finite-adele
+  Loebification comparison.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-97 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  marked the rationalized finite-adele row comparison resolved and retargeted
+  the next pass to the $\mathbb Q/\mathbb Z$ torsion boundary versus solid
+  duality comparison.
+- `code/scripts/check-pass97.py`,
+  `artifacts/reports/pass97-rationalized-finite-adele-row-check.json`: new.
+- `artifacts/pdf/rationalized-finite-adele-row-2026-06-21.md`: publication
+  summary source.
+
+Next step:
+Pass 98 should compare the regraded torsion boundary
+$(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$ with the solid dual
+$D\epsilon=\mathbb Q[-1]$ and decide whether they are two presentations of the
+same shifted constant-term obstruction.

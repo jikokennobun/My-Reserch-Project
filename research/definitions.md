@@ -2202,3 +2202,49 @@ not a second kernel.  Therefore the best formulation is a map of two-term
 complexes plus stackification/local constant-term projection.  Pure
 Hausdorff reflection describes only the unipotent quotient and misses the
 Levi decentralization.
+
+## Rationalized finite-adele Loebification comparison (Pass 97)
+
+For finite support $S$, the rationalized version of the Pass-96 comparison is
+the map of two-term complexes
+$$
+[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+[\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p],
+$$
+diagonal in degree $0$ and identity in degree $1$.
+
+The induced map on rationalized unipotent $H^1$ has exact kernel
+$$
+K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q.
+$$
+The compact integral kernel from Pass 96,
+$$
+K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z,
+$$
+injects into $K_{\mathbb Q,S}$.  Hence rationalization does not kill the
+horizontal Loeb/Rosser kernel; it turns it into a divisible
+$\mathbb Q$-vector boundary of dimension $|S|-1$.
+
+The finite shadows are regraded.  Since $K_{\mathbb Q,S}$ is divisible,
+$$
+K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0.
+$$
+But the quotient
+$$
+K_{\mathbb Q,S}/K_{\mathbb Z,S}
+\cong(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+$$
+has $N$-torsion of size
+$$
+N^{|S|-1}.
+$$
+Thus the old finite shadow of $K_{\mathbb Z,S}$ survives as torsion in the
+rational/integral boundary quotient, not as a finite quotient of
+$K_{\mathbb Q,S}$ itself.
+
+For $S\subseteq T$, support projection gives a surjection
+$$
+K_{\mathbb Q,T}\to K_{\mathbb Q,S}
+$$
+with kernel of $\mathbb Q$-dimension $|T|-|S|$.  Therefore the support
+direction remains Mittag-Leffler after rationalization.

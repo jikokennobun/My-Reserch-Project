@@ -42,26 +42,26 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 96 -> 97: rationalized finite-adele row versus compact Loebification kernel)**
-  Pass 96 compared the compact finite-support skeleton of the constant-term
-  complex with local Loebification by the map
-  $$[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\to
-  [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p].$$
-  Its $H^1$ kernel is exactly the horizontal Rosser defect
-  $$K_S=\mathbb Z^S/\Delta\mathbb Z,$$
-  with finite shadow size $N^{|S|-1}$.  The diagonal Levi map
-  $\mathbb Q^\times\to(\mathbb Q^\times)^S$ has trivial kernel; local
-  Loebification instead loses global Levi coherence as the quotient
-  $$(\mathbb Q^\times)^S/\Delta\mathbb Q^\times.$$
+- **(Pass 97 -> 98: torsion boundary versus solid dual)**
+  Pass 97 lifted the compact Loebification comparison to the rationalized
+  finite-adele skeleton
+  $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+  [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p].$$
+  The rationalized kernel is
+  $$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q,$$
+  so rationalization does not kill
+  $K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z$; it embeds it into a
+  $\mathbb Q$-vector boundary.  Finite quotients of $K_{\mathbb Q,S}$ vanish,
+  but the old $N^{|S|-1}$ finite shadow reappears as $N$-torsion in
+  $$K_{\mathbb Q,S}/K_{\mathbb Z,S}
+  \cong(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).$$
   Open:
-  (i) lift the compact comparison to the full finite-adele row
-  $$[\mathbb Q\to\mathbb A_f];$$
-  (ii) decide whether rationalization kills, regrades, or turns
-  $\mathbb Z^S/\Delta\mathbb Z$ into $\mathbb Q^S/\Delta\mathbb Q$ boundary
-  data;
-  (iii) determine whether the all-prime rationalized cone is better modeled
-  in solid cohomology, condensed sheaves, or a filtered colimit of finite
-  support comparisons.
+  (i) compare this $\mathbb Q/\mathbb Z$ torsion boundary with the Pass-94
+  solid dual identity $D\epsilon=\mathbb Q[-1]$;
+  (ii) decide whether it is the finite-support shadow of the same shifted
+  constant-term obstruction or a separate local-Loeb artifact;
+  (iii) formulate the exact functor from finite-support torsion quotients to
+  the all-prime solid boundary.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

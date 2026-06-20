@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 97)
+
+- Lifted the compact Pass-96 Loebification comparison to the rationalized
+  finite-adele skeleton
+  $[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
+  [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p]$.  The rationalized kernel is
+  $K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q$, so rationalization does not
+  kill the free kernel $\mathbb Z^S/\Delta\mathbb Z$; it embeds it into a
+  divisible $\mathbb Q$-vector boundary.  Finite quotients of
+  $K_{\mathbb Q,S}$ vanish, but the old size $N^{|S|-1}$ reappears as
+  $N$-torsion in
+  $(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$.  Added
+  checker/report and retargeted Pass 98 to comparing this torsion boundary
+  with the solid dual $D\epsilon=\mathbb Q[-1]$.
+
 ## 2026-06-21 (Autonomous discussion Pass 96)
 
 - Compared the compact finite-support skeleton of the constant-term Borel
