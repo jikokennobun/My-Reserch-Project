@@ -5518,3 +5518,99 @@ dual objects, and compatibility with the extension bridge/no-Weyl wall.
 **Limit of the pass.**  The next task is to construct the exact triangle or
 functor from finite-support torsion boundaries to the all-prime constant-term
 complex and check compatibility with the Pass-94 antipode sign.
+
+## Pass 99 - Primitive-collapse bridge to the constant-term complex
+
+Pass 99 constructs the promised bridge from finite torsion boundary to the
+all-prime constant-term complex.  The canonical finite-support triangle is
+$$
+K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1],
+$$
+where
+$$
+K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z,\qquad
+K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q,\qquad
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).
+$$
+
+A collapse from the $|S|-1$-generator torsion boundary to the one-generator
+unit extension is not canonical.  It is determined by a zero-sum functional
+$$
+c=(c_p)_{p\in S}\in\mathbb Z^S,\qquad \sum_{p\in S}c_p=0.
+$$
+This condition is exactly what makes $c$ vanish on the diagonal and hence
+descend to
+$$
+K_{\mathbb Z,S}\to\mathbb Z,\qquad
+K_{\mathbb Q,S}\to\mathbb Q,\qquad
+T_S\to\mathbb Q/\mathbb Z.
+$$
+The last map is surjective precisely when $c$ is primitive:
+$$
+\gcd_{p\in S}(c_p)=1.
+$$
+
+Thus a primitive $c$ gives a morphism of exact triangles
+$$
+\begin{array}{ccc}
+K_{\mathbb Z,S} &\to& K_{\mathbb Q,S} &\to& T_S\\
+\downarrow && \downarrow && \downarrow\\
+\mathbb Z &\to& \mathbb Q &\to& \mathbb Q/\mathbb Z.
+\end{array}
+$$
+Composing with the all-prime finite-adele realization gives the constant-term
+complex
+$$
+[\mathbb Q\to\mathbb A_f],
+\qquad
+H^1=\epsilon=\mathbb A_f/\mathbb Q.
+$$
+
+For $r=|S|-1$ and finite level $N$, the primitive collapse satisfies
+$$
+T_S[N]\twoheadrightarrow(\mathbb Q/\mathbb Z)[N],
+\qquad
+|\ker|=N^{r-1}=N^{|S|-2}.
+$$
+Hence the bridge preserves the one-generator finite shadow while recording
+the remaining $|S|-2$ finite-support degrees as the kernel of the chosen
+collapse.
+
+The canonicality warning is essential.  A support-symmetric collapse would
+come from a symmetric integral functional, hence from a constant vector
+$(a,\ldots,a)$; the zero-sum condition forces $a=0$.  Therefore the operation
+which collapses $T_S$ to one constant-term generator is not a plain support
+limit.  It is a torsor of primitive boundary orientations.
+
+The antipode sends $c$ to $-c$, so it negates the chosen boundary class.  This
+is the same sign behavior as Pass 94: visible over $\mathbb Z$, invisible mod
+$2$, and shifted through $D\epsilon\simeq\mathbb Q[-1]$.  No degree-$0$ Weyl
+or Fourier morphism $\epsilon\to\mathbb Q$ is produced.
+
+> **Theorem 99a (finite triangle).** The inclusion
+> $K_{\mathbb Z,S}\hookrightarrow K_{\mathbb Q,S}$ gives the exact triangle
+> $K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1]$.
+>
+> **Theorem 99b (primitive collapse).** A morphism to
+> $\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z$ is determined by an integral
+> zero-sum functional $c$ and is surjective on the torsion boundary exactly
+> when $c$ is primitive.
+>
+> **Theorem 99c (orientation torsor).** There is no canonical
+> support-symmetric primitive collapse $T_S\to\mathbb Q/\mathbb Z$; the
+> collapse data form an orientation torsor of primitive zero-sum functionals.
+>
+> **Theorem 99d (constant-term compatibility).** After choosing $c$, the
+> bridge lands in $[\mathbb Q\to\mathbb A_f]$, the antipode sends
+> $c\mapsto -c$, and the construction remains compatible with the no-Weyl wall.
+
+**Machine verification** (`code/scripts/check-pass99.py` ->
+`artifacts/reports/pass99-torsion-boundary-constant-term-triangle-check.json`,
+PASS): the checker verifies descent and surjectivity of primitive zero-sum
+functionals, finite-shadow kernel size $N^{|S|-2}$, antipode sign behavior,
+noncanonicity of the collapse, and compatibility with the shifted
+constant-term target.
+
+**Limit of the pass.**  The next task is to study the orientation torsor of
+primitive zero-sum boundary functionals under support inclusions and decide
+which transition maps preserve, negate, or destabilize chosen collapses.

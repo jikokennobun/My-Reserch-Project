@@ -37,6 +37,15 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass99-torsion-boundary-constant-term-triangle-check.json`: verifies the
+  Pass-99 finite certificate for the exact bridge from
+  `T_S=(Q/Z)^S/Delta(Q/Z)` to the all-prime constant-term complex
+  `[Q -> A_f]`. It checks that primitive zero-sum functionals descend and
+  surject onto `Q/Z`, that the finite-shadow kernel has size `N^(|S|-2)`,
+  that the antipode sends `c` to `-c` with mod-2 sign collapse, and that the
+  collapse is a noncanonical orientation choice compatible with the no-Weyl
+  wall.
+
 - `pass98-torsion-boundary-solid-dual-check.json`: verifies the Pass-98 finite
   certificate comparing the torsion boundary
   `(Q/Z)^S/Delta(Q/Z)` with the all-prime solid dual `D epsilon = Q[-1]`. It

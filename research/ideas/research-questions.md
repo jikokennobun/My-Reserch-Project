@@ -42,25 +42,24 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 98 -> 99: exact triangle from torsion boundary to constant-term complex)**
-  Pass 98 compared
-  $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
-  with the Pass-94 identity $D\epsilon\simeq\mathbb Q[-1]$.  The conclusion is
-  not raw object equality: $T_S$ is a degree-$0$ torsion coefficient with
-  $|T_S[N]|=N^{|S|-1}$, while $D\epsilon$ is shifted.  The bridge is the
-  canonical unit extension
-  $$0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0,$$
-  which sends each independent $\mathbb Q/\mathbb Z$ coordinate to one shifted
-  $\mathbb Q[-1]$ constant-term obstruction generator after the
-  extension/solid-dual passage.  Open:
-  (i) construct the exact triangle/functor from finite-support torsion
-  boundaries $T_S$ to the all-prime constant-term complex
-  $[\mathbb Q\to\mathbb A_f]$;
-  (ii) verify compatibility with the Pass-94 antipode sign and no-Weyl wall
-  $\operatorname{Hom}^0(\epsilon,\mathbb Q)=0$;
-  (iii) decide what support-limit operation collapses the $|S|-1$
-  finite-support multiplicity to the all-prime universal generator without
-  losing the finite torsion shadows.
+- **(Pass 99 -> 100: orientation torsor for primitive boundary collapse)**
+  Pass 99 constructed the exact bridge
+  $$K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1]$$
+  from finite torsion boundary to the one-generator unit extension and onward
+  to $[\mathbb Q\to\mathbb A_f]$.  The bridge requires a primitive zero-sum
+  functional
+  $$c\in\mathbb Z^S,\qquad \sum c_p=0,\qquad \gcd(c_p)=1.$$
+  Such a $c$ induces $T_S\twoheadrightarrow\mathbb Q/\mathbb Z$, with
+  $N$-torsion kernel of size $N^{|S|-2}$, and the antipode sends
+  $c\mapsto-c$.  The collapse is not canonical: no support-symmetric
+  primitive zero-sum functional exists.  Open:
+  (i) describe the orientation torsor of primitive zero-sum functionals under
+  support inclusions $S\subseteq T$ and projections $T_T\to T_S$;
+  (ii) determine whether there is a natural groupoid/span of oriented supports
+  that makes the collapse functorial up to sign;
+  (iii) decide how the all-prime limit should remember this orientation torsor
+  while still presenting only the single shifted generator
+  $D\epsilon\simeq\mathbb Q[-1]$.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

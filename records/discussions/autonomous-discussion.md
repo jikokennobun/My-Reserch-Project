@@ -6,8 +6,25 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 99
-- Last pass note: Pass 98 (2026-06-21) compared the Pass-97 torsion boundary
+- Current pass: 100
+- Last pass note: Pass 99 (2026-06-21) constructed the exact bridge from the
+  finite-support torsion boundary
+  $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
+  to the all-prime constant-term complex.  The intrinsic exact triangle is
+  $$K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1].$$
+  A collapse $T_S\to\mathbb Q/\mathbb Z$ is not canonical: it requires a
+  primitive integral zero-sum functional
+  $$c\in\{(c_p)_{p\in S}\in\mathbb Z^S:\sum c_p=0,\ \gcd(c_p)=1\}.$$
+  Such a choice maps the finite triangle to
+  $$0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0,$$
+  and then to the all-prime row
+  $$[\mathbb Q\to\mathbb A_f],\qquad H^1=\epsilon=\mathbb A_f/\mathbb Q.$$
+  The antipode sends $c$ to $-c$, negating the boundary class; the sign is
+  visible over $\mathbb Z$ and invisible mod $2$.  No degree-$0$ Weyl map
+  $\epsilon\to\mathbb Q$ is produced.  Machine-verified `check-pass99.py` ->
+  `pass99-torsion-boundary-constant-term-triangle-check.json` PASS. Counter
+  99->100.
+- Earlier note: Pass 98 (2026-06-21) compared the Pass-97 torsion boundary
   $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
   with the Pass-94 all-prime solid-dual identity
   $$D\epsilon\simeq\mathbb Q[-1],\qquad \epsilon=\widehat{\mathbb Z}/\mathbb Z.$$
@@ -23,23 +40,6 @@
   a separate artifact: it is the finite-support torsion shadow of the same
   shifted obstruction.  Machine-verified `check-pass98.py` ->
   `pass98-torsion-boundary-solid-dual-check.json` PASS. Counter 98->99.
-- Earlier note: Pass 97 (2026-06-21) lifted the Pass-96 compact comparison
-  to the rationalized finite-adele skeleton
-  $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
-  [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p].$$
-  The rationalized $H^1$ map has kernel
-  $$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q.$$
-  Thus rationalization does not kill the horizontal kernel
-  $K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z$; it embeds it into a
-  $\mathbb Q$-vector boundary of the same rank $|S|-1$.  Because
-  $K_{\mathbb Q,S}$ is divisible, its finite quotient
-  $K_{\mathbb Q,S}/N K_{\mathbb Q,S}$ is zero.  The old finite shadow
-  $N^{|S|-1}$ is regraded as the $N$-torsion of
-  $$K_{\mathbb Q,S}/K_{\mathbb Z,S}\cong
-  (\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).$$
-  Support projections remain surjective after rationalization, so the support
-  direction is still Mittag-Leffler.  Machine-verified `check-pass97.py` ->
-  `pass97-rationalized-finite-adele-row-check.json` PASS. Counter 97->98.
 - Earlier note: Pass 93 (2026-06-21) upgraded the finite-support Borel
   $j_!$ class to the all-prime Spec-$\mathbb Z$ setting.  The key correction is
   topological: in the honest all-prime Zariski site, the generic point
@@ -11321,3 +11321,112 @@ Next step:
 Pass 99 should construct the exact triangle or functor from finite-support
 torsion boundaries to the all-prime constant-term complex and verify
 compatibility with the Pass-94 antipode sign/no-Weyl wall.
+
+### Pass 99 - 2026-06-21 JST
+
+Focus:
+Construct the exact bridge from finite-support torsion boundaries to the
+all-prime constant-term complex, and decide whether the support-limit collapse
+is canonical.
+
+Proposer:
+The finite-support triangle is already present in Passes 97--98:
+$$
+K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1],
+$$
+where
+$$
+K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z,\qquad
+K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q,\qquad
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).
+$$
+To map this triangle to the single constant-term generator, choose a primitive
+zero-sum functional
+$$
+c=(c_p)_{p\in S}\in\mathbb Z^S,\qquad \sum_{p\in S}c_p=0,\qquad
+\gcd_{p\in S}(c_p)=1.
+$$
+Then $c$ descends to maps
+$$
+K_{\mathbb Z,S}\to\mathbb Z,\qquad
+K_{\mathbb Q,S}\to\mathbb Q,\qquad
+T_S\to\mathbb Q/\mathbb Z,
+$$
+and these maps form a morphism of exact triangles to
+$$
+\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to\mathbb Z[1].
+$$
+Composing with the all-prime finite-adele realization gives the
+constant-term row $[\mathbb Q\to\mathbb A_f]$ with boundary
+$\epsilon=\mathbb A_f/\mathbb Q$.
+
+Skeptic:
+There is no canonical collapse $T_S\to\mathbb Q/\mathbb Z$ without choosing
+$c$.  A map out of $T_S$ is represented by a zero-sum integral functional on
+$S$; the only support-symmetric such functional is $0$.  Thus the operation
+which collapses $|S|-1$ finite coordinates to one generator is not a plain
+support limit.  It is a torsor of primitive boundary orientations.  The exact
+bridge exists after a choice, but the choice must be tracked rather than
+silently erased.
+
+Formalist:
+For $r=|S|-1$ and primitive $c$, the induced map on $N$-torsion is
+surjective:
+$$
+T_S[N]\twoheadrightarrow(\mathbb Q/\mathbb Z)[N].
+$$
+Since $|T_S[N]|=N^r$ and $|(\mathbb Q/\mathbb Z)[N]|=N$, its kernel has size
+$$
+N^{r-1}=N^{|S|-2}
+$$
+when $|S|\ge2$.  The antipode acts by $c\mapsto -c$, so it negates the
+boundary class.  This sign is visible over $\mathbb Z$ and collapses modulo
+$2$, matching the Pass-94 finite signed-dual behavior.  The target remains
+shifted through $D\epsilon\simeq\mathbb Q[-1]$, so the construction still
+does not produce a degree-$0$ Weyl/Fourier map $\epsilon\to\mathbb Q$.
+
+> **Theorem 99a (finite exact triangle).** The inclusion
+> $K_{\mathbb Z,S}\hookrightarrow K_{\mathbb Q,S}$ gives the exact triangle
+> $$K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1].$$
+>
+> **Theorem 99b (collapse parameter).** A morphism from this triangle to
+> $\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z$ is determined by an integral
+> zero-sum functional $c\in\mathbb Z^S$; it is surjective on the
+> $\mathbb Q/\mathbb Z$ term precisely when $c$ is primitive.
+>
+> **Theorem 99c (noncanonical support collapse).** No support-symmetric
+> nonzero primitive $c$ exists.  Therefore the collapse of $T_S$ to one
+> constant-term generator is not canonical; it is an orientation choice.
+>
+> **Theorem 99d (antipode/no-Weyl compatibility).** The antipode sends
+> $c$ to $-c$, negating the boundary class, and the resulting bridge to
+> $[\mathbb Q\to\mathbb A_f]$ remains shifted; no degree-$0$ Weyl map
+> $\epsilon\to\mathbb Q$ is created.
+
+Machine verification (`code/scripts/check-pass99.py` ->
+`artifacts/reports/pass99-torsion-boundary-constant-term-triangle-check.json`,
+PASS): the checker verifies that zero-sum primitive functionals descend and
+surject, that the $N$-torsion kernel under collapse has size $N^{|S|-2}$, that
+the antipode sends $c$ to $-c$ with the expected mod-$2$ collapse, and that the
+constant-term bridge is exact only after a choice and remains compatible with
+the no-Weyl wall.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-99 entry;
+  State counter $99\to100$.
+- `records/logs/research-log.md`: Pass-99 entry.
+- `research/definitions.md`: added the primitive-collapse exact bridge.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-99 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  resolved the exact-triangle task and retargeted the next pass to the
+  orientation torsor of primitive boundary functionals.
+- `code/scripts/check-pass99.py`,
+  `artifacts/reports/pass99-torsion-boundary-constant-term-triangle-check.json`:
+  new.
+- `artifacts/pdf/torsion-boundary-constant-term-triangle-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 100 should study the orientation torsor of primitive zero-sum boundary
+functionals and determine how choices of $c$ transform under support
+inclusions, support projections, and the all-prime limit.

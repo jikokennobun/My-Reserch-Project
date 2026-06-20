@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 99)
+
+- Constructed the exact bridge from finite-support torsion boundaries to the
+  all-prime constant-term complex.  The intrinsic triangle is
+  $K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1]$.
+  A collapse $T_S\to\mathbb Q/\mathbb Z$ exists after choosing a primitive
+  zero-sum functional $c\in\mathbb Z^S$; it then maps to
+  $0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0$ and onward to
+  $[\mathbb Q\to\mathbb A_f]$.  The collapse is not canonical: it is a
+  primitive boundary-orientation choice.  The antipode sends $c$ to $-c$ and
+  no degree-$0$ Weyl map is produced.  Added checker/report and retargeted
+  Pass 100 to the orientation torsor under support change.
+
 ## 2026-06-21 (Autonomous discussion Pass 98)
 
 - Compared the regraded torsion boundary

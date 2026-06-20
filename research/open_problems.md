@@ -1132,7 +1132,7 @@
   finite-support torsion presentation of the same shifted obstruction.
   Machine-verified
   `artifacts/reports/pass98-torsion-boundary-solid-dual-check.json` (PASS).
-- **[New (Pass 98)]** **Exact triangle from torsion boundary to all-prime constant term.**
+- **[Resolved (Pass 99)]** **Exact triangle from torsion boundary to all-prime constant term.**
   Construct the exact triangle or functor carrying the finite-support torsion
   boundary
   $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
@@ -1141,6 +1141,28 @@
   no-Weyl wall $\operatorname{Hom}^0(\epsilon,\mathbb Q)=0$.  Determine which
   support-limit operation collapses the finite multiplicity $|S|-1$ to the
   all-prime universal generator while preserving the finite torsion shadows.
+  **Resolution:** the canonical finite-support triangle is
+  $$K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1].$$
+  A collapse to the one-generator unit extension requires a primitive
+  zero-sum functional
+  $$c\in\mathbb Z^S,\qquad \sum c_p=0,\qquad \gcd(c_p)=1.$$
+  Such a $c$ gives a morphism to
+  $$\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to\mathbb Z[1]$$
+  and hence to $[\mathbb Q\to\mathbb A_f]$.  It maps
+  $T_S[N]\twoheadrightarrow(\mathbb Q/\mathbb Z)[N]$ with kernel size
+  $N^{|S|-2}$ for $|S|\ge2$.  The collapse is not canonical; it is an
+  orientation choice.  The antipode sends $c$ to $-c$, and no degree-$0$
+  Weyl map is created.  Machine-verified
+  `artifacts/reports/pass99-torsion-boundary-constant-term-triangle-check.json`
+  (PASS).
+- **[New (Pass 99)]** **Orientation torsor for primitive boundary collapse.**
+  Describe the torsor of primitive zero-sum functionals
+  $$\{c\in\mathbb Z^S:\sum c_p=0,\ \gcd(c_p)=1\}$$
+  under support inclusions, support projections, and antipode sign.  Determine
+  whether there is a natural oriented-support groupoid or span category making
+  the collapse $T_S\to\mathbb Q/\mathbb Z$ functorial up to sign, and decide
+  how this orientation data survives, or is quotiented, in the all-prime
+  constant-term generator $D\epsilon\simeq\mathbb Q[-1]$.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

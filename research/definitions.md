@@ -2293,3 +2293,63 @@ bookkeeping, but the $\mathbb Q/\mathbb Z$ coefficient is not a separate
 artifact: it is the torsion presentation of the same shifted obstruction whose
 all-prime solid-dual form is $\mathbb Q[-1]$.  This bridge does not create a
 degree-$0$ Weyl/Fourier map $\epsilon\to\mathbb Q$.
+
+## Primitive-collapse bridge to the constant-term complex (Pass 99)
+
+The torsion boundary carries a canonical exact triangle
+$$
+K_{\mathbb Z,S}\to K_{\mathbb Q,S}\to T_S\to K_{\mathbb Z,S}[1],
+$$
+where
+$$
+K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z,\qquad
+K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q,\qquad
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).
+$$
+
+A map from this finite-support triangle to the one-generator unit extension
+$$
+\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to\mathbb Z[1]
+$$
+is determined by an integral zero-sum functional
+$$
+c=(c_p)_{p\in S}\in\mathbb Z^S,\qquad \sum_{p\in S}c_p=0.
+$$
+The zero-sum condition is exactly the condition that $c$ vanish on the
+diagonal and therefore descend from $\mathbb Z^S,\mathbb Q^S,
+(\mathbb Q/\mathbb Z)^S$ to the quotients.  The induced collapse
+$$
+T_S\to\mathbb Q/\mathbb Z
+$$
+is surjective precisely when $c$ is primitive, i.e.
+$$
+\gcd_{p\in S}(c_p)=1.
+$$
+
+For $r=|S|-1$ and primitive $c$, the map on finite shadows is
+$$
+T_S[N]\twoheadrightarrow(\mathbb Q/\mathbb Z)[N],
+$$
+with kernel of size
+$$
+N^{r-1}=N^{|S|-2}
+$$
+when $|S|\ge2$.
+
+This collapse is not canonical.  The only support-symmetric integral
+functional is constant on $S$, and the zero-sum condition forces it to be
+zero.  Hence the passage from $|S|-1$ finite-support boundary coordinates to
+one constant-term generator is an **orientation torsor** of primitive
+zero-sum functionals, not a plain support limit.
+
+After choosing such a primitive $c$, the triangle maps to the unit extension
+and then to the all-prime constant-term row
+$$
+[\mathbb Q\to\mathbb A_f],
+\qquad
+H^1=\epsilon=\mathbb A_f/\mathbb Q.
+$$
+The antipode acts on the chosen functional by $c\mapsto -c$, negating the
+boundary class.  This sign is visible over $\mathbb Z$ and invisible mod $2$.
+The construction remains shifted through $D\epsilon\simeq\mathbb Q[-1]$ and
+does not create a degree-$0$ Weyl/Fourier morphism $\epsilon\to\mathbb Q$.

@@ -1,0 +1,922 @@
+{
+  "pass": 99,
+  "title": "Exact bridge from torsion boundary to constant-term complex",
+  "A_primitive_zero_sum_functionals": {
+    "statement": "A map T_S -> Q/Z is induced by an integral functional c on Z^S exactly when sum(c)=0; it is surjective when c is primitive.  Such a collapse is a choice, not canonical.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "functional": [
+          0
+        ],
+        "sum_zero": true,
+        "primitive": false,
+        "descends_to_torsion_boundary": true,
+        "surjects_to_q_mod_z": false,
+        "collapse_is_canonical_without_choice": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "functional": [
+          -1,
+          1
+        ],
+        "sum_zero": true,
+        "primitive": true,
+        "descends_to_torsion_boundary": true,
+        "surjects_to_q_mod_z": true,
+        "collapse_is_canonical_without_choice": false
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "functional": [
+          -1,
+          1
+        ],
+        "sum_zero": true,
+        "primitive": true,
+        "descends_to_torsion_boundary": true,
+        "surjects_to_q_mod_z": true,
+        "collapse_is_canonical_without_choice": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "functional": [
+          -1,
+          0,
+          1
+        ],
+        "sum_zero": true,
+        "primitive": true,
+        "descends_to_torsion_boundary": true,
+        "surjects_to_q_mod_z": true,
+        "collapse_is_canonical_without_choice": false
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "functional": [
+          -1,
+          0,
+          1
+        ],
+        "sum_zero": true,
+        "primitive": true,
+        "descends_to_torsion_boundary": true,
+        "surjects_to_q_mod_z": true,
+        "collapse_is_canonical_without_choice": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "functional": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "sum_zero": true,
+        "primitive": true,
+        "descends_to_torsion_boundary": true,
+        "surjects_to_q_mod_z": true,
+        "collapse_is_canonical_without_choice": false
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "functional": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "sum_zero": true,
+        "primitive": true,
+        "descends_to_torsion_boundary": true,
+        "surjects_to_q_mod_z": true,
+        "collapse_is_canonical_without_choice": false
+      }
+    ],
+    "functional_ok": true,
+    "no_canonical_symmetric_collapse_ok": true,
+    "singleton_has_no_generator_ok": true
+  },
+  "B_finite_shadow_under_collapse": {
+    "statement": "For rank r=|S|-1, a primitive collapse sends the N-torsion shadow of size N^r onto the one-generator shadow Q/Z[N] of size N with kernel size N^(r-1).",
+    "rows": [
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 2,
+        "torsion_boundary_n_size": 2,
+        "collapsed_generator_n_size": 2,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 3,
+        "torsion_boundary_n_size": 3,
+        "collapsed_generator_n_size": 3,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 4,
+        "torsion_boundary_n_size": 4,
+        "collapsed_generator_n_size": 4,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 5,
+        "torsion_boundary_n_size": 5,
+        "collapsed_generator_n_size": 5,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 6,
+        "torsion_boundary_n_size": 6,
+        "collapsed_generator_n_size": 6,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 8,
+        "torsion_boundary_n_size": 8,
+        "collapsed_generator_n_size": 8,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 12,
+        "torsion_boundary_n_size": 12,
+        "collapsed_generator_n_size": 12,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 2,
+        "torsion_boundary_n_size": 2,
+        "collapsed_generator_n_size": 2,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 3,
+        "torsion_boundary_n_size": 3,
+        "collapsed_generator_n_size": 3,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 4,
+        "torsion_boundary_n_size": 4,
+        "collapsed_generator_n_size": 4,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 5,
+        "torsion_boundary_n_size": 5,
+        "collapsed_generator_n_size": 5,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 6,
+        "torsion_boundary_n_size": 6,
+        "collapsed_generator_n_size": 6,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 8,
+        "torsion_boundary_n_size": 8,
+        "collapsed_generator_n_size": 8,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "rank": 1,
+        "level_n": 12,
+        "torsion_boundary_n_size": 12,
+        "collapsed_generator_n_size": 12,
+        "kernel_n_torsion_size": 1,
+        "expected_kernel_n_torsion_size": 1,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 2,
+        "torsion_boundary_n_size": 4,
+        "collapsed_generator_n_size": 2,
+        "kernel_n_torsion_size": 2,
+        "expected_kernel_n_torsion_size": 2,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 3,
+        "torsion_boundary_n_size": 9,
+        "collapsed_generator_n_size": 3,
+        "kernel_n_torsion_size": 3,
+        "expected_kernel_n_torsion_size": 3,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 4,
+        "torsion_boundary_n_size": 16,
+        "collapsed_generator_n_size": 4,
+        "kernel_n_torsion_size": 4,
+        "expected_kernel_n_torsion_size": 4,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 5,
+        "torsion_boundary_n_size": 25,
+        "collapsed_generator_n_size": 5,
+        "kernel_n_torsion_size": 5,
+        "expected_kernel_n_torsion_size": 5,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 6,
+        "torsion_boundary_n_size": 36,
+        "collapsed_generator_n_size": 6,
+        "kernel_n_torsion_size": 6,
+        "expected_kernel_n_torsion_size": 6,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 8,
+        "torsion_boundary_n_size": 64,
+        "collapsed_generator_n_size": 8,
+        "kernel_n_torsion_size": 8,
+        "expected_kernel_n_torsion_size": 8,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 12,
+        "torsion_boundary_n_size": 144,
+        "collapsed_generator_n_size": 12,
+        "kernel_n_torsion_size": 12,
+        "expected_kernel_n_torsion_size": 12,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 2,
+        "torsion_boundary_n_size": 4,
+        "collapsed_generator_n_size": 2,
+        "kernel_n_torsion_size": 2,
+        "expected_kernel_n_torsion_size": 2,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 3,
+        "torsion_boundary_n_size": 9,
+        "collapsed_generator_n_size": 3,
+        "kernel_n_torsion_size": 3,
+        "expected_kernel_n_torsion_size": 3,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 4,
+        "torsion_boundary_n_size": 16,
+        "collapsed_generator_n_size": 4,
+        "kernel_n_torsion_size": 4,
+        "expected_kernel_n_torsion_size": 4,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 5,
+        "torsion_boundary_n_size": 25,
+        "collapsed_generator_n_size": 5,
+        "kernel_n_torsion_size": 5,
+        "expected_kernel_n_torsion_size": 5,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 6,
+        "torsion_boundary_n_size": 36,
+        "collapsed_generator_n_size": 6,
+        "kernel_n_torsion_size": 6,
+        "expected_kernel_n_torsion_size": 6,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 8,
+        "torsion_boundary_n_size": 64,
+        "collapsed_generator_n_size": 8,
+        "kernel_n_torsion_size": 8,
+        "expected_kernel_n_torsion_size": 8,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "rank": 2,
+        "level_n": 12,
+        "torsion_boundary_n_size": 144,
+        "collapsed_generator_n_size": 12,
+        "kernel_n_torsion_size": 12,
+        "expected_kernel_n_torsion_size": 12,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 2,
+        "torsion_boundary_n_size": 8,
+        "collapsed_generator_n_size": 2,
+        "kernel_n_torsion_size": 4,
+        "expected_kernel_n_torsion_size": 4,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 3,
+        "torsion_boundary_n_size": 27,
+        "collapsed_generator_n_size": 3,
+        "kernel_n_torsion_size": 9,
+        "expected_kernel_n_torsion_size": 9,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 4,
+        "torsion_boundary_n_size": 64,
+        "collapsed_generator_n_size": 4,
+        "kernel_n_torsion_size": 16,
+        "expected_kernel_n_torsion_size": 16,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 5,
+        "torsion_boundary_n_size": 125,
+        "collapsed_generator_n_size": 5,
+        "kernel_n_torsion_size": 25,
+        "expected_kernel_n_torsion_size": 25,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 6,
+        "torsion_boundary_n_size": 216,
+        "collapsed_generator_n_size": 6,
+        "kernel_n_torsion_size": 36,
+        "expected_kernel_n_torsion_size": 36,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 8,
+        "torsion_boundary_n_size": 512,
+        "collapsed_generator_n_size": 8,
+        "kernel_n_torsion_size": 64,
+        "expected_kernel_n_torsion_size": 64,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 12,
+        "torsion_boundary_n_size": 1728,
+        "collapsed_generator_n_size": 12,
+        "kernel_n_torsion_size": 144,
+        "expected_kernel_n_torsion_size": 144,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 2,
+        "torsion_boundary_n_size": 8,
+        "collapsed_generator_n_size": 2,
+        "kernel_n_torsion_size": 4,
+        "expected_kernel_n_torsion_size": 4,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 3,
+        "torsion_boundary_n_size": 27,
+        "collapsed_generator_n_size": 3,
+        "kernel_n_torsion_size": 9,
+        "expected_kernel_n_torsion_size": 9,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 4,
+        "torsion_boundary_n_size": 64,
+        "collapsed_generator_n_size": 4,
+        "kernel_n_torsion_size": 16,
+        "expected_kernel_n_torsion_size": 16,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 5,
+        "torsion_boundary_n_size": 125,
+        "collapsed_generator_n_size": 5,
+        "kernel_n_torsion_size": 25,
+        "expected_kernel_n_torsion_size": 25,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 6,
+        "torsion_boundary_n_size": 216,
+        "collapsed_generator_n_size": 6,
+        "kernel_n_torsion_size": 36,
+        "expected_kernel_n_torsion_size": 36,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 8,
+        "torsion_boundary_n_size": 512,
+        "collapsed_generator_n_size": 8,
+        "kernel_n_torsion_size": 64,
+        "expected_kernel_n_torsion_size": 64,
+        "finite_shadow_preserved_surjectively": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "rank": 3,
+        "level_n": 12,
+        "torsion_boundary_n_size": 1728,
+        "collapsed_generator_n_size": 12,
+        "kernel_n_torsion_size": 144,
+        "expected_kernel_n_torsion_size": 144,
+        "finite_shadow_preserved_surjectively": true
+      }
+    ],
+    "collapse_ok": true
+  },
+  "C_antipode_sign": {
+    "statement": "The antipode sends c to -c.  The sign is visible over Z, invisible mod 2, and negates the boundary class.",
+    "rows": [
+      {
+        "support": [
+          2,
+          3
+        ],
+        "functional": [
+          -1,
+          1
+        ],
+        "antipode_functional": [
+          1,
+          -1
+        ],
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true,
+        "boundary_class_negated": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "functional": [
+          -1,
+          1
+        ],
+        "antipode_functional": [
+          1,
+          -1
+        ],
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true,
+        "boundary_class_negated": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "functional": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_functional": [
+          1,
+          0,
+          -1
+        ],
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true,
+        "boundary_class_negated": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "functional": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_functional": [
+          1,
+          0,
+          -1
+        ],
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true,
+        "boundary_class_negated": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "functional": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "antipode_functional": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true,
+        "boundary_class_negated": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "functional": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "antipode_functional": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "sign_visible_over_z": true,
+        "sign_invisible_mod_2": true,
+        "boundary_class_negated": true
+      }
+    ],
+    "antipode_ok": true
+  },
+  "D_constant_term_bridge": {
+    "statement": "After choosing a primitive collapse, the finite triangle K_Z,S -> K_Q,S -> T_S maps to the unit extension and then to the all-prime constant-term complex [Q -> A_f].",
+    "row": {
+      "source_triangle": "K_Z,S -> K_Q,S -> T_S -> K_Z,S[1], with K_Z,S=Z^S/Delta Z and K_Q,S=Q^S/Delta Q",
+      "chosen_collapse": "primitive zero-sum c in Z^S sends T_S to Q/Z; no symmetric choice of c is canonical for |S|>1",
+      "unit_extension": "0 -> Z -> Q -> Q/Z -> 0",
+      "all_prime_complex": "[Q -> A_f]",
+      "all_prime_boundary": "epsilon = A_f/Q = Zhat/Z",
+      "shifted_solid_dual": "D epsilon = Q[-1]",
+      "exact_triangle_exists_after_choice": true,
+      "canonical_without_choice": false,
+      "produces_degree_zero_weyl_flip": false,
+      "compatible_with_no_weyl_wall": true
+    },
+    "bridge_ok": true
+  },
+  "conclusion": {
+    "exact_triangle": "K_Z,S -> K_Q,S -> T_S -> K_Z,S[1]",
+    "collapse_parameter": "primitive zero-sum c in Z^S; equivalently an orientation of one finite-support boundary relation",
+    "constant_term_target": "[Q -> A_f] with boundary epsilon=A_f/Q",
+    "solid_dual_target": "D epsilon = Q[-1]",
+    "canonicality": "There is no support-symmetric canonical collapse T_S -> Q/Z for |S|>1; the exact bridge is a torsor of primitive boundary functionals.",
+    "finite_shadow": "The chosen collapse preserves the one-generator N-torsion shadow surjectively and leaves kernel N^(|S|-2).",
+    "next_task": "Study the orientation torsor of primitive zero-sum boundary functionals and decide how it should be tracked under support inclusions."
+  },
+  "overall": "PASS"
+}
