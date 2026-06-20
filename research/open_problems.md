@@ -998,7 +998,7 @@
   hyperbolic Borel shear orbit changes representatives without selecting a
   canonical zero section.  Machine-verified
   `artifacts/reports/pass92-zariski-generic-borel-descent-check.json` (PASS).
-- **[New (Pass 92)]** **All-prime Spec-$\mathbb Z$ Borel $j_!$ upgrade.**
+- **[Resolved (Pass 93)]** **All-prime Spec-$\mathbb Z$ Borel $j_!$ upgrade.**
   Upgrade the finite-support $j_!$ Borel class to the honest all-prime
   $\mathrm{Spec}\,\mathbb Z$ site.  Identify which finiteness, compact-support,
   continuous-cohomology, or derived-completion hypotheses are needed for
@@ -1007,6 +1007,27 @@
   $\underline{\mathbb Q^\times}\ltimes j_!\underline{\mathbb Z}$ must be replaced
   by a pro/solid/condensed coefficient to keep the finite-adele extension line
   and hyperbolic shear comparison functorial.
+  **Resolution:** on honest all-prime $\mathrm{Spec}\,\mathbb Z$, $\{\eta\}$
+  is not open, so the finite-support $j_!$ notation must be replaced by a
+  pro-open/continuous/solid coefficient
+  $$\mathfrak B^{\mathrm{cont}}_{j!}
+  =\mathbb Q^\times\ltimes R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S.$$
+  The support-direction restrictions are surjective and Mittag-Leffler, hence
+  add no new $\varprojlim^1$; the nonzero derived content remains the per-prime
+  dilation tower inside $\mathcal V$.  Consequently
+  $$H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
+  \cong\widehat{\mathbb Z}/\mathbb Z,$$
+  with global Levi $\mathbb Q^\times$, finite-adele pushout
+  $0\to\mathbb Q\to\mathbb A_f\to\widehat{\mathbb Z}/\mathbb Z\to0$, and
+  hyperbolic Borel shear compatibility.  Machine-verified
+  `artifacts/reports/pass93-all-prime-borel-jshriek-upgrade-check.json` (PASS).
+- **[New (Pass 93)]** **Verdier/solid dual of the all-prime Borel $j_!$ class.**
+  Compute the Verdier or solid dual of
+  $\mathfrak B^{\mathrm{cont}}_{j!}$ and decide whether the antipode sign from
+  Passes 65 and 77 yields a functional-equation shadow for the all-prime Borel
+  class.  The key constraint is to recover the signed dual boundary without
+  creating a forbidden degree-$0$ Weyl flip
+  $\epsilon\to\mathbb Q$, which Passes 80-82 ruled out.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

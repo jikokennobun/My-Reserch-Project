@@ -42,25 +42,23 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 92 -> 93: all-prime Spec-$\mathbb Z$ Borel $j_!$ upgrade)**
-  Pass 92 resolved the finite-support Zariski/generic relocation of the Borel
-  descent obstruction.  On
-  $$X_S=\{\eta\}\cup\{(p):p\in S\},$$
-  constant Borel coefficients have no horizontal $H^1$ defect; the obstruction
-  is the unipotent $j_!$ class in the semidirect coefficient
-  $$\underline{\mathbb Q^\times}\ltimes j_!\underline{\mathbb Z},\qquad
-  H^1(X_S,j_!\mathbb Z)=\mathbb Z^S/\Delta\mathbb Z.$$
-  With the dilation coefficient $\mathcal V$ this embeds into
-  $$H^1(X_S,j_!\mathcal V)=\widehat{\mathbb Z}_S/\mathbb Z,$$
-  whose pushout along $\mathbb Z\to\mathbb Q$ is the finite-adele extension
-  line.  Open:
-  (i) upgrade the finite-support computation to the honest all-prime
-  $\mathrm{Spec}\,\mathbb Z$ site;
-  (ii) decide whether ordinary sheaf cohomology is enough or whether
-  continuous/pro/solid coefficients are needed to make
-  $H^1(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)=\widehat{\mathbb Z}/\mathbb Z$;
-  (iii) prove functorial compatibility of the all-prime Borel $j_!$ class with
-  the finite-adele extension line and hyperbolic shear orbit.
+- **(Pass 93 -> 94: duality of the all-prime Borel $j_!$ class)**
+  Pass 93 resolved the all-prime upgrade.  Since $\{\eta\}$ is not open in
+  honest $\mathrm{Spec}\,\mathbb Z$, the finite-support $j_!$ notation becomes
+  the continuous/pro-open/solid coefficient
+  $$\mathfrak B^{\mathrm{cont}}_{j!}
+  =\mathbb Q^\times\ltimes R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S.$$
+  The support direction is Mittag-Leffler and contributes no extra
+  $\varprojlim^1$, so
+  $$H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
+  \cong\widehat{\mathbb Z}/\mathbb Z.$$
+  Open:
+  (i) compute the Verdier/solid dual of
+  $\mathfrak B^{\mathrm{cont}}_{j!}$;
+  (ii) decide whether the Pass-65/77 antipode sign gives a functional-equation
+  shadow for the all-prime Borel class;
+  (iii) prove that any such duality remains a degree-shifted boundary statement
+  and does not create a forbidden degree-$0$ Weyl flip $\epsilon\to\mathbb Q$.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

@@ -1,0 +1,1005 @@
+{
+  "pass": 93,
+  "title": "All-prime Spec Z Borel j_! upgrade",
+  "A_honest_site_obstruction": {
+    "statement": "The finite generic-point j_! coefficient is ordinary only on finite subspaces. On honest Spec Z, {eta} is not open, so the all-prime object must be pro-open/continuous or solid.",
+    "rows": [
+      {
+        "site": "finite X_S={eta} union S",
+        "generic_point_open": true,
+        "finite_support_jshriek_is_ordinary": true,
+        "all_prime_jshriek_requires_pro_open_model": false,
+        "reason": "In the finite subspace, D(product of primes in S) intersects X_S in {eta}, so the generic point is open."
+      },
+      {
+        "site": "honest all-prime Spec Z",
+        "generic_point_open": false,
+        "finite_support_jshriek_is_ordinary": false,
+        "all_prime_jshriek_requires_pro_open_model": true,
+        "reason": "Every nonempty basic open D(n) contains eta and all but finitely many closed primes, so no open is exactly {eta}."
+      }
+    ],
+    "honest_site_obstruction_ok": true
+  },
+  "B_support_projection_system": {
+    "statement": "For finite supports ordered by inclusion, restriction from a larger prefix to a smaller prefix is surjective on horizontal j_! groups, with rank drop equal to the number of forgotten primes.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2
+        ],
+        "source_size": 2,
+        "target_size": 1,
+        "horizontal_source_rank": 1,
+        "horizontal_target_rank": 0,
+        "projection_surjective": true,
+        "kernel_rank": 1,
+        "expected_kernel_rank": 1,
+        "rank_drop_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3
+        ],
+        "source_size": 3,
+        "target_size": 2,
+        "horizontal_source_rank": 2,
+        "horizontal_target_rank": 1,
+        "projection_surjective": true,
+        "kernel_rank": 1,
+        "expected_kernel_rank": 1,
+        "rank_drop_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_size": 4,
+        "target_size": 3,
+        "horizontal_source_rank": 3,
+        "horizontal_target_rank": 2,
+        "projection_surjective": true,
+        "kernel_rank": 1,
+        "expected_kernel_rank": 1,
+        "rank_drop_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_size": 5,
+        "target_size": 4,
+        "horizontal_source_rank": 4,
+        "horizontal_target_rank": 3,
+        "projection_surjective": true,
+        "kernel_rank": 1,
+        "expected_kernel_rank": 1,
+        "rank_drop_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "source_size": 6,
+        "target_size": 5,
+        "horizontal_source_rank": 5,
+        "horizontal_target_rank": 4,
+        "projection_surjective": true,
+        "kernel_rank": 1,
+        "expected_kernel_rank": 1,
+        "rank_drop_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "source_size": 7,
+        "target_size": 6,
+        "horizontal_source_rank": 6,
+        "horizontal_target_rank": 5,
+        "projection_surjective": true,
+        "kernel_rank": 1,
+        "expected_kernel_rank": 1,
+        "rank_drop_matches": true
+      }
+    ],
+    "support_projections_ok": true
+  },
+  "C_finite_level_support_continuity": {
+    "statement": "Modulo N, support projection has kernel N^(number of forgotten primes). This finite ML behavior means the support direction adds no new lim^1.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2
+        ],
+        "level_n": 2,
+        "source_size": 2,
+        "target_size": 1,
+        "projection_surjective": true,
+        "kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2
+        ],
+        "level_n": 3,
+        "source_size": 3,
+        "target_size": 1,
+        "projection_surjective": true,
+        "kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2
+        ],
+        "level_n": 4,
+        "source_size": 4,
+        "target_size": 1,
+        "projection_surjective": true,
+        "kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2
+        ],
+        "level_n": 6,
+        "source_size": 6,
+        "target_size": 1,
+        "projection_surjective": true,
+        "kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2
+        ],
+        "level_n": 8,
+        "source_size": 8,
+        "target_size": 1,
+        "projection_surjective": true,
+        "kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2
+        ],
+        "level_n": 12,
+        "source_size": 12,
+        "target_size": 1,
+        "projection_surjective": true,
+        "kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3
+        ],
+        "level_n": 2,
+        "source_size": 4,
+        "target_size": 2,
+        "projection_surjective": true,
+        "kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3
+        ],
+        "level_n": 3,
+        "source_size": 9,
+        "target_size": 3,
+        "projection_surjective": true,
+        "kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3
+        ],
+        "level_n": 4,
+        "source_size": 16,
+        "target_size": 4,
+        "projection_surjective": true,
+        "kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3
+        ],
+        "level_n": 6,
+        "source_size": 36,
+        "target_size": 6,
+        "projection_surjective": true,
+        "kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3
+        ],
+        "level_n": 8,
+        "source_size": 64,
+        "target_size": 8,
+        "projection_surjective": true,
+        "kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3
+        ],
+        "level_n": 12,
+        "source_size": 144,
+        "target_size": 12,
+        "projection_surjective": true,
+        "kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 2,
+        "source_size": 8,
+        "target_size": 4,
+        "projection_surjective": true,
+        "kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 3,
+        "source_size": 27,
+        "target_size": 9,
+        "projection_surjective": true,
+        "kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 4,
+        "source_size": 64,
+        "target_size": 16,
+        "projection_surjective": true,
+        "kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 6,
+        "source_size": 216,
+        "target_size": 36,
+        "projection_surjective": true,
+        "kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 8,
+        "source_size": 512,
+        "target_size": 64,
+        "projection_surjective": true,
+        "kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 12,
+        "source_size": 1728,
+        "target_size": 144,
+        "projection_surjective": true,
+        "kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "source_size": 16,
+        "target_size": 8,
+        "projection_surjective": true,
+        "kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "source_size": 81,
+        "target_size": 27,
+        "projection_surjective": true,
+        "kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "source_size": 256,
+        "target_size": 64,
+        "projection_surjective": true,
+        "kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "source_size": 1296,
+        "target_size": 216,
+        "projection_surjective": true,
+        "kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "source_size": 4096,
+        "target_size": 512,
+        "projection_surjective": true,
+        "kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "source_size": 20736,
+        "target_size": 1728,
+        "projection_surjective": true,
+        "kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 2,
+        "source_size": 32,
+        "target_size": 16,
+        "projection_surjective": true,
+        "kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 3,
+        "source_size": 243,
+        "target_size": 81,
+        "projection_surjective": true,
+        "kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 4,
+        "source_size": 1024,
+        "target_size": 256,
+        "projection_surjective": true,
+        "kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 6,
+        "source_size": 7776,
+        "target_size": 1296,
+        "projection_surjective": true,
+        "kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 8,
+        "source_size": 32768,
+        "target_size": 4096,
+        "projection_surjective": true,
+        "kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "level_n": 12,
+        "source_size": 248832,
+        "target_size": 20736,
+        "projection_surjective": true,
+        "kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "level_n": 2,
+        "source_size": 64,
+        "target_size": 32,
+        "projection_surjective": true,
+        "kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "level_n": 3,
+        "source_size": 729,
+        "target_size": 243,
+        "projection_surjective": true,
+        "kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "level_n": 4,
+        "source_size": 4096,
+        "target_size": 1024,
+        "projection_surjective": true,
+        "kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "level_n": 6,
+        "source_size": 46656,
+        "target_size": 7776,
+        "projection_surjective": true,
+        "kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "level_n": 8,
+        "source_size": 262144,
+        "target_size": 32768,
+        "projection_surjective": true,
+        "kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "level_n": 12,
+        "source_size": 2985984,
+        "target_size": 248832,
+        "projection_surjective": true,
+        "kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches": true
+      }
+    ],
+    "finite_projection_ok": true
+  },
+  "D_continuity_split": {
+    "statement": "The support-direction inverse system is ML; the nonzero derived content remains the per-prime dilation lim^1 already built into V.",
+    "rows": [
+      {
+        "prefix_size": 1,
+        "support_transition_surjective": true,
+        "support_direction_mittag_leffler": true,
+        "support_direction_lim1_zero": true,
+        "per_prime_dilation_lim1_present": true,
+        "total_prefix_symbol": "H^1(X_2, j_! V) = prod_{p in {2}} Z_p / Delta Z"
+      },
+      {
+        "prefix_size": 2,
+        "support_transition_surjective": true,
+        "support_direction_mittag_leffler": true,
+        "support_direction_lim1_zero": true,
+        "per_prime_dilation_lim1_present": true,
+        "total_prefix_symbol": "H^1(X_2*3, j_! V) = prod_{p in {2*3}} Z_p / Delta Z"
+      },
+      {
+        "prefix_size": 3,
+        "support_transition_surjective": true,
+        "support_direction_mittag_leffler": true,
+        "support_direction_lim1_zero": true,
+        "per_prime_dilation_lim1_present": true,
+        "total_prefix_symbol": "H^1(X_2*3*5, j_! V) = prod_{p in {2*3*5}} Z_p / Delta Z"
+      },
+      {
+        "prefix_size": 4,
+        "support_transition_surjective": true,
+        "support_direction_mittag_leffler": true,
+        "support_direction_lim1_zero": true,
+        "per_prime_dilation_lim1_present": true,
+        "total_prefix_symbol": "H^1(X_2*3*5*7, j_! V) = prod_{p in {2*3*5*7}} Z_p / Delta Z"
+      },
+      {
+        "prefix_size": 5,
+        "support_transition_surjective": true,
+        "support_direction_mittag_leffler": true,
+        "support_direction_lim1_zero": true,
+        "per_prime_dilation_lim1_present": true,
+        "total_prefix_symbol": "H^1(X_2*3*5*7*11, j_! V) = prod_{p in {2*3*5*7*11}} Z_p / Delta Z"
+      },
+      {
+        "prefix_size": 6,
+        "support_transition_surjective": true,
+        "support_direction_mittag_leffler": true,
+        "support_direction_lim1_zero": true,
+        "per_prime_dilation_lim1_present": true,
+        "total_prefix_symbol": "H^1(X_2*3*5*7*11*13, j_! V) = prod_{p in {2*3*5*7*11*13}} Z_p / Delta Z"
+      },
+      {
+        "prefix_size": 7,
+        "support_transition_surjective": true,
+        "support_direction_mittag_leffler": true,
+        "support_direction_lim1_zero": true,
+        "per_prime_dilation_lim1_present": true,
+        "total_prefix_symbol": "H^1(X_2*3*5*7*11*13*17, j_! V) = prod_{p in {2*3*5*7*11*13*17}} Z_p / Delta Z"
+      }
+    ],
+    "continuity_ok": true
+  },
+  "E_all_prime_borel_coefficient": {
+    "statement": "The all-prime Borel coefficient keeps a global Levi and takes the continuous inverse limit of the unipotent j_! dilation ghosts, yielding Zhat/Z and the finite-adele extension line.",
+    "row": {
+      "coefficient_model": "B_cont = Q^x semidirect Rlim_{S finite} j_{S,!} V_S",
+      "global_levi_retained": true,
+      "local_levi_product_avoided": true,
+      "unipotent_limit": "lim_S H^1(X_S,j_! V_S) = prod_p Z_p / Delta Z = Zhat/Z",
+      "finite_adele_pushout": "0 -> Q -> A_f -> Zhat/Z -> 0",
+      "hyperbolic_shear_functorial": true,
+      "requires_continuous_or_solid_coefficients": true
+    },
+    "borel_ok": true
+  },
+  "conclusion": {
+    "classification": "Ordinary finite j_! notation is acceptable on each X_S, but the honest all-prime upgrade is a continuous/pro-open/solid coefficient, not an ordinary sheaf from an open generic point.",
+    "all_prime_identity": "H^1_cont(Spec Z, j_! V) = lim_S H^1(X_S,j_!V_S) = Zhat/Z.",
+    "next_task": "Compute the Verdier/solid dual of the all-prime Borel j_! coefficient and decide whether the antipode sign gives a functional-equation shadow without creating a Weyl flip."
+  },
+  "overall": "PASS"
+}

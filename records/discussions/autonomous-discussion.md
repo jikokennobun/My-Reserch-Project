@@ -6,8 +6,29 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 93
-- Last pass note: Pass 92 (2026-06-21) relocated the Borel descent obstruction
+- Current pass: 94
+- Last pass note: Pass 93 (2026-06-21) upgraded the finite-support Borel
+  $j_!$ class to the all-prime Spec-$\mathbb Z$ setting.  The key correction is
+  topological: in the honest all-prime Zariski site, the generic point
+  $\{\eta\}$ is not open, since every nonempty basic open contains all but
+  finitely many closed primes.  Therefore the finite-support notation
+  $j_!$ must be read all-prime as a pro-open / continuous / solid coefficient:
+  $$\mathfrak B^{\mathrm{cont}}_{j!}
+  =\mathbb Q^\times\ltimes R\!\varprojlim_{S\Subset\mathbb P} j_{S,!}\mathcal V_S.$$
+  The support-direction transition maps are restrictions from larger finite
+  supports to smaller ones; they are surjective, so that direction is
+  Mittag-Leffler and contributes no extra $\varprojlim^1$.  The nonzero
+  derived content remains the per-prime dilation tower inside $\mathcal V$.
+  Thus
+  $$H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
+  =\varprojlim_S H^1(X_S,j_!\mathcal V_S)
+  \cong\widehat{\mathbb Z}/\mathbb Z.$$
+  The global Levi $\mathbb Q^\times$ is retained, not replaced by the product
+  of local Levi factors, and the finite-adele row
+  $0\to\mathbb Q\to\mathbb A_f\to\widehat{\mathbb Z}/\mathbb Z\to0$ remains
+  functorial.  Machine-verified `check-pass93.py` ->
+  `pass93-all-prime-borel-jshriek-upgrade-check.json` PASS. Counter 93->94.
+- Earlier note: Pass 92 (2026-06-21) relocated the Borel descent obstruction
   from the discrete singleton-prime cover to the finite Zariski/generic-point
   site $X_S=\{\eta\}\cup\{(p):p\in S\}$.  On this connected site, the constant
   Borel sheaf has no horizontal $H^1$ defect; the Rosser/Borel obstruction is
@@ -10570,3 +10591,123 @@ Pass 93 should upgrade the finite-support $j_!$ Borel class to the honest
 all-prime $\mathrm{Spec}\,\mathbb Z$ site and identify the finiteness,
 continuity, or derived-completion hypotheses needed for
 $H^1(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)=\widehat{\mathbb Z}/\mathbb Z$.
+
+---
+
+### Pass 93 - 2026-06-21 JST
+
+Focus:
+Upgrade the finite-support Borel $j_!$ class to the honest all-prime
+$\mathrm{Spec}\,\mathbb Z$ site.
+
+Proposer:
+The all-prime upgrade is not obtained by pretending that
+$j:\{\eta\}\hookrightarrow\mathrm{Spec}\,\mathbb Z$ is an ordinary open
+immersion.  In the honest Zariski site every nonempty basic open
+$D(n)$ contains $\eta$ and all but finitely many closed primes.  Hence
+$\{\eta\}$ is not open.  The finite-support $j_!$ of Passes 63, 64, and 92 is
+ordinary on each finite subspace
+$$
+X_S=\{\eta\}\cup\{(p):p\in S\},
+$$
+but all-prime it must be interpreted as a pro-open / continuous / solid
+coefficient over the system of finite supports.
+
+The correct all-prime Borel coefficient is therefore
+$$
+\mathfrak B^{\mathrm{cont}}_{j!}
+=\mathbb Q^\times\ltimes
+R\!\varprojlim_{S\Subset\mathbb P} j_{S,!}\mathcal V_S,
+$$
+with transition maps given by restriction from a larger finite support to a
+smaller one.  These support-direction maps are surjective.  For the horizontal
+integer skeleton,
+$$
+\mathbb Z^T/\Delta\mathbb Z\to\mathbb Z^S/\Delta\mathbb Z
+\qquad(S\subseteq T)
+$$
+has kernel of rank $|T|-|S|$; modulo $N$ the kernel has size
+$N^{|T|-|S|}$.  Thus the support direction is Mittag-Leffler and contributes
+no additional $\varprojlim^1$.  The nonzero derived content remains the
+per-prime dilation $\varprojlim^1$ already built into $\mathcal V$.
+
+Consequently the all-prime identity should be written as continuous cohomology:
+$$
+H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
+:=\varprojlim_{S\Subset\mathbb P}H^1(X_S,j_{S,!}\mathcal V_S)
+\cong\left(\prod_p\mathbb Z_p\right)/\Delta\mathbb Z
+=\widehat{\mathbb Z}/\mathbb Z.
+$$
+The global Levi remains a single $\mathbb Q^\times$.  Replacing it by the
+product of local Levi factors would be the local Loeb sheafification from
+Pass 91, not the Rosser/Borel torsor.  Pushing out the diagonal row along
+$\mathbb Z\to\mathbb Q$ gives
+$$
+0\to\mathbb Q\to\mathbb A_f\to\widehat{\mathbb Z}/\mathbb Z\to0,
+$$
+and the hyperbolic Borel $\mathbb Q^\times\ltimes\epsilon$ acts functorially
+on the resulting shear representatives.
+
+Skeptic:
+The slogan "$H^1(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)$" is acceptable only
+after adding the word continuous, pro-open, or solid.  Ordinary Zariski sheaf
+cohomology with an open generic-point inclusion does not literally exist on
+the honest all-prime site, because that inclusion is not open.  Also, the
+support inverse limit and the per-prime dilation derived limit must not be
+merged.  The support direction is ML and harmless; the Rosser phantom comes
+from the dilation towers.  Finally, keeping a global Levi is a choice of the
+Borel torsor line, not the local sheafified Borel.
+
+Formalist:
+> **Theorem 93a (no ordinary all-prime generic $j_!$).** In
+> $\mathrm{Spec}\,\mathbb Z$, the singleton generic point is not open.  Hence
+> the all-prime $j_!$ Borel coefficient is not an ordinary open-immersion
+> extension by zero.
+>
+> **Theorem 93b (continuous/pro-open coefficient).** The all-prime Borel
+> coefficient is the pro-open/continuous object
+> $$\mathfrak B^{\mathrm{cont}}_{j!}
+> =\mathbb Q^\times\ltimes
+> R\!\varprojlim_{S\Subset\mathbb P} j_{S,!}\mathcal V_S.$$
+>
+> **Theorem 93c (support ML).** For $S\subseteq T$, the restriction maps on
+> finite-support $j_!$ cohomology are surjective.  In the horizontal skeleton
+> the kernel has rank $|T|-|S|$, and modulo $N$ it has size
+> $N^{|T|-|S|}$.  Therefore the support direction contributes no extra
+> $\varprojlim^1$.
+>
+> **Theorem 93d (all-prime Borel identity).** With the dilation coefficient,
+> $$H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
+> \cong\widehat{\mathbb Z}/\mathbb Z.$$
+> The finite-adele extension row and hyperbolic Borel shear orbit are the
+> pushout and representation-theoretic forms of this same continuous class.
+
+Machine-verified `code/scripts/check-pass93.py` ->
+`artifacts/reports/pass93-all-prime-borel-jshriek-upgrade-check.json`
+(overall PASS): the checker records that the generic point is open on finite
+subspaces but not on honest all-prime $\mathrm{Spec}\,\mathbb Z$; verifies
+surjective support projections and rank drops; checks finite mod-$N$ kernel
+sizes; separates harmless support-direction ML behavior from the per-prime
+dilation $\varprojlim^1$; and records the all-prime global-Levi Borel
+coefficient with unipotent limit $\widehat{\mathbb Z}/\mathbb Z$.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-93 entry;
+  State counter $93\to94$.
+- `records/logs/research-log.md`: Pass-93 entry.
+- `research/definitions.md`: added the all-prime continuous/pro-open Borel
+  $j_!$ coefficient.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-93 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  marked the all-prime upgrade resolved and retargeted the next pass to the
+  Verdier/solid dual and antipode-sign problem.
+- `code/scripts/check-pass93.py`,
+  `artifacts/reports/pass93-all-prime-borel-jshriek-upgrade-check.json`: new.
+- `artifacts/pdf/all-prime-borel-jshriek-upgrade-2026-06-21.md`: publication
+  summary source.
+
+Next step:
+Pass 94 should compute the Verdier/solid dual of the all-prime Borel $j_!$
+coefficient and decide whether the antipode sign gives a functional-equation
+shadow without creating a forbidden Weyl flip.

@@ -2031,3 +2031,51 @@ finite-adele extension line, while the hyperbolic Borel
 $\mathbb Q^\times\ltimes\epsilon$ reads the same datum as a shear orbit.  The
 Levi rescales representatives and the unipotent shear transports them, but no
 canonical zero section is selected.
+
+## All-prime continuous Borel $j_!$ coefficient (Pass 93)
+
+On the honest all-prime Zariski site $\mathrm{Spec}\,\mathbb Z$, the singleton
+generic point $\{\eta\}$ is **not** open: every nonempty basic open $D(n)$
+contains $\eta$ and all but finitely many closed primes.  Therefore the
+finite-support notation $j_!$ from $X_S=\{\eta\}\cup S$ cannot be interpreted
+all-prime as ordinary extension by zero along an open immersion.
+
+The all-prime Borel coefficient is instead the pro-open / continuous / solid
+object
+$$
+\mathfrak B^{\mathrm{cont}}_{j!}
+=\mathbb Q^\times\ltimes
+R\!\varprojlim_{S\Subset\mathbb P}j_{S,!}\mathcal V_S,
+$$
+where $S$ ranges over finite prime supports and $\mathcal V_S$ is the
+Pass-64 dilation coefficient.  The transition maps are restriction maps from
+larger supports to smaller supports.
+
+The support direction is Mittag-Leffler.  For $S\subseteq T$, the horizontal
+integer skeleton has a surjection
+$$
+\mathbb Z^T/\Delta\mathbb Z\to\mathbb Z^S/\Delta\mathbb Z
+$$
+whose kernel has rank $|T|-|S|$; modulo $N$ its kernel has size
+$N^{|T|-|S|}$.  Thus the support inverse system contributes no additional
+$\varprojlim^1$.  The nonzero derived content remains the per-prime dilation
+tower already built into $\mathcal V$.
+
+The all-prime identity is therefore a continuous-cohomology statement:
+$$
+H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
+:=\varprojlim_{S\Subset\mathbb P}H^1(X_S,j_{S,!}\mathcal V_S)
+\cong
+\left(\prod_p\mathbb Z_p\right)/\Delta\mathbb Z
+=\widehat{\mathbb Z}/\mathbb Z.
+$$
+The global Levi $\mathbb Q^\times$ is retained.  Replacing it by
+$\prod_p\mathbb Q^\times$ would be the local Loeb sheafification, not the
+Rosser/Borel torsor.  Pushing out
+$0\to\mathbb Z\to\widehat{\mathbb Z}\to\widehat{\mathbb Z}/\mathbb Z\to0$
+along $\mathbb Z\to\mathbb Q$ yields the finite-adele row
+$$
+0\to\mathbb Q\to\mathbb A_f\to\widehat{\mathbb Z}/\mathbb Z\to0,
+$$
+and the hyperbolic Borel $\mathbb Q^\times\ltimes\epsilon$ acts on the same
+continuous shear class.

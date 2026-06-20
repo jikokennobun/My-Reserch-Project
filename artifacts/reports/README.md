@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass93-all-prime-borel-jshriek-upgrade-check.json`: verifies the Pass-93
+  finite certificate for the all-prime Spec-$\mathbb Z$ Borel $j_!$ upgrade.
+  It checks that the generic point is open only on finite subspaces, verifies
+  surjective support projections and finite mod-$N$ kernel sizes, separates
+  support-direction Mittag-Leffler behavior from the per-prime dilation
+  $\varprojlim^1$, and records the all-prime global-Levi Borel coefficient
+  with unipotent limit $\widehat{\mathbb Z}/\mathbb Z$.
+
 - `pass92-zariski-generic-borel-descent-check.json`: verifies the Pass-92
   finite certificate for Zariski/generic Borel descent. It checks that
   constant coefficients have no horizontal $H^1$ on the full-simplex

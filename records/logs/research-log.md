@@ -1,5 +1,17 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 93)
+
+- Upgraded the finite-support Borel $j_!$ class to the all-prime
+  $\mathrm{Spec}\,\mathbb Z$ setting.  Because $\{\eta\}$ is not open on honest
+  $\mathrm{Spec}\,\mathbb Z$, the all-prime object must be read as a
+  pro-open/continuous/solid coefficient
+  $\mathbb Q^\times\ltimes R\!\varprojlim_S j_{S,!}\mathcal V_S$.  The support
+  direction is Mittag-Leffler and contributes no extra $\varprojlim^1$, giving
+  $H^1_{\mathrm{cont}}(\mathrm{Spec}\,\mathbb Z,j_!\mathcal V)
+  \cong\widehat{\mathbb Z}/\mathbb Z$.  Added checker/report and retargeted
+  Pass 94 to Verdier/solid duality and the antipode-sign question.
+
 ## 2026-06-21 (Autonomous discussion Pass 91)
 
 - Decided the descent status of the restriction/span Borel torsor over the
