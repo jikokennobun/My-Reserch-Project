@@ -37,6 +37,13 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass87-mapping-space-shear-initiality-check.json`: verifies the Pass-87
+  finite certificate for the derived mapping-space form of shear initiality. It
+  records the cofiber/fiber sequence with homotopy fiber
+  $\mathbf R\mathrm{Map}(\mathbb Q/\mathbb Z,D)$, checks contractibility for
+  uniquely divisible kernels, and exhibits the $N^r$ finite boundary choices
+  contributed by torsion-divisible summands.
+
 - `pass86-shear-pushout-universal-property-check.json`: verifies the Pass-86
   finite certificate for the shear-pushout universal property. It checks unique
   extension from $\mathbb Z$ to bounded denominator localizations into

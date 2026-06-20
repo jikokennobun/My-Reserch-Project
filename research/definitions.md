@@ -1789,3 +1789,44 @@ $$
 that restrict identically on $\mathbb Z$ but differ on fractions.  Thus the
 universal property is false for torsion-divisible kernels unless an additional
 $\mathbb Q$-linear structure map or shear decoration is specified.
+
+## Derived mapping-space form of shear initiality (Pass 87)
+
+Let
+$$
+C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,],
+\qquad
+C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,].
+$$
+For a shear-marked target model
+$$
+M=(0\to D\to E\to\epsilon\to0),
+$$
+the restriction map
+$$
+\operatorname{Map}(C_{\mathbb Q},M)\to
+\operatorname{Map}(C_{\mathbb Z},M)
+$$
+has homotopy fiber
+$$
+\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,D)
+$$
+over a fixed shear-marked map.  This follows from the cofiber sequence
+$$
+\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z
+$$
+on kernels.
+
+If $D$ is uniquely divisible, then this fiber is contractible:
+there is no nonzero homomorphism from the torsion group
+$\mathbb Q/\mathbb Z$ to torsion-free $D$, and higher Ext obstructions vanish
+because divisible groups are injective.  Thus the Pass-86 initiality of
+$C_{\mathbb Q}$ is a derived mapping-space contractibility statement.
+
+If $D$ has a torsion-divisible summand $T$, the extra fiber
+$$
+\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,T)
+$$
+is nontrivial.  Strict initiality is recovered by either imposing $T=0$ or
+adding a boundary decoration that fixes the component
+$\mathbb Q/\mathbb Z\to T$.

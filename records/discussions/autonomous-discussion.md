@@ -6,8 +6,26 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 87
-- Last pass note: Pass 86 (2026-06-21) isolated the universal property of the
+- Current pass: 88
+- Last pass note: Pass 87 (2026-06-21) upgraded the shear-pushout initiality
+  to a mapping-space statement.  For a shear-marked target model
+  $M=(0\to D\to E\to\epsilon\to0)$, precomposition along
+  $C_{\mathbb Z}\to C_{\mathbb Q}$ has homotopy fiber
+  $$\operatorname{hofib}\bigl(\operatorname{Map}(C_{\mathbb Q},M)\to
+  \operatorname{Map}(C_{\mathbb Z},M)\bigr)
+  \simeq \mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,D),$$
+  because the cofiber of $\mathbb Z\to\mathbb Q$ is $\mathbb Q/\mathbb Z$.
+  If $D$ is uniquely divisible, this fiber is contractible: there are no maps
+  from the torsion group $\mathbb Q/\mathbb Z$ to torsion-free $D$, and
+  divisibility makes $D$ injective so higher Ext obstructions vanish.  If a
+  torsion-divisible summand $T$ is present, the extra
+  $\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,T)$ is precisely the
+  non-unique component found in Pass 86.  Thus the strict derived initiality
+  theorem works for uniquely divisible kernels; with torsion-divisible kernels,
+  one must either exclude the summand or decorate it by choosing the boundary
+  $\mathbb Q/\mathbb Z\to T$ component.  Machine-verified `check-pass87.py` ->
+  `pass87-mapping-space-shear-initiality-check.json` PASS. Counter 87->88.
+- Earlier note: Pass 86 (2026-06-21) isolated the universal property of the
   finite-adele shear pushout.  In the category of shear-marked quotient models
   receiving
   $$C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,]$$
@@ -9871,3 +9889,91 @@ Pass 87 should upgrade the finite certificate to a mapping-space statement in
 $D(\mathrm{Solid})$: identify the homotopy fiber of shear-marked maps out of
 $C_{\mathbb Q}$, and decide how torsion-divisible summands must be excluded or
 decorated.
+
+---
+
+### Pass 87 - 2026-06-21 JST
+
+Focus:
+Promote the Pass-86 finite certificate to a mapping-space statement in
+$D(\mathrm{Solid})$ and decide how torsion-divisible summands enter.
+
+Proposer:
+For a shear-marked target model
+$$
+M=(0\to D\to E\to\epsilon\to0),
+$$
+the restriction map induced by $C_{\mathbb Z}\to C_{\mathbb Q}$ should be read
+as
+$$
+\operatorname{Map}(C_{\mathbb Q},M)\longrightarrow
+\operatorname{Map}(C_{\mathbb Z},M).
+$$
+The cofiber of the kernel map $\mathbb Z\to\mathbb Q$ is
+$\mathbb Q/\mathbb Z$, so the homotopy fiber over a fixed shear-marked map is
+$$
+\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,D).
+$$
+If $D$ is uniquely divisible, this derived mapping object vanishes:
+$\operatorname{Hom}(\mathbb Q/\mathbb Z,D)=0$ because $D$ is torsion-free, and
+higher $\operatorname{Ext}$ groups vanish because divisible groups are
+injective.  Therefore the fiber is contractible and the factorization through
+$C_{\mathbb Q}$ is unique in the derived mapping-space sense.
+
+Skeptic:
+The statement must remain fiberwise and shear-marked.  Without fixing the
+extension/shear class, one is computing all extensions, not factorizations of
+the given Borel shear.  And torsion-divisible kernels are exactly the failure
+mode: for $T=\mathbb Q/\mathbb Z$ the object
+$\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,T)$ has nontrivial
+$\pi_0$ (already visible through finite quotients $\mathbb Z/N$).  Excluding
+torsion-divisible summands gives strict initiality; allowing them requires
+decoration by a chosen boundary component $\mathbb Q/\mathbb Z\to T$.
+
+Formalist:
+> **Theorem 87a (mapping-space fiber).** For a shear-marked target with kernel
+> $D$, the homotopy fiber of
+> $\operatorname{Map}(C_{\mathbb Q},M)\to\operatorname{Map}(C_{\mathbb Z},M)$
+> over a fixed shear-marked map is
+> $\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,D)$.
+>
+> **Theorem 87b (contractibility for uniquely divisible kernels).** If $D$ is
+> uniquely divisible, then
+> $\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,D)\simeq0$; hence the
+> Pass-86 initiality holds as a derived mapping-space contractibility
+> statement.
+>
+> **Theorem 87c (torsion decoration rule).** If
+> $D=D_{\mathbb Q}\oplus T$ with $T$ torsion-divisible, the extra fiber is
+> $\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,T)$.  Strict initiality is
+> recovered either by imposing $T=0$ or by adding a boundary decoration fixing
+> this component.
+
+Machine-verified `code/scripts/check-pass87.py` ->
+`artifacts/reports/pass87-mapping-space-shear-initiality-check.json` (overall PASS):
+the checker records the cofiber/fiber sequence; finite torsion tests for
+$\mathbb Q$-vector kernels have only one torsion point and therefore a
+contractible fiber; torsion-divisible finite shadows have $N^r$ components at
+modulus $N$ for rank $r$, giving explicit non-contractible fibers; and the
+admissibility rule is to work with uniquely divisible kernels or decorate the
+torsion boundary.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-87 entry; State counter
+  $87\to88$.
+- `records/logs/research-log.md`: Pass-87 entry.
+- `research/definitions.md`: added the derived mapping-space formulation and
+  torsion decoration rule.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-87 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked the
+  mapping-space task resolved and retargeted the next pass to the derived
+  automorphism/stabilizer of the final shear extension.
+- `code/scripts/check-pass87.py`,
+  `artifacts/reports/pass87-mapping-space-shear-initiality-check.json`: new.
+- `artifacts/pdf/mapping-space-shear-initiality-2026-06-21.md`: publication summary source.
+
+Next step:
+Pass 88 should compute the derived automorphism/stabilizer of the final
+finite-adele shear extension and compare it with the solid Borel
+$\mathbb Q^\times\ltimes\epsilon$.

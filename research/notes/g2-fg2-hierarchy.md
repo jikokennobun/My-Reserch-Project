@@ -4557,3 +4557,64 @@ with identical restriction to $\mathbb Z$.
 **Limit of the pass.**  The next task is to promote this finite certificate to
 a mapping-space statement in $D(\mathrm{Solid})$, including an explicit rule
 for excluding or decorating torsion-divisible kernel summands.
+
+## Pass 87 - Mapping-space form of shear initiality
+
+Pass 87 turns the Pass-86 universal property into a derived mapping-space
+criterion.  For a shear-marked target row
+$$
+M=(0\to D\to E\to\epsilon\to0),
+$$
+restriction along
+$$
+C_{\mathbb Z}\to C_{\mathbb Q}
+$$
+gives
+$$
+\operatorname{Map}(C_{\mathbb Q},M)\to
+\operatorname{Map}(C_{\mathbb Z},M).
+$$
+Because the cofiber of $\mathbb Z\to\mathbb Q$ is $\mathbb Q/\mathbb Z$, the
+homotopy fiber over a fixed shear-marked map is
+$$
+\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,D).
+$$
+
+For uniquely divisible $D$, the fiber is contractible.  The group
+$\mathbb Q/\mathbb Z$ is torsion while $D$ is torsion-free, so
+$\operatorname{Hom}(\mathbb Q/\mathbb Z,D)=0$; and $D$ is divisible, hence
+injective, so higher Ext obstructions vanish.  This proves the Pass-86
+initiality in the stronger derived sense.
+
+For torsion-divisible summands $T$, the fiber is not contractible:
+$$
+\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,T)
+$$
+contributes genuine components.  Finite approximations already show this: a
+rank-$r$ torsion summand has $N^r$ boundary choices at modulus $N$.  Therefore
+the strict initial object lives in the uniquely divisible subcategory.  If
+torsion-divisible kernels are allowed, they must carry an explicit boundary
+decoration choosing the $\mathbb Q/\mathbb Z\to T$ component.
+
+> **Theorem 87a (mapping-space fiber).**
+> For a shear-marked target with kernel $D$, the fiber of
+> $\operatorname{Map}(C_{\mathbb Q},M)\to\operatorname{Map}(C_{\mathbb Z},M)$
+> is $\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,D)$.
+>
+> **Theorem 87b (contractible uniquely divisible fiber).**
+> If $D$ is uniquely divisible, this fiber is contractible.
+>
+> **Theorem 87c (torsion decoration).**
+> If $D$ contains torsion-divisible $T$, strict initiality fails by the extra
+> fiber $\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,T)$ unless this
+> component is excluded or decorated.
+
+**Machine verification** (`code/scripts/check-pass87.py` ->
+`artifacts/reports/pass87-mapping-space-shear-initiality-check.json`, PASS):
+the checker records the cofiber/fiber sequence, verifies contractible finite
+torsion tests for $\mathbb Q$-vector kernels, and shows that torsion-divisible
+finite shadows have $N^r$ components at modulus $N$.
+
+**Limit of the pass.**  The next task is to compute the derived
+automorphism/stabilizer of the final finite-adele shear extension and compare
+it with the solid Borel action $\mathbb Q^\times\ltimes\epsilon$.

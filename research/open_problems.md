@@ -902,11 +902,24 @@
   $\mathbb Q/\mathbb Z$ gives distinct maps $q\mapsto kq\bmod\mathbb Z$ that restrict identically on
   $\mathbb Z$.  Machine-verified
   `artifacts/reports/pass86-shear-pushout-universal-property-check.json` (PASS).
-- **[New (Pass 86)]** **Derived mapping-space form of the shear-pushout initiality.** Upgrade the
+- **[Resolved (Pass 87)]** **Derived mapping-space form of the shear-pushout initiality.** Upgrade the
   Pass-86 finite certificate to a statement in $D(\mathrm{Solid})$: identify the homotopy fiber of
   shear-marked maps out of $C_{\mathbb Q}$ over maps out of $C_{\mathbb Z}$, prove contractibility
   for uniquely divisible kernels, and decide whether torsion-divisible summands must be excluded,
   quotiented, or decorated by extra shear data.
+  **Resolution:** the homotopy fiber over a fixed shear-marked map is
+  $\mathbf R\operatorname{Map}(\mathbb Q/\mathbb Z,D)$, where $D$ is the target kernel.  This fiber is
+  contractible for uniquely divisible kernels because
+  $\operatorname{Hom}(\mathbb Q/\mathbb Z,D)=0$ and divisible targets are injective.  Torsion-divisible
+  summands contribute nontrivial components and therefore must be excluded for strict initiality or
+  decorated by a chosen $\mathbb Q/\mathbb Z\to T$ boundary component.  Machine-verified
+  `artifacts/reports/pass87-mapping-space-shear-initiality-check.json` (PASS).
+- **[New (Pass 87)]** **Derived stabilizer of the finite-adele shear extension.** Compute the
+  automorphism/stabilizer of
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$ as a shear-marked object under
+  $C_{\mathbb Z}$, compare its degree-$0$ part with the solid Borel
+  $\mathbb Q^\times\ltimes\epsilon$, and determine whether any derived
+  automorphisms survive after the torsion-boundary decoration rule of Pass 87.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

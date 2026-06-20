@@ -1,5 +1,19 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 87)
+
+- Upgraded the shear-pushout initiality to a derived mapping-space statement.
+  For a shear-marked target with kernel $D$, the homotopy fiber of
+  $\operatorname{Map}(C_{\mathbb Q},M)\to\operatorname{Map}(C_{\mathbb Z},M)$
+  is $\mathbf R\operatorname{Map}(\mathbb Q/\mathbb Z,D)$.  This fiber is
+  contractible for uniquely divisible kernels, while torsion-divisible summands
+  contribute the non-unique boundary component already seen in Pass 86.  Thus
+  strict initiality requires uniquely divisible kernels; torsion-divisible
+  kernels must be excluded or decorated.  Verified with
+  `code/scripts/check-pass87.py` ->
+  `artifacts/reports/pass87-mapping-space-shear-initiality-check.json` (PASS)
+  and added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-21 (Autonomous discussion Pass 86)
 
 - Stated the universal property of the finite-adele shear pushout:
