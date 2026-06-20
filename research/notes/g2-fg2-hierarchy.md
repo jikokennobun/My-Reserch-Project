@@ -4490,3 +4490,70 @@ the finite-adele shear class.
 $C_{\mathbb Q}$ as the initial divisible-kernel quotient model receiving
 $C_{\mathbb Z}$ and preserving the unit/shear class while killing finite
 Hausdorff cokernels.
+
+## Pass 86 - Universal property of the shear pushout
+
+Pass 86 refines "divisible-kernel quotient model" to the exact hypothesis under
+which the universal property is true.  Define $\mathcal P_{\mathbb Q}(\epsilon)$
+to consist of shear-marked exact rows
+$$
+0\to D\to E\to\epsilon\to0
+$$
+receiving
+$$
+C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,],
+$$
+where $D$ is uniquely divisible, the row is the pushout of the unit extension
+along $\mathbb Z\to D$, and finite/Hausdorff shadows of the quotient are
+acyclic.  Since a uniquely divisible group is a $\mathbb Q$-vector object, the
+map $\mathbb Z\to D$ extends uniquely to $\mathbb Q\to D$.  Therefore the
+finite-adele row
+$$
+C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,]
+$$
+is initial under $C_{\mathbb Z}$ in this category.
+
+This is the precise categorical replacement for the missing Weyl flip:
+instead of constructing a degree-$0$ map $\epsilon\to\mathbb Q$, one localizes
+the kernel $\mathbb Z$ to $\mathbb Q$ inside the extension category and keeps
+the shear/Yoneda class
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+Finite probes still see no ordinary cokernel because the integer residues
+already surject at every finite modulus.
+
+The pass also records a necessary caveat.  If "divisible" is read literally,
+the result is false.  The divisible torsion group $\mathbb Q/\mathbb Z$ admits
+distinct maps
+$$
+q\mapsto kq\bmod\mathbb Z
+$$
+from $\mathbb Q$ that restrict to the same map on $\mathbb Z$ but differ on
+fractions.  Thus torsion-divisible summands must be excluded, or else equipped
+with additional shear/$\mathbb Q$-linear decoration.
+
+> **Theorem 86a (initial shear pushout).**
+> In $\mathcal P_{\mathbb Q}(\epsilon)$, the complex
+> $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ is initial under
+> $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$.
+>
+> **Theorem 86b (finite-shadow stability).**
+> The pushout $C_{\mathbb Z}\to C_{\mathbb Q}$ preserves acyclicity of ordinary
+> finite/Hausdorff shadows.
+>
+> **Theorem 86c (torsion-divisible caveat).**
+> The same initiality statement fails for arbitrary divisible kernels; the
+> torsion-divisible example $\mathbb Q/\mathbb Z$ supplies multiple extensions
+> of the same map out of $\mathbb Z$.
+
+**Machine verification** (`code/scripts/check-pass86.py` ->
+`artifacts/reports/pass86-shear-pushout-universal-property-check.json`, PASS):
+bounded denominator localizations $\mathbb Z[1/L]$ have unique extension into
+checked $\mathbb Q$-vector targets; finite residue shadows remain killed; and
+the maps $q\mapsto kq\bmod\mathbb Z$ give distinct torsion-divisible extensions
+with identical restriction to $\mathbb Z$.
+
+**Limit of the pass.**  The next task is to promote this finite certificate to
+a mapping-space statement in $D(\mathrm{Solid})$, including an explicit rule
+for excluding or decorating torsion-divisible kernel summands.

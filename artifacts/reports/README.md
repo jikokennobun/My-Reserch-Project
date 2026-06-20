@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass86-shear-pushout-universal-property-check.json`: verifies the Pass-86
+  finite certificate for the shear-pushout universal property. It checks unique
+  extension from $\mathbb Z$ to bounded denominator localizations into
+  $\mathbb Q$-vector kernels, confirms finite/Hausdorff shadows remain killed,
+  verifies unique factorization through $C_{\mathbb Q}$ for checked
+  finite-dimensional targets, and records the $\mathbb Q/\mathbb Z$ torsion
+  caveat showing that arbitrary divisible kernels do not give uniqueness.
+
 - `pass85-two-term-boundary-complex-check.json`: verifies the Pass-85
   two-term complex comparison. It checks that the finite/Hausdorff shadows of
   $[\mathbb Z\to\widehat{\mathbb Z}]$, $[\mathbb R\to\Sigma]$, and

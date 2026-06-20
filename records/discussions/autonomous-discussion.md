@@ -6,8 +6,27 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 86
-- Last pass note: Pass 85 (2026-06-20) built the promised two-term complex
+- Current pass: 87
+- Last pass note: Pass 86 (2026-06-21) isolated the universal property of the
+  finite-adele shear pushout.  In the category of shear-marked quotient models
+  receiving
+  $$C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,]$$
+  and whose kernel is uniquely divisible (equivalently a $\mathbb Q$-vector
+  object), the map $\mathbb Z\to D$ extends uniquely to $\mathbb Q\to D$.
+  Hence the pushout
+  $$C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,]
+  =C_{\mathbb Z}\otimes_{\mathbb Z}\mathbb Q$$
+  is initial: every unit/shear-preserving model factors uniquely through
+  $C_{\mathbb Q}$, and ordinary finite/Hausdorff cokernels remain zero because
+  integer residues already cover every finite quotient.  The naive statement
+  with merely divisible kernels is false: torsion-divisible kernels such as
+  $\mathbb Q/\mathbb Z$ admit distinct maps $q\mapsto kq\bmod\mathbb Z$ from
+  $\mathbb Q$ that restrict identically on $\mathbb Z$.  Thus the categorical
+  replacement for the missing Weyl flip is the uniquely-divisible
+  localization/pushout property in the extension category, not a degree-$0$
+  map $\epsilon\to\mathbb Q$.  Machine-verified `check-pass86.py` ->
+  `pass86-shear-pushout-universal-property-check.json` PASS. Counter 86->87.
+- Earlier note: Pass 85 (2026-06-20) built the promised two-term complex
   comparison for the finite-prime boundary.  With cohomological convention
   degree $0\to1$, the three rows
   $$C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,],\quad
@@ -9760,3 +9779,95 @@ pushout: among quotient models of $\epsilon$ with divisible kernel, is
 $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ initial for maps out of
 $C_{\mathbb Z}$ that preserve the unit class and kill Hausdorff finite
 cokernels?
+
+---
+
+### Pass 86 - 2026-06-21 JST
+
+Focus:
+State the correct universal property of the finite-adele shear pushout and
+find the necessary caveat in the word "divisible".
+
+Proposer:
+Let $\mathcal P_{\mathbb Q}(\epsilon)$ be the category whose objects are
+shear-marked quotient models
+$$
+0\to D\to E\to\epsilon\to0
+$$
+equipped with a map from
+$C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,]$, such that:
+(i) $D$ is uniquely divisible, i.e. a $\mathbb Q$-vector object;
+(ii) the extension is the pushout of
+$0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ along the chosen
+$\mathbb Z\to D$; and
+(iii) finite/Hausdorff shadows of the quotient vanish.  Then the source map
+$\mathbb Z\to D$ extends uniquely to a $\mathbb Q$-linear map
+$\mathbb Q\to D$.  Therefore every such object factors uniquely through
+$$
+C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,]
+=C_{\mathbb Z}\otimes_{\mathbb Z}\mathbb Q.
+$$
+This makes $C_{\mathbb Q}$ the initial shear-preserving quotient model after
+passing from the integral kernel to the uniquely divisible kernel.
+
+Skeptic:
+Do not state the result for arbitrary divisible kernels.  The divisible torsion
+group $\mathbb Q/\mathbb Z$ gives immediate non-uniqueness: for each integer
+$k$, the homomorphism
+$$
+\mathbb Q\to\mathbb Q/\mathbb Z,\qquad q\mapsto kq\bmod\mathbb Z
+$$
+restricts to the zero map on $\mathbb Z$, but these maps differ on fractions
+such as $1/2,1/3,1/5$.  Hence "divisible" must mean uniquely divisible, or the
+object must carry a specified $\mathbb Q$-linear kernel map.  Also, this
+initiality is an extension-category statement; it does not create a forbidden
+degree-$0$ Weyl flip $\epsilon\to\mathbb Q$.
+
+Formalist:
+> **Theorem 86a (initial shear pushout).** In the category
+> $\mathcal P_{\mathbb Q}(\epsilon)$ of shear-marked quotient models with
+> uniquely divisible kernel, the finite-adele complex
+> $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ is initial under
+> $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$.  Equivalently, fixing the
+> image of $1\in\mathbb Z$ in a $\mathbb Q$-vector kernel forces a unique map
+> $\mathbb Q\to D$, and pushout gives the unique extension morphism.
+>
+> **Theorem 86b (finite-shadow stability).** This localization does not
+> introduce ordinary finite cokernels.  At each finite modulus, the integer
+> residues already surject onto the finite quotient, so the Hausdorff finite
+> shadow of the pushed-out quotient remains acyclic.
+>
+> **Theorem 86c (torsion-divisible obstruction).** If torsion-divisible kernels
+> are allowed without additional decoration, the initiality statement is false:
+> $\mathbb Q/\mathbb Z$ supplies multiple extensions of the same map
+> $\mathbb Z\to\mathbb Q/\mathbb Z$.
+
+Machine-verified `code/scripts/check-pass86.py` ->
+`artifacts/reports/pass86-shear-pushout-universal-property-check.json` (overall PASS):
+bounded denominator stages $\mathbb Z[1/L]$ have unique extension into checked
+$\mathbb Q$-vector kernels once the image of $1$ is fixed; integer residues
+kill every checked finite/Hausdorff cokernel; checked finite-dimensional
+$\mathbb Q$-vector targets have unique factorization through $C_{\mathbb Q}$;
+and the torsion-divisible maps $q\mapsto kq\bmod\mathbb Z$ give five distinct
+extensions with identical restriction to $\mathbb Z$.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-86 entry; State counter
+  $86\to87$.
+- `records/logs/research-log.md`: Pass-86 entry.
+- `research/definitions.md`: added the shear-pushout universal property and
+  the torsion-divisible caveat.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-86 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked the
+  universal-property task resolved in its uniquely divisible form and retargeted
+  the next pass to the full mapping-space statement.
+- `code/scripts/check-pass86.py`,
+  `artifacts/reports/pass86-shear-pushout-universal-property-check.json`: new.
+- `artifacts/pdf/shear-pushout-universal-property-2026-06-21.md`: publication summary source.
+
+Next step:
+Pass 87 should upgrade the finite certificate to a mapping-space statement in
+$D(\mathrm{Solid})$: identify the homotopy fiber of shear-marked maps out of
+$C_{\mathbb Q}$, and decide how torsion-divisible summands must be excluded or
+decorated.

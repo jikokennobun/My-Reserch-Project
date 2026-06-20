@@ -42,7 +42,7 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 85 -> 86: universal property of the finite-adele shear pushout)**
+- **(Pass 86 -> 87: mapping-space form of the finite-adele shear pushout)**
   Passes 80-82 settled the automorphic side of the solid phantom line.  Pass 80
   showed $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, not
   $\mathrm{SL}_2$; Pass 81 showed the principal series is maximally
@@ -67,15 +67,22 @@
   $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$: all have quotient $\epsilon$ and
   acyclic Hausdorff finite shadows, but only
   $C_{\mathbb Z}\to C_{\mathbb Q}$ preserves the finite-adele Borel shear
-  class.
+  class.  Pass 86 proved the intended universal property with the necessary
+  correction: the kernel must be uniquely divisible / $\mathbb Q$-linear (or
+  carry a specified $\mathbb Q$-linear kernel map).  Under that hypothesis,
+  $\mathbb Z\to D$ extends uniquely to $\mathbb Q\to D$, so
+  $C_{\mathbb Q}$ is initial among shear-marked pushout models receiving
+  $C_{\mathbb Z}$.  The naive version for arbitrary divisible kernels is false,
+  witnessed by distinct maps $\mathbb Q\to\mathbb Q/\mathbb Z$ that agree on
+  $\mathbb Z$.
   Open:
-  (i) characterize $C_{\mathbb Q}$ as the initial divisible-kernel quotient
-  model receiving $C_{\mathbb Z}$ and preserving the unit class
-  $1\in\widehat{\mathbb Z}^{\times}$;
-  (ii) prove whether every shear-preserving quotient model factors uniquely
-  through $C_{\mathbb Q}$ in $D(\mathrm{Solid})$;
-  (iii) decide whether this universal property is the categorical replacement
-  for the missing Weyl flip.
+  (i) promote the Pass-86 finite certificate to a mapping-space statement in
+  $D(\mathrm{Solid})$;
+  (ii) identify the homotopy fiber of shear-marked maps out of
+  $C_{\mathbb Q}$ over maps out of $C_{\mathbb Z}$ and prove contractibility
+  for uniquely divisible kernels;
+  (iii) decide whether torsion-divisible summands should be excluded, quotiented,
+  or decorated by extra shear data.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

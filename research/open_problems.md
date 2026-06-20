@@ -888,12 +888,25 @@
   preserving the unit/shear class.  The archimedean row $[\mathbb R\to\Sigma]$ preserves the quotient
   but not the finite-adele Borel shear extension.  Machine-verified
   `artifacts/reports/pass85-two-term-boundary-complex-check.json` (PASS).
-- **[New (Pass 85)]** **Universal property of the finite-adele shear pushout.** Characterize
+- **[Resolved (Pass 86)]** **Universal property of the finite-adele shear pushout.** Characterize
   $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ as the initial divisible-kernel quotient model receiving
   $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$ that preserves the unit class
   $1\in\widehat{\mathbb Z}^{\times}$ and kills ordinary finite/Hausdorff cokernels.  Decide whether
   every shear-preserving quotient model factors uniquely through $C_{\mathbb Q}$ in $D(\mathrm{Solid})$,
   and whether this universal property is the categorical replacement for the missing Weyl flip.
+  **Resolution:** the statement is true after replacing "divisible" by "uniquely divisible" /
+  $\mathbb Q$-linear kernel, or after specifying a $\mathbb Q$-linear kernel map.  Then
+  $\mathbb Z\to D$ extends uniquely to $\mathbb Q\to D$, so
+  $C_{\mathbb Q}$ is initial among shear-marked pushout models under $C_{\mathbb Z}$, while finite
+  residue shadows remain acyclic.  The naive version for arbitrary divisible kernels is false:
+  $\mathbb Q/\mathbb Z$ gives distinct maps $q\mapsto kq\bmod\mathbb Z$ that restrict identically on
+  $\mathbb Z$.  Machine-verified
+  `artifacts/reports/pass86-shear-pushout-universal-property-check.json` (PASS).
+- **[New (Pass 86)]** **Derived mapping-space form of the shear-pushout initiality.** Upgrade the
+  Pass-86 finite certificate to a statement in $D(\mathrm{Solid})$: identify the homotopy fiber of
+  shear-marked maps out of $C_{\mathbb Q}$ over maps out of $C_{\mathbb Z}$, prove contractibility
+  for uniquely divisible kernels, and decide whether torsion-divisible summands must be excluded,
+  quotiented, or decorated by extra shear data.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

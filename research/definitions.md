@@ -1750,3 +1750,42 @@ $$
 The archimedean complex $C_{\mathbb R}$ has the same quotient $\epsilon$ but
 does not preserve this finite-adele kernel/Yoneda class; it is the compact
 solenoid repair, not the Borel shear replacement.
+
+## Shear-pushout universal property (Pass 86)
+
+Let $\mathcal P_{\mathbb Q}(\epsilon)$ denote the category of
+shear-marked quotient models
+$$
+0\to D\to E\to\epsilon\to0
+$$
+equipped with a map from
+$C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,]$, where:
+
+1. $D$ is uniquely divisible, equivalently a $\mathbb Q$-vector object;
+2. the extension is the pushout of
+   $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ along the chosen
+   $\mathbb Z\to D$;
+3. ordinary finite/Hausdorff quotient shadows are acyclic.
+
+Then
+$$
+C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,]
+$$
+is initial in $\mathcal P_{\mathbb Q}(\epsilon)$ under $C_{\mathbb Z}$.  The
+reason is the localization property of $\mathbb Q$: a map
+$\mathbb Z\to D$ into a uniquely divisible kernel has a unique extension
+$\mathbb Q\to D$.  Therefore every shear-preserving pushout model factors
+uniquely through $C_{\mathbb Q}$.
+
+This is the categorical replacement for the missing finite-prime Weyl flip:
+one localizes the kernel inside the extension category, rather than producing
+a degree-$0$ morphism $\epsilon\to\mathbb Q$.
+
+The hypothesis "uniquely divisible" is essential.  If arbitrary divisible
+kernels are allowed, $\mathbb Q/\mathbb Z$ gives multiple maps
+$$
+\mathbb Q\to\mathbb Q/\mathbb Z,\qquad q\mapsto kq\bmod\mathbb Z
+$$
+that restrict identically on $\mathbb Z$ but differ on fractions.  Thus the
+universal property is false for torsion-divisible kernels unless an additional
+$\mathbb Q$-linear structure map or shear decoration is specified.

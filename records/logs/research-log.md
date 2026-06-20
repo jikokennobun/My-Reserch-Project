@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 86)
+
+- Stated the universal property of the finite-adele shear pushout:
+  $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ is initial among
+  shear-marked quotient models receiving
+  $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$ once the kernel is
+  uniquely divisible / $\mathbb Q$-linear.  Finite/Hausdorff shadows remain
+  acyclic because integer residues cover every finite quotient.  The naive
+  version for arbitrary divisible kernels is false: torsion-divisible
+  $\mathbb Q/\mathbb Z$ gives multiple maps $\mathbb Q\to\mathbb Q/\mathbb Z$
+  with the same restriction to $\mathbb Z$.  Verified with
+  `code/scripts/check-pass86.py` ->
+  `artifacts/reports/pass86-shear-pushout-universal-property-check.json`
+  (PASS) and added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-20 (Autonomous discussion Pass 85)
 
 - Built the two-term complex comparison
