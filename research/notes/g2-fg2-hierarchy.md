@@ -4779,3 +4779,82 @@ explicitly.
 functoriality of this Borel-torsor theorem precise: compare the $m$-adic
 variants, radical-compatible maps, and the all-prime limit in one natural
 diagram.
+
+## Pass 90 - Conductor-functorial Borel torsors
+
+Pass 90 resolves the Pass-89 naturality task by correcting the direction of
+support functoriality.  The quotient
+$$
+P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z
+$$
+is canonical for a finite squarefree support $S$, but maps between these
+quotients are not symmetric in the support relation.
+
+If $S\subseteq T$, coordinate projection gives
+$$
+\rho_{T,S}:P(T)\to P(S).
+$$
+This is well-defined because a diagonal integer in the larger product projects
+to the same diagonal integer in the smaller product.  Hence the canonical
+support functor is contravariant by restriction.
+
+The tempting opposite map is not canonical.  Zero-insertion sends
+$$
+(x_p)_{p\in S}\mapsto (y_p)_{p\in T},\qquad
+y_p=x_p\ (p\in S),\quad y_p=0\ (p\in T\setminus S).
+$$
+If one changes the source representative by the diagonal integer $1$, the
+inserted vector changes by $(1,\ldots,1,0,\ldots,0)$, not by a diagonal vector
+in the target.  Thus zero-insertion does not descend to
+$P(S)\to P(T)$ whenever new primes are added.  Any enlargement of support must
+be read as a span, a chosen section, or a finite-conductor lift.
+
+For rad-incomparable supports the comparison is similarly span-shaped.  The
+shared ghost is controlled by the meet:
+$$
+P(S)\to P(S\cap T)\leftarrow P(T),
+$$
+while gluing is tested in the join arena $P(S\cup T)$ by restricting back to
+$S$ and $T$.  This keeps the Pass-60 radical lattice but removes the misleading
+impression that the quotient torsors carry canonical coordinate insertions.
+
+The finite Borel side remains straightforward.  At conductor $N$ the shadow is
+$$
+B_N=(\mathbb Z/N)^\times\ltimes\mathbb Z/N.
+$$
+For $N\mid N'$, reduction gives
+$$
+B_{N'}\to B_N,
+$$
+preserving the unit class $1\bmod N$ and the singleton strict marked
+stabilizer.  Therefore the Pass-89 Borel-torsor theorem is functorial on
+finite conductor shadows and on support restrictions, with support
+enlargement handled by spans.
+
+> **Theorem 90a (support restriction).**
+> For $S\subseteq T$, projection induces a well-defined restriction
+> $P(T)\to P(S)$ on diagonal quotient torsors.
+>
+> **Theorem 90b (no canonical zero insertion).**
+> If $S\ne\varnothing$ and $T\setminus S\ne\varnothing$, zero-insertion does
+> not descend to a homomorphism $P(S)\to P(T)$.
+>
+> **Theorem 90c (finite-conductor Borel naturality).**
+> The finite affine Borel shadows $B_N$ reduce functorially along
+> conductor divisibility, preserving the unit class and strict marked
+> stabilizer.
+>
+> **Theorem 90d (meet/join comparison).**
+> Rad-incomparable supports are compared by the meet span for shared ghost
+> data and by the join arena for gluing.
+
+**Machine verification** (`code/scripts/check-pass90.py` ->
+`artifacts/reports/pass90-conductor-functorial-borel-torsors-check.json`,
+PASS): the checker verifies radical support invariance, checks that
+projection descends through the diagonal quotient while zero-insertion fails
+when a new prime is added, records meet/join comparison rows, and verifies
+finite Borel reductions along conductor divisibility.
+
+**Limit of the pass.**  The next task is to decide the correct descent
+language for this object: sheaf, stack, prestack, or descent-obstruction
+object over the finite prime-cover site.

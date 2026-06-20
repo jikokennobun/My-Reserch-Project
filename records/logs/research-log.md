@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 90)
+
+- Made the Pass-89 Borel-torsor theorem functorial over conductor/radical
+  supports, with a direction correction.  For $S\subseteq T$, coordinate
+  projection descends to a canonical restriction
+  $P(T)\to P(S)$ on
+  $P(S)=(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z$, while zero-insertion
+  $P(S)\to P(T)$ does not descend when new primes are added.  Thus support
+  enlargement is a span, pullback, or finite-conductor choice rather than a
+  canonical quotient map.  Finite Borel shadows reduce along conductor
+  divisibility and preserve the unit class and strict marked stabilizer.
+  Verified with `code/scripts/check-pass90.py` ->
+  `artifacts/reports/pass90-conductor-functorial-borel-torsors-check.json`
+  (PASS) and added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-21 (Autonomous discussion Pass 89)
 
 - Consolidated the Rosser phantom as a Borel-torsor / extension-class theorem.

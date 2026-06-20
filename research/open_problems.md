@@ -943,13 +943,30 @@
   preserve the cohomology/torsor class, finite conductor restrictions, radical
   support, and finite-adele extension line.  Machine-verified
   `artifacts/reports/pass89-borel-torsor-rosser-phantom-check.json` (PASS).
-- **[New (Pass 89)]** **Conductor-functorial Borel torsors.** Make the
+- **[Resolved (Pass 90)]** **Conductor-functorial Borel torsors.** Make the
   Pass-89 theorem natural across $m$-adic and all-prime variants.  Specify the
   category of radical-compatible conductor maps, decide when a map
   $\widehat{\mathbb Z}_m/\mathbb Z\to\widehat{\mathbb Z}_{m'}/\mathbb Z$ exists
   or should be replaced by a span/pullback, and prove that the Cech torsor,
   finite-adele extension line, and hyperbolic Borel shear orbit commute in one
   diagram.
+  **Resolution:** for squarefree supports $S\subseteq T$, coordinate projection
+  descends to a canonical restriction
+  $P(T)\to P(S)$ on $P(S)=(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z$, while
+  zero-insertion $P(S)\to P(T)$ does not descend when new primes are added.
+  Thus the Borel torsor is functorial contravariantly by restriction; support
+  enlargement is a span, pullback, or finite-conductor choice.  Finite Borel
+  shadows reduce along conductor divisibility and preserve the unit class and
+  strict marked stabilizer.  Machine-verified
+  `artifacts/reports/pass90-conductor-functorial-borel-torsors-check.json`
+  (PASS).
+- **[New (Pass 90)]** **Descent/stackification of the Borel torsor.** Decide
+  whether the restriction/span Borel-torsor package over the finite prime-cover
+  site is a sheaf, a stack of torsors, or an obstruction object like the
+  Pass-61 phantom presheaf.  Compute the descent defect for the cover by
+  singleton primes, identify whether the Borel shear action kills or preserves
+  the $\mathbb Z^S/\Delta\mathbb Z$ diagonal defect, and state the exact
+  stackification or obstruction theorem.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -42,34 +42,25 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 89 -> 90: conductor-functorial Borel torsors)**
-  Pass 89 resolved the Borel-torsor theorem for the Rosser phantom.  The
-  Guaspari-Solovay witness-comparison Cech class, the
-  $\varprojlim^1(\mathbb Z,\times m)$ or
-  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ phantom, the finite-adele extension
-  line
-  $$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0,$$
-  and the hyperbolic Borel shear orbit for
-  $\mathbb Q^\times\ltimes\epsilon$ are four presentations of the same
-  torsor/extension class in the APS/Rosser model.  The bridge sends a
-  witness-comparison Cech cocycle to its class in
-  $\operatorname{coker}\delta$, identifies this class with
-  $\widehat{\mathbb Z}_m/\mathbb Z$ or $\epsilon$, and pushes out
-  $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ along
-  $\mathbb Z\to\mathbb Q$.  Changing witness choices changes representatives,
-  sections, and finite Loeb lifts by coboundaries but preserves the
-  cohomology/torsor class, finite conductor restrictions, radical support, and
-  finite-adele extension line.
+- **(Pass 90 -> 91: descent/stackification of the Borel torsor)**
+  Pass 90 resolved the conductor/radical functoriality of the Pass-89
+  Borel-torsor theorem with a direction correction.  For finite supports
+  $S\subseteq T$, projection descends to a canonical restriction
+  $$P(T)\to P(S),\qquad
+  P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z,$$
+  while zero-insertion $P(S)\to P(T)$ does not descend when new primes are
+  added.  Thus support functoriality is contravariant by restriction;
+  enlargement is a span, pullback, or finite-conductor choice.  Finite Borel
+  shadows $(\mathbb Z/N)^\times\ltimes\mathbb Z/N$ reduce along conductor
+  divisibility, preserving the unit class and strict marked stabilizer.
   Open:
-  (i) specify the category of conductor/radical maps on which this torsor
-  bridge is natural;
-  (ii) compare $m$-adic variants
-  $\widehat{\mathbb Z}_m/\mathbb Z$ under radical-compatible maps and decide
-  when maps should instead be spans, pullbacks, or restrictions to finite
-  conductor shadows;
-  (iii) prove one commutative diagram linking Cech torsors, finite-adele
-  extension lines, and hyperbolic Borel shear orbits across the $m$-adic and
-  all-prime cases.
+  (i) decide whether the restriction/span Borel-torsor package is a sheaf, a
+  stack of torsors, a prestack, or an obstruction object over the finite
+  prime-cover site;
+  (ii) compute the descent defect for the singleton-prime cover and compare it
+  with the Pass-61 defect $\mathbb Z^S/\Delta\mathbb Z$;
+  (iii) determine whether the hyperbolic Borel shear action kills, transports,
+  or preserves this diagonal descent defect.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

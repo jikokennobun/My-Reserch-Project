@@ -1910,3 +1910,46 @@ Non-invariant data are the concrete representative, the witness enumeration,
 and the chosen finite Loeb lift.  Thus the slogan "finitely Loeb, limanly
 Rosser" can be sharpened: finite stages split after choosing a lift, while
 the inverse limit remembers the unsplittable Borel-torsor class.
+
+## Conductor-functorial Borel torsors (Pass 90)
+
+For a finite prime support $S$, set
+$$
+P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z.
+$$
+The canonical functoriality of $P(S)$ is by **restriction**.  If
+$S\subseteq T$, coordinate projection induces
+$$
+\rho_{T,S}:P(T)\to P(S),
+$$
+because the diagonal copy of $\mathbb Z$ in $\prod_{p\in T}\mathbb Z_p$
+projects to the diagonal copy of $\mathbb Z$ in
+$\prod_{p\in S}\mathbb Z_p$.
+
+The opposite direction has no canonical map on the quotient.  Zero-insertion
+$$
+\prod_{p\in S}\mathbb Z_p\to\prod_{p\in T}\mathbb Z_p
+$$
+does not descend to $P(S)\to P(T)$ when $T\setminus S\ne\varnothing$ and
+$S\ne\varnothing$: the diagonal vector $(1,\ldots,1)$ maps to
+$(1,\ldots,1,0,\ldots,0)$, which is not diagonal in the target.  Therefore
+support enlargement is represented by a span, a pullback/fiber-product
+condition, or a chosen finite-conductor section, not by a canonical quotient
+homomorphism.
+
+For rad-incomparable supports $S,T$, the canonical comparison is:
+
+- a meet span
+  $$P(S)\to P(S\cap T)\leftarrow P(T)$$
+  for the shared ghost;
+- a join arena $P(S\cup T)$ for gluing, with descent data checked by
+  restrictions back to $S$ and $T$.
+
+At finite conductor, the Borel shadows
+$$
+B_N=(\mathbb Z/N)^\times\ltimes\mathbb Z/N
+$$
+are functorial by reduction along $N\mid N'$.  The reduction
+$B_{N'}\to B_N$ preserves the unit class $1\bmod N$ and the singleton strict
+marked stabilizer.  Thus the Pass-89 Borel-torsor theorem is natural as a
+restriction/span object over the finite prime-support lattice.

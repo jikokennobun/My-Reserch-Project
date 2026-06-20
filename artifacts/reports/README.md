@@ -37,6 +37,13 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass90-conductor-functorial-borel-torsors-check.json`: verifies the
+  Pass-90 finite certificate for conductor-functorial Borel torsors. It checks
+  radical support invariance, confirms that coordinate projection descends on
+  diagonal quotient torsors while zero-insertion fails when new primes are
+  added, records meet/join comparisons for rad-incomparable supports, and
+  verifies finite affine Borel reductions along conductor divisibility.
+
 - `pass89-borel-torsor-rosser-phantom-check.json`: verifies the Pass-89
   finite certificate for the Rosser Borel-torsor theorem. It checks finite
   Cech windows where changing a witness representative by a coboundary

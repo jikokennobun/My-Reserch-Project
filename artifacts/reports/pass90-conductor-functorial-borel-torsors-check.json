@@ -1,0 +1,436 @@
+{
+  "pass": 90,
+  "title": "Conductor-functorial Borel torsors",
+  "A_radical_supports": {
+    "statement": "The m-adic phantom and Borel torsor depend on the squarefree radical support.",
+    "rows": [
+      {
+        "m": 1,
+        "radical": [],
+        "canonical_support_label": "1"
+      },
+      {
+        "m": 2,
+        "radical": [
+          2
+        ],
+        "canonical_support_label": "2"
+      },
+      {
+        "m": 3,
+        "radical": [
+          3
+        ],
+        "canonical_support_label": "3"
+      },
+      {
+        "m": 4,
+        "radical": [
+          2
+        ],
+        "canonical_support_label": "2"
+      },
+      {
+        "m": 5,
+        "radical": [
+          5
+        ],
+        "canonical_support_label": "5"
+      },
+      {
+        "m": 6,
+        "radical": [
+          2,
+          3
+        ],
+        "canonical_support_label": "2*3"
+      },
+      {
+        "m": 8,
+        "radical": [
+          2
+        ],
+        "canonical_support_label": "2"
+      },
+      {
+        "m": 9,
+        "radical": [
+          3
+        ],
+        "canonical_support_label": "3"
+      },
+      {
+        "m": 10,
+        "radical": [
+          2,
+          5
+        ],
+        "canonical_support_label": "2*5"
+      },
+      {
+        "m": 12,
+        "radical": [
+          2,
+          3
+        ],
+        "canonical_support_label": "2*3"
+      },
+      {
+        "m": 15,
+        "radical": [
+          3,
+          5
+        ],
+        "canonical_support_label": "3*5"
+      },
+      {
+        "m": 30,
+        "radical": [
+          2,
+          3,
+          5
+        ],
+        "canonical_support_label": "2*3*5"
+      }
+    ],
+    "radical_invariance_ok": true
+  },
+  "B_support_functoriality": {
+    "statement": "For S subset T, coordinate projection gives a canonical restriction P(T)->P(S). Zero-insertion P(S)->P(T) does not descend through the diagonal quotient when new primes are added.",
+    "rows": [
+      {
+        "source_m": 2,
+        "target_m": 4,
+        "source_radical": [
+          2
+        ],
+        "target_radical": [
+          2
+        ],
+        "source_subset_target": true,
+        "projection_target_to_source_descends": true,
+        "zero_insertion_source_to_target_descends": true,
+        "comparison_shape": "same radical support; canonical isomorphism"
+      },
+      {
+        "source_m": 2,
+        "target_m": 6,
+        "source_radical": [
+          2
+        ],
+        "target_radical": [
+          2,
+          3
+        ],
+        "source_subset_target": true,
+        "projection_target_to_source_descends": true,
+        "zero_insertion_source_to_target_descends": false,
+        "comparison_shape": "canonical restriction target->source; source->target is span/choice"
+      },
+      {
+        "source_m": 6,
+        "target_m": 30,
+        "source_radical": [
+          2,
+          3
+        ],
+        "target_radical": [
+          2,
+          3,
+          5
+        ],
+        "source_subset_target": true,
+        "projection_target_to_source_descends": true,
+        "zero_insertion_source_to_target_descends": false,
+        "comparison_shape": "canonical restriction target->source; source->target is span/choice"
+      },
+      {
+        "source_m": 10,
+        "target_m": 30,
+        "source_radical": [
+          2,
+          5
+        ],
+        "target_radical": [
+          2,
+          3,
+          5
+        ],
+        "source_subset_target": true,
+        "projection_target_to_source_descends": true,
+        "zero_insertion_source_to_target_descends": false,
+        "comparison_shape": "canonical restriction target->source; source->target is span/choice"
+      },
+      {
+        "source_m": 6,
+        "target_m": 10,
+        "source_radical": [
+          2,
+          3
+        ],
+        "target_radical": [
+          2,
+          5
+        ],
+        "source_subset_target": false,
+        "projection_target_to_source_descends": false,
+        "zero_insertion_source_to_target_descends": false,
+        "comparison_shape": "no direct support map; compare by meet/join span"
+      },
+      {
+        "source_m": 12,
+        "target_m": 6,
+        "source_radical": [
+          2,
+          3
+        ],
+        "target_radical": [
+          2,
+          3
+        ],
+        "source_subset_target": true,
+        "projection_target_to_source_descends": true,
+        "zero_insertion_source_to_target_descends": true,
+        "comparison_shape": "same radical support; canonical isomorphism"
+      },
+      {
+        "source_m": 3,
+        "target_m": 15,
+        "source_radical": [
+          3
+        ],
+        "target_radical": [
+          3,
+          5
+        ],
+        "source_subset_target": true,
+        "projection_target_to_source_descends": true,
+        "zero_insertion_source_to_target_descends": false,
+        "comparison_shape": "canonical restriction target->source; source->target is span/choice"
+      },
+      {
+        "source_m": 5,
+        "target_m": 10,
+        "source_radical": [
+          5
+        ],
+        "target_radical": [
+          2,
+          5
+        ],
+        "source_subset_target": true,
+        "projection_target_to_source_descends": true,
+        "zero_insertion_source_to_target_descends": false,
+        "comparison_shape": "canonical restriction target->source; source->target is span/choice"
+      }
+    ],
+    "projections_ok": true,
+    "zero_insertion_fails_when_new_prime_added": true
+  },
+  "C_meet_join_comparisons": {
+    "statement": "Rad-incomparable supports are compared by a meet span for shared ghosts and a join arena for gluing, not by a direct map.",
+    "rows": [
+      {
+        "left_m": 6,
+        "right_m": 10,
+        "left_radical": [
+          2,
+          3
+        ],
+        "right_radical": [
+          2,
+          5
+        ],
+        "meet_radical": [
+          2
+        ],
+        "join_radical": [
+          2,
+          3,
+          5
+        ],
+        "direct_map_exists_either_way": false,
+        "shared_ghost_via_meet": true,
+        "gluing_arena_via_join": true
+      },
+      {
+        "left_m": 6,
+        "right_m": 15,
+        "left_radical": [
+          2,
+          3
+        ],
+        "right_radical": [
+          3,
+          5
+        ],
+        "meet_radical": [
+          3
+        ],
+        "join_radical": [
+          2,
+          3,
+          5
+        ],
+        "direct_map_exists_either_way": false,
+        "shared_ghost_via_meet": true,
+        "gluing_arena_via_join": true
+      },
+      {
+        "left_m": 10,
+        "right_m": 15,
+        "left_radical": [
+          2,
+          5
+        ],
+        "right_radical": [
+          3,
+          5
+        ],
+        "meet_radical": [
+          5
+        ],
+        "join_radical": [
+          2,
+          3,
+          5
+        ],
+        "direct_map_exists_either_way": false,
+        "shared_ghost_via_meet": true,
+        "gluing_arena_via_join": true
+      },
+      {
+        "left_m": 4,
+        "right_m": 12,
+        "left_radical": [
+          2
+        ],
+        "right_radical": [
+          2,
+          3
+        ],
+        "meet_radical": [
+          2
+        ],
+        "join_radical": [
+          2,
+          3
+        ],
+        "direct_map_exists_either_way": true,
+        "shared_ghost_via_meet": true,
+        "gluing_arena_via_join": true
+      },
+      {
+        "left_m": 8,
+        "right_m": 9,
+        "left_radical": [
+          2
+        ],
+        "right_radical": [
+          3
+        ],
+        "meet_radical": [],
+        "join_radical": [
+          2,
+          3
+        ],
+        "direct_map_exists_either_way": false,
+        "shared_ghost_via_meet": true,
+        "gluing_arena_via_join": true
+      },
+      {
+        "left_m": 12,
+        "right_m": 30,
+        "left_radical": [
+          2,
+          3
+        ],
+        "right_radical": [
+          2,
+          3,
+          5
+        ],
+        "meet_radical": [
+          2,
+          3
+        ],
+        "join_radical": [
+          2,
+          3,
+          5
+        ],
+        "direct_map_exists_either_way": true,
+        "shared_ghost_via_meet": true,
+        "gluing_arena_via_join": true
+      }
+    ],
+    "meet_join_ok": true
+  },
+  "D_finite_conductor_borel_shadows": {
+    "statement": "Finite Borel shadows reduce along conductor divisibility; the unit class and singleton strict marked stabilizer persist.",
+    "rows": [
+      {
+        "source_conductor": 2,
+        "target_conductor": 4,
+        "divides": true,
+        "reduction_preserves_unit_class": true,
+        "source_borel_shadow_size": 2,
+        "target_borel_shadow_size": 8,
+        "strict_marked_stabilizer_size": 1
+      },
+      {
+        "source_conductor": 3,
+        "target_conductor": 9,
+        "divides": true,
+        "reduction_preserves_unit_class": true,
+        "source_borel_shadow_size": 6,
+        "target_borel_shadow_size": 54,
+        "strict_marked_stabilizer_size": 1
+      },
+      {
+        "source_conductor": 6,
+        "target_conductor": 12,
+        "divides": true,
+        "reduction_preserves_unit_class": true,
+        "source_borel_shadow_size": 12,
+        "target_borel_shadow_size": 48,
+        "strict_marked_stabilizer_size": 1
+      },
+      {
+        "source_conductor": 10,
+        "target_conductor": 30,
+        "divides": true,
+        "reduction_preserves_unit_class": true,
+        "source_borel_shadow_size": 40,
+        "target_borel_shadow_size": 240,
+        "strict_marked_stabilizer_size": 1
+      },
+      {
+        "source_conductor": 12,
+        "target_conductor": 60,
+        "divides": true,
+        "reduction_preserves_unit_class": true,
+        "source_borel_shadow_size": 48,
+        "target_borel_shadow_size": 960,
+        "strict_marked_stabilizer_size": 1
+      },
+      {
+        "source_conductor": 8,
+        "target_conductor": 12,
+        "divides": false,
+        "reduction_preserves_unit_class": false,
+        "source_borel_shadow_size": 32,
+        "target_borel_shadow_size": 48,
+        "strict_marked_stabilizer_size": 1
+      }
+    ],
+    "finite_reductions_ok": true,
+    "strict_stabilizers_ok": true
+  },
+  "conclusion": {
+    "functorial_direction": "The canonical support functor is contravariant by restriction on the diagonal quotient; covariant support enlargement is a span or chosen section, not a canonical group map.",
+    "borel_torsor_extension": "The Pass-89 Borel torsor theorem is natural on finite conductor shadows and support restrictions, with meet/join spans handling incomparable radical supports.",
+    "next_task": "Upgrade this restricted presheaf/span statement into a descent or stack-style theorem for Borel torsors over the prime-cover site."
+  },
+  "overall": "PASS"
+}

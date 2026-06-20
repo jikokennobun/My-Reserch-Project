@@ -6,8 +6,25 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 90
-- Last pass note: Pass 89 (2026-06-21) consolidated the Rosser phantom as a
+- Current pass: 91
+- Last pass note: Pass 90 (2026-06-21) made the Pass-89 Borel-torsor theorem
+  functorial over conductor/radical supports, with a direction correction.
+  For squarefree supports $S\subseteq T$, coordinate projection descends
+  through the diagonal quotient and gives the canonical restriction
+  $$P(T)=(\prod_{p\in T}\mathbb Z_p)/\Delta\mathbb Z\to
+  P(S)=(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z.$$
+  The tempting zero-insertion $P(S)\to P(T)$ does not descend when new primes
+  are added, because $(1,\ldots,1)$ maps to a vector with zeros on the new
+  coordinates, not to a diagonal.  Thus support functoriality is
+  contravariant by restriction; enlargement is a span, pullback, or
+  finite-conductor choice.  Rad-incomparable supports compare by a meet span
+  for shared ghosts and a join arena for gluing.  Finite Borel shadows
+  $(\mathbb Z/N)^\times\ltimes\mathbb Z/N$ reduce along conductor divisibility,
+  preserving the unit class and singleton strict marked stabilizer.
+  Machine-verified `check-pass90.py` ->
+  `pass90-conductor-functorial-borel-torsors-check.json` PASS. Counter
+  90->91.
+- Earlier note: Pass 89 (2026-06-21) consolidated the Rosser phantom as a
   Borel-torsor / extension-class theorem.  The same obstruction may be read as
   a Guaspari-Solovay witness-comparison Cech class, a
   $\varprojlim^1(\mathbb Z,\times m)$ or $\epsilon=\widehat{\mathbb Z}/\mathbb Z$
@@ -10198,3 +10215,104 @@ Repository updates this pass:
 Next step:
 Pass 90 should make the conductor/radical functoriality of the Borel-torsor
 theorem precise across $m$-adic and all-prime variants.
+
+---
+
+### Pass 90 - 2026-06-21 JST
+
+Focus:
+Make the Borel-torsor theorem functorial across conductor and radical
+supports.
+
+Proposer:
+The correct functoriality is not "add primes by zero insertion" on the quotient
+torsor.  For a finite squarefree support $S$, write
+$$
+P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z.
+$$
+If $S\subseteq T$, coordinate projection gives a canonical restriction
+$$
+\rho_{T,S}:P(T)\to P(S),
+$$
+because the diagonal copy of $\mathbb Z$ in $T$ projects to the diagonal copy
+in $S$.  By contrast, zero-insertion
+$$
+\prod_{p\in S}\mathbb Z_p\to\prod_{p\in T}\mathbb Z_p
+$$
+does not descend to $P(S)\to P(T)$ when $T\setminus S\ne\varnothing$: a
+diagonal shift by $1$ maps to $(1,\ldots,1,0,\ldots,0)$, not to a diagonal
+shift in the target.  So the canonical support functor is contravariant by
+restriction.  Enlargement of support is a span, a chosen section, or a
+finite-conductor approximation, not a canonical map of quotient torsors.
+
+This resolves the Pass-89 open point.  The Borel-torsor package is natural on
+the conductor site as follows:
+
+- finite conductor shadows reduce along $N\mid N'$ by
+  $(\mathbb Z/N')^\times\ltimes\mathbb Z/N'\to
+  (\mathbb Z/N)^\times\ltimes\mathbb Z/N$;
+- support restrictions project $P(T)\to P(S)$ for $S\subseteq T$;
+- rad-incomparable supports compare through a meet span
+  $P(S)\to P(S\cap T)\leftarrow P(T)$ and a join arena $P(S\cup T)$ for
+  gluing.
+
+Thus the Pass-89 Borel torsor theorem is functorial, but as a
+restriction/span object over the prime-support lattice rather than as a
+covariant insertion functor.
+
+Skeptic:
+This pass corrects a tempting overstatement.  Earlier radical naturality
+language can sound as if $\widehat{\mathbb Z}_S/\mathbb Z$ always embeds into
+$\widehat{\mathbb Z}_T/\mathbb Z$ when $S\subseteq T$.  That is not canonical
+after quotienting by the diagonal $\mathbb Z$.  Any such insertion needs a
+choice of representative or a finite-conductor lift.  What is canonical is
+restriction from larger support to smaller support, plus meet/join
+comparisons for incomparable supports.  The Borel theorem survives because its
+finite conductor shadows and extension-line restrictions commute in that
+direction.
+
+Formalist:
+> **Theorem 90a (support restriction).** For $S\subseteq T$, coordinate
+> projection induces a well-defined restriction
+> $P(T)\to P(S)$ on diagonal quotients.
+>
+> **Theorem 90b (no canonical zero insertion).** If $T\setminus S\ne\varnothing$
+> and $S\ne\varnothing$, zero-insertion
+> $\prod_{p\in S}\mathbb Z_p\to\prod_{p\in T}\mathbb Z_p$ does not descend to
+> a homomorphism $P(S)\to P(T)$.
+>
+> **Theorem 90c (finite conductor Borel naturality).** At finite conductor,
+> the affine Borel shadows
+> $(\mathbb Z/N)^\times\ltimes\mathbb Z/N$ reduce functorially along
+> $N\mid N'$, preserving the unit class and strict marked stabilizer.
+>
+> **Theorem 90d (span comparison).** Rad-incomparable supports have no direct
+> support map; their canonical comparison is a meet span for shared ghost data
+> and a join arena for gluing.
+
+Machine-verified `code/scripts/check-pass90.py` ->
+`artifacts/reports/pass90-conductor-functorial-borel-torsors-check.json`
+(overall PASS): the checker verifies radical invariance, proves that
+projection descends while zero-insertion fails when new primes are added,
+records meet/join comparison rows for rad-incomparable supports, and checks
+finite Borel shadow reductions along conductor divisibility.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-90 entry; State counter
+  $90\to91$.
+- `records/logs/research-log.md`: Pass-90 entry.
+- `research/definitions.md`: added conductor-functorial Borel torsor
+  terminology.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-90 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked
+  the conductor-functoriality task resolved and retargeted the next pass to
+  descent/stackification of the Borel torsor over the prime-cover site.
+- `code/scripts/check-pass90.py`,
+  `artifacts/reports/pass90-conductor-functorial-borel-torsors-check.json`: new.
+- `artifacts/pdf/conductor-functorial-borel-torsors-2026-06-21.md`: publication
+  summary source.
+
+Next step:
+Pass 91 should decide whether the restriction/span Borel-torsor package is a
+sheaf, stack, or descent-obstruction object over the finite prime-cover site.
