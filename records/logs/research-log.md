@@ -1,5 +1,19 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 98)
+
+- Compared the regraded torsion boundary
+  $(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$ with the Pass-94
+  solid dual $D\epsilon\simeq\mathbb Q[-1]$.  The result is not raw object
+  equality: the torsion boundary is a degree-$0$ finite-support coefficient
+  with $N$-torsion size $N^{|S|-1}$, while the solid dual is shifted.  The
+  bridge is the canonical unit extension
+  $0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0$; applying the
+  extension/solid-dual passage sends each independent $\mathbb Q/\mathbb Z$
+  coordinate to a shifted $\mathbb Q[-1]$ constant-term obstruction generator.
+  Added checker/report and retargeted Pass 99 to constructing the exact
+  triangle/functor into the all-prime constant-term complex.
+
 ## 2026-06-21 (Autonomous discussion Pass 97)
 
 - Lifted the compact Pass-96 Loebification comparison to the rationalized

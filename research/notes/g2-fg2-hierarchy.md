@@ -5444,3 +5444,77 @@ $K_{\mathbb Q,S}/K_{\mathbb Z,S}$, and support-projection surjectivity.
 $(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$ with the solid dual
 $D\epsilon=\mathbb Q[-1]$ and decide whether they are two presentations of
 the same shifted constant-term obstruction.
+
+## Pass 98 - Torsion boundary versus solid dual
+
+Pass 98 compares the regraded torsion boundary from Pass 97,
+$$
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+\cong K_{\mathbb Q,S}/K_{\mathbb Z,S},
+$$
+with the all-prime solid-dual identity from Pass 94,
+$$
+D\epsilon\simeq\mathbb Q[-1],
+\qquad
+\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+
+The first correction is degree-theoretic.  The torsion boundary $T_S$ is a
+degree-$0$ torsion coefficient.  The solid dual $D\epsilon$ is shifted.  Thus
+one should not identify
+$$
+(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+$$
+with $\mathbb Q[-1]$ as raw objects.
+
+The bridge is the canonical unit extension
+$$
+0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0.
+$$
+Each independent $\mathbb Q/\mathbb Z$ coordinate in $T_S$ classifies one copy
+of this extension.  Applying the extension/solid-dual passage sends this
+coordinate to a shifted $\mathbb Q[-1]$ constant-term obstruction generator.
+Since
+$$
+T_S\cong(\mathbb Q/\mathbb Z)^{|S|-1},
+$$
+the finite-support boundary presents $|S|-1$ copies of the generator before
+any all-prime collapse or choice of a single boundary relation.
+
+For finite level $N$,
+$$
+|T_S[N]|=N^{|S|-1}.
+$$
+This recovers the Pass-96 compact finite shadow, while
+$K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0$ because $K_{\mathbb Q,S}$ is divisible.
+For $S\subseteq T$, the projection $T_T\to T_S$ is surjective and its
+$N$-torsion kernel has size $N^{|T|-|S|}$, so the support direction remains
+Mittag-Leffler at the torsion-boundary level.
+
+> **Theorem 98a (torsion shadow).** The boundary
+> $T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$ has
+> $|T_S[N]|=N^{|S|-1}$.
+>
+> **Theorem 98b (no raw equality).** $T_S$ is not literally the solid dual
+> $D\epsilon\simeq\mathbb Q[-1]$; the comparison requires the degree shift.
+>
+> **Theorem 98c (extension bridge).** The exact bridge from finite torsion
+> boundary to solid dual is the canonical extension
+> $0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0$ followed by the
+> solid-dual shift.  Each independent $\mathbb Q/\mathbb Z$ coordinate
+> presents one shifted $\mathbb Q[-1]$ obstruction generator.
+>
+> **Theorem 98d (no-Weyl compatibility).** The bridge does not produce a
+> degree-$0$ map $\epsilon\to\mathbb Q$; it is compatible with the Pass-94
+> no-Weyl wall.
+
+**Machine verification** (`code/scripts/check-pass98.py` ->
+`artifacts/reports/pass98-torsion-boundary-solid-dual-check.json`, PASS):
+the checker verifies the $N^{|S|-1}$ torsion counts, their equality with the
+compact finite shadow, vanishing of divisible rational mod-$N$ quotients,
+support-projection surjectivity, non-equality of raw torsion and shifted solid
+dual objects, and compatibility with the extension bridge/no-Weyl wall.
+
+**Limit of the pass.**  The next task is to construct the exact triangle or
+functor from finite-support torsion boundaries to the all-prime constant-term
+complex and check compatibility with the Pass-94 antipode sign.

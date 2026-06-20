@@ -42,26 +42,25 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 97 -> 98: torsion boundary versus solid dual)**
-  Pass 97 lifted the compact Loebification comparison to the rationalized
-  finite-adele skeleton
-  $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
-  [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p].$$
-  The rationalized kernel is
-  $$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q,$$
-  so rationalization does not kill
-  $K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z$; it embeds it into a
-  $\mathbb Q$-vector boundary.  Finite quotients of $K_{\mathbb Q,S}$ vanish,
-  but the old $N^{|S|-1}$ finite shadow reappears as $N$-torsion in
-  $$K_{\mathbb Q,S}/K_{\mathbb Z,S}
-  \cong(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).$$
-  Open:
-  (i) compare this $\mathbb Q/\mathbb Z$ torsion boundary with the Pass-94
-  solid dual identity $D\epsilon=\mathbb Q[-1]$;
-  (ii) decide whether it is the finite-support shadow of the same shifted
-  constant-term obstruction or a separate local-Loeb artifact;
-  (iii) formulate the exact functor from finite-support torsion quotients to
-  the all-prime solid boundary.
+- **(Pass 98 -> 99: exact triangle from torsion boundary to constant-term complex)**
+  Pass 98 compared
+  $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
+  with the Pass-94 identity $D\epsilon\simeq\mathbb Q[-1]$.  The conclusion is
+  not raw object equality: $T_S$ is a degree-$0$ torsion coefficient with
+  $|T_S[N]|=N^{|S|-1}$, while $D\epsilon$ is shifted.  The bridge is the
+  canonical unit extension
+  $$0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0,$$
+  which sends each independent $\mathbb Q/\mathbb Z$ coordinate to one shifted
+  $\mathbb Q[-1]$ constant-term obstruction generator after the
+  extension/solid-dual passage.  Open:
+  (i) construct the exact triangle/functor from finite-support torsion
+  boundaries $T_S$ to the all-prime constant-term complex
+  $[\mathbb Q\to\mathbb A_f]$;
+  (ii) verify compatibility with the Pass-94 antipode sign and no-Weyl wall
+  $\operatorname{Hom}^0(\epsilon,\mathbb Q)=0$;
+  (iii) decide what support-limit operation collapses the $|S|-1$
+  finite-support multiplicity to the all-prime universal generator without
+  losing the finite torsion shadows.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

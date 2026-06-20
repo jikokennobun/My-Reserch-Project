@@ -37,6 +37,15 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass98-torsion-boundary-solid-dual-check.json`: verifies the Pass-98 finite
+  certificate comparing the torsion boundary
+  `(Q/Z)^S/Delta(Q/Z)` with the all-prime solid dual `D epsilon = Q[-1]`. It
+  checks `N^(|S|-1)` torsion counts, equality with the compact finite shadow,
+  vanishing of divisible rational mod-`N` quotients, support-projection
+  surjectivity and kernel sizes, non-equality of raw degree-0 torsion boundary
+  with the shifted solid dual, and compatibility with the canonical
+  `0 -> Z -> Q -> Q/Z -> 0` extension/no-Weyl wall.
+
 - `pass97-rationalized-finite-adele-row-check.json`: verifies the Pass-97
   finite certificate for the rationalized finite-adele Loebification row. It
   checks that `Z^S/Delta Z` injects into `Q^S/Delta Q`, that the rational

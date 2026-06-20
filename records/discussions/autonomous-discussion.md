@@ -6,8 +6,24 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 98
-- Last pass note: Pass 97 (2026-06-21) lifted the Pass-96 compact comparison
+- Current pass: 99
+- Last pass note: Pass 98 (2026-06-21) compared the Pass-97 torsion boundary
+  $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
+  with the Pass-94 all-prime solid-dual identity
+  $$D\epsilon\simeq\mathbb Q[-1],\qquad \epsilon=\widehat{\mathbb Z}/\mathbb Z.$$
+  The verdict is not raw object equality: $T_S$ is a degree-$0$ torsion
+  coefficient with $|T_S[N]|=N^{|S|-1}$, while $D\epsilon$ is the shifted
+  all-prime solid dual.  The identification is mediated by the canonical unit
+  extension
+  $$0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0.$$
+  Applying the extension/solid-dual passage sends each independent
+  $\mathbb Q/\mathbb Z$ boundary coefficient to a shifted
+  $\mathbb Q[-1]$ constant-term obstruction generator.  Thus the multiplicity
+  $|S|-1$ is finite-support/local-Loeb bookkeeping, but the coefficient is not
+  a separate artifact: it is the finite-support torsion shadow of the same
+  shifted obstruction.  Machine-verified `check-pass98.py` ->
+  `pass98-torsion-boundary-solid-dual-check.json` PASS. Counter 98->99.
+- Earlier note: Pass 97 (2026-06-21) lifted the Pass-96 compact comparison
   to the rationalized finite-adele skeleton
   $$[\mathbb Q\to\prod_{p\in S}\mathbb Q_p]\to
   [\mathbb Q^S\to\prod_{p\in S}\mathbb Q_p].$$
@@ -24,27 +40,6 @@
   Support projections remain surjective after rationalization, so the support
   direction is still Mittag-Leffler.  Machine-verified `check-pass97.py` ->
   `pass97-rationalized-finite-adele-row-check.json` PASS. Counter 97->98.
-- Earlier note: Pass 96 (2026-06-21) compared the compact finite-support
-  skeleton of the boundary-only constant-term complex with the local Loeb
-  sheafification.  For finite support $S$, the comparison is the map of
-  two-term complexes
-  $$[\mathbb Z\to\prod_{p\in S}\mathbb Z_p]\longrightarrow
-  [\mathbb Z^S\to\prod_{p\in S}\mathbb Z_p],$$
-  diagonal in degree $0$ and identity in degree $1$.  On $H^1$ it gives the
-  exact sequence
-  $$0\to\mathbb Z^S/\Delta\mathbb Z\to
-  (\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z\to
-  \prod_{p\in S}(\mathbb Z_p/\mathbb Z)\to0.$$
-  Thus the precise unipotent kernel lost by local Loebification is
-  $K_S=\mathbb Z^S/\Delta\mathbb Z$, with finite shadow size
-  $N^{|S|-1}$.  The Levi comparison
-  $\mathbb Q^\times\to(\mathbb Q^\times)^S$ has trivial kernel; what is lost
-  there is the diagonal coherence, measured by the quotient
-  $(\mathbb Q^\times)^S/\Delta\mathbb Q^\times$.  The best formulation is a
-  map of two-term complexes plus stackification/local constant-term
-  projection, not pure Hausdorff reflection.  Machine-verified
-  `check-pass96.py` ->
-  `pass96-constant-term-local-loebification-check.json` PASS. Counter 96->97.
 - Earlier note: Pass 93 (2026-06-21) upgraded the finite-support Borel
   $j_!$ class to the all-prime Spec-$\mathbb Z$ setting.  The key correction is
   topological: in the honest all-prime Zariski site, the generic point
@@ -11218,3 +11213,111 @@ Pass 98 should compare the regraded torsion boundary
 $(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$ with the solid dual
 $D\epsilon=\mathbb Q[-1]$ and decide whether they are two presentations of the
 same shifted constant-term obstruction.
+
+### Pass 98 - 2026-06-21 JST
+
+Focus:
+Compare the regraded torsion boundary
+$$
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+$$
+with the Pass-94 all-prime solid dual
+$$
+D\epsilon\simeq\mathbb Q[-1],
+\qquad
+\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+
+Proposer:
+Pass 97 already isolated the key coefficient: the old finite shadow
+$N^{|S|-1}$ is not a quotient of the divisible vector boundary
+$K_{\mathbb Q,S}$; it is the $N$-torsion in
+$K_{\mathbb Q,S}/K_{\mathbb Z,S}\cong T_S$.  Since each coordinate of
+$T_S$ is a $\mathbb Q/\mathbb Z$ boundary coefficient, it should be compared
+with the canonical unit extension
+$$
+0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0.
+$$
+That is precisely the extension whose solid-dual reading gives the shifted
+$\mathbb Q[-1]$ generator.
+
+Skeptic:
+The comparison must not say that
+$$
+(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)
+\cong \mathbb Q[-1].
+$$
+They live in different degrees and have different raw object types.  Also, for
+multi-prime $S$, $T_S$ has $|S|-1$ independent boundary coordinates, whereas
+Pass 94 records the all-prime universal generator.  The honest conclusion is:
+the finite-support multiplicity is local-support bookkeeping; the
+$\mathbb Q/\mathbb Z$ coefficient is the finite torsion presentation of the
+same extension generator only after applying the extension/solid-dual passage.
+
+Formalist:
+For finite support $S$ and $N\ge2$,
+$$
+|T_S[N]|=N^{|S|-1}.
+$$
+This equals the Pass-96 finite shadow of
+$K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z$, while
+$K_{\mathbb Q,S}/N K_{\mathbb Q,S}=0$ because $K_{\mathbb Q,S}$ is divisible.
+For $S\subseteq T$, projection $T_T\to T_S$ is surjective; its kernel has
+$N$-torsion of size $N^{|T|-|S|}$.  The exact functorial bridge is:
+$$
+\mathbb Q/\mathbb Z
+\longmapsto
+\bigl(0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0\bigr)
+\longmapsto
+\mathbb Q[-1].
+$$
+On $T_S\cong(\mathbb Q/\mathbb Z)^{|S|-1}$, this gives
+$(\mathbb Q[-1])^{|S|-1}$ before any all-prime collapse or choice of a single
+boundary generator.  It does not produce a degree-$0$ Weyl/Fourier flip
+$\epsilon\to\mathbb Q$, so it is compatible with the Pass-94 no-Weyl wall.
+
+> **Theorem 98a (torsion shadow).** The boundary
+> $T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$ satisfies
+> $|T_S[N]|=N^{|S|-1}$, recovering the compact finite shadow after
+> rationalization.
+>
+> **Theorem 98b (not raw solid-dual equality).** $T_S$ is not literally
+> $D\epsilon$.  It is a degree-$0$ torsion coefficient, while
+> $D\epsilon\simeq\mathbb Q[-1]$ is shifted.
+>
+> **Theorem 98c (extension bridge).** The bridge from $T_S$ to the solid dual
+> is the exact extension/solid-dual passage attached to
+> $0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0$; each independent
+> $\mathbb Q/\mathbb Z$ coordinate presents one shifted
+> $\mathbb Q[-1]$ constant-term obstruction generator.
+>
+> **Theorem 98d (artifact status).** The multiplicity $|S|-1$ is
+> finite-support/local-Loeb bookkeeping.  The shifted $\mathbb Q[-1]$ generator
+> is not a separate artifact; it is the all-prime form of the same obstruction.
+
+Machine verification (`code/scripts/check-pass98.py` ->
+`artifacts/reports/pass98-torsion-boundary-solid-dual-check.json`, PASS): the
+checker verifies $|T_S[N]|=N^{|S|-1}$, equality with the compact finite shadow,
+vanishing of the divisible rational quotient modulo $N$, support-projection
+surjectivity and kernel sizes, non-equality of raw degree-$0$ torsion boundary
+with the shifted solid dual, and compatibility of the extension functor with
+the Pass-94 no-Weyl wall.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-98 entry;
+  State counter $98\to99$.
+- `records/logs/research-log.md`: Pass-98 entry.
+- `research/definitions.md`: added the torsion-boundary/solid-dual comparison.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-98 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  marked the Pass-97 torsion-boundary problem resolved and retargeted the next
+  pass to the exact triangle/functor into the all-prime constant-term complex.
+- `code/scripts/check-pass98.py`,
+  `artifacts/reports/pass98-torsion-boundary-solid-dual-check.json`: new.
+- `artifacts/pdf/torsion-boundary-solid-dual-2026-06-21.md`: publication
+  summary source.
+
+Next step:
+Pass 99 should construct the exact triangle or functor from finite-support
+torsion boundaries to the all-prime constant-term complex and verify
+compatibility with the Pass-94 antipode sign/no-Weyl wall.

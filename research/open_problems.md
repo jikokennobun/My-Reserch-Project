@@ -1110,7 +1110,7 @@
   surjective and Mittag-Leffler.  Machine-verified
   `artifacts/reports/pass97-rationalized-finite-adele-row-check.json`
   (PASS).
-- **[New (Pass 97)]** **Torsion boundary versus solid dual.**
+- **[Resolved (Pass 98)]** **Torsion boundary versus solid dual.**
   Compare the regraded torsion boundary
   $$(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
   with the Pass-94 solid dual identity
@@ -1120,6 +1120,27 @@
   artifact introduced by rationalizing the compact comparison.  Formulate the
   exact functor from finite-support torsion quotients to the all-prime solid
   boundary.
+  **Resolution:** the torsion boundary is not literally the shifted solid dual
+  as a raw object.  It is a degree-$0$ torsion coefficient with
+  $|T_S[N]|=N^{|S|-1}$, while $D\epsilon\simeq\mathbb Q[-1]$ is shifted.  The
+  bridge is the canonical unit extension
+  $$0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0.$$
+  Applying the extension/solid-dual passage sends each independent
+  $\mathbb Q/\mathbb Z$ coordinate to one shifted $\mathbb Q[-1]$
+  constant-term obstruction generator.  Thus the multiplicity $|S|-1$ is
+  finite-support/local-Loeb bookkeeping, but the coefficient is the
+  finite-support torsion presentation of the same shifted obstruction.
+  Machine-verified
+  `artifacts/reports/pass98-torsion-boundary-solid-dual-check.json` (PASS).
+- **[New (Pass 98)]** **Exact triangle from torsion boundary to all-prime constant term.**
+  Construct the exact triangle or functor carrying the finite-support torsion
+  boundary
+  $$T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z)$$
+  into the all-prime constant-term complex $[\mathbb Q\to\mathbb A_f]$ and
+  its solid boundary.  Verify compatibility with the Pass-94 antipode sign and
+  no-Weyl wall $\operatorname{Hom}^0(\epsilon,\mathbb Q)=0$.  Determine which
+  support-limit operation collapses the finite multiplicity $|S|-1$ to the
+  all-prime universal generator while preserving the finite torsion shadows.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

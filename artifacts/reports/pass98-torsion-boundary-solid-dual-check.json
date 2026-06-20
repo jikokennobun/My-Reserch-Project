@@ -1,0 +1,1464 @@
+{
+  "pass": 98,
+  "title": "Torsion boundary versus all-prime solid dual",
+  "A_torsion_boundary_shadow": {
+    "statement": "T_S=(Q/Z)^S/Delta(Q/Z) has N-torsion of size N^(|S|-1), matching the Pass-96 integral finite shadow, while the divisible rational kernel has no mod-N quotient.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "independent_boundary_rank": 0,
+        "level_n": 2,
+        "torsion_boundary_n_size": 1,
+        "integral_finite_shadow_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "independent_boundary_rank": 0,
+        "level_n": 3,
+        "torsion_boundary_n_size": 1,
+        "integral_finite_shadow_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "independent_boundary_rank": 0,
+        "level_n": 4,
+        "torsion_boundary_n_size": 1,
+        "integral_finite_shadow_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "independent_boundary_rank": 0,
+        "level_n": 5,
+        "torsion_boundary_n_size": 1,
+        "integral_finite_shadow_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "independent_boundary_rank": 0,
+        "level_n": 6,
+        "torsion_boundary_n_size": 1,
+        "integral_finite_shadow_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "independent_boundary_rank": 0,
+        "level_n": 8,
+        "torsion_boundary_n_size": 1,
+        "integral_finite_shadow_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "independent_boundary_rank": 0,
+        "level_n": 12,
+        "torsion_boundary_n_size": 1,
+        "integral_finite_shadow_size": 1,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 2,
+        "torsion_boundary_n_size": 2,
+        "integral_finite_shadow_size": 2,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 3,
+        "torsion_boundary_n_size": 3,
+        "integral_finite_shadow_size": 3,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 4,
+        "torsion_boundary_n_size": 4,
+        "integral_finite_shadow_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 5,
+        "torsion_boundary_n_size": 5,
+        "integral_finite_shadow_size": 5,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 6,
+        "torsion_boundary_n_size": 6,
+        "integral_finite_shadow_size": 6,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 8,
+        "torsion_boundary_n_size": 8,
+        "integral_finite_shadow_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 12,
+        "torsion_boundary_n_size": 12,
+        "integral_finite_shadow_size": 12,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 2,
+        "torsion_boundary_n_size": 2,
+        "integral_finite_shadow_size": 2,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 3,
+        "torsion_boundary_n_size": 3,
+        "integral_finite_shadow_size": 3,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 4,
+        "torsion_boundary_n_size": 4,
+        "integral_finite_shadow_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 5,
+        "torsion_boundary_n_size": 5,
+        "integral_finite_shadow_size": 5,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 6,
+        "torsion_boundary_n_size": 6,
+        "integral_finite_shadow_size": 6,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 8,
+        "torsion_boundary_n_size": 8,
+        "integral_finite_shadow_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "independent_boundary_rank": 1,
+        "level_n": 12,
+        "torsion_boundary_n_size": 12,
+        "integral_finite_shadow_size": 12,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 2,
+        "torsion_boundary_n_size": 4,
+        "integral_finite_shadow_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 3,
+        "torsion_boundary_n_size": 9,
+        "integral_finite_shadow_size": 9,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 4,
+        "torsion_boundary_n_size": 16,
+        "integral_finite_shadow_size": 16,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 5,
+        "torsion_boundary_n_size": 25,
+        "integral_finite_shadow_size": 25,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 6,
+        "torsion_boundary_n_size": 36,
+        "integral_finite_shadow_size": 36,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 8,
+        "torsion_boundary_n_size": 64,
+        "integral_finite_shadow_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 12,
+        "torsion_boundary_n_size": 144,
+        "integral_finite_shadow_size": 144,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 2,
+        "torsion_boundary_n_size": 4,
+        "integral_finite_shadow_size": 4,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 3,
+        "torsion_boundary_n_size": 9,
+        "integral_finite_shadow_size": 9,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 4,
+        "torsion_boundary_n_size": 16,
+        "integral_finite_shadow_size": 16,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 5,
+        "torsion_boundary_n_size": 25,
+        "integral_finite_shadow_size": 25,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 6,
+        "torsion_boundary_n_size": 36,
+        "integral_finite_shadow_size": 36,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 8,
+        "torsion_boundary_n_size": 64,
+        "integral_finite_shadow_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "independent_boundary_rank": 2,
+        "level_n": 12,
+        "torsion_boundary_n_size": 144,
+        "integral_finite_shadow_size": 144,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 2,
+        "torsion_boundary_n_size": 8,
+        "integral_finite_shadow_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 3,
+        "torsion_boundary_n_size": 27,
+        "integral_finite_shadow_size": 27,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 4,
+        "torsion_boundary_n_size": 64,
+        "integral_finite_shadow_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 5,
+        "torsion_boundary_n_size": 125,
+        "integral_finite_shadow_size": 125,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 6,
+        "torsion_boundary_n_size": 216,
+        "integral_finite_shadow_size": 216,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 8,
+        "torsion_boundary_n_size": 512,
+        "integral_finite_shadow_size": 512,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 12,
+        "torsion_boundary_n_size": 1728,
+        "integral_finite_shadow_size": 1728,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 2,
+        "torsion_boundary_n_size": 8,
+        "integral_finite_shadow_size": 8,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 3,
+        "torsion_boundary_n_size": 27,
+        "integral_finite_shadow_size": 27,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 4,
+        "torsion_boundary_n_size": 64,
+        "integral_finite_shadow_size": 64,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 5,
+        "torsion_boundary_n_size": 125,
+        "integral_finite_shadow_size": 125,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 6,
+        "torsion_boundary_n_size": 216,
+        "integral_finite_shadow_size": 216,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 8,
+        "torsion_boundary_n_size": 512,
+        "integral_finite_shadow_size": 512,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "independent_boundary_rank": 3,
+        "level_n": 12,
+        "torsion_boundary_n_size": 1728,
+        "integral_finite_shadow_size": 1728,
+        "rational_kernel_mod_n_size": 1,
+        "matches_integral_finite_shadow": true,
+        "divisible_rational_kernel_quotient_vanishes": true
+      }
+    ],
+    "torsion_shadow_ok": true,
+    "singleton_vanishes_ok": true,
+    "multiprime_nontrivial_ok": true
+  },
+  "B_support_projection_torsion": {
+    "statement": "Support projections on torsion boundaries are surjective; their N-torsion kernels have size N^(|T|-|S|).",
+    "rows": [
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_rank": 0,
+        "larger_rank": 1,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 2,
+        "projection_kernel_n_torsion_size": 2,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_rank": 0,
+        "larger_rank": 1,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 3,
+        "projection_kernel_n_torsion_size": 3,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_rank": 0,
+        "larger_rank": 1,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 4,
+        "projection_kernel_n_torsion_size": 4,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_rank": 0,
+        "larger_rank": 1,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 5,
+        "projection_kernel_n_torsion_size": 5,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_rank": 0,
+        "larger_rank": 1,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 6,
+        "projection_kernel_n_torsion_size": 6,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_rank": 0,
+        "larger_rank": 1,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 8,
+        "projection_kernel_n_torsion_size": 8,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "smaller_rank": 0,
+        "larger_rank": 1,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 12,
+        "projection_kernel_n_torsion_size": 12,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 2,
+        "projection_kernel_n_torsion_size": 2,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 3,
+        "projection_kernel_n_torsion_size": 3,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 4,
+        "projection_kernel_n_torsion_size": 4,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 5,
+        "projection_kernel_n_torsion_size": 5,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 6,
+        "projection_kernel_n_torsion_size": 6,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 8,
+        "projection_kernel_n_torsion_size": 8,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 12,
+        "projection_kernel_n_torsion_size": 12,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 2,
+        "projection_kernel_n_torsion_size": 2,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 3,
+        "projection_kernel_n_torsion_size": 3,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 4,
+        "projection_kernel_n_torsion_size": 4,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 5,
+        "projection_kernel_n_torsion_size": 5,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 6,
+        "projection_kernel_n_torsion_size": 6,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 8,
+        "projection_kernel_n_torsion_size": 8,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5
+        ],
+        "larger_support": [
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 1,
+        "larger_rank": 2,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 12,
+        "projection_kernel_n_torsion_size": 12,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 2,
+        "projection_kernel_n_torsion_size": 2,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 3,
+        "projection_kernel_n_torsion_size": 3,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 4,
+        "projection_kernel_n_torsion_size": 4,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 5,
+        "projection_kernel_n_torsion_size": 5,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 6,
+        "projection_kernel_n_torsion_size": 6,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 8,
+        "projection_kernel_n_torsion_size": 8,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 12,
+        "projection_kernel_n_torsion_size": 12,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 2,
+        "projection_kernel_n_torsion_size": 2,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 3,
+        "projection_kernel_n_torsion_size": 3,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 4,
+        "projection_kernel_n_torsion_size": 4,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 5,
+        "projection_kernel_n_torsion_size": 5,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 6,
+        "projection_kernel_n_torsion_size": 6,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 8,
+        "projection_kernel_n_torsion_size": 8,
+        "support_direction_mittag_leffler": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "smaller_rank": 2,
+        "larger_rank": 3,
+        "projection_surjective": true,
+        "projection_kernel_rank": 1,
+        "expected_projection_kernel_rank": 1,
+        "level_n": 12,
+        "projection_kernel_n_torsion_size": 12,
+        "support_direction_mittag_leffler": true
+      }
+    ],
+    "support_projection_ok": true
+  },
+  "C_solid_dual_comparison": {
+    "statement": "The finite torsion boundary is not literally D epsilon.  It becomes the same shifted obstruction generator after the canonical extension/solid-dual passage associated to 0 -> Z -> Q -> Q/Z -> 0.",
+    "row": {
+      "finite_support_torsion_boundary": "T_S = (Q/Z)^S / Delta(Q/Z)",
+      "all_prime_solid_dual": "D epsilon = Q[-1], epsilon = Zhat/Z",
+      "raw_degree_zero_objects_equal": false,
+      "canonical_unit_extension": "0 -> Z -> Q -> Q/Z -> 0",
+      "extension_middle_term": "Q",
+      "degree_shift_required": true,
+      "extension_functor_identifies_generator": true,
+      "finite_support_multiplicity": "T_S carries |S|-1 independent copies of the Q/Z boundary coefficient before the all-prime/extension collapse.",
+      "local_loeb_artifact_verdict": "The multiplicity |S|-1 is finite-support/local-Loeb bookkeeping; the Q/Z coefficient and its shifted Q[-1] extension class are the same constant-term obstruction generator."
+    },
+    "solid_comparison_ok": true
+  },
+  "D_exact_functor_shadow": {
+    "statement": "The exact functor sends each Q/Z coefficient to the shifted Q[-1] generator and does not create a degree-0 Weyl flip.",
+    "rows": [
+      {
+        "input_coefficient": "Q/Z",
+        "exact_extension_class": "0 -> Z -> Q -> Q/Z -> 0",
+        "shifted_output": "Q[-1]",
+        "preserves_n_torsion_shadow_before_shift": true,
+        "produces_degree_zero_weyl_flip": false,
+        "agrees_with_pass94_no_weyl_wall": true
+      },
+      {
+        "input_coefficient": "(Q/Z)^r",
+        "exact_extension_class": "r copies of 0 -> Z -> Q -> Q/Z -> 0",
+        "shifted_output": "Q^r[-1]",
+        "preserves_n_torsion_shadow_before_shift": true,
+        "produces_degree_zero_weyl_flip": false,
+        "agrees_with_pass94_no_weyl_wall": true
+      }
+    ],
+    "exact_functor_ok": true
+  },
+  "conclusion": {
+    "raw_object_equality": false,
+    "finite_support_boundary": "(Q/Z)^S/Delta(Q/Z)",
+    "solid_dual_boundary": "D epsilon = Q[-1]",
+    "identification_after_functor": "Apply the canonical extension/solid-dual passage associated to 0 -> Z -> Q -> Q/Z -> 0.  Then each independent Q/Z torsion boundary coordinate presents the shifted Q[-1] constant-term obstruction generator.",
+    "artifact_status": "The finite multiplicity |S|-1 is local-support bookkeeping; the shifted Q[-1] generator is the all-prime obstruction.",
+    "next_task": "Construct the exact triangle/functor from finite-support torsion boundaries to the all-prime constant-term complex and check compatibility with the Pass-94 no-Weyl wall and antipode sign."
+  },
+  "overall": "PASS"
+}

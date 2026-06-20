@@ -2248,3 +2248,48 @@ K_{\mathbb Q,T}\to K_{\mathbb Q,S}
 $$
 with kernel of $\mathbb Q$-dimension $|T|-|S|$.  Therefore the support
 direction remains Mittag-Leffler after rationalization.
+
+## Torsion boundary and solid-dual comparison (Pass 98)
+
+For finite support $S$, define the **torsion boundary**
+$$
+T_S=(\mathbb Q/\mathbb Z)^S/\Delta(\mathbb Q/\mathbb Z).
+$$
+Equivalently,
+$$
+T_S\cong K_{\mathbb Q,S}/K_{\mathbb Z,S}
+$$
+for
+$K_{\mathbb Q,S}=\mathbb Q^S/\Delta\mathbb Q$ and
+$K_{\mathbb Z,S}=\mathbb Z^S/\Delta\mathbb Z$.
+
+For every $N\ge2$,
+$$
+|T_S[N]|=N^{|S|-1}.
+$$
+This is the compact finite shadow from Pass 96 after rationalization: it is
+not a quotient of the divisible vector group $K_{\mathbb Q,S}$, but the
+$N$-torsion of the boundary quotient $K_{\mathbb Q,S}/K_{\mathbb Z,S}$.
+
+The comparison with the Pass-94 solid dual
+$$
+D\epsilon\simeq\mathbb Q[-1],
+\qquad
+\epsilon=\widehat{\mathbb Z}/\mathbb Z,
+$$
+is not raw degree-$0$ object equality.  The bridge is the canonical unit
+extension
+$$
+0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0.
+$$
+Applying the extension/solid-dual passage sends one
+$\mathbb Q/\mathbb Z$ boundary coefficient to one shifted
+$\mathbb Q[-1]$ constant-term obstruction generator.  Thus
+$T_S\cong(\mathbb Q/\mathbb Z)^{|S|-1}$ presents $|S|-1$ finite-support
+copies of the generator before passing to the all-prime boundary.
+
+Consequently, the finite-support multiplicity $|S|-1$ is local-support
+bookkeeping, but the $\mathbb Q/\mathbb Z$ coefficient is not a separate
+artifact: it is the torsion presentation of the same shifted obstruction whose
+all-prime solid-dual form is $\mathbb Q[-1]$.  This bridge does not create a
+degree-$0$ Weyl/Fourier map $\epsilon\to\mathbb Q$.
