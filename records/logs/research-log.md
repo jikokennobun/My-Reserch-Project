@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 102)
+
+- Pushed the Pass-101 $\mathbb Z/2$ sign local system through the primitive
+  collapse and finite-adele boundary.  The unit extension
+  $\beta=[0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0]$ and the
+  all-prime row
+  $\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0]$ carry the
+  signed action $\beta\mapsto\sigma\beta$ and
+  $\delta_\epsilon\mapsto\sigma\delta_\epsilon$.  Finite shadows are
+  Bockstein classes $\pm1\in\mathbb Z/N$, visible exactly for $N>2$ and
+  collapsed at $N=2$.  The shifted bidual class
+  $D\epsilon\simeq\mathbb Q[-1]$ carries the same one-sided sign, while
+  two-sided sign change squares to $+1$.  Added checker/report and retargeted
+  Pass 103 to conductor-reduction naturality for signed boundary classes.
+
 ## 2026-06-21 (Autonomous discussion Pass 101)
 
 - Packaged primitive orientation choices as a signed oriented-support action

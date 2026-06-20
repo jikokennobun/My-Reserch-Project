@@ -2458,3 +2458,57 @@ $(\mathbb Q/\mathbb Z)[N]$.  This sign is visible for $N>2$ and collapses for
 $N=2$.  Hence the signed action groupoid/local-system package preserves
 exactly the earlier finite sign bookkeeping while still allowing the
 all-prime constant-term generator to be presented as an antipode quotient.
+
+## Sign local system through the finite-adele boundary (Pass 102)
+
+Let
+$$
+\beta=[0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0]
+$$
+denote the one-generator unit extension reached after choosing a primitive
+collapse $T_S\to\mathbb Q/\mathbb Z$.  Let
+$$
+\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0],
+\qquad
+\epsilon=\mathbb A_f/\mathbb Q,
+$$
+denote the all-prime finite-adele boundary class.
+
+The $\mathbb Z/2$ sign local system from the oriented-support quotient acts
+on these boundary/Yoneda classes by multiplication:
+$$
+\beta\longmapsto\sigma\beta,\qquad
+\delta_\epsilon\longmapsto\sigma\delta_\epsilon,
+\qquad \sigma\in\{\pm1\}.
+$$
+Thus the sign is not an additional boundary object.  It is the local-system
+coefficient on the one-dimensional line spanned by the extension class.
+
+At finite level $N$, the shadow of $\beta$ is the Bockstein generator
+$$
+1\in\operatorname{Ext}^1(\mathbb Z/N,\mathbb Z)\cong\mathbb Z/N.
+$$
+The signed shadow is
+$$
+\sigma\in\mathbb Z/N.
+$$
+Consequently the sign is visible exactly for $N>2$ and collapses at $N=2$.
+
+The boundary morphism of the finite-adele row is
+$$
+\partial_\epsilon:\epsilon\to\mathbb Q[1].
+$$
+Under the shifted dual identification
+$$
+D\epsilon\simeq\mathbb Q[-1],
+$$
+this is the same generator shifted.  A one-sided sign change negates the
+class; applying the sign on both source and target multiplies by
+$(-1)^2=1$.  Hence the biduality square is compatible with the antipode
+involution.
+
+The plain coarse quotient $[c]=\{c,-c\}$ is still insufficient because it
+forgets whether the boundary class is $+\delta_\epsilon$ or
+$-\delta_\epsilon$.  The $\mathbb Z/2$ local system is sufficient for the
+finite sign bookkeeping and does not create any degree-$0$ Weyl/Fourier map
+$\epsilon\to\mathbb Q$.

@@ -6,8 +6,25 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 102
-- Last pass note: Pass 101 (2026-06-21) packaged the orientation torsor as a
+- Current pass: 103
+- Last pass note: Pass 102 (2026-06-21) pushed the Pass-101
+  $\mathbb Z/2$ sign local system through the primitive collapse and the
+  finite-adele boundary class.  The one-generator unit extension
+  $$\beta=[0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0]$$
+  and the all-prime row
+  $$\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0]$$
+  are the relevant Yoneda/boundary classes.  A signed orientation sends these
+  classes to $\sigma\beta$ and $\sigma\delta_\epsilon$; in finite
+  $N$-shadows this is the Bockstein generator $\pm1\in\mathbb Z/N$, visible
+  exactly for $N>2$ and collapsed at $N=2$.  The class representing
+  $D\epsilon\simeq\mathbb Q[-1]$ is the same shifted boundary class; a
+  one-sided sign negates it, while applying the sign on both sides squares to
+  $+1$.  No extra finite bookkeeping beyond the $\mathbb Z/2$ local system is
+  needed, and no degree-$0$ Weyl map is created.  Machine-verified
+  `check-pass102.py` ->
+  `pass102-sign-local-system-adele-boundary-check.json` PASS. Counter
+  102->103.
+- Earlier note: Pass 101 (2026-06-21) packaged the orientation torsor as a
   signed oriented-support action groupoid.  Objects are pairs $(S,c)$ with
   $c\in\mathcal O_S$, and a morphism $(S,c)\to(T,d)$ is an inclusion
   $S\subseteq T$ plus a sign $\sigma\in\{\pm1\}$ satisfying
@@ -11650,3 +11667,102 @@ Next step:
 Pass 102 should push the $\mathbb Z/2$ sign local system through
 $[\mathbb Q\to\mathbb A_f]$ and identify the exact boundary or Yoneda class
 representing biduality on $D\epsilon$.
+
+### Pass 102 - 2026-06-21 JST
+
+Focus:
+Push the $\mathbb Z/2$ sign local system through the primitive collapse and
+the finite-adele constant-term boundary.
+
+Proposer:
+Let
+$$
+\beta=[0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0]
+$$
+be the one-generator unit extension reached after a primitive collapse
+$T_S\to\mathbb Q/\mathbb Z$.  Let
+$$
+\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0],
+\qquad \epsilon=\mathbb A_f/\mathbb Q,
+$$
+be the all-prime constant-term boundary class.  A signed orientation
+$(S,c,\sigma)$ does not create a new boundary object; it sends the already
+chosen class to
+$$
+\sigma\beta,\qquad \sigma\delta_\epsilon.
+$$
+Thus the sign local system is the coefficient system acting on the
+one-dimensional boundary line spanned by the extension class.
+
+Skeptic:
+The plain antipode quotient $[c]=\{c,-c\}$ still cannot remember this action.
+After quotienting, the primitive line remains, but the distinction between
+$+\delta_\epsilon$ and $-\delta_\epsilon$ is absent.  Conversely, adding more
+finite conductor data is unnecessary: at finite level $N$, the class is just
+the signed Bockstein generator
+$$
+\pm1\in\mathbb Z/N,
+$$
+so the only collapse is the expected one, $1=-1$ when $N=2$.
+
+Formalist:
+The exact boundary/Yoneda class representing the shifted bidual object is
+the boundary morphism
+$$
+\partial_\epsilon:\epsilon\to\mathbb Q[1]
+$$
+associated to $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.  Under the
+identification
+$$
+D\epsilon\simeq\mathbb Q[-1],
+$$
+this same class is the shifted generator.  A one-sided sign change on the
+quotient or kernel multiplies the extension class by $-1$; applying the sign
+on both sides multiplies by $(-1)^2=1$, so the biduality square is compatible
+with the involutive antipode.  This still does not provide a degree-$0$
+Weyl/Fourier morphism $\epsilon\to\mathbb Q$.
+
+> **Theorem 102a (signed boundary action).** The $\mathbb Z/2$ local system
+> acts on the unit extension and the all-prime finite-adele row by
+> $\beta\mapsto\sigma\beta$ and
+> $\delta_\epsilon\mapsto\sigma\delta_\epsilon$.
+>
+> **Theorem 102b (finite Bockstein shadow).** At finite level $N$, the signed
+> boundary class is $\sigma\in\mathbb Z/N$.  The sign is visible exactly when
+> $N>2$ and collapses when $N=2$.
+>
+> **Theorem 102c (biduality sign).** The shifted class
+> $D\epsilon\simeq\mathbb Q[-1]$ carries the same one-sided sign.  Acting on
+> both source and target squares the sign to $+1$.
+>
+> **Theorem 102d (no extra Weyl data).** The local system is sufficient for
+> the finite sign bookkeeping and does not create a degree-$0$ map
+> $\epsilon\to\mathbb Q$.
+
+Machine verification (`code/scripts/check-pass102.py` ->
+`artifacts/reports/pass102-sign-local-system-adele-boundary-check.json`,
+PASS): the checker verifies finite Bockstein classes $\pm1\bmod N$, primitive
+collapse surjectivity after signing, support-transport invariance of the
+signed boundary class, one-sided Yoneda negation, two-sided biduality
+involutivity, and sufficiency of the $\mathbb Z/2$ local system.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-102
+  entry; State counter $102\to103$.
+- `records/logs/research-log.md`: Pass-102 entry.
+- `research/definitions.md`: added the sign local system through the
+  finite-adele boundary.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-102 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  resolved the sign-local-system boundary task and retargeted the next pass
+  to conductor-reduction naturality for the signed boundary class.
+- `code/scripts/check-pass102.py`,
+  `artifacts/reports/pass102-sign-local-system-adele-boundary-check.json`:
+  new.
+- `artifacts/pdf/sign-local-system-adele-boundary-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 103 should package the signed boundary class as a natural transformation
+over finite conductor reductions and compare it with the CRT-acyclic finite
+constant-term complexes from Pass 95.

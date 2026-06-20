@@ -1194,12 +1194,32 @@
   $N>2$ and collapse at $N=2$.  Machine-verified
   `artifacts/reports/pass101-oriented-support-groupoid-antipode-quotient-check.json`
   (PASS).
-- **[New (Pass 101)]** **Signed local system through the finite-adele constant term.**
+- **[Resolved (Pass 102)]** **Signed local system through the finite-adele constant term.**
   Push the $\mathbb Z/2$ sign local system from the oriented-support quotient
   through the primitive collapse and the all-prime complex
   $[\mathbb Q\to\mathbb A_f]$.  Identify the exact boundary/Yoneda class that
   represents biduality on $D\epsilon\simeq\mathbb Q[-1]$, and determine how
   the mod-$2$ sign collapse appears in finite conductor shadows.
+  **Resolution:** the sign local system acts on the one-generator unit
+  extension
+  $\beta=[0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0]$ and the
+  all-prime boundary
+  $\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0]$ by
+  multiplication: $\beta\mapsto\sigma\beta$ and
+  $\delta_\epsilon\mapsto\sigma\delta_\epsilon$.  The finite shadow is the
+  signed Bockstein class $\pm1\in\mathbb Z/N$, visible exactly for $N>2$ and
+  collapsed for $N=2$.  The class representing
+  $D\epsilon\simeq\mathbb Q[-1]$ carries the same one-sided sign, while
+  two-sided sign action squares to $+1$.  No extra finite sign bookkeeping
+  or degree-$0$ Weyl morphism is produced.  Machine-verified
+  `artifacts/reports/pass102-sign-local-system-adele-boundary-check.json`
+  (PASS).
+- **[New (Pass 102)]** **Signed boundary naturality under conductor reduction.**
+  Package the signed boundary/Yoneda class as a natural transformation over
+  finite conductor reductions $M\mid N$.  Compare this with the Pass-95
+  CRT-acyclic finite constant-term complexes, and decide whether conductor
+  reduction introduces any sign-twisted obstruction beyond the mod-$2$
+  collapse already recorded.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

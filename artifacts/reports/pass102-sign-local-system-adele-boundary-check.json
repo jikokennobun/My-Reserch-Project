@@ -1,0 +1,1801 @@
+{
+  "pass": 102,
+  "title": "Sign local system through the finite-adele boundary",
+  "A_signed_bockstein_shadows": {
+    "statement": "The sign local system sends the finite Bockstein generator 1 in Z/N to +/-1 mod N.",
+    "rows": [
+      {
+        "level_n": 2,
+        "plus_class_mod_n": 1,
+        "minus_class_mod_n": 1,
+        "sign_visible": false,
+        "visible_exactly_when_n_gt_2": true
+      },
+      {
+        "level_n": 3,
+        "plus_class_mod_n": 1,
+        "minus_class_mod_n": 2,
+        "sign_visible": true,
+        "visible_exactly_when_n_gt_2": true
+      },
+      {
+        "level_n": 4,
+        "plus_class_mod_n": 1,
+        "minus_class_mod_n": 3,
+        "sign_visible": true,
+        "visible_exactly_when_n_gt_2": true
+      },
+      {
+        "level_n": 5,
+        "plus_class_mod_n": 1,
+        "minus_class_mod_n": 4,
+        "sign_visible": true,
+        "visible_exactly_when_n_gt_2": true
+      },
+      {
+        "level_n": 6,
+        "plus_class_mod_n": 1,
+        "minus_class_mod_n": 5,
+        "sign_visible": true,
+        "visible_exactly_when_n_gt_2": true
+      },
+      {
+        "level_n": 8,
+        "plus_class_mod_n": 1,
+        "minus_class_mod_n": 7,
+        "sign_visible": true,
+        "visible_exactly_when_n_gt_2": true
+      },
+      {
+        "level_n": 12,
+        "plus_class_mod_n": 1,
+        "minus_class_mod_n": 11,
+        "sign_visible": true,
+        "visible_exactly_when_n_gt_2": true
+      }
+    ],
+    "bockstein_visibility_ok": true
+  },
+  "B_collapse_to_boundary": {
+    "statement": "Primitive signed collapses remain surjective mod N and carry the sign to the Bockstein/Yoneda class.",
+    "rows": [
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 2,
+        "sign": 1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 2,
+        "sign": -1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 3,
+        "sign": 1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 3,
+        "sign": -1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 2,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 4,
+        "sign": 1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 4,
+        "sign": -1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 3,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 5,
+        "sign": 1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 5,
+        "sign": -1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 4,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 6,
+        "sign": 1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 6,
+        "sign": -1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 5,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 8,
+        "sign": 1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 8,
+        "sign": -1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 7,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 12,
+        "sign": 1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 12,
+        "sign": -1,
+        "orientation": [
+          -1,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 1,
+        "signed_bockstein_class_mod_n": 11,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 2,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 2,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 2,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 2,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 3,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 3,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 3,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 3,
+        "signed_bockstein_class_mod_n": 2,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 4,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 4,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 4,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 4,
+        "signed_bockstein_class_mod_n": 3,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 5,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 5,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 5,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 5,
+        "signed_bockstein_class_mod_n": 4,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 6,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 6,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 6,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 6,
+        "signed_bockstein_class_mod_n": 5,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 8,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 8,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 8,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 8,
+        "signed_bockstein_class_mod_n": 7,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 12,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 12,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 12,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 12,
+        "signed_bockstein_class_mod_n": 11,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 4,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 4,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 9,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 9,
+        "signed_bockstein_class_mod_n": 2,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 16,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 16,
+        "signed_bockstein_class_mod_n": 3,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 25,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 25,
+        "signed_bockstein_class_mod_n": 4,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 36,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 36,
+        "signed_bockstein_class_mod_n": 5,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 64,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 64,
+        "signed_bockstein_class_mod_n": 7,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "sign": 1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 144,
+        "signed_bockstein_class_mod_n": 1,
+        "sign_class_matches": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "sign": -1,
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "signed_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "collapse_surjective_mod_n": true,
+        "kernel_size": 144,
+        "signed_bockstein_class_mod_n": 11,
+        "sign_class_matches": true
+      }
+    ],
+    "collapse_boundary_ok": true
+  },
+  "C_support_transport": {
+    "statement": "Zero-extension support transport preserves the signed boundary class.",
+    "rows": [
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 2,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 2,
+        "sign": -1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 3,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 3,
+        "sign": -1,
+        "transported_signed_class_mod_n": 2,
+        "direct_signed_class_mod_n": 2,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 4,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 4,
+        "sign": -1,
+        "transported_signed_class_mod_n": 3,
+        "direct_signed_class_mod_n": 3,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 5,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 5,
+        "sign": -1,
+        "transported_signed_class_mod_n": 4,
+        "direct_signed_class_mod_n": 4,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 6,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 6,
+        "sign": -1,
+        "transported_signed_class_mod_n": 5,
+        "direct_signed_class_mod_n": 5,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 8,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 8,
+        "sign": -1,
+        "transported_signed_class_mod_n": 7,
+        "direct_signed_class_mod_n": 7,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 12,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 12,
+        "sign": -1,
+        "transported_signed_class_mod_n": 11,
+        "direct_signed_class_mod_n": 11,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "sign": -1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "sign": -1,
+        "transported_signed_class_mod_n": 2,
+        "direct_signed_class_mod_n": 2,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "sign": -1,
+        "transported_signed_class_mod_n": 3,
+        "direct_signed_class_mod_n": 3,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "sign": -1,
+        "transported_signed_class_mod_n": 4,
+        "direct_signed_class_mod_n": 4,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "sign": -1,
+        "transported_signed_class_mod_n": 5,
+        "direct_signed_class_mod_n": 5,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "sign": -1,
+        "transported_signed_class_mod_n": 7,
+        "direct_signed_class_mod_n": 7,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "sign": -1,
+        "transported_signed_class_mod_n": 11,
+        "direct_signed_class_mod_n": 11,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "sign": -1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "sign": -1,
+        "transported_signed_class_mod_n": 2,
+        "direct_signed_class_mod_n": 2,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "sign": -1,
+        "transported_signed_class_mod_n": 3,
+        "direct_signed_class_mod_n": 3,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 5,
+        "sign": -1,
+        "transported_signed_class_mod_n": 4,
+        "direct_signed_class_mod_n": 4,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "sign": -1,
+        "transported_signed_class_mod_n": 5,
+        "direct_signed_class_mod_n": 5,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "sign": -1,
+        "transported_signed_class_mod_n": 7,
+        "direct_signed_class_mod_n": 7,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "sign": 1,
+        "transported_signed_class_mod_n": 1,
+        "direct_signed_class_mod_n": 1,
+        "transport_preserves_boundary_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "sign": -1,
+        "transported_signed_class_mod_n": 11,
+        "direct_signed_class_mod_n": 11,
+        "transport_preserves_boundary_sign": true
+      }
+    ],
+    "support_transport_ok": true
+  },
+  "D_yoneda_sign_action": {
+    "statement": "One-sided sign change negates the extension class; two-sided sign change squares to identity.",
+    "rows": [
+      {
+        "sign": 1,
+        "quotient_pullback_class": 1,
+        "kernel_pushout_class": 1,
+        "simultaneous_two_sided_class": 1,
+        "one_sided_sign_negates_class": true,
+        "two_sided_sign_squares_to_identity": true
+      },
+      {
+        "sign": -1,
+        "quotient_pullback_class": -1,
+        "kernel_pushout_class": -1,
+        "simultaneous_two_sided_class": 1,
+        "one_sided_sign_negates_class": true,
+        "two_sided_sign_squares_to_identity": true
+      }
+    ],
+    "yoneda_sign_ok": true
+  },
+  "E_boundary_verdict": {
+    "statement": "The Z/2 local system, not the plain coarse quotient, is the sufficient sign package for the adele boundary.",
+    "row": {
+      "boundary_class": "[0 -> Q -> A_f -> epsilon -> 0] in Ext^1(epsilon, Q)",
+      "finite_shadow": "Bockstein class [0 -> Z -> Z -> Z/N -> 0], generator 1 in Z/N",
+      "sign_local_system_action": "sigma sends the boundary/Yoneda class to sigma times the class",
+      "biduality_class": "D epsilon ~= Q[-1] is represented by the same shifted boundary class; two-sided sign change squares to +1",
+      "plain_coarse_quotient_sufficient": false,
+      "extra_finite_bookkeeping_needed": false,
+      "no_degree_zero_weyl_map_created": true,
+      "recommended_next_task": "Package the signed boundary class as a natural transformation over conductor reductions and compare it with the finite CRT-acyclic complexes."
+    },
+    "boundary_verdict_ok": true
+  },
+  "conclusion": {
+    "sign_local_system": "The sign acts by multiplying beta and delta_epsilon by +/-1.",
+    "finite_shadow": "The finite class is +/-1 in Z/N, visible exactly for N>2.",
+    "biduality": "The shifted class D epsilon ~= Q[-1] carries the same one-sided sign; applying the sign on both sides gives +1.",
+    "next_task": "Package the signed boundary class as a natural transformation over conductor reductions and compare it with the finite CRT-acyclic complexes."
+  },
+  "checks": {
+    "bockstein_visibility_ok": true,
+    "collapse_boundary_ok": true,
+    "support_transport_ok": true,
+    "yoneda_sign_ok": true,
+    "boundary_verdict_ok": true
+  },
+  "overall": "PASS"
+}

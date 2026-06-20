@@ -42,22 +42,22 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 101 -> 102: sign local system through the finite-adele bridge)**
-  Pass 101 packaged primitive orientation choices as a signed
-  oriented-support action groupoid.  Objects are $(S,c)$ with
-  $c\in\mathcal O_S$, and a morphism $(S,c)\to(T,d)$ is an inclusion
-  $S\subseteq T$ plus a sign $\sigma\in\{\pm1\}$ satisfying
-  $d=\sigma e_{S,T}(c)$.  The coarse quotient $[c]=\{c,-c\}$ presents
-  primitive collapse lines but loses the signed path label; the signed
-  groupoid, or the quotient plus its $\mathbb Z/2$ sign local system, retains
-  the Pass-94 functional-equation sign.  Open:
-  (i) push this $\mathbb Z/2$ sign local system through the chosen collapse
-  and the all-prime row $[\mathbb Q\to\mathbb A_f]$;
-  (ii) identify the exact boundary/Yoneda class representing biduality on
-  $D\epsilon\simeq\mathbb Q[-1]$;
-  (iii) decide how the mod-$2$ sign collapse appears in finite conductor
-  shadows, and whether any extra bookkeeping is needed beyond the local
-  system.
+- **(Pass 102 -> 103: signed boundary naturality over conductor reductions)**
+  Pass 102 identified the sign local system action on the unit extension
+  $\beta=[0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0]$ and the
+  finite-adele boundary
+  $\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0]$:
+  a signed orientation sends these classes to $\sigma\beta$ and
+  $\sigma\delta_\epsilon$.  Finite shadows are Bockstein classes
+  $\pm1\in\mathbb Z/N$, visible exactly for $N>2$ and collapsed at $N=2$.
+  The shifted class $D\epsilon\simeq\mathbb Q[-1]$ carries the same one-sided
+  sign, while two-sided sign change squares to $+1$.  Open:
+  (i) package the signed boundary class as a natural transformation over
+  finite conductor reductions $M\mid N$;
+  (ii) compare this signed boundary naturality with the CRT-acyclic finite
+  constant-term complexes from Pass 95;
+  (iii) decide whether conductor reduction introduces any sign-twisted
+  obstruction beyond the already recorded mod-$2$ collapse.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

@@ -37,6 +37,16 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass102-sign-local-system-adele-boundary-check.json`: verifies the
+  Pass-102 finite certificate for pushing the `Z/2` sign local system through
+  the primitive collapse and finite-adele boundary. It checks that finite
+  Bockstein shadows are `+/-1 mod N`, visible exactly for `N > 2`; that
+  signed primitive collapses remain surjective modulo `N`; that support
+  zero-extension preserves the signed boundary class; that one-sided sign
+  change negates the Yoneda class while two-sided sign change squares to the
+  identity; and that no extra finite bookkeeping or degree-0 Weyl map is
+  introduced.
+
 - `pass101-oriented-support-groupoid-antipode-quotient-check.json`: verifies
   the Pass-101 finite certificate for the signed oriented-support action
   groupoid. It checks signed morphism closure
