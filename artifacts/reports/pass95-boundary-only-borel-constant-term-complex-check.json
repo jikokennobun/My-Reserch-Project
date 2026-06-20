@@ -1,0 +1,520 @@
+{
+  "pass": 95,
+  "title": "Boundary-only Borel constant-term complex",
+  "A_finite_conductor_complexes": {
+    "statement": "The finite conductor shadows [Z/N -> product Z/p^e] are CRT isomorphism complexes, hence acyclic in ordinary finite cohomology.",
+    "rows": [
+      {
+        "conductor": 2,
+        "prime_powers": [
+          2
+        ],
+        "source_size": 2,
+        "target_size": 2,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 2
+      },
+      {
+        "conductor": 3,
+        "prime_powers": [
+          3
+        ],
+        "source_size": 3,
+        "target_size": 3,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 6
+      },
+      {
+        "conductor": 4,
+        "prime_powers": [
+          4
+        ],
+        "source_size": 4,
+        "target_size": 4,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 8
+      },
+      {
+        "conductor": 5,
+        "prime_powers": [
+          5
+        ],
+        "source_size": 5,
+        "target_size": 5,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 20
+      },
+      {
+        "conductor": 6,
+        "prime_powers": [
+          2,
+          3
+        ],
+        "source_size": 6,
+        "target_size": 6,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 12
+      },
+      {
+        "conductor": 8,
+        "prime_powers": [
+          8
+        ],
+        "source_size": 8,
+        "target_size": 8,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 32
+      },
+      {
+        "conductor": 9,
+        "prime_powers": [
+          9
+        ],
+        "source_size": 9,
+        "target_size": 9,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 54
+      },
+      {
+        "conductor": 10,
+        "prime_powers": [
+          2,
+          5
+        ],
+        "source_size": 10,
+        "target_size": 10,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 40
+      },
+      {
+        "conductor": 12,
+        "prime_powers": [
+          4,
+          3
+        ],
+        "source_size": 12,
+        "target_size": 12,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 48
+      },
+      {
+        "conductor": 30,
+        "prime_powers": [
+          2,
+          3,
+          5
+        ],
+        "source_size": 30,
+        "target_size": 30,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 240
+      },
+      {
+        "conductor": 60,
+        "prime_powers": [
+          4,
+          3,
+          5
+        ],
+        "source_size": 60,
+        "target_size": 60,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 960
+      },
+      {
+        "conductor": 120,
+        "prime_powers": [
+          8,
+          3,
+          5
+        ],
+        "source_size": 120,
+        "target_size": 120,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 3840
+      },
+      {
+        "conductor": 210,
+        "prime_powers": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_size": 210,
+        "target_size": 210,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 10080
+      },
+      {
+        "conductor": 420,
+        "prime_powers": [
+          4,
+          3,
+          5,
+          7
+        ],
+        "source_size": 420,
+        "target_size": 420,
+        "diagonal_isomorphism": true,
+        "h0_size": 1,
+        "h1_size": 1,
+        "finite_shadow_acyclic": true,
+        "borel_shadow_size": 40320
+      }
+    ],
+    "finite_complexes_ok": true
+  },
+  "B_conductor_naturality": {
+    "statement": "For N | M, the reduction square commutes with the diagonal complex and preserves the Borel unit class.",
+    "rows": [
+      {
+        "smaller_conductor": 2,
+        "larger_conductor": 4,
+        "divides": true,
+        "diagonal_square_commutes_on_samples": true,
+        "unit_class_preserved": true,
+        "borel_reduction_preserves_levi_unit": true
+      },
+      {
+        "smaller_conductor": 3,
+        "larger_conductor": 9,
+        "divides": true,
+        "diagonal_square_commutes_on_samples": true,
+        "unit_class_preserved": true,
+        "borel_reduction_preserves_levi_unit": true
+      },
+      {
+        "smaller_conductor": 6,
+        "larger_conductor": 12,
+        "divides": true,
+        "diagonal_square_commutes_on_samples": true,
+        "unit_class_preserved": true,
+        "borel_reduction_preserves_levi_unit": true
+      },
+      {
+        "smaller_conductor": 10,
+        "larger_conductor": 30,
+        "divides": true,
+        "diagonal_square_commutes_on_samples": true,
+        "unit_class_preserved": true,
+        "borel_reduction_preserves_levi_unit": true
+      },
+      {
+        "smaller_conductor": 30,
+        "larger_conductor": 60,
+        "divides": true,
+        "diagonal_square_commutes_on_samples": true,
+        "unit_class_preserved": true,
+        "borel_reduction_preserves_levi_unit": true
+      },
+      {
+        "smaller_conductor": 60,
+        "larger_conductor": 420,
+        "divides": true,
+        "diagonal_square_commutes_on_samples": true,
+        "unit_class_preserved": true,
+        "borel_reduction_preserves_levi_unit": true
+      }
+    ],
+    "conductor_naturality_ok": true
+  },
+  "C_support_projection": {
+    "statement": "Support projection from larger to smaller supports commutes with the diagonal complex.  Zero-insertion has finite CRT lifts at every conductor but is not an exact all-prime diagonal-preserving map.",
+    "rows": [
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "exponent": 1,
+        "smaller_conductor": 2,
+        "larger_conductor": 6,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "exponent": 2,
+        "smaller_conductor": 4,
+        "larger_conductor": 36,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2
+        ],
+        "larger_support": [
+          2,
+          3
+        ],
+        "exponent": 3,
+        "smaller_conductor": 8,
+        "larger_conductor": 216,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "exponent": 1,
+        "smaller_conductor": 6,
+        "larger_conductor": 30,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "exponent": 2,
+        "smaller_conductor": 36,
+        "larger_conductor": 900,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "exponent": 3,
+        "smaller_conductor": 216,
+        "larger_conductor": 27000,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "exponent": 1,
+        "smaller_conductor": 30,
+        "larger_conductor": 210,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "exponent": 2,
+        "smaller_conductor": 900,
+        "larger_conductor": 44100,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "exponent": 3,
+        "smaller_conductor": 27000,
+        "larger_conductor": 9261000,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "exponent": 1,
+        "smaller_conductor": 210,
+        "larger_conductor": 2310,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "exponent": 2,
+        "smaller_conductor": 44100,
+        "larger_conductor": 5336100,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "exponent": 3,
+        "smaller_conductor": 9261000,
+        "larger_conductor": 12326391000,
+        "projection_square_commutes": true,
+        "finite_crt_lift_for_zero_insertion_exists": true,
+        "exact_zero_insertion_preserves_diagonal": false,
+        "exact_zero_insertion_is_canonical_all_prime_map": false
+      }
+    ],
+    "support_projection_ok": true
+  },
+  "D_constant_term_complex": {
+    "statement": "The all-prime Borel complex C_B=Q^x semidirect [Q -> A_f] has solid H^1=epsilon and no Weyl/Whittaker component.",
+    "row": {
+      "complex_name": "C_B = Q^x semidirect [Q -> A_f]",
+      "degree_0": "Q with global Levi Q^x action",
+      "degree_1": "A_f with compatible Q^x action",
+      "finite_shadows_acyclic": true,
+      "solid_h0": "0",
+      "solid_h1": "epsilon = A_f/Q = Zhat/Z",
+      "levi_action": "global Q^x rescales the two-term boundary; no local Levi product",
+      "nontrivial_whittaker_exists": false,
+      "standard_weyl_intertwiner_exists": false,
+      "interpretation": "This is the constant-term functional-equation shadow: the finite shadows are acyclic, while the all-prime solid boundary carries epsilon.  There is no Weyl operator."
+    },
+    "constant_term_ok": true
+  },
+  "conclusion": {
+    "complex": "C_B = Q^x semidirect [Q -> A_f]",
+    "finite_shadow": "Every fixed finite conductor shadow is CRT-acyclic.",
+    "all_prime_boundary": "H^1(C_B)=A_f/Q=Zhat/Z=epsilon in the solid boundary sense.",
+    "naturality": "Conductor reductions and support projections are canonical; support enlargement is only a finite-conductor choice/span.",
+    "no_weyl_theorem": "The package is a constant-term functional-equation shadow. It preserves the Pass-81 no-standard-intertwiner wall.",
+    "next_task": "Compare this constant-term complex with the local Loeb sheafification and identify the exact kernel lost by passing from global Levi to local Levi data."
+  },
+  "overall": "PASS"
+}

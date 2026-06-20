@@ -1043,13 +1043,35 @@
   no-Weyl wall intact.  Machine-verified
   `artifacts/reports/pass94-all-prime-borel-jshriek-solid-dual-check.json`
   (PASS).
-- **[New (Pass 94)]** **Boundary-only functional equation as a Borel complex.**
+- **[Resolved (Pass 95)]** **Boundary-only functional equation as a Borel complex.**
   Package the signed boundary shadow from Pass 94 as a two-term Borel or
   constant-term complex, probably built from
   $[\mathbb Q\to\mathbb A_f]$ with its $\mathbb Q^\times$ action.  Prove that
   it is natural under conductor restriction and finite support projection, and
   formulate a "functional equation without Weyl operator" theorem that keeps
   the Pass-81 no-standard-intertwiner wall explicit.
+  **Resolution:** the package is the two-term Borel constant-term complex
+  $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f].$$
+  Every fixed finite conductor shadow
+  $[\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e]$ is CRT-acyclic, while
+  the all-prime solid boundary has
+  $$H^1(C_B)=\mathbb A_f/\mathbb Q\cong\widehat{\mathbb Z}/\mathbb Z=\epsilon.$$
+  Conductor reductions commute with the diagonal complexes and preserve the
+  Borel unit; support projection is canonical; support enlargement is only a
+  finite-conductor CRT choice/span.  The theorem is therefore a constant-term
+  functional-equation shadow with no nontrivial Whittaker coefficient and no
+  standard Weyl/Fourier intertwiner.  Machine-verified
+  `artifacts/reports/pass95-boundary-only-borel-constant-term-complex-check.json`
+  (PASS).
+- **[New (Pass 95)]** **Constant-term Borel complex versus local Loeb sheafification.**
+  Compare
+  $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f]$$
+  with the local Loeb sheafification
+  $$(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z).$$
+  Identify exactly which kernel is lost when global Levi data and the
+  finite-adele boundary are replaced by local Levi/stalk data, and decide
+  whether this comparison is best formulated as stackification, Hausdorff
+  reflection, local constant-term projection, or a map of two-term complexes.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

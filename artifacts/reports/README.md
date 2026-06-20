@@ -37,6 +37,15 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass95-boundary-only-borel-constant-term-complex-check.json`: verifies the
+  Pass-95 finite certificate for the boundary-only Borel constant-term
+  complex. It checks that finite conductor complexes
+  `[Z/N -> product Z/p^e]` are CRT-acyclic, conductor reductions commute and
+  preserve the Borel unit, support projections commute while zero-insertion is
+  only a finite-conductor choice/span, and the all-prime complex
+  `Q^x semidirect [Q -> A_f]` has solid boundary
+  `A_f/Q = Zhat/Z` with no Whittaker component or standard Weyl intertwiner.
+
 - `pass94-all-prime-borel-jshriek-solid-dual-check.json`: verifies the
   Pass-94 finite certificate for the Verdier/solid dual of the all-prime Borel
   $j_!$ class. It checks finite signed boundary duality

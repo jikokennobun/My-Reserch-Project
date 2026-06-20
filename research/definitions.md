@@ -2122,3 +2122,37 @@ No forbidden degree-$0$ flip is created, since
 $$
 \operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.
 $$
+
+## Boundary-only Borel constant-term complex (Pass 95)
+
+The **boundary-only Borel constant-term complex** is
+$$
+C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f],
+$$
+with cohomological degrees $0\to1$.  The differential is the diagonal
+inclusion $\mathbb Q\hookrightarrow\mathbb A_f$, and the global Levi
+$\mathbb Q^\times$ acts by scalar multiplication on both terms.
+
+Its all-prime solid boundary is
+$$
+H^0(C_B)=0,\qquad
+H^1(C_B)=\mathbb A_f/\mathbb Q
+\cong\widehat{\mathbb Z}/\mathbb Z=\epsilon.
+$$
+Thus $C_B$ packages the Pass-94 boundary functional-equation shadow without
+creating an opposite Borel or a degree-$0$ Weyl operator.
+
+At finite conductor $N$, the shadow is
+$$
+C_{B,N}=(\mathbb Z/N)^\times\ltimes
+\left[\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e\right].
+$$
+The diagonal map is an isomorphism by the Chinese remainder theorem, so every
+fixed finite conductor shadow is ordinary-acyclic.  The phantom is therefore
+not a fixed-level finite cokernel; it is the all-prime solid/pro boundary.
+
+For $N\mid M$, conductor reduction gives a commuting square of two-term
+complexes and preserves the Borel unit class.  For supports $S\subseteq T$,
+projection $T\to S$ is canonical.  Support enlargement $S\to T$ is only a
+finite-conductor CRT choice/span: exact zero-insertion does not preserve the
+diagonal copy of $\mathbb Z$ in the all-prime product.

@@ -42,25 +42,23 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 94 -> 95: boundary-only functional equation for the all-prime Borel class)**
-  Pass 94 computed the Verdier/solid dual of the all-prime Borel $j_!$ class.
-  The unipotent limit is $\epsilon=\widehat{\mathbb Z}/\mathbb Z$, and
-  $$D\epsilon\simeq\mathbb Q[-1].$$
-  Finite shadows still obey the signed Verdier rule
-  $$D(d_S)=-d_S^T,$$
-  and all-prime biduality gives the antipode sign
-  $\eta_\epsilon=-\mathrm{id}_\epsilon$.  However, the result is only a
-  boundary-level functional-equation shadow: no degree-$0$ Weyl/Fourier flip is
-  created because
-  $$\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0.$$
+- **(Pass 95 -> 96: constant-term Borel complex versus local Loeb sheafification)**
+  Pass 95 packaged the boundary-only functional-equation shadow as the
+  two-term Borel constant-term complex
+  $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f].$$
+  Fixed finite conductor shadows are CRT-acyclic, while the all-prime solid
+  boundary has
+  $$H^1(C_B)=\mathbb A_f/\mathbb Q\cong\widehat{\mathbb Z}/\mathbb Z=\epsilon.$$
+  Conductor reduction is natural and support projection is canonical; support
+  enlargement remains a finite-conductor choice/span.
   Open:
-  (i) package the signed boundary shadow as a two-term Borel or constant-term
-  complex, probably using $[\mathbb Q\to\mathbb A_f]$ with its
-  $\mathbb Q^\times$ action;
-  (ii) prove naturality of that complex under conductor restriction and finite
-  support projection;
-  (iii) state a clean "functional equation without Weyl operator" theorem that
-  preserves the Pass-81 no-intertwiner wall.
+  (i) compare $C_B$ with the local Loeb sheafification
+  $$(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z);$$
+  (ii) identify exactly which kernel is lost when global Levi and the
+  finite-adele boundary are replaced by local Levi/stalk data;
+  (iii) decide whether this loss is best described as stackification,
+  Hausdorff reflection, local constant-term projection, or a map of two-term
+  complexes.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

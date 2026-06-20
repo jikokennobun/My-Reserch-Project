@@ -5190,3 +5190,86 @@ biduality sign $-1$, and the absence of a degree-$0$ Weyl map.
 **Limit of the pass.**  The next task is to package this boundary-shadow
 functional equation as a constant-term or two-term Borel complex natural under
 conductor restriction, while keeping the no-Weyl-flip wall explicit.
+
+## Pass 95 - Boundary-only Borel constant-term complex
+
+Pass 95 packages the boundary-shadow functional equation from Pass 94 as an
+actual two-term complex.  The object is
+$$
+C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f],
+$$
+in cohomological degrees $0\to1$.  The map is the diagonal inclusion
+$\mathbb Q\hookrightarrow\mathbb A_f$, and the global Levi $\mathbb Q^\times$
+acts by scalar multiplication on both terms.
+
+The all-prime solid cohomology is
+$$
+H^0(C_B)=0,\qquad
+H^1(C_B)=\mathbb A_f/\mathbb Q\cong
+\widehat{\mathbb Z}/\mathbb Z=\epsilon.
+$$
+Thus $C_B$ is the constant-term carrier of the Pass-94 boundary sign.  It is
+not a principal-series intertwiner and not an opposite Borel.
+
+At finite conductor $N$, the shadow is
+$$
+C_{B,N}=(\mathbb Z/N)^\times\ltimes
+\left[\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e\right].
+$$
+The diagonal is an isomorphism by CRT, so each fixed finite conductor shadow
+is ordinary-acyclic:
+$$
+H^0(C_{B,N})=H^1(C_{B,N})=0.
+$$
+This explains why the phantom boundary is liman: finite stages see no
+ordinary cokernel, while the solid all-prime limit retains
+$\epsilon$.
+
+The naturality has two different directions.  If $N\mid M$, conductor
+reduction gives a commuting square of two-term complexes and preserves the
+Borel unit class.  If $S\subseteq T$ are finite supports, projection
+$T\to S$ is canonical.  But support enlargement $S\to T$ is not a canonical
+all-prime map: at each finite conductor CRT can produce a lift with residues
+$1$ on $S$ and $0$ on $T\setminus S$, but the exact idempotent vector is not a
+diagonal integer in $\prod_{p\in T}\mathbb Z_p$.  So enlargement remains a
+span or finite-conductor choice.
+
+The result is a precise "functional equation without Weyl operator":
+the signed boundary and constant term survive, but nontrivial Whittaker
+coefficients and the standard Weyl/Fourier intertwiner remain absent.
+
+> **Theorem 95a (constant-term complex).** The Borel boundary package is
+> $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f],$$
+> with $H^1(C_B)\cong\epsilon$ in the all-prime solid boundary.
+>
+> **Theorem 95b (finite conductor acyclicity).** For every conductor $N$,
+> $$\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e$$
+> is an isomorphism.  Hence fixed finite conductor shadows of $C_B$ are
+> ordinary-acyclic.
+>
+> **Theorem 95c (naturality).** Conductor reductions commute with the
+> two-term diagonal complex and preserve the Borel unit.  Support projection
+> is canonical; support enlargement is only a span or finite-conductor CRT
+> choice.
+>
+> **Theorem 95d (no-Weyl constant term).** $C_B$ is a constant-term
+> functional-equation shadow.  It has no nontrivial Whittaker component and no
+> standard Weyl/Fourier intertwiner.
+
+**Machine verification** (`code/scripts/check-pass95.py` ->
+`artifacts/reports/pass95-boundary-only-borel-constant-term-complex-check.json`,
+PASS): finite conductor complexes are CRT-isomorphism complexes; conductor
+reduction squares commute and preserve the Borel unit; support projection
+commutes while zero-insertion is only a finite CRT choice and not an exact
+all-prime diagonal-preserving map; and the constant-term row records
+$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f]$ with solid
+$H^1=\epsilon$, no nontrivial Whittaker coefficient, and no standard Weyl
+intertwiner.
+
+**Limit of the pass.**  The next task is to compare $C_B$ with the local Loeb
+sheafification
+$$
+(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z)
+$$
+and identify exactly which kernel is lost when global Levi data are replaced
+by local Levi data.

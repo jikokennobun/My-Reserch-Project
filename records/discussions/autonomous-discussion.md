@@ -6,8 +6,27 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 95
-- Last pass note: Pass 94 (2026-06-21) computed the Verdier/solid dual of the
+- Current pass: 96
+- Last pass note: Pass 95 (2026-06-21) packaged the boundary-only functional
+  equation shadow as the two-term Borel constant-term complex
+  $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f].$$
+  It is placed in cohomological degrees $0\to1$.  Every fixed finite
+  conductor shadow
+  $$[\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e]$$
+  is CRT-acyclic, so no ordinary finite conductor quotient carries the
+  phantom.  In the all-prime solid boundary, however,
+  $$H^0(C_B)=0,\qquad H^1(C_B)=\mathbb A_f/\mathbb Q\cong
+  \widehat{\mathbb Z}/\mathbb Z=\epsilon.$$
+  Conductor reductions commute with the diagonal complex and preserve the
+  Borel unit class; support projections are canonical, while support
+  enlargement remains a finite-conductor choice/span rather than an exact
+  all-prime diagonal-preserving map.  Thus the "functional equation" is a
+  constant-term boundary theorem, not a Weyl-intertwiner theorem: nontrivial
+  Whittaker coefficients and standard Weyl operators are still absent.
+  Machine-verified `check-pass95.py` ->
+  `pass95-boundary-only-borel-constant-term-complex-check.json` PASS. Counter
+  95->96.
+- Earlier note: Pass 94 (2026-06-21) computed the Verdier/solid dual of the
   all-prime Borel $j_!$ coefficient from Pass 93.  The unipotent all-prime
   class is
   $$\epsilon=\widehat{\mathbb Z}/\mathbb Z,$$
@@ -10844,3 +10863,112 @@ Next step:
 Pass 95 should package the boundary-shadow functional equation as a
 constant-term or two-term Borel complex natural under conductor restriction,
 without reintroducing a degree-$0$ Weyl flip.
+
+---
+
+### Pass 95 - 2026-06-21 JST
+
+Focus:
+Package the boundary-shadow functional equation as a constant-term or
+two-term Borel complex natural under conductor restriction.
+
+Proposer:
+The right package is the two-term Borel constant-term complex
+$$
+C_B:=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f],
+$$
+in cohomological degrees $0\to1$.  Its unipotent boundary is exactly the
+finite-adele row already isolated in Passes 84--86 and 94:
+$$
+0\to\mathbb Q\to\mathbb A_f\to
+\epsilon=\widehat{\mathbb Z}/\mathbb Z\to0.
+$$
+Thus
+$$
+H^0(C_B)=0,\qquad H^1(C_B)=\mathbb A_f/\mathbb Q\cong\epsilon.
+$$
+The global Levi $\mathbb Q^\times$ acts by scalar multiplication on the
+two-term complex.  This is the constant-term form of the functional-equation
+shadow: it keeps the boundary and the antipode sign, but it does not introduce
+an opposite Borel.
+
+The finite conductor shadow explains why this class is invisible to ordinary
+finite quotients.  At conductor $N$ the complex is
+$$
+C_{B,N}=(\mathbb Z/N)^\times\ltimes
+\left[\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e\right].
+$$
+The diagonal map is an isomorphism by CRT, so $H^0(C_{B,N})=H^1(C_{B,N})=0$.
+The boundary appears only after taking the all-prime solid/pro limit, not at a
+fixed conductor.
+
+Skeptic:
+There are two traps.  First, finite CRT lifts can imitate support
+zero-insertion at each conductor, but this is not an exact all-prime map:
+the idempotent vector $(1\text{ on }S,0\text{ on }T\setminus S)$ is not a
+diagonal integer in $\prod_{p\in T}\mathbb Z_p$.  Hence support enlargement
+remains a span or a choice, not a canonical morphism.  Second, calling
+$C_B$ a functional equation is safe only if "functional equation" means
+"constant-term boundary identity."  It is not a standard intertwiner,
+because the Pass-81 wall
+$$
+\operatorname{Hom}^0_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0
+$$
+still forbids a Weyl/Fourier operator.
+
+Formalist:
+> **Theorem 95a (constant-term Borel complex).** Define
+> $$C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f].$$
+> Then in the solid boundary sense
+> $$H^0(C_B)=0,\qquad H^1(C_B)=\mathbb A_f/\mathbb Q
+> \cong\widehat{\mathbb Z}/\mathbb Z=\epsilon.$$
+>
+> **Theorem 95b (finite conductor acyclicity).** For every finite conductor
+> $N$,
+> $$\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e$$
+> is an isomorphism by CRT.  Hence every fixed finite conductor shadow of
+> $C_B$ is ordinary-acyclic.
+>
+> **Theorem 95c (naturality and support direction).** If $N\mid M$, conductor
+> reduction gives a commuting square of two-term complexes and preserves the
+> Borel unit class.  For finite supports $S\subseteq T$, projection
+> $T\to S$ is canonical, while exact zero-insertion $S\to T$ is not an
+> all-prime diagonal-preserving map; it is only a finite-conductor CRT choice.
+>
+> **Theorem 95d (functional equation without Weyl operator).** The complex
+> $C_B$ is the constant-term functional-equation shadow of the all-prime
+> Borel class.  It has no nontrivial Whittaker component and no standard
+> Weyl/Fourier intertwiner.
+
+Machine-verified `code/scripts/check-pass95.py` ->
+`artifacts/reports/pass95-boundary-only-borel-constant-term-complex-check.json`
+(overall PASS): finite conductor complexes are CRT-isomorphism complexes;
+conductor reductions commute with diagonal maps and preserve the Borel unit;
+support projections commute, while zero-insertion has finite CRT lifts but is
+not an exact all-prime diagonal-preserving morphism; and the constant-term
+row records $C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f]$ with
+solid $H^1=\epsilon$, no nontrivial Whittaker coefficient, and no standard
+Weyl intertwiner.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-95 entry;
+  State counter $95\to96$.
+- `records/logs/research-log.md`: Pass-95 entry.
+- `research/definitions.md`: added the boundary-only Borel constant-term
+  complex.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-95 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  marked the boundary-only Borel complex task resolved and retargeted the next
+  pass to the comparison with local Loeb sheafification.
+- `code/scripts/check-pass95.py`,
+  `artifacts/reports/pass95-boundary-only-borel-constant-term-complex-check.json`:
+  new.
+- `artifacts/pdf/boundary-only-borel-constant-term-complex-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 96 should compare the constant-term complex $C_B$ with the local Loeb
+sheafification $(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$
+and identify exactly which kernel is lost when global Levi data are replaced
+by local Levi data.

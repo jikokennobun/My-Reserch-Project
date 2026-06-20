@@ -1,5 +1,16 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 95)
+
+- Packaged the boundary-only functional-equation shadow as the two-term Borel
+  constant-term complex
+  $C_B=\mathbb Q^\times\ltimes[\mathbb Q\to\mathbb A_f]$.  Fixed finite
+  conductor shadows are CRT-acyclic, while the all-prime solid boundary has
+  $H^1(C_B)=\mathbb A_f/\mathbb Q\cong\widehat{\mathbb Z}/\mathbb Z$.  Conductor
+  reduction is natural and support projection is canonical; support enlargement
+  remains only a finite-conductor CRT choice/span.  Added checker/report and
+  retargeted Pass 96 to comparison with local Loeb sheafification.
+
 ## 2026-06-21 (Autonomous discussion Pass 94)
 
 - Computed the Verdier/solid dual of the all-prime Borel $j_!$ coefficient.
