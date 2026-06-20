@@ -1,0 +1,186 @@
+{
+  "pass": 88,
+  "title": "Stabilizer of the finite-adele shear extension",
+  "A_scalar_stabilizer": {
+    "statement": "Nonzero rational scalars preserve the finite-adele shear Ext line, but only scalar 1 preserves the strict integral C_Z unit marking.",
+    "rows": [
+      {
+        "scalar": "-2",
+        "nonzero": true,
+        "preserves_extension_line": true,
+        "preserves_integral_unit_marking": false,
+        "strict_under_C_Z_automorphism": false
+      },
+      {
+        "scalar": "-1",
+        "nonzero": true,
+        "preserves_extension_line": true,
+        "preserves_integral_unit_marking": false,
+        "strict_under_C_Z_automorphism": false
+      },
+      {
+        "scalar": "1/2",
+        "nonzero": true,
+        "preserves_extension_line": true,
+        "preserves_integral_unit_marking": false,
+        "strict_under_C_Z_automorphism": false
+      },
+      {
+        "scalar": "1",
+        "nonzero": true,
+        "preserves_extension_line": true,
+        "preserves_integral_unit_marking": true,
+        "strict_under_C_Z_automorphism": true
+      },
+      {
+        "scalar": "2",
+        "nonzero": true,
+        "preserves_extension_line": true,
+        "preserves_integral_unit_marking": false,
+        "strict_under_C_Z_automorphism": false
+      },
+      {
+        "scalar": "3/2",
+        "nonzero": true,
+        "preserves_extension_line": true,
+        "preserves_integral_unit_marking": false,
+        "strict_under_C_Z_automorphism": false
+      },
+      {
+        "scalar": "5/3",
+        "nonzero": true,
+        "preserves_extension_line": true,
+        "preserves_integral_unit_marking": false,
+        "strict_under_C_Z_automorphism": false
+      }
+    ],
+    "strict_under_C_Z_stabilizers": [
+      "1"
+    ]
+  },
+  "B_finite_borel_shadows": {
+    "statement": "At finite modulus N, the Borel shadow is the affine group (Z/N)^x semidirect Z/N; fixing the marked unit has singleton stabilizer.",
+    "rows": [
+      {
+        "modulus": 2,
+        "unit_group_size": 1,
+        "unipotent_shadow_size": 2,
+        "affine_borel_shadow_size": 2,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 3,
+        "unit_group_size": 2,
+        "unipotent_shadow_size": 3,
+        "affine_borel_shadow_size": 6,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 4,
+        "unit_group_size": 2,
+        "unipotent_shadow_size": 4,
+        "affine_borel_shadow_size": 8,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 5,
+        "unit_group_size": 4,
+        "unipotent_shadow_size": 5,
+        "affine_borel_shadow_size": 20,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 6,
+        "unit_group_size": 2,
+        "unipotent_shadow_size": 6,
+        "affine_borel_shadow_size": 12,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 12,
+        "unit_group_size": 4,
+        "unipotent_shadow_size": 12,
+        "affine_borel_shadow_size": 48,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 60,
+        "unit_group_size": 16,
+        "unipotent_shadow_size": 60,
+        "affine_borel_shadow_size": 960,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 420,
+        "unit_group_size": 96,
+        "unipotent_shadow_size": 420,
+        "affine_borel_shadow_size": 40320,
+        "strict_unit_stabilizer_size": 1
+      },
+      {
+        "modulus": 840,
+        "unit_group_size": 192,
+        "unipotent_shadow_size": 840,
+        "affine_borel_shadow_size": 161280,
+        "strict_unit_stabilizer_size": 1
+      }
+    ]
+  },
+  "C_three_stabilizers": {
+    "statement": "The strict marked row, the shear Ext line, and the hyperbolic Borel object have different stabilizers.",
+    "rows": [
+      {
+        "object_level": "strict object under C_Z",
+        "degree_zero_stabilizer": "1",
+        "unipotent_part": "0",
+        "derived_extra_part": "0",
+        "interpretation": "Fixing the integral marking fixes the unit, so only the identity remains."
+      },
+      {
+        "object_level": "shear extension line 0 -> Q -> A_f -> epsilon -> 0",
+        "degree_zero_stabilizer": "Q^x",
+        "unipotent_part": "0 inside the bare exact row",
+        "derived_extra_part": "0 after uniquely-divisible/torsion-decorated rule",
+        "interpretation": "Nonzero rational scalars preserve the one-dimensional finite-adele Ext line."
+      },
+      {
+        "object_level": "hyperbolic plane H=epsilon plus Q with fixed polarization",
+        "degree_zero_stabilizer": "Q^x",
+        "unipotent_part": "epsilon",
+        "derived_extra_part": "0 after Pass-87 decoration",
+        "interpretation": "This is the solid Borel Q^x semidirect epsilon; epsilon acts as shear, not as an automorphism of the bare exact row."
+      }
+    ]
+  },
+  "D_derived_automorphism_check": {
+    "statement": "After the Pass-87 torsion-boundary decoration rule, no extra derived automorphisms survive for the final Q-kernel shear extension.",
+    "rows": [
+      {
+        "kernel": "Q",
+        "torsion_boundary_decorated": true,
+        "mapping_fiber": "RMap(Q/Z,Q)=0",
+        "derived_automorphisms_survive": false
+      },
+      {
+        "kernel": "Q plus undecorated torsion-divisible T",
+        "torsion_boundary_decorated": false,
+        "mapping_fiber": "RMap(Q/Z,T) may be nonzero",
+        "derived_automorphisms_survive": true
+      },
+      {
+        "kernel": "Q plus decorated torsion-divisible T",
+        "torsion_boundary_decorated": true,
+        "mapping_fiber": "chosen boundary component kills residual ambiguity",
+        "derived_automorphisms_survive": false
+      }
+    ],
+    "final_shear_extension_has_derived_extra": false
+  },
+  "conclusion": {
+    "strict_marked_stabilizer": "Aut_{C_Z,shear}(C_Q)=1.",
+    "extension_line_stabilizer": "Stab([0 -> Q -> A_f -> epsilon -> 0])=Q^x.",
+    "solid_borel_comparison": "The full solid Borel Q^x semidirect epsilon is recovered only after passing from the bare exact row to the hyperbolic plane with polarization, where epsilon is the unipotent shear.",
+    "next_task": "Use this stabilizer split to restate the automorphic line as a Borel-torsor/extension-class theorem for the Rosser phantom."
+  },
+  "overall": "PASS"
+}

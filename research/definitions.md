@@ -1830,3 +1830,34 @@ $$
 is nontrivial.  Strict initiality is recovered by either imposing $T=0$ or
 adding a boundary decoration that fixes the component
 $\mathbb Q/\mathbb Z\to T$.
+
+## Stabilizer split for the finite-adele shear extension (Pass 88)
+
+For the final shear extension
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0
+$$
+there are three different stabilizer levels.
+
+1. **Strict marked stabilizer.**  As an object under
+   $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$, the complex
+   $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ has trivial automorphism group:
+   the marked image of $1\in\mathbb Z$ forces scalar $1$, and the Pass-87
+   mapping fiber $\mathbf R\operatorname{Map}(\mathbb Q/\mathbb Z,\mathbb Q)$
+   is contractible.
+2. **Extension-line stabilizer.**  Forgetting the integral marking but
+   preserving the one-dimensional finite-adele Ext line leaves the Levi
+   stabilizer $\mathbb Q^\times$, acting by rational scalar multiplication on
+   $\mathbb Q$ and $\mathbb A_f$.
+3. **Hyperbolic/Borel stabilizer.**  The full solid Borel
+   $$
+   \mathbb Q^\times\ltimes\epsilon
+   $$
+   is recovered only at the hyperbolic-plane level
+   $H=\epsilon\oplus\mathbb Q$ with its polarization.  Here
+   $\mathbb Q^\times$ is the Levi part and $\epsilon$ is the unipotent shear
+   parameter; $\epsilon$ is not an endpoint-fixing automorphism of the bare
+   exact row.
+
+Thus the finite-adele row contributes the Borel's Levi extension class, while
+the hyperbolic object supplies the unipotent shear action.

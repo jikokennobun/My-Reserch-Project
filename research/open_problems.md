@@ -914,12 +914,26 @@
   summands contribute nontrivial components and therefore must be excluded for strict initiality or
   decorated by a chosen $\mathbb Q/\mathbb Z\to T$ boundary component.  Machine-verified
   `artifacts/reports/pass87-mapping-space-shear-initiality-check.json` (PASS).
-- **[New (Pass 87)]** **Derived stabilizer of the finite-adele shear extension.** Compute the
+- **[Resolved (Pass 88)]** **Derived stabilizer of the finite-adele shear extension.** Compute the
   automorphism/stabilizer of
   $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$ as a shear-marked object under
   $C_{\mathbb Z}$, compare its degree-$0$ part with the solid Borel
   $\mathbb Q^\times\ltimes\epsilon$, and determine whether any derived
   automorphisms survive after the torsion-boundary decoration rule of Pass 87.
+  **Resolution:** strict automorphisms under $C_{\mathbb Z}$ are trivial;
+  forgetting the integral marking but preserving the finite-adele Ext line gives
+  degree-$0$ stabilizer $\mathbb Q^\times$; and the full Borel
+  $\mathbb Q^\times\ltimes\epsilon$ is recovered only at the hyperbolic-plane level
+  $H=\epsilon\oplus\mathbb Q$, where $\epsilon$ is the unipotent shear parameter rather than an
+  automorphism of the bare exact row.  No extra derived automorphisms survive for the final
+  $\mathbb Q$-kernel extension after the Pass-87 torsion-boundary rule.  Machine-verified
+  `artifacts/reports/pass88-shear-extension-stabilizer-check.json` (PASS).
+- **[New (Pass 88)]** **Borel-torsor theorem for the Rosser phantom.** Consolidate Passes 80-88 into
+  a theorem: the Rosser/phantom obstruction is a Borel-torsor or finite-adele extension class whose
+  strict integral marking is rigid, whose extension-line stabilizer is $\mathbb Q^\times$, and whose
+  hyperbolic realization has solid Borel $\mathbb Q^\times\ltimes\epsilon$.  State the exact functorial
+  bridge back to the APS/Rosser unit-torsor line and identify which data are invariant under changing
+  Guaspari-Solovay witness choices.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

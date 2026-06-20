@@ -42,7 +42,7 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 87 -> 88: derived stabilizer of the finite-adele shear extension)**
+- **(Pass 88 -> 89: Borel-torsor theorem for the Rosser phantom)**
   Passes 80-82 settled the automorphic side of the solid phantom line.  Pass 80
   showed $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, not
   $\mathrm{SL}_2$; Pass 81 showed the principal series is maximally
@@ -79,14 +79,18 @@
   $\mathbf R\operatorname{Map}(\mathbb Q/\mathbb Z,D)$: it is contractible for
   uniquely divisible kernels, while torsion-divisible summands contribute the
   extra boundary components and must be excluded or decorated.
+  Pass 88 resolved the stabilizer split: strict automorphisms under
+  $C_{\mathbb Z}$ are trivial; the extension-line stabilizer is
+  $\mathbb Q^\times$; and the full Borel $\mathbb Q^\times\ltimes\epsilon$
+  appears only at the hyperbolic-plane level, where $\epsilon$ is the
+  unipotent shear.
   Open:
-  (i) compute the automorphism/stabilizer of
-  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$ as a shear-marked object under
-  $C_{\mathbb Z}$;
-  (ii) compare its degree-$0$ part with the solid Borel
-  $\mathbb Q^\times\ltimes\epsilon$;
-  (iii) decide whether any derived automorphisms remain after imposing the
-  Pass-87 torsion-boundary decoration rule.
+  (i) consolidate Passes 80-88 into a single Borel-torsor / extension-class
+  theorem for the Rosser phantom;
+  (ii) state the functorial bridge from this finite-adele shear class back to
+  the APS/Rosser unit-torsor line;
+  (iii) identify which data are invariant under changing Guaspari-Solovay
+  witness choices.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

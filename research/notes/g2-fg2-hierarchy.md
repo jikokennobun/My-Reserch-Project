@@ -4618,3 +4618,68 @@ finite shadows have $N^r$ components at modulus $N$.
 **Limit of the pass.**  The next task is to compute the derived
 automorphism/stabilizer of the final finite-adele shear extension and compare
 it with the solid Borel action $\mathbb Q^\times\ltimes\epsilon$.
+
+## Pass 88 - Stabilizer of the finite-adele shear extension
+
+Pass 88 separates three automorphism levels attached to
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+
+First, the strict object under
+$$
+C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]
+$$
+is rigid.  Any rational scalar automorphism preserving the map from
+$C_{\mathbb Z}$ must fix the marked unit $1\in\mathbb Z$, hence is scalar
+$1$.  By Pass 87,
+$$
+\mathbf R\!\operatorname{Map}(\mathbb Q/\mathbb Z,\mathbb Q)=0,
+$$
+so there is no hidden derived automorphism for the final uniquely divisible
+kernel.
+
+Second, if the integral marking is forgotten and only the shear Ext line is
+preserved, the degree-$0$ stabilizer is
+$$
+\mathbb Q^\times.
+$$
+Nonzero rational scalars act on $\mathbb Q$ and $\mathbb A_f$ and preserve the
+one-dimensional finite-adele extension line.  This is the Levi component of
+the Borel.
+
+Third, the full solid Borel from Pass 80,
+$$
+B=\mathbb Q^\times\ltimes\epsilon,
+$$
+belongs to the hyperbolic object
+$$
+H=\epsilon\oplus\mathbb Q
+$$
+with fixed polarization.  The unipotent term $\epsilon$ is a shear of $H$, not
+an endpoint-fixing automorphism of the bare exact row.  Endpoint-fixing
+automorphisms of the row would be measured by
+$\operatorname{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$.
+
+> **Theorem 88a (strict marked rigidity).**
+> $\operatorname{Aut}_{C_{\mathbb Z},\mathrm{shear}}(C_{\mathbb Q})=1$, with no
+> residual derived automorphisms after the Pass-87 torsion-boundary rule.
+>
+> **Theorem 88b (extension-line stabilizer).**
+> The stabilizer of the finite-adele shear Ext line is $\mathbb Q^\times$.
+>
+> **Theorem 88c (Borel comparison).**
+> The full solid Borel $\mathbb Q^\times\ltimes\epsilon$ is recovered only at
+> the hyperbolic-plane level: $\mathbb Q^\times$ is the Levi of the extension
+> line and $\epsilon$ is the unipotent shear parameter.
+
+**Machine verification** (`code/scripts/check-pass88.py` ->
+`artifacts/reports/pass88-shear-extension-stabilizer-check.json`, PASS):
+nonzero rational scalars preserve the extension line, but only scalar $1$
+preserves the integral unit marking; finite Borel shadows are
+$(\mathbb Z/N)^\times\ltimes\mathbb Z/N$ with singleton strict unit stabilizer;
+and no extra derived automorphisms survive for the final $\mathbb Q$-kernel
+extension after torsion-boundary decoration.
+
+**Limit of the pass.**  The next task is to turn the Passes 80-88 chain into a
+Borel-torsor / extension-class theorem for the Rosser phantom.

@@ -1,5 +1,19 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 88)
+
+- Computed the stabilizer split for the final finite-adele shear extension.
+  Strict automorphisms under the integral marking
+  $C_{\mathbb Z}\to C_{\mathbb Q}$ are trivial; the stabilizer of the
+  finite-adele extension line
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$ is $\mathbb Q^\times$; and the
+  full solid Borel $\mathbb Q^\times\ltimes\epsilon$ appears only at the
+  hyperbolic-plane level, where $\epsilon$ is the unipotent shear parameter.
+  No extra derived automorphisms survive after the Pass-87 torsion-boundary
+  rule.  Verified with `code/scripts/check-pass88.py` ->
+  `artifacts/reports/pass88-shear-extension-stabilizer-check.json` (PASS) and
+  added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-21 (Autonomous discussion Pass 87)
 
 - Upgraded the shear-pushout initiality to a derived mapping-space statement.

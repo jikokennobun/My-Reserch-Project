@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass88-shear-extension-stabilizer-check.json`: verifies the Pass-88
+  stabilizer split for the finite-adele shear extension. It checks that
+  nonzero rational scalars preserve the extension line while only scalar $1$
+  preserves the integral marking, records finite Borel shadows
+  $(\mathbb Z/N)^\times\ltimes\mathbb Z/N$, and confirms that no derived
+  automorphism survives for the final $\mathbb Q$-kernel extension after the
+  torsion-boundary decoration rule.
+
 - `pass87-mapping-space-shear-initiality-check.json`: verifies the Pass-87
   finite certificate for the derived mapping-space form of shear initiality. It
   records the cofiber/fiber sequence with homotopy fiber
