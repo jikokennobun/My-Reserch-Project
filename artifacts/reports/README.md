@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass101-oriented-support-groupoid-antipode-quotient-check.json`: verifies
+  the Pass-101 finite certificate for the signed oriented-support action
+  groupoid. It checks signed morphism closure
+  `d = sigma * e_{S,T}(c)`, multiplicative sign composition, antipode
+  involutivity and zero-extension compatibility, loss of sign in the coarse
+  quotient `[c]={c,-c}`, restoration by a `Z/2` sign local system, and finite
+  `N`-torsion sign visibility with collapse at `N=2`.
+
 - `pass100-orientation-torsor-support-functoriality-check.json`: verifies the
   Pass-100 finite certificate for primitive zero-sum orientation torsors. It
   checks that `O_S={c in Z^S : sum c=0, gcd(c)=1}` is preserved by

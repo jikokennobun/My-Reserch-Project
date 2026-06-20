@@ -1175,7 +1175,7 @@
   quotienting, or forgetting the orientation torsor.  Machine-verified
   `artifacts/reports/pass100-orientation-torsor-support-functoriality-check.json`
   (PASS).
-- **[New (Pass 100)]** **Oriented-support groupoid and antipode quotient.**
+- **[Resolved (Pass 101)]** **Oriented-support groupoid and antipode quotient.**
   Define the groupoid or stack whose objects are oriented supports $(S,c)$
   with $c\in\mathcal O_S$, whose transition morphisms include zero-extension
   and antipode $c\mapsto-c$.  Compute its antipode quotient and decide whether
@@ -1183,6 +1183,23 @@
   essential orientation data.  Use this to present the all-prime
   constant-term generator $D\epsilon\simeq\mathbb Q[-1]$ as a quotient or
   colimit of oriented finite-support boundary data.
+  **Resolution:** the signed oriented-support action groupoid has objects
+  $(S,c)$ and morphisms $(S,c)\to(T,d)$ given by $S\subseteq T$ plus
+  $\sigma\in\{\pm1\}$ with $d=\sigma e_{S,T}(c)$.  Signs compose
+  multiplicatively; the antipode is the sign $-1$ involution over a fixed
+  support.  The coarse quotient $[c]=\{c,-c\}$ presents primitive lines and a
+  single generator but loses the signed path label.  To retain exactly the
+  Pass-94 functional-equation sign, use the signed groupoid or the quotient
+  plus its $\mathbb Z/2$ sign local system.  Finite signs are visible for
+  $N>2$ and collapse at $N=2$.  Machine-verified
+  `artifacts/reports/pass101-oriented-support-groupoid-antipode-quotient-check.json`
+  (PASS).
+- **[New (Pass 101)]** **Signed local system through the finite-adele constant term.**
+  Push the $\mathbb Z/2$ sign local system from the oriented-support quotient
+  through the primitive collapse and the all-prime complex
+  $[\mathbb Q\to\mathbb A_f]$.  Identify the exact boundary/Yoneda class that
+  represents biduality on $D\epsilon\simeq\mathbb Q[-1]$, and determine how
+  the mod-$2$ sign collapse appears in finite conductor shadows.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -1,0 +1,940 @@
+{
+  "pass": 101,
+  "title": "Oriented-support groupoid and antipode quotient",
+  "A_signed_morphisms": {
+    "statement": "A signed morphism (S,c)->(T,d) is a support inclusion and a sign sigma with d=sigma*e_{S,T}(c).",
+    "rows": [
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "sign": 1,
+        "target_orientation": [
+          -1,
+          1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          1,
+          0
+        ]
+      },
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "sign": -1,
+        "target_orientation": [
+          1,
+          -1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          1,
+          0
+        ]
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "sign": 1,
+        "target_orientation": [
+          -1,
+          1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          1,
+          0
+        ]
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "sign": -1,
+        "target_orientation": [
+          1,
+          -1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          1,
+          0
+        ]
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "sign": 1,
+        "target_orientation": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          0,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "sign": -1,
+        "target_orientation": [
+          1,
+          0,
+          -1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          0,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "source_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "sign": 1,
+        "target_orientation": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          0,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "source_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "sign": -1,
+        "target_orientation": [
+          1,
+          0,
+          -1,
+          0
+        ],
+        "target_zero_sum": true,
+        "target_primitive": true,
+        "morphism_valid": true,
+        "coarse_source_line": [
+          -1,
+          0,
+          1
+        ],
+        "coarse_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "morphism_ok": true
+  },
+  "B_composition": {
+    "statement": "Signs compose multiplicatively, so the oriented-support category is strictly associative on sampled chains.",
+    "rows": [
+      {
+        "small_support": [
+          2,
+          3
+        ],
+        "middle_support": [
+          2,
+          3,
+          5
+        ],
+        "large_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "first_sign": 1,
+        "second_sign": 1,
+        "composed_sign": 1,
+        "direct_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      },
+      {
+        "small_support": [
+          2,
+          3
+        ],
+        "middle_support": [
+          2,
+          3,
+          5
+        ],
+        "large_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "first_sign": 1,
+        "second_sign": -1,
+        "composed_sign": -1,
+        "direct_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      },
+      {
+        "small_support": [
+          2,
+          3
+        ],
+        "middle_support": [
+          2,
+          3,
+          5
+        ],
+        "large_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "first_sign": -1,
+        "second_sign": 1,
+        "composed_sign": -1,
+        "direct_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      },
+      {
+        "small_support": [
+          2,
+          3
+        ],
+        "middle_support": [
+          2,
+          3,
+          5
+        ],
+        "large_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "first_sign": -1,
+        "second_sign": -1,
+        "composed_sign": 1,
+        "direct_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      },
+      {
+        "small_support": [
+          2,
+          5
+        ],
+        "middle_support": [
+          2,
+          5,
+          7
+        ],
+        "large_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "first_sign": 1,
+        "second_sign": 1,
+        "composed_sign": 1,
+        "direct_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      },
+      {
+        "small_support": [
+          2,
+          5
+        ],
+        "middle_support": [
+          2,
+          5,
+          7
+        ],
+        "large_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "first_sign": 1,
+        "second_sign": -1,
+        "composed_sign": -1,
+        "direct_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      },
+      {
+        "small_support": [
+          2,
+          5
+        ],
+        "middle_support": [
+          2,
+          5,
+          7
+        ],
+        "large_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "first_sign": -1,
+        "second_sign": 1,
+        "composed_sign": -1,
+        "direct_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          1,
+          -1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      },
+      {
+        "small_support": [
+          2,
+          5
+        ],
+        "middle_support": [
+          2,
+          5,
+          7
+        ],
+        "large_support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "first_sign": -1,
+        "second_sign": -1,
+        "composed_sign": 1,
+        "direct_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "stepwise_target": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "composition_law_holds": true
+      }
+    ],
+    "composition_ok": true
+  },
+  "C_antipode": {
+    "statement": "The antipode is free on primitive orientations and squares to the identity.",
+    "rows": [
+      {
+        "support": [
+          2,
+          3
+        ],
+        "orientation": [
+          -1,
+          1
+        ],
+        "antipode_orientation": [
+          1,
+          -1
+        ],
+        "antipode_square_orientation": [
+          -1,
+          1
+        ],
+        "antipode_free": true,
+        "antipode_square_identity": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "antipode_square_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_free": true,
+        "antipode_square_identity": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "antipode_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "antipode_square_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "antipode_free": true,
+        "antipode_square_identity": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "orientation": [
+          -1,
+          1
+        ],
+        "antipode_orientation": [
+          1,
+          -1
+        ],
+        "antipode_square_orientation": [
+          -1,
+          1
+        ],
+        "antipode_free": true,
+        "antipode_square_identity": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7
+        ],
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "antipode_square_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_free": true,
+        "antipode_square_identity": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "orientation": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_orientation": [
+          1,
+          0,
+          -1
+        ],
+        "antipode_square_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "antipode_free": true,
+        "antipode_square_identity": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "antipode_orientation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "antipode_square_orientation": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "antipode_free": true,
+        "antipode_square_identity": true
+      }
+    ],
+    "antipode_ok": true
+  },
+  "D_coarse_quotient": {
+    "statement": "The coarse quotient by c~-c identifies plus and minus targets, so it presents primitive lines but loses the sign label.  The signed groupoid retains it.",
+    "rows": [
+      {
+        "smaller_support": [
+          2,
+          3
+        ],
+        "larger_support": [
+          2,
+          3,
+          5
+        ],
+        "source_line": [
+          -1,
+          1
+        ],
+        "plus_target_line": [
+          -1,
+          1,
+          0
+        ],
+        "minus_target_line": [
+          -1,
+          1,
+          0
+        ],
+        "coarse_targets_equal": true,
+        "sign_recoverable_from_coarse_quotient": false,
+        "signed_groupoid_retains_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          5
+        ],
+        "larger_support": [
+          2,
+          5,
+          7
+        ],
+        "source_line": [
+          -1,
+          1
+        ],
+        "plus_target_line": [
+          -1,
+          1,
+          0
+        ],
+        "minus_target_line": [
+          -1,
+          1,
+          0
+        ],
+        "coarse_targets_equal": true,
+        "sign_recoverable_from_coarse_quotient": false,
+        "signed_groupoid_retains_sign": true
+      },
+      {
+        "smaller_support": [
+          2,
+          3,
+          5
+        ],
+        "larger_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_line": [
+          -1,
+          0,
+          1
+        ],
+        "plus_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "minus_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "coarse_targets_equal": true,
+        "sign_recoverable_from_coarse_quotient": false,
+        "signed_groupoid_retains_sign": true
+      },
+      {
+        "smaller_support": [
+          3,
+          5,
+          7
+        ],
+        "larger_support": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "source_line": [
+          -1,
+          0,
+          1
+        ],
+        "plus_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "minus_target_line": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "coarse_targets_equal": true,
+        "sign_recoverable_from_coarse_quotient": false,
+        "signed_groupoid_retains_sign": true
+      }
+    ],
+    "coarse_quotient_ok": true
+  },
+  "E_finite_sign_behavior": {
+    "statement": "The sign is visible on N-torsion except at N=2, matching the finite Pass-94 signed-dual behavior.",
+    "rows": [
+      {
+        "level_n": 2,
+        "sign_visible_on_n_torsion": false,
+        "sign_invisible_only_mod_2": true,
+        "pass94_sign_behavior_matched": true
+      },
+      {
+        "level_n": 3,
+        "sign_visible_on_n_torsion": true,
+        "sign_invisible_only_mod_2": false,
+        "pass94_sign_behavior_matched": true
+      },
+      {
+        "level_n": 4,
+        "sign_visible_on_n_torsion": true,
+        "sign_invisible_only_mod_2": false,
+        "pass94_sign_behavior_matched": true
+      },
+      {
+        "level_n": 5,
+        "sign_visible_on_n_torsion": true,
+        "sign_invisible_only_mod_2": false,
+        "pass94_sign_behavior_matched": true
+      },
+      {
+        "level_n": 6,
+        "sign_visible_on_n_torsion": true,
+        "sign_invisible_only_mod_2": false,
+        "pass94_sign_behavior_matched": true
+      },
+      {
+        "level_n": 8,
+        "sign_visible_on_n_torsion": true,
+        "sign_invisible_only_mod_2": false,
+        "pass94_sign_behavior_matched": true
+      },
+      {
+        "level_n": 12,
+        "sign_visible_on_n_torsion": true,
+        "sign_invisible_only_mod_2": false,
+        "pass94_sign_behavior_matched": true
+      }
+    ],
+    "finite_sign_ok": true
+  },
+  "F_stack_verdict": {
+    "statement": "Use the oriented-support action groupoid, or the coarse quotient plus a Z/2 sign local system, to retain the functional-equation sign.",
+    "row": {
+      "structure_name": "oriented-support action groupoid O",
+      "objects": "pairs (S,c) with c primitive zero-sum on finite support S",
+      "morphisms": "S subset T plus sign sigma in {+1,-1}, with target sigma * e_{S,T}(c)",
+      "coarse_quotient": "primitive lines [c]={c,-c}",
+      "sign_local_system": "Z/2 sign label on oriented morphisms",
+      "presents_single_generator": true,
+      "preserves_pass94_sign": true,
+      "plain_coarse_quotient_sufficient": false,
+      "recommended_next_task": "Push the signed local system through the finite-adele constant-term complex and compare it with the biduality antipode sign on D epsilon."
+    },
+    "stack_verdict_ok": true
+  },
+  "conclusion": {
+    "oriented_structure": "Objects are (S,c); morphisms are inclusions with sign labels.",
+    "coarse_quotient": "Primitive lines [c] present the single generator but lose the sign unless a Z/2 local system is retained.",
+    "pass94_compatibility": "The signed groupoid keeps the antipode sign, visible away from mod 2 and collapsed at N=2.",
+    "next_task": "Push the sign local system through [Q -> A_f] and identify the exact boundary class representing biduality on D epsilon."
+  },
+  "overall": "PASS"
+}

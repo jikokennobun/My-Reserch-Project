@@ -2413,3 +2413,48 @@ all-prime constant-term generator is not selected by a canonical symmetric
 orientation.  It is obtained only after choosing an element of the
 orientation torsor, quotienting by the antipode, or forgetting the orientation
 data.
+
+## Oriented-support action groupoid and antipode quotient (Pass 101)
+
+For finite support $S$ with $|S|\ge2$, keep
+$$
+\mathcal O_S=
+\{c=(c_p)_{p\in S}\in\mathbb Z^S:
+\sum_{p\in S}c_p=0,\ \gcd_{p\in S}(c_p)=1\}.
+$$
+The **signed oriented-support action groupoid** has objects $(S,c)$ with
+$c\in\mathcal O_S$.  For $S\subseteq T$, a morphism
+$(S,c)\to(T,d)$ is a sign $\sigma\in\{\pm1\}$ such that
+$$
+d=\sigma e_{S,T}(c),
+$$
+where $e_{S,T}$ is zero-extension.  Composition multiplies signs:
+$$
+(\tau,U)\circ(\sigma,T)=(\tau\sigma,U),
+$$
+and identities have sign $+1$.
+
+The antipode is the sign $-1$ morphism over a fixed support,
+$$
+(S,c)\longrightarrow(S,-c),
+$$
+and it squares to the identity.  It is compatible with support change because
+$$
+e_{S,T}(-c)=-e_{S,T}(c).
+$$
+
+The coarse antipode quotient replaces $c$ by the primitive line
+$$
+[c]=\{c,-c\}.
+$$
+This quotient presents the single collapse line but forgets the sign of a
+transport path.  Therefore the plain quotient is not enough to retain the
+Pass-94 functional-equation sign.  The equivalent sign-preserving package is
+the coarse quotient together with the residual $\mathbb Z/2$ sign local
+system coming from the double cover $(S,c)\to(S,[c])$.
+
+On finite $N$-torsion, the antipode acts by multiplication by $-1$ on
+$(\mathbb Q/\mathbb Z)[N]$.  This sign is visible for $N>2$ and collapses for
+$N=2$.  Hence the signed action groupoid/local-system package preserves
+exactly the earlier finite sign bookkeeping while still allowing the
+all-prime constant-term generator to be presented as an antipode quotient.

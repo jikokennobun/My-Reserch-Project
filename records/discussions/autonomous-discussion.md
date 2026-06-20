@@ -6,8 +6,22 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 101
-- Last pass note: Pass 100 (2026-06-21) studied the orientation torsor of
+- Current pass: 102
+- Last pass note: Pass 101 (2026-06-21) packaged the orientation torsor as a
+  signed oriented-support action groupoid.  Objects are pairs $(S,c)$ with
+  $c\in\mathcal O_S$, and a morphism $(S,c)\to(T,d)$ is an inclusion
+  $S\subseteq T$ plus a sign $\sigma\in\{\pm1\}$ satisfying
+  $d=\sigma e_{S,T}(c)$.  Signs compose multiplicatively; the antipode is the
+  sign $-1$ morphism over a fixed support and squares to the identity.  The
+  coarse antipode quotient $[c]=\{c,-c\}$ presents primitive lines and hence a
+  single generator, but it forgets the functional-equation sign label.  To
+  retain the Pass-94 sign, use the signed action groupoid, or equivalently
+  the coarse quotient equipped with its $\mathbb Z/2$ sign local system.  On
+  finite $N$-torsion the sign is visible for $N>2$ and collapses for $N=2$.
+  Machine-verified `check-pass101.py` ->
+  `pass101-oriented-support-groupoid-antipode-quotient-check.json` PASS.
+  Counter 101->102.
+- Earlier note: Pass 100 (2026-06-21) studied the orientation torsor of
   primitive zero-sum collapse functionals
   $$\mathcal O_S=\{c\in\mathbb Z^S:\sum_{p\in S}c_p=0,\ \gcd(c_p)=1\}.$$
   For $S\subseteq T$, the canonical operation is pullback along the boundary
@@ -11539,3 +11553,100 @@ Archivist:
 Next step:
 Pass 101 should package the oriented-support groupoid/stack explicitly and
 compare its antipode quotient with the Pass-94 functional-equation sign.
+
+### Pass 101 - 2026-06-21 JST
+
+Focus:
+Package the oriented-support groupoid/stack and compare the antipode quotient
+with the Pass-94 functional-equation sign.
+
+Proposer:
+For each finite support $S$ with $|S|\ge2$, keep
+$$
+\mathcal O_S=\{c\in\mathbb Z^S:\sum_{p\in S}c_p=0,\ \gcd(c_p)=1\}.
+$$
+Define the **signed oriented-support action groupoid** by taking objects
+$(S,c)$ with $c\in\mathcal O_S$.  A morphism
+$$
+(S,c)\longrightarrow (T,d)
+$$
+is an inclusion $S\subseteq T$ together with a sign
+$\sigma\in\{\pm1\}$ such that
+$$
+d=\sigma e_{S,T}(c),
+$$
+where $e_{S,T}$ is zero-extension.  Identities have sign $+1$, and
+composition multiplies signs:
+$$
+(\tau,U)\circ(\sigma,T)=(\tau\sigma,U).
+$$
+The antipode is the sign $-1$ morphism
+$(S,c)\to(S,-c)$ over the same support; it squares to the identity.
+
+Skeptic:
+The coarse antipode quotient
+$$
+[c]=\{c,-c\}
+$$
+does identify the two orientations of a primitive collapse line and therefore
+presents the single all-prime generator more economically.  But this quotient
+has no memory of whether a path used the sign $+1$ or $-1$.  Thus the plain
+coarse quotient is too coarse for the Pass-94 functional-equation sign: it
+remembers a primitive line, not the signed transport along that line.
+
+Formalist:
+The right package is either the signed action groupoid itself or the coarse
+quotient equipped with its residual $\mathbb Z/2$ sign local system.  The
+local system records the sign character of the double cover
+$(S,c)\to(S,[c])$.  It keeps exactly the data needed for the Pass-94 rule that
+the antipode negates the boundary class.  At finite level $N$, multiplication
+by $-1$ on $(\mathbb Q/\mathbb Z)[N]$ is visible for $N>2$ and collapses when
+$N=2$, matching the earlier mod-$2$ sign collapse.  No degree-$0$ Weyl map
+$\epsilon\to\mathbb Q$ is produced; the construction only packages the sign
+of the shifted boundary generator.
+
+> **Theorem 101a (signed support category).** The data above form a strict
+> support category/action groupoid: zero-extension supplies the support
+> transition and signs compose multiplicatively.
+>
+> **Theorem 101b (antipode action).** The antipode is the sign $-1$ morphism
+> $(S,c)\to(S,-c)$ and is involutive.  It is compatible with all
+> zero-extension morphisms.
+>
+> **Theorem 101c (coarse quotient loses sign).** The quotient
+> $[c]=\{c,-c\}$ presents primitive collapse lines but forgets the path sign;
+> therefore it is insufficient by itself for the Pass-94 signed-duality
+> bookkeeping.
+>
+> **Theorem 101d (sign local system).** The signed action groupoid, or the
+> coarse quotient plus its $\mathbb Z/2$ sign local system, preserves exactly
+> the antipode sign visible on finite $N$-torsion for $N>2$ and invisible at
+> $N=2$.
+
+Machine verification (`code/scripts/check-pass101.py` ->
+`artifacts/reports/pass101-oriented-support-groupoid-antipode-quotient-check.json`,
+PASS): the checker verifies signed morphism closure, multiplicative
+composition, antipode involutivity, support compatibility, coarse quotient
+loss of sign, restoration by the $\mathbb Z/2$ local system, and finite
+$N$-torsion sign visibility/collapse.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-101
+  entry; State counter $101\to102$.
+- `records/logs/research-log.md`: Pass-101 entry.
+- `research/definitions.md`: added the signed oriented-support action groupoid
+  and antipode quotient.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-101 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  resolved the groupoid/quotient task and retargeted the next pass to the
+  sign local system through the finite-adele constant-term bridge.
+- `code/scripts/check-pass101.py`,
+  `artifacts/reports/pass101-oriented-support-groupoid-antipode-quotient-check.json`:
+  new.
+- `artifacts/pdf/oriented-support-groupoid-antipode-quotient-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 102 should push the $\mathbb Z/2$ sign local system through
+$[\mathbb Q\to\mathbb A_f]$ and identify the exact boundary or Yoneda class
+representing biduality on $D\epsilon$.

@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 101)
+
+- Packaged primitive orientation choices as a signed oriented-support action
+  groupoid.  Objects are $(S,c)$ with $c\in\mathcal O_S$, and morphisms are
+  inclusions $S\subseteq T$ plus signs $\sigma\in\{\pm1\}$ satisfying
+  $d=\sigma e_{S,T}(c)$.  Signs compose multiplicatively, and the antipode is
+  the sign $-1$ involution.  The coarse quotient $[c]=\{c,-c\}$ presents
+  primitive collapse lines but loses the Pass-94 sign label; the signed
+  action groupoid, or the quotient plus its $\mathbb Z/2$ sign local system,
+  retains exactly the finite functional-equation sign, visible for $N>2$ and
+  collapsed at $N=2$.  Added checker/report and retargeted Pass 102 to pushing
+  the sign local system through the finite-adele constant-term bridge.
+
 ## 2026-06-21 (Autonomous discussion Pass 100)
 
 - Studied the orientation torsor of primitive zero-sum collapse functionals
