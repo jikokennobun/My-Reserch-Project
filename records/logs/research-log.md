@@ -1,5 +1,12 @@
 # Research Log
 
+## 2026-06-21 (Research Project relay sync, no-delta verification)
+
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-21T04:03+09:00`. The ChatGPT Project artifact inbox exposed `3` supported PDF artifacts, with `0` copied or refreshed slide/deck imports. The central PDF collection was refreshed, but no new ChatGPT Project slide/deck payload was imported.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-21T04:04:30+09:00`. All `23` watched `chatgpt.com/share/...` links remained `unchanged`, including `research/notes/local-fg2-pullback-aps-zoo.md`; no changed shared conversation required transcript extraction or mathematical reconstruction.
+- Queried the connected Google Drive relay sources recorded in `research/references/research-drive.md` and `research/references/drive.md` after the last automation cutoff `2026-06-20T12:54:57Z`, including the research root, `ChatGPT_Research`, `ChatGPT_Study`, `Claude`, `Gemini`, `Paper`, `Slide`, and the reference root. No newer non-folder files were found by modified-time or created-time checks.
+- Because the artifact inbox, watched-share layer, and recorded Drive relay roots were all source-stable in this pass, there was no new durable PDF, paper, slide deck, Gemini output, Claude output, open question, Drive-index update, literature-note update, or research-note reconstruction to add.
+
 ## 2026-06-21 (Autonomous discussion Pass 93)
 
 - Upgraded the finite-support Borel $j_!$ class to the all-prime
