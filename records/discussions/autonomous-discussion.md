@@ -6,8 +6,23 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 89
-- Last pass note: Pass 88 (2026-06-21) split the stabilizer of the final
+- Current pass: 90
+- Last pass note: Pass 89 (2026-06-21) consolidated the Rosser phantom as a
+  Borel-torsor / extension-class theorem.  The same obstruction may be read as
+  a Guaspari-Solovay witness-comparison Cech class, a
+  $\varprojlim^1(\mathbb Z,\times m)$ or $\epsilon=\widehat{\mathbb Z}/\mathbb Z$
+  phantom, the finite-adele extension line
+  $$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0,$$
+  or the hyperbolic Borel shear orbit for
+  $\mathbb Q^\times\ltimes\epsilon$.  Changing witness choices changes
+  representatives, sections, and finite truncation lifts by coboundaries, but
+  preserves the torsor/cohomology class, finite conductor restrictions,
+  radical support, and the finite-adele extension line.  Strict integral
+  marking remains rigid; forgetting it leaves the Levi $\mathbb Q^\times$;
+  the full Borel appears only at the hyperbolic-plane level.  Machine-verified
+  `check-pass89.py` -> `pass89-borel-torsor-rosser-phantom-check.json` PASS.
+  Counter 89->90.
+- Earlier note: Pass 88 (2026-06-21) split the stabilizer of the final
   finite-adele shear extension into three levels.  The strict object under the
   integral marking
   $$C_{\mathbb Z}\to C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,]$$
@@ -10084,3 +10099,102 @@ Repository updates this pass:
 Next step:
 Pass 89 should use the stabilizer split to restate the automorphic line as a
 Borel-torsor / extension-class theorem for the Rosser phantom.
+
+---
+
+### Pass 89 - 2026-06-21 JST
+
+Focus:
+State the Borel-torsor / extension-class theorem for the Rosser phantom and
+identify the invariant data under Guaspari-Solovay witness changes.
+
+Proposer:
+Passes 80-88 now form a single statement.  The Rosser/phantom obstruction is
+not four different objects; it is one class seen through four presentations:
+
+1. a Guaspari-Solovay witness-comparison Cech $1$-cocycle;
+2. the derived-limit class
+   $$\varprojlim\nolimits^1(\mathbb Z,\times m)\cong
+   \widehat{\mathbb Z}_m/\mathbb Z$$
+   and, in the all-prime limit, $\epsilon=\widehat{\mathbb Z}/\mathbb Z$;
+3. the finite-adele shear extension line
+   $$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0;$$
+4. the hyperbolic Borel shear orbit for
+   $$B=\mathbb Q^\times\ltimes\epsilon$$
+   acting on $H=\epsilon\oplus\mathbb Q$ with its polarization.
+
+The bridge is: take the Rosser witness-comparison cocycle, quotient by
+coboundaries to obtain the unit-torsor class in the Cech cokernel, pass to the
+inverse limit to get $\widehat{\mathbb Z}_m/\mathbb Z$ or $\epsilon$, and
+push out the integral row
+$$0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$$
+along $\mathbb Z\to\mathbb Q$ to obtain the finite-adele extension
+$$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.$$
+The hyperbolic object then restores the full Borel:
+$\mathbb Q^\times$ is the extension-line Levi and $\epsilon$ is the
+unipotent shear torsor.
+
+Thus finite stages are Loeb-attached: their chosen unit lifts and their
+representatives can be split.  The inverse limit is Rosser: the representatives
+cannot be made compatible across the non-Mittag-Leffler tower, and the
+remaining obstruction is exactly the torsor class.
+
+Skeptic:
+Do not claim a canonical classification of all Rosser predicates from this
+repository model alone.  The theorem is a bridge schema for the APS/Rosser
+unit-torsor model already built here.  Changing Guaspari-Solovay witness data
+may change the section, enumeration, finite lift, and concrete cocycle
+representative.  What is invariant is the cohomology/torsor class, its finite
+conductor restrictions, its radical support, and its finite-adele extension
+line.  Likewise, the Borel's unipotent $\epsilon$ belongs to the hyperbolic
+realization, not to endpoint-fixing automorphisms of the bare exact row.
+
+Formalist:
+> **Theorem 89a (Rosser Borel-torsor theorem).** In the repository's
+> APS/Rosser phantom model, the Rosser unit-torsor, the
+> $\varprojlim^1$ phantom, the finite-adele extension line, and the hyperbolic
+> Borel shear orbit are four presentations of one torsor/extension class.
+>
+> **Theorem 89b (bridge from witnesses to finite adeles).** The functorial
+> bridge sends a witness-comparison Cech cocycle to its class in
+> $\operatorname{coker}\delta$, identifies that class with the appropriate
+> $\widehat{\mathbb Z}_m/\mathbb Z$ or $\epsilon$, and then pushes out
+> $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ along
+> $\mathbb Z\to\mathbb Q$ to obtain
+> $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
+>
+> **Theorem 89c (gauge invariance).** Changing Guaspari-Solovay witness
+> choices changes cocycle representatives and finite sections by coboundaries,
+> but preserves the torsor/cohomology class, finite conductor restrictions,
+> radical support, and finite-adele extension line.
+>
+> **Theorem 89d (stabilizer levels).** Strict integral marking is rigid;
+> forgetting the marking leaves the Levi stabilizer $\mathbb Q^\times$; the
+> full Borel $\mathbb Q^\times\ltimes\epsilon$ appears only after passing to
+> the hyperbolic plane.
+
+Machine-verified `code/scripts/check-pass89.py` ->
+`artifacts/reports/pass89-borel-torsor-rosser-phantom-check.json` (overall
+PASS): the checker records finite Cech windows where replacing representative
+$1$ by $1+m^k$ changes the representative but preserves the class modulo the
+finite cokernel index $m^k$; verifies that finite Borel shadows have affine
+size $\varphi(N)N$ and singleton strict marked stabilizer; and records the
+invariant/non-invariant data split under witness changes.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-89 entry; State counter
+  $89\to90$.
+- `records/logs/research-log.md`: Pass-89 entry.
+- `research/definitions.md`: added the Rosser Borel-torsor theorem.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-89 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked the
+  Borel-torsor theorem resolved and retargeted the next pass to
+  conductor/radical functoriality of the torsor.
+- `code/scripts/check-pass89.py`,
+  `artifacts/reports/pass89-borel-torsor-rosser-phantom-check.json`: new.
+- `artifacts/pdf/borel-torsor-rosser-phantom-2026-06-21.md`: publication summary source.
+
+Next step:
+Pass 90 should make the conductor/radical functoriality of the Borel-torsor
+theorem precise across $m$-adic and all-prime variants.

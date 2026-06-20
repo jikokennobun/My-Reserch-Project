@@ -4683,3 +4683,99 @@ extension after torsion-boundary decoration.
 
 **Limit of the pass.**  The next task is to turn the Passes 80-88 chain into a
 Borel-torsor / extension-class theorem for the Rosser phantom.
+
+## Pass 89 - Borel-torsor theorem for the Rosser phantom
+
+Pass 89 packages the Passes 80-88 automorphic line with the earlier
+Loeb/Rosser phantom line.  The main point is that the Rosser non-canonicity is
+not merely an analogy with the finite-prime shear class.  In the repository's
+APS/Rosser model, it is the same torsor class after passing through the Cech
+and finite-adele bridges.
+
+Start with a Guaspari-Solovay witness-comparison Cech cocycle.  Quotienting by
+coboundaries gives a class in
+$$
+\operatorname{coker}\delta\cong
+\varprojlim\nolimits^1(\mathbb Z,\times m)
+\cong \widehat{\mathbb Z}_m/\mathbb Z.
+$$
+In the all-prime version this is
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+The finite-adele bridge is the pushout of the integral row
+$$
+0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0
+$$
+along $\mathbb Z\to\mathbb Q$, giving
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+Thus the Rosser unit-torsor, the integral $\varprojlim^1$ phantom, and the
+finite-adele shear extension line are one obstruction read in three
+categories.
+
+The Borel comparison from Pass 88 then says exactly how much symmetry remains.
+With the integral marking fixed, the object is rigid.  Forgetting the marking
+but preserving the extension line leaves the Levi stabilizer
+$$
+\mathbb Q^\times.
+$$
+The full solid Borel
+$$
+\mathbb Q^\times\ltimes\epsilon
+$$
+appears only after passing to the hyperbolic plane
+$$
+H=\epsilon\oplus\mathbb Q,
+$$
+where $\epsilon$ is the unipotent shear parameter.
+
+The invariant data under changing Guaspari-Solovay witness choices are:
+
+- the cohomology class in $\operatorname{coker}\delta$;
+- the finite conductor restrictions and radical support;
+- the finite-adele extension line;
+- the Borel shear orbit, modulo the $\epsilon$ action.
+
+The non-invariant data are the section, the concrete cocycle representative,
+the witness enumeration, and the finite-stage Loeb lift.  These are gauge
+choices: changing them adds a Cech coboundary but does not change the torsor
+class.
+
+> **Theorem 89a (Rosser Borel-torsor theorem).**
+> The Rosser unit-torsor, the $\varprojlim^1$ phantom, the finite-adele
+> extension line, and the hyperbolic Borel shear orbit are four presentations
+> of one torsor/extension class in the APS/Rosser phantom model.
+>
+> **Theorem 89b (witness-to-adele bridge).**
+> The bridge sends a witness-comparison Cech cocycle to its class in
+> $\operatorname{coker}\delta$, identifies this with
+> $\widehat{\mathbb Z}_m/\mathbb Z$ or $\epsilon$, and pushes out
+> $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ along
+> $\mathbb Z\to\mathbb Q$ to obtain
+> $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
+>
+> **Theorem 89c (witness-choice invariance).**
+> Guaspari-Solovay witness changes alter representatives and sections by
+> coboundaries but preserve the torsor class, conductor restrictions, radical
+> support, and finite-adele extension line.
+>
+> **Theorem 89d (Borel level).**
+> Strict integral marking is rigid; the extension-line stabilizer is
+> $\mathbb Q^\times$; and the full
+> $\mathbb Q^\times\ltimes\epsilon$ occurs only in the hyperbolic
+> realization.
+
+**Machine verification** (`code/scripts/check-pass89.py` ->
+`artifacts/reports/pass89-borel-torsor-rosser-phantom-check.json`, PASS):
+finite Cech windows check that changing representative $1$ to $1+m^k$
+preserves the class modulo the finite cokernel index $m^k$; finite Borel
+shadows have affine size $\varphi(N)N$ with singleton strict marked
+stabilizer; and the invariant/non-invariant witness-choice split is recorded
+explicitly.
+
+**Limit of the pass.**  The next task is to make the conductor/radical
+functoriality of this Borel-torsor theorem precise: compare the $m$-adic
+variants, radical-compatible maps, and the all-prime limit in one natural
+diagram.

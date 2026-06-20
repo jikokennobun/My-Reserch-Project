@@ -928,12 +928,28 @@
   automorphism of the bare exact row.  No extra derived automorphisms survive for the final
   $\mathbb Q$-kernel extension after the Pass-87 torsion-boundary rule.  Machine-verified
   `artifacts/reports/pass88-shear-extension-stabilizer-check.json` (PASS).
-- **[New (Pass 88)]** **Borel-torsor theorem for the Rosser phantom.** Consolidate Passes 80-88 into
+- **[Resolved (Pass 89)]** **Borel-torsor theorem for the Rosser phantom.** Consolidate Passes 80-88 into
   a theorem: the Rosser/phantom obstruction is a Borel-torsor or finite-adele extension class whose
   strict integral marking is rigid, whose extension-line stabilizer is $\mathbb Q^\times$, and whose
   hyperbolic realization has solid Borel $\mathbb Q^\times\ltimes\epsilon$.  State the exact functorial
   bridge back to the APS/Rosser unit-torsor line and identify which data are invariant under changing
   Guaspari-Solovay witness choices.
+  **Resolution:** the Rosser witness-comparison Cech class, the
+  $\varprojlim^1(\mathbb Z,\times m)$ or $\epsilon=\widehat{\mathbb Z}/\mathbb Z$
+  phantom, the finite-adele extension line
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$, and the hyperbolic Borel shear
+  orbit are four presentations of one torsor/extension class.  Witness changes
+  alter representatives, sections, and finite lifts by coboundaries, but
+  preserve the cohomology/torsor class, finite conductor restrictions, radical
+  support, and finite-adele extension line.  Machine-verified
+  `artifacts/reports/pass89-borel-torsor-rosser-phantom-check.json` (PASS).
+- **[New (Pass 89)]** **Conductor-functorial Borel torsors.** Make the
+  Pass-89 theorem natural across $m$-adic and all-prime variants.  Specify the
+  category of radical-compatible conductor maps, decide when a map
+  $\widehat{\mathbb Z}_m/\mathbb Z\to\widehat{\mathbb Z}_{m'}/\mathbb Z$ exists
+  or should be replaced by a span/pullback, and prove that the Cech torsor,
+  finite-adele extension line, and hyperbolic Borel shear orbit commute in one
+  diagram.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -1861,3 +1861,52 @@ there are three different stabilizer levels.
 
 Thus the finite-adele row contributes the Borel's Levi extension class, while
 the hyperbolic object supplies the unipotent shear action.
+
+## Borel-torsor theorem for the Rosser phantom (Pass 89)
+
+In the APS/Rosser phantom model developed in Passes 53-88, the following data
+are four presentations of one torsor/extension class:
+
+1. a Guaspari-Solovay witness-comparison Cech $1$-cocycle;
+2. the derived-limit class
+   $$\varprojlim\nolimits^1(\mathbb Z,\times m)\cong
+   \widehat{\mathbb Z}_m/\mathbb Z,$$
+   or, in the all-prime limit, $\epsilon=\widehat{\mathbb Z}/\mathbb Z$;
+3. the finite-adele extension line
+   $$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0;$$
+4. the hyperbolic Borel shear orbit for
+   $$\mathbb Q^\times\ltimes\epsilon$$
+   on $H=\epsilon\oplus\mathbb Q$.
+
+The bridge is:
+$$
+\text{witness Cech cocycle}
+\longmapsto
+[\text{cocycle}]\in\operatorname{coker}\delta
+\cong \varprojlim\nolimits^1
+\longmapsto
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+The last arrow is the pushout/localization of
+$$
+0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0
+$$
+along $\mathbb Z\to\mathbb Q$.  The finite-adele row gives the Levi
+extension line.  Passing to the hyperbolic plane restores the full Borel:
+$\mathbb Q^\times$ is the Levi stabilizer and $\epsilon$ is the unipotent
+shear torsor.
+
+Changing Guaspari-Solovay witness choices is a gauge change.  It may change
+the chosen section, finite truncation lift, or integer cocycle
+representative, but only by a Cech coboundary.  Therefore the invariant data
+are:
+
+- the cohomology/torsor class in $\operatorname{coker}\delta$;
+- the finite conductor restrictions and radical support;
+- the finite-adele extension line;
+- the hyperbolic Borel orbit up to the $\epsilon$ shear action.
+
+Non-invariant data are the concrete representative, the witness enumeration,
+and the chosen finite Loeb lift.  Thus the slogan "finitely Loeb, limanly
+Rosser" can be sharpened: finite stages split after choosing a lift, while
+the inverse limit remembers the unsplittable Borel-torsor class.

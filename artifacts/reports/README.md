@@ -37,6 +37,14 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass89-borel-torsor-rosser-phantom-check.json`: verifies the Pass-89
+  finite certificate for the Rosser Borel-torsor theorem. It checks finite
+  Cech windows where changing a witness representative by a coboundary
+  preserves the class, records affine Borel shadows
+  $(\mathbb Z/N)^\times\ltimes\mathbb Z/N$ with singleton strict marked
+  stabilizer, and separates invariant torsor data from non-invariant witness
+  choices.
+
 - `pass88-shear-extension-stabilizer-check.json`: verifies the Pass-88
   stabilizer split for the finite-adele shear extension. It checks that
   nonzero rational scalars preserve the extension line while only scalar $1$

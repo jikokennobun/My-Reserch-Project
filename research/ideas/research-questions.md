@@ -42,55 +42,34 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 88 -> 89: Borel-torsor theorem for the Rosser phantom)**
-  Passes 80-82 settled the automorphic side of the solid phantom line.  Pass 80
-  showed $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, not
-  $\mathrm{SL}_2$; Pass 81 showed the principal series is maximally
-  degenerate, $I(s)=\chi_s$, with no Weyl functional equation; Pass 82 showed
-  nontrivial Whittaker functionals vanish because $I(s)$ is trivial on
-  $U=\epsilon$.  Pass 83 corrected the archimedean comparison: adding the real
-  place gives the full adelic solenoid
-  $$\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\cong\mathbb A/\mathbb Q$$
-  with compact row
-  $$0\to\widehat{\mathbb Z}\to\Sigma\to\mathbb R/\mathbb Z\to0,$$
-  while the finite phantom is the dense quotient
-  $$\mathbb R\to\Sigma\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to0.$$
-  The compact row is nonsplit, and global characters restrict to
-  $\mathbb Q/\mathbb Z$ on $\widehat{\mathbb Z}$ but descend to $\epsilon$ only
-  trivially in degree $0$.  Pass 84 showed why: the quotient topology on
-  $\epsilon$ is indiscrete, so $U=\epsilon$ cannot act by nontrivial continuous
-  translations on $\Sigma$; the nonzero replacement is the degree-$1$ solid
-  boundary $D\epsilon\simeq\mathbb Q[-1]$, represented by
-  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.  Pass 85 compared the
-  two-term complexes $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$,
-  $C_{\mathbb R}=[\mathbb R\to\Sigma]$, and
-  $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$: all have quotient $\epsilon$ and
-  acyclic Hausdorff finite shadows, but only
-  $C_{\mathbb Z}\to C_{\mathbb Q}$ preserves the finite-adele Borel shear
-  class.  Pass 86 proved the intended universal property with the necessary
-  correction: the kernel must be uniquely divisible / $\mathbb Q$-linear (or
-  carry a specified $\mathbb Q$-linear kernel map).  Under that hypothesis,
-  $\mathbb Z\to D$ extends uniquely to $\mathbb Q\to D$, so
-  $C_{\mathbb Q}$ is initial among shear-marked pushout models receiving
-  $C_{\mathbb Z}$.  The naive version for arbitrary divisible kernels is false,
-  witnessed by distinct maps $\mathbb Q\to\mathbb Q/\mathbb Z$ that agree on
-  $\mathbb Z$.
-  Pass 87 resolved the mapping-space task by identifying the fiber as
-  $\mathbf R\operatorname{Map}(\mathbb Q/\mathbb Z,D)$: it is contractible for
-  uniquely divisible kernels, while torsion-divisible summands contribute the
-  extra boundary components and must be excluded or decorated.
-  Pass 88 resolved the stabilizer split: strict automorphisms under
-  $C_{\mathbb Z}$ are trivial; the extension-line stabilizer is
-  $\mathbb Q^\times$; and the full Borel $\mathbb Q^\times\ltimes\epsilon$
-  appears only at the hyperbolic-plane level, where $\epsilon$ is the
-  unipotent shear.
+- **(Pass 89 -> 90: conductor-functorial Borel torsors)**
+  Pass 89 resolved the Borel-torsor theorem for the Rosser phantom.  The
+  Guaspari-Solovay witness-comparison Cech class, the
+  $\varprojlim^1(\mathbb Z,\times m)$ or
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ phantom, the finite-adele extension
+  line
+  $$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0,$$
+  and the hyperbolic Borel shear orbit for
+  $\mathbb Q^\times\ltimes\epsilon$ are four presentations of the same
+  torsor/extension class in the APS/Rosser model.  The bridge sends a
+  witness-comparison Cech cocycle to its class in
+  $\operatorname{coker}\delta$, identifies this class with
+  $\widehat{\mathbb Z}_m/\mathbb Z$ or $\epsilon$, and pushes out
+  $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ along
+  $\mathbb Z\to\mathbb Q$.  Changing witness choices changes representatives,
+  sections, and finite Loeb lifts by coboundaries but preserves the
+  cohomology/torsor class, finite conductor restrictions, radical support, and
+  finite-adele extension line.
   Open:
-  (i) consolidate Passes 80-88 into a single Borel-torsor / extension-class
-  theorem for the Rosser phantom;
-  (ii) state the functorial bridge from this finite-adele shear class back to
-  the APS/Rosser unit-torsor line;
-  (iii) identify which data are invariant under changing Guaspari-Solovay
-  witness choices.
+  (i) specify the category of conductor/radical maps on which this torsor
+  bridge is natural;
+  (ii) compare $m$-adic variants
+  $\widehat{\mathbb Z}_m/\mathbb Z$ under radical-compatible maps and decide
+  when maps should instead be spans, pullbacks, or restrictions to finite
+  conductor shadows;
+  (iii) prove one commutative diagram linking Cech torsors, finite-adele
+  extension lines, and hyperbolic Borel shear orbits across the $m$-adic and
+  all-prime cases.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

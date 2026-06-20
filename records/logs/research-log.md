@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 89)
+
+- Consolidated the Rosser phantom as a Borel-torsor / extension-class theorem.
+  The Guaspari-Solovay witness-comparison Cech class, the
+  $\varprojlim^1(\mathbb Z,\times m)$ or
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ phantom, the finite-adele extension
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$, and the hyperbolic Borel
+  shear orbit for $\mathbb Q^\times\ltimes\epsilon$ are four presentations of
+  the same torsor class.  Changing witness choices changes representatives
+  and sections by coboundaries but preserves the cohomology class, finite
+  conductor restrictions, radical support, and extension line.  Verified with
+  `code/scripts/check-pass89.py` ->
+  `artifacts/reports/pass89-borel-torsor-rosser-phantom-check.json` (PASS) and
+  added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-21 (Autonomous discussion Pass 88)
 
 - Computed the stabilizer split for the final finite-adele shear extension.
