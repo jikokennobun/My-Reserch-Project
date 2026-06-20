@@ -1719,3 +1719,34 @@ degree-$1$ boundary/shear class, not by a degree-$0$ morphism.  The object
 $\mathbb Q/\mathbb Z$ remains the finite-character boundary of the closed
 kernel $\widehat{\mathbb Z}\subset\Sigma$; its solid arithmetic completion is
 the shifted boundary $\mathbb Q[-1]$ attached to $\epsilon$.
+
+## Two-term complex models for the phantom boundary (Pass 85)
+
+Use cohomological degrees $0\to1$.  The finite-prime boundary has three useful
+two-term models:
+$$
+C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,],\qquad
+C_{\mathbb R}=[\,\mathbb R\to\Sigma\,],\qquad
+C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,].
+$$
+Each differential is injective and each degree-$1$ quotient is
+$$
+H^1(C_{\mathbb Z})\cong H^1(C_{\mathbb R})\cong H^1(C_{\mathbb Q})
+\cong\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+Their ordinary finite/Hausdorff shadows are acyclic: the diagonal image is
+surjective at every finite modulus, and the images of $\mathbb R$ in $\Sigma$
+and $\mathbb Q$ in $\mathbb A_f$ are dense.
+
+The complexes differ as extension data.  The map
+$$
+C_{\mathbb Z}\to C_{\mathbb Q}
+$$
+is the pushout along $\mathbb Z\hookrightarrow\mathbb Q$ and preserves the unit
+class, giving the finite-adele shear extension
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+The archimedean complex $C_{\mathbb R}$ has the same quotient $\epsilon$ but
+does not preserve this finite-adele kernel/Yoneda class; it is the compact
+solenoid repair, not the Borel shear replacement.

@@ -42,7 +42,7 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 84 -> 85: two-term complex model of the finite-prime boundary)**
+- **(Pass 85 -> 86: universal property of the finite-adele shear pushout)**
   Passes 80-82 settled the automorphic side of the solid phantom line.  Pass 80
   showed $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, not
   $\mathrm{SL}_2$; Pass 81 showed the principal series is maximally
@@ -61,15 +61,21 @@
   $\epsilon$ is indiscrete, so $U=\epsilon$ cannot act by nontrivial continuous
   translations on $\Sigma$; the nonzero replacement is the degree-$1$ solid
   boundary $D\epsilon\simeq\mathbb Q[-1]$, represented by
-  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.  Pass 85 compared the
+  two-term complexes $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$,
+  $C_{\mathbb R}=[\mathbb R\to\Sigma]$, and
+  $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$: all have quotient $\epsilon$ and
+  acyclic Hausdorff finite shadows, but only
+  $C_{\mathbb Z}\to C_{\mathbb Q}$ preserves the finite-adele Borel shear
+  class.
   Open:
-  (i) write explicit two-term complexes
-  $[\mathbb Z\to\widehat{\mathbb Z}]$, $[\mathbb R\to\Sigma]$, and
-  $[\mathbb Q\to\mathbb A_f]$ for the same boundary;
-  (ii) prove which comparison maps are quasi-isomorphisms after Hausdorff
-  reflection, after solidification, and after applying the Borel shear functor;
-  (iii) isolate the exact class preserving the finite-adele extension and show
-  whether it is the universal replacement for the missing Weyl flip.
+  (i) characterize $C_{\mathbb Q}$ as the initial divisible-kernel quotient
+  model receiving $C_{\mathbb Z}$ and preserving the unit class
+  $1\in\widehat{\mathbb Z}^{\times}$;
+  (ii) prove whether every shear-preserving quotient model factors uniquely
+  through $C_{\mathbb Q}$ in $D(\mathrm{Solid})$;
+  (iii) decide whether this universal property is the categorical replacement
+  for the missing Weyl flip.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

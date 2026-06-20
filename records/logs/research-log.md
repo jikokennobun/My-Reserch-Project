@@ -1,5 +1,19 @@
 # Research Log
 
+## 2026-06-20 (Autonomous discussion Pass 85)
+
+- Built the two-term complex comparison
+  $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$,
+  $C_{\mathbb R}=[\mathbb R\to\Sigma]$, and
+  $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$.  All three have quotient
+  $\epsilon$ and acyclic finite/Hausdorff shadows, but only
+  $C_{\mathbb Z}\to C_{\mathbb Q}$ is the shear-preserving pushout carrying
+  $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$; the archimedean row preserves
+  the quotient but not the finite-adele Borel shear class.  Verified with
+  `code/scripts/check-pass85.py` ->
+  `artifacts/reports/pass85-two-term-boundary-complex-check.json` (PASS) and
+  added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-20 (Autonomous discussion Pass 84)
 
 - Formulated the dense quotient $\mathbb R\to\Sigma\to\epsilon$ as a

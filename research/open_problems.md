@@ -877,12 +877,23 @@
   $D\epsilon\simeq\mathbb Q[-1]$ / $\mathrm{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\simeq\mathbb Q$,
   represented by $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.  Machine-verified
   `artifacts/reports/pass84-dense-phantom-boundary-action-check.json` (PASS).
-- **[New (Pass 84)]** **Two-term complex model of the phantom boundary.** Build explicit complexes
+- **[Resolved (Pass 85)]** **Two-term complex model of the phantom boundary.** Build explicit complexes
   $[\mathbb Z\to\widehat{\mathbb Z}]$, $[\mathbb R\to\Sigma]$, and
   $[\mathbb Q\to\mathbb A_f]$ representing the same finite-prime boundary in the relevant
   solid/condensed derived category.  Prove which maps are quasi-isomorphisms after Hausdorff
   reflection, after solidification, and after applying the Borel shear functor, and isolate the exact
   class preserving $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.
+  **Resolution:** the three complexes all have quotient $\epsilon$ and acyclic finite/Hausdorff
+  shadows, but only $[\mathbb Z\to\widehat{\mathbb Z}]\to[\mathbb Q\to\mathbb A_f]$ is the pushout
+  preserving the unit/shear class.  The archimedean row $[\mathbb R\to\Sigma]$ preserves the quotient
+  but not the finite-adele Borel shear extension.  Machine-verified
+  `artifacts/reports/pass85-two-term-boundary-complex-check.json` (PASS).
+- **[New (Pass 85)]** **Universal property of the finite-adele shear pushout.** Characterize
+  $C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ as the initial divisible-kernel quotient model receiving
+  $C_{\mathbb Z}=[\mathbb Z\to\widehat{\mathbb Z}]$ that preserves the unit class
+  $1\in\widehat{\mathbb Z}^{\times}$ and kills ordinary finite/Hausdorff cokernels.  Decide whether
+  every shear-preserving quotient model factors uniquely through $C_{\mathbb Q}$ in $D(\mathrm{Solid})$,
+  and whether this universal property is the categorical replacement for the missing Weyl flip.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

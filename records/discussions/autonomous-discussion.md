@@ -6,8 +6,28 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 85
-- Last pass note: Pass 84 (2026-06-20) formulated the dense-quotient
+- Current pass: 86
+- Last pass note: Pass 85 (2026-06-20) built the promised two-term complex
+  comparison for the finite-prime boundary.  With cohomological convention
+  degree $0\to1$, the three rows
+  $$C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,],\quad
+  C_{\mathbb R}=[\,\mathbb R\to\Sigma\,],\quad
+  C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,]$$
+  all have injective differential and abstract quotient
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ in degree $1$.  Their ordinary
+  finite/Hausdorff shadows are acyclic because the diagonal image is dense /
+  surjective at every modulus.  The phantom is the solid derived residue of
+  the non-Mittag-Leffler kernel tower, not an ordinary finite cokernel.
+  The map $C_{\mathbb Z}\to C_{\mathbb Q}$ induced by
+  $\mathbb Z\hookrightarrow\mathbb Q$ and
+  $\widehat{\mathbb Z}\hookrightarrow\mathbb A_f$ is the shear-preserving
+  pushout; it carries the unit class to the finite-adele extension
+  $$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.$$
+  The archimedean row $C_{\mathbb R}$ has the same quotient but not this
+  finite-adele kernel class; it repairs the compact solenoid rather than the
+  Borel shear.  Machine-verified `check-pass85.py` ->
+  `pass85-two-term-boundary-complex-check.json` PASS. Counter 85->86.
+- Earlier note: Pass 84 (2026-06-20) formulated the dense-quotient
   $\mathbb R\to\Sigma\to\epsilon$ as a boundary object rather than a continuous
   action row.  Since $\mathbb Z$ is dense in $\widehat{\mathbb Z}$, the quotient
   topology on $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ is indiscrete; its
@@ -9633,3 +9653,110 @@ boundary, comparing $[\mathbb Z\to\widehat{\mathbb Z}]$,
 $[\mathbb R\to\Sigma]$, and the finite-adele extension
 $[\,\mathbb Q\to\mathbb A_f\,]$, and prove which quasi-isomorphisms preserve
 the Borel shear class.
+
+---
+
+### Pass 85 - 2026-06-20 JST
+
+Focus:
+Write the explicit two-term complex model promised by Pass 84 and decide which
+comparison preserves the Borel shear class.
+
+Proposer:
+Use cohomological degrees $0\to1$ and define
+$$
+C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,],\qquad
+C_{\mathbb R}=[\,\mathbb R\to\Sigma\,],\qquad
+C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,].
+$$
+All three maps are injective and their degree-$1$ quotients are abstractly
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+Indeed $\Sigma/\mathbb R\cong\widehat{\mathbb Z}/\mathbb Z$ and
+$\mathbb A_f/\mathbb Q\cong\widehat{\mathbb Z}/\mathbb Z$ by strong
+approximation $\mathbb A_f=\mathbb Q+\widehat{\mathbb Z}$ with
+$\mathbb Q\cap\widehat{\mathbb Z}=\mathbb Z$.  Thus each complex is a model of
+the same quotient in the algebraic/solid derived category.
+
+The ordinary finite/Hausdorff shadows do not see this quotient: reducing
+$\mathbb Z\to\widehat{\mathbb Z}$ modulo $N$ gives a surjection
+$\mathbb Z\to\mathbb Z/N$, and similarly the dense images of $\mathbb R$ in
+$\Sigma$ and $\mathbb Q$ in $\mathbb A_f$ have zero Hausdorff cokernel.  The
+phantom is the derived residue of the non-Mittag-Leffler kernel tower
+$N_n\mathbb Z$, not a finite cokernel.
+
+The shear-preserving comparison is
+$$
+C_{\mathbb Z}\longrightarrow C_{\mathbb Q}
+$$
+obtained by pushout along $\mathbb Z\hookrightarrow\mathbb Q$; it sends the unit
+extension $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ to
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+The archimedean complex $C_{\mathbb R}$ has the same quotient but changes the
+kernel object to $\mathbb R$, so it is quotient-equivalent but not
+shear-class-equivalent.
+
+Skeptic:
+Do not call all three rows canonically quasi-isomorphic as extensions.  They
+are quasi-isomorphic after forgetting the chosen kernel and remembering only
+the cohomology object $\epsilon[-1]$, and they are all invisible to Hausdorff
+finite probes.  But extension class matters for the Borel.  The finite-adele
+class lives in
+$$
+\mathrm{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\cong\mathbb Q,
+$$
+so only the row with kernel $\mathbb Q$ can carry that shear.  The
+archimedean row belongs to the compact global solenoid repair; it does not
+produce the finite-adele shear class and should not be used as the replacement
+for the Weyl flip.
+
+Formalist:
+> **Theorem 85a (three two-term quotient models).** The complexes
+> $C_{\mathbb Z}$, $C_{\mathbb R}$, and $C_{\mathbb Q}$ above have $H^0=0$ and
+> $H^1\cong\epsilon$ as abstract/solid quotient objects.  Their finite
+> Hausdorff shadows are acyclic: all ordinary finite cokernels vanish.
+>
+> **Theorem 85b (phantom source).** For $C_{\mathbb Z}$ the finite kernels are
+> $N_n\mathbb Z$, a non-Mittag-Leffler tower along the lcm stages; the nonzero
+> $\epsilon$ is exactly the $\varprojlim^1$/solid boundary of this tower.
+>
+> **Theorem 85c (shear-preserving pushout).** The comparison
+> $C_{\mathbb Z}\to C_{\mathbb Q}$ is the pushout along
+> $\mathbb Z\hookrightarrow\mathbb Q$ and preserves the unit/Yoneda class,
+> giving the finite-adele extension
+> $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$.  The comparison through
+> $C_{\mathbb R}$ preserves only the quotient $\epsilon$, not the Borel shear
+> class.
+
+Machine-verified `code/scripts/check-pass85.py` ->
+`artifacts/reports/pass85-two-term-boundary-complex-check.json` (overall PASS):
+for the checked lcm stages, finite diagonal images are all of $\mathbb Z/N$ and
+ordinary finite/Hausdorff cokernels vanish; the kernel tower has repeated
+strict drops, witnessing the non-Mittag-Leffler source of the phantom; unit
+residues $1\bmod N$ are compatible and remain units; the comparison table
+marks $C_{\mathbb Z}$ and $C_{\mathbb Q}$, but not $C_{\mathbb R}$, as
+preserving the finite-adele shear class.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-85 entry; State counter
+  $85\to86$.
+- `records/logs/research-log.md`: Pass-85 entry.
+- `research/definitions.md`: added the two-term boundary complex comparison.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-85 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked the two-term
+  complex task resolved and retargeted the next pass to the universal property
+  of the shear-preserving pushout.
+- `code/scripts/check-pass85.py`,
+  `artifacts/reports/pass85-two-term-boundary-complex-check.json`: new.
+- `artifacts/pdf/two-term-boundary-complex-2026-06-20.md`: publication summary source.
+
+Next step:
+Pass 86 should state and test the universal property of the shear-preserving
+pushout: among quotient models of $\epsilon$ with divisible kernel, is
+$C_{\mathbb Q}=[\mathbb Q\to\mathbb A_f]$ initial for maps out of
+$C_{\mathbb Z}$ that preserve the unit class and kill Hausdorff finite
+cokernels?

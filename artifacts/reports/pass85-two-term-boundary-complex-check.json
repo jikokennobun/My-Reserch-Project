@@ -1,0 +1,311 @@
+{
+  "pass": 85,
+  "title": "Two-term complex models of the finite-prime phantom boundary",
+  "A_dense_finite_shadows": {
+    "statement": "At every checked modulus, the diagonal image is all of Z/N, so ordinary finite/Hausdorff cokernels vanish.",
+    "rows": [
+      {
+        "N": 1,
+        "image_of_diagonal_size": 1,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 2,
+        "image_of_diagonal_size": 2,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 6,
+        "image_of_diagonal_size": 6,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 12,
+        "image_of_diagonal_size": 12,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 60,
+        "image_of_diagonal_size": 60,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 60,
+        "image_of_diagonal_size": 60,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 420,
+        "image_of_diagonal_size": 420,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 840,
+        "image_of_diagonal_size": 840,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 2520,
+        "image_of_diagonal_size": 2520,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 2520,
+        "image_of_diagonal_size": 2520,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 27720,
+        "image_of_diagonal_size": 27720,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      },
+      {
+        "N": 27720,
+        "image_of_diagonal_size": 27720,
+        "coker_size": 1,
+        "hausdorff_reflection_coker_size": 1,
+        "ordinary_finite_shadow_acyclic": true
+      }
+    ],
+    "all_ordinary_finite_shadows_acyclic": true
+  },
+  "B_non_Mittag_Leffler_kernel_tower": {
+    "statement": "The kernel tower N_n Z has infinitely recurring strict drops in the lcm stages; this is the finite certificate for the lim^1 phantom rather than an ordinary finite cokernel.",
+    "rows": [
+      {
+        "index": 1,
+        "N_current": 1,
+        "N_next": 2,
+        "strict_drop": true,
+        "quotient_index": 2,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 2,
+        "N_current": 2,
+        "N_next": 6,
+        "strict_drop": true,
+        "quotient_index": 3,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 3,
+        "N_current": 6,
+        "N_next": 12,
+        "strict_drop": true,
+        "quotient_index": 2,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 4,
+        "N_current": 12,
+        "N_next": 60,
+        "strict_drop": true,
+        "quotient_index": 5,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 5,
+        "N_current": 60,
+        "N_next": 60,
+        "strict_drop": false,
+        "quotient_index": 1,
+        "Mittag_Leffler_stabilized_here": true
+      },
+      {
+        "index": 6,
+        "N_current": 60,
+        "N_next": 420,
+        "strict_drop": true,
+        "quotient_index": 7,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 7,
+        "N_current": 420,
+        "N_next": 840,
+        "strict_drop": true,
+        "quotient_index": 2,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 8,
+        "N_current": 840,
+        "N_next": 2520,
+        "strict_drop": true,
+        "quotient_index": 3,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 9,
+        "N_current": 2520,
+        "N_next": 2520,
+        "strict_drop": false,
+        "quotient_index": 1,
+        "Mittag_Leffler_stabilized_here": true
+      },
+      {
+        "index": 10,
+        "N_current": 2520,
+        "N_next": 27720,
+        "strict_drop": true,
+        "quotient_index": 11,
+        "Mittag_Leffler_stabilized_here": false
+      },
+      {
+        "index": 11,
+        "N_current": 27720,
+        "N_next": 27720,
+        "strict_drop": false,
+        "quotient_index": 1,
+        "Mittag_Leffler_stabilized_here": true
+      }
+    ],
+    "strict_drops_in_checked_window": 8,
+    "non_ML_witnessed": true
+  },
+  "C_unit_extension_class": {
+    "statement": "The unit residue 1 in each Z/N is compatible under reduction and stays a unit; this is the finite trace of the extension class preserved by the pushout C_Z -> C_Q.",
+    "rows": [
+      {
+        "N": 1,
+        "unit_residue": 0,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 2,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 6,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 12,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 60,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 60,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 420,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 840,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 2520,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 2520,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 27720,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      },
+      {
+        "N": 27720,
+        "unit_residue": 1,
+        "is_unit": true,
+        "compatible_with_previous": true
+      }
+    ],
+    "all_compatible": true,
+    "all_units": true
+  },
+  "D_complex_comparisons": {
+    "statement": "C_Z, C_R, and C_Q have the same abstract quotient epsilon after solidification, but only C_Z and C_Q preserve the finite-adele shear class.",
+    "rows": [
+      {
+        "complex_name": "C_Z=[Z -> Zhat]",
+        "kernel_object": "Z",
+        "quotient_object": "epsilon=Zhat/Z",
+        "hausdorff_reflection": "acyclic: finite/Hausdorff cokernels vanish",
+        "solid_boundary": "lim^1 of the non-Mittag-Leffler kernel tower N_n Z",
+        "preserves_finite_adele_shear_class": true,
+        "reason": "This is the unit extension before pushout."
+      },
+      {
+        "complex_name": "C_Q=[Q -> A_f]",
+        "kernel_object": "Q",
+        "quotient_object": "epsilon=A_f/Q",
+        "hausdorff_reflection": "acyclic: Q is dense in A_f",
+        "solid_boundary": "pushout of C_Z along Z -> Q; Ext^1(epsilon,Q)=Q",
+        "preserves_finite_adele_shear_class": true,
+        "reason": "This is exactly the finite-adele shear/Yoneda extension 0 -> Q -> A_f -> epsilon -> 0."
+      },
+      {
+        "complex_name": "C_R=[R -> Sigma]",
+        "kernel_object": "R",
+        "quotient_object": "epsilon=Sigma/R",
+        "hausdorff_reflection": "acyclic: R is dense in Sigma",
+        "solid_boundary": "same abstract quotient epsilon, but with archimedean kernel",
+        "preserves_finite_adele_shear_class": false,
+        "reason": "It repairs the global compact solenoid but does not push out the unit extension along Z -> Q."
+      }
+    ],
+    "shear_preserving_complexes": [
+      "C_Z=[Z -> Zhat]",
+      "C_Q=[Q -> A_f]"
+    ]
+  },
+  "conclusion": {
+    "hausdorff_reflection": "All three dense quotient complexes become acyclic in ordinary finite/Hausdorff shadows.",
+    "solid_boundary": "The solid boundary is the lim^1/Ext^1 quotient epsilon, represented by C_Z and by its pushout C_Q.",
+    "borel_shear_class": "The Borel shear is preserved by [Z -> Zhat] -> [Q -> A_f], but not by the archimedean [R -> Sigma] row.",
+    "next_task": "Construct the functorial comparison square/triangle in D(Solid) and prove the universal property of the shear-preserving pushout."
+  },
+  "overall": "PASS"
+}

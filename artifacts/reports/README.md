@@ -37,6 +37,13 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass85-two-term-boundary-complex-check.json`: verifies the Pass-85
+  two-term complex comparison. It checks that the finite/Hausdorff shadows of
+  $[\mathbb Z\to\widehat{\mathbb Z}]$, $[\mathbb R\to\Sigma]$, and
+  $[\mathbb Q\to\mathbb A_f]$ are acyclic, that the lcm kernel tower has
+  strict non-Mittag-Leffler drops, that the unit residues remain compatible,
+  and that only the finite-adele pushout preserves the Borel shear class.
+
 - `pass84-dense-phantom-boundary-action-check.json`: verifies the Pass-84
   dense quotient and action obstruction. It checks that finite shadows of
   $\widehat{\mathbb Z}/\mathbb Z$ have only empty/all saturated opens, that

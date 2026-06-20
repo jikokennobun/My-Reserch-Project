@@ -4424,3 +4424,69 @@ $\mathbb Q$ vanish at all checked stages.
 **Limit of the pass.**  The next task is to write an explicit two-term complex
 model for the boundary, comparing $[\mathbb Z\to\widehat{\mathbb Z}]$,
 $[\mathbb R\to\Sigma]$, and $[\mathbb Q\to\mathbb A_f]$.
+
+## Pass 85 - Two-term complex models of the phantom boundary
+
+Pass 85 writes the boundary in cohomological degrees $0\to1$:
+$$
+C_{\mathbb Z}=[\,\mathbb Z\to\widehat{\mathbb Z}\,],\quad
+C_{\mathbb R}=[\,\mathbb R\to\Sigma\,],\quad
+C_{\mathbb Q}=[\,\mathbb Q\to\mathbb A_f\,].
+$$
+All three differentials are injective and all three quotients are
+$$
+H^1\cong\epsilon=\widehat{\mathbb Z}/\mathbb Z.
+$$
+For $C_{\mathbb R}$ this is $\Sigma/\mathbb R\cong\widehat{\mathbb Z}/\mathbb Z$;
+for $C_{\mathbb Q}$ it is
+$\mathbb A_f/\mathbb Q\cong\widehat{\mathbb Z}/\mathbb Z$ by strong
+approximation $\mathbb A_f=\mathbb Q+\widehat{\mathbb Z}$ and
+$\mathbb Q\cap\widehat{\mathbb Z}=\mathbb Z$.
+
+Finite/Hausdorff probes see none of these quotients.  Modulo $N$, the diagonal
+map $\mathbb Z\to\mathbb Z/N$ is surjective, so the ordinary finite cokernel is
+zero; topologically, $\mathbb R$ is dense in $\Sigma$ and $\mathbb Q$ is dense
+in $\mathbb A_f$.  The phantom is therefore not an ordinary cokernel but the
+solid/derived residue of the non-Mittag-Leffler kernel tower $N_n\mathbb Z$.
+
+The extension data distinguishes the rows.  The map
+$$
+C_{\mathbb Z}\to C_{\mathbb Q}
+$$
+is the pushout of $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ along
+$\mathbb Z\hookrightarrow\mathbb Q$, and therefore preserves the unit/Yoneda
+class:
+$$
+0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0.
+$$
+This is the Borel shear class from Passes 79-84.  The archimedean row
+$C_{\mathbb R}$ is quotient-equivalent but not shear-class-equivalent: it
+repairs the global compact solenoid, while the finite-adele row carries the
+solid Borel action.
+
+> **Theorem 85a (three quotient complexes).**
+> $C_{\mathbb Z}$, $C_{\mathbb R}$, and $C_{\mathbb Q}$ have $H^0=0$ and
+> $H^1\cong\epsilon$.  Their finite/Hausdorff shadows are acyclic.
+>
+> **Theorem 85b (phantom source).**
+> The nonzero boundary is the $\varprojlim^1$/solid residue of the
+> non-Mittag-Leffler kernel tower $N_n\mathbb Z$; it is invisible to finite
+> cokernel tests.
+>
+> **Theorem 85c (shear-preserving pushout).**
+> The comparison $C_{\mathbb Z}\to C_{\mathbb Q}$ preserves the finite-adele
+> shear class.  The comparison through $C_{\mathbb R}$ preserves only the
+> quotient $\epsilon$, not the Borel shear extension.
+
+**Machine verification** (`code/scripts/check-pass85.py` ->
+`artifacts/reports/pass85-two-term-boundary-complex-check.json`, PASS): finite
+diagonal images are all of $\mathbb Z/N$ and ordinary finite/Hausdorff
+cokernels vanish; the lcm kernel tower has repeated strict drops; unit residues
+$1\bmod N$ are compatible units; the comparison table marks
+$C_{\mathbb Z}$ and $C_{\mathbb Q}$, but not $C_{\mathbb R}$, as preserving
+the finite-adele shear class.
+
+**Limit of the pass.**  The next task is a universal property: characterize
+$C_{\mathbb Q}$ as the initial divisible-kernel quotient model receiving
+$C_{\mathbb Z}$ and preserving the unit/shear class while killing finite
+Hausdorff cokernels.
