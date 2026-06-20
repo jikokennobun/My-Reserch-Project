@@ -1,0 +1,423 @@
+{
+  "pass": 83,
+  "title": "Adelic solenoid exact-row correction and finite-phantom boundary",
+  "A_correct_closed_kernel": {
+    "statement": "For Sigma=(R x Zhat)/Z, projection to R/Z has closed kernel Zhat, not epsilon=Zhat/Z.",
+    "finite_kernel_shadow": "Z/N at denominator N",
+    "dual_rows": [
+      {
+        "N": 1,
+        "quotient_size": 1,
+        "expected_size": 1,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": true,
+        "reason": "The quotient is trivial at N=1."
+      },
+      {
+        "N": 2,
+        "quotient_size": 2,
+        "expected_size": 2,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 6,
+        "quotient_size": 6,
+        "expected_size": 6,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 12,
+        "quotient_size": 12,
+        "expected_size": 12,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 60,
+        "quotient_size": 60,
+        "expected_size": 60,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 60,
+        "quotient_size": 60,
+        "expected_size": 60,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 420,
+        "quotient_size": 420,
+        "expected_size": 420,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 840,
+        "quotient_size": 840,
+        "expected_size": 840,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 2520,
+        "quotient_size": 2520,
+        "expected_size": 2520,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 2520,
+        "quotient_size": 2520,
+        "expected_size": 2520,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 27720,
+        "quotient_size": 27720,
+        "expected_size": 27720,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 27720,
+        "quotient_size": 27720,
+        "expected_size": 27720,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      }
+    ],
+    "all_dual_rows_exact": true
+  },
+  "B_no_continuous_split": {
+    "statement": "A continuous splitting of Sigma -> R/Z would dualize to a splitting of 0 -> Z -> Q -> Q/Z -> 0; no such splitting exists because Q is torsion-free and Q/Z is torsion.",
+    "finite_stage_splittings": [
+      {
+        "N": 1,
+        "quotient_size": 1,
+        "expected_size": 1,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": true,
+        "reason": "The quotient is trivial at N=1."
+      },
+      {
+        "N": 2,
+        "quotient_size": 2,
+        "expected_size": 2,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 6,
+        "quotient_size": 6,
+        "expected_size": 6,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 12,
+        "quotient_size": 12,
+        "expected_size": 12,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 60,
+        "quotient_size": 60,
+        "expected_size": 60,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 60,
+        "quotient_size": 60,
+        "expected_size": 60,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 420,
+        "quotient_size": 420,
+        "expected_size": 420,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 840,
+        "quotient_size": 840,
+        "expected_size": 840,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 2520,
+        "quotient_size": 2520,
+        "expected_size": 2520,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 2520,
+        "quotient_size": 2520,
+        "expected_size": 2520,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 27720,
+        "quotient_size": 27720,
+        "expected_size": 27720,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      },
+      {
+        "N": 27720,
+        "quotient_size": 27720,
+        "expected_size": 27720,
+        "inclusion_is_times_N": true,
+        "cokernel_is_ZmodN": true,
+        "split_possible": false,
+        "reason": "A splitting Z/N -> Z would send an order-N element to torsion in Z, but Z is torsion-free."
+      }
+    ],
+    "all_finite_splittings_blocked": true
+  },
+  "C_fourier_restriction_and_epsilon_descent": {
+    "statement": "Global characters Q restrict to the profinite kernel as Q/Z, but only the trivial finite character descends to epsilon=Zhat/Z.",
+    "rows": [
+      {
+        "N": 1,
+        "profinite_character_count": 1,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": false
+      },
+      {
+        "N": 2,
+        "profinite_character_count": 2,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 6,
+        "profinite_character_count": 6,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 12,
+        "profinite_character_count": 12,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 60,
+        "profinite_character_count": 60,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 60,
+        "profinite_character_count": 60,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 420,
+        "profinite_character_count": 420,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 840,
+        "profinite_character_count": 840,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 2520,
+        "profinite_character_count": 2520,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 2520,
+        "profinite_character_count": 2520,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 27720,
+        "profinite_character_count": 27720,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      },
+      {
+        "N": 27720,
+        "profinite_character_count": 27720,
+        "descends_to_epsilon_count": 1,
+        "only_trivial_descends": true,
+        "nontrivial_restrictions_exist_on_Zhat": true
+      }
+    ],
+    "all_only_trivial_descends_to_epsilon": true
+  },
+  "D_epsilon_is_quotient_not_closed_kernel": {
+    "statement": "The quotient Sigma/R is Zhat/Z=epsilon.  Levelwise finite cokernels vanish because Z -> Z/N is onto; the nonzero epsilon is therefore derived/non-Hausdorff phantom data.",
+    "rows": [
+      {
+        "N": 1,
+        "diagonal_image_size_in_ZmodN": 1,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 2,
+        "diagonal_image_size_in_ZmodN": 2,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 6,
+        "diagonal_image_size_in_ZmodN": 6,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 12,
+        "diagonal_image_size_in_ZmodN": 12,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 60,
+        "diagonal_image_size_in_ZmodN": 60,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 60,
+        "diagonal_image_size_in_ZmodN": 60,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 420,
+        "diagonal_image_size_in_ZmodN": 420,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 840,
+        "diagonal_image_size_in_ZmodN": 840,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 2520,
+        "diagonal_image_size_in_ZmodN": 2520,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 2520,
+        "diagonal_image_size_in_ZmodN": 2520,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 27720,
+        "diagonal_image_size_in_ZmodN": 27720,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      },
+      {
+        "N": 27720,
+        "diagonal_image_size_in_ZmodN": 27720,
+        "coker_Z_to_ZmodN_size": 1,
+        "levelwise_cokernel_zero": true,
+        "derived_phantom_required": true
+      }
+    ],
+    "all_levelwise_cokernels_zero": true,
+    "derived_phantom_still_required": true
+  },
+  "conclusion": {
+    "corrected_exact_rows": [
+      "0 -> Zhat -> Sigma -> R/Z -> 0",
+      "R -> Sigma -> epsilon=Zhat/Z -> 0 (dense/non-Hausdorff quotient row)"
+    ],
+    "global_fourier_on_epsilon": "The global Fourier transform sees Q/Z on the closed profinite kernel Zhat, but descends to epsilon in degree 0 only as the constant character; the Q/Z quotient is the boundary shadow.",
+    "borel_compatible_split": "none in continuous/condensed degree 0"
+  },
+  "overall": "PASS"
+}

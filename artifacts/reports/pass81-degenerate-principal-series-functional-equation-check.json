@@ -1,0 +1,66 @@
+{
+  "pass": 81,
+  "title": "Degenerate principal series of the solid Borel; functional-equation wall",
+  "A_flag_variety_collapse": {
+    "flag_rows": [
+      {"N": 2, "P1_size": 3, "barU_N": 2},
+      {"N": 3, "P1_size": 4, "barU_N": 3},
+      {"N": 4, "P1_size": 6, "barU_N": 4},
+      {"N": 5, "P1_size": 6, "barU_N": 5},
+      {"N": 6, "P1_size": 12, "barU_N": 6},
+      {"N": 9, "P1_size": 12, "barU_N": 9},
+      {"N": 12, "P1_size": 24, "barU_N": 12},
+      {"N": 30, "P1_size": 72, "barU_N": 30},
+      {"N": 210, "P1_size": 576, "barU_N": 210}
+    ],
+    "all_flag_gt_1": true,
+    "Hom_ZmodN_Q_is_zero": true,
+    "Ext1_ZmodN_Q_is_zero": true,
+    "limit_flag_is_point": true
+  },
+  "B_finite_functional_equation_DFT_dilation": {
+    "rows": [
+      {"N": 3, "max_err": 2.9504581591051765e-16, "units": 2},
+      {"N": 4, "max_err": 1.8369701987210297e-16, "units": 2},
+      {"N": 5, "max_err": 4.460365043975677e-16, "units": 4},
+      {"N": 6, "max_err": 1.6260656386992204e-15, "units": 2},
+      {"N": 7, "max_err": 1.7964544220832856e-15, "units": 6},
+      {"N": 8, "max_err": 2.3341102430439337e-15, "units": 4},
+      {"N": 9, "max_err": 3.885780586188048e-15, "units": 6},
+      {"N": 11, "max_err": 1.5543122344752192e-15, "units": 10},
+      {"N": 12, "max_err": 4.733214589878799e-15, "units": 4},
+      {"N": 15, "max_err": 1.0658141036401503e-14, "units": 8},
+      {"N": 16, "max_err": 5.039969708895068e-15, "units": 8}
+    ],
+    "F_unitary_intertwines_s_to_minus_s": true
+  },
+  "C_gauss_sum_c_factor": {
+    "rows": [
+      {"p": 3, "n_nontrivial_chars": 1, "max_dev_|g|^2_minus_p": 1.3322676295501878e-15},
+      {"p": 5, "n_nontrivial_chars": 3, "max_dev_|g|^2_minus_p": 3.552713678800501e-15},
+      {"p": 7, "n_nontrivial_chars": 5, "max_dev_|g|^2_minus_p": 1.9539925233402755e-14},
+      {"p": 11, "n_nontrivial_chars": 9, "max_dev_|g|^2_minus_p": 4.618527782440651e-14},
+      {"p": 13, "n_nontrivial_chars": 11, "max_dev_|g|^2_minus_p": 4.973799150320701e-14},
+      {"p": 17, "n_nontrivial_chars": 15, "max_dev_|g|^2_minus_p": 2.1316282072803006e-13},
+      {"p": 19, "n_nontrivial_chars": 17, "max_dev_|g|^2_minus_p": 1.8118839761882555e-13},
+      {"p": 23, "n_nontrivial_chars": 21, "max_dev_|g|^2_minus_p": 4.227729277772596e-13}
+    ],
+    "gauss_norm_equals_p": true
+  },
+  "D_limit_obstruction": {
+    "rows": [
+      {"n": 1, "N_n": 2, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 2},
+      {"n": 2, "N_n": 6, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 6},
+      {"n": 3, "N_n": 12, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 12},
+      {"n": 4, "N_n": 60, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 60},
+      {"n": 5, "N_n": 60, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 60},
+      {"n": 6, "N_n": 420, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 420},
+      {"n": 7, "N_n": 840, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 840},
+      {"n": 8, "N_n": 2520, "Hom_cZmod_Q": 0, "Ext1_cZmod_Q": 0, "b_tower_Hom_to_Q/Z": 2520}
+    ],
+    "c_tower_vanishes": true,
+    "b_tower_nonzero": true,
+    "no_solid_limit_flip": true
+  },
+  "overall": "PASS"
+}

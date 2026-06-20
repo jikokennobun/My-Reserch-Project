@@ -1,0 +1,42 @@
+{
+  "pass": 77,
+  "claims": {
+    "A_LCA_nogo": {
+      "pass": true,
+      "statement": "ann_{Z/N}(image of dense Z) = {0}; hence (Zhat/Z)^vee_LCA = 0",
+      "detail": [
+        {"n": 1, "M": 1, "ann_card": 1, "ann_is_trivial": true},
+        {"n": 2, "M": 2, "ann_card": 1, "ann_is_trivial": true},
+        {"n": 3, "M": 6, "ann_card": 1, "ann_is_trivial": true},
+        {"n": 4, "M": 12, "ann_card": 1, "ann_is_trivial": true},
+        {"n": 5, "M": 60, "ann_card": 1, "ann_is_trivial": true},
+        {"n": 6, "M": 60, "ann_card": 1, "ann_is_trivial": true}
+      ]
+    },
+    "B_solid_shift": {
+      "pass": true,
+      "statement": "Hom(Z/N,Z)=0 & Ext1(Z/N,Z)=Z/N: profinite dual sits in degree 1; Zhat^*=(Q/Z)[-1]; colimit of dual tower injective",
+      "colim_injective": true,
+      "detail": [
+        {"n": 1, "M": 1, "Hom_Z/M_Z": 0, "Ext1_order": 1},
+        {"n": 2, "M": 2, "Hom_Z/M_Z": 0, "Ext1_order": 2},
+        {"n": 3, "M": 6, "Hom_Z/M_Z": 0, "Ext1_order": 6},
+        {"n": 4, "M": 12, "Hom_Z/M_Z": 0, "Ext1_order": 12},
+        {"n": 5, "M": 60, "Hom_Z/M_Z": 0, "Ext1_order": 60},
+        {"n": 6, "M": 60, "Hom_Z/M_Z": 0, "Ext1_order": 60}
+      ]
+    },
+    "C_signed_law": {
+      "pass": true,
+      "statement": "D(d_S)=-d_S^T, D^2=id, d_S surjective with diagonal kernel",
+      "detail": [
+        {"|S|": 2, "D2=id": true, "D=-d^T": true, "d_surjective": true, "rank": 1},
+        {"|S|": 3, "D2=id": true, "D=-d^T": true, "d_surjective": true, "rank": 2},
+        {"|S|": 4, "D2=id": true, "D=-d^T": true, "d_surjective": true, "rank": 3},
+        {"|S|": 5, "D2=id": true, "D=-d^T": true, "d_surjective": true, "rank": 4},
+        {"|S|": 6, "D2=id": true, "D=-d^T": true, "d_surjective": true, "rank": 5}
+      ]
+    }
+  },
+  "overall": true
+}

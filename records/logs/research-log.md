@@ -1,5 +1,31 @@
 # Research Log
 
+## 2026-06-20 (Autonomous discussion Pass 83)
+
+- Corrected the Pass-82 solenoid exact row: for
+  $\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z$, the projection to
+  $\mathbb R/\mathbb Z$ has closed kernel $\widehat{\mathbb Z}$, not
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$; $\epsilon$ is the dense quotient
+  $\Sigma/\mathbb R$.  Verified the nonsplitting and Fourier-boundary claims
+  with `code/scripts/check-pass83.py` ->
+  `artifacts/reports/pass83-solenoid-exact-triangle-correction-check.json`
+  (PASS), and added a publication summary under `artifacts/pdf/`.
+
+## 2026-06-20 (Research Project relay sync, evening no-delta verification)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-20T21:56:18+09:00`. The ChatGPT Project artifact inbox again exposed `3` supported PDF artifacts, with `0` copied or refreshed slide/deck imports. `artifacts/pdf/manifest.csv` refreshed collection/backup timestamps and still includes pre-existing untracked local PDFs, so it is not a clean scoped relay import by itself.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-20T21:56:45+09:00`. All `23` watched shared conversations remained `unchanged`; no changed ChatGPT share required transcript extraction or mathematical reconstruction.
+- Queried the recorded Google Drive relay folders after the previous automation timestamp `2026-06-20T02:44:16.086Z`: research root, `ChatGPT`, `ChatGPT_Research`, `ChatGPT_Study`, `Claude`, `Gemini`, `Paper`, `Slide`, and the reference root. No newer non-folder files were found.
+- A broader Drive recency sweep for PDFs and ChatGPT/Claude/Gemini-labelled files after the same cutoff also returned no newer accessible material. There was therefore no new paper, slide deck, Gemini output, Claude output, generated PDF, open question, Drive-index update, or literature-note update justified in this pass.
+
+## 2026-06-20 (Research Project relay sync, midday no-delta verification)
+
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-20T11:45:30+09:00`. The local ChatGPT Project inbox again exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` only refreshed collection and backup timestamps and also surfaced pre-existing untracked local PDFs in the current dirty worktree.
+- Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-20T11:45:28+09:00`. All `23` watched `chatgpt.com/share/...` links remained `unchanged`, including `research/notes/local-fg2-pullback-aps-zoo.md`, whose durable watched hash stayed at `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Queried the recorded Google Drive relay roots and indexed subfolders after the automation handoff timestamp `2026-06-19T19:08:13.684Z`: the research root, `ChatGPT`, `Claude`, `Gemini`, `Paper`, `Slide`, `ChatGPT_Research`, `ChatGPT_Study`, and the top-level reference root. None contained a non-folder file with `modifiedTime` later than that cutoff.
+- Ran a broader Drive recency sweep for PDFs and ChatGPT/Claude/Gemini-labelled files after the same cutoff. That sweep also returned no newer accessible material, so there was no new durable paper, slide deck, Gemini output, Claude output, or generated PDF to index into `research/references/`, `artifacts/reports/chatgpt-project-artifact-sync.csv`, or `artifacts/pdf/manifest.csv`.
+- Because the artifact inbox, watched-share layer, and recorded Drive relay sources were all source-stable in this pass, there was no justified research-note reconstruction and no new open question to add to `research/ideas/research-questions.md`. The scoped relay update for this pass is therefore limited to refreshing the watched-share state/log and recording the no-delta result here.
+
 ## 2026-06-20 (Research Project relay sync, watched shares normalized)
 
 - Re-ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repo root at `2026-06-20T04:09+09:00`. The local ChatGPT Project inbox still exposed the same `3` supported PDF artifacts with `0` copied or refreshed slide imports, so `artifacts/reports/chatgpt-project-artifact-sync.csv` remained materially unchanged while `artifacts/pdf/manifest.csv` again reflected PDF collection/back-up churn rather than a scoped relay delta.

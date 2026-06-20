@@ -1,0 +1,353 @@
+{
+  "pass": 82,
+  "title": "Whittaker vanishing for the solid Borel and archimedean repair",
+  "A_finite_whittaker_coefficients": {
+    "description": "Fourier/Whittaker coefficients of the constant U-action on C[Z/N].",
+    "rows": [
+      {
+        "N": 2,
+        "trivial_character_sum_real": 2.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 1.2246467991473532e-16,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 3,
+        "trivial_character_sum_real": 3.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 7.447602459741819e-16,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 4,
+        "trivial_character_sum_real": 4.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 4.681934793881733e-16,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 5,
+        "trivial_character_sum_real": 5.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 6.955527313080394e-16,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 6,
+        "trivial_character_sum_real": 6.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 3.2581783028960286e-15,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 8,
+        "trivial_character_sum_real": 8.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 3.722145839155691e-15,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 9,
+        "trivial_character_sum_real": 9.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 6.752538531497372e-15,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 12,
+        "trivial_character_sum_real": 12.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 2.05136800846836e-14,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 15,
+        "trivial_character_sum_real": 15.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 1.542610846715969e-14,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 16,
+        "trivial_character_sum_real": 16.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 2.935658305284486e-14,
+        "nontrivial_coefficients_vanish": true
+      },
+      {
+        "N": 30,
+        "trivial_character_sum_real": 30.0,
+        "trivial_character_sum_imag": 0.0,
+        "max_abs_nontrivial_character_sum": 7.765881098897415e-14,
+        "nontrivial_coefficients_vanish": true
+      }
+    ],
+    "all_nontrivial_coefficients_vanish": true,
+    "all_trivial_coefficients_nonzero": true
+  },
+  "B_U_equivariant_Hom_dimensions": {
+    "description": "Since I(s)=chi_s is trivial on U, U-equivariant maps to a character psi exist only for psi=1.",
+    "rows": [
+      {
+        "U_N": "Z/2Z",
+        "number_of_characters": 2,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/3Z",
+        "number_of_characters": 3,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/4Z",
+        "number_of_characters": 4,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/5Z",
+        "number_of_characters": 5,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/6Z",
+        "number_of_characters": 6,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/8Z",
+        "number_of_characters": 8,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/9Z",
+        "number_of_characters": 9,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/12Z",
+        "number_of_characters": 12,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/15Z",
+        "number_of_characters": 15,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/16Z",
+        "number_of_characters": 16,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      },
+      {
+        "U_N": "Z/30Z",
+        "number_of_characters": 30,
+        "Hom_U(trivial_rep,trivial_character)_dimension": 1,
+        "Hom_U(trivial_rep,nontrivial_character)_dimension": 0,
+        "nontrivial_whittaker_exists": false
+      }
+    ],
+    "only_constant_term_survives": true
+  },
+  "C_archimedean_exact_sequence": {
+    "description": "Finite shadows of 0 -> epsilon -> (R x Zhat)/Z -> R/Z -> 0: the kernel over the real circle is the finite-prime quotient.",
+    "rows": [
+      {
+        "N": 2,
+        "finite_kernel_size": 2,
+        "expected_kernel_size": 2,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 3,
+        "finite_kernel_size": 3,
+        "expected_kernel_size": 3,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 4,
+        "finite_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 5,
+        "finite_kernel_size": 5,
+        "expected_kernel_size": 5,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 6,
+        "finite_kernel_size": 6,
+        "expected_kernel_size": 6,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 8,
+        "finite_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 9,
+        "finite_kernel_size": 9,
+        "expected_kernel_size": 9,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 12,
+        "finite_kernel_size": 12,
+        "expected_kernel_size": 12,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 15,
+        "finite_kernel_size": 15,
+        "expected_kernel_size": 15,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 16,
+        "finite_kernel_size": 16,
+        "expected_kernel_size": 16,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      },
+      {
+        "N": 30,
+        "finite_kernel_size": 30,
+        "expected_kernel_size": 30,
+        "diagonal_reduction_preserves_kernel": true,
+        "finite_shadow_exact": true
+      }
+    ],
+    "all_finite_shadows_exact": true,
+    "archimedean_repair_statement": "Adding R makes (R x Zhat)/Z compact Hausdorff and globally self-dual; it repairs adelic duality only for the full quotient, not for epsilon alone."
+  },
+  "D_limit_contrast": {
+    "description": "Finite levels have many additive characters and a Fourier flip, but the collapsed solid principal series has trivial U-action and no nontrivial Whittaker functional in the limit.",
+    "rows": [
+      {
+        "n": 1,
+        "N_n": 1,
+        "finite_nontrivial_whittaker_count": 0,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 2,
+        "N_n": 2,
+        "finite_nontrivial_whittaker_count": 1,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 3,
+        "N_n": 6,
+        "finite_nontrivial_whittaker_count": 5,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 4,
+        "N_n": 12,
+        "finite_nontrivial_whittaker_count": 11,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 5,
+        "N_n": 60,
+        "finite_nontrivial_whittaker_count": 59,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 6,
+        "N_n": 60,
+        "finite_nontrivial_whittaker_count": 59,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 7,
+        "N_n": 420,
+        "finite_nontrivial_whittaker_count": 419,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 8,
+        "N_n": 840,
+        "finite_nontrivial_whittaker_count": 839,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 9,
+        "N_n": 2520,
+        "finite_nontrivial_whittaker_count": 2519,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 10,
+        "N_n": 2520,
+        "finite_nontrivial_whittaker_count": 2519,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 11,
+        "N_n": 27720,
+        "finite_nontrivial_whittaker_count": 27719,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      },
+      {
+        "n": 12,
+        "N_n": 27720,
+        "finite_nontrivial_whittaker_count": 27719,
+        "finite_nontrivial_whittaker_survives_constant_U_action": false,
+        "finite_flip_exists_before_limit": true
+      }
+    ],
+    "finite_characters_do_not_produce_solid_whittaker_model": true,
+    "finite_prime_flip_still_blocked_by_Hom_epsilon_Q_zero": true
+  },
+  "conclusion": {
+    "nontrivial_Whittaker_functionals_on_I_s": "none",
+    "surviving_functional": "trivial character / constant term only",
+    "Rosser_torsor_carrier": "unipotent shear parameter U=epsilon, not a generic Whittaker coefficient",
+    "archimedean_place": "restores compact Hausdorff global adelic duality for (R x Zhat)/Z, but does not supply a finite-prime Weyl flip epsilon -> Q"
+  },
+  "overall": "PASS"
+}

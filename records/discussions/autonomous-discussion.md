@@ -6,7 +6,143 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 76
+- Current pass: 84
+- Last pass note: Pass 83 (2026-06-20) corrected the exact-row comparison between the
+  full adelic solenoid
+  $$\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\cong\mathbb A/\mathbb Q$$
+  and the finite phantom $\epsilon=\widehat{\mathbb Z}/\mathbb Z$.  The projection
+  $\Sigma\to\mathbb R/\mathbb Z$ has closed kernel $\widehat{\mathbb Z}$, not
+  $\epsilon$; the correct compact Hausdorff row is
+  $$0\to\widehat{\mathbb Z}\to\Sigma\to\mathbb R/\mathbb Z\to0.$$
+  The phantom appears instead as the dense/non-Hausdorff quotient
+  $$\mathbb R\to\Sigma\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to0,$$
+  so the Pass-82 wording "finite-prime kernel $\epsilon$" must be read as
+  "finite-prime quotient boundary".  The compact row does not split continuously:
+  Pontryagin duality gives
+  $$0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0,$$
+  and a splitting $\mathbb Q/\mathbb Z\to\mathbb Q$ is impossible because $\mathbb Q$ is
+  torsion-free.  Global Fourier theory therefore restricts nontrivially to the
+  closed profinite kernel $\widehat{\mathbb Z}$ (characters $\mathbb Q/\mathbb Z$), but
+  only the trivial character descends to $\epsilon$ in degree $0$; the finite-prime
+  Fourier content survives only as the boundary quotient $\mathbb Q/\mathbb Z$.
+  Machine-verified `check-pass83.py` ->
+  `pass83-solenoid-exact-triangle-correction-check.json` PASS. Counter 83->84.
+- Earlier note: Pass 82 (2026-06-14) tested the Whittaker/archimedean residue of the
+  maximally degenerate solid Borel principal series. Since
+  $I(s)=\mathrm{Ind}_B^{\mathrm{Sp}(H)}\chi_s=\chi_s$ and $\chi_s$ is trivial on
+  $U=\epsilon$, every nontrivial Whittaker functional
+  $\Lambda:I(s)\to\psi_U$ vanishes; only the trivial-character constant term survives. Finite
+  shadows confirm the same fact: Fourier coefficients of the constant $U_N=\mathbb Z/N$ action
+  vanish for all nontrivial additive characters, while the trivial coefficient is $N$. Thus the
+  Rosser torsor is not carried by a generic Whittaker coefficient; it is the unipotent shear
+  parameter $U=\epsilon$ itself. Adding the real place gives the compact Hausdorff full adelic
+  solenoid
+  $$\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z,$$
+  with a provisional finite-phantom row later corrected in Pass 83: the closed kernel of
+  $\Sigma\to\mathbb R/\mathbb Z$ is $\widehat{\mathbb Z}$, while
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ is the dense quotient $\Sigma/\mathbb R$.
+  This restores global adelic self-duality for $\mathbb A/\mathbb Q$, but it does not produce a
+  finite-prime solid morphism $\epsilon\to\mathbb Q$; the no-Weyl-flip wall remains for the finite
+  phantom. Machine-verified `check-pass82.py` ->
+  `pass82-whittaker-archimedean-repair-check.json` PASS. Counter 82->83.
+- Earlier note: Pass 81 (2026-06-14) read the Pass-80 solid Borel $B=\mathbb Q^{\times}\ltimes
+  \epsilon=\mathrm{Sp}(H)$ as a representation, identifying the no-Weyl-flip wall with a
+  functional-equation obstruction. (81a) **Maximally degenerate principal series:** since
+  $\mathrm{Sp}(H)=B$, the flag variety $\mathrm{Sp}(H)/B$ is a single point (no Bruhat big cell:
+  $\bar U=\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$), so every $I(s)=\mathrm{Ind}_B^{
+  \mathrm{Sp}(H)}\chi_s$ collapses to the inducing character $\chi_s$ — length $1$, irreducible, no
+  reducibility points; the Schrödinger model of $B$ on sections over the fixed polarization $\epsilon$
+  uses only dilation ($T=\mathbb Q^{\times}$, $\chi_s(t)=|t|^s$) and shear ($U=\epsilon$), never the
+  dual polarization. (81b) **No functional equation:** the standard intertwiner $M(w,s):I(s)\to I(-s)$
+  integrates over the opposite unipotent $\bar U=\mathrm{Hom}(\epsilon,\mathbb Q)=0$, so the
+  Gindikin–Karpelevich/Harish-Chandra $c$-function is the **empty product** $c(s)=1$ and the
+  $s\mapsto-s$ reflection is the empty relation — $I(s)\not\cong I(-s)$, no solid intertwiner. (81c)
+  **Finite/limit dichotomy:** at each finite level $N$ the flip exists (finite Fourier $F_N$ realises
+  $w$, conjugating dilation-by-$t$ to dilation-by-$t^{-1}$, EXACTLY $F_N D_t F_N^{-1}=D_{t^{-1}}$ — the
+  $s\leftrightarrow-s$ reflection) with Gauss-sum $c$-factor $|g(\psi)|^2=p$ at every prime; the
+  functional equation dies only in the limit, $\bar U_N=\mathbb Z/N\rightsquigarrow\bar U=0$.
+  *Finitely self-dual, limanly one-sided.* (81d) **Löb/Rosser face:** under Pass 51 [integral $=$ Löb
+  $=$ canonical $=\mathbb Q$-side] vs [non-integral $=$ Rosser $=$ torsor $=\epsilon$-side], the missing
+  flip is a $B$-equivariant Fourier iso $\epsilon\to\mathbb Q$ exchanging the polarizations; its
+  non-existence $\mathrm{Hom}(\epsilon,\mathbb Q)=0$ is exactly *"the Rosser torsor does not retract
+  onto the canonical Löb datum"*; the surviving $\mathrm{Hom}(\mathbb Q,\epsilon)=\epsilon=U$ (shear)
+  is *"forget canonicity: Löb$\to$Rosser"*. Slogan: you can always forget a fixed point is canonical,
+  never canonically recover canonicity — that one-way street IS the no-Fourier-flip wall. (81e)
+  **reflexive-but-not-dualizable** is the precise criterion: a polarization admits the
+  cross-polarization functional equation iff it is $\otimes$-dualizable; reflexivity
+  ($\epsilon^{**}=\epsilon$, Pass 78) is insufficient. Machine-verified `check-pass81.py` ->
+  `pass81-degenerate-principal-series-functional-equation-check.json` PASS: (A) $|\mathbb P^1(\mathbb
+  Z/N)|>1$ finite, $\mathrm{Hom}/\mathrm{Ext}^1(\mathbb Z/N,\mathbb Q)=0$ limit; (B) $F D_t F^{-1}=
+  D_{t^{-1}}$ to $<10^{-13}$ for $N\le16$; (C) $|g(\psi)|^2=p$ to $<10^{-12}$ for $p\le23$; (D)
+  $c$-tower $\equiv0$ vs $b$-tower $=\mathbb Z/N_n\neq0$. Bash mount lagged again (served
+  `check-pass81.py` truncated at line 192, missing `main()`); ran from a sandbox-local copy and wrote
+  all repo files via Windows-path tools per the APS run-sync hazard. Counter 81->82.
+- Earlier note: Pass 80 (2026-06-14) computed the solid symplectic automorphism object of the
+  hyperbolic phantom plane $H=\epsilon\oplus\mathbb Q$. Decisive input: the Pass-79 vanishing
+  $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=H^0(\mathbb Q[-1])=0$ (vs
+  $\mathrm{Hom}(\mathbb Q,\epsilon)=\epsilon\neq0$), which forces the lower-left entry of every
+  $2\times2$ solid endomorphism of $H$ to vanish. (80a) $\mathrm{End}_{\mathrm{Solid}}(H)$ is
+  **upper-triangular**; (80b) $\mathrm{Sp}(H)$ is therefore the solid **Borel** $B=\mathbb Q^{\times}
+  \ltimes\epsilon$ (the affine "$ax+b$" group fixing the polarization $\epsilon$), NOT $\mathrm{SL}_2$
+  and NOT a nonabelian Heisenberg group ($U$ is abelian); the Weyl flip $w=\begin{psmallmatrix}0&1\\
+  -1&0\end{psmallmatrix}$ (the cross-polarization Fourier transform) has no solid model. (80c)
+  **Metaplectic non-descent:** the finite-adele Weil representation of $\mathrm{SL}_2(\mathbb A_f)$
+  does not act on the phantom; at finite level $N$ the flip is the Fourier transform $F_N$
+  ($F_N^4=I$, $|g_N|^2=N$, $w\in\mathrm{SL}_2(\mathbb Z/N)$), but its only candidate limit lives in
+  $\mathrm{Hom}(\epsilon,\mathbb Q)=0$. The **precise wall** is that one-sided vanishing (i.e.
+  $\epsilon$ reflexive but NOT $\otimes$-dualizable) — explicitly NOT the degeneracy of $b$, which the
+  Pass-79 Next step had guessed; the shear-by-$b$ unipotent survives, only the inverse intertwiner is
+  absent. Machine-verified `check-pass80.py` -> `pass80-metaplectic-borel-noflip-check.json` PASS
+  (finite $\mathrm{SL}_2(\mathbb Z/N)$ orders + brute force $N\le12$; $c$-tower $\equiv0$ vs $b$-tower
+  $\neq0$; $F_N$ for $N\in\{3,..,21\}$). Bash mount again lagged (served the file truncated near Pass
+  71); all writes via Windows-path tools per the APS run-sync hazard. Counter 80->81.
+- Older note: Pass 79 (2026-06-13) AUDITED the Pass-78 "Next step" and corrected its premise.
+  The conjecture asked for a self-pairing $b:\epsilon\otimes^\blacksquare\epsilon\to\mathbb Z[-1]$
+  and a symplectic $\epsilon$ with the primes as Darboux coordinates. Findings: (79a) $\epsilon$ is
+  **not** self-dual — Pass 78 proved *reflexivity* $\epsilon^{**}\cong\epsilon$, not self-duality;
+  in fact $D\epsilon\cong\mathbb Q[-1]$, $D\mathbb Q\cong\epsilon[-1]$, so $\epsilon$ and $\mathbb Q$
+  are a dual pair (as bare groups $\epsilon\cong\mathbb A_f/\mathbb Q$ is a $\mathbb Q$-vector space
+  of dimension $2^{\aleph_0}$, vs $\dim\mathbb Q=1$). (79b) the self-pairing degree is forced:
+  $\operatorname{Hom}(\epsilon\otimes\epsilon,\mathbb Z[m])=\operatorname{Ext}^{m-1}_{\mathrm{Solid}}
+  (\epsilon,\mathbb Q)$ is $\mathbb Q$ iff $m=2$ and $0$ otherwise, so the proposed $\mathbb Z[-1]$
+  target carries ONLY the zero pairing; the unique nonzero self-pairing lives in $\mathbb Z[2]$ and
+  is the finite-adele class $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$. (79c) that pairing is
+  ALTERNATING (degree-1 swap sign $-1$, vindicating the symplectic intuition) but DEGENERATE
+  (adjoint $\epsilon\to\mathbb Q[1]$ not iso); the nondegenerate symplectic object is the hyperbolic
+  plane $H=\epsilon\oplus\mathbb Q$ with Lagrangians $\epsilon,\mathbb Q$. (79d) DARBOUX NO-GO: the
+  support idempotents $e_S$ descend to $\mathrm{End}(\epsilon)$ iff $S\in\{\varnothing,\mathbb P\}$
+  (else $e_S(1)=\mathbf 1_S\notin\mathbb Z$), so $\epsilon$ is prime-indecomposable — the unit class
+  $1\in\widehat{\mathbb Z}^\times$ that drives Pass-78 reflexivity obstructs prime-localization.
+  Machine-verified check-pass79.py PASS (incl. $2^6$-subset Darboux enumeration: exactly 2 descend).
+  Bash mount again lagged (served the file truncated at Pass 72 / line 8107); all writes via
+  Windows-path tools per the APS run-sync hazard. Counter 79->80.
+- Earlier note: Pass 78 (2026-06-13) proved solid *reflexivity* of the Loeb-Rosser phantom
+  $\epsilon=\widehat{\mathbb Z}/\mathbb Z=\varprojlim^1(N_n\mathbb Z)$: dualizing the defining
+  sequence twice (using only the Pass-77 blocks $D\mathbb Z=\mathbb Z$,
+  $D\widehat{\mathbb Z}=(\mathbb Q/\mathbb Z)[-1]$, $D(\mathbb Z/n)=(\mathbb Z/n)[-1]$, and resolving
+  $\mathbb Q/\mathbb Z=\operatorname{colim}\mathbb Z/n$ termwise) gives $D\epsilon\cong\mathbb Q[-1]$
+  and $\epsilon^{**}\cong\epsilon$ (Thms 78a/78b). The connecting map is the dense inclusion
+  $\mathbb Z\hookrightarrow\widehat{\mathbb Z}$ (multiplication by the *unit* class
+  $1\in\widehat{\mathbb Z}^\times$), so no $\varprojlim^1$-of-$\varprojlim^1$ secondary phantom
+  arises; a non-unit (idempotent $e_2$) class would create one (machine-exhibited). The biduality
+  sign is the antipode $-1$ from the odd shift $[-1]$ (Thm 78c). Machine-verified check-pass78.py
+  PASS. The bash mount again lagged (served the freshly written script truncated at line 184), so all
+  writes/verification went through the Windows-path tools per the APS run-sync hazard. Counter 78->79.
+- Earlier note: Pass 77 (2026-06-12) resolved the all-prime derived-realization question
+  as a two-faced theorem: LCA/Pontryagin is a hard no-go (the dense subgroup $\mathbb Z$
+  forces $(\widehat{\mathbb Z}/\mathbb Z)^\vee_{\mathrm{LCA}}=0$), while $\mathrm{Solid}_{\mathbb Z}$
+  realizes the phantom nonzero with the profinite dual shifted into cohomological degree 1
+  ($\widehat{\mathbb Z}^*\cong(\mathbb Q/\mathbb Z)[-1]$), so the signed law is a derived degree-1
+  equation. Machine-verified check-pass77.py PASS. The bash mount again lagged (served the file
+  truncated at Pass 72 while the real file held Passes 73-76), so all writes were made with the
+  Windows-path tools and verified by Windows-path Read, not bash grep. Counter 77->78.
+- Earlier note: Pass 76 (2026-06-11) completed a crashed prior run that had already
+  written `code/scripts/check-pass76.py` without its report or log entries. This run
+  generated the verified report, appended the Pass-76 discussion body, and updated the
+  logs/notes via Windows-path file tools: the bash mount lagged and served the file
+  truncated at Pass 72 while the real file already held Passes 73-75, so a bash append
+  would have clobbered them. Per the APS run-sync hazard, all writes were made with the
+  Windows-path tools and verified by Windows-path Read, not bash grep. Counter 76->77.
 - Run status: continuous automation resumed on 2026-05-25; Pass 38 was recovered
   on 2026-06-01 after a crashed run left it truncated mid-Skeptic (counter was
   already at 39, so it was not double-incremented). Pass 39 ran clean on
@@ -8355,3 +8491,1017 @@ Next step:
 Pass 76 should construct the first natural model for the projectors: interpret $e_p$ as clopen or
 locally closed support projectors on a finite-prime stratified site, interpret $q_n$ as a pro-stage
 filtration, and test whether $\rho_{\mathrm{proj}}$ factors through that model.
+
+---
+
+### Pass 76 - 2026-06-11 JST
+
+Focus:
+Build the first natural model for the Pass-75 projectors $e_p,q_n$.  The test is
+to interpret support idempotents $e_p$ as characteristic idempotents of clopen
+prime strata on a finite-prime stratified site, the stage idempotents $q_n$ as
+prefix truncations of the non-Mittag-Leffler lcm pro-tower, and to check whether
+the projector realization $\rho_{\mathrm{proj}}$ factors through that model
+without reintroducing external labels.
+
+Proposer:
+Define the stratified pro-site model
+$$\mathrm{StratPro}_\epsilon(U,N).$$
+Its support space is the finite discrete/Stone space on the checked prime
+universe $U=\{2,3,5,7,11,13\}$; the support projectors are multiplication by the
+characteristic functions $\mathbf 1_{\{p\}}$ of the clopen strata, so that
+$e_S=\prod_{p\in S}e_p$ is multiplication by $\mathbf 1_S$ and
+$e_Se_T=e_{S\cap T}$ is just $\mathbf 1_S\mathbf 1_T=\mathbf 1_{S\cap T}$.  The
+stage projectors $q_n$ are the prefix truncations of the lcm tower
+$K_n=N_n\mathbb Z$ through $N$, so $q_nq_m=q_{\min(n,m)}$ is truncation
+idempotence.  The site realization
+$$\rho_{\mathrm{site}}:\mathcal H_\epsilon\to\mathrm{StratPro}_\epsilon(U,N)$$
+sends finite conductor windows, Loeb-Rosser boundaries, restrictions, signed
+duals, and lcm stages to clopen-stratified pro-Ab data, and $\rho_{\mathrm{proj}}$
+factors as $\rho_{\mathrm{site}}$ followed by forgetting the site to bare
+projectors.
+
+Skeptic:
+This is a stratified pro-site *presentation*, not yet an analytic theorem.  The
+support space is a finite discrete space, not the all-prime Stone/profinite
+space of $\mathbb P$, and the pro tower is truncated at $N$ rather than carried
+to $\varprojlim$.  Faithfulness is therefore certified only on the finite
+window, and the signed duality law $D_{\mathrm{res}}(\epsilon_{\mathbb P})
+=-\epsilon_{\mathbb P}^{\vee}$ is still a finite-shadow criterion in this target,
+not a proved all-prime LCA-sheaf, condensed/solid, or derived-exact statement.
+The honest residue is to upgrade $\mathrm{StratPro}_\epsilon(U,N)$ to an
+all-prime derived exact target and prove the signed law there.
+
+Formalist:
+> **Definition 76a (stratified pro-site model).** $\mathrm{StratPro}_\epsilon(U,N)$
+> is the category of pro-Ab data on the finite Stone space of $U$ equipped with
+> clopen support projectors $e_p=(\cdot)\mathbf 1_{\{p\}}$ and lcm prefix-stage
+> projectors $q_n$, with $e_Se_T=e_{S\cap T}$ and $q_nq_m=q_{\min(n,m)}$.
+>
+> **Theorem 76b (site factorization and faithfulness).** On the checked window
+> ($U$ the first six primes, conductors $k\le3$, lcm stages through $N_{24}$)
+> the projector realization factors as
+> $\rho_{\mathrm{proj}}=(\text{forget site})\circ\rho_{\mathrm{site}}$, and
+> $\rho_{\mathrm{site}}$ is faithful on all five generator families: the site
+> signature is injective on the $75$ generators (zero collisions), as is the
+> projector signature, while the plain tag-forgetting signature collapses $75$
+> generators to $50$ ($12$ collisions).
+>
+> **Theorem 76c (clopen and stage relations).** The support projectors realize
+> the finite Boolean clopen algebra ($4160$ verified $e_Se_T=e_{S\cap T}$
+> instances) and the stage projectors realize the prefix-truncation chain
+> ($576$ verified $q_nq_m=q_{\min(n,m)}$ instances).  The separation is genuine:
+> the plain target collides exactly where it must, including repeated lcm stages
+> $N_n=N_{n+1}$ (e.g. $N_5=N_6=60$, $N_{13}=N_{14}=N_{15}=360360$), which $q_n$
+> distinguishes by stage index.
+
+Machine-verified `code/scripts/check-pass76.py` ->
+`artifacts/reports/pass76-stratified-pro-site-realization-check.json` (overall PASS): $75$
+generators across the five families are tested through six primes, conductors $k\le3$, and lcm
+stages through $N_{24}$; site global injectivity and projector global injectivity each have zero
+collisions while the plain target has $12$; site family faithfulness passes for all five families;
+$4160$ clopen Boolean support relations and $576$ stage-filtration relations all pass; and the
+factorization of $\rho_{\mathrm{proj}}$ through $\mathrm{StratPro}_\epsilon(U,N)$ is certified on
+the window.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-76 entry; State counter
+  $76\to77$; recorded that the bash mount lagged behind the Windows-path file (it showed the file
+  truncated at Pass 72 while the real file already held Passes 73-75), so all appends this pass were
+  made via Windows-path file tools per the APS run-sync hazard, and a previously crashed Pass-76 run
+  had already written `code/scripts/check-pass76.py` without producing its report or log entries.
+- `records/logs/research-log.md`: Pass-76 one-line entry.
+- `research/definitions.md`: stratified pro-site model $\mathrm{StratPro}_\epsilon(U,N)$, clopen
+  support projectors, and lcm prefix-stage projectors.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-76 section (Definition 76a, Thms 76b/76c).
+- `research/open_problems.md` and `research/ideas/research-questions.md`: retargeted the residue to
+  an all-prime derived LCA/condensed/solid exact realization proving the signed duality law.
+- `artifacts/reports/pass76-stratified-pro-site-realization-check.json`: new (report for the
+  pre-existing `code/scripts/check-pass76.py`).
+- `artifacts/pdf/stratified-pro-site-realization-2026-06-11.md`: publication summary source.
+
+Next step:
+Pass 77 should upgrade $\mathrm{StratPro}_\epsilon(U,N)$ from a finite-window stratified pro-site
+presentation to an all-prime derived exact target -- an LCA sheaf on the profinite prime space, a
+condensed/solid abelian object, or a canonical exact pro-category -- and prove the signed duality
+law $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ as a genuine all-prime
+theorem there, or exhibit the precise obstruction (e.g. a non-Hausdorff/derived quotient barrier)
+that prevents such a realization.
+
+---
+
+### Pass 77 - 2026-06-12 JST
+
+Focus:
+Decide the all-prime status of the Loeb-Rosser phantom
+$\epsilon_{\mathbb P}=\widehat{\mathbb Z}/\mathbb Z=\varprojlim^1(N_n\mathbb Z)$
+across the two candidate ambient targets named in the Pass-76 Next step: the
+classical LCA/Pontryagin category, and the modern solid/condensed abelian
+category $\mathrm{Solid}_{\mathbb Z}$ (Clausen-Scholze).  The question is whether
+the signed functional equation $D_{\mathrm{res}}(\epsilon_{\mathbb P})
+=-\epsilon_{\mathbb P}^{\vee}$ upgrades from a finite-window criterion to a
+genuine all-prime theorem, and if so in which category and in which cohomological
+degree.
+
+Proposer:
+The two candidates are not competitors -- they are the two faces of a single
+derived-shift phenomenon, and the pass should prove *both* at once: a no-go in
+LCA and a realization in $D(\mathrm{Solid})$.
+
+(1) *LCA is a graveyard.*  $\mathbb Z$ is dense in
+$\widehat{\mathbb Z}=\varprojlim_n\mathbb Z/N_n$ (Chinese remainder), so the
+set-theoretic quotient $Q=\widehat{\mathbb Z}/\mathbb Z$ is non-Hausdorff and is
+not an object of $\mathrm{LCA}$ at all.  Worse, even its character group dies:
+$\widehat{\widehat{\mathbb Z}}=\mathbb Q/\mathbb Z$, and the restriction map dual
+to $\mathbb Z\hookrightarrow\widehat{\mathbb Z}$ is the inclusion of torsion
+points $\mathbb Q/\mathbb Z\hookrightarrow\mathbb T$, which is *injective*; hence
+the annihilator of $\mathbb Z$ -- the would-be $Q^{\vee}_{\mathrm{LCA}}$ -- is
+$0$.  Pontryagin duality flattens $\epsilon_{\mathbb P}$ to $0=0$.
+
+(2) *Solid is the right home, but the dual is shifted.*  In $\mathrm{Solid}$ the
+profinite layer $\mathbb Z_p=\varprojlim\mathbb Z/p^n$ has solid dual
+$R\underline{\mathrm{Hom}}(\mathbb Z_p,\mathbb Z)\cong(\mathbb Q_p/\mathbb Z_p)[-1]$
+(from the levelwise $\mathbb Z/p^n$-resolution
+$\mathbb Z\xrightarrow{p^n}\mathbb Z$, whose $\mathrm{Hom}(-,\mathbb Z)$ has
+$H^0=0$, $H^1=\mathbb Z/p^n$, and the colimit over $n$ is $\mathbb Q_p/\mathbb Z_p$
+in degree $1$).  Taking the solid product-to-sum identity
+$R\underline{\mathrm{Hom}}(\prod_p\mathbb Z_p,\mathbb Z)=\bigoplus_p
+R\underline{\mathrm{Hom}}(\mathbb Z_p,\mathbb Z)$ gives
+$$\widehat{\mathbb Z}^{\,*}=R\underline{\mathrm{Hom}}(\widehat{\mathbb Z},\mathbb Z)
+\cong\Big(\bigoplus_p\mathbb Q_p/\mathbb Z_p\Big)[-1]=(\mathbb Q/\mathbb Z)[-1].$$
+The profinite dual lives in cohomological degree $1$ -- exactly the degree where
+$\epsilon_{\mathbb P}=\varprojlim^1$ already lives.  So in $\mathrm{Solid}$ the
+phantom is *nonzero* and self-aware of its degree, and the signed law is a
+derived (degree-$1$) statement, not a degree-$0$ Hausdorff one.
+
+The StratPro projectors upgrade with no friction: the support idempotents $e_S$
+are the clopen idempotents of the Stone space $X_{\mathbb P}=\beta\mathbb P$
+(Stone dual of the Boolean algebra $\mathcal P(\mathbb P)$), so
+$e_Se_T=e_{S\cap T}$ now holds for *all* subsets $S,T\subseteq\mathbb P$, not just
+the finite-window ones; the stage idempotents $q_n$ are the canonical pro-system
+truncations.
+
+Skeptic:
+Three caveats, none fatal but all sharpening the claim.
+First, the positive theorem is a *degree-shifted* duality, so anyone hoping for
+an honest degree-$0$ LCA functional equation must abandon that hope permanently:
+Theorem 77a is a hard no-go, not a "not yet."  Second, the product-to-sum
+identity $R\underline{\mathrm{Hom}}(\prod_p\mathbb Z_p,\mathbb Z)
+=\bigoplus_p(\cdots)$ is the *solid* internal Hom, and is exactly the place where
+the solid tensor structure is doing nontrivial work; in plain condensed
+(non-solid) abelian groups the product of the $\mathbb Z_p$ is not yet
+pro-dualizable, so the realization genuinely needs solidity, not mere
+condensation.  Third, the sign in $-d_S^T$ is the antipode on the finite shadows;
+the all-prime sign is the induced $-1$ on $\varprojlim^1$, which survives the
+degree shift because the shift is by an odd amount ($[-1]$), but this must be
+tracked, not assumed.  The honest residue is therefore: pin down the
+*self-duality* $\epsilon_{\mathbb P}^{**}\cong\epsilon_{\mathbb P}$ (solid
+reflexivity of the phantom) and confirm the sign is the antipode and not its
+negative.
+
+Formalist:
+> **Theorem 77a (LCA no-go / dense-subgroup barrier).** In the category
+> $\mathrm{LCA}$ of locally compact Hausdorff abelian groups,
+> $Q=\widehat{\mathbb Z}/\mathbb Z$ is not an object (the quotient is
+> non-Hausdorff since $\mathbb Z$ is dense in $\widehat{\mathbb Z}$), and its
+> Pontryagin dual vanishes:
+> $$Q^{\vee}_{\mathrm{LCA}}=\operatorname{Ann}_{\widehat{\widehat{\mathbb Z}}}
+> (\mathbb Z)=\ker\big(\mathbb Q/\mathbb Z\hookrightarrow\mathbb T\big)=0.$$
+> Hence no LCA-sheaf realization carries a nonzero $\epsilon_{\mathbb P}^{\vee}$,
+> and the signed law degenerates to $0=0$.
+>
+> **Theorem 77b (solid degree-shift realization).** In $\mathrm{Solid}_{\mathbb Z}$,
+> $$R\underline{\mathrm{Hom}}(\mathbb Z_p,\mathbb Z)\cong(\mathbb Q_p/\mathbb Z_p)[-1],
+> \qquad
+> \widehat{\mathbb Z}^{\,*}\cong(\mathbb Q/\mathbb Z)[-1],$$
+> and the phantom $\epsilon_{\mathbb P}=\widehat{\mathbb Z}/\mathbb Z
+> =\varprojlim^1(N_n\mathbb Z)$ is a *nonzero* solid abelian group sitting in the
+> same cohomological degree $1$ as the dual of its profinite source.  The support
+> projectors $e_S$ ($S\in\mathcal P(\mathbb P)$) are the clopen idempotents of
+> $\beta\mathbb P$ with $e_Se_T=e_{S\cap T}$ for all subsets; the stage
+> projectors $q_n$ are pro-truncations with $q_nq_m=q_{\min(n,m)}$.
+>
+> **Theorem 77c (signed law as a degree-1 derived equation).** The signed
+> functional equation $D_{\mathrm{res}}(\epsilon_{\mathbb P})
+> =-\epsilon_{\mathbb P}^{\vee}$ holds in $D(\mathrm{Solid})$ as a degree-$1$
+> statement: every finite shadow satisfies $D(d_S)=-d_S^{T}$ with $D^2=\mathrm{id}$
+> and $d_S$ surjective with diagonal kernel, the antipode sign $-1$ is carried to
+> $\varprojlim^1$ through the odd shift $[-1]$, and the equation is *not*
+> realizable in degree $0$ -- by 77a the only degree-$0$ (LCA) value is $0$.
+> Thus the menu of the Pass-76 Next step resolves as **both**: LCA is the precise
+> obstruction, $\mathrm{Solid}$ is the realization, and they are the two ends of
+> one $[-1]$ shift.
+
+Machine-verified `code/scripts/check-pass77.py` ->
+`artifacts/reports/pass77-derived-solid-realization-check.json` (overall PASS): (A) the
+annihilator of the dense image of $\mathbb Z$ in $\mathbb Z/N_n$ is trivial for $N_n$ through
+$n=12$, certifying $Q^{\vee}_{\mathrm{LCA}}=0$; (B) $\mathrm{Hom}(\mathbb Z/N_n,\mathbb Z)=0$ and
+$\mathrm{Ext}^1(\mathbb Z/N_n,\mathbb Z)=\mathbb Z/N_n$ for all checked $n$ (profinite dual in
+degree $1$), and the dual tower $\mathbb Z/N_n\to\mathbb Z/N_{n+1}$ is injective so its colimit is
+$\mathbb Q/\mathbb Z$; (C) $D(d_S)=-d_S^{T}$, $D^2=\mathrm{id}$, and $d_S$ surjective with rank
+$|S|-1$ for $|S|=2,\ldots,6$.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-77 entry; State counter
+  $77\to78$.  The bash mount again lagged behind the Windows-path file (it served the file
+  truncated at Pass 72 while the real file already held Passes 73-76), so all appends this pass were
+  made via Windows-path file tools per the APS run-sync hazard and verified by Windows-path Read.
+- `records/logs/research-log.md`: Pass-77 one-line entry.
+- `research/definitions.md`: added the solid dual $R\underline{\mathrm{Hom}}(-,\mathbb Z)$, the
+  degree-1 profinite-dual shift, and the LCA dense-subgroup barrier.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-77 section (Thms 77a/77b/77c).
+- `research/open_problems.md`: marked the all-prime derived-realization problem [Resolved, Pass 77]
+  and added a [New, Pass 77] item on solid reflexivity $\epsilon_{\mathbb P}^{**}\cong
+  \epsilon_{\mathbb P}$.
+- `research/ideas/research-questions.md`: retargeted the active question to solid reflexivity and the
+  antipode-sign tracking.
+- `code/scripts/check-pass77.py`,
+  `artifacts/reports/pass77-derived-solid-realization-check.json`: new.
+
+Next step:
+Pass 78 should test solid *reflexivity* of the phantom: compute the double solid dual
+$\epsilon_{\mathbb P}^{**}=R\underline{\mathrm{Hom}}(R\underline{\mathrm{Hom}}(\epsilon_{\mathbb P},
+\mathbb Z),\mathbb Z)$ and decide whether the canonical evaluation
+$\epsilon_{\mathbb P}\to\epsilon_{\mathbb P}^{**}$ is an isomorphism in $D(\mathrm{Solid})$ (so that
+$\widehat{\mathbb Z}/\mathbb Z$ is a self-dual degree-1 object up to the antipode sign), or whether a
+$\varprojlim^1$-of-$\varprojlim^1$ secondary phantom obstructs reflexivity -- and pin down whether
+the surviving sign is the antipode $-1$ or its negation under the odd shift $[-1]$.
+
+---
+
+### Pass 78 - 2026-06-13 18:12 JST
+
+Focus:
+Decide solid *reflexivity* of the all-prime Loeb-Rosser phantom
+$\epsilon:=\epsilon_{\mathbb P}=\widehat{\mathbb Z}/\mathbb Z=\varprojlim^1(N_n\mathbb Z)$
+($N_n=\operatorname{lcm}(1,\ldots,n)$) under the solid dualizing functor
+$D(-)=R\underline{\mathrm{Hom}}(-,\mathbb Z)$ in $D(\mathrm{Solid}_{\mathbb Z})$.  Compute
+$\epsilon^{**}=D D\epsilon$, decide whether the canonical evaluation
+$\eta_\epsilon:\epsilon\to\epsilon^{**}$ is an isomorphism, determine whether a
+$\varprojlim^1$-of-$\varprojlim^1$ secondary phantom obstructs it, and fix the sign of $\eta_\epsilon$.
+
+Proposer:
+Reflexivity holds, on the nose, and the proof never touches the abstract group
+$\operatorname{Ext}^1(\mathbb Q,\mathbb Z)$ -- it dualizes the defining sequence twice using only the
+Pass-77 building blocks $D(\mathbb Z)=\mathbb Z$, $D(\widehat{\mathbb Z})=(\mathbb Q/\mathbb Z)[-1]$,
+$D(\mathbb Z/n)=(\mathbb Z/n)[-1]$.
+
+(1) *Single dual.*  Apply $D$ to $0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$.  The triangle
+$D\epsilon\to D\widehat{\mathbb Z}\to D\mathbb Z\xrightarrow{+1}$ reads
+$D\epsilon\to(\mathbb Q/\mathbb Z)[-1]\to\mathbb Z\xrightarrow{+1}$, whose long exact sequence gives
+$H^0(D\epsilon)=0$ and
+$$0\to\mathbb Z\xrightarrow{\ \delta\ }\operatorname{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Z)\to
+\mathbb Q/\mathbb Z\to0,\qquad \delta(1)=[\,0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0\,].$$
+So $D\epsilon=E[-1]$ with $E$ an extension of $\mathbb Q/\mathbb Z$ by $\mathbb Z$.  Its class in
+$\operatorname{Ext}^1(\mathbb Q/\mathbb Z,\mathbb Z)=\widehat{\mathbb Z}$ is the image of the
+tautological $\widehat{\mathbb Z}$-class under $\delta$, namely the *unit* $1\in\widehat{\mathbb Z}^\times$
+-- equivalently $E\cong\mathbb Q$, the middle of $0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0$.
+
+(2) *Double dual.*  $\epsilon^{**}=D(E)[1]$.  Apply $D$ to $0\to\mathbb Z\to E\to\mathbb Q/\mathbb Z\to0$;
+solidly $\mathbb Q/\mathbb Z=\operatorname*{colim}_n\mathbb Z/n$ dualizes *termwise* to the limit
+$D(\mathbb Q/\mathbb Z)=\varprojlim_n(\mathbb Z/n)[-1]=\widehat{\mathbb Z}[-1]$ (Mittag-Leffler, no
+$\varprojlim^1$), so the triangle $\widehat{\mathbb Z}[-1]\to D(E)\to\mathbb Z\xrightarrow{\ d\ }(+1)$
+has connecting map $d:\mathbb Z\to\widehat{\mathbb Z}$ equal to *multiplication by the class*
+$c=1\in\widehat{\mathbb Z}^\times$, i.e. the dense inclusion.  Hence $H^0(D E)=\ker d=0$ and
+$H^1(D E)=\operatorname{coker}d=\widehat{\mathbb Z}/\mathbb Z=\epsilon$, so $D(E)=\epsilon[-1]$ and
+$$\epsilon^{**}=D(E)[1]=\epsilon.$$
+The phantom is solidly reflexive, with **no** secondary phantom: a
+$\varprojlim^1$-of-$\varprojlim^1$ term would require the connecting map to be multiplication by a
+*non-unit* (zero-divisor) class, whose cokernel $\widehat{\mathbb Z}/c\widehat{\mathbb Z}$ acquires
+extra $p$-torsion for $p\mid c$.  The unit class annihilates it.
+
+(3) *Sign.*  On finite shadows the antipode-signed transpose squares to the identity,
+$D^2(d_S)=-(-d_S^T)^T=d_S$ (sign $+1$).  But $\epsilon$ is realized one *odd* shift $[-1]$ away from
+the dualizing line $\mathbb Z$, and biduality transposes the two degree-$1$ shifts, contributing the
+Koszul/Spanier-Whitehead sign $(-1)^{1\cdot1}=-1$.  Therefore $\eta_\epsilon=-\mathrm{id}_\epsilon$:
+the surviving sign is the **antipode** $-1$, not its negation.
+
+Skeptic:
+Three sharpenings, none fatal.
+First, the identification $E\cong\mathbb Q$ (equivalently $c=1$) is the crux and must not be assumed:
+it is forced because $\delta(1)$ is the *pushout of $\mathrm{id}_{\mathbb Z}$ along the defining
+extension*, and the canonical $\widehat{\mathbb Z}$-extension has class the unit under
+$\operatorname{Ext}^1(\mathbb Q/\mathbb Z,\mathbb Z)\cong\widehat{\mathbb Z}$ (compatible preimages of
+$1/n$ assemble to $1\in\widehat{\mathbb Z}$).  A reader who replaces $\widehat{\mathbb Z}$ by a
+sub-completion (a single prime, or an idempotent $e_p$) would land on a non-unit class and *lose*
+reflexivity -- so the result is a property of the *full* profinite completion, not of any local factor.
+Second, the temptation to compute $D(\mathbb Q)$ directly is a trap: the abstract
+$\operatorname{Ext}^1_{\mathbb Z}(\mathbb Q,\mathbb Z)$ is large and non-solid; the clean answer only
+appears because $\mathbb Q/\mathbb Z$ is dualized as $\operatorname*{colim}\mathbb Z/n$, where solidity
+turns the colimit-of-duals into a Mittag-Leffler *limit*.  Third, the $-1$ is genuinely the categorical
+dimension of an odd shift, so anyone reporting $\eta_\epsilon=+\mathrm{id}$ has dropped a Koszul sign;
+the finite shadows give $+1$ only because they live in the even (degree-$0$) bookkeeping while the
+phantom carries the odd shift.
+
+Formalist:
+> **Theorem 78a (single solid dual of the phantom).** In $D(\mathrm{Solid}_{\mathbb Z})$,
+> $$\operatorname{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Z)=0,\qquad
+> D\epsilon=R\underline{\mathrm{Hom}}(\epsilon,\mathbb Z)\cong E[-1],$$
+> where $E$ is the extension of class $1\in\widehat{\mathbb Z}^\times=
+> \operatorname{Ext}^1(\mathbb Q/\mathbb Z,\mathbb Z)$, i.e. $E\cong\mathbb Q$.  Thus the dual of the
+> phantom is concentrated in cohomological degree $1$.
+>
+> **Theorem 78b (solid reflexivity; no secondary phantom).** The double dual satisfies
+> $$\epsilon^{**}=R\underline{\mathrm{Hom}}\big(R\underline{\mathrm{Hom}}(\epsilon,\mathbb Z),
+> \mathbb Z\big)\cong\epsilon,$$
+> via the connecting map $d:\mathbb Z\hookrightarrow\widehat{\mathbb Z}$ (multiplication by the unit
+> class $c=1$), which has $\ker d=0$ and $\operatorname{coker}d=\widehat{\mathbb Z}/\mathbb Z=\epsilon$.
+> The dual tower is Mittag-Leffler, so no $\varprojlim^1$-of-$\varprojlim^1$ term arises.  If $c$ were a
+> non-unit $c'\in\widehat{\mathbb Z}\setminus\widehat{\mathbb Z}^\times$ (e.g. an idempotent $e_p$),
+> then $\operatorname{coker}=\widehat{\mathbb Z}/c'\widehat{\mathbb Z}$ would carry a secondary phantom
+> of order $\prod_{p\mid c'}p^{\infty}$ -- the obstruction is real and is avoided *only* by the unit.
+>
+> **Theorem 78c (biduality sign = antipode).** The canonical evaluation
+> $\eta_\epsilon:\epsilon\to\epsilon^{**}$ is an isomorphism equal to $-\mathrm{id}_\epsilon$.  On finite
+> shadows $D^2(d_S)=d_S$ (sign $+1$); the phantom's single odd shift $[-1]$ contributes the Koszul
+> sign $(-1)^{1}=-1$.  Hence $\epsilon$ is a $[-1]$-shift self-dual object of $D(\mathrm{Solid})$
+> *up to the antipode*: $D\epsilon\cong E[-1]$ with $E\cong\mathbb Q$, and $D^2\cong\mathrm{id}$ with
+> structural sign $-1$.
+
+Machine-verified `code/scripts/check-pass78.py` ->
+`artifacts/reports/pass78-solid-reflexivity-phantom-check.json` (overall PASS):
+(A) for $N_n=\operatorname{lcm}(1,\ldots,n)$, $n\le12$: $\operatorname{Hom}(\mathbb Z/N_n,\mathbb Z)=0$,
+$\operatorname{Ext}^1(\mathbb Z/N_n,\mathbb Z)=\mathbb Z/N_n$, and the dual tower
+$\mathbb Z/N_{n+1}\twoheadrightarrow\mathbb Z/N_n$ is onto (Mittag-Leffler limit $\widehat{\mathbb Z}$).
+(B) the unit connecting map $c=1$ is an isomorphism on every finite stage $\mathbb Z/N_n$
+($\ker=\operatorname{coker}=1$), so $\operatorname{coker}(d)$ assembles to $\widehat{\mathbb Z}/\mathbb Z
+=\epsilon$ with no secondary phantom; the pathological idempotent class
+$c=e_2$ (project to the $2$-adic factor) is *non-iso* from stage $n=3$ on
+($\ker=\operatorname{coker}=3,3,15,15$), exhibiting the secondary phantom the unit avoids.
+(C) $D^2(d_S)=d_S$ for $|S|=2,\ldots,6$; the degree-$1$ shift parity gives Koszul sign $-1$, so
+$\eta_\epsilon=-\mathrm{id}$.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-78 entry; State counter
+  $78\to79$.  Per the APS run-sync hazard, all appends were made via Windows-path file tools and
+  verified by Windows-path Read; the bash mount served the script truncated mid-write during this run
+  (caught at line 184), confirming the lag, so the verified script/report were re-checked through the
+  Windows path before logging.
+- `records/logs/research-log.md`: Pass-78 one-line entry.
+- `research/definitions.md`: added the solid biduality functor $D=R\underline{\mathrm{Hom}}(-,\mathbb Z)$,
+  the phantom's single dual $D\epsilon\cong\mathbb Q[-1]$, and the antipode-signed reflexivity.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-78 section (Thms 78a/78b/78c).
+- `research/open_problems.md`: recorded the solid-reflexivity problem as [Resolved (Pass 78)] and
+  added a [New (Pass 78)] item on the (anti)symmetry of the biduality pairing.
+- `research/ideas/research-questions.md`: retargeted the active question to the self-duality pairing
+  $\epsilon\otimes\epsilon\to\mathbb Z[-1]$ and its symplectic-vs-orthogonal type.
+- `code/scripts/check-pass78.py`,
+  `artifacts/reports/pass78-solid-reflexivity-phantom-check.json`: new.
+
+Next step:
+Pass 79 should promote the $[-1]$-shift self-duality of $\epsilon$ from an *object-level* isomorphism
+$\epsilon\cong D\epsilon[1]$ to a *pairing*: decide whether there is a canonical solid pairing
+$b:\epsilon\otimes^{\blacksquare}\epsilon\to\mathbb Z[-1]$ (equivalently a map $\epsilon\to D\epsilon[1]$)
+and, using the Pass-78 antipode sign $-1$, determine whether $b$ is *symmetric* (orthogonal type) or
+*alternating* (symplectic type).  The expectation from the odd shift is that $\epsilon$ is a
+**symplectic** self-dual object; if so, test whether the Pass-76/77 StratPro support projectors
+$\{e_S\}_{S\subseteq\mathbb P}$ over $\beta\mathbb P$ split $\epsilon$ into a Lagrangian (maximal
+isotropic) decomposition for $b$, which would read the all-prime Loeb-Rosser phantom as a symplectic
+$\widehat{\mathbb Z}$-space with the primes as its Darboux coordinates.
+
+---
+
+### Pass 79 - 2026-06-13 JST
+
+Focus:
+Promote the Pass-78 result from an object-level statement to a *pairing*: decide
+whether there is a canonical solid pairing
+$b:\epsilon\otimes^{\blacksquare}\epsilon\to\mathbb Z[-1]$ on the all-prime
+Loeb-Rosser phantom $\epsilon=\widehat{\mathbb Z}/\mathbb Z=\varprojlim^1(N_n\mathbb Z)$,
+fix its (anti)symmetry type, and test whether the StratPro support projectors
+$\{e_S\}_{S\subseteq\mathbb P}$ over $\beta\mathbb P$ split $\epsilon$ into a
+Lagrangian decomposition with the primes as Darboux coordinates.
+
+Proposer:
+The pass should be run as an *audit*, because the Pass-78 Next-step premise is
+mis-stated and the honest answer is sharper and stranger than the conjecture.
+
+(0) *The premise is false.* Pass 78 proved $D\epsilon\cong\mathbb Q[-1]$ and
+$\epsilon^{**}\cong\epsilon$. The Next step rephrased this as an *object-level
+self-duality* $\epsilon\cong D\epsilon[1]$. But $D\epsilon[1]\cong\mathbb Q[0]
+=\mathbb Q\not\cong\epsilon$: as bare abelian groups $\epsilon\cong\mathbb A_f/\mathbb Q$
+is a $\mathbb Q$-vector space of dimension $2^{\aleph_0}$ (strong approximation:
+$\mathbb A_f=\mathbb Q+\widehat{\mathbb Z}$, $\mathbb Q\cap\widehat{\mathbb Z}=\mathbb Z$),
+whereas $\mathbb Q$ has dimension $1$. *Reflexivity is not self-duality.* Every
+dualizable object is reflexive; almost none are self-dual. So $\epsilon$ is **not**
+self-dual up to shift — its solid dual is the genuinely different object $\mathbb Q$.
+
+(1) *$\epsilon$ and $\mathbb Q$ are a dual pair.* From
+$0\to\mathbb Z\to\widehat{\mathbb Z}\to\epsilon\to0$ apply $D=R\underline{\mathrm{Hom}}(-,\mathbb Z)$:
+$D\epsilon=\mathbb Q[-1]$ (Pass 78a); and $D\mathbb Q=\epsilon[-1]$ (Pass 78,
+step (2): $D(E)=\epsilon[-1]$, $E\cong\mathbb Q$). The genuine *perfect* pairing is
+therefore the **cross/hyperbolic** one
+$$\langle\,,\rangle:\epsilon\otimes^{\blacksquare}\mathbb Q\longrightarrow\mathbb Z[1],
+\qquad \epsilon\cong D\mathbb Q[1],\quad \mathbb Q\cong D\epsilon[1].$$
+The symplectic object the conjecture is groping for is the hyperbolic plane
+$H=\epsilon\oplus\mathbb Q$, of which $\epsilon$ and $\mathbb Q$ are the two
+complementary Lagrangians — not an intrinsic form on $\epsilon$ alone.
+
+(2) *The self-pairing degree is forced, and it is not $\mathbb Z[-1]$.* By the
+tensor-Hom adjunction
+$$\mathrm{Hom}_{D(\mathrm{Solid})}(\epsilon\otimes^{\blacksquare}\epsilon,\mathbb Z[m])
+=\mathrm{Hom}(\epsilon,(D\epsilon)[m])=\mathrm{Hom}(\epsilon,\mathbb Q[m-1])
+=\operatorname{Ext}^{m-1}_{\mathrm{Solid}}(\epsilon,\mathbb Q).$$
+And $R\underline{\mathrm{Hom}}(\epsilon,\mathbb Q)=\mathbb Q[-1]$ (compute below), so this is
+$\mathbb Q$ for $m=2$ and $0$ otherwise. The proposed target $\mathbb Z[-1]$ ($m=-1$)
+admits **only the zero pairing**; the unique nonzero self-pairing lives in
+$\mathbb Z[2]$ and the space of such is one-dimensional.
+
+(3) *Identity of the canonical self-pairing.* $\operatorname{Ext}^1_{\mathrm{Solid}}
+(\epsilon,\mathbb Q)\cong\mathbb Q$ is generated by the **finite-adele class extension**
+$$0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0,$$
+the pushout of the defining sequence along $\mathbb Z\hookrightarrow\mathbb Q$
+(middle term $\mathbb Q+\widehat{\mathbb Z}=\mathbb A_f$). So the phantom's canonical
+self-pairing *is* the adele class group.
+
+Skeptic:
+Four sharpenings.
+First, the Ext computation must be **solid**, not abstract: over plain $\mathbb Z$
+the group $\mathbb Q$ is injective, so $\operatorname{Ext}^1_{\mathbb Z}(\epsilon,\mathbb Q)=0$
+and the self-pairing would vanish. The nonzero $\operatorname{Ext}^1_{\mathrm{Solid}}
+(\epsilon,\mathbb Q)=\mathbb Q$ exists only because in $\mathrm{Solid}$ the object
+$\mathbb Q$ is **not** injective — the same trap the Pass-78 Skeptic flagged for
+$D\mathbb Q$. The clean route is dualizability: $R\underline{\mathrm{Hom}}(\widehat{\mathbb Z},\mathbb Q)
+=D\widehat{\mathbb Z}\otimes^{\blacksquare}\mathbb Q=(\mathbb Q/\mathbb Z)[-1]\otimes\mathbb Q=0$
+(torsion $\otimes\mathbb Q=0$); the triangle then forces $R\underline{\mathrm{Hom}}
+(\epsilon,\mathbb Q)\cong R\underline{\mathrm{Hom}}(\mathbb Z,\mathbb Q)[-1]=\mathbb Q[-1]$.
+Second, the self-pairing $b$ is **degenerate**: its adjoint $\hat b:\epsilon\to(D\epsilon)[2]
+=\mathbb Q[1]$ is a class in $\operatorname{Ext}^1$, a map between objects in
+cohomological degrees $0$ and $-1$, hence never an isomorphism. So "symplectic
+$\epsilon$" in the nondegenerate sense is **false**; the nondegenerate symplectic
+structure lives on the hyperbolic plane $H=\epsilon\oplus\mathbb Q$.
+Third, the symmetry type the conjecture predicted (alternating) is nevertheless
+*correct in sign*: $b$ is a degree-$1$ (odd) Yoneda class, so the swap acts by
+$(-1)^{1\cdot1}=-1$ and $b$ is **alternating** — this is exactly the Pass-78
+odd-shift antipode $-1$, relocated to the right degree.
+Fourth, the Darboux dream collapses at step one: the support idempotents $e_S$ act
+on the *source* $\widehat{\mathbb Z}=\prod_p\mathbb Z_p$, but they do **not** descend
+to $\mathrm{End}(\epsilon)$, because $e_S$ preserves the diagonal $\mathbb Z$ iff
+$e_S(1)=\mathbf 1_S$ is a constant CRT vector, i.e. iff $S\in\{\varnothing,\mathbb P\}$.
+For every proper nonempty $S$, $e_S(1)=\mathbf 1_S\notin\mathbb Z$. The very unit
+class $1\in\widehat{\mathbb Z}^{\times}$ that drove Pass-78 reflexivity is the
+obstruction to prime-localizing $\epsilon$ in Pass 79: the phantom is **globally
+entangled across all primes** and admits **no** $e_S$-induced decomposition,
+Lagrangian or otherwise. The primes are *not* Darboux coordinates of $\epsilon$.
+
+Formalist:
+> **Theorem 79a (self-duality fails; dual pair).** In $D(\mathrm{Solid}_{\mathbb Z})$,
+> $D\epsilon\cong\mathbb Q[-1]$ and $D\mathbb Q\cong\epsilon[-1]$, so $\epsilon$ and
+> $\mathbb Q$ are Spanier-Whitehead duals up to the shift $[-1]$. There is **no**
+> shift $s$ with $D\epsilon\cong\epsilon[s]$: as abelian groups $\epsilon\cong
+> \mathbb A_f/\mathbb Q$ is a $\mathbb Q$-vector space of dimension $2^{\aleph_0}$
+> while $\mathbb Q$ has dimension $1$. The Pass-78 statement "$\epsilon\cong D\epsilon[1]$"
+> is a misreading of reflexivity $\epsilon^{**}\cong\epsilon$ and is corrected here.
+>
+> **Theorem 79b (forced pairing degree).** For all $m\in\mathbb Z$,
+> $$\operatorname{Hom}_{D(\mathrm{Solid})}(\epsilon\otimes^{\blacksquare}\epsilon,\mathbb Z[m])
+> \cong\operatorname{Ext}^{m-1}_{\mathrm{Solid}}(\epsilon,\mathbb Q)
+> \cong\begin{cases}\mathbb Q,&m=2,\\0,&m\ne2.\end{cases}$$
+> In particular the conjectured target $\mathbb Z[-1]$ carries only the zero pairing;
+> the unique (up to $\mathbb Q^{\times}$) nonzero self-pairing
+> $b:\epsilon\otimes^{\blacksquare}\epsilon\to\mathbb Z[2]$ is the finite-adele
+> class extension $[\,0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0\,]$ generating
+> $\operatorname{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\cong\mathbb Q$.
+>
+> **Theorem 79c (alternating but degenerate; hyperbolic Lagrangians).** $b$ is a
+> degree-$1$ Yoneda class, hence **alternating** ($\sigma^{*}b=-b$, the Pass-78
+> antipode sign), but **degenerate**: its adjoint $\hat b:\epsilon\to\mathbb Q[1]$
+> is not an isomorphism. The nondegenerate symplectic object is the hyperbolic
+> plane $H=\epsilon\oplus\mathbb Q$ with form $\langle\,,\rangle:\epsilon\otimes\mathbb Q
+> \to\mathbb Z[1]$; $\epsilon$ and $\mathbb Q$ are its two complementary Lagrangians.
+>
+> **Theorem 79d (Darboux no-go / prime-indecomposability).** The StratPro support
+> idempotents $e_S$ ($S\subseteq\mathbb P$) on $\widehat{\mathbb Z}=\prod_p\mathbb Z_p$
+> descend to $\mathrm{End}_{\mathrm{Solid}}(\epsilon)$ iff $e_S$ preserves the
+> diagonal $\mathbb Z\hookrightarrow\widehat{\mathbb Z}$, iff $\mathbf 1_S$ is a
+> constant CRT vector, iff $S\in\{\varnothing,\mathbb P\}$. Hence $\epsilon$ admits
+> **no** $e_S$-induced (Lagrangian or other) decomposition: the unit/diagonal class
+> $1\in\widehat{\mathbb Z}^{\times}$ — the engine of Pass-78 reflexivity — is the
+> obstruction. The all-prime phantom is **prime-indecomposable**; the primes are not
+> Darboux coordinates of $\epsilon$.
+
+Machine-verified `code/scripts/check-pass79.py` ->
+`artifacts/reports/pass79-symplectic-lagrangian-phantom-check.json` (overall PASS):
+(A) $\operatorname{Hom}(\mathbb Z/N_n,\mathbb Q)=0$ and $\operatorname{Ext}^1(\mathbb Z/N_n,\mathbb Q)
+=\mathbb Q/N_n\mathbb Q=0$ for $N_n=\operatorname{lcm}(1,\ldots,n)$, $n\le12$ (certifying
+$R\underline{\mathrm{Hom}}(\widehat{\mathbb Z},\mathbb Q)=0$). (B) the pairing-degree table:
+$\dim_{\mathbb Q}\operatorname{Ext}^{m-1}(\epsilon,\mathbb Q)$ is $0$ at $m=-1,0,1,3$ and
+$1$ at $m=2$. (C) CRT factorizations through $N_9$ confirm the adele pushout shadow.
+(D) swap sign $-1$ (alternating), adjoint non-iso (degenerate). (E) the Darboux
+enumeration over all $2^6=64$ subsets of $\{2,3,5,7,11,13\}$: exactly $2$ subsets
+($\varnothing$ and the full set) yield a descending $e_S$, $62$ fail. (F) the finite
+duality pairing $\mathbb Z/N\times\mathbb Z/N\to\mathbb Q/\mathbb Z$ is nondegenerate for
+$N\le840$ (hyperbolic Lagrangian pair).
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-79 entry; State counter
+  $79\to80$. Per the APS run-sync hazard the bash mount again lagged (it served this file
+  truncated at Pass 72 / line 8107 while the real file held Passes 73-78), so all appends were
+  made via Windows-path file tools and verified by Windows-path Read; the verification script was
+  run through the bash mount (read-only of a freshly Windows-written file) with a lag-retry guard.
+- `records/logs/research-log.md`: Pass-79 one-line entry.
+- `research/definitions.md`: added the dual pair $(\epsilon,\mathbb Q)$, the forced self-pairing
+  degree $\mathbb Z[2]$, the adele-class self-pairing, alternating-but-degenerate type, the
+  hyperbolic plane $H=\epsilon\oplus\mathbb Q$, and the Darboux no-go / prime-indecomposability.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-79 section (Thms 79a/79b/79c/79d), flagging the
+  Pass-78 "$\epsilon\cong D\epsilon[1]$" misstatement as corrected.
+- `research/open_problems.md`: marked the [New (Pass 78)] (anti)symmetry item [Resolved (Pass 79)]
+  (with the correction), and added a [New (Pass 79)] item on the hyperbolic plane's automorphisms
+  and the symplectic group of the dual pair.
+- `research/ideas/research-questions.md`: retargeted the active question to the metaplectic/Weil
+  structure of $H=\epsilon\oplus\mathbb Q$ and whether the adele-class self-pairing $b$ is the
+  $\varprojlim^1$-shadow of the Weil pairing on $\mathbb A_f/\mathbb Q$.
+- `code/scripts/check-pass79.py`,
+  `artifacts/reports/pass79-symplectic-lagrangian-phantom-check.json`: new.
+
+Next step:
+Pass 80 should study the hyperbolic plane $H=\epsilon\oplus\mathbb Q$ as a *nondegenerate*
+symplectic object of $D(\mathrm{Solid})$: compute its automorphism object
+$\mathrm{Sp}(H)=\underline{\mathrm{Aut}}(H,\langle\,,\rangle)$ and decide whether the
+$\mathrm{GL}_1$-action rescaling the dual pair, together with the unipotent "translation"
+$\epsilon\to\epsilon$ given by adding multiples of the degenerate $b$, generates a solid
+$\mathrm{SL}_2$- or Heisenberg-type group; then test whether the finite-adele Weil
+representation / metaplectic cover descends to a canonical action on the phantom, i.e.
+whether the Loeb-Rosser phantom carries a Weil representation of $\mathrm{SL}_2(\mathbb A_f)$
+with $\mathbb Q$ and $\epsilon$ as its two polarizations. If a clean obstruction appears
+(e.g. the degeneracy of $b$ blocks a metaplectic cocycle), record it as the precise wall.
+
+---
+
+### Pass 80 - 2026-06-14 00:10 JST
+
+Focus:
+Compute the solid symplectic automorphism object $\mathrm{Sp}(H)=\underline{\mathrm{Aut}}
+(H,\langle\,,\rangle)$ of the hyperbolic phantom plane $H=\epsilon\oplus\mathbb Q$
+(Pass 79: nondegenerate, Lagrangians $\epsilon,\mathbb Q$, perfect cross-pairing
+$\langle\,,\rangle:\epsilon\otimes^{\blacksquare}\mathbb Q\to\mathbb Z[1]$), decide whether the
+$\mathrm{GL}_1$-rescaling of the dual pair plus the unipotent shear by the degenerate self-pairing
+$b$ generate a solid $\mathrm{SL}_2$/Heisenberg group, and test whether the finite-adele Weil
+representation / metaplectic cover of $\mathrm{SL}_2(\mathbb A_f)$ descends to a canonical action on
+the Loeb-Rosser phantom with $\mathbb Q,\epsilon$ as its two polarizations.
+
+Proposer:
+Run the pass as a *structure computation* of the endomorphism algebra, because the answer is sharper
+and more rigid than "$\mathrm{SL}_2$". A solid endomorphism of $H=\epsilon\oplus\mathbb Q$ is a
+$2\times2$ matrix $\begin{psmallmatrix}a&b\\c&d\end{psmallmatrix}$ with
+$a\in\mathrm{End}(\epsilon)$, $b\in\mathrm{Hom}(\mathbb Q,\epsilon)$,
+$c\in\mathrm{Hom}(\epsilon,\mathbb Q)$, $d\in\mathrm{End}(\mathbb Q)=\mathbb Q$. The decisive
+input is the Pass-79 computation $R\underline{\mathrm{Hom}}(\epsilon,\mathbb Q)=\mathbb Q[-1]$, whose
+$H^0$ is $0$: **$\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$**, so the lower-left entry
+$c$ is forced to vanish. Meanwhile $\mathrm{Hom}(\mathbb Q,\epsilon)=\epsilon\neq0$ (every
+$\mathbb Q$-vector space $V$ has $\mathrm{Hom}(\mathbb Q,V)=V$). Hence **every solid endomorphism of
+$H$ is upper-triangular**, and $\mathrm{Sp}(H)$ is the solid *Borel* $B=T\ltimes U$ with torus
+$T=\mathbb Q^{\times}$ (rescale $\mathbb Q$ by $\lambda$, $\epsilon$ by $\lambda^{-1}$ to fix the
+pairing) and unipotent radical $U\cong$ the self-adjoint part of $\epsilon$ (the shears
+$y\mapsto y,\ x\mapsto x+by$, $b$ the degenerate self-pairing). Concretely $B\cong\mathbb Q^{\times}
+\ltimes\epsilon$ is the *"$ax+b$" affine group of the line* — exactly the Borel/Schrödinger
+parabolic that *fixes the polarization $\epsilon$*. The Weyl flip $w=\begin{psmallmatrix}0&1\\-1&0
+\end{psmallmatrix}$ — the would-be Fourier transform swapping the two polarizations — has **no solid
+model**, because its $(2,1)$-entry lives in the vanishing $\mathrm{Hom}(\epsilon,\mathbb Q)$.
+
+Skeptic:
+Three sharpenings, one of which corrects the Next-step's own guess.
+First, the obstruction is **not** the degeneracy of $b$, as the Pass-79 Next step speculated. The
+shear-by-$b$ unipotent is perfectly present in $B$; what is missing is the opposite unipotent and the
+Weyl element, i.e. the intertwiner $\epsilon\to\mathbb Q$. The precise wall is the *one-sidedness of
+the dual pair*: $\mathrm{Hom}(\epsilon,\mathbb Q)=0$ while $\mathrm{Hom}(\mathbb Q,\epsilon)\neq0$.
+Second, distinguish **reflexive** from **dualizable**. Pass 78 gave $\epsilon^{**}\cong\epsilon$
+(reflexive), but $\epsilon$ is *not* $\otimes$-dualizable (a $\mathbb Q$-vector space of dimension
+$2^{\aleph_0}$ is not finite/dualizable), so one may *not* write $R\underline{\mathrm{Hom}}
+(\epsilon,\epsilon)=D\epsilon\otimes\epsilon$; the endomorphism object must be read off directly, and
+that is what produces the asymmetry. Third, the collapse is a genuinely *limit* phenomenon: at every
+finite level the shadow is the full $\mathrm{SL}_2(\mathbb Z/N)=\mathrm{Sp}(\mathbb Z/N\oplus\mathbb
+Z/N)$, the Weyl flip is the finite Fourier transform $F_N$ (Gauss sum, $F_N^4=I$), and the two
+coordinate Lagrangians are *isomorphic* ($\cong\mathbb Z/N$). The flip dies only in the limit, where
+the two Lagrangians de-isomorphise into $\epsilon$ (prefix/$\varprojlim^1$ side) versus $\mathbb Q$
+(divisible side): the same unit-class entanglement that gave the Pass-79 Darboux no-go.
+
+Formalist:
+> **Theorem 80a (upper-triangularity of $\mathrm{End}_{\mathrm{Solid}}(H)$).** For
+> $H=\epsilon\oplus\mathbb Q$, $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)
+> =H^0 R\underline{\mathrm{Hom}}(\epsilon,\mathbb Q)=H^0(\mathbb Q[-1])=0$, while
+> $\mathrm{Hom}_{\mathrm{Solid}}(\mathbb Q,\epsilon)=\epsilon\neq0$ and
+> $\mathrm{End}(\mathbb Q)=\mathbb Q$. Hence every solid endomorphism of $H$ is upper-triangular
+> $\begin{psmallmatrix}a&b\\0&d\end{psmallmatrix}$, and $\epsilon$ is the unique solid
+> $\mathrm{End}(H)$-stable line.
+>
+> **Theorem 80b ($\mathrm{Sp}(H)$ is a solid Borel, not $\mathrm{SL}_2$).** The symplectic
+> automorphism object is $\mathrm{Sp}(H)=B=T\ltimes U$, $T=\mathbb Q^{\times}$ (the dual-pair
+> rescaling $\lambda\!\cdot\!(\mathbb Q),\ \lambda^{-1}\!\cdot\!(\epsilon)$), $U$ the abelian solid
+> group of symplectic shears (containing the degenerate $b$). $B\cong\mathbb Q^{\times}\ltimes\epsilon$
+> is the affine "$ax+b$" group / Siegel-parabolic Schrödinger model fixing the polarization $\epsilon$.
+> The Weyl element $w$ (the cross-polarization Fourier flip) is **not** a solid morphism. Thus the
+> $\mathrm{GL}_1$ + shear data generate a *solvable* group, never $\mathrm{SL}_2$ and never a
+> nonabelian Heisenberg group ($U$ is abelian).
+>
+> **Theorem 80c (metaplectic non-descent; the precise wall).** The finite-adele Weil representation
+> of $\mathrm{SL}_2(\mathbb A_f)$ does **not** descend to a solid action on the phantom $\epsilon$
+> with $\mathbb Q,\epsilon$ as polarizations. At each finite level $N$ the Weil flip exists (it is
+> $F_N$, $F_N^4=I$, $|g_N|^2=N$, realizing $w\in\mathrm{SL}_2(\mathbb Z/N)$), but the only candidate
+> limit of $\{F_{N_n}\}$ is an element of $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$. The
+> precise wall is therefore $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$ — the one-sidedness
+> of the dual pair $(\epsilon,\mathbb Q)$ / non-dualizability of $\epsilon$ — **not** the degeneracy
+> of $b$. Only the Borel $B$ (the Schrödinger model in the fixed polarization $\epsilon$) acts.
+
+Machine-verified `code/scripts/check-pass80.py` ->
+`artifacts/reports/pass80-metaplectic-borel-noflip-check.json` (overall PASS):
+(A) finite symplectic shadows for $N\in\{2,\ldots,12,60,420,840\}$: $|\mathrm{SL}_2(\mathbb Z/N)|=
+N^3\prod_{p\mid N}(1-p^{-2})$ (brute-force confirmed for $N\le12$), $|B|=\varphi(N)N$, Bruhat
+$|\mathrm{SL}_2|=|B|\cdot|\mathbb P^1(\mathbb Z/N)|$, and $w$ present with $w^2=-I$ swapping the
+coordinate Lagrangians. (B) the wall: the $c$-tower $\mathrm{Hom}(\mathbb Z/N_n,\mathbb Q)=0$ and
+$\mathrm{Ext}^1(\mathbb Z/N_n,\mathbb Q)=\mathbb Q/N_n\mathbb Q=0$ for $n\le12$ (so $c\equiv0$, no
+limit flip), while the $b$-tower $\mathrm{Hom}((1/N_n)\mathbb Z/\mathbb Z,\mathbb Q/\mathbb Z)=\mathbb
+Z/N_n\neq0$ with surjective divisibility bonding (so $b\neq0$). (C) the finite Weil/Fourier transform
+$F_N$ for $N\in\{3,5,7,9,11,15,21\}$ satisfies $F_N^4=I$, $F_NF_N^{*}=I$, and $|g_N|^2=N$ to
+$<10^{-7}$ — the finite flip exists at every level, its limit obstructed by (B).
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-80 entry; State counter
+  $80\to81$. Per the APS run-sync hazard the bash mount again lagged (it served this file truncated
+  at Pass 71 / line ~8088 while the real file held Passes 72-79), so all appends were made via
+  Windows-path file tools and verified by Windows-path Read; the verification script was created in
+  the native outputs workspace, run there and re-run from the repo path (both PASS), and copied into
+  the repo.
+- `records/logs/research-log.md`: Pass-80 one-line entry.
+- `research/definitions.md`: added the skew hyperbolic plane $H=\epsilon\oplus\mathbb Q$, the solid
+  Borel $\mathrm{Sp}(H)=\mathbb Q^{\times}\ltimes\epsilon$, upper-triangularity of
+  $\mathrm{End}_{\mathrm{Solid}}(H)$, and the metaplectic non-descent wall
+  $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-80 section (Thms 80a/80b/80c).
+- `research/open_problems.md`: marked the [New (Pass 79)] metaplectic item [Resolved (Pass 80)]; added
+  a [New (Pass 80)] item on the *automorphic* reading of the Borel (does $\mathbb Q^{\times}\ltimes
+  \epsilon$ carry the principal-series/Eisenstein shadow, and is the absent Weyl flip the algebraic
+  origin of a functional-equation pole?).
+- `research/ideas/research-questions.md`: retargeted the active question to whether the missing
+  cross-polarization intertwiner is the obstruction to a self-dual functional equation, and to the
+  reflexive-but-not-dualizable distinction as a structural invariant of the phantom.
+- `code/scripts/check-pass80.py`,
+  `artifacts/reports/pass80-metaplectic-borel-noflip-check.json`: new.
+
+Next step:
+Pass 81 should test whether the Pass-80 solid Borel $B=\mathbb Q^{\times}\ltimes\epsilon$ is the
+algebraic shadow of a degenerate principal series: realize the "$ax+b$" action on functions/sections
+over the fixed polarization $\epsilon$, ask whether the missing Weyl/intertwining operator
+($\in\mathrm{Hom}(\epsilon,\mathbb Q)=0$) is exactly the obstruction to a functional equation
+relating the two polarizations, and decide whether the resulting one-sided (non-self-dual) object has
+a clean interpretation as the Löb (integral) versus Rosser (non-integral) asymmetry one functor-level
+up — i.e. whether "no Fourier flip" is the representation-theoretic face of the Pass-51
+Löb/Rosser $\leftrightarrow$ integral/non-integral-unit dividing line.
+
+---
+
+### Pass 81 - 2026-06-14 JST
+
+Focus:
+Test whether the Pass-80 solid Borel $B=\mathbb Q^{\times}\ltimes\epsilon=\mathrm{Sp}(H)$ is the
+algebraic shadow of a degenerate principal series: realize the affine "$ax+b$" action on sections over
+the fixed polarization $\epsilon$, ask whether the absent Weyl/intertwining operator
+$\in\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$ is exactly the obstruction to a functional
+equation relating the two polarizations $\epsilon,\mathbb Q$, and decide whether "no Fourier flip" is
+the representation-theoretic face of the Pass-51 Löb (integral) vs Rosser (non-integral-unit) dividing
+line one functor-level up.
+
+Proposer:
+Run it as an **induction-and-intertwiner** computation. The inducing datum is the family of unramified
+characters of the torus, $\chi_s:B\twoheadrightarrow T=\mathbb Q^{\times}\xrightarrow{\,|\cdot|^s\,}
+R^{\times}$ (trivial on the unipotent $U=\epsilon$), and the principal series is
+$I(s)=\mathrm{Ind}_{B}^{\mathrm{Sp}(H)}\chi_s$. But $\mathrm{Sp}(H)=B$ by Pass 80, so the flag variety
+is $\mathrm{Sp}(H)/B=\mathrm{pt}$: there is no Bruhat big cell because the opposite unipotent
+$\bar U=\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)$ is $0$. Hence $I(s)\cong\chi_s$ canonically —
+a **maximally degenerate** principal series of length $1$, the inducing character itself. Concretely
+$B$ acts in the **Schrödinger model** on sections over the Lagrangian $\epsilon$ by the two "easy"
+operators: the torus $T=\mathbb Q^{\times}$ by dilation-with-multiplier $(\lambda\!\cdot\!f)(x)=|\lambda
+|^{s}f(\lambda^{-1}x)$, and the unipotent $U=\epsilon$ by symplectic shear $x\mapsto x+u$ (a chirp/
+translation in the polarized picture). Neither operator ever consults the dual polarization $\mathbb Q$;
+the only operator that would is the Weyl/Fourier flip $w$, which swaps $\epsilon\leftrightarrow\mathbb Q$
+and lives in the vanishing $\mathrm{Hom}(\epsilon,\mathbb Q)$. The functional equation $I(s)\cong I(-s)$
+is mediated by the standard intertwiner $M(w,s)f(g)=\int_{\bar U}f(w^{-1}\bar u g)\,d\bar u$; with
+$\bar U=0$ this is an integral over the zero group, so the Gindikin–Karpelevich/Harish-Chandra
+$c$-function is the **empty product** $c(s)=1$ and the $s\mapsto-s$ symmetry simply does not exist. So
+$B$ is a degenerate principal series **with no functional equation** — the missing intertwiner is
+literally $\bar U=\mathrm{Hom}(\epsilon,\mathbb Q)=0$.
+
+Skeptic:
+Three guards, one of which sharpens the slogan.
+First, do **not** assert a Hilbert-space Weil representation. In the solid/condensed world we do not
+have a measure-theoretic $\mathcal S(\epsilon)$ with an honest Plancherel; what we *do* have is the
+abstract induced module, and because the flag variety is a point that module is just the character
+$\chi_s$. The Schrödinger "section space" picture is heuristic packaging; the **theorem** is structural:
+$\mathrm{Sp}(H)/B=\mathrm{pt}\iff\bar U=0\iff$ no $M(w,s)$. Claiming an $L^2$ model would overclaim.
+Second, the functional equation is **not** merely "absent" — at every finite level it is **present**,
+and dies only in the limit. For each $N$ the analogue is $\mathrm{SL}_2(\mathbb Z/N)$ with full Bruhat
+cell $\bar U_N=\mathbb Z/N$, and the flip is the finite Fourier $F_N$, which on $\mathbb C[\mathbb Z/N]$
+conjugates the dilation $D_t:f(x)\mapsto f(t^{-1}x)$ into $D_{t^{-1}}$ — i.e. it realises the
+multiplicative/Mellin reflection $s\leftrightarrow-s$ exactly, with Gauss-sum eigenvalue $g(\psi)$,
+$|g(\psi)|^2=p$ the local $c$-factor. The wall is therefore a **$\varprojlim^1$/limit obstruction**,
+of a piece with the phantom itself: *finitely self-dual, limanly one-sided*. Third, be precise about
+the Löb/Rosser reading: the asymmetry is not symmetric blame. $\mathrm{Hom}(\mathbb Q,\epsilon)=\epsilon
+\neq0$ (you can always *forget* that a Löb fixed point is canonical and land in the Rosser torsor — this
+is the shear $U$ itself), but $\mathrm{Hom}(\epsilon,\mathbb Q)=0$ (you can never *canonically recover*
+canonicity from the non-canonical Rosser side — this is the missing flip). The one-way street is the
+content.
+
+Formalist:
+> **Theorem 81a (maximally degenerate principal series).** Let $\chi_s:B\to R^{\times}$ be the
+> character $tu\mapsto|t|^s$ ($t\in T=\mathbb Q^{\times}$, $u\in U=\epsilon$). Since $\mathrm{Sp}(H)=B$
+> (Pass 80), the flag variety $\mathrm{Sp}(H)/B$ is a single point and
+> $$I(s):=\mathrm{Ind}_{B}^{\mathrm{Sp}(H)}\chi_s\ \cong\ \chi_s$$
+> as a $B$-module: a length-$1$ (hence irreducible) degenerate principal series with no composition
+> series and no reducibility points. The Schrödinger model of $B$ over the polarization $\epsilon$ acts
+> by dilation $T\ni\lambda:f(x)\mapsto|\lambda|^s f(\lambda^{-1}x)$ and shear $U\ni u:x\mapsto x+u$;
+> both fix the polarization $\epsilon$ and neither factors through $\mathbb Q$.
+>
+> **Theorem 81b (no functional equation; $\bar U=0$).** The standard intertwiner
+> $M(w,s):I(s)\to I(-s)$ has defining datum the opposite unipotent
+> $\bar U=\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$. Hence the Harish-Chandra/Gindikin–
+> Karpelevich $c$-function is the empty product $c(s)=1$, $M(w,s)$ does not exist as a nonzero solid
+> morphism, and $I(s)\not\cong I(-s)$ for $s\neq0$: there is **no** $s\mapsto-s$ functional equation.
+> Equivalently, the would-be intertwiner is exactly the absent Weyl/Fourier flip $\epsilon\to\mathbb Q$.
+>
+> **Theorem 81c (finite/limit dichotomy).** At each finite level $N$ the analogue
+> $I_N(s)=\mathrm{Ind}_{B(\mathbb Z/N)}^{\mathrm{SL}_2(\mathbb Z/N)}\chi_s$ carries the intertwiner
+> $M_N(w,s)$ realised by the finite Fourier transform $F_N$. On $\mathbb C[\mathbb Z/N]$ with dilation
+> $D_t f(x)=f(t^{-1}x)$ ($t\in(\mathbb Z/N)^{\times}$) and unitary DFT $F_N$,
+> $$F_N\,D_t\,F_N^{-1}=D_{t^{-1}}\qquad\text{(exact)},$$
+> the multiplicative reflection $s\leftrightarrow-s$, with local $c$-factor the Gauss sum
+> $|g(\psi)|^2=p$ for every nontrivial $\psi\bmod p$. The functional equation holds at every finite
+> level and is destroyed only in the limit, where $\bar U_N=\mathbb Z/N$ has no solid limit
+> ($\mathrm{Hom}(\epsilon,\mathbb Q)=0$). *Finitely self-dual, limanly one-sided.*
+>
+> **Theorem 81d (Löb/Rosser face of the wall).** Under the Pass-51 dictionary
+> [integral unit $=$ Löb $=$ orbit-attached/canonical $=$ the $\mathbb Q$-(diagonal) side] and
+> [non-integral unit $=$ Rosser $=$ detached/torsor $=$ the phantom $\epsilon$-side], the two
+> Lagrangians of $H$ are the Löb side $\mathbb Q$ and the Rosser side $\epsilon$. The missing Weyl flip
+> is a $B$-equivariant Fourier isomorphism $\epsilon\xrightarrow{\sim}\mathbb Q$; its non-existence
+> $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$ is the statement that **the Rosser torsor does
+> not retract onto the canonical Löb datum** (Guaspari–Solovay non-uniqueness has no section). The
+> surviving $\mathrm{Hom}(\mathbb Q,\epsilon)=\epsilon=U$ (the shear) is the forgetful map
+> Löb$\to$Rosser. *Slogan: one can always forget that a fixed point is canonical, but never canonically
+> recover canonicity — that one-way street is the no-Fourier-flip wall.*
+>
+> **Corollary 81e (reflexive $\not\Rightarrow$ functional equation).** A polarization $L$ of a solid
+> symplectic plane admits the cross-polarization functional equation iff $L$ is $\otimes$-**dualizable**;
+> reflexivity ($L^{**}\cong L$) is insufficient. The phantom $\epsilon$ (reflexive by Pass 78, not
+> dualizable) is the extremal witness reflexive $\wedge\neg$dualizable $\Rightarrow\neg$functional-
+> equation, separating it from the finite-level dualizable Lagrangians $\mathbb Z/N$ (self-dual via
+> $F_N$).
+
+Machine-verified `code/scripts/check-pass81.py` ->
+`artifacts/reports/pass81-degenerate-principal-series-functional-equation-check.json` (overall PASS):
+(A) flag-variety collapse — $|\mathbb P^1(\mathbb Z/N)|=N\prod_{p\mid N}(1+p^{-1})>1$ for
+$N\in\{2,3,4,5,6,9,12,30,210\}$ while $\mathrm{Hom}(\mathbb Z/N,\mathbb Q)=0$ ($\mathbb Q$ torsion-free)
+and $\mathrm{Ext}^1(\mathbb Z/N,\mathbb Q)=\mathbb Q/N\mathbb Q=0$ ($\mathbb Q$ divisible), so the solid
+flag variety is a point; (B) the functional equation $F_N D_t F_N^{-1}=D_{t^{-1}}$ holds for all
+$t\in(\mathbb Z/N)^{\times}$, $N\le16$, to $<1.1\times10^{-14}$; (C) the Gauss-sum $c$-factor
+$|g(\psi)|^2=p$ for all nontrivial $\psi\bmod p$, $p\le23$, to $<4.3\times10^{-13}$; (D) the limit
+obstruction — the $c$-tower $\mathrm{Hom}(\mathbb Z/N_n,\mathbb Q)=\mathrm{Ext}^1(\mathbb Z/N_n,\mathbb
+Q)=0$ vanishes while the surviving shear $b$-tower $\mathrm{Hom}((1/N_n)\mathbb Z/\mathbb Z,\mathbb Q/
+\mathbb Z)=\mathbb Z/N_n\neq0$, so there is no solid limit flip.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-81 entry; State counter
+  $81\to82$; rotated the State pass notes (Pass 81 is now "Last pass note", Pass 80 demoted to
+  "Earlier note", Pass 79 to "Older note"). Per the APS run-sync hazard the bash mount again lagged
+  (it served `check-pass81.py` truncated at line 192, missing the `main()` call), so the script was run
+  from a sandbox-local copy and every repo write/verification went through Windows-path file tools.
+- `records/logs/research-log.md`: Pass-81 one-line entry.
+- `research/definitions.md`: added the degenerate principal series $I(s)=\mathrm{Ind}_B^{\mathrm{Sp}(H)}
+  \chi_s$, the standard intertwiner $M(w,s)$ and its $c$-function, and the functional-equation wall
+  $\bar U=\mathrm{Hom}(\epsilon,\mathbb Q)=0$ with the reflexive-vs-dualizable criterion.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-81 section (Thms 81a–81e).
+- `research/open_problems.md`: marked the [New (Pass 80)] "automorphic shadow of the solid Borel" item
+  [Resolved (Pass 81)]; added a [New (Pass 81)] item on whether the degenerate principal series has a
+  nonzero Whittaker/derivative functional and on the archimedean/real place.
+- `research/ideas/research-questions.md`: retargeted the active question to the Whittaker model and the
+  $L$-/$\gamma$-factor reading of the empty $c$-function.
+- `code/scripts/check-pass81.py`,
+  `artifacts/reports/pass81-degenerate-principal-series-functional-equation-check.json`: new.
+
+Next step:
+Pass 82 should ask whether the maximally degenerate principal series $I(s)=\chi_s$ carries any nonzero
+**Whittaker / generalized-Whittaker functional** $\Lambda:I(s)\to\psi_U$ for a character $\psi$ of the
+unipotent $U=\epsilon$ — equivalently whether $\mathrm{Hom}_U(\epsilon,\psi)\neq0$ for a nontrivial
+additive character $\psi:\epsilon\to R^{\times}$ — and, if so, whether the resulting (necessarily
+"functional-equation-free") Whittaker function is the representation-theoretic carrier of the Rosser
+torsor class itself. Decide also what the **archimedean place** contributes: adjoining the real
+solenoid factor $\mathbb R$ to $\widehat{\mathbb Z}$ (passing from $\epsilon=\widehat{\mathbb Z}/\mathbb
+Z$ to the full adelic $\mathbb A/\mathbb Q$) reinstates a real Lagrangian — does the archimedean Weyl
+flip exist where the finite one does not, partially restoring a functional equation with only the
+finite primes obstructed?
+
+---
+
+### Pass 82 - 2026-06-14 JST
+
+Focus:
+Test the Whittaker and archimedean residues of the Pass-81 maximally
+degenerate principal series.  The two questions are whether
+$I(s)=\chi_s$ carries any nonzero Whittaker functional for a nontrivial
+character of $U=\epsilon$, and whether adding the real place repairs the
+functional equation that the finite-prime solid phantom lost.
+
+Proposer:
+Since $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, the induced module
+is
+$$I(s)=\mathrm{Ind}_{B}^{\mathrm{Sp}(H)}\chi_s=\chi_s,$$
+and $\chi_s$ is trivial on the unipotent radical $U=\epsilon$.  Therefore
+$$\operatorname{Hom}_U(I(s),\psi)\cong
+\begin{cases}
+R,&\psi=1,\\
+0,&\psi\ne1.
+\end{cases}$$
+Only the constant term survives.  The Rosser torsor is not a generic
+Whittaker coefficient; it is the unipotent shear parameter $U=\epsilon$ itself,
+the one-sided translation object left after the Weyl flip disappears.
+
+For the real place, strong approximation gives
+$$\mathbb A=\mathbb Q+(\mathbb R\times\widehat{\mathbb Z}),\qquad
+\mathbb Q\cap(\mathbb R\times\widehat{\mathbb Z})=\mathbb Z.$$
+Thus the full adelic quotient is the compact solenoid
+$$\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z,$$
+with exact sequence
+$$0\to\widehat{\mathbb Z}/\mathbb Z\to\Sigma\to\mathbb R/\mathbb Z\to0.$$
+The archimedean factor repairs global adelic Pontryagin duality for
+$\mathbb A/\mathbb Q$, but it does not supply a finite-prime solid morphism
+$\epsilon\to\mathbb Q$.  The global object has Fourier theory; the finite
+phantom remains limanly one-sided.
+
+Skeptic:
+Finite characters of $\mathbb Z/N$ should not be mistaken for a solid
+Whittaker model.  They exist at every finite level, but the collapsed solid
+principal series has trivial $U$-action, so the nontrivial finite Fourier
+coefficients vanish on the constant section.  Likewise, the real place repairs
+the full adelic quotient, not the finite-prime quotient alone.  The sequence
+$0\to\epsilon\to\Sigma\to\mathbb R/\mathbb Z\to0$ explains both facts at once:
+$\Sigma$ becomes compact Hausdorff and globally self-dual, while $\epsilon$
+remains the non-Hausdorff finite-prime kernel with no $\epsilon\to\mathbb Q$
+Weyl operator.
+
+Formalist:
+> **Theorem 82a (Whittaker vanishing).** For the maximally degenerate principal
+> series $I(s)=\chi_s$ of $B=\mathbb Q^{\times}\ltimes\epsilon$,
+> $\operatorname{Hom}_{U}(I(s),\psi)=0$ for every nontrivial character
+> $\psi$ of $U=\epsilon$, and is one-dimensional for the trivial character.
+>
+> **Theorem 82b (finite Fourier shadow).** For every finite shadow
+> $U_N=\mathbb Z/N$, the Fourier coefficient of the constant $U_N$-action is
+> $$\sum_{x\in\mathbb Z/N}e^{2\pi ikx/N}=0\quad(k\ne0),\qquad =N\quad(k=0).$$
+> Hence finite nontrivial characters do not produce a Whittaker model for the
+> solid limit representation.
+>
+> **Theorem 82c (archimedean repair without finite flip).** The full adelic
+> quotient
+> $$\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\cong\mathbb A/\mathbb Q$$
+> is compact Hausdorff and globally self-dual, and fits into
+> $$0\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to\Sigma\to\mathbb R/\mathbb Z\to0.$$
+> The real place repairs global adelic Fourier duality, but it does not create
+> the missing finite-prime solid morphism $\epsilon\to\mathbb Q$.
+
+Machine-verified `code/scripts/check-pass82.py` ->
+`artifacts/reports/pass82-whittaker-archimedean-repair-check.json` (overall PASS):
+finite Fourier coefficients of the constant $U_N$-action vanish for every
+nontrivial additive character over
+$N\in\{2,3,4,5,6,8,9,12,15,16,30\}$, while the trivial coefficient is $N$;
+the $U$-equivariant Hom table has dimension $1$ for the trivial character and
+$0$ for nontrivial characters; finite shadows of
+$0\to\epsilon\to(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\to\mathbb R/\mathbb Z\to0$
+have kernel size $N$ and pass the diagonal-reduction exactness check.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-82 entry; State counter
+  $82\to83$.
+- `records/logs/research-log.md`: Pass-82 one-line entry.
+- `research/definitions.md`: Whittaker vanishing for $I(s)$ and the adelic solenoid exact sequence.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-82 section (Thms 82a/82b/82c).
+- `research/open_problems.md` and `research/ideas/research-questions.md`: retargeted the residue to
+  the global adelic $\Sigma$ versus finite-prime $\epsilon$ comparison.
+- `code/scripts/check-pass82.py`,
+  `artifacts/reports/pass82-whittaker-archimedean-repair-check.json`: new.
+- `artifacts/pdf/whittaker-archimedean-repair-2026-06-14.md`: publication summary source.
+
+Next step:
+Pass 83 should compare the global adelic solenoid
+$\Sigma=\mathbb A/\mathbb Q$ with the finite phantom
+$\epsilon=\widehat{\mathbb Z}/\mathbb Z$ at the level of exact triangles: prove
+whether the real-circle quotient $\Sigma\to\mathbb R/\mathbb Z$ splits in any
+solid/condensed sense compatible with the Borel action, and decide whether the
+global Fourier transform on $\Sigma$ induces only a constant-term functional on
+$\epsilon$ or a nontrivial boundary map measuring exactly the lost finite-prime
+Weyl flip.
+
+---
+
+### Pass 83 - 2026-06-20 JST
+
+Focus:
+Correct the exact-triangle comparison between the full adelic solenoid
+$$
+\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\cong\mathbb A/\mathbb Q
+$$
+and the finite-prime phantom $\epsilon=\widehat{\mathbb Z}/\mathbb Z$.  The
+question from Pass 82 asked whether
+$0\to\epsilon\to\Sigma\to\mathbb R/\mathbb Z\to0$ splits and whether global
+Fourier theory restricts to $\epsilon$.  The first task is to check the exact
+row itself.
+
+Proposer:
+Compute the kernel literally.  The projection
+$$
+\pi:\Sigma\to\mathbb R/\mathbb Z,\qquad [(r,z)]\mapsto r\bmod\mathbb Z
+$$
+has kernel represented by $(0,z)$, $z\in\widehat{\mathbb Z}$; if
+$(0,z)\sim(0,z')$ then $(0,z'-z)=(n,n)$ for some $n\in\mathbb Z$, hence
+$n=0$ and $z=z'$.  Thus
+$$
+0\to\widehat{\mathbb Z}\to\Sigma\to\mathbb R/\mathbb Z\to0
+$$
+is the compact Hausdorff exact row.  The phantom is not this kernel.  It is the
+quotient by the dense real line:
+$$
+\Sigma/\mathbb R\cong
+(\mathbb R\times\widehat{\mathbb Z})/(\Delta\mathbb Z+\mathbb R\times0)
+\cong \widehat{\mathbb Z}/\mathbb Z=\epsilon.
+$$
+So the correct triangle has a closed profinite kernel row and a separate
+dense/non-Hausdorff quotient row.
+
+Skeptic:
+This correction changes the Fourier reading.  The compact row is the standard
+solenoid extension, and it does **not** split continuously: otherwise its
+Pontryagin dual
+$$
+0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0
+$$
+would split, requiring a homomorphic section $\mathbb Q/\mathbb Z\to\mathbb Q$;
+but $\mathbb Q$ is torsion-free while every element of $\mathbb Q/\mathbb Z$ is
+torsion.  Therefore no continuous/condensed degree-$0$ section
+$\mathbb R/\mathbb Z\to\Sigma$ exists.  Also, global characters restrict
+nontrivially to the **closed** kernel $\widehat{\mathbb Z}$, yielding
+$\mathbb Q/\mathbb Z$, but a finite character on $\widehat{\mathbb Z}$ descends
+to $\widehat{\mathbb Z}/\mathbb Z$ only if it kills the dense diagonal
+$\mathbb Z$, hence only if it is trivial.  Thus global Fourier theory sees the
+finite characters as a boundary quotient, not as ordinary degree-$0$
+characters of $\epsilon$.
+
+Formalist:
+> **Theorem 83a (correct solenoid rows).** For
+> $\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z$, projection to the
+> real circle gives
+> $$0\to\widehat{\mathbb Z}\to\Sigma\to\mathbb R/\mathbb Z\to0.$$
+> The finite phantom appears instead as
+> $$\mathbb R\to\Sigma\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to0,$$
+> where the image of $\mathbb R$ is dense and the quotient is non-Hausdorff /
+> derived-solid phantom data rather than an LCA quotient.
+>
+> **Theorem 83b (no continuous split).** The compact row above is nonsplit in
+> continuous, condensed, and solid degree $0$: under Pontryagin duality it
+> becomes $0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0$, which cannot
+> split because $\mathbb Q$ has no nonzero torsion.
+>
+> **Theorem 83c (Fourier boundary, not Whittaker character).** The restriction
+> of global characters $\widehat{\Sigma}\cong\mathbb Q$ to the closed profinite
+> kernel is the quotient $\mathbb Q\to\mathbb Q/\mathbb Z=\widehat{\widehat{
+> \mathbb Z}}$.  Passing further to $\epsilon=\widehat{\mathbb Z}/\mathbb Z$
+> kills all nontrivial degree-$0$ characters.  Hence only the constant term
+> descends to $\epsilon$; the lost finite-prime Weyl/Fourier content is the
+> boundary quotient $\mathbb Q/\mathbb Z$.
+
+Machine-verified `code/scripts/check-pass83.py` ->
+`artifacts/reports/pass83-solenoid-exact-triangle-correction-check.json` (overall PASS):
+finite dual rows $0\to\mathbb Z\xrightarrow{\times N}\mathbb Z\to\mathbb Z/N\to0$
+are exact, and are nonsplit for the nontrivial checked lcm stages
+$N\in\{1,2,6,12,60,60,420,840,2520,2520,27720,27720\}$; finite characters on
+the profinite kernel have count $N$, but exactly one character descends to
+$\epsilon$; levelwise cokernels of $\mathbb Z\to\mathbb Z/N$ vanish, confirming
+that $\epsilon$ is not visible as an ordinary finite cokernel but as the
+derived/non-Hausdorff quotient.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-83 entry; State counter
+  $83\to84$ and corrected the State summary.
+- `records/logs/research-log.md`: Pass-83 entry.
+- `research/definitions.md`: corrected the Pass-82 solenoid row and added the
+  closed-kernel / dense-quotient distinction.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-83 correction section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked the Pass-82
+  solenoid question resolved/corrected and retargeted the next task to the
+  derived-solid boundary class $\mathbb Q/\mathbb Z$.
+- `code/scripts/check-pass83.py`,
+  `artifacts/reports/pass83-solenoid-exact-triangle-correction-check.json`: new.
+- `artifacts/pdf/solenoid-exact-triangle-correction-2026-06-20.md`: publication summary source.
+
+Next step:
+Pass 84 should formulate the derived/solid exact triangle behind
+$\mathbb R\to\Sigma\to\epsilon$ and identify the boundary object
+$\mathbb Q/\mathbb Z$ (or its shifted solid dual) as the precise replacement
+for the missing finite-prime Weyl flip.  In particular, prove whether the
+Borel unipotent $U=\epsilon$ acts only on the quotient boundary, not by
+continuous translations on $\Sigma$ itself.

@@ -1,0 +1,371 @@
+{
+  "pass": 80,
+  "title": "metaplectic-borel-noflip",
+  "checks": {
+    "A_finite_symplectic_weylflip": {
+      "desc": "Sp(Z/N (+) Z/N)=SL_2(Z/N): order formula, Weyl flip, Bruhat |SL2|=|B||P^1|",
+      "rows": [
+        {
+          "N": 2,
+          "SL2_order": 6,
+          "P1": 3,
+          "B_order": 2,
+          "phi": 1,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 3,
+          "SL2_order": 24,
+          "P1": 4,
+          "B_order": 6,
+          "phi": 2,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 4,
+          "SL2_order": 48,
+          "P1": 6,
+          "B_order": 8,
+          "phi": 2,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 5,
+          "SL2_order": 120,
+          "P1": 6,
+          "B_order": 20,
+          "phi": 4,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 6,
+          "SL2_order": 144,
+          "P1": 12,
+          "B_order": 12,
+          "phi": 2,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 7,
+          "SL2_order": 336,
+          "P1": 8,
+          "B_order": 42,
+          "phi": 6,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 8,
+          "SL2_order": 384,
+          "P1": 12,
+          "B_order": 32,
+          "phi": 4,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 9,
+          "SL2_order": 648,
+          "P1": 12,
+          "B_order": 54,
+          "phi": 6,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 12,
+          "SL2_order": 1152,
+          "P1": 24,
+          "B_order": 48,
+          "phi": 4,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": true
+        },
+        {
+          "N": 60,
+          "SL2_order": 138240,
+          "P1": 144,
+          "B_order": 960,
+          "phi": 16,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": null
+        },
+        {
+          "N": 420,
+          "SL2_order": 46448640,
+          "P1": 1152,
+          "B_order": 40320,
+          "phi": 96,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": null
+        },
+        {
+          "N": 840,
+          "SL2_order": 371589120,
+          "P1": 2304,
+          "B_order": 161280,
+          "phi": 192,
+          "bruhat_|SL2|=|B||P1|": true,
+          "w_det1": true,
+          "w2=-I": true,
+          "w_swaps_Lagrangians": true,
+          "brute_order_match": null
+        }
+      ],
+      "pass": true
+    },
+    "B_borel_only_wall": {
+      "desc": "Hom(eps,Q) finite shadow == 0 (no Weyl flip in the limit); Hom(Q,eps) finite shadow != 0",
+      "c_lowerleft_Hom(eps,Q)": {
+        "rows": [
+          {
+            "n": 1,
+            "N_n": 1,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 2,
+            "N_n": 2,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 3,
+            "N_n": 6,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 4,
+            "N_n": 12,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 5,
+            "N_n": 60,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 6,
+            "N_n": 60,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 7,
+            "N_n": 420,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 8,
+            "N_n": 840,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 9,
+            "N_n": 2520,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 10,
+            "N_n": 2520,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 11,
+            "N_n": 27720,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          },
+          {
+            "n": 12,
+            "N_n": 27720,
+            "Hom(Z/N,Q)": 0,
+            "Ext1(Z/N,Q)": 0
+          }
+        ],
+        "identically_zero": true
+      },
+      "b_upperright_Hom(Q,eps)": {
+        "rows": [
+          {
+            "n": 1,
+            "N_n": 1,
+            "|Hom(Q-trunc,eps-trunc)|": 1,
+            "bonding_surjective": true
+          },
+          {
+            "n": 2,
+            "N_n": 2,
+            "|Hom(Q-trunc,eps-trunc)|": 2,
+            "bonding_surjective": true
+          },
+          {
+            "n": 3,
+            "N_n": 6,
+            "|Hom(Q-trunc,eps-trunc)|": 6,
+            "bonding_surjective": true
+          },
+          {
+            "n": 4,
+            "N_n": 12,
+            "|Hom(Q-trunc,eps-trunc)|": 12,
+            "bonding_surjective": true
+          },
+          {
+            "n": 5,
+            "N_n": 60,
+            "|Hom(Q-trunc,eps-trunc)|": 60,
+            "bonding_surjective": true
+          },
+          {
+            "n": 6,
+            "N_n": 60,
+            "|Hom(Q-trunc,eps-trunc)|": 60,
+            "bonding_surjective": true
+          },
+          {
+            "n": 7,
+            "N_n": 420,
+            "|Hom(Q-trunc,eps-trunc)|": 420,
+            "bonding_surjective": true
+          },
+          {
+            "n": 8,
+            "N_n": 840,
+            "|Hom(Q-trunc,eps-trunc)|": 840,
+            "bonding_surjective": true
+          },
+          {
+            "n": 9,
+            "N_n": 2520,
+            "|Hom(Q-trunc,eps-trunc)|": 2520,
+            "bonding_surjective": true
+          },
+          {
+            "n": 10,
+            "N_n": 2520,
+            "|Hom(Q-trunc,eps-trunc)|": 2520,
+            "bonding_surjective": true
+          },
+          {
+            "n": 11,
+            "N_n": 27720,
+            "|Hom(Q-trunc,eps-trunc)|": 27720,
+            "bonding_surjective": true
+          },
+          {
+            "n": 12,
+            "N_n": 27720,
+            "|Hom(Q-trunc,eps-trunc)|": 27720,
+            "bonding_surjective": true
+          }
+        ],
+        "nonzero_and_surjective_tower": true
+      },
+      "conclusion": "End_Solid(H) is upper-triangular (c==0): Sp(H) is the solid Borel T x U, T=Q^*, U<=eps; the Weyl flip is absent.",
+      "pass": true
+    },
+    "C_finite_weil_vs_metaplectic_nondescent": {
+      "desc": "finite Fourier F_N realizes w_N (F^4=I, unitary, |Gauss|^2=N); limit lives in Hom(eps,Q)=0 -> no solid metaplectic flip",
+      "finite_weil_fourier": [
+        {
+          "N": 3,
+          "|F^4-I|": 0.0,
+          "|FF*-I|": 0.0,
+          "||g|^2-N|": 0.0
+        },
+        {
+          "N": 5,
+          "|F^4-I|": 0.0,
+          "|FF*-I|": 0.0,
+          "||g|^2-N|": 0.0
+        },
+        {
+          "N": 7,
+          "|F^4-I|": 0.0,
+          "|FF*-I|": 0.0,
+          "||g|^2-N|": 0.0
+        },
+        {
+          "N": 9,
+          "|F^4-I|": 0.0,
+          "|FF*-I|": 0.0,
+          "||g|^2-N|": 0.0
+        },
+        {
+          "N": 11,
+          "|F^4-I|": 0.0,
+          "|FF*-I|": 0.0,
+          "||g|^2-N|": 0.0
+        },
+        {
+          "N": 15,
+          "|F^4-I|": 0.0,
+          "|FF*-I|": 0.0,
+          "||g|^2-N|": 0.0
+        },
+        {
+          "N": 21,
+          "|F^4-I|": 0.0,
+          "|FF*-I|": 0.0,
+          "||g|^2-N|": 0.0
+        }
+      ],
+      "metaplectic_descent": {
+        "finite_flip_w_N": "present at every level N (SL_2(Z/N) and finite Fourier F_N)",
+        "limit_flip": "would be a nonzero element of Hom_Solid(eps,Q); but Hom_Solid(eps,Q)=H^0(RHom(eps,Q))=H^0(Q[-1])=0 (Pass 79A)",
+        "verdict": "NO DESCENT: SL_2(A_f) Weil representation does not act on the phantom; only its Borel (the 'ax+b' Schrodinger model fixing the polarization eps) acts.",
+        "precise_wall": "Hom_Solid(eps,Q)=0  (equivalently: eps is reflexive but NOT tensor-dualizable; the dual pair (eps,Q) is one-sided)",
+        "note": "the DEGENERACY of b is NOT the obstruction; the obstruction is the absence of the inverse Fourier intertwiner eps->Q."
+      },
+      "pass": true
+    }
+  },
+  "overall": "PASS"
+}

@@ -665,9 +665,15 @@
   hybrid exact-category candidate $\mathcal H_\epsilon$, Pass 73 proved its presentation-level
   universal property among admissible support-preserving certificate targets, Pass 74 built a
   faithful tagged restricted pro-Ab realization on the five generator families, and Pass 75
-  replaced those tags by internal support/stage projectors. The remaining [Open] part is to realize
-  those projectors inside an LCA-sheaf, condensed/solid, or derived exact pro-category framework
-  where the law becomes an honest duality theorem.
+  replaced those tags by internal support/stage projectors, and Pass 76 gave those projectors a
+  first natural model: the finite-prime stratified pro-site $\mathrm{StratPro}_\epsilon(U,N)$, with
+  $e_p$ multiplication by clopen characteristic functions $\mathbf 1_{\{p\}}$ and $q_n$ prefix
+  truncations of the lcm tower, through which $\rho_{\mathrm{proj}}$ factors faithfully.
+  **Resolved (Pass 77):** the upgrade lands in $\mathrm{Solid}_{\mathbb Z}$ as a degree-$1$ derived
+  duality ($\widehat{\mathbb Z}^{\,*}\cong(\mathbb Q/\mathbb Z)[-1]$, phantom nonzero in degree $1$),
+  and is provably impossible in $\mathrm{LCA}$ ($Q^{\vee}_{\mathrm{LCA}}=0$ by the dense-subgroup
+  barrier); the signed law is honest in $D(\mathrm{Solid})$. See the [Resolved (Pass 77)] entry
+  below and `pass77-derived-solid-realization-check.json`.
 - **[Partially resolved (Pass 67)]** **Restricted-product adelic duality for the full spectrum.** Define the
   Loeb-Rosser coefficient for $S=\mathbb P$ as a restricted product of local objects rather than a
   bare product. Prove that the finite-adele coefficient is self-dual under a chosen additive
@@ -682,9 +688,11 @@
   $\mathbb Z/N\to\prod_{p\mid N}\mathbb Z/p^{v_p(N)}$ surjective. Pass 68 supplied the derived
   pro-Ab quotient, Pass 71 supplied the support-preserving finite-shadow formulation, Pass 72
   packaged both layers into $\mathcal H_\epsilon$, Pass 73 proved presentation-initiality, and
-  Pass 74 verified a faithful tagged pro-Ab realization, and Pass 75 internalized the tags as
-  projectors.  The remaining task is the full categorical duality proof or a natural realization of
-  those projectors in an established derived/pro exact category.
+  Pass 74 verified a faithful tagged pro-Ab realization, Pass 75 internalized the tags as
+  projectors, and Pass 76 realized those projectors geometrically on a finite-prime stratified
+  pro-site (clopen support strata + lcm prefix-stage truncations).  The remaining task is the full
+  categorical duality proof, i.e. lifting that finite stratified site to an established all-prime
+  derived/pro exact category and proving the signed law there.
 - **[Resolved at algebraic level (Pass 68)]** **Derived/pro quotient formalization of $\widehat{\mathbb Z}/\mathbb Z$.**
   Identify the exact category in which the levelwise-zero CRT quotients assemble into the nonzero
   Loeb-Rosser phantom. Candidate formalisms: (a) pro-abelian derived cokernel of
@@ -739,9 +747,129 @@
   projectors $e_p$ and lcm-stage projectors $q_n$, with $e_Se_T=e_{S\cap T}$ and
   $q_nq_m=q_{\min(n,m)}$; the projector-enriched realization is faithful on the checked generator
   families.  The companion exact-obstruction report records that an ordinary exact 1-category
-  target still cannot carry the $\varprojlim^1$ phantom as a finite exact-cone value.  **Remaining
-  open part:** realize $e_p$ and $q_n$ naturally in LCA sheaves, condensed/solid abelian groups, or
-  a derived exact pro-category.
+  target still cannot carry the $\varprojlim^1$ phantom as a finite exact-cone value.
+  **Stratified pro-site model (Pass 76):** $e_p$ and $q_n$ are realized naturally on the finite-prime
+  stratified pro-site $\mathrm{StratPro}_\epsilon(U,N)$ -- $e_p=(\cdot)\mathbf 1_{\{p\}}$ on clopen
+  prime strata, $q_n$ prefix truncations of the lcm tower -- through which $\rho_{\mathrm{proj}}$
+  factors as $\rho_{\mathrm{site}}$, faithfully on all five families (4160 clopen + 576 stage
+  relations verified).
+  **Resolved (Pass 77) -- two-faced answer.** The lift exists in $\mathrm{Solid}_{\mathbb Z}$ and is
+  impossible in $\mathrm{LCA}$, and these are two ends of one $[-1]$ shift. (Thm 77a, LCA no-go)
+  $\mathbb Z$ dense in $\widehat{\mathbb Z}$ makes $Q=\widehat{\mathbb Z}/\mathbb Z$ non-Hausdorff and
+  not an LCA object; its Pontryagin dual is the annihilator $\ker(\mathbb Q/\mathbb Z\hookrightarrow
+  \mathbb T)=0$, so the signed law collapses to $0=0$ in LCA. (Thm 77b, solid degree shift) In
+  $\mathrm{Solid}_{\mathbb Z}$, $R\underline{\mathrm{Hom}}(\mathbb Z_p,\mathbb Z)\cong
+  (\mathbb Q_p/\mathbb Z_p)[-1]$ and $\widehat{\mathbb Z}^{\,*}\cong(\mathbb Q/\mathbb Z)[-1]$, so the
+  phantom $\epsilon_{\mathbb P}$ is nonzero and sits in cohomological degree $1$; support projectors
+  upgrade to clopen idempotents of $\beta\mathbb P$ with $e_Se_T=e_{S\cap T}$ for all subsets.
+  (Thm 77c) $D_{\mathrm{res}}(\epsilon_{\mathbb P})=-\epsilon_{\mathbb P}^{\vee}$ is therefore a
+  genuine degree-$1$ derived equation, not realizable in degree $0$. Machine-verified
+  `artifacts/reports/pass77-derived-solid-realization-check.json` (PASS).
+- **[Resolved (Pass 78)]** **Solid reflexivity of the Loeb-Rosser phantom.** Is the canonical
+  evaluation $\eta_\epsilon:\epsilon\to\epsilon^{**}$ an isomorphism in $D(\mathrm{Solid}_{\mathbb Z})$
+  for $\epsilon=\widehat{\mathbb Z}/\mathbb Z=\varprojlim^1(N_n\mathbb Z)$, or does a
+  $\varprojlim^1$-of-$\varprojlim^1$ secondary phantom obstruct it, and what is the surviving sign?
+  **Resolution (Pass 78):** reflexivity holds. Dualizing $0\to\mathbb Z\to\widehat{\mathbb Z}\to
+  \epsilon\to0$ once gives $\operatorname{Hom}(\epsilon,\mathbb Z)=0$ and $D\epsilon\cong E[-1]$ with
+  $E\cong\mathbb Q$ (the extension of class the unit $1\in\widehat{\mathbb Z}^\times=
+  \operatorname{Ext}^1(\mathbb Q/\mathbb Z,\mathbb Z)$); dualizing again -- with $\mathbb Q/\mathbb Z=
+  \operatorname{colim}\mathbb Z/n$ dualized termwise to $\widehat{\mathbb Z}[-1]$ -- gives a connecting
+  map $d:\mathbb Z\hookrightarrow\widehat{\mathbb Z}$ (multiplication by the unit class), so
+  $\ker d=0$, $\operatorname{coker}d=\widehat{\mathbb Z}/\mathbb Z=\epsilon$, and $\epsilon^{**}\cong
+  \epsilon$ (Thms 78a/78b). **No secondary phantom**: a non-unit (zero-divisor) class -- e.g. the
+  idempotent $e_2$ -- would make $\operatorname{coker}=\widehat{\mathbb Z}/c\widehat{\mathbb Z}$ carry
+  extra $p$-torsion (machine-exhibited, non-iso from stage $n=3$); the unit class kills it. **Sign:**
+  finite shadows give $D^2(d_S)=d_S$ ($+1$), but the phantom's odd shift $[-1]$ contributes Koszul
+  sign $-1$, so $\eta_\epsilon=-\mathrm{id}$ = the antipode (Thm 78c). Machine-verified
+  `artifacts/reports/pass78-solid-reflexivity-phantom-check.json` (PASS).
+- **[Resolved (Pass 79), as a correction]** **(Anti)symmetry of the phantom's self-duality pairing.**
+  The Pass-78 phrasing "object-level $[-1]$-shift self-duality $\epsilon\cong D\epsilon[1]$" is
+  **false** and is corrected here: Pass 78 proved *reflexivity* $\epsilon^{**}\cong\epsilon$, not
+  self-duality; in fact $D\epsilon\cong\mathbb Q[-1]$ and $D\mathbb Q\cong\epsilon[-1]$, so $\epsilon$
+  and $\mathbb Q$ are a **dual pair** (as bare abelian groups $\epsilon\cong\mathbb A_f/\mathbb Q$ is a
+  $\mathbb Q$-vector space of dimension $2^{\aleph_0}$ while $\dim_{\mathbb Q}\mathbb Q=1$, so no shift
+  makes $D\epsilon\cong\epsilon[s]$) — **Thm 79a**. **Forced degree (Thm 79b):**
+  $\operatorname{Hom}_{D(\mathrm{Solid})}(\epsilon\otimes^{\blacksquare}\epsilon,\mathbb Z[m])
+  =\operatorname{Ext}^{m-1}_{\mathrm{Solid}}(\epsilon,\mathbb Q)$, which is $\mathbb Q$ for $m=2$ and
+  $0$ otherwise; the *proposed* target $\mathbb Z[-1]$ carries **only the zero pairing**, and the
+  unique nonzero self-pairing $b:\epsilon\otimes^{\blacksquare}\epsilon\to\mathbb Z[2]$ generates
+  $\operatorname{Ext}^1_{\mathrm{Solid}}(\epsilon,\mathbb Q)\cong\mathbb Q$ as the **finite-adele class
+  extension** $0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0$ (pushout of the defining sequence along
+  $\mathbb Z\hookrightarrow\mathbb Q$). **Type (Thm 79c):** $b$ is **alternating** (degree-$1$ swap
+  sign $(-1)^{1\cdot1}=-1$ — the Pass-78 antipode, so the symplectic intuition is correct in sign) but
+  **degenerate** (its adjoint $\epsilon\to\mathbb Q[1]$ is not an iso); the nondegenerate symplectic
+  object is the hyperbolic plane $H=\epsilon\oplus\mathbb Q$ with $\epsilon,\mathbb Q$ as complementary
+  Lagrangians and perfect cross-pairing $\epsilon\otimes^{\blacksquare}\mathbb Q\to\mathbb Z[1]$.
+  **Darboux no-go (Thm 79d):** the StratPro support idempotents $e_S$ ($S\subseteq\mathbb P$) act on
+  $\widehat{\mathbb Z}$ but descend to $\mathrm{End}_{\mathrm{Solid}}(\epsilon)$ **iff**
+  $S\in\{\varnothing,\mathbb P\}$ (else $e_S(1)=\mathbf 1_S\notin\mathbb Z$), so $\epsilon$ is
+  **prime-indecomposable** — the unit/diagonal class $1\in\widehat{\mathbb Z}^{\times}$ that drives
+  Pass-78 reflexivity is exactly the obstruction; the primes are **not** Darboux coordinates of
+  $\epsilon$. Machine-verified `artifacts/reports/pass79-symplectic-lagrangian-phantom-check.json`
+  (PASS; $2^6$-subset Darboux enumeration: exactly $2$ descend).
+- **[Resolved (Pass 80)]** **Metaplectic/Weil structure of the hyperbolic phantom plane.** Pass 79 shows
+  the nondegenerate symplectic object is $H=\epsilon\oplus\mathbb Q$ (Lagrangians $\epsilon,\mathbb Q$;
+  pairing $\langle\,,\rangle:\epsilon\otimes^{\blacksquare}\mathbb Q\to\mathbb Z[1]$).
+  **Resolution (Pass 80):** the answer is **no** to both $\mathrm{SL}_2$ and metaplectic descent, and
+  the obstruction is *not* the one the Pass-79 Next step guessed. A solid endomorphism of $H$ is a
+  $2\times2$ matrix with entries $a\in\mathrm{End}(\epsilon)$, $b\in\mathrm{Hom}(\mathbb Q,\epsilon)
+  =\epsilon$, $c\in\mathrm{Hom}(\epsilon,\mathbb Q)$, $d\in\mathrm{End}(\mathbb Q)=\mathbb Q$; the
+  Pass-79 computation $\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=H^0(\mathbb Q[-1])=0$ forces
+  $c\equiv0$, so $\mathrm{End}_{\mathrm{Solid}}(H)$ is **upper-triangular** (**Thm 80a**) and
+  $\mathrm{Sp}(H)$ is the solid **Borel** $B=\mathbb Q^{\times}\ltimes\epsilon$ — the affine "$ax+b$"
+  group / Schrödinger parabolic fixing the polarization $\epsilon$ — *not* $\mathrm{SL}_2$ and *not*
+  a nonabelian Heisenberg group ($U$ abelian) (**Thm 80b**). The Weyl flip $w$ (cross-polarization
+  Fourier transform) has no solid model. Metaplectic non-descent (**Thm 80c**): the finite-adele Weil
+  rep of $\mathrm{SL}_2(\mathbb A_f)$ does not act; at level $N$ the flip is the finite Fourier
+  $F_N$ ($F_N^4=I$, $|g_N|^2=N$, $w\in\mathrm{SL}_2(\mathbb Z/N)$), but its only candidate limit lives
+  in $\mathrm{Hom}(\epsilon,\mathbb Q)=0$. The **precise wall** is that one-sided vanishing — i.e.
+  $\epsilon$ is reflexive (Pass 78) but **not** $\otimes$-dualizable — and explicitly **not** the
+  degeneracy of $b$ (the shear-by-$b$ unipotent survives in $B$; only the inverse intertwiner is
+  absent). Machine-verified `artifacts/reports/pass80-metaplectic-borel-noflip-check.json` (PASS).
+- **[Resolved (Pass 81)]** **Automorphic shadow of the solid Borel.** Pass 80 gives $\mathrm{Sp}(H)=
+  B=\mathbb Q^{\times}\ltimes\epsilon$, an affine "$ax+b$" group with $\epsilon$ as its unique stable
+  polarization and no Weyl flip. Does $B$ carry the algebraic shadow of a *degenerate principal
+  series* / Eisenstein datum, and is the absent cross-polarization intertwiner
+  $\in\mathrm{Hom}(\epsilon,\mathbb Q)=0$ exactly the obstruction to a *self-dual functional equation*
+  relating the two polarizations? Concretely: realize the $B$-action on sections over $\epsilon$, and
+  decide whether "no Fourier flip" is the representation-theoretic face of the Pass-51 Löb (integral)
+  vs Rosser (non-integral-unit) dividing line one functor-level up. Record whether the
+  reflexive-but-not-dualizable distinction is a clean structural invariant separating $\epsilon$ from
+  genuinely dualizable phantoms.
+  **Resolution (Pass 81):** yes, but maximally degenerately. Since $\mathrm{Sp}(H)=B$, the principal
+  series $I(s)=\mathrm{Ind}_B^{\mathrm{Sp}(H)}\chi_s$ is just $\chi_s$, length $1$, with no Bruhat
+  big cell and no Weyl intertwiner. The opposite unipotent
+  $\bar U=\mathrm{Hom}_{\mathrm{Solid}}(\epsilon,\mathbb Q)=0$, so the $s\mapsto -s$ functional
+  equation has no nonzero solid operator. Finite levels still have Fourier intertwiners and Gauss
+  $c$-factors; the functional equation dies only in the solid limit. Machine-verified
+  `artifacts/reports/pass81-degenerate-principal-series-functional-equation-check.json` (PASS).
+- **[Resolved (Pass 82)]** **Whittaker model of the degenerate solid Borel.** Does the maximally
+  degenerate principal series $I(s)=\chi_s$ carry a nonzero Whittaker or generalized-Whittaker
+  functional for a nontrivial character of $U=\epsilon$, and is such a coefficient the carrier of
+  the Rosser torsor?
+  **Resolution:** no. Since $I(s)$ is trivial on $U$, $\mathrm{Hom}_U(I(s),\psi)$ is one-dimensional
+  for $\psi=1$ and zero for every nontrivial $\psi$. The only surviving functional is the constant
+  term; the Rosser torsor is the shear parameter $U=\epsilon$ itself, not a generic Whittaker
+  coefficient. Finite Fourier shadows of the constant $U_N$-action vanish for all nontrivial
+  additive characters. Machine-verified
+  `artifacts/reports/pass82-whittaker-archimedean-repair-check.json` (PASS).
+- **[Resolved / corrected (Pass 83)]** **Global solenoid versus finite phantom.** Adding the archimedean place gives
+  $\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\cong\mathbb A/\mathbb Q$ and an exact
+  comparison with $\epsilon=\widehat{\mathbb Z}/\mathbb Z$.  Pass 83 corrected the exact row:
+  $$0\to\widehat{\mathbb Z}\to\Sigma\to\mathbb R/\mathbb Z\to0$$
+  is the compact Hausdorff row, while
+  $$\mathbb R\to\Sigma\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to0$$
+  is the dense/non-Hausdorff quotient row.  The compact row does not split continuously because its
+  dual $0\to\mathbb Z\to\mathbb Q\to\mathbb Q/\mathbb Z\to0$ has no torsion-valued section into
+  $\mathbb Q$.  Global Fourier theory restricts to $\mathbb Q/\mathbb Z$ on the closed profinite
+  kernel, but only the trivial character descends to $\epsilon$ in degree $0$. Machine-verified
+  `artifacts/reports/pass83-solenoid-exact-triangle-correction-check.json` (PASS).
+- **[New (Pass 83)]** **Derived-solid boundary of the finite phantom.** Formulate the exact triangle
+  behind the dense quotient $\mathbb R\to\Sigma\to\epsilon$ in the solid/condensed derived category.
+  Decide whether the boundary quotient $\mathbb Q/\mathbb Z$ (or its shifted solid dual) is precisely
+  the replacement for the missing finite-prime Weyl flip $\epsilon\to\mathbb Q$, and whether the
+  Borel unipotent $U=\epsilon$ acts only on this quotient boundary rather than by continuous
+  translations on $\Sigma$.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -1,0 +1,1233 @@
+{
+  "pass_number": 76,
+  "title": "finite-prime stratified pro-site model for support and stage projectors",
+  "scope": "finite-window factorization of the Pass-75 projector-enriched realization through clopen support strata and pro-stage filtrations",
+  "candidate_target": {
+    "name": "StratPro_epsilon(U,N)",
+    "support_space": "finite discrete/Stone space on the checked prime universe U",
+    "support_projectors": "multiplication by characteristic functions of clopen strata",
+    "stage_projectors": "prefix truncations of the lcm pro-tower through N",
+    "limitation": "finite stratified pro-site model only; the all-prime LCA, condensed, or solid derived realization remains to be built"
+  },
+  "generator_count": 75,
+  "site_global_injectivity": {
+    "signature_key": "site_signature",
+    "generator_count": 75,
+    "unique_signature_count": 75,
+    "collision_count": 0,
+    "collisions": [],
+    "injective": true
+  },
+  "projector_global_injectivity": {
+    "signature_key": "projector_signature",
+    "generator_count": 75,
+    "unique_signature_count": 75,
+    "collision_count": 0,
+    "collisions": [],
+    "injective": true
+  },
+  "plain_global_injectivity": {
+    "signature_key": "plain_signature",
+    "generator_count": 75,
+    "unique_signature_count": 50,
+    "collision_count": 12,
+    "collisions": [
+      {
+        "signature": "('restriction', (1, 0, 0, 0, 0, 0), ())",
+        "names": [
+          "res_1_to_1",
+          "res_2_to_1",
+          "res_3_to_1",
+          "res_4_to_1",
+          "res_5_to_1",
+          "res_6_to_1"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 0, 0, 0, 0), ((-1, 1),))",
+        "names": [
+          "res_2_to_2",
+          "res_3_to_2",
+          "res_4_to_2",
+          "res_5_to_2",
+          "res_6_to_2"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 1, 0, 0, 0), ((-1, 1, 0), (-1, 0, 1)))",
+        "names": [
+          "res_3_to_3",
+          "res_4_to_3",
+          "res_5_to_3",
+          "res_6_to_3"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 1, 1, 0, 0), ((-1, 1, 0, 0), (-1, 0, 1, 0), (-1, 0, 0, 1)))",
+        "names": [
+          "res_4_to_4",
+          "res_5_to_4",
+          "res_6_to_4"
+        ]
+      },
+      {
+        "signature": "('restriction', (1, 1, 1, 1, 1, 0), ((-1, 1, 0, 0, 0), (-1, 0, 1, 0, 0), (-1, 0, 0, 1, 0), (-1, 0, 0, 0, 1)))",
+        "names": [
+          "res_5_to_5",
+          "res_6_to_5"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 60)",
+        "names": [
+          "K_5",
+          "K_6"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 2520)",
+        "names": [
+          "K_9",
+          "K_10"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 27720)",
+        "names": [
+          "K_11",
+          "K_12"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 360360)",
+        "names": [
+          "K_13",
+          "K_14",
+          "K_15"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 12252240)",
+        "names": [
+          "K_17",
+          "K_18"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 232792560)",
+        "names": [
+          "K_19",
+          "K_20",
+          "K_21",
+          "K_22"
+        ]
+      },
+      {
+        "signature": "('pro_stage', 5354228880)",
+        "names": [
+          "K_23",
+          "K_24"
+        ]
+      }
+    ],
+    "injective": false
+  },
+  "site_family_faithfulness": [
+    {
+      "signature_key": "site_signature",
+      "generator_count": 24,
+      "unique_signature_count": 24,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "derived_pro_lcm_tower",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "site_signature",
+      "generator_count": 18,
+      "unique_signature_count": 18,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "finite_conductor_windows",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "site_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "loeb_rosser_boundaries",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "site_signature",
+      "generator_count": 21,
+      "unique_signature_count": 21,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "restriction_functoriality",
+      "verdict": "PASS"
+    },
+    {
+      "signature_key": "site_signature",
+      "generator_count": 6,
+      "unique_signature_count": 6,
+      "collision_count": 0,
+      "collisions": [],
+      "injective": true,
+      "family": "signed_duality",
+      "verdict": "PASS"
+    }
+  ],
+  "clopen_boolean_relation_count": 4160,
+  "clopen_boolean_relations_all_pass": true,
+  "restriction_functoriality_checks": [
+    {
+      "small": 1,
+      "mid": 1,
+      "large": 1,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 1,
+      "large": 2,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 1,
+      "large": 3,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 1,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 1,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 1,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 2,
+      "large": 2,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 2,
+      "large": 3,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 2,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 2,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 2,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 3,
+      "large": 3,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 3,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 3,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 3,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 4,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 4,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 4,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 5,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 5,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 1,
+      "mid": 6,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 2,
+      "large": 2,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 2,
+      "large": 3,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 2,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 2,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 2,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 3,
+      "large": 3,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 3,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 3,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 3,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 4,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 4,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 4,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 5,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 5,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 2,
+      "mid": 6,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 3,
+      "large": 3,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 3,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 3,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 3,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 4,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 4,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 4,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 5,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 5,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 3,
+      "mid": 6,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "mid": 4,
+      "large": 4,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "mid": 4,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "mid": 4,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "mid": 5,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "mid": 5,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 4,
+      "mid": 6,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "mid": 5,
+      "large": 5,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "mid": 5,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 5,
+      "mid": 6,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    },
+    {
+      "small": 6,
+      "mid": 6,
+      "large": 6,
+      "open_inclusion_composes": true,
+      "boundary_target_restriction_composes": true,
+      "boundary_square_commutes": true,
+      "verdict": "PASS"
+    }
+  ],
+  "stage_filtration_relation_count": 576,
+  "stage_filtration_relations_all_pass": true,
+  "lcm_stage_separation": {
+    "repeated_plain_stage_pairs": [
+      {
+        "left": 5,
+        "right": 6,
+        "value": 60
+      },
+      {
+        "left": 9,
+        "right": 10,
+        "value": 2520
+      },
+      {
+        "left": 11,
+        "right": 12,
+        "value": 27720
+      },
+      {
+        "left": 13,
+        "right": 14,
+        "value": 360360
+      },
+      {
+        "left": 13,
+        "right": 15,
+        "value": 360360
+      },
+      {
+        "left": 14,
+        "right": 15,
+        "value": 360360
+      },
+      {
+        "left": 17,
+        "right": 18,
+        "value": 12252240
+      },
+      {
+        "left": 19,
+        "right": 20,
+        "value": 232792560
+      },
+      {
+        "left": 19,
+        "right": 21,
+        "value": 232792560
+      },
+      {
+        "left": 19,
+        "right": 22,
+        "value": 232792560
+      },
+      {
+        "left": 20,
+        "right": 21,
+        "value": 232792560
+      },
+      {
+        "left": 20,
+        "right": 22,
+        "value": 232792560
+      },
+      {
+        "left": 21,
+        "right": 22,
+        "value": 232792560
+      },
+      {
+        "left": 23,
+        "right": 24,
+        "value": 5354228880
+      }
+    ],
+    "repeated_plain_stage_pair_count": 14,
+    "all_repeated_plain_stages_separated_by_q": true
+  },
+  "factorization_checks": [
+    {
+      "name": "W_1,1",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_1,2",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_1,3",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_2,1",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_2,2",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_2,3",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_3,1",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_3,2",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_3,3",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_4,1",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_4,2",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_4,3",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_5,1",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_5,2",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_5,3",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_6,1",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_6,2",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "W_6,3",
+      "family": "finite_conductor_windows",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "d_1",
+      "family": "loeb_rosser_boundaries",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "signed_dual_1",
+      "family": "signed_duality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "d_2",
+      "family": "loeb_rosser_boundaries",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "signed_dual_2",
+      "family": "signed_duality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "d_3",
+      "family": "loeb_rosser_boundaries",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "signed_dual_3",
+      "family": "signed_duality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "d_4",
+      "family": "loeb_rosser_boundaries",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "signed_dual_4",
+      "family": "signed_duality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "d_5",
+      "family": "loeb_rosser_boundaries",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "signed_dual_5",
+      "family": "signed_duality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "d_6",
+      "family": "loeb_rosser_boundaries",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "signed_dual_6",
+      "family": "signed_duality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_1_to_1",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_2_to_1",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_3_to_1",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_4_to_1",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_5_to_1",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_6_to_1",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_2_to_2",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_3_to_2",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_4_to_2",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_5_to_2",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_6_to_2",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_3_to_3",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_4_to_3",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_5_to_3",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_6_to_3",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_4_to_4",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_5_to_4",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_6_to_4",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_5_to_5",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_6_to_5",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "res_6_to_6",
+      "family": "restriction_functoriality",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_1",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_2",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_3",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_4",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_5",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_6",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_7",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_8",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_9",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_10",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_11",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_12",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_13",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_14",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_15",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_16",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_17",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_18",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_19",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_20",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_21",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_22",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_23",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "K_24",
+      "family": "derived_pro_lcm_tower",
+      "site_canonical_equals_projector": true,
+      "verdict": "PASS"
+    }
+  ],
+  "conclusion": {
+    "rho_proj_factors_through_stratified_pro_site_on_checked_window": true,
+    "site_model_faithful_on_five_families": true,
+    "plain_target_still_not_faithful": true,
+    "clopen_and_stage_relations_valid": true,
+    "next_obligation": "upgrade StratPro_epsilon(U,N) to an all-prime derived LCA/condensed/solid exact target and prove the signed duality law there"
+  },
+  "overall": "PASS"
+}

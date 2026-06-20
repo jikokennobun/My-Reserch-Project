@@ -42,24 +42,30 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 82 -> 83: global solenoid versus finite-prime phantom)**
+- **(Pass 83 -> 84: derived-solid boundary of the finite-prime phantom)**
   Passes 80-82 settled the automorphic side of the solid phantom line.  Pass 80
   showed $\mathrm{Sp}(H)=B=\mathbb Q^{\times}\ltimes\epsilon$, not
   $\mathrm{SL}_2$; Pass 81 showed the principal series is maximally
   degenerate, $I(s)=\chi_s$, with no Weyl functional equation; Pass 82 showed
   nontrivial Whittaker functionals vanish because $I(s)$ is trivial on
-  $U=\epsilon$.  Adding the real place gives the full adelic solenoid
+  $U=\epsilon$.  Pass 83 corrected the archimedean comparison: adding the real
+  place gives the full adelic solenoid
   $$\Sigma=(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z\cong\mathbb A/\mathbb Q$$
-  with exact sequence
-  $$0\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to\Sigma\to\mathbb R/\mathbb Z\to0.$$
+  with compact row
+  $$0\to\widehat{\mathbb Z}\to\Sigma\to\mathbb R/\mathbb Z\to0,$$
+  while the finite phantom is the dense quotient
+  $$\mathbb R\to\Sigma\to\epsilon=\widehat{\mathbb Z}/\mathbb Z\to0.$$
+  The compact row is nonsplit, and global characters restrict to
+  $\mathbb Q/\mathbb Z$ on $\widehat{\mathbb Z}$ but descend to $\epsilon$ only
+  trivially in degree $0$.
   Open:
-  (i) decide whether $\Sigma\to\mathbb R/\mathbb Z$ splits in any
-  solid/condensed sense compatible with the Borel action;
-  (ii) determine whether global Fourier transform on $\Sigma$ induces only the
-  constant term on $\epsilon$, or a boundary class measuring the lost
-  finite-prime Weyl flip;
-  (iii) formulate the exact triangle comparing global adelic self-duality with
-  the finite-prime no-flip wall.
+  (i) formulate the derived/solid exact triangle behind
+  $\mathbb R\to\Sigma\to\epsilon$;
+  (ii) prove whether the boundary quotient $\mathbb Q/\mathbb Z$ (or its
+  shifted solid dual) is exactly the replacement for the missing finite-prime
+  Weyl flip $\epsilon\to\mathbb Q$;
+  (iii) decide whether the Borel unipotent $U=\epsilon$ acts only on the
+  quotient boundary, rather than by continuous translations on $\Sigma$.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

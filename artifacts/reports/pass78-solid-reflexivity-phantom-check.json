@@ -1,0 +1,190 @@
+{
+  "pass": 78,
+  "claims": {
+    "A_single_dual_degree1": {
+      "pass": true,
+      "statement": "D(eps)=E[-1], E ext of Q/Z by Z; dual tower of Q/Z is Mittag-Leffler with limit Zhat (Hom=0, Ext1=Z/N, transitions onto)",
+      "detail": [
+        {
+          "n": 1,
+          "N": 1,
+          "Hom": 0,
+          "Ext1_order": 1,
+          "dual_tower_surjective": true
+        },
+        {
+          "n": 2,
+          "N": 2,
+          "Hom": 0,
+          "Ext1_order": 2,
+          "dual_tower_surjective": true
+        },
+        {
+          "n": 3,
+          "N": 6,
+          "Hom": 0,
+          "Ext1_order": 6,
+          "dual_tower_surjective": true
+        },
+        {
+          "n": 4,
+          "N": 12,
+          "Hom": 0,
+          "Ext1_order": 12,
+          "dual_tower_surjective": true
+        },
+        {
+          "n": 5,
+          "N": 60,
+          "Hom": 0,
+          "Ext1_order": 60,
+          "dual_tower_surjective": true
+        },
+        {
+          "n": 6,
+          "N": 60,
+          "Hom": 0,
+          "Ext1_order": 60,
+          "dual_tower_surjective": true
+        }
+      ]
+    },
+    "B_double_dual_reflexive": {
+      "pass": true,
+      "statement": "D^2(eps)=eps: connecting map d:Z->Zhat = mult by UNIT class c=1, iso at every finite stage => coker tower = Zhat/Z = eps, no secondary lim^1-of-lim^1 phantom. Pathological idempotent class c=e2 DOES create a secondary phantom (stages non-iso), confirming the obstruction is real and avoided only by the unit class.",
+      "good_unit_all_stages_iso": true,
+      "pathological_e2_has_secondary_phantom": true,
+      "good_detail": [
+        {
+          "n": 1,
+          "N": 1,
+          "c": 0,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        },
+        {
+          "n": 2,
+          "N": 2,
+          "c": 1,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        },
+        {
+          "n": 3,
+          "N": 6,
+          "c": 1,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        },
+        {
+          "n": 4,
+          "N": 12,
+          "c": 1,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        },
+        {
+          "n": 5,
+          "N": 60,
+          "c": 1,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        },
+        {
+          "n": 6,
+          "N": 60,
+          "c": 1,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        }
+      ],
+      "patho_detail": [
+        {
+          "n": 1,
+          "N": 1,
+          "c": 0,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        },
+        {
+          "n": 2,
+          "N": 2,
+          "c": 1,
+          "ker": 1,
+          "coker": 1,
+          "iso": true
+        },
+        {
+          "n": 3,
+          "N": 6,
+          "c": 3,
+          "ker": 3,
+          "coker": 3,
+          "iso": false
+        },
+        {
+          "n": 4,
+          "N": 12,
+          "c": 9,
+          "ker": 3,
+          "coker": 3,
+          "iso": false
+        },
+        {
+          "n": 5,
+          "N": 60,
+          "c": 45,
+          "ker": 15,
+          "coker": 15,
+          "iso": false
+        },
+        {
+          "n": 6,
+          "N": 60,
+          "c": 45,
+          "ker": 15,
+          "coker": 15,
+          "iso": false
+        }
+      ]
+    },
+    "C_sign_antipode": {
+      "pass": true,
+      "statement": "Shadow antipode gives D^2(d_S)=+d_S (sign +1); the single odd shift [-1] of the degree-1 phantom contributes Koszul sign (-1)^(1)= -1; hence eta_eps = -id = the ANTIPODE (reflexive up to antipode sign, NOT its negation).",
+      "shadow_D2_is_plus_id": true,
+      "phantom_shift_degree": 1,
+      "koszul_sign": -1,
+      "eta_eps_sign": -1,
+      "detail": [
+        {
+          "|S|": 2,
+          "D2=+id_on_shadow": true
+        },
+        {
+          "|S|": 3,
+          "D2=+id_on_shadow": true
+        },
+        {
+          "|S|": 4,
+          "D2=+id_on_shadow": true
+        },
+        {
+          "|S|": 5,
+          "D2=+id_on_shadow": true
+        },
+        {
+          "|S|": 6,
+          "D2=+id_on_shadow": true
+        }
+      ]
+    }
+  },
+  "overall": true
+}

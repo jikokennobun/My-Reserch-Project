@@ -37,6 +37,54 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass83-solenoid-exact-triangle-correction-check.json`: verifies the Pass-83
+  correction to the adelic solenoid row. It checks the dual finite rows
+  $0\to\mathbb Z\xrightarrow{\times N}\mathbb Z\to\mathbb Z/N\to0$, the
+  nonsplitting obstruction, character restriction from global $\mathbb Q$ to
+  the profinite kernel, and the fact that only the trivial finite character
+  descends to $\epsilon=\widehat{\mathbb Z}/\mathbb Z$ in degree $0$.
+
+- `pass82-whittaker-archimedean-repair-check.json`: verifies the Pass-82
+  Whittaker/archimedean residue of the solid Borel. It checks that the
+  constant $U_N=\mathbb Z/N$ action has only a trivial Fourier coefficient,
+  that nontrivial $U$-Whittaker functionals on $I(s)=\chi_s$ vanish, and that
+  finite shadows motivating the archimedean repair are exact; Pass 83 corrects
+  the compact solenoid row by replacing the provisional kernel
+  $\widehat{\mathbb Z}/\mathbb Z$ with the closed kernel $\widehat{\mathbb Z}$.
+
+- `pass81-degenerate-principal-series-functional-equation-check.json`:
+  verifies the Pass-81 degenerate-principal-series wall. It checks finite flag
+  varieties and Fourier intertwiners, Gauss-sum $c$-factors, and the limit
+  obstruction $\mathrm{Hom}(\epsilon,\mathbb Q)=0$ that prevents a solid
+  functional equation.
+
+- `pass80-metaplectic-borel-noflip-check.json`: verifies the Pass-80
+  metaplectic no-descent result. It checks finite $\mathrm{SL}_2(\mathbb Z/N)$
+  Weyl flips and Fourier transforms, then records that the solid limit has
+  only the Borel $\mathbb Q^\times\ltimes\epsilon$ because the flip would live
+  in $\mathrm{Hom}(\epsilon,\mathbb Q)=0$.
+
+- `pass79-symplectic-lagrangian-phantom-check.json`: verifies the Pass-79
+  hyperbolic-plane correction. It checks that the unique nonzero
+  self-pairing of $\epsilon$ lands in degree $2$, that the finite-adele
+  extension generates $\mathrm{Ext}^1(\epsilon,\mathbb Q)$, and that the
+  resulting form is alternating but degenerate.
+
+- `pass78-solid-reflexivity-phantom-check.json`: verifies the Pass-78
+  reflexivity analysis. It checks the degree-one dual of $\epsilon$, the
+  double-dual recovery through the unit class, and the antipode sign from the
+  odd phantom shift.
+
+- `pass77-derived-solid-realization-check.json`: verifies the Pass-77
+  derived/solid realization correction. It records the LCA dual no-go,
+  the solid degree shift, and the signed boundary law
+  $D(d_S)=-d_S^T$.
+
+- `pass76-stratified-pro-site-realization-check.json`: verifies the Pass-76
+  stratified pro-site model. It checks clopen support projectors, pro-stage
+  truncation projectors, site factorization, and generator-family faithfulness
+  on the finite prime window.
+
 - `pass75-intrinsic-projector-realization-check.json`: verifies the Pass-75
   projector-enriched realization. It replaces explicit support/stage tags by
   Boolean support idempotents and lcm-stage projectors, checks generator-family
