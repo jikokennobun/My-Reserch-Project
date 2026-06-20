@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 91)
+
+- Decided the descent status of the restriction/span Borel torsor over the
+  finite prime-cover site.  For multi-prime supports, the global-Levi Borel
+  prestack $\mathbb Q^\times\ltimes P(S)$ is not a sheaf: it retains the
+  unipotent Rosser descent kernel
+  $\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}$.  Sheafification or
+  stackification gives the local Borel object
+  $(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$, losing
+  the Rosser horizontal kernel.  The hyperbolic shear action transports the
+  descent-kernel lifts but does not select a canonical zero section.  Verified
+  with `code/scripts/check-pass91.py` ->
+  `artifacts/reports/pass91-borel-torsor-descent-obstruction-check.json`
+  (PASS) and added a publication summary under `artifacts/pdf/`.
+
 ## 2026-06-21 (Autonomous discussion Pass 90)
 
 - Made the Pass-89 Borel-torsor theorem functorial over conductor/radical

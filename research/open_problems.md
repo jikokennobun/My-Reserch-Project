@@ -960,13 +960,30 @@
   strict marked stabilizer.  Machine-verified
   `artifacts/reports/pass90-conductor-functorial-borel-torsors-check.json`
   (PASS).
-- **[New (Pass 90)]** **Descent/stackification of the Borel torsor.** Decide
+- **[Resolved (Pass 91)]** **Descent/stackification of the Borel torsor.** Decide
   whether the restriction/span Borel-torsor package over the finite prime-cover
   site is a sheaf, a stack of torsors, or an obstruction object like the
   Pass-61 phantom presheaf.  Compute the descent defect for the cover by
   singleton primes, identify whether the Borel shear action kills or preserves
   the $\mathbb Z^S/\Delta\mathbb Z$ diagonal defect, and state the exact
   stackification or obstruction theorem.
+  **Resolution:** on the finite singleton-prime cover site, the global-Levi
+  Borel prestack $\mathbb Q^\times\ltimes P(S)$ is not a sheaf for
+  $|S|\ge2$.  It retains the unipotent Rosser descent kernel
+  $\mathbb Z^S/\Delta\mathbb Z$, while sheafification/stackification gives the
+  local Borel object
+  $(\mathbb Q^\times)^S\ltimes\prod_{p\in S}(\mathbb Z_p/\mathbb Z)$.  The
+  hyperbolic shear action transports the descent-kernel lifts but does not
+  choose a canonical zero section, so it preserves rather than kills the
+  Rosser defect.  Machine-verified
+  `artifacts/reports/pass91-borel-torsor-descent-obstruction-check.json`
+  (PASS).
+- **[New (Pass 91)]** **Zariski/generic Borel descent.** Relocate the Borel
+  descent obstruction from the discrete singleton-prime cover site to the
+  Zariski/generic-point site of Pass 63.  Define the Borel analogue of the
+  $j_!\mathbb Z$ ghost line, decide whether the global-Levi Borel prestack has
+  a genuine $H^1(j_!)$ obstruction there, and compare the resulting class with
+  the finite-adele extension line and hyperbolic shear orbit.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -37,6 +37,13 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass91-borel-torsor-descent-obstruction-check.json`: verifies the Pass-91
+  finite certificate for the Borel torsor descent obstruction. It checks the
+  rank $|S|-1$ horizontal descent defect, finite diagonal-kernel sizes
+  $N^{|S|-1}$, failure of the global-Levi Borel to be a sheaf on multi-prime
+  supports, local-Levi sheafification in a finite proxy, and that shear
+  transports but does not kill descent-kernel lifts.
+
 - `pass90-conductor-functorial-borel-torsors-check.json`: verifies the
   Pass-90 finite certificate for conductor-functorial Borel torsors. It checks
   radical support invariance, confirms that coordinate projection descends on

@@ -6,8 +6,25 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 91
-- Last pass note: Pass 90 (2026-06-21) made the Pass-89 Borel-torsor theorem
+- Current pass: 92
+- Last pass note: Pass 91 (2026-06-21) decided the descent status of the
+  restriction/span Borel torsor on the finite prime-cover site.  The
+  unipotent phantom presheaf
+  $$P(S)=(\prod_{p\in S}\mathbb Z_p)/\Delta\mathbb Z$$
+  is not separated for multi-prime supports: its singleton-prime descent
+  kernel is the horizontal Rosser defect
+  $$\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.$$
+  Adding the global-Levi Borel does not turn it into a sheaf.  The global
+  Borel prestack $B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes P(S)$ still
+  carries the same unipotent descent kernel, and its constant Levi
+  $\mathbb Q^\times$ sheafifies to local Levi data $(\mathbb Q^\times)^S$.
+  The hyperbolic shear action transports the descent-kernel lifts but does not
+  choose a canonical zero section, so it preserves rather than kills the
+  Rosser defect.  Stackification/sheafification gives the local Borel sheaf
+  with stalkwise unipotents and local Levi data; the Rosser class is precisely
+  the kernel lost in that process.  Machine-verified `check-pass91.py` ->
+  `pass91-borel-torsor-descent-obstruction-check.json` PASS. Counter 91->92.
+- Earlier note: Pass 90 (2026-06-21) made the Pass-89 Borel-torsor theorem
   functorial over conductor/radical supports, with a direction correction.
   For squarefree supports $S\subseteq T$, coordinate projection descends
   through the diagonal quotient and gives the canonical restriction
@@ -10316,3 +10333,103 @@ Repository updates this pass:
 Next step:
 Pass 91 should decide whether the restriction/span Borel-torsor package is a
 sheaf, stack, or descent-obstruction object over the finite prime-cover site.
+
+---
+
+### Pass 91 - 2026-06-21 JST
+
+Focus:
+Decide whether the restriction/span Borel torsor is a sheaf, stack, or
+descent-obstruction object over the finite prime-cover site.
+
+Proposer:
+The object is not a sheaf on multi-prime supports.  Let
+$$
+P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z.
+$$
+By Pass 61, the singleton-prime descent map
+$$
+P(S)\to\prod_{p\in S}P(\{p\})
+$$
+has kernel
+$$
+K_S=\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.
+$$
+This is exactly the horizontal Rosser defect.  Passing from the unipotent
+phantom to the Borel does not remove it.  The global-Levi Borel prestack
+$$
+B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes P(S)
+$$
+still has the unipotent kernel $K_S$, while its constant Levi
+$\mathbb Q^\times$ sheafifies on the singleton cover to local Levi data
+$(\mathbb Q^\times)^S$.
+
+Thus the Borel object is best described as a prestack or descent-obstruction
+object.  Its stackification/sheafification is the local Borel sheaf
+$$
+B^\#(S)=(\mathbb Q^\times)^S\ltimes
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).
+$$
+The map $B^{\mathrm{glob}}\to B^\#$ forgets the Rosser horizontal kernel and
+localizes the Levi.  The hyperbolic shear action by $P(S)$ acts transitively on
+lifts with the same local data, but it does not choose a canonical lift.
+Therefore the shear transports the descent defect; it does not kill it.
+
+Skeptic:
+Do not say "stack" too quickly.  A stack of torsors may absorb automorphism
+data, but the raw group-valued Borel package is not even separated for
+$|S|\ge2$.  Its stackification is a different, local object.  The Rosser class
+is precisely what is lost by that stackification, not a proof that the original
+prestack satisfies descent.  This matches Pass 61/62: sheafification and
+cosheafification on the discrete prime site collapse to the local Loeb object,
+while the Rosser phantom remains presheaf-level descent failure.
+
+Formalist:
+> **Theorem 91a (Borel non-separatedness).** For $|S|\ge2$, the global-Levi
+> Borel prestack $B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes P(S)$ is not a
+> sheaf on the singleton-prime cover.  Its unipotent descent kernel is
+> $K_S=\mathbb Z^S/\Delta\mathbb Z$.
+>
+> **Theorem 91b (local Borel stackification).** The sheaf/stackification of
+> the discrete-site Borel package is
+> $$B^\#(S)=(\mathbb Q^\times)^S\ltimes
+> \prod_{p\in S}(\mathbb Z_p/\mathbb Z).$$
+> It is the Loeb-local object, not the Rosser phantom.
+>
+> **Theorem 91c (shear transports, not kills).** The unipotent shear action is
+> simply transitive on the finite shadows of the descent-kernel lifts, but no
+> canonical zero section is selected.  Hence the Rosser defect is preserved as
+> the kernel of stackification.
+>
+> **Corollary 91d.** On the finite discrete prime-cover site, the Borel torsor
+> is a prestack/descent-obstruction object.  The next genuinely geometric
+> home for the Rosser class must use the Zariski/generic-point relocation of
+> Pass 63.
+
+Machine-verified `code/scripts/check-pass91.py` ->
+`artifacts/reports/pass91-borel-torsor-descent-obstruction-check.json`
+(overall PASS): the checker verifies that the horizontal descent rank is
+$|S|-1$, finite diagonal quotient kernels have size $N^{|S|-1}$, the
+global-Levi Borel is a sheaf only for one-prime supports, local Levi
+sheafification contributes $|G|^{|S|-1}$ independent finite Levi choices in a
+finite proxy, and the shear action transports but does not kill the kernel
+lifts.
+
+Archivist:
+Repository updates this pass:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-91 entry; State counter
+  $91\to92$.
+- `records/logs/research-log.md`: Pass-91 entry.
+- `research/definitions.md`: added the Borel descent-obstruction terminology.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-91 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`: marked
+  the discrete-site descent/stackification task resolved and retargeted the
+  next pass to Zariski/generic relocation of the Borel descent obstruction.
+- `code/scripts/check-pass91.py`,
+  `artifacts/reports/pass91-borel-torsor-descent-obstruction-check.json`: new.
+- `artifacts/pdf/borel-torsor-descent-obstruction-2026-06-21.md`: publication
+  summary source.
+
+Next step:
+Pass 92 should relocate the Borel descent obstruction to the Zariski/generic
+prime site and compare it with the Pass-63 $j_!$ ghost line.

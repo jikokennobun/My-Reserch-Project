@@ -1,0 +1,861 @@
+{
+  "pass": 91,
+  "title": "Borel torsor descent obstruction",
+  "A_phantom_descent_defect": {
+    "statement": "The singleton-prime descent defect of P(S) is the free group Z^S/Delta Z of rank |S|-1; P is separated only on one-prime supports.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "horizontal_rank": 0,
+        "separated_for_phantom_presheaf": true,
+        "sheafification_kernel_rank": 0,
+        "rosser_defect_present": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "horizontal_rank": 1,
+        "separated_for_phantom_presheaf": false,
+        "sheafification_kernel_rank": 1,
+        "rosser_defect_present": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "horizontal_rank": 1,
+        "separated_for_phantom_presheaf": false,
+        "sheafification_kernel_rank": 1,
+        "rosser_defect_present": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "horizontal_rank": 2,
+        "separated_for_phantom_presheaf": false,
+        "sheafification_kernel_rank": 2,
+        "rosser_defect_present": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "horizontal_rank": 2,
+        "separated_for_phantom_presheaf": false,
+        "sheafification_kernel_rank": 2,
+        "rosser_defect_present": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "horizontal_rank": 3,
+        "separated_for_phantom_presheaf": false,
+        "sheafification_kernel_rank": 3,
+        "rosser_defect_present": true
+      }
+    ],
+    "descent_rank_ok": true,
+    "nontrivial_defect_for_multi_prime": true
+  },
+  "B_finite_diagonal_kernel": {
+    "statement": "At finite level N, the diagonal quotient proxy has kernel size N^(|S|-1), matching the rank |S|-1 descent defect.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "level_n": 2,
+        "diagonal_domain_size": 2,
+        "product_size": 2,
+        "finite_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "level_n": 3,
+        "diagonal_domain_size": 3,
+        "product_size": 3,
+        "finite_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "level_n": 4,
+        "diagonal_domain_size": 4,
+        "product_size": 4,
+        "finite_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "level_n": 6,
+        "diagonal_domain_size": 6,
+        "product_size": 6,
+        "finite_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "level_n": 8,
+        "diagonal_domain_size": 8,
+        "product_size": 8,
+        "finite_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2
+        ],
+        "level_n": 12,
+        "diagonal_domain_size": 12,
+        "product_size": 12,
+        "finite_kernel_size": 1,
+        "expected_kernel_size": 1,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 2,
+        "diagonal_domain_size": 2,
+        "product_size": 4,
+        "finite_kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 3,
+        "diagonal_domain_size": 3,
+        "product_size": 9,
+        "finite_kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 4,
+        "diagonal_domain_size": 4,
+        "product_size": 16,
+        "finite_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 6,
+        "diagonal_domain_size": 6,
+        "product_size": 36,
+        "finite_kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 8,
+        "diagonal_domain_size": 8,
+        "product_size": 64,
+        "finite_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "level_n": 12,
+        "diagonal_domain_size": 12,
+        "product_size": 144,
+        "finite_kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "level_n": 2,
+        "diagonal_domain_size": 2,
+        "product_size": 4,
+        "finite_kernel_size": 2,
+        "expected_kernel_size": 2,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "level_n": 3,
+        "diagonal_domain_size": 3,
+        "product_size": 9,
+        "finite_kernel_size": 3,
+        "expected_kernel_size": 3,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "level_n": 4,
+        "diagonal_domain_size": 4,
+        "product_size": 16,
+        "finite_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "level_n": 6,
+        "diagonal_domain_size": 6,
+        "product_size": 36,
+        "finite_kernel_size": 6,
+        "expected_kernel_size": 6,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "level_n": 8,
+        "diagonal_domain_size": 8,
+        "product_size": 64,
+        "finite_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "level_n": 12,
+        "diagonal_domain_size": 12,
+        "product_size": 144,
+        "finite_kernel_size": 12,
+        "expected_kernel_size": 12,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 2,
+        "diagonal_domain_size": 2,
+        "product_size": 8,
+        "finite_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 3,
+        "diagonal_domain_size": 3,
+        "product_size": 27,
+        "finite_kernel_size": 9,
+        "expected_kernel_size": 9,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 4,
+        "diagonal_domain_size": 4,
+        "product_size": 64,
+        "finite_kernel_size": 16,
+        "expected_kernel_size": 16,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 6,
+        "diagonal_domain_size": 6,
+        "product_size": 216,
+        "finite_kernel_size": 36,
+        "expected_kernel_size": 36,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 8,
+        "diagonal_domain_size": 8,
+        "product_size": 512,
+        "finite_kernel_size": 64,
+        "expected_kernel_size": 64,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "level_n": 12,
+        "diagonal_domain_size": 12,
+        "product_size": 1728,
+        "finite_kernel_size": 144,
+        "expected_kernel_size": 144,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "level_n": 2,
+        "diagonal_domain_size": 2,
+        "product_size": 8,
+        "finite_kernel_size": 4,
+        "expected_kernel_size": 4,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "level_n": 3,
+        "diagonal_domain_size": 3,
+        "product_size": 27,
+        "finite_kernel_size": 9,
+        "expected_kernel_size": 9,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "level_n": 4,
+        "diagonal_domain_size": 4,
+        "product_size": 64,
+        "finite_kernel_size": 16,
+        "expected_kernel_size": 16,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "level_n": 6,
+        "diagonal_domain_size": 6,
+        "product_size": 216,
+        "finite_kernel_size": 36,
+        "expected_kernel_size": 36,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "level_n": 8,
+        "diagonal_domain_size": 8,
+        "product_size": 512,
+        "finite_kernel_size": 64,
+        "expected_kernel_size": 64,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "level_n": 12,
+        "diagonal_domain_size": 12,
+        "product_size": 1728,
+        "finite_kernel_size": 144,
+        "expected_kernel_size": 144,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 2,
+        "diagonal_domain_size": 2,
+        "product_size": 16,
+        "finite_kernel_size": 8,
+        "expected_kernel_size": 8,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 3,
+        "diagonal_domain_size": 3,
+        "product_size": 81,
+        "finite_kernel_size": 27,
+        "expected_kernel_size": 27,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 4,
+        "diagonal_domain_size": 4,
+        "product_size": 256,
+        "finite_kernel_size": 64,
+        "expected_kernel_size": 64,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 6,
+        "diagonal_domain_size": 6,
+        "product_size": 1296,
+        "finite_kernel_size": 216,
+        "expected_kernel_size": 216,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 8,
+        "diagonal_domain_size": 8,
+        "product_size": 4096,
+        "finite_kernel_size": 512,
+        "expected_kernel_size": 512,
+        "kernel_matches_expected": true
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "level_n": 12,
+        "diagonal_domain_size": 12,
+        "product_size": 20736,
+        "finite_kernel_size": 1728,
+        "expected_kernel_size": 1728,
+        "kernel_matches_expected": true
+      }
+    ],
+    "finite_kernels_ok": true
+  },
+  "C_global_borel_vs_stackification": {
+    "statement": "The global-Levi Borel prestack is not a sheaf on multi-prime supports. Stackification/local sheafification replaces the constant global Levi by local Levi data and quotients the unipotent Rosser defect.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "global_levi_proxy_order": 4,
+        "local_levi_proxy_order": 4,
+        "local_levi_quotient_size": 1,
+        "unipotent_kernel_rank": 0,
+        "global_borel_is_sheaf": true,
+        "stackification_target": "local Levi sheaf G^S semidirect stalkwise unipotent sheaf L(S)"
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "global_levi_proxy_order": 4,
+        "local_levi_proxy_order": 16,
+        "local_levi_quotient_size": 4,
+        "unipotent_kernel_rank": 1,
+        "global_borel_is_sheaf": false,
+        "stackification_target": "local Levi sheaf G^S semidirect stalkwise unipotent sheaf L(S)"
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "global_levi_proxy_order": 4,
+        "local_levi_proxy_order": 16,
+        "local_levi_quotient_size": 4,
+        "unipotent_kernel_rank": 1,
+        "global_borel_is_sheaf": false,
+        "stackification_target": "local Levi sheaf G^S semidirect stalkwise unipotent sheaf L(S)"
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "global_levi_proxy_order": 4,
+        "local_levi_proxy_order": 64,
+        "local_levi_quotient_size": 16,
+        "unipotent_kernel_rank": 2,
+        "global_borel_is_sheaf": false,
+        "stackification_target": "local Levi sheaf G^S semidirect stalkwise unipotent sheaf L(S)"
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "global_levi_proxy_order": 4,
+        "local_levi_proxy_order": 64,
+        "local_levi_quotient_size": 16,
+        "unipotent_kernel_rank": 2,
+        "global_borel_is_sheaf": false,
+        "stackification_target": "local Levi sheaf G^S semidirect stalkwise unipotent sheaf L(S)"
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "global_levi_proxy_order": 4,
+        "local_levi_proxy_order": 256,
+        "local_levi_quotient_size": 64,
+        "unipotent_kernel_rank": 3,
+        "global_borel_is_sheaf": false,
+        "stackification_target": "local Levi sheaf G^S semidirect stalkwise unipotent sheaf L(S)"
+      }
+    ],
+    "global_borel_sheaf_criterion_ok": true,
+    "levi_localization_ok": true
+  },
+  "D_shear_action_on_defect": {
+    "statement": "The hyperbolic Borel shear action transports the descent-kernel lifts transitively in finite shadows, but does not provide a canonical zero section and therefore does not kill the defect.",
+    "rows": [
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "finite_level_n": 2,
+        "descent_lift_count": 1,
+        "shear_orbit_size": 1,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "finite_level_n": 6,
+        "descent_lift_count": 1,
+        "shear_orbit_size": 1,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2
+        ],
+        "support_size": 1,
+        "finite_level_n": 12,
+        "descent_lift_count": 1,
+        "shear_orbit_size": 1,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "finite_level_n": 2,
+        "descent_lift_count": 2,
+        "shear_orbit_size": 2,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "finite_level_n": 6,
+        "descent_lift_count": 6,
+        "shear_orbit_size": 6,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "support_size": 2,
+        "finite_level_n": 12,
+        "descent_lift_count": 12,
+        "shear_orbit_size": 12,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "finite_level_n": 2,
+        "descent_lift_count": 2,
+        "shear_orbit_size": 2,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "finite_level_n": 6,
+        "descent_lift_count": 6,
+        "shear_orbit_size": 6,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          5
+        ],
+        "support_size": 2,
+        "finite_level_n": 12,
+        "descent_lift_count": 12,
+        "shear_orbit_size": 12,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "finite_level_n": 2,
+        "descent_lift_count": 4,
+        "shear_orbit_size": 4,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "finite_level_n": 6,
+        "descent_lift_count": 36,
+        "shear_orbit_size": 36,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "support_size": 3,
+        "finite_level_n": 12,
+        "descent_lift_count": 144,
+        "shear_orbit_size": 144,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "finite_level_n": 2,
+        "descent_lift_count": 4,
+        "shear_orbit_size": 4,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "finite_level_n": 6,
+        "descent_lift_count": 36,
+        "shear_orbit_size": 36,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          3,
+          5,
+          7
+        ],
+        "support_size": 3,
+        "finite_level_n": 12,
+        "descent_lift_count": 144,
+        "shear_orbit_size": 144,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "finite_level_n": 2,
+        "descent_lift_count": 8,
+        "shear_orbit_size": 8,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "finite_level_n": 6,
+        "descent_lift_count": 216,
+        "shear_orbit_size": 216,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      },
+      {
+        "support": [
+          2,
+          5,
+          7,
+          11
+        ],
+        "support_size": 4,
+        "finite_level_n": 12,
+        "descent_lift_count": 1728,
+        "shear_orbit_size": 1728,
+        "shear_transports_defect": true,
+        "shear_kills_defect": false
+      }
+    ],
+    "shear_transports_not_kills": true
+  },
+  "conclusion": {
+    "classification": "The Pass-90 restriction/span Borel-torsor package is a prestack/descent-obstruction object, not a sheaf on multi-prime supports.",
+    "stackification": "Its stackification or sheafification is the local Borel sheaf with local Levi data and stalkwise unipotents; the Rosser class is precisely the kernel lost in that process.",
+    "next_task": "Relocate the Borel descent obstruction to the Zariski/generic prime site and compare it with the Pass-63 j_! ghost line."
+  },
+  "overall": "PASS"
+}

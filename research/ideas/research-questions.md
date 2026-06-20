@@ -42,25 +42,25 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 90 -> 91: descent/stackification of the Borel torsor)**
-  Pass 90 resolved the conductor/radical functoriality of the Pass-89
-  Borel-torsor theorem with a direction correction.  For finite supports
-  $S\subseteq T$, projection descends to a canonical restriction
-  $$P(T)\to P(S),\qquad
-  P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z,$$
-  while zero-insertion $P(S)\to P(T)$ does not descend when new primes are
-  added.  Thus support functoriality is contravariant by restriction;
-  enlargement is a span, pullback, or finite-conductor choice.  Finite Borel
-  shadows $(\mathbb Z/N)^\times\ltimes\mathbb Z/N$ reduce along conductor
-  divisibility, preserving the unit class and strict marked stabilizer.
+- **(Pass 91 -> 92: Zariski/generic Borel descent)**
+  Pass 91 resolved the discrete-site descent status of the Borel torsor.  On
+  the finite singleton-prime cover site, the global-Levi Borel prestack
+  $$B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes
+  \left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z$$
+  is not a sheaf for $|S|\ge2$: it retains the unipotent Rosser descent kernel
+  $\mathbb Z^S/\Delta\mathbb Z$.  Sheafification/stackification gives the
+  local Loeb object
+  $$(\mathbb Q^\times)^S\ltimes
+  \prod_{p\in S}(\mathbb Z_p/\mathbb Z),$$
+  losing the horizontal Rosser kernel.  The hyperbolic shear action transports
+  the descent-kernel lifts but does not choose a canonical zero section.
   Open:
-  (i) decide whether the restriction/span Borel-torsor package is a sheaf, a
-  stack of torsors, a prestack, or an obstruction object over the finite
-  prime-cover site;
-  (ii) compute the descent defect for the singleton-prime cover and compare it
-  with the Pass-61 defect $\mathbb Z^S/\Delta\mathbb Z$;
-  (iii) determine whether the hyperbolic Borel shear action kills, transports,
-  or preserves this diagonal descent defect.
+  (i) relocate this Borel descent obstruction to the Zariski/generic-point
+  site used in Pass 63;
+  (ii) define the Borel analogue of the $j_!\mathbb Z$ ghost line and compute
+  its $H^1$ class;
+  (iii) compare the Zariski/generic Borel class with the finite-adele extension
+  line and the hyperbolic Borel shear orbit.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

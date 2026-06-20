@@ -1953,3 +1953,37 @@ are functorial by reduction along $N\mid N'$.  The reduction
 $B_{N'}\to B_N$ preserves the unit class $1\bmod N$ and the singleton strict
 marked stabilizer.  Thus the Pass-89 Borel-torsor theorem is natural as a
 restriction/span object over the finite prime-support lattice.
+
+## Borel descent obstruction on the finite prime-cover site (Pass 91)
+
+On the finite singleton-prime cover site, the unipotent phantom presheaf
+$$
+P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z
+$$
+is not separated for $|S|\ge2$.  The descent map to singleton stalks has
+kernel
+$$
+K_S=\mathbb Z^S/\Delta\mathbb Z\cong\mathbb Z^{|S|-1}.
+$$
+This is the horizontal Rosser descent defect.
+
+The global-Levi Borel prestack is
+$$
+B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes P(S).
+$$
+It is not a sheaf for multi-prime $S$: the unipotent kernel $K_S$ remains, and
+the constant global Levi $\mathbb Q^\times$ sheafifies to local Levi data.
+The local Borel sheafification/stackification is
+$$
+B^\#(S)=(\mathbb Q^\times)^S\ltimes
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).
+$$
+The morphism $B^{\mathrm{glob}}\to B^\#$ forgets the Rosser horizontal kernel
+and replaces the global Levi by independent local Levi factors.
+
+The hyperbolic Borel shear action does not remove this defect.  It acts
+transitively on the set of global lifts with the same local data, but it does
+not choose a canonical zero lift.  Therefore the shear **transports** the
+Rosser descent kernel rather than killing it.  On the discrete prime-cover
+site, the Borel torsor is consequently a prestack/descent-obstruction object,
+not a genuine sheaf; its sheafification is the local Loeb object.

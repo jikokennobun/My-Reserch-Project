@@ -4858,3 +4858,79 @@ finite Borel reductions along conductor divisibility.
 **Limit of the pass.**  The next task is to decide the correct descent
 language for this object: sheaf, stack, prestack, or descent-obstruction
 object over the finite prime-cover site.
+
+## Pass 91 - Borel torsor descent obstruction
+
+Pass 91 answers the descent-language question from Pass 90.  On the finite
+singleton-prime cover site, the Borel package is not a sheaf on multi-prime
+supports.  It is a prestack/descent-obstruction object whose stackification is
+the local Loeb object.
+
+Let
+$$
+P(S)=\left(\prod_{p\in S}\mathbb Z_p\right)/\Delta\mathbb Z.
+$$
+Pass 61 already computed the singleton-cover descent defect:
+$$
+\ker\left(P(S)\to\prod_{p\in S}P(\{p\})\right)
+\cong \mathbb Z^S/\Delta\mathbb Z
+\cong \mathbb Z^{|S|-1}.
+$$
+This is the horizontal Rosser defect.  Adding the Borel does not eliminate it.
+The global-Levi Borel prestack is
+$$
+B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes P(S).
+$$
+It has the same unipotent descent kernel, and its constant Levi
+$\mathbb Q^\times$ sheafifies on the singleton cover to independent local
+Levi factors.
+
+Thus the sheafification or stackification is the local Borel object
+$$
+B^\#(S)=(\mathbb Q^\times)^S\ltimes
+\prod_{p\in S}(\mathbb Z_p/\mathbb Z).
+$$
+This is the Loeb-local object: it keeps stalkwise ghosts and local scalars but
+forgets the horizontal Rosser kernel.  The map
+$B^{\mathrm{glob}}\to B^\#$ therefore loses exactly the obstruction that made
+the Rosser torsor nonlocal.
+
+The hyperbolic shear action clarifies, rather than removes, the defect.  In
+finite shadows the kernel has size $N^{|S|-1}$, and the unipotent shear orbit
+on lifts with fixed local data has the same size.  So shear acts transitively
+on choices of global lift.  But transitivity is not a canonical section:
+without choosing a basepoint, the action transports the Rosser defect instead
+of killing it.
+
+> **Theorem 91a (Borel non-separatedness).**
+> For $|S|\ge2$, the global-Levi Borel prestack
+> $B^{\mathrm{glob}}(S)=\mathbb Q^\times\ltimes P(S)$ is not a sheaf on the
+> singleton-prime cover.  Its unipotent descent kernel is
+> $\mathbb Z^S/\Delta\mathbb Z$.
+>
+> **Theorem 91b (local Borel sheafification).**
+> The sheafification/stackification on the discrete prime-cover site is
+> $$B^\#(S)=(\mathbb Q^\times)^S\ltimes
+> \prod_{p\in S}(\mathbb Z_p/\mathbb Z).$$
+> It is the local Loeb object, not the global Rosser phantom.
+>
+> **Theorem 91c (shear transports the defect).**
+> The unipotent shear action is simply transitive on finite descent-kernel
+> lift sets, but it does not choose a canonical zero section.  Hence it
+> preserves the Rosser defect as the kernel of stackification.
+>
+> **Corollary 91d (discrete-site verdict).**
+> On the finite discrete prime-cover site, the Borel torsor is a
+> prestack/descent-obstruction object.  A geometric home for the Rosser class
+> must use the Zariski/generic-point relocation of Pass 63.
+
+**Machine verification** (`code/scripts/check-pass91.py` ->
+`artifacts/reports/pass91-borel-torsor-descent-obstruction-check.json`,
+PASS): the checker verifies descent rank $|S|-1$, finite diagonal-kernel size
+$N^{|S|-1}$, failure of the global Borel to be a sheaf for multi-prime
+supports, local-Levi sheafification in a finite constant-group proxy, and the
+fact that shear transports but does not kill descent-kernel lifts.
+
+**Limit of the pass.**  The next task is to move from the disconnected
+finite prime-cover site to the Zariski/generic-point site and compare the
+Borel descent obstruction with the Pass-63 $j_!$ ghost line.
