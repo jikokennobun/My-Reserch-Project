@@ -49,7 +49,7 @@ DOC_MARKERS = {
         "antitone-dual-lower-cut-v0",
         "antitone-dual-lower-cut-v1",
         "principal but unreflected",
-        "G2-holding variants",
+        "Pass 112 G2/A2 Boundary",
     ],
 }
 
@@ -219,9 +219,9 @@ def main() -> None:
         },
         "E_next_problem": {
             "statement": (
-                "The bare non-lattice reflection counterexample is verified, "
-                "but it is neither G2 nor FG2; the next search should add APS "
-                "axiom-package checks and look for G2-holding variants."
+                "The bare non-lattice reflection counterexample is verified. "
+                "Later passes may strengthen this audit by adding APS "
+                "axiom-package, G2, and completion-stability checks."
             )
         },
         "checks": checks,

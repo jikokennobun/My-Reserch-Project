@@ -49,6 +49,7 @@ For each accepted model, compute:
 - whether the selected extension rule preserves principal cuts. For v1, the
   expected target is the dual principal cut
   $i_{L^{op}}(\boxtimes a)$, not the lower-cut principal $i_L(\boxtimes a)$;
+- finite A1-A4 table status in an `apsAxioms` block;
 - G2 and FG2 status when the required terms are available.
 
 ## Output Classification
@@ -85,6 +86,19 @@ The first implementation supports:
 No checker result should be treated as an APS theorem until the relevant APS
 axioms and completion-stability assumptions are verified for the model family.
 
+The first finite APS fields are intentionally table-level:
+
+- `A1BoxMonotone`
+- `A1BoxtimesAntitone`
+- `A2TopLeBoxtimesBottom`
+- `A3CollisionCut`
+- `A4BoxtimesLeBoxBoxtimes`
+- `A124Core`
+- `APS`
+
+Reports also retain a warning that residuals and completion-stability
+assumptions are not checked.
+
 ## Pass 111 Audit Status
 
 The Claude Code review repair is audited by
@@ -100,6 +114,15 @@ The audit verifies:
 - the interface and research notes contain the repaired rule and
   classification vocabulary.
 
-Next interface extension: add explicit APS axiom-package fields so reports can
-say which of A1-A4, G2, FG2, residuation, and completion-stability assumptions
-were actually checked.
+## Pass 112 Boundary Status
+
+The Pass-112 report
+`../../artifacts/reports/pass112-macneille-g2-boundary-check.json` verifies the
+smallest G2/A2 boundary on the fixed three-element non-lattice carrier.  The
+v1 witness satisfies finite A1-A4 but fails G2.  Conversely, G2 separation
+tables exist on that carrier only vacuously and disappear as soon as A2 is
+required.
+
+Next interface extension: add explicit residual and completion-stability
+fields, then generalize the search driver from the fixed V-carrier to
+four-element carriers.

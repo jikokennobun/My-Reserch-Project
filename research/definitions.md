@@ -3009,3 +3009,38 @@ refutability sends $0$ to $a$ and sends $a,b$ to $0$.  It has no syntactic
 fixed point.  Under v1, the completion has the non-principal fixed cut
 `{ 0, a, b }`; under legacy v0, it instead returns the principal but
 unreflected cut `{ 0, a }` and fails the principal-extension condition.
+
+## Finite APS table checks for MacNeille reports (Pass 112)
+
+The MacNeille reflection checker now records a finite `apsAxioms` block for
+each input table.  These are order/table checks on the finite carrier, not
+residuation or completion-stability theorems.
+
+For a finite preorder with distinguished `top` $T$, `bottom` $\bot$,
+monotone candidate $\Box$, and antitone candidate $\boxtimes$, the fields mean:
+
+1. **A1BoxMonotone:** $x\le y$ implies $\Box x\le\Box y$.
+2. **A1BoxtimesAntitone:** $x\le y$ implies $\boxtimes y\le\boxtimes x$.
+3. **A2TopLeBoxtimesBottom:** $T\le \boxtimes\bot$.
+4. **A3CollisionCut:** if $x\le\Box y$ and $x\le\boxtimes y$, then
+   $x\le\boxtimes T$.
+5. **A4BoxtimesLeBoxBoxtimes:** $\boxtimes x\le\Box(\boxtimes x)$.
+
+The checker abbreviates
+$$
+\mathrm{A124Core}:=\mathrm{A1BoxMonotone}\wedge
+\mathrm{A1BoxtimesAntitone}\wedge
+\mathrm{A2TopLeBoxtimesBottom}\wedge
+\mathrm{A4BoxtimesLeBoxBoxtimes}
+$$
+and
+$$
+\mathrm{APS}:=\mathrm{A124Core}\wedge\mathrm{A3CollisionCut}.
+$$
+
+The Pass-112 fixed-carrier search also isolates an **A2 gate** on the
+three-element V-carrier $\{0,a,b\}$ with $0<a$ and $0<b$: completion
+separation plus G2 exists on that carrier only when A2 is not required.  Once
+A2 is imposed, no table on that carrier has simultaneously a v1
+non-principal completion fixed cut without syntactic fixed point and G2.  This
+is a carrier-local search fact, not yet a general reflection theorem.

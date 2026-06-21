@@ -158,3 +158,24 @@ smoke test, and documentation markers for `reflected`,
 is PASS. The next search target is now the G2/APS boundary: add axiom-package
 checks and test whether the non-principal completion fixed cut can coexist
 with G2 without a syntactic fixed point.
+
+## Pass 112 Boundary Result
+
+Boundary search:
+[../../artifacts/reports/pass112-macneille-g2-boundary-check.json](../../artifacts/reports/pass112-macneille-g2-boundary-check.json).
+
+The checker now includes finite `apsAxioms` fields.  For the v1 non-lattice
+separation report,
+[../../artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json](../../artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json),
+the finite A1-A4 fields are all true, but G2 is false.  The G2 failure is not
+incidental: `boxtimes(T) <= bottom` holds while `T <= bottom` fails.
+
+The Pass-112 search exhausts all total antitone `boxtimes` tables and all
+total `Box` tables on the fixed three-element V-carrier.  It finds 216
+separation tables and 54 G2 separation tables, but every G2 separation table
+uses G2 vacuously and fails A2.  There are no separation tables satisfying
+G2+A2, G2+A124Core, or G2+finite A1-A4 APS on this carrier.
+
+This resolves the smallest-carrier G2 boundary only.  The next search target
+is a four-element carrier enumeration, keeping finite A1-A4 table checks
+separate from residual and completion-stability assumptions.

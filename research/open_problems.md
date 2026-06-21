@@ -1396,15 +1396,27 @@
   syntactic fixed point `m` but completed fixed cut principal at `t`.
   Machine-verified by
   `artifacts/reports/pass111-macneille-reflection-review-check.json` (PASS).
-- **[New (Pass 111)]** **G2/APS boundary for MacNeille completion fixed points.**
-  The verified non-lattice witness is a bare finite preAPS separation, but it
-  is neither G2 nor FG2 and the checker still does not verify A1-A4.  Add
-  APS axiom-package checks to the MacNeille reflection search, then decide
-  whether a G2-holding finite model can keep a v1 non-principal completion
-  fixed point without a syntactic $\boxtimes$-fixed point.  If no such model
-  exists in small carriers, formulate the weakest reflection theorem forcing
-  completed fixed cuts to be reflected, or at least principal, under G2 plus
-  the selected APS/completion-stability package.
+- **[Partially resolved (Pass 112)]** **G2/APS boundary for MacNeille
+  completion fixed points on the fixed V-carrier.**
+  Pass 112 added finite-table APS A1-A4 fields to the MacNeille reflection
+  checker.  The v1 witness `three-element-nolattice-nosynt` still has no
+  syntactic $\boxtimes$-fixed point and has the non-principal completion fixed
+  cut `{ 0, a, b }`; now the report shows finite A1-A4 hold, while G2 fails.
+  Exhaustive enumeration on the same three-element non-lattice carrier found
+  G2 separating tables only in the vacuous mode where A2 is absent: 216
+  separating tables, 54 separation+G2 tables, and zero
+  separation+G2+A2/A124Core/A1-A4 APS tables.  Thus A2 is the first gate on
+  this carrier.  This is not yet a global reflection theorem, because
+  residuals, completion-stability assumptions, and larger carriers remain
+  unchecked.  Machine-verified by
+  `artifacts/reports/pass112-macneille-g2-boundary-check.json` (PASS).
+- **[New (Pass 112)]** **Four-element MacNeille G2/A2 boundary search.**
+  Extend the Pass-112 search beyond the fixed three-element V-carrier.  Decide
+  whether adding a fourth point permits a model with v1 non-principal
+  completion fixed cut, no syntactic fixed point, G2, and A2; or whether a
+  small-carrier reflection/no-go theorem can be formulated.  The search should
+  keep finite A1-A4 table checks separate from residuation and
+  completion-stability hypotheses.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

@@ -42,20 +42,21 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 111 -> 112: G2/APS boundary for MacNeille completion fixed points)**
-  Pass 111 verified the Claude Code MacNeille reflection checker repair:
-  the v1 $L^{op}$ closure rule, the three-element non-lattice witness,
-  `reflected`/`principal-unreflected` output, and principal-extension
-  warnings are now audited by
-  `artifacts/reports/pass111-macneille-reflection-review-check.json`.
-  The bare witness has no syntactic fixed point and a non-principal
-  completion fixed cut, but it is neither G2 nor FG2.  Open:
-  (i) add APS axiom-package checks, at least for A1-A4, G2, FG2, and
-  residuation placeholders, to the MacNeille reflection search;
-  (ii) search for a G2-holding finite variant with a v1 non-principal
-  completion fixed point and no syntactic fixed point;
-  (iii) if the search fails, formulate the weakest axiom package forcing
-  every completion fixed cut to be reflected or at least principal.
+- **(Pass 112 -> 113: four-element MacNeille G2 boundary and the A2 gate)**
+  Pass 112 added finite-table A1-A4 checks to the MacNeille reflection
+  checker and exhaustively searched the fixed three-element V-carrier
+  `{0,a,b}`.  On that carrier, the v1 non-principal completion separation can
+  satisfy G2 only vacuously when A2 is dropped; no table has separation plus
+  G2 plus A2, hence none has G2 plus A124Core or full A1-A4 APS.  The original
+  non-lattice witness satisfies finite A1-A4 but fails G2.  Open:
+  (i) extend the search from the fixed V-carrier to all four-element
+  preorders, or at least to generated four-element non-lattice carriers with a
+  distinguished nonbottom `T`;
+  (ii) decide whether the A2 gate persists once a fourth point is available or
+  whether a G2+A2 separating completion-fixed-point witness appears;
+  (iii) add explicit residuation and completion-stability placeholders so that
+  finite A1-A4 table success is not confused with a full APS completion
+  theorem.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

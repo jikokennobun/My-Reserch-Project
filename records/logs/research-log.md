@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 112)
+
+- Added finite-table APS A1-A4 checks to the MacNeille reflection checker and
+  ran the first G2 boundary search on the fixed three-element non-lattice
+  carrier `{0,a,b}`.  The v1 witness
+  `three-element-nolattice-nosynt` still has no syntactic fixed point and has
+  the non-principal completion fixed cut `{ 0, a, b }`; now the report also
+  shows finite A1-A4 hold.  It fails G2 because `boxtimes(T) <= bottom` while
+  `T` is not below `bottom`.  Exhaustive enumeration found 216 separating
+  tables, 54 vacuous-G2 separating tables after dropping A2, and zero
+  separating tables with G2 plus A2, A124Core, or full A1-A4 APS on this
+  carrier.  Added `check-pass112.py`, the Pass-112 report, refreshed the
+  MacNeille reports, and retargeted Pass 113 to four-element carriers and
+  residuation/completion-stability placeholders.
+
 ## 2026-06-21 (Autonomous discussion Pass 111)
 
 - Verified the Claude Code MacNeille reflection checker repair.  The current

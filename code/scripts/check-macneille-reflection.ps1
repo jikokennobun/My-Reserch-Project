@@ -259,6 +259,68 @@ foreach ($x in $carrier) {
     }
 }
 
+$a1BoxViolations = @()
+foreach ($x in $carrier) {
+    foreach ($y in $carrier) {
+        if ((Test-Leq -Left $x -Right $y) -and -not (Test-Leq -Left $box[$x] -Right $box[$y])) {
+            $a1BoxViolations += [pscustomobject]@{
+                x = $x
+                y = $y
+                boxX = $box[$x]
+                boxY = $box[$y]
+            }
+        }
+    }
+}
+
+$a2 = Test-Leq -Left $top -Right $refutability[$bottom]
+
+$a3Counterexamples = @()
+$a3Target = $refutability[$top]
+foreach ($x in $carrier) {
+    foreach ($y in $carrier) {
+        if ((Test-Leq -Left $x -Right $box[$y]) -and (Test-Leq -Left $x -Right $refutability[$y]) -and -not (Test-Leq -Left $x -Right $a3Target)) {
+            $a3Counterexamples += [pscustomobject]@{
+                x = $x
+                y = $y
+                boxY = $box[$y]
+                boxtimesY = $refutability[$y]
+                boxtimesTop = $a3Target
+            }
+        }
+    }
+}
+
+$a4Counterexamples = @()
+foreach ($x in $carrier) {
+    $boxtimesX = $refutability[$x]
+    $boxBoxtimesX = $box[$boxtimesX]
+    if (-not (Test-Leq -Left $boxtimesX -Right $boxBoxtimesX)) {
+        $a4Counterexamples += [pscustomobject]@{
+            x = $x
+            boxtimesX = $boxtimesX
+            boxBoxtimesX = $boxBoxtimesX
+        }
+    }
+}
+
+$a1Box = ($a1BoxViolations.Count -eq 0)
+$a1Boxtimes = $true
+$a3 = ($a3Counterexamples.Count -eq 0)
+$a4 = ($a4Counterexamples.Count -eq 0)
+$apsAxioms = [pscustomobject]@{
+    A1BoxMonotone = $a1Box
+    A1BoxViolations = $a1BoxViolations
+    A1BoxtimesAntitone = $a1Boxtimes
+    A2TopLeBoxtimesBottom = $a2
+    A3CollisionCut = $a3
+    A3Counterexamples = $a3Counterexamples
+    A4BoxtimesLeBoxBoxtimes = $a4
+    A4Counterexamples = $a4Counterexamples
+    A124Core = ($a1Box -and $a1Boxtimes -and $a2 -and $a4)
+    APS = ($a1Box -and $a1Boxtimes -and $a2 -and $a3 -and $a4)
+}
+
 $completedFixedPoints = @()
 foreach ($cut in $closedCuts) {
     $extended = Invoke-CompletedRefutability -Cut $cut
@@ -340,12 +402,15 @@ $extensionDescription = if ($ExtensionRule -eq "antitone-dual-lower-cut-v1") {
 }
 
 $warnings = @(
-    "APS axioms A1-A4 are not checked by this finite checker."
+    "APS A1-A4 are checked only as finite order/table conditions; residuals and completion-stability assumptions are not checked."
 )
 if ($ExtensionRule -eq "antitone-dual-lower-cut-v0") {
     $warnings = @(
         "The selected v0 rule has the wrong polarity for antitone L -> L^op; use v1 for current research passes."
     ) + $warnings
+}
+if (-not $apsAxioms.APS) {
+    $warnings += "The finite model does not satisfy the full A1-A4 APS package."
 }
 if ($extensionConditionFailures.Count -gt 0) {
     $warnings += "The selected extension rule does not preserve all principal cuts for this model."
@@ -370,6 +435,7 @@ $report = [pscustomobject]@{
     syntacticFixedPoints = $syntacticFixedPoints
     completedFixedPoints = $completedFixedPoints
     extensionConditionFailures = $extensionConditionFailures
+    apsAxioms = $apsAxioms
     g2 = $g2
     fg2 = $fg2
     warnings = $warnings

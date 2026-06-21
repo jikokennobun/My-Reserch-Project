@@ -6,27 +6,24 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 112
-- Last pass note: Pass 111 (2026-06-21) incorporated and verified the Claude
-  Code MacNeille reflection checker review.  The repository already contained
-  the requested three-element non-lattice witness, the variance-sensitive
-  `antitone-dual-lower-cut-v1` rule, the legacy wrong-polarity v0 comparison,
-  the `reflected` field, `principal-unreflected` classification, and
-  principal-extension-condition checks.  Pass 111 regenerated the decisive
-  reports and added a verification audit.  Under v1,
-  `three-element-nolattice-nosynt` has no syntactic fixed points and has the
-  non-principal completion fixed cut `{ 0, a, b }`, classified as
-  `nonprincipal-without-syntactic`.  Under legacy v0, the same model returns
-  the principal but unreflected cut `{ 0, a }` and fails the principal
-  extension condition twice, exposing the polarity error.  The three-chain
-  smoke test under v1 is now classified `principal-unreflected`: the syntactic
-  fixed point is `m`, while the completed fixed cut is principal at `t` and is
-  not reflected.  Machine verification
-  `code/scripts/check-pass111.py` ->
-  `artifacts/reports/pass111-macneille-reflection-review-check.json` PASS.
-  The next task is to add APS axiom-package checks and search for G2-holding
-  variants of the non-principal completion-fixed-point separation.  Counter
-  111->112.
+- Current pass: 113
+- Last pass note: Pass 112 (2026-06-21) added finite-table APS checks to the
+  MacNeille reflection checker and ran the first G2 boundary search on the
+  fixed three-element non-lattice carrier `{0,a,b}`.  The decisive v1 witness
+  `three-element-nolattice-nosynt` remains
+  `nonprincipal-without-syntactic`; the new report fields show that it satisfies
+  finite A1-A4 as table/order conditions, but it fails G2 because
+  `boxtimes(T) <= bottom` while `T` is not below `bottom`.  Exhaustive
+  enumeration over the same V-shaped carrier found 216 separation tables, 54
+  of which satisfy G2 only vacuously after A2 is dropped, but zero tables with
+  separation plus G2 plus A2; hence zero with G2 plus A124Core or full A1-A4
+  APS.  This is a carrier-local no-go, not a global reflection theorem.
+  Machine verification `code/scripts/check-pass112.py` ->
+  `artifacts/reports/pass112-macneille-g2-boundary-check.json` PASS, and the
+  refreshed Pass-111 audit remains PASS.  The next task is to test whether the
+  A2 gate persists on four-element carriers or disappears once a fourth point
+  is allowed, while adding residuation and completion-stability placeholders.
+  Counter 112->113.
 - Earlier note: Pass 109 (2026-06-21) computed the rational barycentric
   transition under a support inclusion $S\subset T$.  If $|S|=n$ and
   $|T|=m$, then
@@ -12968,3 +12965,102 @@ Next step:
 Pass 112 should add APS axiom-package checks to the MacNeille reflection
 search and test whether any G2-holding finite model can keep the v1
 non-principal completion fixed point without a syntactic fixed point.
+
+### Pass 112 - 2026-06-21 JST
+
+Focus:
+Add finite APS axiom-package checks to the MacNeille reflection checker and
+test the smallest G2 boundary around the v1 non-principal completion fixed
+cut.
+
+Proposer:
+The Pass-111 witness should not be dismissed merely because the checker had
+not recorded A1-A4.  The next useful refinement is to make the report say,
+for the finite table itself, which APS fragments hold:
+A1 for monotonicity of `Box` and antitonicity of `boxtimes`, A2 as
+`T <= boxtimes(bottom)`, A3 as the collision condition
+`x <= Box(y)` and `x <= boxtimes(y)` imply `x <= boxtimes(T)`, and A4 as
+`boxtimes(x) <= Box(boxtimes(x))`.  With those fields present, the
+three-element V-shaped carrier can be exhausted rather than guessed.
+
+Skeptic:
+The new fields are finite order/table checks only.  They do not verify
+residuals, canonical extension stability, or any theorem that completion
+fixed cuts reflect back to syntax.  The search space is also deliberately
+small: the carrier is fixed as `{0,a,b}` with `0<a`, `0<b`, and `a`
+incomparable with `b`.  A no-go result here is therefore evidence about the
+smallest non-lattice witness, not a general APS impossibility theorem.
+
+Formalist:
+The refreshed v1 report for `three-element-nolattice-nosynt` now says more
+than Pass 111 did.  It still has no syntactic fixed point and still has the
+non-principal completed fixed cut `{ 0, a, b }`, but its finite `apsAxioms`
+field satisfies A1, A2, A3, and A4.  The witness fails G2 exactly because
+`boxtimes(T) <= bottom` is true while `T <= bottom` is false.
+
+The exhaustive fixed-carrier search in `check-pass112.py` enumerates all
+total antitone `boxtimes` tables and all total `Box` tables on the same
+V-shaped carrier.  Among the 216 separation tables, 54 satisfy G2 only in the
+vacuous mode where `boxtimes(T) <= bottom` is false.  Once A2 is required,
+the count drops to zero:
+
+| package | separating tables |
+| --- | ---: |
+| completion separation | 216 |
+| separation + G2 | 54 |
+| separation + G2 + A2 | 0 |
+| separation + G2 + A124Core | 0 |
+| separation + G2 + A1-A4 APS | 0 |
+| separation + A1-A4 APS but not G2 | 10 |
+
+Thus, on this carrier, A2 is the first gate that prevents the vacuous-G2
+escape.  Equivalently, the existing A1-A4 APS separation is still a useful
+completion counterexample, but it sits on the non-G2 side of the boundary.
+
+> **Theorem 112a (finite APS report fields).** The MacNeille reflection
+> checker now records finite-table A1-A4 data in an `apsAxioms` block, together
+> with explicit warnings that residual and completion-stability hypotheses are
+> not checked.
+>
+> **Theorem 112b (small V-carrier A2 gate).** On the fixed three-element
+> non-lattice carrier `{0,a,b}`, no table has simultaneously a v1
+> non-principal completion fixed cut without syntactic fixed point, G2, and A2.
+>
+> **Theorem 112c (APS witness remains non-G2).** The Pass-111 non-lattice
+> witness satisfies finite A1-A4 but fails G2; the G2-holding separating
+> tables on the same carrier all drop A2.
+
+Machine verification:
+- `code/scripts/check-macneille-reflection.ps1` regenerated
+  `artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json`
+  with `apsAxioms.APS = true` and `g2 = false`.
+- The same checker refreshed the v0 control and the v1 three-chain smoke test;
+  the chain satisfies A1, A2, and A4 but fails A3.
+- `code/scripts/check-pass112.py` produced
+  `artifacts/reports/pass112-macneille-g2-boundary-check.json` (PASS).
+- `code/scripts/check-pass111.py` was rerun after the report-schema extension
+  and remains PASS.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-112
+  entry; State counter $112\to113$.
+- `records/logs/research-log.md`: Pass-112 entry.
+- `research/ideas/research-questions.md`: retargeted the next pass to the
+  four-element carrier test for the A2 gate.
+- `research/open_problems.md`: partially resolved the Pass-111 G2/APS boundary
+  on the fixed V-carrier and opened the four-element extension problem.
+- `research/definitions.md`, `research/notes/completion-and-fixed-points.md`,
+  `research/notes/g2-fg2-hierarchy.md`,
+  `code/models/macneille-reflection-search.md`, and
+  `code/models/macneille-checker-interface.md`: recorded the finite APS fields
+  and the carrier-local A2 gate.
+- `code/scripts/check-pass112.py` and
+  `artifacts/reports/pass112-macneille-g2-boundary-check.json`: new.
+- `artifacts/pdf/macneille-g2-a2-boundary-2026-06-21.md`: publication summary
+  source.
+
+Next step:
+Pass 113 should extend the MacNeille G2 boundary search from the fixed
+three-element V-carrier to four-element carriers or a generated family of
+finite preorders, and should begin separating pure finite A1-A4 checks from
+residuation/completion-stability assumptions.

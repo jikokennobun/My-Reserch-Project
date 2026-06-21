@@ -37,6 +37,19 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass112-macneille-g2-boundary-check.json`: verifies the Pass-112 fixed
+  three-element non-lattice G2/A2 boundary search. It enumerates all total
+  antitone `boxtimes` tables and all total `Box` tables on the V-carrier,
+  records 216 completion-separating tables, 54 vacuous-G2 separating tables,
+  and zero separating tables satisfying G2 plus A2, A124Core, or finite A1-A4
+  APS. Overall result: PASS.
+
+- `macneille-reflection-three-element-nolattice-nosynt-v1.json`: current v1
+  MacNeille report for the non-lattice witness. It now includes finite
+  `apsAxioms` fields showing A1-A4 hold as table checks, while G2 remains
+  false and the non-principal completion fixed cut `{ 0, a, b }` remains
+  unreflected by syntax.
+
 - `pass111-macneille-reflection-review-check.json`: verifies the Pass-111
   MacNeille reflection checker repair. It audits the v1 non-lattice witness,
   the legacy v0 wrong-polarity control, the v1 three-chain smoke test, and

@@ -124,11 +124,29 @@
                                            "expectedDisplay":  "{ 0 }"
                                        }
                                    ],
+    "apsAxioms":  {
+                      "A1BoxMonotone":  true,
+                      "A1BoxViolations":  [
+
+                                          ],
+                      "A1BoxtimesAntitone":  true,
+                      "A2TopLeBoxtimesBottom":  true,
+                      "A3CollisionCut":  true,
+                      "A3Counterexamples":  [
+
+                                            ],
+                      "A4BoxtimesLeBoxBoxtimes":  true,
+                      "A4Counterexamples":  [
+
+                                            ],
+                      "A124Core":  true,
+                      "APS":  true
+                  },
     "g2":  false,
     "fg2":  false,
     "warnings":  [
                      "The selected v0 rule has the wrong polarity for antitone L -\u003e L^op; use v1 for current research passes.",
-                     "APS axioms A1-A4 are not checked by this finite checker.",
+                     "APS A1-A4 are checked only as finite order/table conditions; residuals and completion-stability assumptions are not checked.",
                      "The selected extension rule does not preserve all principal cuts for this model."
                  ]
 }

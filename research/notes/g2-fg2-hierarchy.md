@@ -6455,3 +6455,42 @@ syntactic fixed point.
 `artifacts/reports/pass111-macneille-reflection-review-check.json`, PASS):
 the audit verifies the v1 non-lattice witness, the v0 polarity control, the
 v1 chain smoke test, and documentation markers for the repaired interface.
+
+## Pass 112 - MacNeille G2/A2 boundary on the smallest non-lattice
+
+Pass 112 refines the Pass-111 MacNeille witness by adding finite APS
+axiom-package fields to the checker.  The original v1 non-lattice witness is
+not merely a bare unchecked table: as a finite table it satisfies A1-A4, while
+still having no syntactic $\boxtimes$-fixed point and having the non-principal
+completion fixed cut `{ 0, a, b }`.  Its failure is exactly G2:
+`boxtimes(T) <= bottom` holds but `T <= bottom` does not.
+
+The fixed-carrier enumeration on `{0,a,b}` with `0<a` and `0<b` shows the
+opposite side of the boundary.  Some separating tables satisfy G2, but only
+vacuously, because the G2 antecedent `boxtimes(T) <= bottom` is false.  These
+tables necessarily drop A2.  Once A2 is required, no separating table remains
+on this carrier.
+
+The finite counts are:
+
+| condition on separating tables | count |
+| --- | ---: |
+| no extra package | 216 |
+| G2 | 54 |
+| G2 and A2 | 0 |
+| G2 and A124Core | 0 |
+| G2 and finite A1-A4 APS | 0 |
+| finite A1-A4 APS but not G2 | 10 |
+
+Hence the three-element non-lattice carrier realizes a clean local dichotomy:
+finite A1-A4 can coexist with completion-created non-principal fixed cuts, but
+G2 cuts across that example; G2 can coexist with such cuts only after A2 is
+removed.  The next hierarchy question is whether this A2 gate survives on
+four-element carriers or whether a genuine G2+A2 completion-separation witness
+appears there.
+
+**Machine verification** (`code/scripts/check-pass112.py` ->
+`artifacts/reports/pass112-macneille-g2-boundary-check.json`, PASS): the
+checker enumerates the fixed three-element non-lattice carrier, records
+representative G2 and APS-but-not-G2 examples, and verifies the zero counts
+for G2+A2, G2+A124Core, and G2+A1-A4 APS separation.

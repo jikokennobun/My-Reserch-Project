@@ -203,12 +203,41 @@ Machine certificates:
 - `artifacts/reports/macneille-reflection-three-chain-antitone-v1.json`
 - `artifacts/reports/pass111-macneille-reflection-review-check.json`
 
+## Pass 112 G2/A2 Boundary
+
+Pass 112 added finite `apsAxioms` fields to the MacNeille checker.  These
+fields check A1-A4 as finite order/table conditions only; they do not certify
+residuals, canonical extension stability, or reflection theorems for completed
+fixed cuts.
+
+The v1 non-lattice witness now has a sharper status.  It still has no
+syntactic fixed point and has the non-principal completion fixed cut
+`{ 0, a, b }`, but its finite `apsAxioms` block satisfies A1-A4.  The witness
+fails G2 because `boxtimes(T) <= bottom` holds while `T <= bottom` does not.
+
+The carrier-local search
+`artifacts/reports/pass112-macneille-g2-boundary-check.json` exhausts all
+total antitone `boxtimes` tables and all total `Box` tables on the same
+V-shaped carrier.  It finds:
+
+- 216 tables with v1 non-principal completion separation and no syntactic
+  fixed point;
+- 54 such tables satisfying G2 only vacuously, after A2 is dropped;
+- no such table satisfying G2 and A2 together, hence none satisfying G2 plus
+  A124Core or full finite A1-A4 APS.
+
+Thus the smallest non-lattice carrier exhibits an **A2 gate**: G2-compatible
+completion separation is available only by leaving the A2 part of APS.  The
+next completion-reflection test must determine whether this gate is an artifact
+of the three-element carrier or persists in four-element searches.
+
 ## Next Tasks
 
 - Write the MacNeille completion of a preorder explicitly as Galois-closed cuts.
 - Define canonical extensions of $\Box$ and residual operations.
-- Add APS axiom-package checks to the finite MacNeille reflection search.
-- Search for G2-holding variants of the size-3 non-lattice separation example.
+- Extend the G2/A2 boundary search to four-element carriers.
+- Add residuation and completion-stability placeholders to the MacNeille
+  reports.
 - Test whether A1-A4 survive completion.
 - Formulate a reflection theorem from completion fixed points to formula fixed points.
 - Turn the reflection-square work package into a precise theorem/countermodel

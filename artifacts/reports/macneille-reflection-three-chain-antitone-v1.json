@@ -1,6 +1,6 @@
-{
+﻿{
     "model":  "three-chain-antitone",
-    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\code/models/examples/three-chain-antitone.json",
+    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\code\\models\\examples\\three-chain-antitone.json",
     "extensionRule":  "antitone-dual-lower-cut-v1",
     "extensionDescription":  "v1: treat antitone refutability as a monotone map L -\u003e L^op and close the pointwise image by the L^op MacNeille closure ((image)^l_L)^u_L.",
     "classification":  "principal-unreflected",
@@ -92,9 +92,34 @@
     "extensionConditionFailures":  [
 
                                    ],
+    "apsAxioms":  {
+                      "A1BoxMonotone":  true,
+                      "A1BoxViolations":  [
+
+                                          ],
+                      "A1BoxtimesAntitone":  true,
+                      "A2TopLeBoxtimesBottom":  true,
+                      "A3CollisionCut":  false,
+                      "A3Counterexamples":  [
+                                                {
+                                                    "x":  "m",
+                                                    "y":  "m",
+                                                    "boxY":  "m",
+                                                    "boxtimesY":  "m",
+                                                    "boxtimesTop":  "b"
+                                                }
+                                            ],
+                      "A4BoxtimesLeBoxBoxtimes":  true,
+                      "A4Counterexamples":  [
+
+                                            ],
+                      "A124Core":  true,
+                      "APS":  false
+                  },
     "g2":  false,
     "fg2":  false,
     "warnings":  [
-                     "APS axioms A1-A4 are not checked by this finite checker."
+                     "APS A1-A4 are checked only as finite order/table conditions; residuals and completion-stability assumptions are not checked.",
+                     "The finite model does not satisfy the full A1-A4 APS package."
                  ]
 }

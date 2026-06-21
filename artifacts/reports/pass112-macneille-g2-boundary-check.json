@@ -1,0 +1,217 @@
+{
+  "pass": 112,
+  "title": "G2/APS boundary for MacNeille completion-only fixed cuts",
+  "carrier": [
+    "0",
+    "a",
+    "b"
+  ],
+  "order": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "a"
+    ],
+    [
+      "0",
+      "b"
+    ],
+    [
+      "a",
+      "a"
+    ],
+    [
+      "b",
+      "b"
+    ]
+  ],
+  "bottom": "0",
+  "topCandidates": [
+    "a",
+    "b"
+  ],
+  "closedCuts": [
+    {
+      "cut": [
+        "0"
+      ],
+      "display": "{ 0 }",
+      "principalElement": "0"
+    },
+    {
+      "cut": [
+        "0",
+        "a"
+      ],
+      "display": "{ 0, a }",
+      "principalElement": "a"
+    },
+    {
+      "cut": [
+        "0",
+        "b"
+      ],
+      "display": "{ 0, b }",
+      "principalElement": "b"
+    },
+    {
+      "cut": [
+        "0",
+        "a",
+        "b"
+      ],
+      "display": "{ 0, a, b }",
+      "principalElement": null
+    }
+  ],
+  "searchSpace": {
+    "totalMapsPerOperator": 27,
+    "antitoneRefutabilityProfilesWithSeparation": 8,
+    "boxTablesPerProfile": 27,
+    "rowsWithSeparation": 216
+  },
+  "packageCounts": {
+    "separation": {
+      "tableCount": 216,
+      "refutabilityProfileCount": 8
+    },
+    "separationAndG2": {
+      "tableCount": 54,
+      "refutabilityProfileCount": 2
+    },
+    "separationAndG2AndA2": {
+      "tableCount": 0,
+      "refutabilityProfileCount": 0
+    },
+    "separationAndG2AndA124Core": {
+      "tableCount": 0,
+      "refutabilityProfileCount": 0
+    },
+    "separationAndG2AndAPS": {
+      "tableCount": 0,
+      "refutabilityProfileCount": 0
+    },
+    "separationAndAPSButNotG2": {
+      "tableCount": 10,
+      "refutabilityProfileCount": 4
+    }
+  },
+  "examples": {
+    "g2Separation": {
+      "top": "a",
+      "boxtimes": {
+        "0": "b",
+        "a": "b",
+        "b": "0"
+      },
+      "box": {
+        "0": "0",
+        "a": "0",
+        "b": "0"
+      },
+      "G2": {
+        "antecedentBoxtimesTopLeBottom": false,
+        "holds": true,
+        "mode": "vacuous"
+      },
+      "FG2": true,
+      "apsAxioms": {
+        "A1BoxMonotone": true,
+        "A1BoxtimesAntitone": true,
+        "A2TopLeBoxtimesBottom": false,
+        "A3CollisionCut": true,
+        "A3Counterexamples": [],
+        "A4BoxtimesLeBoxBoxtimes": false,
+        "A4Counterexamples": [
+          {
+            "x": "0",
+            "boxtimesX": "b",
+            "boxBoxtimesX": "0"
+          },
+          {
+            "x": "a",
+            "boxtimesX": "b",
+            "boxBoxtimesX": "0"
+          }
+        ],
+        "A124Core": false,
+        "APS": false
+      },
+      "completionFixedPoints": [
+        {
+          "cut": [
+            "0",
+            "a",
+            "b"
+          ],
+          "display": "{ 0, a, b }",
+          "principal": false,
+          "principalElement": null,
+          "reflected": false
+        }
+      ]
+    },
+    "g2A2Separation": null,
+    "g2A124Separation": null,
+    "g2APSSeparation": null,
+    "apsButNotG2Separation": {
+      "top": "a",
+      "boxtimes": {
+        "0": "a",
+        "a": "0",
+        "b": "0"
+      },
+      "box": {
+        "0": "0",
+        "a": "a",
+        "b": "0"
+      },
+      "G2": {
+        "antecedentBoxtimesTopLeBottom": true,
+        "holds": false,
+        "mode": "antecedent-true"
+      },
+      "FG2": false,
+      "apsAxioms": {
+        "A1BoxMonotone": true,
+        "A1BoxtimesAntitone": true,
+        "A2TopLeBoxtimesBottom": true,
+        "A3CollisionCut": true,
+        "A3Counterexamples": [],
+        "A4BoxtimesLeBoxBoxtimes": true,
+        "A4Counterexamples": [],
+        "A124Core": true,
+        "APS": true
+      },
+      "completionFixedPoints": [
+        {
+          "cut": [
+            "0",
+            "a",
+            "b"
+          ],
+          "display": "{ 0, a, b }",
+          "principal": false,
+          "principalElement": null,
+          "reflected": false
+        }
+      ]
+    }
+  },
+  "interpretation": {
+    "smallPositive": "On the Pass-111 three-element non-lattice carrier, there are vacuous-G2 separation rows if A2 is not required.",
+    "smallNoGo": "No row on this carrier has nonprincipal-without-syntactic completion fixed cut, G2, and A2 simultaneously; hence none has G2 plus A124Core or full A1-A4 APS.",
+    "reason": "The Pass-111 APS witness uses A2 and no syntactic fixed point, but its refutability sends the distinguished top to bottom, making the G2 antecedent true while the model is non-collapsed."
+  },
+  "checks": {
+    "foundBareG2Separation": true,
+    "noG2A2SeparationOnCarrier": true,
+    "noG2A124SeparationOnCarrier": true,
+    "noG2APSSeparationOnCarrier": true,
+    "pass111APSWitnessStillFailsG2": true
+  },
+  "overall": "PASS"
+}
