@@ -2795,3 +2795,54 @@ $$
 \operatorname{repair}_{s_b}(-d)=-\operatorname{repair}_{s_b}(d),
 $$
 so the $B\mathbb Z/2$ boundary-line local system is unaffected.
+
+## Integral equivariant repair-section obstruction (Pass 108)
+
+Let $S$ be a finite support with $|S|=n>1$, and let
+$G=\operatorname{Sym}(S)$ act on $\mathbb Z^S$ by permuting coordinates.  The
+summation map
+$$
+\Sigma_S:\mathbb Z^S\to\mathbb Z
+$$
+is $G$-equivariant, where $\mathbb Z$ has the trivial action.
+
+The invariant lattice is
+$$
+(\mathbb Z^S)^G=\mathbb Z\mathbf 1_S,
+\qquad
+\mathbf 1_S=(1,\dots,1).
+$$
+Hence
+$$
+\Sigma_S(k\mathbf 1_S)=nk,
+$$
+so the invariant image is $n\mathbb Z$.  A support-symmetric integral
+section would require an invariant vector mapping to $1$, which is
+impossible for $n>1$.
+
+After tensoring with $\mathbb Q$, the barycentric section
+$$
+s_{\mathrm{bar}}:\mathbb Q\to\mathbb Q^S,\qquad
+s_{\mathrm{bar}}(1)=\frac1n\mathbf 1_S
+$$
+is $G$-equivariant and satisfies $\Sigma_Ss_{\mathrm{bar}}(1)=1$.  Thus the
+obstruction is exactly the denominator $n$.  Equivalently, an equivariant
+integral lift of $m\in\mathbb Z$ exists iff
+$$
+n\mid m.
+$$
+The finite obstruction group can be recorded as
+$$
+\mathbb Z/\Sigma_S((\mathbb Z^S)^G)\cong\mathbb Z/n\mathbb Z.
+$$
+
+This obstruction is separate from the antipode local system.  The antipode
+acts by a scalar sign on the boundary/Yoneda line and commutes with support
+permutations.  It sends the rational barycenter to its negative but does not
+change the denominator $n$.
+
+Under an inclusion $S\subseteq T$, barycentric sections are not natural:
+zero-extending $\frac1{|S|}\mathbf 1_S$ to $T$ differs from
+$\frac1{|T|}\mathbf 1_T$ by an element of
+$K_T\otimes\mathbb Q$.  The denominators of these rational transition
+classes are the next bookkeeping problem.

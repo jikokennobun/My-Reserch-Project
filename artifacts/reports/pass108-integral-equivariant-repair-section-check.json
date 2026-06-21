@@ -1,0 +1,974 @@
+{
+  "pass": 108,
+  "title": "Integral equivariant obstruction for repair sections",
+  "A_invariant_sections": {
+    "statement": "A Sym(S)-invariant integral vector is constant, so Sigma_S maps invariant vectors to |S|Z; the barycentric rational vector splits Sigma_S over Q.",
+    "rows": [
+      {
+        "support_size": 2,
+        "invariant_lattice_generator": [
+          1,
+          1
+        ],
+        "image_of_generator": 2,
+        "invariant_image_subgroup": "2Z",
+        "integral_equivariant_section_exists": false,
+        "rational_barycenter": [
+          "1/2",
+          "1/2"
+        ],
+        "rational_barycenter_sum": "1",
+        "rational_equivariant_section_exists": true,
+        "denominator": 2
+      },
+      {
+        "support_size": 3,
+        "invariant_lattice_generator": [
+          1,
+          1,
+          1
+        ],
+        "image_of_generator": 3,
+        "invariant_image_subgroup": "3Z",
+        "integral_equivariant_section_exists": false,
+        "rational_barycenter": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "rational_barycenter_sum": "1",
+        "rational_equivariant_section_exists": true,
+        "denominator": 3
+      },
+      {
+        "support_size": 4,
+        "invariant_lattice_generator": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "image_of_generator": 4,
+        "invariant_image_subgroup": "4Z",
+        "integral_equivariant_section_exists": false,
+        "rational_barycenter": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "rational_barycenter_sum": "1",
+        "rational_equivariant_section_exists": true,
+        "denominator": 4
+      },
+      {
+        "support_size": 5,
+        "invariant_lattice_generator": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "image_of_generator": 5,
+        "invariant_image_subgroup": "5Z",
+        "integral_equivariant_section_exists": false,
+        "rational_barycenter": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "rational_barycenter_sum": "1",
+        "rational_equivariant_section_exists": true,
+        "denominator": 5
+      },
+      {
+        "support_size": 6,
+        "invariant_lattice_generator": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "image_of_generator": 6,
+        "invariant_image_subgroup": "6Z",
+        "integral_equivariant_section_exists": false,
+        "rational_barycenter": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "rational_barycenter_sum": "1",
+        "rational_equivariant_section_exists": true,
+        "denominator": 6
+      },
+      {
+        "support_size": 7,
+        "invariant_lattice_generator": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "image_of_generator": 7,
+        "invariant_image_subgroup": "7Z",
+        "integral_equivariant_section_exists": false,
+        "rational_barycenter": [
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        "rational_barycenter_sum": "1",
+        "rational_equivariant_section_exists": true,
+        "denominator": 7
+      }
+    ],
+    "no_integral_equivariant_section_ok": true,
+    "rational_barycenter_section_ok": true
+  },
+  "B_integral_multiples": {
+    "statement": "An equivariant integral lift of m exists exactly when |S| divides m.",
+    "rows": [
+      {
+        "support_size": 2,
+        "tested_multiple": 1,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 2,
+        "tested_multiple": 2,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          1,
+          1
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 2,
+        "tested_multiple": 3,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 2,
+        "tested_multiple": 4,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          2,
+          2
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 3,
+        "tested_multiple": 1,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 3,
+        "tested_multiple": 2,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 3,
+        "tested_multiple": 3,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          1,
+          1,
+          1
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 3,
+        "tested_multiple": 4,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 3,
+        "tested_multiple": 5,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 3,
+        "tested_multiple": 6,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          2,
+          2,
+          2
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 1,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 2,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 3,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 4,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 5,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 6,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 7,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 4,
+        "tested_multiple": 8,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 1,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 2,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 3,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 4,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 5,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 6,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 7,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 8,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 9,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 5,
+        "tested_multiple": 10,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 1,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 2,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 3,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 4,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 5,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 6,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 7,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 8,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 9,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 10,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 11,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 6,
+        "tested_multiple": 12,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 1,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 2,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 3,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 4,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 5,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 6,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 7,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 8,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 9,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 10,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 11,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 12,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 13,
+        "equivariant_integral_lift_exists": false,
+        "expected_lift": null,
+        "divisibility_rule_ok": true
+      },
+      {
+        "support_size": 7,
+        "tested_multiple": 14,
+        "equivariant_integral_lift_exists": true,
+        "expected_lift": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "divisibility_rule_ok": true
+      }
+    ],
+    "multiple_lift_divisibility_ok": true
+  },
+  "C_denominator_obstruction": {
+    "statement": "The obstruction is the exact denominator |S| in the augmentation sequence 0 -> K_S -> Z^S -> Z -> 0.",
+    "rows": [
+      {
+        "support_size": 2,
+        "augmentation_sequence": "0 -> K_S -> Z^S -> Z -> 0",
+        "augmentation_kernel_rank": 1,
+        "invariant_image_subgroup": "2Z",
+        "minimal_positive_integral_multiple_with_symmetric_lift": 2,
+        "killed_after_inverting_support_size": true,
+        "denominator_obstruction_exact": true
+      },
+      {
+        "support_size": 3,
+        "augmentation_sequence": "0 -> K_S -> Z^S -> Z -> 0",
+        "augmentation_kernel_rank": 2,
+        "invariant_image_subgroup": "3Z",
+        "minimal_positive_integral_multiple_with_symmetric_lift": 3,
+        "killed_after_inverting_support_size": true,
+        "denominator_obstruction_exact": true
+      },
+      {
+        "support_size": 4,
+        "augmentation_sequence": "0 -> K_S -> Z^S -> Z -> 0",
+        "augmentation_kernel_rank": 3,
+        "invariant_image_subgroup": "4Z",
+        "minimal_positive_integral_multiple_with_symmetric_lift": 4,
+        "killed_after_inverting_support_size": true,
+        "denominator_obstruction_exact": true
+      },
+      {
+        "support_size": 5,
+        "augmentation_sequence": "0 -> K_S -> Z^S -> Z -> 0",
+        "augmentation_kernel_rank": 4,
+        "invariant_image_subgroup": "5Z",
+        "minimal_positive_integral_multiple_with_symmetric_lift": 5,
+        "killed_after_inverting_support_size": true,
+        "denominator_obstruction_exact": true
+      },
+      {
+        "support_size": 6,
+        "augmentation_sequence": "0 -> K_S -> Z^S -> Z -> 0",
+        "augmentation_kernel_rank": 5,
+        "invariant_image_subgroup": "6Z",
+        "minimal_positive_integral_multiple_with_symmetric_lift": 6,
+        "killed_after_inverting_support_size": true,
+        "denominator_obstruction_exact": true
+      },
+      {
+        "support_size": 7,
+        "augmentation_sequence": "0 -> K_S -> Z^S -> Z -> 0",
+        "augmentation_kernel_rank": 6,
+        "invariant_image_subgroup": "7Z",
+        "minimal_positive_integral_multiple_with_symmetric_lift": 7,
+        "killed_after_inverting_support_size": true,
+        "denominator_obstruction_exact": true
+      }
+    ],
+    "denominator_obstruction_exact_ok": true
+  },
+  "D_inclusion_barycenter_transition": {
+    "statement": "Barycentric rational sections are supportwise symmetric but not natural under support inclusions; their differences lie in the rational kernel.",
+    "rows": [
+      {
+        "source_size": 2,
+        "target_size": 3,
+        "extended_source_barycenter": [
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        "target_barycenter": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "transition": [
+          "-1/6",
+          "-1/6",
+          "1/3"
+        ],
+        "transition_sum": "0",
+        "transition_in_rational_kernel": true,
+        "barycenter_natural_under_inclusion": false,
+        "transition_denominator": 6
+      },
+      {
+        "source_size": 2,
+        "target_size": 5,
+        "extended_source_barycenter": [
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        "target_barycenter": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "transition": [
+          "-3/10",
+          "-3/10",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "transition_sum": "0",
+        "transition_in_rational_kernel": true,
+        "barycenter_natural_under_inclusion": false,
+        "transition_denominator": 10
+      },
+      {
+        "source_size": 3,
+        "target_size": 5,
+        "extended_source_barycenter": [
+          "1/3",
+          "1/3",
+          "1/3",
+          "0",
+          "0"
+        ],
+        "target_barycenter": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "transition": [
+          "-2/15",
+          "-2/15",
+          "-2/15",
+          "1/5",
+          "1/5"
+        ],
+        "transition_sum": "0",
+        "transition_in_rational_kernel": true,
+        "barycenter_natural_under_inclusion": false,
+        "transition_denominator": 15
+      },
+      {
+        "source_size": 4,
+        "target_size": 6,
+        "extended_source_barycenter": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4",
+          "0",
+          "0"
+        ],
+        "target_barycenter": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "transition": [
+          "-1/12",
+          "-1/12",
+          "-1/12",
+          "-1/12",
+          "1/6",
+          "1/6"
+        ],
+        "transition_sum": "0",
+        "transition_in_rational_kernel": true,
+        "barycenter_natural_under_inclusion": false,
+        "transition_denominator": 12
+      }
+    ],
+    "barycenter_inclusion_transition_ok": true
+  },
+  "E_antipode_independence": {
+    "statement": "Changing the boundary-line sign does not change the support-symmetry denominator.",
+    "rows": [
+      {
+        "support_size": 2,
+        "sign": 1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "1/2",
+          "1/2"
+        ],
+        "denominator": 2,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 2,
+        "sign": -1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "-1/2",
+          "-1/2"
+        ],
+        "denominator": 2,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 3,
+        "sign": 1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "denominator": 3,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 3,
+        "sign": -1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "-1/3",
+          "-1/3",
+          "-1/3"
+        ],
+        "denominator": 3,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 4,
+        "sign": 1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "denominator": 4,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 4,
+        "sign": -1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "-1/4",
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        "denominator": 4,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 5,
+        "sign": 1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5",
+          "1/5"
+        ],
+        "denominator": 5,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 5,
+        "sign": -1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "-1/5",
+          "-1/5",
+          "-1/5",
+          "-1/5",
+          "-1/5"
+        ],
+        "denominator": 5,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 6,
+        "sign": 1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6",
+          "1/6"
+        ],
+        "denominator": 6,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 6,
+        "sign": -1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "-1/6",
+          "-1/6"
+        ],
+        "denominator": 6,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 7,
+        "sign": 1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        "denominator": 7,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      },
+      {
+        "support_size": 7,
+        "sign": -1,
+        "integral_equivariant_lift_of_signed_unit_exists": false,
+        "rational_signed_barycenter": [
+          "-1/7",
+          "-1/7",
+          "-1/7",
+          "-1/7",
+          "-1/7",
+          "-1/7",
+          "-1/7"
+        ],
+        "denominator": 7,
+        "scalar_sign_commutes_with_support_permutations": true,
+        "denominator_changed_by_sign": false
+      }
+    ],
+    "antipode_independence_ok": true
+  },
+  "F_verdict": {
+    "statement": "The integral obstruction is a finite equivariance/denominator obstruction, independent of the antipode local system.",
+    "row": {
+      "integral_symmetric_section": false,
+      "rational_symmetric_section": true,
+      "obstruction": "The invariant lattice (Z^S)^{Sym(S)} maps to |S|Z under Sigma_S; a lift of 1 requires the denominator |S|.",
+      "relation_to_basepoint_splittings": "Basepoint splittings are integral but break support symmetry; the barycentric splitting is symmetric but rational.",
+      "relation_to_antipode_local_system": "The antipode is a scalar sign on the boundary line and commutes with support permutations, so it does not change the denominator obstruction.",
+      "next_task": "Analyze rational barycentric transition classes under support inclusions and compare their denominators with finite conductor data."
+    },
+    "verdict_ok": true
+  },
+  "checks": {
+    "no_integral_equivariant_section_ok": true,
+    "rational_barycenter_section_ok": true,
+    "multiple_lift_divisibility_ok": true,
+    "denominator_obstruction_exact_ok": true,
+    "barycenter_inclusion_transition_ok": true,
+    "antipode_independence_ok": true,
+    "verdict_ok": true
+  },
+  "overall": "PASS"
+}

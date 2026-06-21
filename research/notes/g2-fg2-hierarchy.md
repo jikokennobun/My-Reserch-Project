@@ -6190,3 +6190,76 @@ compatibility, and the ordinary-choice-not-phantom verdict.
 **Limit of the pass.**  The next task is to classify the integral
 equivariant obstruction: rational symmetric sections of $\Sigma_S$ exist by
 barycenters, but integral support-symmetric sections do not.
+
+## Pass 108 - Integral equivariant repair-section obstruction
+
+Pass 108 identifies the exact obstruction to support-symmetric integral
+repair sections.  Let $S$ be a finite support of size $n>1$, and let
+$G=\operatorname{Sym}(S)$.  The summation map
+$$
+\Sigma_S:\mathbb Z^S\to\mathbb Z
+$$
+is $G$-equivariant.  A support-symmetric integral section would be an
+invariant vector $v\in(\mathbb Z^S)^G$ with $\Sigma_S(v)=1$.
+
+But the invariant lattice is
+$$
+(\mathbb Z^S)^G=\mathbb Z\mathbf 1_S,
+$$
+and
+$$
+\Sigma_S(k\mathbf 1_S)=nk.
+$$
+Thus the invariant image is $n\mathbb Z$, and no integral equivariant section
+exists for $n>1$.
+
+Over $\mathbb Q$, the obstruction disappears by the barycentric section
+$$
+s_{\mathrm{bar}}(1)=\frac1n\mathbf 1_S.
+$$
+Therefore the obstruction is exactly the denominator $n$: an equivariant
+integral lift of $m\in\mathbb Z$ exists iff $n\mid m$.  In the augmentation
+sequence
+$$
+0\to K_S\to\mathbb Z^S\xrightarrow{\Sigma_S}\mathbb Z\to0,
+$$
+the finite equivariant obstruction is
+$$
+\mathbb Z/\Sigma_S((\mathbb Z^S)^G)\cong\mathbb Z/n\mathbb Z.
+$$
+
+Basepoint splittings are integral but break support symmetry.  The
+barycentric splitting is support-symmetric but rational.  Under a support
+inclusion $S\subseteq T$, the zero-extended $S$-barycenter differs from the
+$T$-barycenter by an element of $K_T\otimes\mathbb Q$, so barycentric
+normalization has rational transition classes.
+
+The antipode local system is independent of this denominator.  It acts by a
+scalar sign on the boundary line and commutes with all support permutations;
+changing $1$ to $-1$ changes the barycenter to its negative but leaves the
+denominator $n$ unchanged.
+
+> **Theorem 108a (no integral equivariant section).** For $|S|=n>1$,
+> $\Sigma_S:\mathbb Z^S\to\mathbb Z$ has no
+> $\operatorname{Sym}(S)$-equivariant integral section.
+>
+> **Theorem 108b (rational barycenter).** Over $\mathbb Q$, the barycentric
+> vector $\frac1n\mathbf 1_S$ gives a canonical support-symmetric section.
+>
+> **Theorem 108c (exact denominator).** An equivariant integral lift of
+> $m$ exists iff $n\mid m$; the obstruction is $\mathbb Z/n\mathbb Z$.
+>
+> **Theorem 108d (antipode independence).** The $B\mathbb Z/2$ boundary-line
+> local system is independent of the support-symmetry denominator
+> obstruction.
+
+**Machine verification** (`code/scripts/check-pass108.py` ->
+`artifacts/reports/pass108-integral-equivariant-repair-section-check.json`,
+PASS): the checker verifies the invariant image $n\mathbb Z$, the rational
+barycentric section, the divisibility rule for integral lifts, the exact
+denominator $n$, non-naturality of barycentric sections under support
+inclusion with rational-kernel transitions, and antipode independence.
+
+**Limit of the pass.**  The next task is to analyze the rational
+barycentric transition classes under support inclusions and compare their
+denominators with finite conductor/CRT denominator bookkeeping.

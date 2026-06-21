@@ -1308,13 +1308,32 @@
   $B\mathbb Z/2$ boundary-line local system is unchanged.  Machine-verified
   `artifacts/reports/pass107-correction-torsors-support-defect-check.json`
   (PASS).
-- **[New (Pass 107)]** **Integral equivariant obstruction for repair sections.**
+- **[Resolved (Pass 108)]** **Integral equivariant obstruction for repair sections.**
   Classify why $\Sigma_S:\mathbb Z^S\to\mathbb Z$ has no support-symmetric
   integral section for $|S|>1$ even though it has a rational barycentric
   section after tensoring with $\mathbb Q$.  Express this as an obstruction
   in the augmentation sequence under the finite symmetric-group action on
   $S$, and decide whether the denominator/equivariance obstruction is
   independent of the antipode $B\mathbb Z/2$ local system.
+  **Resolution:** if $|S|=n$, the invariant lattice
+  $(\mathbb Z^S)^{\operatorname{Sym}(S)}$ is $\mathbb Z\mathbf 1_S$, and
+  $\Sigma_S(k\mathbf 1_S)=nk$.  Thus invariant integral vectors map to
+  $n\mathbb Z$, so no equivariant integral section exists for $n>1$.  Over
+  $\mathbb Q$, the barycentric section
+  $s_{\mathrm{bar}}(1)=\frac1n\mathbf 1_S$ is equivariant.  An equivariant
+  integral lift of $m$ exists iff $n\mid m$, so the obstruction is exactly
+  the denominator class $\mathbb Z/n\mathbb Z$.  The antipode is a scalar
+  boundary-line sign and commutes with support permutations, so it is
+  independent of this denominator obstruction.  Machine-verified
+  `artifacts/reports/pass108-integral-equivariant-repair-section-check.json`
+  (PASS).
+- **[New (Pass 108)]** **Barycentric transition denominators under support inclusions.**
+  Compute the transition
+  $e_{S,T}s_{\mathrm{bar},S}-s_{\mathrm{bar},T}$ for
+  $S\subseteq T$ after tensoring with $\mathbb Q$, determine its denominator
+  and kernel class, and compare the resulting rational support-normalization
+  data with finite conductor/CRT denominator bookkeeping in the signed
+  all-prime boundary package.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."
