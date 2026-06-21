@@ -6494,3 +6494,47 @@ appears there.
 checker enumerates the fixed three-element non-lattice carrier, records
 representative G2 and APS-but-not-G2 examples, and verifies the zero counts
 for G2+A2, G2+A124Core, and G2+A1-A4 APS separation.
+
+## Pass 113 - Four-element G2+FG2+finite-APS completion separation
+
+Pass 113 breaks the Pass-112 A2 gate by adding one point.  The witness has
+order
+$$
+0<a<b,\qquad 0<c,
+$$
+with `T=a` and `bottom=0`.  Define
+$$
+\boxtimes(0)=\boxtimes(a)=b,\qquad
+\boxtimes(b)=\boxtimes(c)=0,
+$$
+and
+$$
+\Box(0)=\Box(a)=\Box(c)=0,\qquad \Box(b)=b.
+$$
+
+This table satisfies finite A1-A4.  It also satisfies G2 and FG2:
+$$
+\boxtimes T=b\not\le0,
+$$
+so G2 holds vacuously, and
+$$
+\boxtimes^2T=\boxtimes b=0\le b=\boxtimes T.
+$$
+There is no syntactic fixed point.  Nevertheless, the v1 MacNeille completion
+has the non-principal fixed cut `{ 0, a, b, c }`.
+
+The labelled four-element poset enumeration confirms that this is not an
+isolated table accident.  Among unique-bottom labelled four-element posets,
+there are 2784 separation+G2+finite-A1-A4 tables across 240 refutability
+profiles and 36 posets.
+
+This moves the hierarchy question: G2, FG2, and finite A1-A4 are not enough,
+by themselves, to force syntactic reflection of MacNeille completion fixed
+cuts.  Any positive theorem must use additional structure, such as residual
+adjunctions, boundedness, completion-stability, or a definability/compactness
+reflection condition.
+
+**Machine verification** (`code/scripts/check-pass113.py` ->
+`artifacts/reports/pass113-four-element-macneille-g2-boundary-check.json`,
+PASS) plus standalone witness report
+`artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json`.

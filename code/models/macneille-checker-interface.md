@@ -126,3 +126,18 @@ required.
 Next interface extension: add explicit residual and completion-stability
 fields, then generalize the search driver from the fixed V-carrier to
 four-element carriers.
+
+## Pass 113 Boundary Status
+
+The four-element search driver
+`../scripts/check-pass113.py` now enumerates all labelled four-element posets
+with a unique bottom.  It reports a positive finite-table witness:
+`examples/four-element-g2-aps-nosynt.json`.  The corresponding checker output
+is
+`../../artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json`.
+
+This witness verifies that `g2`, `fg2`, and `apsAxioms.APS` can all be true
+while the v1 MacNeille completion has a non-principal fixed cut and the
+original carrier has no syntactic fixed point.  The report still records only
+finite table checks; residual operations and completion-stability fields remain
+the next interface gap.

@@ -1,0 +1,44 @@
+{
+  "name": "four-element-g2-aps-nosynt",
+  "carrier": ["0", "a", "b", "c"],
+  "order": [
+    ["0", "0"],
+    ["a", "a"],
+    ["b", "b"],
+    ["c", "c"],
+    ["0", "a"],
+    ["a", "b"],
+    ["0", "b"],
+    ["0", "c"]
+  ],
+  "top": "a",
+  "bottom": "0",
+  "box": {
+    "0": "0",
+    "a": "0",
+    "b": "b",
+    "c": "0"
+  },
+  "refutability": {
+    "0": "b",
+    "a": "b",
+    "b": "0",
+    "c": "0"
+  },
+  "metadata": {
+    "purpose": "Pass 113 four-element witness showing that the Pass-112 A2 gate is a three-element artifact. The order is the chain 0<a<b plus a second branch 0<c, with b incomparable with c. Under antitone-dual-lower-cut-v1, the MacNeille completion has a non-principal fixed cut and the original carrier has no syntactic boxtimes fixed point.",
+    "expectedClassificationUnderCorrectExtension": "nonprincipal-without-syntactic",
+    "expectedAxioms": {
+      "finiteA1A4APS": true,
+      "g2": true,
+      "fg2": true,
+      "residuation": "not checked",
+      "completionStability": "not checked"
+    },
+    "nonPrincipalCut": ["0", "a", "b", "c"],
+    "syntacticFixedPoints": [],
+    "g2Explanation": "G2 holds vacuously because boxtimes(top)=boxtimes(a)=b is not <= bottom=0, while A2 holds because top=a <= boxtimes(bottom)=b.",
+    "latticeStatus": "non-lattice: b and c have no join in the four-element carrier",
+    "macneilleRole": "The MacNeille completion adds the missing upper closure of the two branches; the whole carrier cut is closed and non-principal."
+  }
+}

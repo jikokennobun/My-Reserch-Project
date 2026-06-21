@@ -231,14 +231,49 @@ completion separation is available only by leaving the A2 part of APS.  The
 next completion-reflection test must determine whether this gate is an artifact
 of the three-element carrier or persists in four-element searches.
 
+## Pass 113 Four-Element Witness
+
+Pass 113 shows that the A2 gate is not stable under adding one point.  The
+explicit witness has carrier `{0,a,b,c}` and order
+$$
+0<a<b,\qquad 0<c,
+$$
+with `b` and `c` incomparable.  Put `T=a`, `bottom=0`,
+$$
+\boxtimes(0)=\boxtimes(a)=b,\qquad
+\boxtimes(b)=\boxtimes(c)=0,
+$$
+and
+$$
+\Box(0)=\Box(a)=\Box(c)=0,\qquad \Box(b)=b.
+$$
+
+The original carrier has no syntactic $\boxtimes$-fixed point.  Under the v1
+MacNeille extension, the whole cut `{ 0, a, b, c }` is fixed and non-principal.
+The usual checker report
+`artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json`
+confirms:
+
+- `classification = nonprincipal-without-syntactic`;
+- `g2 = true`;
+- `fg2 = true`;
+- `apsAxioms.APS = true`;
+- no principal-extension failures under the v1 convention.
+
+The broader Pass-113 enumeration over labelled four-element posets with a
+unique bottom found 2784 separation+G2+finite-APS tables across 240
+refutability profiles and 36 posets.  Thus the next reflection question is no
+longer whether A2 alone blocks the completion-created fixed cut; it is whether
+residual structure or completion-stability blocks this four-element witness.
+
 ## Next Tasks
 
 - Write the MacNeille completion of a preorder explicitly as Galois-closed cuts.
-- Define canonical extensions of $\Box$ and residual operations.
-- Extend the G2/A2 boundary search to four-element carriers.
-- Add residuation and completion-stability placeholders to the MacNeille
-  reports.
-- Test whether A1-A4 survive completion.
+- Try to equip the four-element G2+finite-APS witness with tensor and residual
+  operations.
+- Define canonical extensions of $\Box$, tensor, and residual operations.
+- Test whether A1-A4, G2, and FG2 survive completion for the four-element
+  witness.
 - Formulate a reflection theorem from completion fixed points to formula fixed points.
 - Turn the reflection-square work package into a precise theorem/countermodel
   template.

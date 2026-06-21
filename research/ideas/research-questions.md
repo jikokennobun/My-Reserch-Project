@@ -42,21 +42,20 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 112 -> 113: four-element MacNeille G2 boundary and the A2 gate)**
-  Pass 112 added finite-table A1-A4 checks to the MacNeille reflection
-  checker and exhaustively searched the fixed three-element V-carrier
-  `{0,a,b}`.  On that carrier, the v1 non-principal completion separation can
-  satisfy G2 only vacuously when A2 is dropped; no table has separation plus
-  G2 plus A2, hence none has G2 plus A124Core or full A1-A4 APS.  The original
-  non-lattice witness satisfies finite A1-A4 but fails G2.  Open:
-  (i) extend the search from the fixed V-carrier to all four-element
-  preorders, or at least to generated four-element non-lattice carriers with a
-  distinguished nonbottom `T`;
-  (ii) decide whether the A2 gate persists once a fourth point is available or
-  whether a G2+A2 separating completion-fixed-point witness appears;
-  (iii) add explicit residuation and completion-stability placeholders so that
-  finite A1-A4 table success is not confused with a full APS completion
-  theorem.
+- **(Pass 113 -> 114: residual boundary for the four-element MacNeille witness)**
+  Pass 113 found a four-element poset witness with finite A1-A4, G2, and FG2:
+  the order is `0<a<b` plus `0<c`, with `T=a`,
+  `boxtimes(0)=boxtimes(a)=b`, `boxtimes(b)=boxtimes(c)=0`, and
+  `Box(0)=Box(a)=Box(c)=0`, `Box(b)=b`.  It has no syntactic fixed point, but
+  its v1 MacNeille completion has the non-principal fixed cut
+  `{ 0, a, b, c }`.  Thus the Pass-112 A2 gate is only three-element local.
+  Open:
+  (i) decide whether this witness admits any compatible tensor/residual package
+  satisfying the repository's residuated APS expectations;
+  (ii) check whether A1-A4, G2, and FG2 survive the selected MacNeille
+  completion extension or fail at a named completion-stability condition;
+  (iii) if residuals fail, isolate the weakest extra hypothesis that rules out
+  the four-element witness while preserving known positive APS examples.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

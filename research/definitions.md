@@ -3044,3 +3044,41 @@ separation plus G2 exists on that carrier only when A2 is not required.  Once
 A2 is imposed, no table on that carrier has simultaneously a v1
 non-principal completion fixed cut without syntactic fixed point and G2.  This
 is a carrier-local search fact, not yet a general reflection theorem.
+
+## Four-element G2+finite-APS MacNeille witness (Pass 113)
+
+The Pass-113 witness is the finite poset
+$$
+0<a<b,\qquad 0<c,
+$$
+with no comparison between $c$ and $a,b$ beyond $0<c$.  The distinguished
+elements and operations are
+$$
+T=a,\qquad \bot=0,
+$$
+$$
+\boxtimes(0)=b,\quad \boxtimes(a)=b,\quad
+\boxtimes(b)=0,\quad \boxtimes(c)=0,
+$$
+and
+$$
+\Box(0)=0,\quad \Box(a)=0,\quad \Box(b)=b,\quad \Box(c)=0.
+$$
+
+This table is antitone for $\boxtimes$ and monotone for $\Box$.  It satisfies
+finite A1-A4:
+
+- A2 holds because $T=a\le b=\boxtimes\bot$.
+- G2 holds in the formal implication sense because
+  $\boxtimes T=b\not\le0=\bot$.
+- FG2 holds because $\boxtimes^2T=\boxtimes b=0\le b=\boxtimes T$.
+
+There is no syntactic fixed point $x=\boxtimes x$.  Under the v1 MacNeille
+extension, the cut
+$$
+\{0,a,b,c\}
+$$
+is a fixed cut and is non-principal, since the carrier has no greatest
+element.  This witness shows that the Pass-112 A2 gate is specific to the
+three-element V-carrier.  It does **not** yet supply residual operations or a
+completion-stability theorem.

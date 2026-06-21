@@ -37,6 +37,20 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass113-four-element-macneille-g2-boundary-check.json`: verifies the
+  Pass-113 labelled four-element poset search. It enumerates all labelled
+  four-element posets with a unique bottom, all antitone `boxtimes` maps, and
+  all `Box` tables after a separation profile is found. It finds 2784
+  separation+G2+finite-A1-A4 APS tables across 240 refutability profiles and
+  36 posets. Overall result: PASS.
+
+- `macneille-reflection-four-element-g2-aps-nosynt-v1.json`: standalone
+  MacNeille checker report for the Pass-113 witness
+  `code/models/examples/four-element-g2-aps-nosynt.json`. It confirms
+  `nonprincipal-without-syntactic`, `g2=true`, `fg2=true`, and
+  `apsAxioms.APS=true`, with residual and completion-stability assumptions
+  still explicitly unchecked.
+
 - `pass112-macneille-g2-boundary-check.json`: verifies the Pass-112 fixed
   three-element non-lattice G2/A2 boundary search. It enumerates all total
   antitone `boxtimes` tables and all total `Box` tables on the V-carrier,

@@ -1410,13 +1410,28 @@
   residuals, completion-stability assumptions, and larger carriers remain
   unchecked.  Machine-verified by
   `artifacts/reports/pass112-macneille-g2-boundary-check.json` (PASS).
-- **[New (Pass 112)]** **Four-element MacNeille G2/A2 boundary search.**
-  Extend the Pass-112 search beyond the fixed three-element V-carrier.  Decide
-  whether adding a fourth point permits a model with v1 non-principal
-  completion fixed cut, no syntactic fixed point, G2, and A2; or whether a
-  small-carrier reflection/no-go theorem can be formulated.  The search should
-  keep finite A1-A4 table checks separate from residuation and
-  completion-stability hypotheses.
+- **[Resolved by witness (Pass 113)]** **Four-element MacNeille G2/A2 boundary
+  search.**
+  Adding a fourth point permits a model with v1 non-principal completion fixed
+  cut, no syntactic fixed point, G2, A2, and full finite A1-A4.  The explicit
+  witness has order `0<a<b` plus `0<c`, `T=a`, `bottom=0`,
+  `boxtimes(0)=boxtimes(a)=b`, `boxtimes(b)=boxtimes(c)=0`, and
+  `Box(0)=Box(a)=Box(c)=0`, `Box(b)=b`.  Its completed fixed cut is
+  `{ 0, a, b, c }`, non-principal.  The labelled four-element poset search
+  found 2784 separation+G2+finite-APS tables across 240 refutability profiles
+  and 36 posets.  Machine-verified by
+  `artifacts/reports/pass113-four-element-macneille-g2-boundary-check.json`
+  (PASS) and the standalone witness report
+  `artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json`.
+- **[New (Pass 113)]** **Residual and completion-stability boundary for the
+  four-element G2+APS witness.**
+  The Pass-113 witness is only a finite order/table APS witness.  Determine
+  whether it can be equipped with tensor and residual operations satisfying the
+  intended residuated APS laws, and whether the MacNeille completion extension
+  preserves the relevant A1-A4/G2/FG2 package.  If not, identify the first
+  named obstruction: failure of residual adjunction, failure of monoidal
+  monotonicity, failure of A3 under completion, or failure of principal/compact
+  reflection.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

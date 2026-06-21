@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 113)
+
+- Extended the MacNeille G2/A2 boundary search to all labelled four-element
+  posets with a unique bottom.  The Pass-112 A2 gate is only three-element
+  local: the poset `0<a<b` plus `0<c`, with `T=a`,
+  `boxtimes(0)=boxtimes(a)=b`, `boxtimes(b)=boxtimes(c)=0`, and
+  `Box(0)=Box(a)=Box(c)=0`, `Box(b)=b`, has no syntactic fixed point but has
+  the non-principal completion fixed cut `{ 0, a, b, c }`.  It satisfies
+  finite A1-A4, G2, and FG2 as table checks.  The labelled-poset search found
+  2784 separation+G2+finite-APS tables across 240 refutability profiles and
+  36 posets.  Added the explicit model, checker report, Pass-113 search
+  report, and retargeted Pass 114 to residual/completion-stability tests.
+
 ## 2026-06-21 (Autonomous discussion Pass 112)
 
 - Added finite-table APS A1-A4 checks to the MacNeille reflection checker and

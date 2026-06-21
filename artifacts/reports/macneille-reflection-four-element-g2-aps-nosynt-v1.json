@@ -1,0 +1,150 @@
+﻿{
+    "model":  "four-element-g2-aps-nosynt",
+    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\code\\models\\examples\\four-element-g2-aps-nosynt.json",
+    "extensionRule":  "antitone-dual-lower-cut-v1",
+    "extensionDescription":  "v1: treat antitone refutability as a monotone map L -\u003e L^op and close the pointwise image by the L^op MacNeille closure ((image)^l_L)^u_L.",
+    "classification":  "nonprincipal-without-syntactic",
+    "carrierSize":  4,
+    "closedCutCount":  5,
+    "closedCuts":  [
+                       {
+                           "cut":  [
+                                       "0"
+                                   ],
+                           "display":  "{ 0 }",
+                           "principalElement":  "0"
+                       },
+                       {
+                           "cut":  [
+                                       "0",
+                                       "a"
+                                   ],
+                           "display":  "{ 0, a }",
+                           "principalElement":  "a"
+                       },
+                       {
+                           "cut":  [
+                                       "0",
+                                       "a",
+                                       "b"
+                                   ],
+                           "display":  "{ 0, a, b }",
+                           "principalElement":  "b"
+                       },
+                       {
+                           "cut":  [
+                                       "0",
+                                       "c"
+                                   ],
+                           "display":  "{ 0, c }",
+                           "principalElement":  "c"
+                       },
+                       {
+                           "cut":  [
+                                       "0",
+                                       "a",
+                                       "b",
+                                       "c"
+                                   ],
+                           "display":  "{ 0, a, b, c }",
+                           "principalElement":  null
+                       }
+                   ],
+    "principalCuts":  [
+                          {
+                              "element":  "0",
+                              "cut":  [
+                                          "0"
+                                      ],
+                              "display":  "{ 0 }",
+                              "dualCut":  [
+                                              "0",
+                                              "a",
+                                              "b",
+                                              "c"
+                                          ],
+                              "dualDisplay":  "{ 0, a, b, c }"
+                          },
+                          {
+                              "element":  "a",
+                              "cut":  [
+                                          "0",
+                                          "a"
+                                      ],
+                              "display":  "{ 0, a }",
+                              "dualCut":  [
+                                              "a",
+                                              "b"
+                                          ],
+                              "dualDisplay":  "{ a, b }"
+                          },
+                          {
+                              "element":  "b",
+                              "cut":  [
+                                          "0",
+                                          "a",
+                                          "b"
+                                      ],
+                              "display":  "{ 0, a, b }",
+                              "dualCut":  [
+                                              "b"
+                                          ],
+                              "dualDisplay":  "{ b }"
+                          },
+                          {
+                              "element":  "c",
+                              "cut":  [
+                                          "0",
+                                          "c"
+                                      ],
+                              "display":  "{ 0, c }",
+                              "dualCut":  [
+                                              "c"
+                                          ],
+                              "dualDisplay":  "{ c }"
+                          }
+                      ],
+    "syntacticFixedPoints":  [
+
+                             ],
+    "completedFixedPoints":  [
+                                 {
+                                     "cut":  [
+                                                 "0",
+                                                 "a",
+                                                 "b",
+                                                 "c"
+                                             ],
+                                     "display":  "{ 0, a, b, c }",
+                                     "principal":  false,
+                                     "principalElement":  null,
+                                     "reflected":  false
+                                 }
+                             ],
+    "extensionConditionFailures":  [
+
+                                   ],
+    "apsAxioms":  {
+                      "A1BoxMonotone":  true,
+                      "A1BoxViolations":  [
+
+                                          ],
+                      "A1BoxtimesAntitone":  true,
+                      "A2TopLeBoxtimesBottom":  true,
+                      "A3CollisionCut":  true,
+                      "A3Counterexamples":  [
+
+                                            ],
+                      "A4BoxtimesLeBoxBoxtimes":  true,
+                      "A4Counterexamples":  [
+
+                                            ],
+                      "A124Core":  true,
+                      "APS":  true
+                  },
+    "g2":  true,
+    "fg2":  true,
+    "warnings":  [
+                     "APS A1-A4 are checked only as finite order/table conditions; residuals and completion-stability assumptions are not checked."
+                 ]
+}

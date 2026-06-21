@@ -1,0 +1,376 @@
+{
+  "pass": 113,
+  "title": "Four-element poset MacNeille G2/A2 boundary search",
+  "scope": {
+    "carrier": [
+      "0",
+      "a",
+      "b",
+      "c"
+    ],
+    "enumerated": "all labelled four-element posets with a unique bottom",
+    "notEnumerated": [
+      "non-antisymmetric preorders",
+      "residual operations",
+      "completion-stability assumptions"
+    ],
+    "extensionRule": "antitone-dual-lower-cut-v1"
+  },
+  "searchSpace": {
+    "labelledPosets": 219,
+    "uniqueBottomPosets": 76,
+    "nonLatticeUniqueBottomPosets": 40,
+    "totalMapsPerOperator": 256,
+    "antitoneMapsAcrossPosets": 2524,
+    "separatingRefutabilityProfiles": 468,
+    "separatingTopProfiles": 1404,
+    "boxTablesScannedAfterSeparation": 359424
+  },
+  "packageCounts": {
+    "separation": {
+      "tableCount": 359424,
+      "refutabilityProfileCount": 1404,
+      "posetCount": 40
+    },
+    "separationAndG2": {
+      "tableCount": 135168,
+      "refutabilityProfileCount": 528,
+      "posetCount": 40
+    },
+    "separationAndG2AndA2": {
+      "tableCount": 61440,
+      "refutabilityProfileCount": 240,
+      "posetCount": 36
+    },
+    "separationAndG2AndA124Core": {
+      "tableCount": 3024,
+      "refutabilityProfileCount": 240,
+      "posetCount": 36
+    },
+    "separationAndG2AndAPS": {
+      "tableCount": 2784,
+      "refutabilityProfileCount": 240,
+      "posetCount": 36
+    },
+    "separationAndAPSButNotG2": {
+      "tableCount": 3360,
+      "refutabilityProfileCount": 468,
+      "posetCount": 40
+    }
+  },
+  "nonLatticePackageCounts": {
+    "separation": {
+      "tableCount": 359424,
+      "refutabilityProfileCount": 1404,
+      "posetCount": 40
+    },
+    "separationAndG2": {
+      "tableCount": 135168,
+      "refutabilityProfileCount": 528,
+      "posetCount": 40
+    },
+    "separationAndG2AndA2": {
+      "tableCount": 61440,
+      "refutabilityProfileCount": 240,
+      "posetCount": 36
+    },
+    "separationAndG2AndA124Core": {
+      "tableCount": 3024,
+      "refutabilityProfileCount": 240,
+      "posetCount": 36
+    },
+    "separationAndG2AndAPS": {
+      "tableCount": 2784,
+      "refutabilityProfileCount": 240,
+      "posetCount": 36
+    },
+    "separationAndAPSButNotG2": {
+      "tableCount": 3360,
+      "refutabilityProfileCount": 468,
+      "posetCount": 40
+    }
+  },
+  "examples": {
+    "g2A2Separation": {
+      "order": "0<=0;0<=a;0<=b;0<=c;a<=a;a<=b;b<=b;c<=c",
+      "bottom": "0",
+      "top": "a",
+      "isLattice": false,
+      "boxtimes": {
+        "0": "b",
+        "a": "b",
+        "b": "0",
+        "c": "0"
+      },
+      "box": {
+        "0": "0",
+        "a": "0",
+        "b": "0",
+        "c": "0"
+      },
+      "G2": {
+        "antecedentBoxtimesTopLeBottom": false,
+        "holds": true,
+        "mode": "vacuous"
+      },
+      "FG2": true,
+      "apsAxioms": {
+        "A1BoxMonotone": true,
+        "A1BoxtimesAntitone": true,
+        "A2TopLeBoxtimesBottom": true,
+        "A3CollisionCut": true,
+        "A3Counterexamples": [],
+        "A4BoxtimesLeBoxBoxtimes": false,
+        "A4Counterexamples": [
+          {
+            "x": "0",
+            "boxtimesX": "b",
+            "boxBoxtimesX": "0"
+          },
+          {
+            "x": "a",
+            "boxtimesX": "b",
+            "boxBoxtimesX": "0"
+          }
+        ],
+        "A124Core": false,
+        "APS": false
+      },
+      "completionFixedPoints": [
+        {
+          "cut": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "display": "{ 0, a, b, c }",
+          "principal": false,
+          "principalElement": null,
+          "reflected": false
+        }
+      ]
+    },
+    "g2A124Separation": {
+      "order": "0<=0;0<=a;0<=b;0<=c;a<=a;a<=b;b<=b;c<=c",
+      "bottom": "0",
+      "top": "a",
+      "isLattice": false,
+      "boxtimes": {
+        "0": "b",
+        "a": "b",
+        "b": "0",
+        "c": "0"
+      },
+      "box": {
+        "0": "0",
+        "a": "0",
+        "b": "b",
+        "c": "0"
+      },
+      "G2": {
+        "antecedentBoxtimesTopLeBottom": false,
+        "holds": true,
+        "mode": "vacuous"
+      },
+      "FG2": true,
+      "apsAxioms": {
+        "A1BoxMonotone": true,
+        "A1BoxtimesAntitone": true,
+        "A2TopLeBoxtimesBottom": true,
+        "A3CollisionCut": true,
+        "A3Counterexamples": [],
+        "A4BoxtimesLeBoxBoxtimes": true,
+        "A4Counterexamples": [],
+        "A124Core": true,
+        "APS": true
+      },
+      "completionFixedPoints": [
+        {
+          "cut": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "display": "{ 0, a, b, c }",
+          "principal": false,
+          "principalElement": null,
+          "reflected": false
+        }
+      ]
+    },
+    "g2APSSeparation": {
+      "order": "0<=0;0<=a;0<=b;0<=c;a<=a;a<=b;b<=b;c<=c",
+      "bottom": "0",
+      "top": "a",
+      "isLattice": false,
+      "boxtimes": {
+        "0": "b",
+        "a": "b",
+        "b": "0",
+        "c": "0"
+      },
+      "box": {
+        "0": "0",
+        "a": "0",
+        "b": "b",
+        "c": "0"
+      },
+      "G2": {
+        "antecedentBoxtimesTopLeBottom": false,
+        "holds": true,
+        "mode": "vacuous"
+      },
+      "FG2": true,
+      "apsAxioms": {
+        "A1BoxMonotone": true,
+        "A1BoxtimesAntitone": true,
+        "A2TopLeBoxtimesBottom": true,
+        "A3CollisionCut": true,
+        "A3Counterexamples": [],
+        "A4BoxtimesLeBoxBoxtimes": true,
+        "A4Counterexamples": [],
+        "A124Core": true,
+        "APS": true
+      },
+      "completionFixedPoints": [
+        {
+          "cut": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "display": "{ 0, a, b, c }",
+          "principal": false,
+          "principalElement": null,
+          "reflected": false
+        }
+      ]
+    },
+    "apsButNotG2Separation": {
+      "order": "0<=0;0<=a;0<=b;0<=c;a<=a;b<=b;c<=c",
+      "bottom": "0",
+      "top": "a",
+      "isLattice": false,
+      "boxtimes": {
+        "0": "a",
+        "a": "0",
+        "b": "0",
+        "c": "0"
+      },
+      "box": {
+        "0": "0",
+        "a": "a",
+        "b": "0",
+        "c": "0"
+      },
+      "G2": {
+        "antecedentBoxtimesTopLeBottom": true,
+        "holds": false,
+        "mode": "antecedent-true"
+      },
+      "FG2": false,
+      "apsAxioms": {
+        "A1BoxMonotone": true,
+        "A1BoxtimesAntitone": true,
+        "A2TopLeBoxtimesBottom": true,
+        "A3CollisionCut": true,
+        "A3Counterexamples": [],
+        "A4BoxtimesLeBoxBoxtimes": true,
+        "A4Counterexamples": [],
+        "A124Core": true,
+        "APS": true
+      },
+      "completionFixedPoints": [
+        {
+          "cut": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "display": "{ 0, a, b, c }",
+          "principal": false,
+          "principalElement": null,
+          "reflected": false
+        }
+      ]
+    },
+    "nonLatticeG2A2Separation": {
+      "order": "0<=0;0<=a;0<=b;0<=c;a<=a;a<=b;b<=b;c<=c",
+      "bottom": "0",
+      "top": "a",
+      "isLattice": false,
+      "boxtimes": {
+        "0": "b",
+        "a": "b",
+        "b": "0",
+        "c": "0"
+      },
+      "box": {
+        "0": "0",
+        "a": "0",
+        "b": "0",
+        "c": "0"
+      },
+      "G2": {
+        "antecedentBoxtimesTopLeBottom": false,
+        "holds": true,
+        "mode": "vacuous"
+      },
+      "FG2": true,
+      "apsAxioms": {
+        "A1BoxMonotone": true,
+        "A1BoxtimesAntitone": true,
+        "A2TopLeBoxtimesBottom": true,
+        "A3CollisionCut": true,
+        "A3Counterexamples": [],
+        "A4BoxtimesLeBoxBoxtimes": false,
+        "A4Counterexamples": [
+          {
+            "x": "0",
+            "boxtimesX": "b",
+            "boxBoxtimesX": "0"
+          },
+          {
+            "x": "a",
+            "boxtimesX": "b",
+            "boxBoxtimesX": "0"
+          }
+        ],
+        "A124Core": false,
+        "APS": false
+      },
+      "completionFixedPoints": [
+        {
+          "cut": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "display": "{ 0, a, b, c }",
+          "principal": false,
+          "principalElement": null,
+          "reflected": false
+        }
+      ]
+    }
+  },
+  "interpretation": {
+    "boundaryOutcome": "A four-element poset witness with separation+G2+A2 exists.",
+    "apsOutcome": "A four-element poset witness with separation+G2+finite A1-A4 APS exists.",
+    "sourceGap": "Residual operations and completion-stability hypotheses remain unchecked; the result is finite order/table evidence only."
+  },
+  "residuationStatus": "not checked",
+  "completionStabilityStatus": "not checked",
+  "checks": {
+    "enumeratedSomeBottomedPosets": true,
+    "searchedAllBoxTablesForSeparatingProfiles": true,
+    "countsAreMonotone": true,
+    "nonLatticeCountsBoundedByAllCounts": true
+  },
+  "overall": "PASS"
+}

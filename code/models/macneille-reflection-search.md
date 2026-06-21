@@ -179,3 +179,30 @@ G2+A2, G2+A124Core, or G2+finite A1-A4 APS on this carrier.
 This resolves the smallest-carrier G2 boundary only.  The next search target
 is a four-element carrier enumeration, keeping finite A1-A4 table checks
 separate from residual and completion-stability assumptions.
+
+## Pass 113 Four-Element Boundary Result
+
+Search report:
+[../../artifacts/reports/pass113-four-element-macneille-g2-boundary-check.json](../../artifacts/reports/pass113-four-element-macneille-g2-boundary-check.json).
+
+Explicit witness:
+[examples/four-element-g2-aps-nosynt.json](examples/four-element-g2-aps-nosynt.json).
+
+Standalone MacNeille report:
+[../../artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json](../../artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json).
+
+The Pass-113 search enumerates all labelled four-element posets with a unique
+bottom.  It finds that the Pass-112 A2 gate is only a three-element
+phenomenon.  The explicit witness has order `0<a<b` plus `0<c`, with `T=a`,
+`bottom=0`, `boxtimes(0)=boxtimes(a)=b`, `boxtimes(b)=boxtimes(c)=0`, and
+`Box(0)=Box(a)=Box(c)=0`, `Box(b)=b`.
+
+The witness has no syntactic fixed point and has the non-principal completed
+fixed cut `{ 0, a, b, c }` under `antitone-dual-lower-cut-v1`.  It satisfies
+finite A1-A4, G2, and FG2 as table checks.  The full labelled-poset search
+finds 2784 separation+G2+finite-APS tables across 240 refutability profiles
+and 36 posets.
+
+The next search target is not A2 but residual/completion stability: determine
+whether this witness can carry compatible tensor and residual operations, and
+whether A1-A4/G2/FG2 survive the chosen completion extension.
