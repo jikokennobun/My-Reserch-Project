@@ -1,0 +1,6 @@
+できる。ただしYouTube Studio APIはたぶん不要。
+「自分がYouTubeで開いた動画」を拾うなら、候補は3つ。
+1. 手動/半自動: URLを `視聴ログ` に投げる。今の設計で一番安定。
+2. Chrome履歴: ローカルの閲覧履歴から youtube URL を拾う。自動化はできるがプライバシー範囲が広い。
+3. ブラウザ拡張: YouTubeを開いた瞬間にDiscord/ローカルへ送る。リアルタイム性は一番高い。
+タイトル補完にはYouTube Data APIやoEmbedを使えばよくて、Studio APIではない。

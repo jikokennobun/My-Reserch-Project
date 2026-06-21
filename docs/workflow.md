@@ -96,6 +96,18 @@ Refresh the research-only index with:
 powershell -ExecutionPolicy Bypass -File .\code\scripts\index-obsidian-research.ps1
 ```
 
+## Discord Bridge
+
+Use [discord-obsidian-codex-bridge.md](discord-obsidian-codex-bridge.md) when
+you want Discord to act as the quick-capture and notification surface for daily
+reports, todo grooming, and research synthesis. Start with an outbound webhook
+digest, then add inbound bot commands only after the repository file contracts
+are stable.
+
+Use [daily-activity-automation.md](daily-activity-automation.md) for the current
+daily activity sources, Discord bot setup, YouTube capture, and full daily run
+command.
+
 ## PDF Collection
 
 For a new autonomous-research result, create the Markdown summary first, then run:

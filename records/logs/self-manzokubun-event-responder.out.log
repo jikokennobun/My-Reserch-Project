@@ -1,0 +1,57 @@
+[2026/06/20  3:16:01.48] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516169109409104075
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+[2026/06/20  3:17:22.78] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516169109409104075
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+[2026/06/20  3:18:05.08] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516169109409104075
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+[2026/06/20  3:22:55.31] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516169109409104075
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516169109409104075
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+[2026/06/20  3:23:44.93] Self-Manzokubun event responder stopped. ExitCode=123
+[2026/06/20  3:24:00.52] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516169109409104075
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516169109409104075
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+[2026/06/20  3:25:11.88] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+[2026/06/20  3:27:50.69] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+[2026/06/20  4:10:21.36] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+Processed Discord Codex commands: todo=0, done=0, watch=0, mood=0, research=0, skipped=0.
+[2026/06/20  4:33:54.04] Self-Manzokubun event responder stopped. ExitCode=-1
+[2026/06/20  4:37:47.57] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+WARNING: Self-Manzokubun event responder stopped with an error: Set DISCORD_BOT_TOKEN or pass -BotToken.
+Restarting Discord event listener in 5 second(s). Restart count: 1
+WARNING: Self-Manzokubun event responder stopped with an error: Set DISCORD_BOT_TOKEN or pass -BotToken.
+Restarting Discord event listener in 8 second(s). Restart count: 2

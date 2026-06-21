@@ -1,0 +1,4 @@
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.

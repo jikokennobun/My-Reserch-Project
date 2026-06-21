@@ -1,53 +1,97 @@
 param(
     [string]$VaultRoot = (Join-Path ([Environment]::GetFolderPath("MyDocuments")) "Mr.Jikokennobun"),
-    [string]$RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+    [string]$RepositoryRoot
 )
 
 $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 $OutputEncoding = [Console]::OutputEncoding
 
-$includedRoots = @(
+function New-UnicodeString {
+    param([int[]]$CodePoints)
+
+    $chars = foreach ($codePoint in $CodePoints) {
+        [char]$codePoint
+    }
+    return -join $chars
+}
+
+$ScriptRoot = if (-not [string]::IsNullOrWhiteSpace($PSScriptRoot)) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Path }
+if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
+    $RepositoryRoot = (Resolve-Path (Join-Path $ScriptRoot "..\..")).Path
+}
+
+$vault = Resolve-Path $VaultRoot
+
+$researchPresentationRoot = New-UnicodeString @(0x7814, 0x7A76, 0x7D39, 0x4ECB)
+$excludedSelfReflection = New-UnicodeString @(0x81EA, 0x5DF1, 0x7701, 0x5BDF)
+$excludedFantasy = New-UnicodeString @(0x5984, 0x60F3)
+$excludedBookWish = New-UnicodeString @(0x66F8, 0x304D, 0x305F, 0x3044, 0x672C)
+
+$baseIncludedRoots = @(
     "Research",
     "Research-memo",
     "References",
     "Logic & Logic",
     "Proof_memo",
     "Tex",
-    "研究紹介"
+    $researchPresentationRoot
 )
 
+$includedRoots = New-Object 'System.Collections.Generic.List[string]'
+foreach ($rootName in $baseIncludedRoots) {
+    if (Test-Path (Join-Path $vault.Path $rootName)) {
+        $includedRoots.Add($rootName)
+    }
+}
+
+$presentationRoots = Get-ChildItem -LiteralPath $vault.Path -Directory |
+    Where-Object { $_.Name -eq $researchPresentationRoot -or $_.Name -like "*presentation*" -or $_.Name -like "*Presentation*" }
+foreach ($dir in $presentationRoots) {
+    if (-not $includedRoots.Contains($dir.Name)) {
+        $includedRoots.Add($dir.Name)
+    }
+}
+
 $excludedNamePatterns = @(
-    "自己省察",
-    "妄想",
+    $excludedSelfReflection,
+    $excludedFantasy,
     "Song",
-    "書きたい本"
+    $excludedBookWish,
+    "Diary",
+    "Daily",
+    "Journal",
+    "health",
+    "mental",
+    "finance",
+    "life-planning"
 )
 
 function Get-Category {
     param(
         [string]$Root,
-        [string]$Title
+        [string]$Title,
+        [string]$PresentationRoot
     )
 
     $text = "$Root $Title"
 
     if ($Root -eq "References") { return "Literature" }
     if ($Root -eq "Proof_memo") { return "Proof memo" }
-    if ($Root -eq "研究紹介") { return "Research presentation" }
-    if ($text -match "APS|AbProv|抽象的証明可能|G2|FG2|MND|MN4|GL|K4|証明可能|可証性|無矛盾|Gödel|Löb|Rosser") {
+    if ($Root -eq $PresentationRoot -or $Root -like "*presentation*" -or $Root -like "*Presentation*") { return "Research presentation" }
+    if ($text -match "APS|AbProv|G2|FG2|MND|MN4|GL|K4|Godel|Gödel|Loeb|Lob|Löb|Rosser") {
         return "APS/G2/provability"
     }
-    if ($text -match "自己言及|相互言及|不動点|固定点|Lawvere|Smullyan|対角") {
+    if ($text -match "Lawvere|Smullyan|fixed.?point|self.?reference") {
         return "Self-reference/fixed point"
     }
-    if ($text -match "圏|AAL|代数|普遍代数|Substructural|構造|強制") {
+    if ($text -match "AAL|algebra|Substructural|category|categorical") {
         return "Algebra/categorical logic"
     }
-    if ($text -match "Domain|Scott|位相|topolog|連続") {
+    if ($text -match "Domain|Scott|topolog|topology") {
         return "Domain/topology"
     }
-    if ($text -match "論理|Logic|計算可能性|記述集合論|真理") {
+    if ($text -match "Logic|proof|provability") {
         return "Logic"
     }
 
@@ -79,7 +123,6 @@ function Get-RelativePathCompat {
     return $FullPath
 }
 
-$vault = Resolve-Path $VaultRoot
 $items = @()
 
 foreach ($rootName in $includedRoots) {
@@ -99,7 +142,7 @@ foreach ($rootName in $includedRoots) {
 
         $items += [pscustomobject]@{
             Title = $title
-            Category = Get-Category -Root $rootName -Title $title
+            Category = Get-Category -Root $rootName -Title $title -PresentationRoot $researchPresentationRoot
             Root = $rootName
             Extension = $file.Extension.TrimStart(".")
             RelativePath = $relativeToVault
@@ -198,6 +241,4 @@ $lines -join "`n" | Set-Content -Path $mdPath -Encoding UTF8
 Write-Host "Indexed $($items.Count) research file(s)."
 Write-Host "CSV: $csvPath"
 Write-Host "Markdown: $mdPath"
-
-
 

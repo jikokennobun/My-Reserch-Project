@@ -1,0 +1,59 @@
+{
+  "categoryRenames": [
+    { "id": "1515810076999422122", "name": "日報・月次", "envPrefix": "DISCORD_DAILY_REPORT_CATEGORY" },
+    { "id": "1515853497176817763", "name": "通知・予定", "envPrefix": "DISCORD_MAIL_ANNOUNCEMENT_CATEGORY" },
+    { "id": "1515294260440731809", "name": "研究・数学", "envPrefix": "DISCORD_RESEARCH_CATEGORY" },
+    { "id": "1516164506554863767", "name": "大学・仕事", "envPrefix": "DISCORD_UNIVERSITY_WORK_CATEGORY" },
+    { "id": "1515858169526620270", "name": "趣味・創作", "envPrefix": "DISCORD_HOBBY_CREATIVE_CATEGORY" },
+    { "id": "1515859982711656509", "name": "SNS・外部", "envPrefix": "DISCORD_SNS_EXTERNAL_CATEGORY" },
+    { "id": "1514540748232720495", "name": "雑談・入口", "envPrefix": "DISCORD_GENERAL_CATEGORY" }
+  ],
+  "ensureCategories": [
+    { "name": "生活ログ", "envPrefix": "DISCORD_LIFE_LOG_CATEGORY" },
+    { "name": "AI・自動化", "envPrefix": "DISCORD_AI_AUTOMATION_CATEGORY" }
+  ],
+  "moves": [
+    { "id": "1515833671410516121", "name": "2026-6", "category": "日報・月次" },
+    { "id": "1515810167726411926", "name": "2026", "category": "日報・月次" },
+
+    { "id": "1516582846846734376", "name": "活動ログ", "category": "生活ログ" },
+    { "id": "1516511507804848139", "name": "やった", "category": "生活ログ" },
+    { "id": "1515866211559145482", "name": "思った", "category": "生活ログ" },
+    { "id": "1515825949055127625", "name": "食", "category": "生活ログ" },
+    { "id": "1515841392075866294", "name": "視聴ログ", "category": "生活ログ" },
+    { "id": "1515844263173165298", "name": "気分ログ", "category": "生活ログ" },
+    { "id": "1515844267698819223", "name": "起床ログ", "category": "生活ログ" },
+    { "id": "1515844270991343667", "name": "振り返り", "category": "生活ログ" },
+
+    { "id": "1515860953558810634", "name": "codex-command", "category": "AI・自動化" },
+    { "id": "1516169109409104075", "name": "ai-chat", "category": "AI・自動化" },
+    { "id": "1516830527687098388", "name": "自己満足文", "category": "AI・自動化" },
+
+    { "id": "1515930089982791690", "name": "カレンダー通知", "category": "通知・予定" },
+    { "id": "1515853501790556301", "name": "大学メール通知", "category": "通知・予定" },
+    { "id": "1515853510988796046", "name": "塾講師メール通知", "category": "通知・予定" },
+    { "id": "1516169206004187388", "name": "mail-timeline", "category": "通知・予定" },
+
+    { "id": "1515294310247960576", "name": "memo", "category": "研究・数学" },
+    { "id": "1515812956095385610", "name": "最近の興味", "category": "研究・数学" },
+    { "id": "1515844491414605904", "name": "preprint", "category": "研究・数学" },
+    { "id": "1515873183545294928", "name": "研究成果", "category": "研究・数学" },
+    { "id": "1516841301117632523", "name": "私的議論", "category": "研究・数学" },
+    { "id": "1514542756092055673", "name": "comm-math-for-ai", "category": "研究・数学" },
+    { "id": "1515262028586025061", "name": "下剋上院進", "category": "研究・数学" },
+
+    { "id": "1515436298779754656", "name": "大学の勉強", "category": "大学・仕事" },
+    { "id": "1516164653670207620", "name": "課題", "category": "大学・仕事" },
+    { "id": "1515870405221683350", "name": "インターン情報", "category": "大学・仕事" },
+
+    { "id": "1515863956286341160", "name": "tweet-memo", "category": "SNS・外部" },
+    { "id": "1515935242463088690", "name": "転送", "category": "SNS・外部" },
+    { "id": "1515850076126449806", "name": "others", "category": "SNS・外部" },
+
+    { "id": "1515873340416331796", "name": "試作品", "category": "趣味・創作" },
+    { "id": "1515873538362441829", "name": "アイデア", "category": "趣味・創作" },
+    { "id": "1515870553016238290", "name": "アニメ", "category": "趣味・創作" },
+    { "id": "1515930094927872131", "name": "見たいもの", "category": "趣味・創作" },
+    { "id": "1515870703608401920", "name": "小説", "category": "趣味・創作" }
+  ]
+}

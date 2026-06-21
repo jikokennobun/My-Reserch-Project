@@ -1,0 +1,27 @@
+いいところに目を付けてる。Beklemishev と Shamkanov は、かなり近いけど見る角度が違う。
+
+見立て:
+Beklemishev は「証明可能性を階層化して、それを反射原理・順序数解析に使う」側。Shamkanov は「GL/GLP の証明そのものを、循環証明やシーケント計算として扱う」側、という感じ。
+
+式でいうと:
+GL の核は
+```text
+□(□A -> A) -> □A
+```
+で、GLP では証明可能性を `[0], [1], [2], ...` みたいに階層化する。Beklemishev 的には、この階層から反射原理の進行列や ordinal notation が出てくる。かなり雑に言うと、
+```text
+provability logic -> reflection calculus -> ordinal analysis
+```
+のルート。
+
+Shamkanov は、GL の「Lob 的な自己参照」を証明図の循環として見る方向が面白い。木ではなくグラフっぽい証明を許して、循環がちゃんと進行条件を満たすなら健全、というノリ。
+
+出典候補:
+- [SEP: Provability Logic](https://plato.stanford.edu/entries/logic-provability/) - GL、固定点定理、PAとの関係の入口。
+- [Beklemishev et al., On provability logics with linearly ordered modalities](https://arxiv.org/abs/1210.4809) - GLPを線形順序付きモダリティへ一般化。
+- [Beklemishev & Gabelaia, Topological completeness of GLP](https://arxiv.org/abs/1106.5693) - GLPの位相意味論側。
+- [Shamkanov, Circular Proofs for Gödel-Löb Logic](https://arxiv.org/abs/1401.4002) - 循環証明でGLを見る代表的入口。
+- [Fernández-Duque & Hermo Reyes, Beklemishev's Autonomous Provability Calculus](https://arxiv.org/abs/2008.13445) - Beklemishev系のordinal notation/BCの後続文献。
+
+次の一手:
+まずは `GL -> GLP -> Reflection Calculus -> Circular proofs for GL` の順に読むとよさそう。Codexに頼むなら「Beklemishevの反射計算とShamkanovの循環証明を、固定点定理/第二不完全性との関係でサーベイして」と投げるのがいい。

@@ -1,0 +1,18 @@
+いいテーマ。第二不完全性定理の抽象化は、だいたい
+
+`固定点/対角化 + 証明可能性述語 + 導出可能性条件`
+
+を、算術からどこまで切り離せるか、という研究になる。
+
+式でいうと、古典的には
+`T \vdash Con(T) -> T \vdash contradiction`
+を避けたいのに、Lob条件っぽいものがあると
+`T \vdash Prov_T(\ulcorner A \urcorner) -> A`
+から自己崩壊が起きる。
+
+読むならまず:
+- [Beklemishev-Shamkanov, abstract second incompleteness](https://arxiv.org/abs/1602.05728): 収縮規則を外すと何が壊れるかが近い。
+- [SEP: Provability Logic](https://plato.stanford.edu/entries/logic-provability/): GL/Lobの地図。
+- [GLP with linearly ordered modalities](https://arxiv.org/abs/1210.4809): 多段階の証明可能性・反省原理方面。
+
+あなたの関心なら「第二不完全性 = 固定点だけでなく、収縮・反省・証明可能性演算子の相互作用」と見るのが良さそう。
