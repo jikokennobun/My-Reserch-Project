@@ -1,0 +1,505 @@
+{
+  "pass": 106,
+  "title": "Stackification obstruction for primitive orientations",
+  "A_deletion_defect": {
+    "statement": "Coordinate deletion has additive defect delta_{T,S}(d), and restriction is defined only when the defect vanishes and primitivity survives.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "target_orientation": [
+          1,
+          1,
+          -2
+        ],
+        "deleted_values": [
+          1,
+          1
+        ],
+        "removed_values": [
+          -2
+        ],
+        "additive_defect": 2,
+        "removed_sum": -2,
+        "total_sum_zero": true,
+        "defect_identity_ok": true,
+        "coordinate_restriction_is_orientation": false,
+        "failure_reason": "additive_defect_nonzero"
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "target_orientation": [
+          1,
+          -1,
+          0
+        ],
+        "deleted_values": [
+          1,
+          -1
+        ],
+        "removed_values": [
+          0
+        ],
+        "additive_defect": 0,
+        "removed_sum": 0,
+        "total_sum_zero": true,
+        "defect_identity_ok": true,
+        "coordinate_restriction_is_orientation": true,
+        "failure_reason": "valid_partial_restriction"
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_orientation": [
+          2,
+          -2,
+          1,
+          -1
+        ],
+        "deleted_values": [
+          2,
+          -2
+        ],
+        "removed_values": [
+          1,
+          -1
+        ],
+        "additive_defect": 0,
+        "removed_sum": 0,
+        "total_sum_zero": true,
+        "defect_identity_ok": true,
+        "coordinate_restriction_is_orientation": false,
+        "failure_reason": "primitivity_defect"
+      }
+    ],
+    "deletion_defect_formula_ok": true,
+    "partial_restriction_domain_ok": true
+  },
+  "B_repair_choices": {
+    "statement": "Repairing a nonzero defect requires choosing a section of the summation map; different choices can give different orientation lines.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "target_orientation": [
+          1,
+          1,
+          -2
+        ],
+        "deleted_values": [
+          1,
+          1
+        ],
+        "additive_defect": 2,
+        "first_prime_repair": [
+          -1,
+          1
+        ],
+        "last_prime_repair": [
+          1,
+          -1
+        ],
+        "both_repaired_are_orientations": true,
+        "repairs_are_equal": false,
+        "repairs_same_antipode_line": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_orientation": [
+          1,
+          1,
+          1,
+          -3
+        ],
+        "deleted_values": [
+          1,
+          1,
+          1
+        ],
+        "additive_defect": 3,
+        "first_prime_repair": [
+          -2,
+          1,
+          1
+        ],
+        "last_prime_repair": [
+          1,
+          1,
+          -2
+        ],
+        "both_repaired_are_orientations": true,
+        "repairs_are_equal": false,
+        "repairs_same_antipode_line": false
+      }
+    ],
+    "repair_nonunique_ok": true
+  },
+  "C_no_symmetric_section": {
+    "statement": "A support-symmetric integer section would require |S| * k = 1, impossible for |S| > 1.",
+    "rows": [
+      {
+        "support_size": 2,
+        "equation": "2 * k = 1",
+        "integer_solution_exists": false,
+        "support_symmetric_section_exists": false
+      },
+      {
+        "support_size": 3,
+        "equation": "3 * k = 1",
+        "integer_solution_exists": false,
+        "support_symmetric_section_exists": false
+      },
+      {
+        "support_size": 4,
+        "equation": "4 * k = 1",
+        "integer_solution_exists": false,
+        "support_symmetric_section_exists": false
+      },
+      {
+        "support_size": 5,
+        "equation": "5 * k = 1",
+        "integer_solution_exists": false,
+        "support_symmetric_section_exists": false
+      }
+    ],
+    "no_symmetric_section_ok": true
+  },
+  "D_based_section_choice": {
+    "statement": "Based supports trivialize the additive defect, but changing or forgetting the basepoint destroys naturality.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_basepoint": 2,
+        "target_basepoint": 2,
+        "extension_of_source_section": [
+          1,
+          0,
+          0
+        ],
+        "target_section": [
+          1,
+          0,
+          0
+        ],
+        "natural_when_basepoint_preserved": true
+      },
+      {
+        "source_support": [
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_basepoint": 3,
+        "target_basepoint": 2,
+        "extension_of_source_section": [
+          0,
+          1,
+          0
+        ],
+        "target_section": [
+          1,
+          0,
+          0
+        ],
+        "natural_when_basepoint_preserved": false
+      }
+    ],
+    "based_section_choice_ok": true
+  },
+  "E_colimit_universal_property": {
+    "statement": "Zero-extension-compatible families factor through the colimit key given by trimming padded zero coordinates.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "extended_orientation": [
+          -1,
+          1,
+          0
+        ],
+        "source_colimit_key": [
+          [
+            2,
+            3
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "target_colimit_key": [
+          [
+            2,
+            3
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "zero_extension_preserves_colimit_key": true,
+        "factorization_label": "F((2, 3), (-1, 1))"
+      },
+      {
+        "source_support": [
+          2,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "extended_orientation": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "source_colimit_key": [
+          [
+            2,
+            5
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "target_colimit_key": [
+          [
+            2,
+            5
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "zero_extension_preserves_colimit_key": true,
+        "factorization_label": "F((2, 5), (-1, 1))"
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "extended_orientation": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "source_colimit_key": [
+          [
+            2,
+            5
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "target_colimit_key": [
+          [
+            2,
+            5
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "zero_extension_preserves_colimit_key": true,
+        "factorization_label": "F((2, 5), (-1, 1))"
+      }
+    ],
+    "colimit_universal_property_ok": true
+  },
+  "F_antipode_local_system": {
+    "statement": "The antipode quotient identifies c and -c, while the boundary actions remain distinct; this is the BZ/2 local system.",
+    "rows": [
+      {
+        "support": [
+          2,
+          3
+        ],
+        "orientation": [
+          -1,
+          1
+        ],
+        "line_key": [
+          [
+            2,
+            3
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "antipode_line_key": [
+          [
+            2,
+            3
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "quotient_identifies_antipodes": true,
+        "boundary_actions_distinct": true,
+        "local_system_needed_after_quotient": true
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "orientation": [
+          -2,
+          1,
+          1
+        ],
+        "line_key": [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            -2,
+            1,
+            1
+          ]
+        ],
+        "antipode_line_key": [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            -2,
+            1,
+            1
+          ]
+        ],
+        "quotient_identifies_antipodes": true,
+        "boundary_actions_distinct": true,
+        "local_system_needed_after_quotient": true
+      }
+    ],
+    "antipode_local_system_ok": true
+  },
+  "G_package_verdict": {
+    "statement": "The correct package is a span-stack/left-Kan colimit, not a plain restriction sheaf of primitive orientations.",
+    "row": {
+      "restriction_sheaf_possible_without_choices": false,
+      "obstruction_components": [
+        "additive defect delta_{T,S}(d)",
+        "possible primitivity loss after coordinate deletion",
+        "noncanonical choice of a section of Sigma_S: Z^S -> Z",
+        "loss of sign after antipode quotient unless BZ/2 local system is retained"
+      ],
+      "universal_property": "Every zero-extension-compatible family from finite orientations factors uniquely through the colimit of primitive finitely supported zero-sum functions modulo padded zeros.",
+      "antipode_package": "The quotient [c]={c,-c} is the coarse orientation line; the boundary sign is a BZ/2 local system over that quotient.",
+      "degree_zero_weyl_created": false,
+      "next_task": "Model correction choices as a torsor under ker(Sigma_S) and test whether the support-defect cocycle matches the Rosser/cosheaf phantom pattern."
+    },
+    "package_verdict_ok": true
+  },
+  "checks": {
+    "deletion_defect_formula_ok": true,
+    "partial_restriction_domain_ok": true,
+    "repair_nonunique_ok": true,
+    "no_symmetric_section_ok": true,
+    "based_section_choice_ok": true,
+    "colimit_universal_property_ok": true,
+    "antipode_local_system_ok": true,
+    "package_verdict_ok": true
+  },
+  "overall": "PASS"
+}

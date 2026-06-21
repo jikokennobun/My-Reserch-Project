@@ -6,8 +6,27 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 106
-- Last pass note: Pass 105 (2026-06-21) separated the support-descent
+- Current pass: 107
+- Last pass note: Pass 106 (2026-06-21) computed the obstruction to turning
+  primitive orientations into a restriction sheaf over finite supports.  For
+  $S\subseteq T$ and $d\in\mathcal O_T$, coordinate deletion has additive
+  defect
+  $$\Delta_{T,S}(d)=\sum_{p\in S}d_p=-\sum_{p\in T\setminus S}d_p.$$
+  Restriction to $\mathcal O_S$ is defined only on the partial domain where
+  this defect vanishes and the deleted vector remains primitive; the example
+  $(2,-2,1,-1)$ on $\{2,3,5,7\}$ has zero additive defect on $\{2,3\}$ but
+  loses primitivity.  Repairing nonzero defect requires choosing a section of
+  $\Sigma_S:\mathbb Z^S\to\mathbb Z$, and no support-symmetric integer
+  section exists for $|S|>1$ because it would require $|S|k=1$.  Based
+  supports trivialize this defect but make the basepoint extra structure.
+  Therefore the universal object is the left-Kan/span colimit of
+  zero-extension-compatible finite orientations, i.e. primitive finitely
+  supported zero-sum functions modulo padded zeros, with the antipode quotient
+  $[c]=\{c,-c\}$ carrying a residual $B\mathbb Z/2$ boundary-line local
+  system.  Machine-verified `check-pass106.py` ->
+  `pass106-stackification-obstruction-primitive-orientations-check.json`
+  PASS. Counter 106->107.
+- Earlier note: Pass 105 (2026-06-21) separated the support-descent
   operations for all-prime primitive orientations.  For finite supports
   $S\subseteq T$, zero-extension
   $$e_{S,T}:\mathcal O_S\to\mathcal O_T$$
@@ -12128,3 +12147,126 @@ Next step:
 Pass 106 should compute the obstruction to stackifying primitive
 orientations over the finite-support poset with restriction maps, and state
 the universal property of the span-stack/left-Kan colimit package.
+
+### Pass 106 - 2026-06-21 JST
+
+Focus:
+Compute the obstruction to stackifying primitive orientations over finite
+supports with restriction maps, and state the universal property of the
+span-stack/left-Kan colimit package.
+
+Proposer:
+The obstruction is already visible before any higher stack language is
+needed.  For $S\subseteq T$ and $d\in\mathcal O_T$, coordinate deletion gives
+a vector $d|_S\in\mathbb Z^S$ whose additive defect is
+$$
+\Delta_{T,S}(d)=\sum_{p\in S}d_p.
+$$
+Since $d$ is zero-sum on $T$,
+$$
+\Delta_{T,S}(d)=-\sum_{p\in T\setminus S}d_p.
+$$
+Thus naive restriction lands in $\mathcal O_S$ only if
+$$
+\Delta_{T,S}(d)=0
+\quad\text{and}\quad
+\gcd_{p\in S}(d_p)=1.
+$$
+The second condition is independent: the vector
+$$
+(2,-2,1,-1)\in\mathcal O_{\{2,3,5,7\}}
+$$
+has zero additive defect on $\{2,3\}$, but restricts to $(2,-2)$, which is
+not primitive.
+
+Skeptic:
+One might try to repair a nonzero defect by subtracting it from one chosen
+coordinate, but this is exactly the missing choice.  A repair is a section of
+the summation map
+$$
+\Sigma_S:\mathbb Z^S\to\mathbb Z,\qquad
+(a_p)\mapsto\sum_{p\in S}a_p.
+$$
+Choosing the first prime, last prime, or any preferred basepoint gives
+different repaired orientations.  These can even represent different
+antipode-quotient lines, so the ambiguity is not just the existing
+$\mathbb Z/2$ sign.
+
+Formalist:
+No support-symmetric integral section of $\Sigma_S$ exists for $|S|>1$.  If
+such a section were symmetric, the image of $1\in\mathbb Z$ would be a
+constant vector $(k,\dots,k)$, forcing
+$$
+|S|k=1,
+$$
+which has no integer solution.  Therefore a restriction sheaf can be made
+only after adding extra structure, such as a basepoint or ordering.  The
+forgetful passage back to unbased finite supports loses naturality.
+
+The universal property should therefore be stated covariantly.  Let
+$$
+\mathcal O_{\mathbb P}^{\mathrm{fin}}
+=\operatorname*{colim}_{S\in\mathcal P_{\mathrm{fin}}(\mathbb P)}
+\mathcal O_S
+$$
+under zero-extension.  A family of maps
+$F_S:\mathcal O_S\to X$ factors uniquely through
+$\mathcal O_{\mathbb P}^{\mathrm{fin}}$ exactly when
+$$
+F_T(e_{S,T}c)=F_S(c)
+$$
+for every $S\subseteq T$.  The colimit representative is obtained by
+trimming padded zero coordinates.  The antipode quotient
+$[c]=\{c,-c\}$ is the coarse orientation line, while the distinction between
+$+\delta_\epsilon$ and $-\delta_\epsilon$ remains the $B\mathbb Z/2$
+boundary-line local system.
+
+> **Theorem 106a (restriction defect).** Coordinate deletion
+> $d\mapsto d|_S$ has obstruction
+> $\Delta_{T,S}(d)=\sum_{p\in S}d_p$.  It defines a primitive restriction
+> only on the partial domain where $\Delta_{T,S}(d)=0$ and primitivity
+> survives.
+>
+> **Theorem 106b (no symmetric repair).** Repairing nonzero defect requires a
+> section of $\Sigma_S:\mathbb Z^S\to\mathbb Z$.  No support-symmetric
+> integer section exists for $|S|>1$.
+>
+> **Theorem 106c (universal colimit).** The all-prime primitive-orientation
+> object has the left-Kan/filtered-colimit universal property for
+> zero-extension-compatible families.  It is primitive finitely supported
+> zero-sum functions modulo padded zeros.
+>
+> **Theorem 106d (quotient plus local system).** The antipode quotient gives
+> orientation lines, but the functional-equation sign remains as the
+> $B\mathbb Z/2$ local system on the boundary/Yoneda line; no degree-$0$
+> Weyl map is created.
+
+Machine verification (`code/scripts/check-pass106.py` ->
+`artifacts/reports/pass106-stackification-obstruction-primitive-orientations-check.json`,
+PASS): the checker verifies the deletion-defect identity, the partial
+restriction domain including additive and primitivity failures, nonunique
+repairs by different summation sections, nonexistence of support-symmetric
+integer sections, basepoint-dependence of chosen repairs, the zero-extension
+colimit universal property, and the need for the $B\mathbb Z/2$ local system
+after antipode quotient.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-106
+  entry; State counter $106\to107$.
+- `records/logs/research-log.md`: Pass-106 entry.
+- `research/definitions.md`: added the stackification obstruction and
+  left-Kan/span colimit universal property.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-106 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  resolved the stackification-obstruction task and retargeted the next pass
+  to the correction torsor/cohomology of support-defect repairs.
+- `code/scripts/check-pass106.py`,
+  `artifacts/reports/pass106-stackification-obstruction-primitive-orientations-check.json`:
+  new.
+- `artifacts/pdf/stackification-obstruction-primitive-orientations-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 107 should model correction choices as torsors under
+$\ker\Sigma_S$ and test whether the support-defect cocycle matches the
+Rosser/cosheaf phantom pattern or is only an ordinary choice obstruction.

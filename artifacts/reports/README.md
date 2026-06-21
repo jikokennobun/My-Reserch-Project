@@ -37,6 +37,16 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass106-stackification-obstruction-primitive-orientations-check.json`:
+  verifies the Pass-106 finite certificate for the stackification obstruction
+  of primitive orientations. It checks the deletion-defect identity
+  `Delta_{T,S}(d) = sum_S d = -sum_{T\S} d`; the partial restriction domain,
+  including separate additive and primitivity failures; nonunique repairs by
+  different sections of `Sigma_S: Z^S -> Z`; absence of a support-symmetric
+  integer section for `|S| > 1`; basepoint-dependence of chosen sections; the
+  zero-extension colimit universal property; and the need for the `BZ/2`
+  boundary-line local system after antipode quotient.
+
 - `pass105-support-descent-primitive-orientations-check.json`: verifies the
   Pass-105 finite certificate for support descent of all-prime primitive
   orientations. It checks that zero-extension preserves zero-sum,

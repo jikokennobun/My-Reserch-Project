@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 106)
+
+- Computed the stackification obstruction for primitive orientations over
+  finite supports.  Coordinate deletion has additive defect
+  $\Delta_{T,S}(d)=\sum_{p\in S}d_p=-\sum_{p\in T\setminus S}d_p$, so
+  restriction is only partial; even zero additive defect can lose primitivity,
+  as $(2,-2,1,-1)$ restricts to $(2,-2)$.  Repairing nonzero defect requires
+  a section of $\Sigma_S:\mathbb Z^S\to\mathbb Z$, and no support-symmetric
+  integer section exists for $|S|>1$.  The correct universal statement is the
+  zero-extension left-Kan/filtered colimit of primitive finitely supported
+  zero-sum functions modulo padded zeros, with the antipode quotient carrying
+  the residual $B\mathbb Z/2$ boundary-line local system.  Added
+  checker/report and retargeted Pass 107 to correction torsors and the
+  possible support-defect cohomology class.
+
 ## 2026-06-21 (Research Project relay sync, morning no-delta verification)
 
 - Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root at `2026-06-21T10:04+09:00`. The ChatGPT Project artifact inbox exposed `3` supported PDF artifacts, with `0` copied or refreshed slide/deck imports. The central PDF manifest was refreshed and the local Google Drive PDF backup was updated.

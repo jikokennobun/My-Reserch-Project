@@ -1269,13 +1269,33 @@
   system rather than as a plain sheaf with restrictions.  Machine-verified
   `artifacts/reports/pass105-support-descent-primitive-orientations-check.json`
   (PASS).
-- **[New (Pass 105)]** **Stackification obstruction for primitive orientations.**
+- **[Resolved (Pass 106)]** **Stackification obstruction for primitive orientations.**
   Compute the precise obstruction to sheafifying or stackifying the
   primitive-orientation assignment over finite supports when restriction maps
   $\mathcal O_T\to\mathcal O_S$ are required.  Formulate the universal
   property of the correct span-stack/left-Kan colimit package and compare the
   antipode quotient $[c]=\{c,-c\}$ with a $B\mathbb Z/2$ classifying stack on
   the boundary line.
+  **Resolution:** coordinate deletion has additive defect
+  $\Delta_{T,S}(d)=\sum_{p\in S}d_p=-\sum_{p\in T\setminus S}d_p$.  It gives
+  a primitive restriction only on the partial domain where the defect
+  vanishes and the deleted vector remains primitive; primitivity can fail
+  separately, e.g. $(2,-2,1,-1)\mapsto(2,-2)$.  Repairing nonzero defect
+  requires a section of $\Sigma_S:\mathbb Z^S\to\mathbb Z$, and no
+  support-symmetric integer section exists for $|S|>1$.  The universal object
+  is the zero-extension filtered colimit/left Kan extension of primitive
+  finitely supported zero-sum functions modulo padded zeros, with the
+  antipode quotient retaining the $B\mathbb Z/2$ boundary-line local system.
+  Machine-verified
+  `artifacts/reports/pass106-stackification-obstruction-primitive-orientations-check.json`
+  (PASS).
+- **[New (Pass 106)]** **Correction torsors for support-defect repairs.**
+  Model choices of defect repair as torsors under
+  $\ker\Sigma_S=\{a\in\mathbb Z^S:\sum a_p=0\}$.  Compute transition
+  functions for these torsors along support inclusions, decide whether they
+  define a Cech/cosheaf cohomology class analogous to the Rosser phantom, and
+  test whether ordered or basepointed supports trivialize the class in a way
+  compatible with the antipode local system.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

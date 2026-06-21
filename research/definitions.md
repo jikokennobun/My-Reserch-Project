@@ -2670,3 +2670,68 @@ over finite supports with:
 It is not a plain sheaf of primitive orientations with restriction maps, and
 it still does not create a degree-$0$ Weyl/Fourier morphism
 $\epsilon\to\mathbb Q$.
+
+## Stackification obstruction for primitive orientations (Pass 106)
+
+For $S\subseteq T$ and $d\in\mathcal O_T$, coordinate deletion to $S$ has
+additive defect
+$$
+\Delta_{T,S}(d)=\sum_{p\in S}d_p.
+$$
+Because $d$ is zero-sum over $T$,
+$$
+\Delta_{T,S}(d)=-\sum_{p\in T\setminus S}d_p.
+$$
+Thus coordinate deletion defines a primitive restriction only on the partial
+domain where
+$$
+\Delta_{T,S}(d)=0
+\quad\text{and}\quad
+\gcd_{p\in S}(d_p)=1.
+$$
+The additive and primitivity obstructions are independent.  For example,
+$$
+(2,-2,1,-1)\in\mathcal O_{\{2,3,5,7\}}
+$$
+has zero additive defect on $\{2,3\}$ but restricts to $(2,-2)$, which is
+not primitive.
+
+Repairing a nonzero defect requires a section of the summation map
+$$
+\Sigma_S:\mathbb Z^S\to\mathbb Z,\qquad
+(a_p)\mapsto\sum_{p\in S}a_p.
+$$
+If a section were support-symmetric, the image of $1$ would be a constant
+vector $(k,\dots,k)$, forcing
+$$
+|S|k=1,
+$$
+which has no integer solution for $|S|>1$.  Based or ordered supports can
+choose a section, but the basepoint or order is extra structure and is not
+natural after forgetting it.
+
+Therefore the correct universal object is not a restriction sheaf.  It is
+the zero-extension colimit
+$$
+\mathcal O_{\mathbb P}^{\mathrm{fin}}
+=\operatorname*{colim}_{S\in\mathcal P_{\mathrm{fin}}(\mathbb P)}
+\mathcal O_S,
+$$
+formed under the maps $e_{S,T}$.  A family
+$F_S:\mathcal O_S\to X$ factors uniquely through this colimit exactly when
+$$
+F_T(e_{S,T}c)=F_S(c)
+$$
+for every $S\subseteq T$.  Concretely,
+$\mathcal O_{\mathbb P}^{\mathrm{fin}}$ is primitive finitely supported
+zero-sum integer functions on the prime set, modulo deletion of padded zeros.
+
+The antipode quotient
+$$
+[c]=\{c,-c\}
+$$
+is the coarse orientation line.  It forgets whether the boundary/Yoneda line
+is acted on by $+\delta_\epsilon$ or $-\delta_\epsilon$, so the
+$B\mathbb Z/2$ local system remains part of the all-prime package.  This
+obstruction analysis still creates no degree-$0$ Weyl/Fourier morphism
+$\epsilon\to\mathbb Q$.

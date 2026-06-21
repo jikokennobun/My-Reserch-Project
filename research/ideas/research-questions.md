@@ -42,23 +42,25 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 105 -> 106: stackification obstruction for primitive orientations)**
-  Pass 105 separated the support operations in the all-prime orientation
-  package.  Zero-extension
-  $e_{S,T}:\mathcal O_S\to\mathcal O_T$ is canonical, covariant,
-  primitive-preserving, antipode-compatible, and functorial along
-  $S\subseteq T$, while boundary support projection is canonical in the
-  opposite direction $T_T\to T_S$.  There is no total restriction map
-  $\mathcal O_T\to\mathcal O_S$, since deleting coordinates can destroy
-  zero-sum.  Hence all-prime primitive orientations form a filtered colimit
-  by zero-padding, best presented as a span-stack/Grothendieck object with
-  the Pass-104 $B\mathbb Z/2$ boundary-line local system.  Open:
-  (i) compute the exact obstruction to stackifying $\mathcal O_S$ over finite
-  supports if restriction maps are demanded;
-  (ii) formulate the universal property as a left Kan extension or span-stack
-  colimit over the support poset;
-  (iii) compare the antipode quotient $[c]=\{c,-c\}$ with a possible
-  $B\mathbb Z/2$ classifying stack over the all-prime support colimit.
+- **(Pass 106 -> 107: correction torsors for support-defect repairs)**
+  Pass 106 computed the obstruction to treating primitive orientations as a
+  restriction sheaf.  Coordinate deletion has additive defect
+  $\Delta_{T,S}(d)=\sum_{p\in S}d_p$, restriction is defined only when this
+  defect vanishes and primitivity survives, and repairing nonzero defect
+  requires choosing a section of $\Sigma_S:\mathbb Z^S\to\mathbb Z$.  No
+  support-symmetric integer section exists for $|S|>1$, while based supports
+  trivialize the defect only by adding extra structure.  The correct
+  universal object is the zero-extension filtered colimit/left Kan extension,
+  with the antipode quotient carrying a residual $B\mathbb Z/2$ boundary-line
+  local system.  Open:
+  (i) model the repair choices as torsors under $\ker\Sigma_S$ and compute
+  their transition functions along support inclusions;
+  (ii) decide whether the support-defect data defines a genuine Cech/cosheaf
+  cohomology class analogous to the Rosser phantom, or only an ordinary
+  noncanonical section choice;
+  (iii) test how ordered or basepointed supports trivialize the obstruction
+  and whether this trivialization is compatible with the antipode local
+  system.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and
