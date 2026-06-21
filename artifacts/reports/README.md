@@ -37,6 +37,16 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass109-barycentric-transition-denominator-check.json`: verifies the
+  Pass-109 finite certificate for barycentric transition denominators under
+  support inclusions. It checks the formula for
+  `tau_{S,T}=e_{S,T}s_bar,S-s_bar,T`; that the transition lies in
+  `K_T tensor Q`; that its exact denominator is `lcm(|S|, |T|)`; that a
+  conductor clears the transition exactly when it is divisible by that lcm;
+  that the minimally cleared vector is an integral primitive zero-sum vector;
+  that rational transitions satisfy the chain coboundary identity; and that
+  ordinary and signed finite CRT maps remain bijective.
+
 - `pass108-integral-equivariant-repair-section-check.json`: verifies the
   Pass-108 finite certificate for the integral equivariant obstruction to
   support-symmetric repair sections. It checks that the invariant lattice

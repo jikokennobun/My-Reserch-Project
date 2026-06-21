@@ -1327,13 +1327,33 @@
   independent of this denominator obstruction.  Machine-verified
   `artifacts/reports/pass108-integral-equivariant-repair-section-check.json`
   (PASS).
-- **[New (Pass 108)]** **Barycentric transition denominators under support inclusions.**
+- **[Resolved (Pass 109)]** **Barycentric transition denominators under support inclusions.**
   Compute the transition
   $e_{S,T}s_{\mathrm{bar},S}-s_{\mathrm{bar},T}$ for
   $S\subseteq T$ after tensoring with $\mathbb Q$, determine its denominator
   and kernel class, and compare the resulting rational support-normalization
   data with finite conductor/CRT denominator bookkeeping in the signed
   all-prime boundary package.
+  **Resolution:** if $|S|=n$ and $|T|=m$, then the transition has entries
+  $(m-n)/(nm)$ on $S$ and $-1/m$ on $T\setminus S$, so it lies in
+  $K_T\otimes\mathbb Q$.  Its exact denominator is
+  $\operatorname{lcm}(n,m)$.  A finite conductor $N$ clears it exactly when
+  $\operatorname{lcm}(n,m)\mid N$.  Clearing by the minimal denominator gives
+  a primitive integral zero-sum vector with entries $(m-n)/\gcd(n,m)$ on $S$
+  and $-n/\gcd(n,m)$ off $S$.  Chain transitions satisfy the rational
+  coboundary identity; finite CRT and signed CRT maps at clearing conductors
+  remain bijections, so this is normalized support-comparison data rather
+  than a new finite CRT cohomology class.  Machine-verified
+  `artifacts/reports/pass109-barycentric-transition-denominator-check.json`
+  (PASS).
+- **[New (Pass 109)]** **Conductor-cleared primitive transition vectors.**
+  Study the primitive vectors
+  $\eta_{S,T}=\operatorname{lcm}(|S|,|T|)\tau_{S,T}$ along support chains.
+  Determine their exact rescaling law under
+  $S\subset T\subset U$, whether their primitive lines or common-conductor
+  clearings form useful oriented-support edge data, and how this structure
+  interacts with the primitive repair locus inside the additive repair
+  torsors from Pass 107.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

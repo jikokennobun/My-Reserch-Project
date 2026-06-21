@@ -2846,3 +2846,64 @@ zero-extending $\frac1{|S|}\mathbf 1_S$ to $T$ differs from
 $\frac1{|T|}\mathbf 1_T$ by an element of
 $K_T\otimes\mathbb Q$.  The denominators of these rational transition
 classes are the next bookkeeping problem.
+
+## Barycentric support-transition denominators (Pass 109)
+
+For finite supports $S\subset T$, set $|S|=n$ and $|T|=m$.  The rational
+barycentric transition is
+$$
+\tau_{S,T}
+=e_{S,T}\left(\frac1n\mathbf 1_S\right)-\frac1m\mathbf 1_T
+\in\mathbb Q^T.
+$$
+Its coordinates are
+$$
+(\tau_{S,T})_p=
+\begin{cases}
+\frac{m-n}{nm}, & p\in S,\\[2mm]
+-\frac1m, & p\in T\setminus S.
+\end{cases}
+$$
+The sum is zero, so
+$$
+\tau_{S,T}\in K_T\otimes\mathbb Q.
+$$
+
+Let $g=\gcd(n,m)$, $n=ga$, and $m=gb$ with $\gcd(a,b)=1$.  The exact
+denominator of $\tau_{S,T}$ is
+$$
+\operatorname{den}(\tau_{S,T})=\operatorname{lcm}(n,m)=\frac{nm}{g}.
+$$
+Equivalently, a finite conductor $N$ clears $\tau_{S,T}$ iff
+$$
+\operatorname{lcm}(n,m)\mid N.
+$$
+
+The minimal integral clearing is
+$$
+\eta_{S,T}:=\operatorname{lcm}(n,m)\tau_{S,T}.
+$$
+It has coordinates
+$$
+(\eta_{S,T})_p=
+\begin{cases}
+\frac{m-n}{g}, & p\in S,\\[2mm]
+-\frac{n}{g}, & p\in T\setminus S.
+\end{cases}
+$$
+This vector is zero-sum and primitive, because its nonzero coordinate values
+are $b-a$ and $-a$, with $\gcd(b-a,a)=1$.
+
+For a chain $S\subset T\subset U$, the rational transitions satisfy
+$$
+e_{T,U}\tau_{S,T}+\tau_{T,U}=\tau_{S,U}.
+$$
+After clearing by any common conductor divisible by all three transition
+denominators, this identity holds integrally.  The individually primitive
+vectors $\eta_{S,T}$, however, carry different normalizing conductors, so
+their chain law requires rescaling.
+
+This denominator bookkeeping is distinct from finite CRT cohomology.  At any
+finite conductor $N$, the ordinary and signed CRT maps remain bijections; the
+denominator only says when the rational support transition has an integral
+zero-sum representative.

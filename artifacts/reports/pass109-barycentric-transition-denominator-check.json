@@ -1,0 +1,407 @@
+{
+  "pass": 109,
+  "title": "Barycentric transition denominators under support inclusions",
+  "A_transition_formula": {
+    "statement": "For |S|=n<|T|=m, tau_{S,T} has entries (m-n)/(nm) on S and -1/m on T\\S.",
+    "rows": [
+      {
+        "source_size": 2,
+        "target_size": 3,
+        "gcd_size": 1,
+        "transition": [
+          "1/6",
+          "1/6",
+          "-1/3"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 6,
+        "expected_denominator": 6,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          1,
+          1,
+          -2
+        ],
+        "expected_cleared_on_source": 1,
+        "expected_cleared_off_source": -2,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      },
+      {
+        "source_size": 2,
+        "target_size": 4,
+        "gcd_size": 2,
+        "transition": [
+          "1/4",
+          "1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 4,
+        "expected_denominator": 4,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "expected_cleared_on_source": 1,
+        "expected_cleared_off_source": -1,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      },
+      {
+        "source_size": 3,
+        "target_size": 5,
+        "gcd_size": 1,
+        "transition": [
+          "2/15",
+          "2/15",
+          "2/15",
+          "-1/5",
+          "-1/5"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 15,
+        "expected_denominator": 15,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          2,
+          2,
+          2,
+          -3,
+          -3
+        ],
+        "expected_cleared_on_source": 2,
+        "expected_cleared_off_source": -3,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      },
+      {
+        "source_size": 4,
+        "target_size": 6,
+        "gcd_size": 2,
+        "transition": [
+          "1/12",
+          "1/12",
+          "1/12",
+          "1/12",
+          "-1/6",
+          "-1/6"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 12,
+        "expected_denominator": 12,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          1,
+          1,
+          1,
+          1,
+          -2,
+          -2
+        ],
+        "expected_cleared_on_source": 1,
+        "expected_cleared_off_source": -2,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      },
+      {
+        "source_size": 4,
+        "target_size": 8,
+        "gcd_size": 4,
+        "transition": [
+          "1/8",
+          "1/8",
+          "1/8",
+          "1/8",
+          "-1/8",
+          "-1/8",
+          "-1/8",
+          "-1/8"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 8,
+        "expected_denominator": 8,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "expected_cleared_on_source": 1,
+        "expected_cleared_off_source": -1,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      },
+      {
+        "source_size": 5,
+        "target_size": 8,
+        "gcd_size": 1,
+        "transition": [
+          "3/40",
+          "3/40",
+          "3/40",
+          "3/40",
+          "3/40",
+          "-1/8",
+          "-1/8",
+          "-1/8"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 40,
+        "expected_denominator": 40,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          -5,
+          -5,
+          -5
+        ],
+        "expected_cleared_on_source": 3,
+        "expected_cleared_off_source": -5,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      },
+      {
+        "source_size": 6,
+        "target_size": 9,
+        "gcd_size": 3,
+        "transition": [
+          "1/18",
+          "1/18",
+          "1/18",
+          "1/18",
+          "1/18",
+          "1/18",
+          "-1/9",
+          "-1/9",
+          "-1/9"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 18,
+        "expected_denominator": 18,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -2,
+          -2,
+          -2
+        ],
+        "expected_cleared_on_source": 1,
+        "expected_cleared_off_source": -2,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      },
+      {
+        "source_size": 6,
+        "target_size": 10,
+        "gcd_size": 2,
+        "transition": [
+          "1/15",
+          "1/15",
+          "1/15",
+          "1/15",
+          "1/15",
+          "1/15",
+          "-1/10",
+          "-1/10",
+          "-1/10",
+          "-1/10"
+        ],
+        "transition_sum": "0",
+        "transition_in_kernel": true,
+        "exact_denominator": 30,
+        "expected_denominator": 30,
+        "denominator_formula_ok": true,
+        "conductor_clearance_rule_ok": true,
+        "cleared_transition": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          -3,
+          -3,
+          -3,
+          -3
+        ],
+        "expected_cleared_on_source": 2,
+        "expected_cleared_off_source": -3,
+        "cleared_integral_zero_sum": true,
+        "cleared_transition_primitive": true
+      }
+    ]
+  },
+  "B_chain_coboundary": {
+    "statement": "The rational transitions satisfy e_{T,U}tau_{S,T}+tau_{T,U}=tau_{S,U}; after any common clearing conductor the integral identity remains true.",
+    "rows": [
+      {
+        "source_size": 2,
+        "middle_size": 3,
+        "target_size": 5,
+        "rational_coboundary_identity_ok": true,
+        "endpoint_denominator": 10,
+        "common_conductor": 30,
+        "common_conductor_clears_all_terms": true,
+        "integral_identity_after_common_clearance_ok": true
+      },
+      {
+        "source_size": 2,
+        "middle_size": 4,
+        "target_size": 8,
+        "rational_coboundary_identity_ok": true,
+        "endpoint_denominator": 8,
+        "common_conductor": 8,
+        "common_conductor_clears_all_terms": true,
+        "integral_identity_after_common_clearance_ok": true
+      },
+      {
+        "source_size": 3,
+        "middle_size": 6,
+        "target_size": 10,
+        "rational_coboundary_identity_ok": true,
+        "endpoint_denominator": 30,
+        "common_conductor": 30,
+        "common_conductor_clears_all_terms": true,
+        "integral_identity_after_common_clearance_ok": true
+      },
+      {
+        "source_size": 4,
+        "middle_size": 6,
+        "target_size": 9,
+        "rational_coboundary_identity_ok": true,
+        "endpoint_denominator": 36,
+        "common_conductor": 36,
+        "common_conductor_clears_all_terms": true,
+        "integral_identity_after_common_clearance_ok": true
+      }
+    ]
+  },
+  "C_finite_conductor_crt": {
+    "statement": "The minimal conductor clearing tau_{S,T} is lcm(|S|,|T|); ordinary and signed CRT maps are still bijections at these finite conductors.",
+    "rows": [
+      {
+        "conductor": 4,
+        "prime_power_factors": [
+          4
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      },
+      {
+        "conductor": 6,
+        "prime_power_factors": [
+          2,
+          3
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      },
+      {
+        "conductor": 8,
+        "prime_power_factors": [
+          8
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      },
+      {
+        "conductor": 12,
+        "prime_power_factors": [
+          4,
+          3
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      },
+      {
+        "conductor": 15,
+        "prime_power_factors": [
+          3,
+          5
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      },
+      {
+        "conductor": 18,
+        "prime_power_factors": [
+          2,
+          9
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      },
+      {
+        "conductor": 30,
+        "prime_power_factors": [
+          2,
+          3,
+          5
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      },
+      {
+        "conductor": 40,
+        "prime_power_factors": [
+          8,
+          5
+        ],
+        "crt_map_is_bijection": true,
+        "signed_crt_map_is_bijection": true
+      }
+    ]
+  },
+  "D_verdict": {
+    "statement": "Barycentric transitions are normalized rational support comparison data, not a new finite CRT cohomology class.",
+    "row": {
+      "transition_class": "tau_{S,T}=e_{S,T}s_bar,S-s_bar,T is a rational K_T-valued coboundary transition with exact denominator lcm(|S|,|T|).",
+      "conductor_comparison": "A finite conductor N clears tau_{S,T} exactly when lcm(|S|,|T|) divides N; CRT shadows remain bijective and ordinary-acyclic after this clearance.",
+      "normalized_use": "Clearing the minimal denominator gives a primitive integral zero-sum vector on T, so the rational barycentric transition is a useful normalized comparison even without an integral symmetric section.",
+      "deferred_review": "The newest Claude Code review concerns MacNeille reflection checker defects; it is deferred because this pass follows the active support-transition line.",
+      "next_task": "Study the primitive conductor-cleared transition vectors along support chains and decide whether their rescaled cocycle law defines useful oriented-support edge data."
+    }
+  },
+  "checks": {
+    "transition_kernel_ok": true,
+    "exact_denominator_lcm_ok": true,
+    "conductor_clearance_rule_ok": true,
+    "cleared_transition_primitive_ok": true,
+    "chain_coboundary_ok": true,
+    "crt_bijection_unchanged_ok": true
+  },
+  "overall": "PASS"
+}

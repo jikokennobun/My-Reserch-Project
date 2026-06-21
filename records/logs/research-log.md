@@ -1,5 +1,21 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 109)
+
+- Computed barycentric transition denominators under support inclusions.  For
+  $S\subset T$, $|S|=n$, $|T|=m$, the transition
+  $e_{S,T}s_{\mathrm{bar},S}-s_{\mathrm{bar},T}$ has coordinates
+  $(m-n)/(nm)$ on $S$ and $-1/m$ on $T\setminus S$, so it lies in
+  $K_T\otimes\mathbb Q$ and has exact denominator
+  $\operatorname{lcm}(n,m)$.  Clearing this minimal denominator gives a
+  primitive integral zero-sum vector with entries $(m-n)/\gcd(n,m)$ on $S$
+  and $-n/\gcd(n,m)$ off $S$.  A finite conductor clears the transition
+  exactly when this lcm divides it; finite CRT and signed CRT shadows remain
+  bijective, so the transition is normalized rational support-comparison
+  data rather than a new finite CRT cohomology class.  Added checker/report
+  and retargeted Pass 110 to conductor-cleared primitive transition vectors
+  along support chains.
+
 ## 2026-06-21 (Autonomous discussion Pass 108)
 
 - Classified the integral equivariant obstruction for support-symmetric
