@@ -5906,3 +5906,78 @@ support-enlargement caveat.
 system into a pro/solid all-prime boundary object and decide whether the
 orientation double cover survives the all-prime limit or is absorbed by the
 local system on $\epsilon$.
+
+## Pass 104 - Signed pro/solid all-prime boundary object
+
+Pass 104 assembles the finite signed conductor system from Pass 103.  For
+each sign $\sigma\in\{\pm1\}$, the compatible residues
+$$
+b_N^\sigma=\sigma\bmod N
+$$
+define a point of the profinite completion:
+$$
+\{b_N^\sigma\}_N=\sigma\in\widehat{\mathbb Z}.
+$$
+
+This limit is a diagonal integer.  Therefore its image in the all-prime
+boundary group
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z
+$$
+is zero.  In particular, the two signs do not give two distinct points of
+$\epsilon$.  The orientation double cover visible before quotienting is not a
+nontrivial point-cover of the solid boundary.
+
+The sign survives in a different place: as monodromy of the boundary/Yoneda
+line.  The finite-adele boundary class
+$$
+\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0]
+$$
+spans the shifted generator
+$$
+D\epsilon\simeq\mathbb Q[-1].
+$$
+The local system acts by
+$$
+\delta_\epsilon\mapsto\sigma\delta_\epsilon.
+$$
+Thus the all-prime passage absorbs the sign as an $\epsilon$-point but keeps
+it as a $\mathbb Z/2$ action on the boundary line.
+
+The minimal categorical package is:
+
+- oriented-support action groupoid $(S,c)$ with zero-extension;
+- finite-conductor pro-system of signed CRT-isomorphism complexes;
+- $B\mathbb Z/2$ local system on the boundary/Yoneda line.
+
+This package carries support, conductor, and sign without creating a
+degree-$0$ Weyl/Fourier map $\epsilon\to\mathbb Q$.
+
+> **Theorem 104a (pro-sign limit).** The compatible finite conductor classes
+> $\{\sigma\bmod N\}_N$ limit to the diagonal integer
+> $\sigma\in\widehat{\mathbb Z}$.
+>
+> **Theorem 104b (absorption in $\epsilon$).** Both signs map to zero in
+> $\epsilon=\widehat{\mathbb Z}/\mathbb Z$.  Hence the orientation double
+> cover does not survive as a nontrivial point-cover of $\epsilon$.
+>
+> **Theorem 104c (boundary-line survival).** The sign survives as the
+> $\mathbb Z/2$ local-system action on $\delta_\epsilon$, equivalently on
+> $D\epsilon\simeq\mathbb Q[-1]$.
+>
+> **Theorem 104d (minimal package).** The oriented-support groupoid over the
+> finite-conductor pro-system, equipped with a $B\mathbb Z/2$ boundary-line
+> local system, carries the needed data and preserves
+> $\operatorname{Hom}^0(\epsilon,\mathbb Q)=0$.
+
+**Machine verification** (`code/scripts/check-pass104.py` ->
+`artifacts/reports/pass104-signed-pro-solid-boundary-object-check.json`,
+PASS): the checker verifies conductor compatibility of the finite sign
+system, identifies the pro-limit as the diagonal integer $\sigma$, verifies
+that both signs vanish as points of $\epsilon$, records survival as a
+$\mathbb Z/2$ boundary action, and checks that the minimal package carries
+support/conductor/sign without creating a degree-$0$ Weyl map.
+
+**Limit of the pass.**  The next task is to compare this signed pro-boundary
+stack with support projections and zero-extension spans, then isolate the
+exact descent/colimit statement for all-prime primitive orientations.

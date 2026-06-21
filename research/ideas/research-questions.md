@@ -42,21 +42,22 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 103 -> 104: signed pro/solid all-prime boundary object)**
-  Pass 103 showed that the signed boundary class is natural under finite
-  conductor reductions: for $M\mid N$, $\sigma\bmod N$ reduces to
-  $\sigma\bmod M$, with sign collapse only at target modulus $2$.  The signed
-  finite conductor complex
-  $d_N^\sigma:\mathbb Z/N\to\prod_{p^e\parallel N}\mathbb Z/p^e$ remains a
-  CRT isomorphism for $\sigma=\pm1$, so fixed finite signed conductor shadows
-  are acyclic and introduce no new sign-twisted obstruction.  Open:
-  (i) assemble the signed conductor system into a pro/solid all-prime boundary
-  object over $\epsilon=\widehat{\mathbb Z}/\mathbb Z$;
-  (ii) decide whether the orientation double cover survives the all-prime
-  limit as a genuine cover/torsor or is completely absorbed by the
-  $\mathbb Z/2$ local system on the boundary line;
-  (iii) identify the minimal categorical package carrying support, conductor,
-  and sign without reintroducing a forbidden degree-$0$ Weyl map.
+- **(Pass 104 -> 105: support descent for all-prime primitive orientations)**
+  Pass 104 assembled the finite signed conductor system into the all-prime
+  boundary package.  The compatible residues $\{\sigma\bmod N\}_N$ limit to
+  the diagonal integer $\sigma\in\widehat{\mathbb Z}$, so both signs map to
+  zero in $\epsilon=\widehat{\mathbb Z}/\mathbb Z$.  The orientation double
+  cover does not survive as a point-cover of $\epsilon$; it is absorbed as the
+  $\mathbb Z/2$ local-system action on the boundary/Yoneda line
+  $\delta_\epsilon$, equivalently on $D\epsilon\simeq\mathbb Q[-1]$.  Open:
+  (i) compare the signed pro-boundary stack with support projections and
+  zero-extension spans;
+  (ii) isolate the exact descent/colimit statement for all-prime primitive
+  orientations, distinguishing support projection from noncanonical support
+  enlargement;
+  (iii) decide whether the oriented-support groupoid should be presented as a
+  stack over finite supports, a span category, or a pro-object with a
+  boundary-line local system.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

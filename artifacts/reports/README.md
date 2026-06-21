@@ -37,6 +37,16 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass104-signed-pro-solid-boundary-object-check.json`: verifies the
+  Pass-104 finite/pro certificate for the signed all-prime boundary package.
+  It checks that the compatible finite sign residues `{sigma mod N}` assemble
+  to the diagonal integer `sigma in Zhat`; that both `+1` and `-1` map to zero
+  as points of `epsilon = Zhat/Z`; that the orientation double cover is
+  absorbed as a `Z/2` local-system action on the boundary/Yoneda line rather
+  than surviving as an epsilon-point cover; and that the minimal package
+  carries support, conductor, and sign without introducing a degree-0 Weyl
+  map.
+
 - `pass103-signed-boundary-conductor-naturality-check.json`: verifies the
   Pass-103 finite certificate for signed boundary naturality under conductor
   reduction. It checks that multiplying the finite CRT diagonal by

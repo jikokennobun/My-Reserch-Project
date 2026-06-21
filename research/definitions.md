@@ -2559,3 +2559,51 @@ This conductor result does not change the support warning from Pass 95:
 support projection is canonical, but support enlargement remains only a
 finite-conductor CRT choice/span and is not a canonical all-prime
 diagonal-preserving morphism.
+
+## Signed pro/solid all-prime boundary object (Pass 104)
+
+The signed finite conductor system
+$$
+b_N^\sigma=\sigma\bmod N,\qquad \sigma\in\{\pm1\},
+$$
+is compatible under all conductor reductions.  Therefore it has inverse
+limit
+$$
+\{b_N^\sigma\}_N=\sigma\in\widehat{\mathbb Z}.
+$$
+
+Since $\sigma=\pm1$ is a diagonal integer, its image in
+$$
+\epsilon=\widehat{\mathbb Z}/\mathbb Z
+$$
+is zero.  Thus the two signs do not define two distinct points of
+$\epsilon$, and the orientation double cover does not survive as a
+nontrivial point-cover or torsor over the all-prime boundary group itself.
+
+The sign survives instead as the $\mathbb Z/2$ local-system action on the
+boundary/Yoneda line.  If
+$$
+\delta_\epsilon=[0\to\mathbb Q\to\mathbb A_f\to\epsilon\to0],
+$$
+then
+$$
+\delta_\epsilon\longmapsto\sigma\delta_\epsilon
+$$
+is the remaining sign action.  Under
+$$
+D\epsilon\simeq\mathbb Q[-1],
+$$
+this is the same action on the shifted boundary generator.
+
+The minimal sign-preserving all-prime package is therefore:
+
+1. the oriented-support action groupoid of pairs $(S,c)$;
+2. the finite-conductor pro-system of signed CRT-isomorphism complexes
+   $C^\sigma_{B,N}$;
+3. a $B\mathbb Z/2$ local system on the boundary/Yoneda line.
+
+This package records support, conductor, and sign, but it does not create a
+degree-$0$ Weyl/Fourier morphism:
+$$
+\operatorname{Hom}^0(\epsilon,\mathbb Q)=0.
+$$
