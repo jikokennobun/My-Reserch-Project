@@ -1,5 +1,27 @@
 # Research Log
 
+## 2026-06-21 (Research Project relay sync, morning no-delta verification)
+
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root at `2026-06-21T10:04+09:00`. The ChatGPT Project artifact inbox exposed `3` supported PDF artifacts, with `0` copied or refreshed slide/deck imports. The central PDF manifest was refreshed and the local Google Drive PDF backup was updated.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-21T10:05:18+09:00`. All `23` watched `chatgpt.com/share/...` links remained `unchanged`, so no shared conversation required transcript extraction or mathematical reconstruction.
+- Queried the connected Google Drive relay roots recorded in `research/references/research-drive.md` and `research/references/drive.md` after the last automation timestamp `2026-06-20T19:03:05.349Z`, including the research root, `ChatGPT`, `ChatGPT_Research`, `ChatGPT_Study`, `Claude`, `Gemini`, `Paper`, `Slide`, and the reference root. No newer non-folder files were found by modified-time checks, and broader Drive sweeps for PDFs or ChatGPT/Claude/Gemini-labelled files also returned no newer accessible material.
+- Because the artifact inbox, watched-share layer, and recorded Drive relay roots were all source-stable in this pass, there was no new research-note reconstruction, open question, Drive-index update, literature-note update, or durable artifact import to add.
+
+## 2026-06-21 (Autonomous discussion Pass 105)
+
+- Clarified support descent for all-prime primitive orientations.  For
+  finite supports $S\subseteq T$, zero-extension
+  $e_{S,T}:\mathcal O_S\to\mathcal O_T$ is the canonical covariant operation
+  on primitive zero-sum orientations and is strictly functorial, while
+  boundary support projection points oppositely as $T_T\to T_S$.
+  Orientation restriction is not total: $(1,1,-2)$ on $\{2,3,5\}$ restricts
+  to $(1,1)$ on $\{2,3\}$, destroying zero-sum.  Therefore the all-prime
+  primitive-orientation object is a filtered colimit by zero-padding, best
+  packaged as a span-stack/Grothendieck object with the Pass-104
+  $B\mathbb Z/2$ boundary-line local system, not as a plain sheaf with
+  restriction maps.  Added checker/report and retargeted Pass 106 to the
+  stackification obstruction and universal property.
+
 ## 2026-06-21 (Autonomous discussion Pass 104)
 
 - Assembled the signed finite conductor system into the pro/solid all-prime

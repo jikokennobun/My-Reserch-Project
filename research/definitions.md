@@ -2607,3 +2607,66 @@ degree-$0$ Weyl/Fourier morphism:
 $$
 \operatorname{Hom}^0(\epsilon,\mathbb Q)=0.
 $$
+
+## Support descent for all-prime primitive orientations (Pass 105)
+
+For finite support $S$ with $|S|\ge2$, let
+$$
+\mathcal O_S=
+\{c=(c_p)_{p\in S}\in\mathbb Z^S:
+\sum_{p\in S}c_p=0,\ \gcd_{p\in S}(c_p)=1\}.
+$$
+If $S\subseteq T$, the canonical orientation operation is zero-extension:
+$$
+e_{S,T}:\mathcal O_S\to\mathcal O_T,\qquad
+(e_{S,T}c)_p=
+\begin{cases}
+c_p,&p\in S,\\
+0,&p\in T\setminus S.
+\end{cases}
+$$
+It preserves zero-sum, primitivity, and the antipode:
+$$
+e_{S,T}(-c)=-e_{S,T}(c).
+$$
+It is also strictly functorial:
+$$
+e_{T,U}e_{S,T}=e_{S,U}.
+$$
+
+The boundary support projection points in the opposite direction:
+$$
+T_T\to T_S.
+$$
+Thus support descent is a span-style construction, not a single variance.
+There is no total canonical restriction map
+$$
+\mathcal O_T\to\mathcal O_S.
+$$
+Deleting coordinates can destroy zero-sum; for instance
+$$
+(1,1,-2)\in\mathcal O_{\{2,3,5\}}
+$$
+restricts to $(1,1)$ on $\{2,3\}$, whose sum is $2$.
+
+The all-prime primitive-orientation object is therefore the filtered colimit
+of the $\mathcal O_S$ under zero-extension, modulo padded zero coordinates.
+Equivalently, it is the set of primitive finitely supported zero-sum integer
+functionals on the prime set, with support padding forgotten.  Passing to the
+antipode quotient gives primitive lines
+$$
+[c]=\{c,-c\},
+$$
+but the sign must still be retained as the $B\mathbb Z/2$ local system on the
+boundary/Yoneda line.
+
+The correct categorical package is a span-stack/Grothendieck presentation
+over finite supports with:
+
+1. orientation zero-extension $e_{S,T}$;
+2. boundary projection $T_T\to T_S$;
+3. the $B\mathbb Z/2$ local system on $\delta_\epsilon$.
+
+It is not a plain sheaf of primitive orientations with restriction maps, and
+it still does not create a degree-$0$ Weyl/Fourier morphism
+$\epsilon\to\mathbb Q$.

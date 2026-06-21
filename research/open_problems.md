@@ -1250,13 +1250,32 @@
   a $B\mathbb Z/2$ boundary-line local system.  Machine-verified
   `artifacts/reports/pass104-signed-pro-solid-boundary-object-check.json`
   (PASS).
-- **[New (Pass 104)]** **Support descent for all-prime primitive orientations.**
+- **[Resolved (Pass 105)]** **Support descent for all-prime primitive orientations.**
   Compare the signed pro-boundary stack with support projections and
   zero-extension spans.  Isolate the exact descent/colimit statement for
   all-prime primitive orientations, distinguishing canonical support
   projection from noncanonical support enlargement, and decide whether the
   oriented-support groupoid is best presented as a stack over finite supports,
   a span category, or a pro-object with a boundary-line local system.
+  **Resolution:** for $S\subseteq T$, zero-extension
+  $e_{S,T}:\mathcal O_S\to\mathcal O_T$ is the canonical covariant operation
+  on primitive zero-sum orientations; it preserves primitivity, commutes with
+  the antipode, and composes strictly.  Boundary support projection points
+  oppositely as $T_T\to T_S$.  A total orientation restriction
+  $\mathcal O_T\to\mathcal O_S$ does not exist because deleting coordinates
+  can destroy zero-sum, e.g. $(1,1,-2)\mapsto(1,1)$.  Hence all-prime
+  primitive orientations are a filtered colimit by zero-padding, packaged as
+  a span-stack/Grothendieck object with the $B\mathbb Z/2$ boundary-line local
+  system rather than as a plain sheaf with restrictions.  Machine-verified
+  `artifacts/reports/pass105-support-descent-primitive-orientations-check.json`
+  (PASS).
+- **[New (Pass 105)]** **Stackification obstruction for primitive orientations.**
+  Compute the precise obstruction to sheafifying or stackifying the
+  primitive-orientation assignment over finite supports when restriction maps
+  $\mathcal O_T\to\mathcal O_S$ are required.  Formulate the universal
+  property of the correct span-stack/left-Kan colimit package and compare the
+  antipode quotient $[c]=\{c,-c\}$ with a $B\mathbb Z/2$ classifying stack on
+  the boundary line.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

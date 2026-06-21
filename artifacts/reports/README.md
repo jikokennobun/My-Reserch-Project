@@ -37,6 +37,17 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass105-support-descent-primitive-orientations-check.json`: verifies the
+  Pass-105 finite certificate for support descent of all-prime primitive
+  orientations. It checks that zero-extension preserves zero-sum,
+  primitivity, and the antipode; that zero-extension composes along support
+  chains; that deleting coordinates can destroy zero-sum and therefore is not
+  a total orientation restriction; that the all-prime object is a filtered
+  colimit by zero-padding modulo padded zeros; that no support-symmetric
+  primitive orientation exists; and that the correct package is a
+  span-stack/Grothendieck object with the `Z/2` boundary-line local system,
+  not a plain restriction sheaf.
+
 - `pass104-signed-pro-solid-boundary-object-check.json`: verifies the
   Pass-104 finite/pro certificate for the signed all-prime boundary package.
   It checks that the compatible finite sign residues `{sigma mod N}` assemble

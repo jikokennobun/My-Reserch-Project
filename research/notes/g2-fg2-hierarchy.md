@@ -5981,3 +5981,65 @@ support/conductor/sign without creating a degree-$0$ Weyl map.
 **Limit of the pass.**  The next task is to compare this signed pro-boundary
 stack with support projections and zero-extension spans, then isolate the
 exact descent/colimit statement for all-prime primitive orientations.
+
+## Pass 105 - Support descent for all-prime primitive orientations
+
+Pass 105 clarifies the support variance hidden in the previous all-prime
+boundary package.  For finite support $S$, the primitive orientations are
+$$
+\mathcal O_S=
+\{c\in\mathbb Z^S:\sum_{p\in S}c_p=0,\ \gcd(c_p)=1\}.
+$$
+For $S\subseteq T$, the canonical orientation map is zero-extension
+$$
+e_{S,T}:\mathcal O_S\to\mathcal O_T.
+$$
+It preserves zero-sum, primitivity, and the antipode, and it is strictly
+functorial along support chains.
+
+The boundary groups have canonical support projection in the opposite
+direction,
+$$
+T_T\to T_S.
+$$
+This is why the all-prime package must be span-like.  A primitive orientation
+on $T$ cannot generally be restricted to $S$: the vector
+$$(1,1,-2)\in\mathcal O_{\{2,3,5\}}$$
+restricts to $(1,1)$ on $\{2,3\}$, whose sum is nonzero.
+
+Thus the exact colimit statement is: all-prime primitive orientations are
+primitive finitely supported zero-sum integer functionals on the prime set,
+formed as the filtered colimit of finite $\mathcal O_S$ by zero-extension and
+modulo padded zero coordinates.  The antipode quotient gives primitive lines
+$[c]=\{c,-c\}$, but the sign must remain as the $B\mathbb Z/2$ local system
+on the boundary/Yoneda line from Pass 104.
+
+> **Theorem 105a (zero-extension colimit).** The support inclusion maps
+> $S\subseteq T$ induce canonical maps
+> $e_{S,T}:\mathcal O_S\to\mathcal O_T$ that preserve primitivity, zero-sum,
+> and the antipode and form a filtered colimit.
+>
+> **Theorem 105b (no restriction sheaf).** There is no canonical total
+> restriction map $\mathcal O_T\to\mathcal O_S$ because deleting coordinates
+> can break the zero-sum condition.
+>
+> **Theorem 105c (span-stack package).** The support-descent object combines
+> zero-extension on orientations, projection on boundary groups, and the
+> $B\mathbb Z/2$ boundary-line local system.  It is a span/Grothendieck
+> object rather than a plain sheaf of primitive orientations.
+>
+> **Theorem 105d (no symmetric orientation).** A support-symmetric finitely
+> supported integer functional is constant on its support; zero-sum then
+> forces it to be zero, so no nonzero support-symmetric primitive orientation
+> exists.
+
+**Machine verification** (`code/scripts/check-pass105.py` ->
+`artifacts/reports/pass105-support-descent-primitive-orientations-check.json`,
+PASS): the checker verifies zero-extension preservation and functoriality,
+explicit restriction failure, colimit padding equivalence, nonexistence of
+support-symmetric primitive orientations, and the span-stack verdict.
+
+**Limit of the pass.**  The next task is to compute the obstruction to
+stackifying primitive orientations over finite supports if restriction maps
+are demanded, and then state the universal property of the
+span-stack/left-Kan colimit package.

@@ -42,22 +42,23 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 104 -> 105: support descent for all-prime primitive orientations)**
-  Pass 104 assembled the finite signed conductor system into the all-prime
-  boundary package.  The compatible residues $\{\sigma\bmod N\}_N$ limit to
-  the diagonal integer $\sigma\in\widehat{\mathbb Z}$, so both signs map to
-  zero in $\epsilon=\widehat{\mathbb Z}/\mathbb Z$.  The orientation double
-  cover does not survive as a point-cover of $\epsilon$; it is absorbed as the
-  $\mathbb Z/2$ local-system action on the boundary/Yoneda line
-  $\delta_\epsilon$, equivalently on $D\epsilon\simeq\mathbb Q[-1]$.  Open:
-  (i) compare the signed pro-boundary stack with support projections and
-  zero-extension spans;
-  (ii) isolate the exact descent/colimit statement for all-prime primitive
-  orientations, distinguishing support projection from noncanonical support
-  enlargement;
-  (iii) decide whether the oriented-support groupoid should be presented as a
-  stack over finite supports, a span category, or a pro-object with a
-  boundary-line local system.
+- **(Pass 105 -> 106: stackification obstruction for primitive orientations)**
+  Pass 105 separated the support operations in the all-prime orientation
+  package.  Zero-extension
+  $e_{S,T}:\mathcal O_S\to\mathcal O_T$ is canonical, covariant,
+  primitive-preserving, antipode-compatible, and functorial along
+  $S\subseteq T$, while boundary support projection is canonical in the
+  opposite direction $T_T\to T_S$.  There is no total restriction map
+  $\mathcal O_T\to\mathcal O_S$, since deleting coordinates can destroy
+  zero-sum.  Hence all-prime primitive orientations form a filtered colimit
+  by zero-padding, best presented as a span-stack/Grothendieck object with
+  the Pass-104 $B\mathbb Z/2$ boundary-line local system.  Open:
+  (i) compute the exact obstruction to stackifying $\mathcal O_S$ over finite
+  supports if restriction maps are demanded;
+  (ii) formulate the universal property as a left Kan extension or span-stack
+  colimit over the support poset;
+  (iii) compare the antipode quotient $[c]=\{c,-c\}$ with a possible
+  $B\mathbb Z/2$ classifying stack over the all-prime support colimit.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

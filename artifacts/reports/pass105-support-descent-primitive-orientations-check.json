@@ -1,0 +1,562 @@
+{
+  "pass": 105,
+  "title": "Support descent for all-prime primitive orientations",
+  "A_zero_extension": {
+    "statement": "Zero-extension is the canonical covariant operation on primitive zero-sum orientations.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "extended_orientation": [
+          -1,
+          1,
+          0
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_commutes": true
+      },
+      {
+        "source_support": [
+          2,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "extended_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_commutes": true
+      },
+      {
+        "source_support": [
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "extended_orientation": [
+          0,
+          -1,
+          1
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_commutes": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          1,
+          0
+        ],
+        "extended_orientation": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "zero_sum_preserved": true,
+        "primitive_preserved": true,
+        "antipode_commutes": true
+      }
+    ],
+    "zero_extension_ok": true
+  },
+  "B_composition": {
+    "statement": "Zero-extension is functorial along support chains.",
+    "rows": [
+      {
+        "small_support": [
+          2,
+          3
+        ],
+        "middle_support": [
+          2,
+          3,
+          5
+        ],
+        "large_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "direct_extension": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "iterated_extension": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "composition_ok": true
+      },
+      {
+        "small_support": [
+          2,
+          5
+        ],
+        "middle_support": [
+          2,
+          3,
+          5
+        ],
+        "large_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "direct_extension": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "iterated_extension": [
+          -1,
+          0,
+          1,
+          0
+        ],
+        "composition_ok": true
+      }
+    ],
+    "composition_ok": true
+  },
+  "C_restriction_failure": {
+    "statement": "Deleting support coordinates is not a total restriction map on primitive orientations because zero-sum can fail.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "target_orientation": [
+          1,
+          1,
+          -2
+        ],
+        "restricted_values": [
+          1,
+          1
+        ],
+        "restricted_sum": 2,
+        "is_orientation_after_restriction": false
+      },
+      {
+        "source_support": [
+          2,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "target_orientation": [
+          1,
+          -2,
+          1
+        ],
+        "restricted_values": [
+          1,
+          1
+        ],
+        "restricted_sum": 2,
+        "is_orientation_after_restriction": false
+      },
+      {
+        "source_support": [
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "target_orientation": [
+          -2,
+          1,
+          1
+        ],
+        "restricted_values": [
+          1,
+          1
+        ],
+        "restricted_sum": 2,
+        "is_orientation_after_restriction": false
+      }
+    ],
+    "restriction_failure_ok": true
+  },
+  "D_colimit_padding": {
+    "statement": "The all-prime primitive orientation object is a filtered colimit by zero-padding, modulo deleting padded zeros.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "padded_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "padded_orientation": [
+          -1,
+          1,
+          0
+        ],
+        "trimmed_support": [
+          2,
+          3
+        ],
+        "trimmed_orientation": [
+          -1,
+          1
+        ],
+        "padding_equivalence_ok": true
+      },
+      {
+        "source_support": [
+          2,
+          5
+        ],
+        "padded_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "padded_orientation": [
+          -1,
+          0,
+          1
+        ],
+        "trimmed_support": [
+          2,
+          5
+        ],
+        "trimmed_orientation": [
+          -1,
+          1
+        ],
+        "padding_equivalence_ok": true
+      },
+      {
+        "source_support": [
+          3,
+          5
+        ],
+        "padded_support": [
+          2,
+          3,
+          5
+        ],
+        "source_orientation": [
+          -1,
+          1
+        ],
+        "padded_orientation": [
+          0,
+          -1,
+          1
+        ],
+        "trimmed_support": [
+          3,
+          5
+        ],
+        "trimmed_orientation": [
+          -1,
+          1
+        ],
+        "padding_equivalence_ok": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "padded_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "source_orientation": [
+          -1,
+          1,
+          0
+        ],
+        "padded_orientation": [
+          -1,
+          1,
+          0,
+          0
+        ],
+        "trimmed_support": [
+          2,
+          3
+        ],
+        "trimmed_orientation": [
+          -1,
+          1
+        ],
+        "padding_equivalence_ok": true
+      }
+    ],
+    "colimit_padding_ok": true
+  },
+  "E_symmetry_obstruction": {
+    "statement": "A support-symmetric constant functional is zero if it is zero-sum, hence it is not primitive.",
+    "rows": [
+      {
+        "support": [
+          2,
+          3
+        ],
+        "constant_value": -2,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "constant_value": -1,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "constant_value": 0,
+        "zero_sum": true,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "constant_value": 1,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3
+        ],
+        "constant_value": 2,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "constant_value": -2,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "constant_value": -1,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "constant_value": 0,
+        "zero_sum": true,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "constant_value": 1,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5
+        ],
+        "constant_value": 2,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "constant_value": -2,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "constant_value": -1,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "constant_value": 0,
+        "zero_sum": true,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "constant_value": 1,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      },
+      {
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "constant_value": 2,
+        "zero_sum": false,
+        "primitive": false,
+        "support_symmetric_orientation_exists": false
+      }
+    ],
+    "symmetry_obstruction_ok": true
+  },
+  "F_package_verdict": {
+    "statement": "Use a span-stack/Grothendieck package: zero-extension on orientations, projection on boundary groups, and the Z/2 boundary-line local system.",
+    "row": {
+      "plain_sheaf_with_restrictions_possible": false,
+      "filtered_colimit_by_zero_extension": true,
+      "span_stack_required": true,
+      "sign_local_system_required": true,
+      "degree_zero_weyl_created": false,
+      "next_obstruction": "Compute the obstruction to stackifying primitive orientations over the finite-support poset when restriction maps are demanded."
+    },
+    "span_stack_verdict_ok": true
+  },
+  "checks": {
+    "zero_extension_ok": true,
+    "composition_ok": true,
+    "restriction_failure_ok": true,
+    "colimit_padding_ok": true,
+    "symmetry_obstruction_ok": true,
+    "span_stack_verdict_ok": true
+  },
+  "overall": "PASS"
+}

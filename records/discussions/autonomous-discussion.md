@@ -6,8 +6,28 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 105
-- Last pass note: Pass 104 (2026-06-21) assembled the signed finite conductor
+- Current pass: 106
+- Last pass note: Pass 105 (2026-06-21) separated the support-descent
+  operations for all-prime primitive orientations.  For finite supports
+  $S\subseteq T$, zero-extension
+  $$e_{S,T}:\mathcal O_S\to\mathcal O_T$$
+  is the canonical covariant operation on primitive zero-sum orientations,
+  preserves primitivity and the antipode, and is strictly functorial along
+  support chains.  Boundary support projection points the other way,
+  $T_T\to T_S$.  There is no total restriction map
+  $\mathcal O_T\to\mathcal O_S$: for example
+  $(1,1,-2)\in\mathcal O_{\{2,3,5\}}$ restricts to $(1,1)$ on $\{2,3\}$,
+  whose sum is $2$.  Hence the all-prime primitive-orientation object is a
+  filtered colimit by zero-padding, modulo deletion of padded zero
+  coordinates and with the antipode retained as the $\mathbb Z/2$
+  boundary-line local system from Pass 104.  The correct presentation is a
+  span-stack/Grothendieck package carrying orientation zero-extension,
+  boundary projection, and sign monodromy; it is not a plain sheaf on finite
+  supports with restriction maps and it creates no degree-$0$ Weyl map.
+  Machine-verified `check-pass105.py` ->
+  `pass105-support-descent-primitive-orientations-check.json` PASS. Counter
+  105->106.
+- Earlier note: Pass 104 (2026-06-21) assembled the signed finite conductor
   system into the pro/solid all-prime boundary package.  The compatible
   classes $\{\sigma\bmod N\}_N$ have inverse limit $\sigma\in\widehat{\mathbb
   Z}$, and since $\sigma=\pm1$ is an ordinary diagonal integer, its image in
@@ -11994,3 +12014,117 @@ Next step:
 Pass 105 should compare this signed pro-boundary stack with support
 projections and zero-extension spans, then isolate the exact descent/colimit
 statement for all-prime primitive orientations.
+
+### Pass 105 - 2026-06-21 JST
+
+Focus:
+Compare the signed pro-boundary package with support projections and
+zero-extension spans, and isolate the exact descent/colimit statement for
+all-prime primitive orientations.
+
+Proposer:
+For finite support $S$, keep
+$$
+\mathcal O_S=
+\{c=(c_p)_{p\in S}\in\mathbb Z^S:
+\sum_{p\in S}c_p=0,\ \gcd(c_p)=1\}.
+$$
+If $S\subseteq T$, the canonical orientation map is zero-extension
+$$
+e_{S,T}:\mathcal O_S\to\mathcal O_T,\qquad
+(e_{S,T}c)_p=
+\begin{cases}
+c_p,&p\in S,\\
+0,&p\in T\setminus S.
+\end{cases}
+$$
+This preserves zero-sum, primitivity, and the antipode
+$c\mapsto -c$, and it composes strictly:
+$$
+e_{T,U}e_{S,T}=e_{S,U}.
+$$
+Thus finite oriented supports form a filtered colimit by zero-padding.
+
+Skeptic:
+This colimit should not be called descent for a sheaf of orientations on the
+support poset.  The boundary groups have canonical support projection
+$$
+T_T\to T_S,
+$$
+but primitive orientations do not have a total restriction map in the
+opposite direction.  The obstruction is already visible at three primes:
+$$
+(1,1,-2)\in\mathcal O_{\{2,3,5\}}
+$$
+restricts to $(1,1)$ on $\{2,3\}$, and this has sum $2$, not $0$.  Therefore
+the all-prime package cannot be a plain sheaf with maps
+$\mathcal O_T\to\mathcal O_S$ unless one discards genuine orientations or
+adds noncanonical correction terms.
+
+Formalist:
+The correct object is the Grothendieck/span presentation over finite
+supports:
+
+1. forward leg on orientation torsors: $e_{S,T}:\mathcal O_S\to\mathcal O_T$;
+2. backward leg on boundary groups: $T_T\to T_S$;
+3. sign line: the $B\mathbb Z/2$ local system acting on
+   $\delta_\epsilon$.
+
+The colimit identifies $(S,c)$ with $(T,e_{S,T}c)$, equivalently it presents
+primitive finitely supported zero-sum integer functionals on the set of all
+primes, modulo padded zeros.  A support-symmetric all-prime orientation is
+still impossible: a constant finitely supported functional is zero-sum only
+when it is zero, hence it is not primitive.  Passing to the antipode quotient
+gives primitive lines $[c]=\{c,-c\}$, but the sign must remain as the
+boundary-line local system.
+
+> **Theorem 105a (zero-extension colimit).** The assignment
+> $S\mapsto\mathcal O_S$ is covariant for support inclusions by
+> zero-extension, and these maps form a filtered colimit of primitive
+> finitely supported zero-sum orientations.
+>
+> **Theorem 105b (restriction obstruction).** There is no canonical total
+> restriction map $\mathcal O_T\to\mathcal O_S$ for $S\subseteq T$, since
+> deleting coordinates can destroy zero-sum.
+>
+> **Theorem 105c (span-stack presentation).** The support-descent package is
+> a span/Grothendieck object combining orientation zero-extension,
+> boundary-group projection, and the $B\mathbb Z/2$ boundary-line local
+> system.  It is not a plain sheaf of primitive orientations on the support
+> poset.
+>
+> **Theorem 105d (no symmetric all-prime orientation).** No nonzero
+> support-symmetric primitive all-prime orientation exists.  The all-prime
+> generator is obtained only by choosing a primitive orientation line,
+> quotienting by the antipode, or forgetting orientation data, with the sign
+> retained on the boundary line.
+
+Machine verification (`code/scripts/check-pass105.py` ->
+`artifacts/reports/pass105-support-descent-primitive-orientations-check.json`,
+PASS): the checker verifies zero-extension preservation of zero-sum,
+primitivity, and antipode; functoriality along support chains; explicit
+failure of orientation restriction; colimit padding equivalence by trimming
+zero coordinates; nonexistence of support-symmetric primitive orientations;
+and the verdict that a span-stack/Grothendieck package is required without
+creating a degree-$0$ Weyl map.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-105
+  entry; State counter $105\to106$.
+- `records/logs/research-log.md`: Pass-105 entry.
+- `research/definitions.md`: added support descent for all-prime primitive
+  orientations.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-105 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  resolved the support-descent task and retargeted the next pass to the
+  stackification obstruction/universal property.
+- `code/scripts/check-pass105.py`,
+  `artifacts/reports/pass105-support-descent-primitive-orientations-check.json`:
+  new.
+- `artifacts/pdf/support-descent-primitive-orientations-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 106 should compute the obstruction to stackifying primitive
+orientations over the finite-support poset with restriction maps, and state
+the universal property of the span-stack/left-Kan colimit package.
