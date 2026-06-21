@@ -1,5 +1,31 @@
 # Research Log
 
+## 2026-06-22 (Research Project relay sync, no-delta verification)
+
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root at `2026-06-22T08:11+09:00`. The ChatGPT Project artifact inbox exposed the same `3` supported PDF artifacts, with `0` copied or refreshed slide/deck imports. The central PDF manifest and local Google Drive PDF backup were refreshed.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-22T08:19:57+09:00`. All `23` watched `chatgpt.com/share/...` links were reachable and `unchanged`, so no shared conversation required transcript extraction or mathematical reconstruction.
+- Queried the connected Google Drive research and reference relay roots after the prior automation cutoff `2026-06-21T07:03:10.868Z`, including the research root, `ChatGPT`, `ChatGPT_Research`, `ChatGPT_Study`, `Claude`, `Gemini`, `Paper`, `Slide`, and the reference root. The only Drive file modified after the cutoff was `2024_kakomon_kaitou_kaisetsu.pdf`, which is outside the recorded research/reference relay folders and appears unrelated to the APS/G2 research workspace.
+- Because the artifact inbox, watched-share layer, and recorded Drive relay roots were source-stable for research material, no research-note reconstruction, open-question update, Drive-index update, literature-note update, or new PDF import was made in this pass.
+
+## 2026-06-21 (Research Project relay sync, partial-access verification)
+
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root at `2026-06-21T16:03+09:00`. The ChatGPT Project artifact inbox exposed `3` supported PDF artifacts, with `0` copied or refreshed slide/deck imports. The central PDF manifest and local Google Drive PDF backup were refreshed.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-21T16:04:27+09:00`. The first two watched shares (`bs16-fiber-residuated-aps.md` and `mnd4-preaps-fixedpoint-obstruction.md`) were `unchanged`; the remaining `21` shares were inaccessible in this run because `chatgpt.com` resolution/transport failed. No shared-link content was promoted into notes because the transcript layer was not reliably accessible.
+- Attempted to query the connected Google Drive relay via the Google Drive connector after the last automation cutoff `2026-06-21T01:03:17.319Z`, but the connector failed with an MCP backend transport error. As a fallback, scanned the local Google Drive sync folders used by the relay (`ChatGPT Project Inbox` and `GitHub PDF Backup`) for files newer than the cutoff; no new inbox/backup source files were found.
+- Because the only durable changes were manifest/state refreshes and the current source layer was partially inaccessible, no research note reconstruction, open question, Drive-index update, or literature-note update was made in this pass. The inaccessible shared-link and remote Drive states should be rechecked on the next relay run before treating the source layer as stable.
+
+## 2026-06-21 (Autonomous discussion Pass 114)
+
+- Tested whether the Pass-113 four-element G2+finite-APS MacNeille witness
+  admits a same-carrier, same-order tensor/residual expansion.  Exhaustive
+  enumeration over all two-sided-unit tensors for every possible unit scanned
+  1,048,576 operations: 624 were associative, 56 were both associative and
+  monotone, and 0 admitted both residuals.  The first surviving obstruction is
+  the non-principal fiber `{x : 0 tensor x <= 0} = {0,a,b,c}`, reflecting the
+  same missing-top shape as the non-principal MacNeille cut.  Added
+  `check-pass114.py`, two Pass-114 reports, and retargeted Pass 115 to order
+  repair and completion-stability tests.
+
 ## 2026-06-21 (Autonomous discussion Pass 113)
 
 - Extended the MacNeille G2/A2 boundary search to all labelled four-element
