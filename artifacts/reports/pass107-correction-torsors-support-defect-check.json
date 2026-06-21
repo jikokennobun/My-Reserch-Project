@@ -1,0 +1,271 @@
+{
+  "pass": 107,
+  "title": "Correction torsors for support-defect repairs",
+  "A_additive_repair_torsor": {
+    "statement": "Additive repairs of a deletion defect form an affine torsor under K_S = ker(Sigma_S).",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "target_orientation": [
+          1,
+          1,
+          -2
+        ],
+        "deleted_values": [
+          1,
+          1
+        ],
+        "additive_defect": 2,
+        "first_basepoint_repair": [
+          -1,
+          1
+        ],
+        "last_basepoint_repair": [
+          1,
+          -1
+        ],
+        "transition_difference": [
+          2,
+          -2
+        ],
+        "difference_in_kernel": true,
+        "both_additive_repairs_zero_sum": true,
+        "both_repairs_primitive": true,
+        "torsor_translation_ok": true
+      },
+      {
+        "source_support": [
+          2,
+          3,
+          5
+        ],
+        "target_support": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "target_orientation": [
+          1,
+          1,
+          1,
+          -3
+        ],
+        "deleted_values": [
+          1,
+          1,
+          1
+        ],
+        "additive_defect": 3,
+        "first_basepoint_repair": [
+          -2,
+          1,
+          1
+        ],
+        "last_basepoint_repair": [
+          1,
+          1,
+          -2
+        ],
+        "transition_difference": [
+          3,
+          0,
+          -3
+        ],
+        "difference_in_kernel": true,
+        "both_additive_repairs_zero_sum": true,
+        "both_repairs_primitive": true,
+        "torsor_translation_ok": true
+      }
+    ],
+    "additive_repair_torsor_ok": true
+  },
+  "B_primitive_locus": {
+    "statement": "The primitive repair locus is not stable under the full kernel action, so primitivity is a refinement of the additive torsor.",
+    "row": {
+      "support": [
+        2,
+        3
+      ],
+      "primitive_repair": [
+        1,
+        -1
+      ],
+      "kernel_step": [
+        1,
+        -1
+      ],
+      "translated_vector": [
+        2,
+        -2
+      ],
+      "kernel_step_in_kernel": true,
+      "translated_is_zero_sum": true,
+      "translated_is_primitive": false,
+      "primitive_locus_stable_under_full_kernel": false
+    },
+    "primitive_locus_not_full_torsor_ok": true
+  },
+  "C_basepoint_transitions": {
+    "statement": "Transitions between basepointed splittings are K_S-valued coboundaries and satisfy the cocycle identity.",
+    "row": {
+      "support": [
+        2,
+        3,
+        5
+      ],
+      "base_a": 2,
+      "base_b": 3,
+      "base_c": 5,
+      "transition_ab": [
+        -1,
+        1,
+        0
+      ],
+      "transition_bc": [
+        0,
+        -1,
+        1
+      ],
+      "transition_ac": [
+        -1,
+        0,
+        1
+      ],
+      "transitions_in_kernel": true,
+      "cocycle_identity_ok": true,
+      "coboundary_description": "transition(a,b)=section_b(1)-section_a(1)"
+    },
+    "basepoint_transition_cocycle_ok": true
+  },
+  "D_inclusion_transitions": {
+    "statement": "Basepointed splittings are natural along inclusions only when the basepoint is preserved.",
+    "rows": [
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_basepoint": 2,
+        "target_basepoint": 2,
+        "extended_source_section": [
+          1,
+          0,
+          0
+        ],
+        "target_section": [
+          1,
+          0,
+          0
+        ],
+        "transition": [
+          0,
+          0,
+          0
+        ],
+        "transition_in_kernel": true,
+        "natural_after_forgetting_basepoint": true
+      },
+      {
+        "source_support": [
+          2,
+          3
+        ],
+        "target_support": [
+          2,
+          3,
+          5
+        ],
+        "source_basepoint": 2,
+        "target_basepoint": 5,
+        "extended_source_section": [
+          1,
+          0,
+          0
+        ],
+        "target_section": [
+          0,
+          0,
+          1
+        ],
+        "transition": [
+          -1,
+          0,
+          1
+        ],
+        "transition_in_kernel": true,
+        "natural_after_forgetting_basepoint": false
+      }
+    ],
+    "inclusion_transition_ok": true
+  },
+  "E_antipode_compatibility": {
+    "statement": "Linear section repairs commute with the antipode, so the BZ/2 boundary-line local system is not disturbed.",
+    "row": {
+      "source_support": [
+        2,
+        3
+      ],
+      "target_support": [
+        2,
+        3,
+        5
+      ],
+      "target_orientation": [
+        1,
+        1,
+        -2
+      ],
+      "basepoint": 2,
+      "repaired_orientation": [
+        -1,
+        1
+      ],
+      "repaired_antipode": [
+        1,
+        -1
+      ],
+      "antipode_of_repair": [
+        1,
+        -1
+      ],
+      "linear_section_antipode_compatible": true
+    },
+    "antipode_compatibility_ok": true
+  },
+  "F_cohomology_verdict": {
+    "statement": "The support-defect repair torsor is split finite-level choice data, not a Rosser/cosheaf phantom class.",
+    "row": {
+      "finite_exact_sequence": "0 -> K_S -> Z^S -> Z -> 0",
+      "split_after_basepoint": true,
+      "transitions_are_coboundaries": true,
+      "non_mittag_leffler_tower_present": false,
+      "rosser_phantom_like": false,
+      "ordinary_choice_torsor": true,
+      "next_obstruction": "Classify the integral equivariant obstruction: rational symmetric sections exist, but integral support-symmetric sections do not."
+    },
+    "ordinary_choice_not_phantom_ok": true
+  },
+  "checks": {
+    "additive_repair_torsor_ok": true,
+    "primitive_locus_not_full_torsor_ok": true,
+    "basepoint_transition_cocycle_ok": true,
+    "inclusion_transition_ok": true,
+    "antipode_compatibility_ok": true,
+    "ordinary_choice_not_phantom_ok": true
+  },
+  "overall": "PASS"
+}

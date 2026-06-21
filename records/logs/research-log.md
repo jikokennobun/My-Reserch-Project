@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 107)
+
+- Modeled support-defect repairs as torsors.  For finite support $S$, the
+  additive repair choices form a free transitive torsor under
+  $K_S=\ker\Sigma_S=\{a\in\mathbb Z^S:\sum a_p=0\}$, but the primitive repair
+  locus is only a refinement and is not stable under all of $K_S$; e.g.
+  $(1,-1)+(1,-1)=(2,-2)$ is no longer primitive.  Basepointed sections
+  $s_b(n)=n e_b$ split $\Sigma_S$ noncanonically, and transitions
+  $s_b(1)-s_a(1)$ are $K_S$-valued coboundaries satisfying the cocycle
+  identity.  Since each finite support sequence splits after a basepoint and
+  no non-Mittag-Leffler tower appears, the support-defect repair data is an
+  ordinary choice torsor, not a Rosser/cosheaf phantom.  Added checker/report
+  and retargeted Pass 108 to the integral equivariant obstruction for
+  support-symmetric repair sections.
+
 ## 2026-06-21 (Autonomous discussion Pass 106)
 
 - Computed the stackification obstruction for primitive orientations over

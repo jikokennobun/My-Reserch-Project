@@ -37,6 +37,16 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass107-correction-torsors-support-defect-check.json`: verifies the
+  Pass-107 finite certificate for correction torsors of support-defect
+  repairs. It checks that additive repairs form a free transitive torsor
+  under `K_S = ker(Sigma_S)`; that the primitive repair locus is not stable
+  under the full kernel action; that basepointed splitting transitions are
+  `K_S`-valued coboundaries satisfying the cocycle identity; that inclusion
+  naturality holds exactly when basepoints are preserved; that linear repairs
+  commute with the antipode; and that the data is ordinary split finite-level
+  choice rather than a Rosser/cosheaf phantom class.
+
 - `pass106-stackification-obstruction-primitive-orientations-check.json`:
   verifies the Pass-106 finite certificate for the stackification obstruction
   of primitive orientations. It checks the deletion-defect identity

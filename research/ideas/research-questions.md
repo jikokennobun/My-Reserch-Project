@@ -42,25 +42,23 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 106 -> 107: correction torsors for support-defect repairs)**
-  Pass 106 computed the obstruction to treating primitive orientations as a
-  restriction sheaf.  Coordinate deletion has additive defect
-  $\Delta_{T,S}(d)=\sum_{p\in S}d_p$, restriction is defined only when this
-  defect vanishes and primitivity survives, and repairing nonzero defect
-  requires choosing a section of $\Sigma_S:\mathbb Z^S\to\mathbb Z$.  No
-  support-symmetric integer section exists for $|S|>1$, while based supports
-  trivialize the defect only by adding extra structure.  The correct
-  universal object is the zero-extension filtered colimit/left Kan extension,
-  with the antipode quotient carrying a residual $B\mathbb Z/2$ boundary-line
-  local system.  Open:
-  (i) model the repair choices as torsors under $\ker\Sigma_S$ and compute
-  their transition functions along support inclusions;
-  (ii) decide whether the support-defect data defines a genuine Cech/cosheaf
-  cohomology class analogous to the Rosser phantom, or only an ordinary
-  noncanonical section choice;
-  (iii) test how ordered or basepointed supports trivialize the obstruction
-  and whether this trivialization is compatible with the antipode local
-  system.
+- **(Pass 107 -> 108: integral equivariant obstruction for repair sections)**
+  Pass 107 modeled support-defect repairs as additive torsors under
+  $K_S=\ker\Sigma_S$.  The additive repair set is a free transitive $K_S$
+  torsor, while the primitive repair locus is not stable under all of
+  $K_S$.  Basepointed splittings $s_b(n)=n e_b$ trivialize the torsor, and
+  transitions between splittings are $K_S$-valued coboundaries satisfying the
+  cocycle identity.  Thus the support-defect data is ordinary finite-level
+  choice data rather than a Rosser/cosheaf phantom, and linear repairs remain
+  antipode-compatible.  Open:
+  (i) classify the obstruction to a support-symmetric integral section of
+  $\Sigma_S$, comparing it with the rational barycentric section
+  $(1/|S|,\dots,1/|S|)$;
+  (ii) express the obstruction in terms of the augmentation sequence
+  $0\to K_S\to\mathbb Z^S\to\mathbb Z\to0$ as a finite symmetric-group
+  equivariance or denominator obstruction;
+  (iii) decide whether this integral equivariance obstruction interacts with
+  the antipode $B\mathbb Z/2$ local system or remains completely separate.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

@@ -1289,13 +1289,32 @@
   Machine-verified
   `artifacts/reports/pass106-stackification-obstruction-primitive-orientations-check.json`
   (PASS).
-- **[New (Pass 106)]** **Correction torsors for support-defect repairs.**
+- **[Resolved (Pass 107)]** **Correction torsors for support-defect repairs.**
   Model choices of defect repair as torsors under
   $\ker\Sigma_S=\{a\in\mathbb Z^S:\sum a_p=0\}$.  Compute transition
   functions for these torsors along support inclusions, decide whether they
   define a Cech/cosheaf cohomology class analogous to the Rosser phantom, and
   test whether ordered or basepointed supports trivialize the class in a way
   compatible with the antipode local system.
+  **Resolution:** additive repairs form a free transitive
+  $K_S=\ker\Sigma_S$ torsor.  The primitive repair locus is only a primitive
+  subset of that torsor and is not stable under all of $K_S$.  Basepointed
+  splittings $s_b(n)=n e_b$ trivialize the additive torsor, and transitions
+  $s_b(1)-s_a(1)$ are $K_S$-valued coboundaries satisfying the cocycle
+  identity.  Since the finite exact sequence
+  $0\to K_S\to\mathbb Z^S\to\mathbb Z\to0$ splits after a basepoint and no
+  non-Mittag-Leffler tower is present, this is ordinary choice data, not a
+  Rosser/cosheaf phantom.  Linear repairs commute with the antipode, so the
+  $B\mathbb Z/2$ boundary-line local system is unchanged.  Machine-verified
+  `artifacts/reports/pass107-correction-torsors-support-defect-check.json`
+  (PASS).
+- **[New (Pass 107)]** **Integral equivariant obstruction for repair sections.**
+  Classify why $\Sigma_S:\mathbb Z^S\to\mathbb Z$ has no support-symmetric
+  integral section for $|S|>1$ even though it has a rational barycentric
+  section after tensoring with $\mathbb Q$.  Express this as an obstruction
+  in the augmentation sequence under the finite symmetric-group action on
+  $S$, and decide whether the denominator/equivariance obstruction is
+  independent of the antipode $B\mathbb Z/2$ local system.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

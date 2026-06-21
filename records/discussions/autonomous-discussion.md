@@ -6,8 +6,27 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 107
-- Last pass note: Pass 106 (2026-06-21) computed the obstruction to turning
+- Current pass: 108
+- Last pass note: Pass 107 (2026-06-21) modeled support-defect repairs as
+  torsors.  For a finite support $S$, let
+  $$K_S=\ker\Sigma_S=\{a\in\mathbb Z^S:\sum_{p\in S}a_p=0\}.$$
+  If $d|_S$ has additive defect $\Delta$, then additive repairs are the
+  affine set of vectors $r$ with $\sum r_p=0$ obtained by subtracting a
+  section value of $\Sigma_S$; any two repairs differ by an element of
+  $K_S$, and $K_S$ acts freely and transitively on additive repairs.  The
+  primitive repair locus is a refinement, not a full $K_S$ torsor: adding
+  $(1,-1)$ to $(1,-1)$ gives $(2,-2)$, which is zero-sum but not primitive.
+  Basepointed sections split $\Sigma_S$ noncanonically, and transitions
+  between basepoints are $K_S$-valued coboundaries
+  $s_b(1)-s_a(1)$ satisfying the cocycle identity.  Since every finite
+  support sequence $0\to K_S\to\mathbb Z^S\to\mathbb Z\to0$ splits after a
+  basepoint and no non-Mittag-Leffler tower appears, the support-defect data
+  is an ordinary choice torsor, not a Rosser/cosheaf phantom.  Linear
+  sections commute with the antipode, so the $B\mathbb Z/2$ boundary-line
+  local system is unaffected.  Machine-verified `check-pass107.py` ->
+  `pass107-correction-torsors-support-defect-check.json` PASS. Counter
+  107->108.
+- Earlier note: Pass 106 (2026-06-21) computed the obstruction to turning
   primitive orientations into a restriction sheaf over finite supports.  For
   $S\subseteq T$ and $d\in\mathcal O_T$, coordinate deletion has additive
   defect
@@ -12270,3 +12289,118 @@ Next step:
 Pass 107 should model correction choices as torsors under
 $\ker\Sigma_S$ and test whether the support-defect cocycle matches the
 Rosser/cosheaf phantom pattern or is only an ordinary choice obstruction.
+
+### Pass 107 - 2026-06-21 JST
+
+Focus:
+Model correction choices as torsors under $\ker\Sigma_S$ and decide whether
+the support-defect cocycle is Rosser/cosheaf-like or only an ordinary choice
+obstruction.
+
+Proposer:
+For a finite support $S$, define
+$$
+K_S=\ker\Sigma_S
+=\{a\in\mathbb Z^S:\sum_{p\in S}a_p=0\}.
+$$
+Given $S\subseteq T$ and $d\in\mathcal O_T$, coordinate deletion gives
+$u=d|_S\in\mathbb Z^S$ with defect $\Delta=\Sigma_S(u)$.  An additive repair
+is a vector
+$$
+r=u-a,\qquad \Sigma_S(a)=\Delta,
+$$
+so that $\Sigma_S(r)=0$.  If $r$ and $r'$ are two additive repairs, then
+$$
+r'-r\in K_S,
+$$
+and conversely $r+k$ is an additive repair for every $k\in K_S$.  Thus
+additive repairs form a $K_S$-torsor.
+
+Skeptic:
+The word "repair" hides a primitivity trap.  The additive repair torsor is
+larger than the primitive repair locus.  For instance, in support $\{2,3\}$,
+the vector $(1,-1)$ is primitive, and $(1,-1)\in K_S$; adding it again gives
+$$(2,-2),$$
+which is zero-sum but not primitive.  Therefore primitive repairs are not a
+torsor under the full $K_S$.  They are the primitive locus inside the
+additive torsor.
+
+Formalist:
+Choosing a basepoint $b\in S$ gives a section
+$$
+s_b:\mathbb Z\to\mathbb Z^S,\qquad
+s_b(n)=n e_b.
+$$
+The transition between two basepoints is
+$$
+\tau_{a,b}=s_b(1)-s_a(1)\in K_S,
+$$
+and
+$$
+\tau_{a,b}+\tau_{b,c}=\tau_{a,c}.
+$$
+Thus these transitions are coboundaries of chosen splittings.  Along an
+inclusion $S\subseteq T$, basepointed splittings are natural exactly when
+the basepoint is preserved; changing the basepoint produces a $K_T$-valued
+transition.
+
+This differs from the Rosser/cosheaf phantom: at each finite support we have
+a split short exact sequence
+$$
+0\to K_S\to\mathbb Z^S\xrightarrow{\Sigma_S}\mathbb Z\to0
+$$
+after choosing any basepoint.  There is no non-Mittag-Leffler inverse tower
+or unavoidable derived limit.  The noncanonicity is an ordinary choice
+torsor, not a persistent $\varprojlim^1$ class.  Linear sections also commute
+with the antipode:
+$$
+\operatorname{repair}_{s_b}(-d)=-\operatorname{repair}_{s_b}(d),
+$$
+so the $B\mathbb Z/2$ boundary-line local system survives unchanged.
+
+> **Theorem 107a (additive repair torsor).** For fixed deletion data, the
+> additive repairs form a free transitive $K_S=\ker\Sigma_S$ torsor.
+>
+> **Theorem 107b (primitive locus refinement).** The primitive repair choices
+> are not stable under all of $K_S$; they form a primitive locus inside the
+> additive torsor.
+>
+> **Theorem 107c (basepoint coboundaries).** Basepointed splittings
+> $s_b$ trivialize the additive repair torsor, and transition functions
+> $s_b-s_a$ are $K_S$-valued coboundaries satisfying the cocycle identity.
+>
+> **Theorem 107d (ordinary choice, not phantom).** The support-defect repair
+> data is finite-level split choice data, not a Rosser/cosheaf phantom
+> $\varprojlim^1$ class.  Antipode compatibility and the $B\mathbb Z/2$
+> boundary local system are preserved.
+
+Machine verification (`code/scripts/check-pass107.py` ->
+`artifacts/reports/pass107-correction-torsors-support-defect-check.json`,
+PASS): the checker verifies additive repair torsors under $K_S$, the
+non-stability of the primitive locus under the full kernel, basepoint
+transition coboundaries and their cocycle identity, inclusion naturality only
+when the basepoint is preserved, antipode compatibility of linear repairs,
+and the verdict that the data is ordinary split choice rather than a
+Rosser/cosheaf phantom.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-107
+  entry; State counter $107\to108$.
+- `records/logs/research-log.md`: Pass-107 entry.
+- `research/definitions.md`: added correction torsors for support-defect
+  repairs.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-107 theorem section.
+- `research/open_problems.md` and `research/ideas/research-questions.md`:
+  resolved the correction-torsor task and retargeted the next pass to the
+  integral equivariant obstruction for support-symmetric repair sections.
+- `code/scripts/check-pass107.py`,
+  `artifacts/reports/pass107-correction-torsors-support-defect-check.json`:
+  new.
+- `artifacts/pdf/correction-torsors-support-defect-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 108 should classify the integral equivariant obstruction: rational
+support-symmetric sections of $\Sigma_S$ exist by barycenters, but integral
+support-symmetric sections do not, and this denominator obstruction should
+be compared with the antipode/local-system package.

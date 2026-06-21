@@ -2735,3 +2735,63 @@ is acted on by $+\delta_\epsilon$ or $-\delta_\epsilon$, so the
 $B\mathbb Z/2$ local system remains part of the all-prime package.  This
 obstruction analysis still creates no degree-$0$ Weyl/Fourier morphism
 $\epsilon\to\mathbb Q$.
+
+## Correction torsors for support-defect repairs (Pass 107)
+
+For finite support $S$, set
+$$
+K_S=\ker\Sigma_S
+=\{a\in\mathbb Z^S:\sum_{p\in S}a_p=0\}.
+$$
+Given $S\subseteq T$ and $d\in\mathcal O_T$, let $u=d|_S$ be the coordinate
+deletion and let
+$$
+\Delta=\Sigma_S(u).
+$$
+An additive repair is a vector $r\in\mathbb Z^S$ of the form
+$$
+r=u-a,\qquad \Sigma_S(a)=\Delta,
+$$
+so that $\Sigma_S(r)=0$.  If $r$ and $r'$ are additive repairs, then
+$$
+r'-r\in K_S.
+$$
+Conversely, $r+k$ is an additive repair for every $k\in K_S$.  Thus additive
+repairs form a free transitive $K_S$ torsor.
+
+Primitive repair choices are subtler.  They are the primitive vectors inside
+the additive repair torsor, and this primitive locus is not stable under the
+full kernel action.  For example, on support $\{2,3\}$,
+$$
+(1,-1)+(1,-1)=(2,-2),
+$$
+where both summands lie in $K_S$ and $(1,-1)$ is primitive, but $(2,-2)$ is
+not primitive.
+
+A basepoint $b\in S$ gives a section
+$$
+s_b:\mathbb Z\to\mathbb Z^S,\qquad s_b(n)=n e_b.
+$$
+Transitions between basepoints are
+$$
+\tau_{a,b}=s_b(1)-s_a(1)\in K_S,
+$$
+and they satisfy the cocycle identity
+$$
+\tau_{a,b}+\tau_{b,c}=\tau_{a,c}.
+$$
+These transitions are coboundaries of the chosen splittings.  Along an
+inclusion $S\subseteq T$, the splittings are natural exactly when the
+basepoint is preserved; changing basepoint gives a $K_T$-valued transition.
+
+Therefore the support-defect repair data is ordinary finite-level choice
+data, not a Rosser/cosheaf phantom.  The short exact sequence
+$$
+0\to K_S\to\mathbb Z^S\xrightarrow{\Sigma_S}\mathbb Z\to0
+$$
+splits after any basepoint choice, and no non-Mittag-Leffler inverse tower is
+present.  Linear repair sections are antipode-compatible:
+$$
+\operatorname{repair}_{s_b}(-d)=-\operatorname{repair}_{s_b}(d),
+$$
+so the $B\mathbb Z/2$ boundary-line local system is unaffected.
