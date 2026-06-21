@@ -223,15 +223,16 @@ function Add-StateRow {
     $dir = Split-Path -Parent $StatePath
     if (-not (Test-Path -LiteralPath $dir)) { New-Item -ItemType Directory -Path $dir | Out-Null }
 
+    $updatedAt = (Get-Date).ToString("o")
+    $repliedAt = if ($Status -eq "replied") { $updatedAt } else { "" }
     $row = [pscustomobject][ordered]@{
         MessageId = $MessageId
         ChannelId = $ChannelIdValue
         Status = $Status
         Source = $Source
-        ResponseId = $ResponseId
         ReplyMessageId = $ReplyMessageId
-        Detail = $Detail
-        UpdatedAt = (Get-Date).ToString("o")
+        RepliedAt = $repliedAt
+        UpdatedAt = $updatedAt
     }
     if (Test-Path -LiteralPath $StatePath) {
         $row | Export-Csv -LiteralPath $StatePath -NoTypeInformation -Append -Encoding UTF8
