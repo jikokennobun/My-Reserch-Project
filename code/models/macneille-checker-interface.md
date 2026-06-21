@@ -84,3 +84,22 @@ The first implementation supports:
 
 No checker result should be treated as an APS theorem until the relevant APS
 axioms and completion-stability assumptions are verified for the model family.
+
+## Pass 111 Audit Status
+
+The Claude Code review repair is audited by
+`../../artifacts/reports/pass111-macneille-reflection-review-check.json`.
+The audit verifies:
+
+- v1 on `three-element-nolattice-nosynt` gives
+  `nonprincipal-without-syntactic` with fixed cut `{ 0, a, b }`;
+- legacy v0 on the same model gives `principal-unreflected` with fixed cut
+  `{ 0, a }` and two principal-extension failures;
+- v1 on `three-chain-antitone` gives `principal-unreflected`, separating the
+  syntactic fixed point `m` from the completed fixed cut principal at `t`;
+- the interface and research notes contain the repaired rule and
+  classification vocabulary.
+
+Next interface extension: add explicit APS axiom-package fields so reports can
+say which of A1-A4, G2, FG2, residuation, and completion-stability assumptions
+were actually checked.

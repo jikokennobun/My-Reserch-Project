@@ -6,35 +6,27 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 111
-- Last pass note: Pass 110 (2026-06-21) studied the primitive
-  conductor-cleared support-transition vectors
-  $$
-  \eta_{S,T}:=\operatorname{lcm}(|S|,|T|)\tau_{S,T}.
-  $$
-  Each $\eta_{S,T}$ is an integral primitive zero-sum vector on $T$, but the
-  primitive vectors do not usually compose strictly along
-  $S\subset T\subset U$.  If
-  $L_{A,B}:=\operatorname{lcm}(|A|,|B|)$ and
-  $C=\operatorname{lcm}(L_{S,T},L_{T,U},L_{S,U})$, then the exact chain law is
-  $$
-  \frac{C}{L_{S,T}}e_{T,U}\eta_{S,T}
-  +\frac{C}{L_{T,U}}\eta_{T,U}
-  =
-  \frac{C}{L_{S,U}}\eta_{S,U}.
-  $$
-  Strict primitive composition holds exactly in the checked cases where the
-  three edge conductors agree.  Otherwise the common-conductor sum is an
-  additive-kernel identity but can be a nonprimitive multiple of the endpoint
-  vector, so primitive lines alone are not functorial.  The useful
-  oriented-support edge datum is therefore the weighted pair
-  $(L_{S,T},\eta_{S,T})$, equivalently the rational transition
-  $\tau_{S,T}$.  This matches the Pass-107 warning that primitive loci are
-  arithmetic refinements inside additive $K$-torsors.  The newest Claude Code
-  review remains valid and should be incorporated next; it was not mixed into
-  this support-chain pass.  Machine-verified `check-pass110.py` ->
-  `pass110-primitive-transition-chain-law-check.json` PASS. Counter
-  110->111.
+- Current pass: 112
+- Last pass note: Pass 111 (2026-06-21) incorporated and verified the Claude
+  Code MacNeille reflection checker review.  The repository already contained
+  the requested three-element non-lattice witness, the variance-sensitive
+  `antitone-dual-lower-cut-v1` rule, the legacy wrong-polarity v0 comparison,
+  the `reflected` field, `principal-unreflected` classification, and
+  principal-extension-condition checks.  Pass 111 regenerated the decisive
+  reports and added a verification audit.  Under v1,
+  `three-element-nolattice-nosynt` has no syntactic fixed points and has the
+  non-principal completion fixed cut `{ 0, a, b }`, classified as
+  `nonprincipal-without-syntactic`.  Under legacy v0, the same model returns
+  the principal but unreflected cut `{ 0, a }` and fails the principal
+  extension condition twice, exposing the polarity error.  The three-chain
+  smoke test under v1 is now classified `principal-unreflected`: the syntactic
+  fixed point is `m`, while the completed fixed cut is principal at `t` and is
+  not reflected.  Machine verification
+  `code/scripts/check-pass111.py` ->
+  `artifacts/reports/pass111-macneille-reflection-review-check.json` PASS.
+  The next task is to add APS axiom-package checks and search for G2-holding
+  variants of the non-principal completion-fixed-point separation.  Counter
+  111->112.
 - Earlier note: Pass 109 (2026-06-21) computed the rational barycentric
   transition under a support inclusion $S\subset T$.  If $|S|=n$ and
   $|T|=m$, then
@@ -12861,3 +12853,118 @@ Pass 111 should incorporate the Claude Code MacNeille reflection checker
 review: add the non-lattice witness, fix or separate the dual closure rule,
 record reflected/principal-unreflected classifications, and update the
 associated checker documentation.
+
+### Pass 111 - 2026-06-21 JST
+
+Focus:
+Incorporate the Claude Code MacNeille reflection checker review and verify the
+separation between syntactic fixed points and completion-created fixed cuts.
+
+Proposer:
+The review asks for a polarity repair in the MacNeille extension of an
+antitone refutability map.  For lower cuts $C$ in the MacNeille completion,
+the current rule should treat
+$$
+\boxtimes:L\to L^{op}
+$$
+as monotone first, then close in the opposite order.  The finite checker names
+this rule
+`antitone-dual-lower-cut-v1`:
+$$
+\widehat{\boxtimes}(C)
+=\bigl((\boxtimes[C])^{l_L}\bigr)^{u_L}.
+$$
+The older rule
+`antitone-dual-lower-cut-v0`,
+$$
+\bigl((\boxtimes[C])^{u_L}\bigr)^{l_L},
+$$
+is kept only as a wrong-polarity comparison.
+
+Skeptic:
+The review is not just a naming cleanup.  A principal completed fixed point
+need not be reflected by a syntactic fixed point.  Therefore "principal" is
+too weak as an output label: the checker must distinguish `reflected` from
+`principal-unreflected`.  It must also test the principal extension condition.
+For v1, the expected value of a principal lower cut is the dual principal cut
+in $L^{op}$ at $\boxtimes a$, not the lower principal cut in $L$.
+
+The size-3 non-lattice witness is the decisive polarity test.  Its carrier is
+`{0,a,b}` with `0<a`, `0<b`, and `a` incomparable with `b`; refutability sends
+`0` to `a` and both `a,b` to `0`.  There is no syntactic fixed point.  The
+v1 completion creates the non-principal fixed cut `{ 0, a, b }`.  Legacy v0
+instead returns the principal cut `{ 0, a }`, which is unreflected and violates
+the principal extension condition.
+
+Formalist:
+The checker artifacts now separate three cases:
+
+1. `three-element-nolattice-nosynt`, v1:
+   `nonprincipal-without-syntactic`, completed fixed cut `{ 0, a, b }`,
+   non-principal, no syntactic fixed point, no principal-extension failures.
+2. `three-element-nolattice-nosynt`, v0:
+   `principal-unreflected`, completed fixed cut `{ 0, a }`, principal at
+   `a` but not reflected, with two principal-extension failures and a
+   wrong-polarity warning.
+3. `three-chain-antitone`, v1:
+   `principal-unreflected`, syntactic fixed point `m`, completed fixed cut
+   `{ b, m, t }`, principal at `t` but not reflected.
+
+Thus the bare MacNeille reflection counterexample is real but still outside
+the stronger APS theorem zone: the non-lattice witness is neither G2 nor FG2,
+and the finite checker still warns that A1-A4 are not checked.
+
+> **Theorem 111a (variance-sensitive MacNeille extension).** For an antitone
+> refutability map, the usable finite-checker extension is the v1
+> $L^{op}$-closure rule
+> $\widehat{\boxtimes}(C)=((\boxtimes[C])^{l_L})^{u_L}$.
+>
+> **Theorem 111b (non-principal completion fixed point without syntax).** The
+> three-element non-lattice model has no syntactic $\boxtimes$-fixed point,
+> but under v1 its MacNeille completion has the non-principal fixed cut
+> `{ 0, a, b }`.
+>
+> **Theorem 111c (principal does not imply reflected).** Both the legacy v0
+> non-lattice control and the v1 three-chain smoke test exhibit principal
+> completed fixed cuts that are not reflected by their principal element as a
+> syntactic fixed point.
+
+Machine verification:
+- `code/scripts/check-macneille-reflection.ps1` regenerated
+  `artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json`
+  (v1, `nonprincipal-without-syntactic`).
+- The same checker generated
+  `artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v0.json`
+  (legacy wrong-polarity control, `principal-unreflected` with two extension
+  failures).
+- It regenerated
+  `artifacts/reports/macneille-reflection-three-chain-antitone-v1.json`
+  (v1 smoke test, `principal-unreflected`).
+- `code/scripts/check-pass111.py` audited the three reports and documentation
+  markers, producing
+  `artifacts/reports/pass111-macneille-reflection-review-check.json` (PASS).
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-111
+  entry; State counter $111\to112$.
+- `records/logs/research-log.md`: Pass-111 entry.
+- `research/ideas/research-questions.md`: retargeted the next pass to
+  G2-holding MacNeille variants and APS axiom-package checks.
+- `research/open_problems.md`: resolved the Claude Code review repair and
+  opened the G2/APS-strengthening boundary problem.
+- `research/definitions.md`, `research/notes/completion-and-fixed-points.md`,
+  `research/notes/g2-fg2-hierarchy.md`,
+  `code/models/macneille-reflection-search.md`,
+  and `code/models/macneille-checker-interface.md`: recorded the verified v1
+  convention, the v0 control, and the reflected/principal-unreflected split.
+- `code/scripts/check-pass111.py`,
+  `artifacts/reports/pass111-macneille-reflection-review-check.json`, and
+  `artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v0.json`:
+  added or refreshed as the Pass-111 verification artifacts.
+- `artifacts/pdf/macneille-reflection-checker-repair-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 112 should add APS axiom-package checks to the MacNeille reflection
+search and test whether any G2-holding finite model can keep the v1
+non-principal completion fixed point without a syntactic fixed point.

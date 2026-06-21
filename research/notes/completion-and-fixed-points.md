@@ -135,7 +135,8 @@ Only after extending along this polarity should one compare the result back to
 $\widehat L$. This prevents the extension step from silently treating an
 antitone operation as monotone.
 
-The current finite-checker convention is:
+The current finite-checker convention is
+`antitone-dual-lower-cut-v1`:
 
 $$
 \widehat{\boxtimes}(C)=\bigl((\boxtimes[C])^{l_L}\bigr)^{u_L},
@@ -173,6 +174,34 @@ Classify candidates into:
 
 The working protocol lives in
 [../../code/models/macneille-reflection-search.md](../../code/models/macneille-reflection-search.md).
+
+## Pass 111 Verification
+
+Pass 111 verified the Claude Code review repair of the finite MacNeille
+reflection checker.  The decisive model is
+`code/models/examples/three-element-nolattice-nosynt.json`: its carrier is
+`{0,a,b}` with `0<a`, `0<b`, and `a` incomparable with `b`; refutability sends
+`0` to `a` and both `a,b` to `0`.  It has no syntactic fixed point.
+
+Under `antitone-dual-lower-cut-v1`, the checker reports the non-principal
+completion fixed cut `{ 0, a, b }`, classified as
+`nonprincipal-without-syntactic`, with no principal-extension failures.  Under
+legacy `antitone-dual-lower-cut-v0`, the same model reports `{ 0, a }`,
+principal at `a` but unreflected, and fails the principal-extension condition
+twice.  This makes the v0/v1 polarity distinction observable in the smallest
+non-lattice example.
+
+The three-chain smoke test also matters: under v1 it has syntactic fixed
+point `m`, but its completed fixed cut is `{ b, m, t }`, principal at `t` and
+not reflected.  Hence the checker must preserve the distinction between
+principal fixed cuts and reflected fixed cuts.
+
+Machine certificates:
+
+- `artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v1.json`
+- `artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v0.json`
+- `artifacts/reports/macneille-reflection-three-chain-antitone-v1.json`
+- `artifacts/reports/pass111-macneille-reflection-review-check.json`
 
 ## Next Tasks
 

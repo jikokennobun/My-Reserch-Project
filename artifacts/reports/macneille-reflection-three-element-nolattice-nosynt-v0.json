@@ -1,0 +1,134 @@
+﻿{
+    "model":  "three-element-nolattice-nosynt",
+    "modelPath":  "C:\\Users\\20010215fjii\\Documents\\GitHub\\My-Reserch-Project\\code\\models\\examples\\three-element-nolattice-nosynt.json",
+    "extensionRule":  "antitone-dual-lower-cut-v0",
+    "extensionDescription":  "Legacy v0: close the pointwise refutability image by the L MacNeille lower-cut closure ((image)^u_L)^l_L. This is retained to reproduce earlier smoke-test output and has the wrong polarity for antitone L -\u003e L^op.",
+    "classification":  "principal-unreflected",
+    "carrierSize":  3,
+    "closedCutCount":  4,
+    "closedCuts":  [
+                       {
+                           "cut":  [
+                                       "0"
+                                   ],
+                           "display":  "{ 0 }",
+                           "principalElement":  "0"
+                       },
+                       {
+                           "cut":  [
+                                       "0",
+                                       "a"
+                                   ],
+                           "display":  "{ 0, a }",
+                           "principalElement":  "a"
+                       },
+                       {
+                           "cut":  [
+                                       "0",
+                                       "b"
+                                   ],
+                           "display":  "{ 0, b }",
+                           "principalElement":  "b"
+                       },
+                       {
+                           "cut":  [
+                                       "0",
+                                       "a",
+                                       "b"
+                                   ],
+                           "display":  "{ 0, a, b }",
+                           "principalElement":  null
+                       }
+                   ],
+    "principalCuts":  [
+                          {
+                              "element":  "0",
+                              "cut":  [
+                                          "0"
+                                      ],
+                              "display":  "{ 0 }",
+                              "dualCut":  [
+                                              "0",
+                                              "a",
+                                              "b"
+                                          ],
+                              "dualDisplay":  "{ 0, a, b }"
+                          },
+                          {
+                              "element":  "a",
+                              "cut":  [
+                                          "0",
+                                          "a"
+                                      ],
+                              "display":  "{ 0, a }",
+                              "dualCut":  [
+                                              "a"
+                                          ],
+                              "dualDisplay":  "{ a }"
+                          },
+                          {
+                              "element":  "b",
+                              "cut":  [
+                                          "0",
+                                          "b"
+                                      ],
+                              "display":  "{ 0, b }",
+                              "dualCut":  [
+                                              "b"
+                                          ],
+                              "dualDisplay":  "{ b }"
+                          }
+                      ],
+    "syntacticFixedPoints":  [
+
+                             ],
+    "completedFixedPoints":  [
+                                 {
+                                     "cut":  [
+                                                 "0",
+                                                 "a"
+                                             ],
+                                     "display":  "{ 0, a }",
+                                     "principal":  true,
+                                     "principalElement":  "a",
+                                     "reflected":  false
+                                 }
+                             ],
+    "extensionConditionFailures":  [
+                                       {
+                                           "element":  "a",
+                                           "refutability":  "0",
+                                           "expectedEmbedding":  "lower-principal",
+                                           "actual":  [
+                                                          "0",
+                                                          "a"
+                                                      ],
+                                           "actualDisplay":  "{ 0, a }",
+                                           "expected":  [
+                                                            "0"
+                                                        ],
+                                           "expectedDisplay":  "{ 0 }"
+                                       },
+                                       {
+                                           "element":  "b",
+                                           "refutability":  "0",
+                                           "expectedEmbedding":  "lower-principal",
+                                           "actual":  [
+                                                          "0",
+                                                          "a"
+                                                      ],
+                                           "actualDisplay":  "{ 0, a }",
+                                           "expected":  [
+                                                            "0"
+                                                        ],
+                                           "expectedDisplay":  "{ 0 }"
+                                       }
+                                   ],
+    "g2":  false,
+    "fg2":  false,
+    "warnings":  [
+                     "The selected v0 rule has the wrong polarity for antitone L -\u003e L^op; use v1 for current research passes.",
+                     "APS axioms A1-A4 are not checked by this finite checker.",
+                     "The selected extension rule does not preserve all principal cuts for this model."
+                 ]
+}

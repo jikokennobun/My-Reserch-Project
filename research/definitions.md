@@ -2949,3 +2949,63 @@ common-conductor identity may produce a nonprimitive multiple of the endpoint
 primitive vector.  This is the same arithmetic phenomenon as in primitive
 repair loci: additive kernels are closed under the relevant sums, while
 primitive representatives are only normalized elements inside those kernels.
+
+## MacNeille reflection checker repair (Pass 111)
+
+For a finite preorder $L$, write
+$$
+X^u=\{a\in L:\forall x\in X,\ x\le a\},
+\qquad
+X^l=\{a\in L:\forall x\in X,\ a\le x\}.
+$$
+The MacNeille completion is represented by lower cuts
+$$
+C=(C^u)^l,
+$$
+with principal lower cut
+$$
+i_L(a)=(\{a\}^u)^l.
+$$
+
+For an antitone refutability map
+$$
+\boxtimes:L\to L,
+$$
+the current checker convention treats $\boxtimes$ as a monotone map
+$L\to L^{op}$ before closing the pointwise image.  The rule is named
+`antitone-dual-lower-cut-v1` and is
+$$
+\widehat{\boxtimes}(C)=\bigl((\boxtimes[C])^{l_L}\bigr)^{u_L}.
+$$
+The legacy rule `antitone-dual-lower-cut-v0`,
+$$
+\bigl((\boxtimes[C])^{u_L}\bigr)^{l_L},
+$$
+has the wrong polarity for antitone $L\to L^{op}$ extensions and is retained
+only as a comparison control.
+
+A completed fixed cut $q$ is **principal** if $q=i_L(a)$ for some
+$a\in L$.  It is **reflected** if it is principal and the principal element
+is a syntactic fixed point:
+$$
+a=\boxtimes a.
+$$
+A **principal-unreflected** fixed cut is principal but its principal element
+is not a syntactic fixed point.  A **nonprincipal-without-syntactic** fixed
+cut is a non-principal completed fixed cut occurring in a model with no
+syntactic fixed point.
+
+For v1 the principal-extension condition compares the completed value of
+$i_L(a)$ with the dual principal cut at $\boxtimes a$:
+$$
+\widehat{\boxtimes}(i_L(a))=i_{L^{op}}(\boxtimes a).
+$$
+Failure of this condition indicates that the selected extension rule is not
+preserving principal elements with the intended variance.
+
+The three-element non-lattice witness `three-element-nolattice-nosynt` has
+carrier $\{0,a,b\}$ with $0<a$, $0<b$, and $a,b$ incomparable.  Its
+refutability sends $0$ to $a$ and sends $a,b$ to $0$.  It has no syntactic
+fixed point.  Under v1, the completion has the non-principal fixed cut
+`{ 0, a, b }`; under legacy v0, it instead returns the principal but
+unreflected cut `{ 0, a }` and fails the principal-extension condition.

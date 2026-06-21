@@ -1377,13 +1377,34 @@
   span system over finite supports.  Determine whether the conductor weights
   form a useful 2-cocycle or normalization system, and whether this package
   interacts nontrivially with the $B\mathbb Z/2$ boundary-line local system.
-- **[New (Pass 110, Claude Code review)]** **MacNeille reflection checker repair.**
+- **[Resolved (Pass 111)]** **MacNeille reflection checker repair.**
   Incorporate the newest Claude Code review by adding the proposed
   three-element non-lattice witness, correcting or separating the antitone
   completion extension closure as an $L^{op}$ closure, adding a `reflected`
   field and `principal-unreflected` classification, checking the extension
   condition on principal cuts, and updating the MacNeille checker interface
   and completion/fixed-point notes.
+  **Resolution:** the checker now has current rule
+  `antitone-dual-lower-cut-v1`,
+  $\widehat{\boxtimes}(C)=((\boxtimes[C])^{l_L})^{u_L}$, and keeps legacy
+  `antitone-dual-lower-cut-v0` only as a wrong-polarity control.  The
+  three-element non-lattice witness has no syntactic fixed point and under
+  v1 has the non-principal completion fixed cut `{ 0, a, b }`, classified as
+  `nonprincipal-without-syntactic`.  Under v0 it instead gives `{ 0, a }`,
+  principal at `a` but unreflected, with two principal-extension failures.
+  The three-chain smoke test under v1 is also `principal-unreflected`, with
+  syntactic fixed point `m` but completed fixed cut principal at `t`.
+  Machine-verified by
+  `artifacts/reports/pass111-macneille-reflection-review-check.json` (PASS).
+- **[New (Pass 111)]** **G2/APS boundary for MacNeille completion fixed points.**
+  The verified non-lattice witness is a bare finite preAPS separation, but it
+  is neither G2 nor FG2 and the checker still does not verify A1-A4.  Add
+  APS axiom-package checks to the MacNeille reflection search, then decide
+  whether a G2-holding finite model can keep a v1 non-principal completion
+  fixed point without a syntactic $\boxtimes$-fixed point.  If no such model
+  exists in small carriers, formulate the weakest reflection theorem forcing
+  completed fixed cuts to be reflected, or at least principal, under G2 plus
+  the selected APS/completion-stability package.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

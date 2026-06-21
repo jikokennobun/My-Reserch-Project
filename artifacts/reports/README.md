@@ -37,6 +37,18 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass111-macneille-reflection-review-check.json`: verifies the Pass-111
+  MacNeille reflection checker repair. It audits the v1 non-lattice witness,
+  the legacy v0 wrong-polarity control, the v1 three-chain smoke test, and
+  documentation markers for `reflected`, `principal-unreflected`, and the
+  dual principal-cut convention. Overall result: PASS.
+
+- `macneille-reflection-three-element-nolattice-nosynt-v0.json`: legacy v0
+  wrong-polarity control for the three-element non-lattice witness. It returns
+  the principal but unreflected cut `{ 0, a }` and records two principal
+  extension failures, contrasting with the current v1 report
+  `macneille-reflection-three-element-nolattice-nosynt-v1.json`.
+
 - `pass110-primitive-transition-chain-law-check.json`: verifies the Pass-110
   finite certificate for primitive conductor-cleared transition vectors. It
   checks that each minimally cleared barycentric transition `eta_{S,T}` is an

@@ -1,5 +1,19 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 111)
+
+- Verified the Claude Code MacNeille reflection checker repair.  The current
+  v1 rule treats antitone refutability as $L\to L^{op}$ and uses
+  $((\boxtimes[C])^{l_L})^{u_L}$; the legacy v0 rule is retained only as a
+  wrong-polarity control.  The non-lattice witness
+  `three-element-nolattice-nosynt` has no syntactic fixed point and under v1
+  has the non-principal completion fixed cut `{ 0, a, b }`, classified
+  `nonprincipal-without-syntactic`.  Under v0 it gives `{ 0, a }`, principal
+  but unreflected, with two principal-extension failures.  The three-chain
+  smoke test under v1 is `principal-unreflected`.  Added a Pass-111 audit
+  checker/report, refreshed MacNeille reports, and retargeted Pass 112 to
+  APS axiom-package checks and G2-holding variants.
+
 ## 2026-06-21 (Autonomous discussion Pass 110)
 
 - Studied the primitive conductor-cleared transition vectors

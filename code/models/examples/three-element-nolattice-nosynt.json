@@ -21,8 +21,8 @@
     "b": "0"
   },
   "metadata": {
-    "purpose": "First non-lattice test model for the MacNeille reflection checker. The carrier {0,a,b} with 0 < a, 0 < b, a||b is NOT a lattice: the join a v b does not exist in L. The MacNeille completion adds exactly one non-principal cut {0,a,b}. The antitone map boxtimes has no syntactic fixed point. Under the correct L^op-closure extension, the sole completion fixed point is the non-principal cut {0,a,b}, giving classification nonprincipal-without-syntactic. Under the provisional antitone-dual-lower-cut-v0 rule, the checker WRONGLY reports principal-only at i(a)={0,a}, exposing Defect 1 (wrong polarity in Invoke-CompletedRefutability). This model is the primary regression target for antitone-dual-lower-cut-v1.",
-    "expectedClassificationUnderV0": "principal-only (WRONG)",
+    "purpose": "First non-lattice test model for the MacNeille reflection checker. The carrier {0,a,b} with 0 < a, 0 < b, a||b is NOT a lattice: the join a v b does not exist in L. The MacNeille completion adds exactly one non-principal cut {0,a,b}. The antitone map boxtimes has no syntactic fixed point. Under the correct L^op-closure extension, the sole completion fixed point is the non-principal cut {0,a,b}, giving classification nonprincipal-without-syntactic. Under the legacy antitone-dual-lower-cut-v0 rule, the checker wrongly reports the principal but unreflected cut i(a)={0,a}, exposing the wrong-polarity control case. This model is the primary regression target for antitone-dual-lower-cut-v1.",
+    "expectedClassificationUnderV0": "principal-unreflected (WRONG-POLARITY CONTROL)",
     "expectedClassificationUnderCorrectExtension": "nonprincipal-without-syntactic",
     "nonPrincipalCut": ["0", "a", "b"],
     "syntacticFixedPoints": [],

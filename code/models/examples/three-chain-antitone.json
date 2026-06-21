@@ -23,6 +23,7 @@
   },
   "metadata": {
     "purpose": "Hand-checkable smoke-test model for the first MacNeille reflection checker.",
-    "expectedClassification": "principal-only"
+    "expectedClassificationUnderV0": "principal-only (legacy label)",
+    "expectedClassificationUnderV1": "principal-unreflected"
   }
 }

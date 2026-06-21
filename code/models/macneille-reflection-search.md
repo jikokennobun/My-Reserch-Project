@@ -136,3 +136,25 @@ The size-3 non-lattice search target is therefore resolved for bare finite
 preAPS data. The next substantive search should test which APS axiom packages
 rule out this non-principal completion fixed point, or find a G2-holding
 variant with the same separation.
+
+Legacy v0 control on the same non-lattice model:
+[../../artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v0.json](../../artifacts/reports/macneille-reflection-three-element-nolattice-nosynt-v0.json).
+
+- Model: `three-element-nolattice-nosynt`
+- Extension rule: `antitone-dual-lower-cut-v0`
+- Classification: `principal-unreflected`
+- Syntactic fixed points: none
+- Completed fixed point: `{ 0, a }`, principal at `a`, not reflected
+- Principal extension condition: two failures
+- Interpretation: this is the wrong-polarity baseline that v1 replaces, not a
+  current reflection witness.
+
+Pass 111 verification audit:
+[../../artifacts/reports/pass111-macneille-reflection-review-check.json](../../artifacts/reports/pass111-macneille-reflection-review-check.json).
+
+The audit checks the v1 non-lattice witness, the v0 control, the v1 chain
+smoke test, and documentation markers for `reflected`,
+`principal-unreflected`, and the v1 dual principal-cut convention. Its result
+is PASS. The next search target is now the G2/APS boundary: add axiom-package
+checks and test whether the non-principal completion fixed cut can coexist
+with G2 without a syntactic fixed point.

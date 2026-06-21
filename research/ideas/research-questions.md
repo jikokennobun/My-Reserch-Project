@@ -42,19 +42,20 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 110 -> 111: MacNeille reflection checker repair from Claude review)**
-  Pass 110 closed the conductor-cleared primitive transition question: the
-  weighted edge datum is $(L_{S,T},\eta_{S,T})$, and primitive lines alone
-  are not functorial.  The newest Claude Code review now supplies a concrete
-  repository repair task for the MacNeille reflection checker.  Open:
-  (i) add the three-element non-lattice no-syntactic-fixed-point witness
-  requested by the review;
-  (ii) implement or explicitly separate the correct $L^{op}$ closure rule
-  for antitone completion extension, while preserving the provisional rule
-  as a comparison if useful;
-  (iii) add `reflected` and `principal-unreflected` output classifications,
-  plus principal-extension-condition warnings, then update the checker
-  interface and fixed-point notes accordingly.
+- **(Pass 111 -> 112: G2/APS boundary for MacNeille completion fixed points)**
+  Pass 111 verified the Claude Code MacNeille reflection checker repair:
+  the v1 $L^{op}$ closure rule, the three-element non-lattice witness,
+  `reflected`/`principal-unreflected` output, and principal-extension
+  warnings are now audited by
+  `artifacts/reports/pass111-macneille-reflection-review-check.json`.
+  The bare witness has no syntactic fixed point and a non-principal
+  completion fixed cut, but it is neither G2 nor FG2.  Open:
+  (i) add APS axiom-package checks, at least for A1-A4, G2, FG2, and
+  residuation placeholders, to the MacNeille reflection search;
+  (ii) search for a G2-holding finite variant with a v1 non-principal
+  completion fixed point and no syntactic fixed point;
+  (iii) if the search fails, formulate the weakest axiom package forcing
+  every completion fixed cut to be reflected or at least principal.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

@@ -1,0 +1,146 @@
+{
+  "pass": 111,
+  "title": "MacNeille reflection checker review repair verification",
+  "inputs": {
+    "non_lattice_v1": "artifacts\\reports\\macneille-reflection-three-element-nolattice-nosynt-v1.json",
+    "non_lattice_v0": "artifacts\\reports\\macneille-reflection-three-element-nolattice-nosynt-v0.json",
+    "chain_v1": "artifacts\\reports\\macneille-reflection-three-chain-antitone-v1.json"
+  },
+  "A_current_v1_non_lattice_witness": {
+    "statement": "Under the v1 antitone L -> L^op extension, the size-3 non-lattice witness has a non-principal completion fixed cut and no syntactic fixed point.",
+    "checks": {
+      "uses_current_dual_rule": true,
+      "classification_is_nonprincipal_without_syntactic": true,
+      "has_no_syntactic_fixed_points": true,
+      "has_expected_nonprincipal_fixed_cut": true,
+      "has_no_principal_extension_failures": true,
+      "is_not_g2_or_fg2": true
+    },
+    "classification": "nonprincipal-without-syntactic",
+    "completedFixedPoints": [
+      {
+        "cut": [
+          "0",
+          "a",
+          "b"
+        ],
+        "display": "{ 0, a, b }",
+        "principal": false,
+        "principalElement": null,
+        "reflected": false
+      }
+    ]
+  },
+  "B_legacy_v0_polarity_control": {
+    "statement": "The legacy v0 rule is retained only as a wrong-polarity control; on the same witness it returns a principal but unreflected cut and fails the principal extension condition.",
+    "checks": {
+      "uses_legacy_wrong_polarity_rule": true,
+      "classification_records_principal_unreflected": true,
+      "principal_cut_is_not_reflected": true,
+      "principal_extension_condition_fails": true,
+      "warning_mentions_wrong_polarity": true
+    },
+    "classification": "principal-unreflected",
+    "extensionConditionFailures": [
+      {
+        "element": "a",
+        "refutability": "0",
+        "expectedEmbedding": "lower-principal",
+        "actual": [
+          "0",
+          "a"
+        ],
+        "actualDisplay": "{ 0, a }",
+        "expected": [
+          "0"
+        ],
+        "expectedDisplay": "{ 0 }"
+      },
+      {
+        "element": "b",
+        "refutability": "0",
+        "expectedEmbedding": "lower-principal",
+        "actual": [
+          "0",
+          "a"
+        ],
+        "actualDisplay": "{ 0, a }",
+        "expected": [
+          "0"
+        ],
+        "expectedDisplay": "{ 0 }"
+      }
+    ]
+  },
+  "C_chain_smoke_test": {
+    "statement": "The old three-chain smoke test is no longer labelled merely principal-only: v1 separates the syntactic fixed point m from the unreflected principal completion cut at t.",
+    "checks": {
+      "classification_is_principal_unreflected": true,
+      "syntactic_fixed_point_m_remains_visible": true,
+      "completed_fixed_point_is_principal_t_but_not_reflected": true,
+      "has_no_principal_extension_failures": true
+    },
+    "classification": "principal-unreflected",
+    "completedFixedPoints": [
+      {
+        "cut": [
+          "b",
+          "m",
+          "t"
+        ],
+        "display": "{ b, m, t }",
+        "principal": true,
+        "principalElement": "t",
+        "reflected": false
+      }
+    ]
+  },
+  "D_documentation_audit": {
+    "statement": "Checker interface, search note, and completion note contain the repaired rule names and classification vocabulary.",
+    "rows": [
+      {
+        "path": "code/models/macneille-checker-interface.md",
+        "requiredMarkers": [
+          "antitone-dual-lower-cut-v1",
+          "principal-unreflected",
+          "reflected",
+          "dual principal cut"
+        ],
+        "missingMarkers": [],
+        "ok": true
+      },
+      {
+        "path": "code/models/macneille-reflection-search.md",
+        "requiredMarkers": [
+          "three-element-nolattice-nosynt",
+          "nonprincipal-without-syntactic",
+          "principal-unreflected",
+          "G2-holding"
+        ],
+        "missingMarkers": [],
+        "ok": true
+      },
+      {
+        "path": "research/notes/completion-and-fixed-points.md",
+        "requiredMarkers": [
+          "antitone-dual-lower-cut-v0",
+          "antitone-dual-lower-cut-v1",
+          "principal but unreflected",
+          "G2-holding variants"
+        ],
+        "missingMarkers": [],
+        "ok": true
+      }
+    ]
+  },
+  "E_next_problem": {
+    "statement": "The bare non-lattice reflection counterexample is verified, but it is neither G2 nor FG2; the next search should add APS axiom-package checks and look for G2-holding variants."
+  },
+  "checks": {
+    "v1_non_lattice_current_rule_ok": true,
+    "v0_wrong_polarity_comparison_ok": true,
+    "chain_v1_principal_unreflected_ok": true,
+    "documentation_markers_ok": true
+  },
+  "overall": "PASS"
+}

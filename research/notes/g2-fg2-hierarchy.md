@@ -6416,3 +6416,42 @@ comparison.
 **Limit of the pass.**  The next task is to incorporate the Claude Code
 MacNeille reflection checker review and repair the completion/fixed-point
 checker line.
+
+## Pass 111 - MacNeille reflection checker repair
+
+Pass 111 returns to the completion/fixed-point line that sits adjacent to the
+G2/FG2 hierarchy.  The finite MacNeille checker now distinguishes three
+phenomena that were previously conflated:
+
+1. syntactic fixed points $p=\boxtimes p$ in the original preorder;
+2. principal completed fixed cuts $i_L(a)$ that need not be reflected by
+   $a=\boxtimes a$;
+3. non-principal completed fixed cuts with no syntactic fixed point.
+
+The current antitone extension rule is `antitone-dual-lower-cut-v1`,
+$$
+\widehat{\boxtimes}(C)=((\boxtimes[C])^{l_L})^{u_L},
+$$
+which treats $\boxtimes:L\to L^{op}$ as monotone before closing.  The legacy
+`antitone-dual-lower-cut-v0` rule is retained only as a wrong-polarity
+control.
+
+The verified non-lattice witness `three-element-nolattice-nosynt` has no
+syntactic fixed point and, under v1, the non-principal completion fixed cut
+`{ 0, a, b }`.  It is classified as `nonprincipal-without-syntactic`.  Under
+legacy v0, it instead gives a principal but unreflected cut `{ 0, a }` and
+fails the principal extension condition twice.  The three-chain smoke test
+under v1 is also `principal-unreflected`: the syntactic fixed point is `m`,
+but the completed fixed cut is principal at `t`.
+
+Both checked examples are non-G2 and non-FG2, so the result is a repaired
+completion-reflection counterexample at the bare finite preAPS level, not yet
+a theorem about APS axiom packages.  The next G2/FG2 task is therefore to add
+axiom-package checks to the MacNeille search and test whether any G2-holding
+finite model can keep the non-principal completion fixed point without a
+syntactic fixed point.
+
+**Machine verification** (`code/scripts/check-pass111.py` ->
+`artifacts/reports/pass111-macneille-reflection-review-check.json`, PASS):
+the audit verifies the v1 non-lattice witness, the v0 polarity control, the
+v1 chain smoke test, and documentation markers for the repaired interface.
