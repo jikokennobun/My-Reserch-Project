@@ -37,6 +37,15 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass110-primitive-transition-chain-law-check.json`: verifies the Pass-110
+  finite certificate for primitive conductor-cleared transition vectors. It
+  checks that each minimally cleared barycentric transition `eta_{S,T}` is an
+  integral primitive zero-sum vector; that support chains satisfy the
+  common-conductor rescaling law; that strict primitive composition occurs
+  exactly in the checked equal-conductor cases; that primitive lines alone
+  are not generally sufficient; and that the rescaled law is closed in the
+  additive kernel while primitivity can be lost by endpoint multiplication.
+
 - `pass109-barycentric-transition-denominator-check.json`: verifies the
   Pass-109 finite certificate for barycentric transition denominators under
   support inclusions. It checks the formula for

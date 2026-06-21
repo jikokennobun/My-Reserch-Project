@@ -6342,3 +6342,77 @@ and signed CRT bijections.
 **Limit of the pass.**  The next task is to study the primitive
 conductor-cleared vectors $\eta_{S,T}$ along support chains and determine
 whether their rescaled edge law gives useful oriented-support data.
+
+## Pass 110 - Primitive transition chain law
+
+Pass 110 studies the conductor-cleared primitive vectors from Pass 109.  For
+$S\subset T$, define
+$$
+L_{S,T}=\operatorname{lcm}(|S|,|T|),
+\qquad
+\eta_{S,T}=L_{S,T}\tau_{S,T}.
+$$
+If $|S|=n$, $|T|=m$, and $g=\gcd(n,m)$, then $\eta_{S,T}$ has entries
+$(m-n)/g$ on $S$ and $-n/g$ on $T\setminus S$.  It is a primitive integral
+zero-sum vector in $K_T$.
+
+The chain law is weighted by conductor denominators.  For
+$S\subset T\subset U$, put
+$$
+C=\operatorname{lcm}(L_{S,T},L_{T,U},L_{S,U}).
+$$
+Then
+$$
+\frac{C}{L_{S,T}}e_{T,U}\eta_{S,T}
++\frac{C}{L_{T,U}}\eta_{T,U}
+=
+\frac{C}{L_{S,U}}\eta_{S,U}.
+$$
+This is just the rational coboundary identity for $\tau$ multiplied by the
+common conductor $C$.
+
+Primitive vectors do not usually compose strictly.  The strict identity
+$$
+e_{T,U}\eta_{S,T}+\eta_{T,U}=\eta_{S,U}
+$$
+holds in the checked equal-conductor cases, but otherwise the coefficients
+$C/L_{A,B}$ are essential.  Therefore the primitive line $[\eta_{S,T}]$ alone
+is not enough to define functorial support-edge data.  The correct edge label
+is the weighted pair $(L_{S,T},\eta_{S,T})$, equivalently the rational
+transition $\tau_{S,T}$.
+
+This matches the primitive repair torsor warning from Pass 107.  The
+weighted sum always lies in the additive kernel $K_U$, but it can equal a
+nonprimitive multiple of the endpoint vector.  Thus primitive support-edge
+labels are normalized representatives inside additive kernel data, not a
+sub-cocycle closed under addition.
+
+The newest Claude Code review is orthogonal to this support-chain
+calculation but concrete enough to become the next pass: it asks for a
+MacNeille reflection checker repair, including a non-lattice witness, an
+$L^{op}$ antitone closure rule, reflected/principal-unreflected output, and
+extension-condition checks.
+
+> **Theorem 110a (primitive cleared edge).** Every $\eta_{S,T}$ is an
+> integral primitive zero-sum vector in $K_T$.
+>
+> **Theorem 110b (weighted chain law).** The common-conductor identity above
+> holds for every support chain $S\subset T\subset U$.
+>
+> **Theorem 110c (primitive line insufficiency).** Primitive edge vectors or
+> their lines are not generally functorial without conductor weights.
+>
+> **Theorem 110d (torsor comparison).** The chain law is closed in additive
+> kernels but not in primitive loci, matching the Pass-107 repair-torsor
+> distinction.
+
+**Machine verification** (`code/scripts/check-pass110.py` ->
+`artifacts/reports/pass110-primitive-transition-chain-law-check.json`,
+PASS): the checker verifies primitive edge vectors, the weighted
+common-conductor chain identity, strict-composition classification, failure
+of primitive lines to be sufficient in general, and the repair-torsor
+comparison.
+
+**Limit of the pass.**  The next task is to incorporate the Claude Code
+MacNeille reflection checker review and repair the completion/fixed-point
+checker line.

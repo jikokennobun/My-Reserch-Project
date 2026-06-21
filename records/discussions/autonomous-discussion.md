@@ -6,8 +6,36 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 110
-- Last pass note: Pass 109 (2026-06-21) computed the rational barycentric
+- Current pass: 111
+- Last pass note: Pass 110 (2026-06-21) studied the primitive
+  conductor-cleared support-transition vectors
+  $$
+  \eta_{S,T}:=\operatorname{lcm}(|S|,|T|)\tau_{S,T}.
+  $$
+  Each $\eta_{S,T}$ is an integral primitive zero-sum vector on $T$, but the
+  primitive vectors do not usually compose strictly along
+  $S\subset T\subset U$.  If
+  $L_{A,B}:=\operatorname{lcm}(|A|,|B|)$ and
+  $C=\operatorname{lcm}(L_{S,T},L_{T,U},L_{S,U})$, then the exact chain law is
+  $$
+  \frac{C}{L_{S,T}}e_{T,U}\eta_{S,T}
+  +\frac{C}{L_{T,U}}\eta_{T,U}
+  =
+  \frac{C}{L_{S,U}}\eta_{S,U}.
+  $$
+  Strict primitive composition holds exactly in the checked cases where the
+  three edge conductors agree.  Otherwise the common-conductor sum is an
+  additive-kernel identity but can be a nonprimitive multiple of the endpoint
+  vector, so primitive lines alone are not functorial.  The useful
+  oriented-support edge datum is therefore the weighted pair
+  $(L_{S,T},\eta_{S,T})$, equivalently the rational transition
+  $\tau_{S,T}$.  This matches the Pass-107 warning that primitive loci are
+  arithmetic refinements inside additive $K$-torsors.  The newest Claude Code
+  review remains valid and should be incorporated next; it was not mixed into
+  this support-chain pass.  Machine-verified `check-pass110.py` ->
+  `pass110-primitive-transition-chain-law-check.json` PASS. Counter
+  110->111.
+- Earlier note: Pass 109 (2026-06-21) computed the rational barycentric
   transition under a support inclusion $S\subset T$.  If $|S|=n$ and
   $|T|=m$, then
   $$
@@ -12706,3 +12734,130 @@ Pass 110 should study the primitive conductor-cleared transition vectors
 $\eta_{S,T}$ along support chains: determine the exact rescaling law, decide
 whether the edge labels form useful oriented-support data, and compare that
 with primitive repair torsors.
+
+### Pass 110 - 2026-06-21 JST
+
+Focus:
+Determine the chain law for primitive conductor-cleared barycentric
+transition vectors and compare it with primitive repair torsors.
+
+Proposer:
+Pass 109 attached to every support inclusion $S\subset T$ a rational
+transition $\tau_{S,T}\in K_T\otimes\mathbb Q$ and its minimal integral
+clearing
+$$
+\eta_{S,T}:=L_{S,T}\tau_{S,T},\qquad
+L_{S,T}:=\operatorname{lcm}(|S|,|T|).
+$$
+If $|S|=n$, $|T|=m$, and $g=\gcd(n,m)$, then $\eta_{S,T}$ has entries
+$(m-n)/g$ on $S$ and $-n/g$ on $T\setminus S$.  It is zero-sum and primitive.
+So the apparent edge label is a primitive vector in $K_T$.
+
+Skeptic:
+The primitive label by itself is not functorial.  Along a chain
+$S\subset T\subset U$, the rational transitions satisfy
+$$
+e_{T,U}\tau_{S,T}+\tau_{T,U}=\tau_{S,U}.
+$$
+But replacing each $\tau$ by its primitive clearing changes the denominators.
+Let
+$$
+L_{S,T}=\operatorname{lcm}(|S|,|T|),\quad
+L_{T,U}=\operatorname{lcm}(|T|,|U|),\quad
+L_{S,U}=\operatorname{lcm}(|S|,|U|)
+$$
+and
+$$
+C=\operatorname{lcm}(L_{S,T},L_{T,U},L_{S,U}).
+$$
+Then the correct identity is weighted:
+$$
+\frac{C}{L_{S,T}}e_{T,U}\eta_{S,T}
++\frac{C}{L_{T,U}}\eta_{T,U}
+=\frac{C}{L_{S,U}}\eta_{S,U}.
+$$
+Thus the primitive vector or primitive line alone loses necessary conductor
+weights.  It is useful edge data, but only with its conductor attached.
+
+Formalist:
+The weighted chain law follows by multiplying the rational coboundary
+identity by $C$.  Strict primitive composition
+$$
+e_{T,U}\eta_{S,T}+\eta_{T,U}=\eta_{S,U}
+$$
+can hold only when the denominator clearings agree in the relevant checked
+chains:
+$$
+L_{S,T}=L_{T,U}=L_{S,U}.
+$$
+Otherwise at least one coefficient $C/L_{A,B}$ is not $1$, and the
+common-conductor identity is an additive-kernel identity rather than a
+primitive-edge identity.
+
+This exactly mirrors the primitive repair torsor issue from Pass 107.
+Additive kernels are closed under addition and under the weighted chain law.
+Primitive representatives are arithmetic normalizations inside those
+kernels.  A common-conductor sum can equal
+$(C/L_{S,U})\eta_{S,U}$, whose coordinate gcd is $C/L_{S,U}$ because
+$\eta_{S,U}$ is primitive.  Hence it is nonprimitive whenever
+$C/L_{S,U}>1$.  The primitive locus is therefore not a sub-cocycle; it is a
+choice of normalized representatives for rational/additive edge data.
+
+The newest Claude Code review was read.  It concerns MacNeille reflection
+checker defects: wrong polarity for the antitone completion closure, missing
+`reflected` field, missing extension-condition checks, and a
+principal-unreflected classification gap.  This pass defers those updates as
+orthogonal to the support-chain calculation but retargets the next autonomous
+pass to incorporate them.
+
+> **Theorem 110a (primitive edge vector).** For each support inclusion
+> $S\subset T$, $\eta_{S,T}$ is an integral primitive zero-sum vector in
+> $K_T$.
+>
+> **Theorem 110b (weighted chain law).** For
+> $S\subset T\subset U$, the conductor-weighted identity
+> $$
+> \frac{C}{L_{S,T}}e_{T,U}\eta_{S,T}
+> +\frac{C}{L_{T,U}}\eta_{T,U}
+> =
+> \frac{C}{L_{S,U}}\eta_{S,U}
+> $$
+> holds for $C=\operatorname{lcm}(L_{S,T},L_{T,U},L_{S,U})$.
+>
+> **Theorem 110c (primitive line insufficiency).** Primitive vectors compose
+> strictly only in the equal-conductor cases checked by the finite model.
+> In general the conductor weights are essential.
+>
+> **Theorem 110d (repair torsor comparison).** The support-chain law is
+> closed in additive kernels but not in primitive loci, matching the
+> Pass-107 correction-torsor distinction.
+
+Machine verification (`code/scripts/check-pass110.py` ->
+`artifacts/reports/pass110-primitive-transition-chain-law-check.json`,
+PASS): the checker verifies edge-vector primitivity, the weighted
+common-conductor chain identity, the strict-composition classification,
+failure of primitive lines to be sufficient in general, and the comparison
+with additive repair torsors.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-110
+  entry; State counter $110\to111$.
+- `records/logs/research-log.md`: Pass-110 entry.
+- `research/definitions.md`: added the primitive transition chain law.
+- `research/notes/g2-fg2-hierarchy.md`: Pass-110 theorem section.
+- `research/open_problems.md`: resolved conductor-cleared primitive
+  transition vectors; logged a weighted support-edge category follow-up and
+  a MacNeille reflection checker repair task from the Claude Code review.
+- `research/ideas/research-questions.md`: retargeted the next pass to the
+  MacNeille checker repair.
+- `code/scripts/check-pass110.py`,
+  `artifacts/reports/pass110-primitive-transition-chain-law-check.json`:
+  new.
+- `artifacts/pdf/primitive-transition-chain-law-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 111 should incorporate the Claude Code MacNeille reflection checker
+review: add the non-lattice witness, fix or separate the dual closure rule,
+record reflected/principal-unreflected classifications, and update the
+associated checker documentation.

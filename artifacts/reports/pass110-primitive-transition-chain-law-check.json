@@ -1,0 +1,400 @@
+{
+  "pass": 110,
+  "title": "Primitive conductor-cleared transition vectors along support chains",
+  "A_edge_vectors": {
+    "statement": "The minimally conductor-cleared transition eta_ST is always a primitive integral zero-sum vector.",
+    "rows": [
+      {
+        "source_size": 2,
+        "target_size": 3,
+        "edge_conductor": 6,
+        "gcd_size": 1,
+        "eta_vector": [
+          1,
+          1,
+          -2
+        ],
+        "eta_sum": 0,
+        "eta_zero_sum": true,
+        "eta_gcd": 1,
+        "eta_primitive": true,
+        "support_values": [
+          1,
+          -2
+        ]
+      },
+      {
+        "source_size": 2,
+        "target_size": 4,
+        "edge_conductor": 4,
+        "gcd_size": 2,
+        "eta_vector": [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "eta_sum": 0,
+        "eta_zero_sum": true,
+        "eta_gcd": 1,
+        "eta_primitive": true,
+        "support_values": [
+          1,
+          -1
+        ]
+      },
+      {
+        "source_size": 3,
+        "target_size": 5,
+        "edge_conductor": 15,
+        "gcd_size": 1,
+        "eta_vector": [
+          2,
+          2,
+          2,
+          -3,
+          -3
+        ],
+        "eta_sum": 0,
+        "eta_zero_sum": true,
+        "eta_gcd": 1,
+        "eta_primitive": true,
+        "support_values": [
+          2,
+          -3
+        ]
+      },
+      {
+        "source_size": 4,
+        "target_size": 6,
+        "edge_conductor": 12,
+        "gcd_size": 2,
+        "eta_vector": [
+          1,
+          1,
+          1,
+          1,
+          -2,
+          -2
+        ],
+        "eta_sum": 0,
+        "eta_zero_sum": true,
+        "eta_gcd": 1,
+        "eta_primitive": true,
+        "support_values": [
+          1,
+          -2
+        ]
+      },
+      {
+        "source_size": 5,
+        "target_size": 8,
+        "edge_conductor": 40,
+        "gcd_size": 1,
+        "eta_vector": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          -5,
+          -5,
+          -5
+        ],
+        "eta_sum": 0,
+        "eta_zero_sum": true,
+        "eta_gcd": 1,
+        "eta_primitive": true,
+        "support_values": [
+          3,
+          -5
+        ]
+      },
+      {
+        "source_size": 6,
+        "target_size": 10,
+        "edge_conductor": 30,
+        "gcd_size": 2,
+        "eta_vector": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          -3,
+          -3,
+          -3,
+          -3
+        ],
+        "eta_sum": 0,
+        "eta_zero_sum": true,
+        "eta_gcd": 1,
+        "eta_primitive": true,
+        "support_values": [
+          2,
+          -3
+        ]
+      },
+      {
+        "source_size": 8,
+        "target_size": 12,
+        "edge_conductor": 24,
+        "gcd_size": 4,
+        "eta_vector": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -2,
+          -2,
+          -2,
+          -2
+        ],
+        "eta_sum": 0,
+        "eta_zero_sum": true,
+        "eta_gcd": 1,
+        "eta_primitive": true,
+        "support_values": [
+          1,
+          -2
+        ]
+      }
+    ]
+  },
+  "B_chain_law": {
+    "statement": "Primitive edge labels compose after rescaling by a common conductor; strict primitive composition occurs exactly when all three edge conductors agree.",
+    "rows": [
+      {
+        "source_size": 2,
+        "middle_size": 3,
+        "target_size": 5,
+        "conductor_source_middle": 6,
+        "conductor_middle_target": 15,
+        "conductor_source_target": 10,
+        "common_conductor": 30,
+        "coefficient_source_middle": 5,
+        "coefficient_middle_target": 2,
+        "coefficient_source_target": 3,
+        "rescaled_identity_ok": true,
+        "strict_primitive_identity_ok": false,
+        "strict_identity_expected": false,
+        "strict_identity_classification_ok": true,
+        "endpoint_multiplier": 3,
+        "common_cleared_endpoint_primitive": false,
+        "primitive_line_alone_sufficient": false
+      },
+      {
+        "source_size": 2,
+        "middle_size": 3,
+        "target_size": 6,
+        "conductor_source_middle": 6,
+        "conductor_middle_target": 6,
+        "conductor_source_target": 6,
+        "common_conductor": 6,
+        "coefficient_source_middle": 1,
+        "coefficient_middle_target": 1,
+        "coefficient_source_target": 1,
+        "rescaled_identity_ok": true,
+        "strict_primitive_identity_ok": true,
+        "strict_identity_expected": true,
+        "strict_identity_classification_ok": true,
+        "endpoint_multiplier": 1,
+        "common_cleared_endpoint_primitive": true,
+        "primitive_line_alone_sufficient": true
+      },
+      {
+        "source_size": 2,
+        "middle_size": 4,
+        "target_size": 8,
+        "conductor_source_middle": 4,
+        "conductor_middle_target": 8,
+        "conductor_source_target": 8,
+        "common_conductor": 8,
+        "coefficient_source_middle": 2,
+        "coefficient_middle_target": 1,
+        "coefficient_source_target": 1,
+        "rescaled_identity_ok": true,
+        "strict_primitive_identity_ok": false,
+        "strict_identity_expected": false,
+        "strict_identity_classification_ok": true,
+        "endpoint_multiplier": 1,
+        "common_cleared_endpoint_primitive": true,
+        "primitive_line_alone_sufficient": false
+      },
+      {
+        "source_size": 3,
+        "middle_size": 6,
+        "target_size": 10,
+        "conductor_source_middle": 6,
+        "conductor_middle_target": 30,
+        "conductor_source_target": 30,
+        "common_conductor": 30,
+        "coefficient_source_middle": 5,
+        "coefficient_middle_target": 1,
+        "coefficient_source_target": 1,
+        "rescaled_identity_ok": true,
+        "strict_primitive_identity_ok": false,
+        "strict_identity_expected": false,
+        "strict_identity_classification_ok": true,
+        "endpoint_multiplier": 1,
+        "common_cleared_endpoint_primitive": true,
+        "primitive_line_alone_sufficient": false
+      },
+      {
+        "source_size": 4,
+        "middle_size": 6,
+        "target_size": 9,
+        "conductor_source_middle": 12,
+        "conductor_middle_target": 18,
+        "conductor_source_target": 36,
+        "common_conductor": 36,
+        "coefficient_source_middle": 3,
+        "coefficient_middle_target": 2,
+        "coefficient_source_target": 1,
+        "rescaled_identity_ok": true,
+        "strict_primitive_identity_ok": false,
+        "strict_identity_expected": false,
+        "strict_identity_classification_ok": true,
+        "endpoint_multiplier": 1,
+        "common_cleared_endpoint_primitive": true,
+        "primitive_line_alone_sufficient": false
+      },
+      {
+        "source_size": 4,
+        "middle_size": 6,
+        "target_size": 12,
+        "conductor_source_middle": 12,
+        "conductor_middle_target": 12,
+        "conductor_source_target": 12,
+        "common_conductor": 12,
+        "coefficient_source_middle": 1,
+        "coefficient_middle_target": 1,
+        "coefficient_source_target": 1,
+        "rescaled_identity_ok": true,
+        "strict_primitive_identity_ok": true,
+        "strict_identity_expected": true,
+        "strict_identity_classification_ok": true,
+        "endpoint_multiplier": 1,
+        "common_cleared_endpoint_primitive": true,
+        "primitive_line_alone_sufficient": true
+      },
+      {
+        "source_size": 5,
+        "middle_size": 8,
+        "target_size": 10,
+        "conductor_source_middle": 40,
+        "conductor_middle_target": 40,
+        "conductor_source_target": 10,
+        "common_conductor": 40,
+        "coefficient_source_middle": 1,
+        "coefficient_middle_target": 1,
+        "coefficient_source_target": 4,
+        "rescaled_identity_ok": true,
+        "strict_primitive_identity_ok": false,
+        "strict_identity_expected": false,
+        "strict_identity_classification_ok": true,
+        "endpoint_multiplier": 4,
+        "common_cleared_endpoint_primitive": false,
+        "primitive_line_alone_sufficient": false
+      }
+    ]
+  },
+  "C_repair_torsor_comparison": {
+    "statement": "The rescaled law stays in the additive kernel, while primitivity can be lost by endpoint multiplication.",
+    "rows": [
+      {
+        "chain": [
+          2,
+          3,
+          5
+        ],
+        "additive_kernel_closed_after_rescaling": true,
+        "primitive_locus_closed_under_rescaled_sum": false,
+        "relation_to_repair_torsor": "The rescaled sum lies in the additive kernel K_U, but it is primitive only when the endpoint coefficient is one; this matches the Pass-107 warning that primitive repair loci are arithmetic refinements of additive torsors."
+      },
+      {
+        "chain": [
+          2,
+          3,
+          6
+        ],
+        "additive_kernel_closed_after_rescaling": true,
+        "primitive_locus_closed_under_rescaled_sum": true,
+        "relation_to_repair_torsor": "The rescaled sum lies in the additive kernel K_U, but it is primitive only when the endpoint coefficient is one; this matches the Pass-107 warning that primitive repair loci are arithmetic refinements of additive torsors."
+      },
+      {
+        "chain": [
+          2,
+          4,
+          8
+        ],
+        "additive_kernel_closed_after_rescaling": true,
+        "primitive_locus_closed_under_rescaled_sum": true,
+        "relation_to_repair_torsor": "The rescaled sum lies in the additive kernel K_U, but it is primitive only when the endpoint coefficient is one; this matches the Pass-107 warning that primitive repair loci are arithmetic refinements of additive torsors."
+      },
+      {
+        "chain": [
+          3,
+          6,
+          10
+        ],
+        "additive_kernel_closed_after_rescaling": true,
+        "primitive_locus_closed_under_rescaled_sum": true,
+        "relation_to_repair_torsor": "The rescaled sum lies in the additive kernel K_U, but it is primitive only when the endpoint coefficient is one; this matches the Pass-107 warning that primitive repair loci are arithmetic refinements of additive torsors."
+      },
+      {
+        "chain": [
+          4,
+          6,
+          9
+        ],
+        "additive_kernel_closed_after_rescaling": true,
+        "primitive_locus_closed_under_rescaled_sum": true,
+        "relation_to_repair_torsor": "The rescaled sum lies in the additive kernel K_U, but it is primitive only when the endpoint coefficient is one; this matches the Pass-107 warning that primitive repair loci are arithmetic refinements of additive torsors."
+      },
+      {
+        "chain": [
+          4,
+          6,
+          12
+        ],
+        "additive_kernel_closed_after_rescaling": true,
+        "primitive_locus_closed_under_rescaled_sum": true,
+        "relation_to_repair_torsor": "The rescaled sum lies in the additive kernel K_U, but it is primitive only when the endpoint coefficient is one; this matches the Pass-107 warning that primitive repair loci are arithmetic refinements of additive torsors."
+      },
+      {
+        "chain": [
+          5,
+          8,
+          10
+        ],
+        "additive_kernel_closed_after_rescaling": true,
+        "primitive_locus_closed_under_rescaled_sum": false,
+        "relation_to_repair_torsor": "The rescaled sum lies in the additive kernel K_U, but it is primitive only when the endpoint coefficient is one; this matches the Pass-107 warning that primitive repair loci are arithmetic refinements of additive torsors."
+      }
+    ]
+  },
+  "D_verdict": {
+    "statement": "The support-chain datum is weighted oriented edge data, not a strict primitive-line cocycle.",
+    "row": {
+      "edge_datum": "A primitive support edge should be recorded as (L_ST, eta_ST), or equivalently as tau_ST=eta_ST/L_ST.",
+      "chain_law": "For S<T<U, a common conductor C gives (C/L_ST)eta_ST + (C/L_TU)eta_TU = (C/L_SU)eta_SU.",
+      "primitive_warning": "The primitive vector or primitive line alone is not generally functorial; common-conductor sums may be nonprimitive multiples of the endpoint edge.",
+      "claude_review_status": "The MacNeille reflection review remains valid and should be incorporated next; it was not mixed into this support-chain pass.",
+      "next_task": "Incorporate the Claude Code MacNeille reflection checker review: add the non-lattice witness, fix the dual closure rule, and record reflected/principal-unreflected classifications."
+    }
+  },
+  "checks": {
+    "edge_primitivity_ok": true,
+    "rescaled_chain_law_ok": true,
+    "strict_identity_classification_ok": true,
+    "primitive_line_not_sufficient_in_general_ok": true,
+    "repair_torsor_comparison_ok": true
+  },
+  "overall": "PASS"
+}

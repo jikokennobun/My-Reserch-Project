@@ -1,5 +1,21 @@
 # Research Log
 
+## 2026-06-21 (Autonomous discussion Pass 110)
+
+- Studied the primitive conductor-cleared transition vectors
+  $\eta_{S,T}=\operatorname{lcm}(|S|,|T|)\tau_{S,T}$.  Each $\eta_{S,T}$ is
+  an integral primitive zero-sum vector, but along
+  $S\subset T\subset U$ the primitive vectors compose only after conductor
+  rescaling:
+  $(C/L_{S,T})e\eta_{S,T}+(C/L_{T,U})\eta_{T,U}=(C/L_{S,U})\eta_{S,U}$.
+  Strict primitive composition holds only in equal-conductor cases; otherwise
+  common-conductor sums can be nonprimitive multiples of the endpoint vector.
+  Thus the useful oriented-support edge datum is the weighted pair
+  $(L_{S,T},\eta_{S,T})$, not the primitive line alone.  Added
+  checker/report, logged weighted support-edge follow-up, and retargeted the
+  next pass to incorporate the Claude Code MacNeille reflection checker
+  review.
+
 ## 2026-06-21 (Autonomous discussion Pass 109)
 
 - Computed barycentric transition denominators under support inclusions.  For

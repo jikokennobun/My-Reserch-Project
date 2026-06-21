@@ -2907,3 +2907,45 @@ This denominator bookkeeping is distinct from finite CRT cohomology.  At any
 finite conductor $N$, the ordinary and signed CRT maps remain bijections; the
 denominator only says when the rational support transition has an integral
 zero-sum representative.
+
+## Primitive conductor-cleared transition chain law (Pass 110)
+
+For finite supports $S\subset T$, define
+$$
+L_{S,T}:=\operatorname{lcm}(|S|,|T|)
+$$
+and
+$$
+\eta_{S,T}:=L_{S,T}\tau_{S,T}\in K_T.
+$$
+The vector $\eta_{S,T}$ is the minimally conductor-cleared barycentric
+transition.  If $|S|=n$, $|T|=m$, and $g=\gcd(n,m)$, then its entries are
+$$
+(\eta_{S,T})_p=
+\begin{cases}
+\frac{m-n}{g}, & p\in S,\\[2mm]
+-\frac{n}{g}, & p\in T\setminus S.
+\end{cases}
+$$
+It is zero-sum and primitive.
+
+For a chain $S\subset T\subset U$, set
+$$
+C=\operatorname{lcm}(L_{S,T},L_{T,U},L_{S,U}).
+$$
+The rational coboundary identity for the $\tau$'s is equivalent to the
+conductor-weighted integral identity
+$$
+\frac{C}{L_{S,T}}e_{T,U}\eta_{S,T}
++\frac{C}{L_{T,U}}\eta_{T,U}
+=
+\frac{C}{L_{S,U}}\eta_{S,U}.
+$$
+
+Thus the pair $(L_{S,T},\eta_{S,T})$ is functorial edge data, while the
+primitive vector or primitive line alone is generally not functorial.  Strict
+primitive composition can occur in equal-conductor cases, but in general the
+common-conductor identity may produce a nonprimitive multiple of the endpoint
+primitive vector.  This is the same arithmetic phenomenon as in primitive
+repair loci: additive kernels are closed under the relevant sums, while
+primitive representatives are only normalized elements inside those kernels.

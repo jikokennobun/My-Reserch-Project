@@ -42,22 +42,19 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 109 -> 110: conductor-cleared primitive transition vectors)**
-  Pass 109 computed barycentric transition denominators.  For
-  $S\subset T$, $|S|=n$, $|T|=m$, the rational transition
-  $\tau_{S,T}=e_{S,T}s_{\mathrm{bar},S}-s_{\mathrm{bar},T}$ has entries
-  $(m-n)/(nm)$ on $S$ and $-1/m$ on $T\setminus S$, lies in
-  $K_T\otimes\mathbb Q$, and has exact denominator
-  $\operatorname{lcm}(n,m)$.  Clearing that denominator gives a primitive
-  zero-sum vector $\eta_{S,T}$ with entries $(m-n)/\gcd(n,m)$ on $S$ and
-  $-n/\gcd(n,m)$ off $S$.  The rational transitions satisfy the chain
-  coboundary identity, while finite CRT shadows remain bijective.  Open:
-  (i) compute the exact rescaling law for the primitive cleared vectors
-  $\eta_{S,T}$ along chains $S\subset T\subset U$;
-  (ii) decide whether these edge labels define useful oriented-support data
-  after passing to primitive lines or common conductors;
-  (iii) compare the resulting structure with the Pass-107 primitive repair
-  locus inside the additive $K_S$ torsors.
+- **(Pass 110 -> 111: MacNeille reflection checker repair from Claude review)**
+  Pass 110 closed the conductor-cleared primitive transition question: the
+  weighted edge datum is $(L_{S,T},\eta_{S,T})$, and primitive lines alone
+  are not functorial.  The newest Claude Code review now supplies a concrete
+  repository repair task for the MacNeille reflection checker.  Open:
+  (i) add the three-element non-lattice no-syntactic-fixed-point witness
+  requested by the review;
+  (ii) implement or explicitly separate the correct $L^{op}$ closure rule
+  for antitone completion extension, while preserving the provisional rule
+  as a comparison if useful;
+  (iii) add `reflected` and `principal-unreflected` output classifications,
+  plus principal-extension-condition warnings, then update the checker
+  interface and fixed-point notes accordingly.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

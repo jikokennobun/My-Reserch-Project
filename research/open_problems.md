@@ -1346,7 +1346,7 @@
   than a new finite CRT cohomology class.  Machine-verified
   `artifacts/reports/pass109-barycentric-transition-denominator-check.json`
   (PASS).
-- **[New (Pass 109)]** **Conductor-cleared primitive transition vectors.**
+- **[Resolved (Pass 110)]** **Conductor-cleared primitive transition vectors.**
   Study the primitive vectors
   $\eta_{S,T}=\operatorname{lcm}(|S|,|T|)\tau_{S,T}$ along support chains.
   Determine their exact rescaling law under
@@ -1354,6 +1354,36 @@
   clearings form useful oriented-support edge data, and how this structure
   interacts with the primitive repair locus inside the additive repair
   torsors from Pass 107.
+  **Resolution:** each $\eta_{S,T}$ is a primitive zero-sum vector.  For a
+  chain $S\subset T\subset U$, let
+  $L_{A,B}=\operatorname{lcm}(|A|,|B|)$ and
+  $C=\operatorname{lcm}(L_{S,T},L_{T,U},L_{S,U})$.  Then
+  $$
+  (C/L_{S,T})e_{T,U}\eta_{S,T}
+  +(C/L_{T,U})\eta_{T,U}
+  =(C/L_{S,U})\eta_{S,U}.
+  $$
+  Strict primitive composition holds only in the checked equal-conductor
+  cases.  In general the common-conductor sum lies in the additive kernel
+  but may be a nonprimitive multiple of the endpoint vector, so the useful
+  edge datum is the weighted pair $(L_{S,T},\eta_{S,T})$, not the primitive
+  line alone.  This matches the Pass-107 warning that primitive loci are not
+  closed under additive torsor operations.  Machine-verified
+  `artifacts/reports/pass110-primitive-transition-chain-law-check.json`
+  (PASS).
+- **[New (Pass 110)]** **Weighted support-edge category.**
+  Formalize the weighted oriented-support edge datum
+  $(L_{S,T},\eta_{S,T})$ as a small category, double category, or labelled
+  span system over finite supports.  Determine whether the conductor weights
+  form a useful 2-cocycle or normalization system, and whether this package
+  interacts nontrivially with the $B\mathbb Z/2$ boundary-line local system.
+- **[New (Pass 110, Claude Code review)]** **MacNeille reflection checker repair.**
+  Incorporate the newest Claude Code review by adding the proposed
+  three-element non-lattice witness, correcting or separating the antitone
+  completion extension closure as an $L^{op}$ closure, adding a `reflected`
+  field and `principal-unreflected` classification, checking the extension
+  condition on principal cuts, and updating the MacNeille checker interface
+  and completion/fixed-point notes.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."
