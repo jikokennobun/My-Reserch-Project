@@ -72,6 +72,76 @@ Later relay recheck on 2026-06-19:
   `2026-06-19T05:06:57.572Z`, so there is still no durable side artifact from
   which to reconstruct the mathematical delta faithfully.
 
+Relay update on 2026-06-23:
+
+- `records/logs/chatgpt-share-state.csv` marked this share as `changed` at
+  `2026-06-23T04:40:57+09:00`: the watched hash moved from the prior stable
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b` to
+  `9c70d56fb262a608ab24360d9f963ff5ff557b2b0bdb0036460942e236a55261`.
+- Direct extraction of the changed transcript body failed in this pass. The
+  public browser view exposed only the logged-out ChatGPT shell, and five
+  bounded `Invoke-WebRequest` retries after the successful watcher run failed
+  with a remote-server connection error.
+- The connected Google Drive relay roots recorded in `research-drive.md` and
+  `drive.md` were rechecked after the automation handoff timestamp
+  `2026-06-22T11:46:12.718Z`. Modified-time search returned no newer
+  accessible non-folder files, and direct listings of `ChatGPT_Research`,
+  `ChatGPT_Study`, `Claude`, `Gemini`, `Paper`, `Slide`, and the reference
+  root showed no newly relevant PDF, slide, Gemini, Claude, or generated
+  artifact beyond already indexed material.
+- Therefore this relay fact is provenance-only for now: the share changed, but
+  no source-stable mathematical payload was available from which to add a new
+  theorem, example, counterexample, or proof obligation without speculation.
+
+Later relay recheck on 2026-06-23:
+
+- A second same-day watch pass marked the same share as `changed` at
+  `2026-06-23T10:42:06+09:00`, but the hash reverted from the
+  `2026-06-23T04:40:57+09:00` value
+  `9c70d56fb262a608ab24360d9f963ff5ff557b2b0bdb0036460942e236a55261` to the
+  older stable value
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Direct transcript recovery was still unavailable: the shared-link browser
+  fetch exposed no conversation payload, and the automation had no accessible
+  side artifact from which to reconstruct the mathematical delta.
+- The Drive relay folders (`ChatGPT_Research`, `ChatGPT_Study`, `Claude`,
+  `Gemini`, `Paper`, `Slide`, and the reference root) showed no non-folder file
+  modified after the automation cutoff `2026-06-22T19:39:21.619Z`.
+- This should be treated as fingerprint instability of the public share layer,
+  not as evidence for a new theorem-level addition. A fresh export through the
+  ChatGPT Project artifact inbox remains the required route for exact
+  reconstruction.
+
+Evening relay recheck on 2026-06-23:
+
+- A third same-day watch pass marked the same share as `changed` at
+  `2026-06-23T17:23:34+09:00`; the hash flipped back to
+  `9c70d56fb262a608ab24360d9f963ff5ff557b2b0bdb0036460942e236a55261`.
+- The ordinary web fetch still exposed only the logged-out ChatGPT shell. A
+  Chrome-session check was also unavailable in this automation sandbox because
+  the Codex Chrome native host manifest/profile bridge was not installed.
+- Google Drive modified-time search after `2026-06-23T01:40:58Z`, plus direct
+  listings of the recorded research relay folders, found no newer accessible
+  non-folder source artifact. This remains a provenance-only hash flip, not a
+  source-stable mathematical delta.
+
+Late relay recheck on 2026-06-23:
+
+- A fourth same-day watch pass marked the same share as `changed` at
+  `2026-06-23T23:02:25+09:00`; the hash reverted again to the older stable
+  value
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Direct web retrieval of the share still exposed only the logged-out ChatGPT
+  shell, with no conversation body available for extraction.
+- The ChatGPT Project artifact inbox contained the same three supported PDF
+  artifacts, with no copied or refreshed slide/deck imports, and Google Drive
+  modified-time search after `2026-06-23T08:00:17.954Z` returned no newer
+  accessible non-folder source files.
+- Therefore this pass again records only public-share fingerprint instability.
+  No new theorem statement, example, counterexample, proof obligation, or open
+  question should be added until a fresh transcript export or side artifact is
+  routed through the Drive artifact inbox.
+
 ## Abstract
 
 This note develops a local and relative version of FG2 suitable for comparing
@@ -738,3 +808,58 @@ those differences should affect pullback behavior.
 8. Route a fresh export of the changed share, or any `sandbox:/mnt/data/...`
    artifact it references, through the ChatGPT Project inbox so the changed
    transcript can be compared directly against this reconstruction.
+
+## Relay Access Note: 2026-06-25 Recheck
+
+- Source link:
+  `https://chatgpt.com/share/6a0b9917-ef00-83a7-a14d-57f0788adab2`
+- Watcher result: `changed` at `2026-06-25T13:38:04`.
+- New recorded hash:
+  `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518`.
+- Access status: inaccessible for mathematical extraction in this pass. Direct
+  browser access exposed only the logged-out ChatGPT shell, and direct
+  PowerShell fetch retries failed with a remote-server connection error.
+
+No theorem, definition, example, or counterexample was reconstructed from this
+fingerprint change. A fresh transcript export, or any referenced
+`sandbox:/mnt/data/...` file, should be placed in the local ChatGPT Project
+artifact inbox before this note is substantively updated.
+
+## Relay Access Note: 2026-06-25 Evening Recheck
+
+- Source link:
+  `https://chatgpt.com/share/6a0b9917-ef00-83a7-a14d-57f0788adab2`
+- Watcher result: `changed` at `2026-06-25T19:39:21+09:00`.
+- New recorded hash:
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Access status: provenance-only. The repository watcher could compute a
+  fingerprint, but an immediate direct fetch attempt failed with a
+  remote-server connection error, and the connected Drive relay roots had no
+  accessible non-folder file modified after the automation handoff timestamp
+  `2026-06-25T04:37:09Z`.
+
+This is another public-share fingerprint flip back to an older known hash, not
+a stable mathematical source delta. No new local-FG2 theorem, pullback
+construction, counterexample, or finite-model task is added from this event.
+
+## Relay Access Note: 2026-06-26 Recheck
+
+- Source link:
+  `https://chatgpt.com/share/6a0b9917-ef00-83a7-a14d-57f0788adab2`
+- Watcher result: `changed` at `2026-06-26T19:37:10+09:00`.
+- New recorded hash:
+  `9c70d56fb262a608ab24360d9f963ff5ff557b2b0bdb0036460942e236a55261`.
+- Access status: provenance-only. The public web view exposed only the
+  logged-out ChatGPT shell, and no conversation body or `sandbox:/mnt/data/...`
+  side artifact was available for extraction.
+- Drive relay status: connected Drive search found no accessible non-folder
+  files modified after the previous automation handoff
+  `2026-06-25T20:43:29Z`, and direct listings of the recorded research,
+  reference, ChatGPT, Gemini, Claude, Paper, Slide, and reference `Others`
+  folders showed no new durable source artifact.
+
+This is another public-share fingerprint flip to a previously observed hash.
+No theorem statement, definition, example, counterexample, finite-model task, or
+open problem is added from this event. A fresh transcript export or any
+referenced `sandbox:/mnt/data/...` artifact should still be routed through the
+local ChatGPT Project artifact inbox before this note is substantively updated.
