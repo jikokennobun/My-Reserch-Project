@@ -1,5 +1,58 @@
 # Research Log
 
+## 2026-06-27 (Relay sync 2026-06-27T11:57:37+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root after direct script execution was blocked by the
+  local PowerShell execution policy. The ChatGPT Project artifact inbox scan
+  again found `3` supported PDF artifacts, collected/refreshed `3` central PDFs
+  under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF
+  backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `https://chatgpt.com/share/...` links
+  and reported `unchanged=23`, so no shared-conversation transcript required
+  extraction or mathematical reconstruction.
+- Searched the connected Google Drive relay for non-folder files modified after
+  the previous automation handoff `2026-06-26T19:54:22Z`, then listed the
+  recorded research root, reference root, `ChatGPT_Research`, `ChatGPT_Study`,
+  `Paper`, `Slide`, `Gemini`, `Claude`, and reference-root `Others/slides`
+  folders. No newly relevant papers, slides, Gemini/Claude outputs, generated
+  PDFs, or reference files were visible beyond material already indexed in
+  `research/references/`.
+- No research note, literature note, Drive index, or open-question update was
+  made because this run exposed no stable new mathematical source delta.
+
+## 2026-06-27 (Relay sync 2026-06-27T04:55:48+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root after direct script execution was blocked by the
+  local PowerShell execution policy. The ChatGPT Project artifact inbox scan
+  found the same `3` supported PDF artifacts, collected/refreshed `3` central
+  PDFs under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive
+  PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `https://chatgpt.com/share/...` links
+  and reported `changed=1`, `unchanged=22`. The changed entry was again
+  `research/notes/local-fg2-pullback-aps-zoo.md`, with the hash reverting to
+  the previously observed
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Attempted to fetch the changed shared conversation body directly with
+  `Invoke-WebRequest`, but the request failed with a remote-server connection
+  error. No transcript text or `sandbox:/mnt/data/...` side artifact was
+  available for detailed mathematical reconstruction.
+- Searched the connected Google Drive relay for non-folder files modified after
+  the automation handoff `2026-06-26T10:35:35Z`, then listed the recorded
+  research root, reference root, `ChatGPT_Research`, `ChatGPT_Study`, `Paper`,
+  `Slide`, `Gemini`, `Claude`, and the reference-root `Others/slides` folder.
+  No newly relevant papers, slides, Gemini/Claude outputs, generated PDFs, or
+  reference files were visible beyond material already indexed in
+  `research/references/`.
+- Added a provenance-only access note to
+  `research/notes/local-fg2-pullback-aps-zoo.md`. No theorem reconstruction,
+  open-question update, literature-note update, or Drive-index update was made
+  because the run exposed only a public-share fingerprint flip and no stable
+  mathematical source payload.
+
 ## 2026-06-26 (Relay sync 2026-06-26T19:37:10+09:00)
 
 - Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
