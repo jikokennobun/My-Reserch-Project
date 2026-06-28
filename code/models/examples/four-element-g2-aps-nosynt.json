@@ -32,13 +32,14 @@
       "finiteA1A4APS": true,
       "g2": true,
       "fg2": true,
-      "residuation": "not checked",
+      "residuation": "same-carrier/same-order no full residual expansion found in Pass 114",
       "completionStability": "not checked"
     },
     "nonPrincipalCut": ["0", "a", "b", "c"],
     "syntacticFixedPoints": [],
     "g2Explanation": "G2 holds vacuously because boxtimes(top)=boxtimes(a)=b is not <= bottom=0, while A2 holds because top=a <= boxtimes(bottom)=b.",
     "latticeStatus": "non-lattice: b and c have no join in the four-element carrier",
-    "macneilleRole": "The MacNeille completion adds the missing upper closure of the two branches; the whole carrier cut is closed and non-principal."
+    "macneilleRole": "The MacNeille completion adds the missing upper closure of the two branches; the whole carrier cut is closed and non-principal.",
+    "pass114ResidualBoundary": "Exhaustive two-sided-unit tensor search on this exact carrier/order found 624 associative tensors, 56 associative+monotone tensors, and 0 tensors with both residuals. The first obstruction is the non-principal fiber {x : 0 tensor x <= 0} = {0,a,b,c}."
   }
 }

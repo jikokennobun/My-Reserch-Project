@@ -3082,3 +3082,28 @@ is a fixed cut and is non-principal, since the carrier has no greatest
 element.  This witness shows that the Pass-112 A2 gate is specific to the
 three-element V-carrier.  It does **not** yet supply residual operations or a
 completion-stability theorem.
+
+## Same-carrier residual obstruction for the four-element witness (Pass 114)
+
+For a finite ordered carrier with binary operation $\otimes$, a left residual
+for fixed $a,c$ exists in the carrier exactly when the fiber
+$$
+\{x:a\otimes x\le c\}
+$$
+is a principal downset.  The right residual is checked dually by requiring
+$$
+\{x:x\otimes a\le c\}
+$$
+to be principal for every $a,c$.
+
+Pass 114 applies this principal-downset criterion to every binary operation on
+the Pass-113 four-element carrier/order with a two-sided unit.  Among
+1,048,576 operations, 624 are associative and 56 are both associative and
+monotone, but none has both residuals.  The first residual obstruction is
+$$
+\{x:0\otimes x\le0\}=\{0,a,b,c\},
+$$
+which is not principal because the four-element carrier has no greatest
+element.  This is a same-carrier and same-order obstruction only; adding a
+top or join may change the principal-fiber calculation and must be checked as
+a separate order-repair problem.

@@ -266,11 +266,36 @@ refutability profiles and 36 posets.  Thus the next reflection question is no
 longer whether A2 alone blocks the completion-created fixed cut; it is whether
 residual structure or completion-stability blocks this four-element witness.
 
+## Pass 114 Same-order residual obstruction
+
+Pass 114 keeps the Pass-113 witness on the exact same carrier and order and
+asks whether any two-sided-unit tensor can make it residuated.  The answer is
+negative on this fixed carrier/order.  Exhaustive enumeration over all
+possible units gives 1,048,576 tensor tables; 624 are associative, 56 are both
+associative and monotone, and none admits both residuals.
+
+The obstruction is not just a raw zero count.  For the surviving units, the
+first residual failure is the fiber
+$$
+\{x:0\otimes x\le0\}=\{0,a,b,c\}.
+$$
+This is the whole carrier, hence not a principal downset because the carrier
+has no greatest element.  It is therefore the residual-fiber analogue of the
+Pass-113 non-principal MacNeille cut `{ 0, a, b, c }`.
+
+This strengthens the interpretation of the four-element witness: finite
+A1-A4, G2, and FG2 do not by themselves force syntactic reflection, but the
+exact four-element order also cannot be a residuated APS carrier.  A positive
+reflection theorem may still use residuals, bounded joins, top completion, or
+completion-stability.  The next finite test is to add the weakest order repair
+that makes the whole-carrier fiber principal and then check which finite APS
+and MacNeille-separation features survive.
+
 ## Next Tasks
 
 - Write the MacNeille completion of a preorder explicitly as Galois-closed cuts.
-- Try to equip the four-element G2+finite-APS witness with tensor and residual
-  operations.
+- Search weakest order repairs of the four-element G2+finite-APS witness that
+  make the Pass-114 residual fiber principal.
 - Define canonical extensions of $\Box$, tensor, and residual operations.
 - Test whether A1-A4, G2, and FG2 survive completion for the four-element
   witness.

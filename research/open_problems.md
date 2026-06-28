@@ -1423,15 +1423,29 @@
   `artifacts/reports/pass113-four-element-macneille-g2-boundary-check.json`
   (PASS) and the standalone witness report
   `artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json`.
-- **[New (Pass 113)]** **Residual and completion-stability boundary for the
-  four-element G2+APS witness.**
-  The Pass-113 witness is only a finite order/table APS witness.  Determine
-  whether it can be equipped with tensor and residual operations satisfying the
-  intended residuated APS laws, and whether the MacNeille completion extension
-  preserves the relevant A1-A4/G2/FG2 package.  If not, identify the first
-  named obstruction: failure of residual adjunction, failure of monoidal
-  monotonicity, failure of A3 under completion, or failure of principal/compact
-  reflection.
+- **[Partially resolved (Pass 114)]** **Residual and completion-stability
+  boundary for the four-element G2+APS witness.**
+  Pass 114 resolves the fixed-carrier/fixed-order residual question
+  negatively.  Exhaustive enumeration of all two-sided-unit binary tensors on
+  the Pass-113 carrier/order scanned 1,048,576 operation tables.  It found 624
+  associative tensors and 56 associative+monotone tensors, but zero tensors
+  admitting both left and right residuals.  The first named obstruction among
+  surviving units is a non-principal residual fiber:
+  `{x : 0 tensor x <= 0} = {0,a,b,c}`, the whole carrier, which is not
+  principal because the carrier has no greatest element.  This does not rule
+  out order expansions, completion-level tensors, or other four-element
+  witnesses.  Machine-verified by
+  `artifacts/reports/pass114-four-element-residual-boundary-check.json` and
+  `artifacts/reports/pass114-four-element-witness-residuated-tensor-search.json`.
+- **[New (Pass 114)]** **Order repair and completion-stability test for the
+  four-element residual obstruction.**
+  Add the weakest order data that makes the whole-carrier residual fiber
+  principal, starting with a top or join for the incomparable `b,c` branch, and
+  test whether the repaired model preserves finite A1-A4, G2, FG2, absence of
+  syntactic fixed points, and the MacNeille non-principal completion fixed cut.
+  If preservation fails, identify whether the named obstruction is loss of
+  antitonicity, loss of A2/A3/A4, collapse of the completion fixed cut to a
+  principal cut, or failure of residual/completion-stability compatibility.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

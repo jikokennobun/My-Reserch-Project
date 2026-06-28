@@ -383,3 +383,39 @@ resources. The residuals then classify proof obligations.
    `local-fg2-pullback-aps-zoo.md`.
 5. Re-export the source share and add any specific categorical AAL references
    or proof-structure examples from the original discussion.
+6. Route a fresh export of the changed share, or any `sandbox:/mnt/data/...`
+   artifact it references, through the ChatGPT Project inbox so the changed
+   transcript can be compared directly against this reconstruction.
+
+## Relay Access Note: 2026-06-25 Recheck
+
+- Source link:
+  `https://chatgpt.com/share/69feffe9-1da0-83e8-a4af-c6b6ecbc4765`
+- Watcher result: `changed` at `2026-06-25T13:38:04`.
+- New recorded hash:
+  `9748cf12e9b98120b2fb453bd136cf068859e6bc79136f1a21f85059014244c0`.
+- Access status: inaccessible for mathematical extraction in this pass. Direct
+  browser access exposed only the logged-out ChatGPT shell, and direct
+  PowerShell fetch retries failed with a remote-server connection error.
+
+No proof-relevant APS definitions, propositions, examples, or categorical
+references were reconstructed from this fingerprint change. A fresh transcript
+export, or any referenced `sandbox:/mnt/data/...` file, should be placed in the
+local ChatGPT Project artifact inbox before this note is substantively updated.
+
+## Relay Access Note: 2026-06-25 Evening Recheck
+
+- Source link:
+  `https://chatgpt.com/share/69feffe9-1da0-83e8-a4af-c6b6ecbc4765`
+- Watcher result: `changed` at `2026-06-25T19:39:21+09:00`.
+- New recorded hash:
+  `dc73d411a01bda3f5291c0d7ac4dac800b39f4f706ec374b988e1b524643ee80`.
+- Access status: provenance-only. The repository watcher could compute a
+  fingerprint, but an immediate direct fetch attempt failed with a
+  remote-server connection error, and the connected Drive relay roots had no
+  accessible non-folder file modified after the automation handoff timestamp
+  `2026-06-25T04:37:09Z`.
+
+This event does not supply extractable proof-relevant content. Treat it as
+share-layer instability until a fresh transcript export, or a referenced
+`sandbox:/mnt/data/...` artifact, is routed through the ChatGPT Project inbox.

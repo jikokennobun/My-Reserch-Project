@@ -1,0 +1,45 @@
+{
+  "model": "four-element-g2-aps-nosynt",
+  "modelPath": ".\\code\\models\\examples\\four-element-g2-aps-nosynt.json",
+  "carrierSize": 4,
+  "searchedUnits": [
+    "0",
+    "a",
+    "b",
+    "c"
+  ],
+  "maxOperations": 300000,
+  "totalCandidates": 0,
+  "skippedUnits": [],
+  "results": [
+    {
+      "unit": "0",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    },
+    {
+      "unit": "a",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    },
+    {
+      "unit": "b",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    },
+    {
+      "unit": "c",
+      "searched": true,
+      "operation_space": 262144,
+      "candidate_count": 0,
+      "examples": []
+    }
+  ],
+  "conclusion": "no-full-residuated-expansion-found-in-searched-space"
+}

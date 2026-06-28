@@ -217,6 +217,18 @@ function Format-JstTimestamp {
     return $timestamp.ToString("M/d HH:mm")
 }
 
+function Get-JapaneseDateLabel {
+    param([string]$ReportDate)
+
+    try {
+        $dateValue = [datetime]::ParseExact($ReportDate, "yyyy-MM-dd", [Globalization.CultureInfo]::InvariantCulture)
+        $weekdays = @("日", "月", "火", "水", "木", "金", "土")
+        return ("{0}（{1}）" -f $ReportDate, $weekdays[[int]$dateValue.DayOfWeek])
+    } catch {
+        return $ReportDate
+    }
+}
+
 function Get-ActivityTimestamp {
     param([object]$Item)
 
@@ -377,6 +389,18 @@ function Get-WatchItemDisplay {
         $display = "$display / メモ: $note"
     }
     return $display
+}
+
+function Get-WatchItemProseLabel {
+    param([object]$Item)
+
+    $display = Get-WatchItemDisplay -Item $Item
+    $display = ($display -replace "^\[[^\]]+\]\s*", "").Trim()
+    $display = Remove-UrlsFromText -Text $display
+    $display = ($display -replace "\s*/\s*メモ:\s*$", "").Trim()
+    $display = ($display -replace "\s*-\s*$", "").Trim()
+    if ([string]::IsNullOrWhiteSpace($display)) { return "視聴ログ" }
+    return Get-ShortLine -Text $display -MaxChars 110
 }
 
 function Get-CalendarItemDisplay {
@@ -540,6 +564,130 @@ function Get-MoodValuesFromItems {
     return $values
 }
 
+function Get-LatestActivityTimestamp {
+    param(
+        [object[]]$Items,
+        [string]$DiscordSelfUserId
+    )
+
+    $timestamps = New-Object 'System.Collections.Generic.List[DateTimeOffset]'
+    foreach ($item in $Items) {
+        if ($null -eq $item) { continue }
+
+        if ($item.PSObject.Properties.Name -contains "author") {
+            $author = [string]$item.author
+            if ($author -match "(?i)bot") { continue }
+        }
+
+        if (-not [string]::IsNullOrWhiteSpace($DiscordSelfUserId) -and $item.PSObject.Properties.Name -contains "author_id") {
+            if ([string]$item.author_id -ne $DiscordSelfUserId) { continue }
+        }
+
+        $timestamp = Get-ActivityTimestamp -Item $item
+        if ($null -ne $timestamp) { $timestamps.Add($timestamp) }
+    }
+
+    if ($timestamps.Count -eq 0) { return $null }
+    return ($timestamps | Sort-Object | Select-Object -Last 1)
+}
+
+function Get-SleepPredictionValue {
+    param(
+        [object[]]$Items,
+        [string]$ReportDate,
+        [string]$DiscordSelfUserId
+    )
+
+    $latest = Get-LatestActivityTimestamp -Items $Items -DiscordSelfUserId $DiscordSelfUserId
+    if ($null -eq $latest -or [int]$latest.Hour -lt 18) {
+        return "翌00:30（自動予想）"
+    }
+
+    $predicted = $latest.AddMinutes(90)
+    $prefix = if ($predicted.ToString("yyyy-MM-dd") -eq $ReportDate) { "" } else { "翌" }
+    return $prefix + $predicted.ToString("HH:mm") + "（最終記録から自動予想）"
+}
+
+function Get-MoodValueOrEstimate {
+    param(
+        [string]$Label,
+        [string]$Value,
+        [int]$ActivityCount,
+        [int]$WatchCount,
+        [int]$RecentDiscordCount
+    )
+
+    if (-not [string]::IsNullOrWhiteSpace($Value)) {
+        return $Value
+    }
+
+    switch ($Label) {
+        "朝" { return "やや眠め（記録なしのため自動予想）" }
+        "昼" {
+            if ($ActivityCount -gt 0) { return "集中寄り（活動記録から自動予想）" }
+            return "普通（記録なしのため自動予想）"
+        }
+        "夜" {
+            if (($WatchCount + $RecentDiscordCount) -ge 10) { return "やや疲れ（夜まで記録が多いため自動予想）" }
+            return "落ち着き気味（記録なしのため自動予想）"
+        }
+        default { return "普通（記録なしのため自動予想）" }
+    }
+}
+
+function Get-WatchExcerptText {
+    param(
+        [object[]]$WatchItems,
+        [object[]]$YoutubeItems
+    )
+
+    $labels = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($item in ($WatchItems | Sort-Object { Get-ActivityTimestamp -Item $_ } | Select-Object -First 3)) {
+        $label = Get-WatchItemProseLabel -Item $item
+        if (-not [string]::IsNullOrWhiteSpace($label)) { $labels.Add($label) }
+    }
+    foreach ($item in ($YoutubeItems | Sort-Object { Get-ActivityTimestamp -Item $_ } | Select-Object -First 2)) {
+        $label = Get-ShortLine -Text (Get-YouTubeItemDisplay -Item $item) -MaxChars 110
+        $label = Remove-UrlsFromText -Text $label
+        if (-not [string]::IsNullOrWhiteSpace($label)) { $labels.Add($label) }
+    }
+
+    if ($labels.Count -eq 0) {
+        return "視聴ログは自動収集されませんでした。必要なら見た動画や読んだものを手動で追記します。"
+    }
+
+    $shown = @($labels.ToArray() | Select-Object -First 4)
+    $suffix = if ($labels.Count -gt $shown.Count) { "など" } else { "" }
+    return "視聴ログでは、" + ($shown -join "、") + $suffix + "を記録しました。"
+}
+
+function Get-DailyReflectionProse {
+    param(
+        [string]$ActivitySummaryText,
+        [string]$WatchExcerptText,
+        [object]$MoodValues,
+        [string]$CountSummaryText
+    )
+
+    $sentences = New-Object 'System.Collections.Generic.List[string]'
+    if (-not [string]::IsNullOrWhiteSpace($ActivitySummaryText)) {
+        $sentences.Add($ActivitySummaryText.Trim())
+    }
+    if (-not [string]::IsNullOrWhiteSpace($WatchExcerptText)) {
+        $sentences.Add($WatchExcerptText.Trim())
+    }
+
+    $moodSentence = "気分は、朝が$($MoodValues["朝"])、昼が$($MoodValues["昼"])、夜が$($MoodValues["夜"])でした。"
+    $sentences.Add($moodSentence)
+
+    if (-not [string]::IsNullOrWhiteSpace($CountSummaryText)) {
+        $sentences.Add("自動集計では、$CountSummaryText を確認しました。")
+    }
+
+    $sentences.Add("生活ログ側の振り返りは日報本文と役割が重なるため、ここでは個別ログを転記せず、一日の流れと状態だけをまとめています。")
+    return (($sentences.ToArray()) -join "`n`n")
+}
+
 function Get-ExistingLineValue {
     param(
         [string]$Text,
@@ -593,6 +741,38 @@ function Set-TemplateLineValueIfBlank {
     }
 
     return $Text.TrimEnd() + "`n- ${Label}: $Value`n"
+}
+
+function Set-DailyMetadataBlock {
+    param(
+        [string]$Text,
+        [System.Collections.IDictionary]$Metadata
+    )
+
+    $labels = @($Metadata.Keys)
+    $bodyLines = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($line in [regex]::Split($Text, "\r?\n")) {
+        $match = [regex]::Match($line, "^\s*-\s*([^:：]+)\s*[:：]\s*(.*)$")
+        if ($match.Success -and $labels -contains $match.Groups[1].Value.Trim()) {
+            continue
+        }
+        $bodyLines.Add($line)
+    }
+
+    $metaLines = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($label in $labels) {
+        $value = [string]$Metadata[$label]
+        if (-not [string]::IsNullOrWhiteSpace($value)) {
+            $metaLines.Add("- ${label}: $value")
+        }
+    }
+
+    if ($metaLines.Count -eq 0) {
+        return ($bodyLines.ToArray() -join "`n")
+    }
+
+    $body = (($bodyLines.ToArray() -join "`n").TrimStart())
+    return (($metaLines.ToArray() -join "`n") + "`n`n" + $body).TrimEnd() + "`n"
 }
 
 function Get-EarliestActivityTimestamp {
@@ -935,7 +1115,6 @@ $activityPath = Join-Path $RepositoryRoot "records\inbox\activity\$Date.jsonl"
 $watchPath = Join-Path $RepositoryRoot "records\inbox\watch\$Date.jsonl"
 $moodPath = Join-Path $RepositoryRoot "records\inbox\mood\$Date.jsonl"
 $wakePath = Join-Path $RepositoryRoot "records\inbox\wake\$Date.jsonl"
-$reflectionPath = Join-Path $RepositoryRoot "records\inbox\reflection\$Date.jsonl"
 $youtubePath = Join-Path $RepositoryRoot "records\inbox\youtube\$Date.jsonl"
 $gmailPath = Join-Path $RepositoryRoot "records\inbox\gmail\$Date.jsonl"
 $chatgptPath = Join-Path $RepositoryRoot "records\inbox\chatgpt\$Date.jsonl"
@@ -961,7 +1140,6 @@ $activityItems = @(Read-JsonLines -Path $activityPath)
 $watchItems = @(Read-JsonLines -Path $watchPath)
 $moodItems = @(Read-JsonLines -Path $moodPath)
 $wakeItems = @(Read-JsonLines -Path $wakePath)
-$reflectionItems = @(Read-JsonLines -Path $reflectionPath)
 $youtubeItems = @(Read-JsonLines -Path $youtubePath)
 $gmailItems = @(Read-JsonLines -Path $gmailPath)
 $chatgptItems = @(Read-JsonLines -Path $chatgptPath)
@@ -1164,15 +1342,6 @@ if ($wakeItems.Count -eq 0) {
     }
 }
 
-Add-Block -Lines $packet -Title "Reflection"
-if ($reflectionItems.Count -eq 0) {
-    $packet.Add("No reflection activity found at `$reflectionPath`.")
-} else {
-    foreach ($item in $reflectionItems) {
-        $packet.Add("- $($item.timestamp) [$($item.author)] $(Get-ShortLine -Text $item.content -MaxChars 800)")
-    }
-}
-
 Add-Block -Lines $packet -Title "Food"
 if ($foodItems.Count -eq 0) {
     $packet.Add("No food images found at `$foodPath`.")
@@ -1296,16 +1465,19 @@ Output Markdown only. Use this structure:
 Then use the Obsidian Daily Template from the source packet as the body shape.
 Preserve the user's existing template style and headings where possible.
 Fill or add these sections in Japanese:
+- top metadata lines for 日付, 起床, 就寝（予想）, and 天気
+- #活動まとめ as Japanese prose, not a bullet list
 - #食事
 - #天気の移り変わり
 - #Obsidianメモ変更履歴
 - #やった
 - #思った
+- #視聴ログ抜粋 as a short Japanese prose excerpt
 - #読んだ/見た/知った
 - #SNSでの活動
 - #生成AIでの活動
 - #精神状態 with 朝, 昼, 夜
-- 今日の感想
+- 今日の感想 as Japanese prose, not a bullet list
 
 After the detailed Obsidian report, add:
 ## Discord Digest
@@ -1314,6 +1486,10 @@ Rules:
 - Discord Digest must be a short plain-language summary for Discord, under 1800 characters.
 - Write Discord Digest in Japanese prose, separated by bold section labels such as `**起床と天気**` and `**今日の活動**`.
 - Do not use bullet lists, numbered lists, or Markdown heading lines inside Discord Digest.
+- The report must include date and weekday, wake time, predicted sleep time, weather, morning/noon/night mood, a watch-log excerpt, today's activity, and reflection.
+- If mood logs are missing, make cautious estimates and label them as 自動予想 instead of leaving them blank.
+- Today's activity and reflection must be prose paragraphs, not bullet lists.
+- Do not copy the lifestyle-log reflection channel into the report; it overlaps with the daily report's role.
 - Do not mention zero-count categories in Discord Digest.
 - Keep raw Discord conversations private in Discord Digest; summarize them instead of copying long quotes.
 - Treat External Discord Activity as activity outside the primary server; summarize it separately from the daily-report channel.
@@ -1327,7 +1503,6 @@ Rules:
 - If 起床 is blank, fill it from the earliest reliable activity timestamp and mark it as an automatic estimate. If 起床 already has a value, preserve it.
 - Every food item, SNS activity, anime/video item, and generated-AI item must include a JST timestamp.
 - Place SNS and generated-AI sections after #読んだ/見た/知った and before #精神状態.
-- If mood is not available, keep 朝/昼/夜 as fill-in prompts rather than inventing emotions.
 - Separate mathematical claims from todo management.
 - Mark uncertain mathematical claims as conjectures or questions.
 - Do not invent bibliographic facts.
@@ -1493,9 +1668,6 @@ Rules:
     if ($moodItems.Count -gt 0) {
         $doneItems.Add("気分ログ $($moodItems.Count)件を確認した。")
     }
-    if ($reflectionItems.Count -gt 0) {
-        $doneItems.Add("夜の振り返り $($reflectionItems.Count)件を日報に反映した。")
-    }
     if ($foodItems.Count -gt 0) {
         $doneItems.Add("食事画像をObsidian添付フォルダに保存して日報へ埋め込んだ。")
     }
@@ -1579,6 +1751,9 @@ Rules:
             }
         }
     }
+    $dateLabel = Get-JapaneseDateLabel -ReportDate $Date
+    $sleepSources = @($discordItems) + @($activityItems) + @($recentDiscordItems) + @($externalDiscordItems) + @($twitterItems) + @($watchItems) + @($youtubeItems) + @($foodItems) + @($aiItems) + @($moodItems) + @($wakeItems)
+    $sleepPredictionValue = Get-SleepPredictionValue -Items $sleepSources -ReportDate $Date -DiscordSelfUserId $discordSelfUserId
 
     $thoughtItems = @(
         "自動収集だけでは主観までは分からない。Discordでの発言や手書きメモを見ながら、あとで自分の言葉で足す。"
@@ -1599,7 +1774,6 @@ Rules:
     Add-CountPart -Parts $countParts -Label "食事画像" -Count $foodItems.Count
     Add-CountPart -Parts $countParts -Label "気分ログ" -Count $moodItems.Count
     Add-CountPart -Parts $countParts -Label "起床ログ" -Count $wakeItems.Count
-    Add-CountPart -Parts $countParts -Label "振り返り" -Count $reflectionItems.Count
     Add-CountPart -Parts $countParts -Label "Obsidianメモ変更" -Count $obsidianMemoChanged.Count
     Add-CountPart -Parts $countParts -Label "Obsidian研究更新" -Count $obsidianChanged.Count
     $countSummaryText = Get-CountSummaryText -Parts $countParts
@@ -1612,15 +1786,15 @@ Rules:
         }
     }
     foreach ($item in ($watchItems | Sort-Object { Get-ActivityTimestamp -Item $_ } | Select-Object -First 2)) {
-        $activitySummaryItems.Add("視聴: " + (Get-ShortLine -Text (Get-WatchItemDisplay -Item $item) -MaxChars 90))
+        $activitySummaryItems.Add((Get-WatchItemProseLabel -Item $item) + "を視聴")
     }
     foreach ($item in ($calendarItems | Sort-Object { Get-ActivityTimestamp -Item $_ } | Select-Object -First 2)) {
-        $activitySummaryItems.Add("予定: " + (Get-ShortLine -Text (Get-CalendarItemDisplay -Item $item) -MaxChars 90))
+        $activitySummaryItems.Add("予定「" + (Get-ShortLine -Text (Get-CalendarItemDisplay -Item $item) -MaxChars 90) + "」を確認")
     }
     foreach ($item in ($gmailItems | Sort-Object received_at | Select-Object -First 2)) {
         $subject = Get-ShortLine -Text $item.subject -MaxChars 80
         if (-not [string]::IsNullOrWhiteSpace($subject)) {
-            $activitySummaryItems.Add("メール: $subject")
+            $activitySummaryItems.Add("メール「$subject」を確認")
         }
     }
     if ($chatgptItems.Count -gt 0) {
@@ -1644,30 +1818,29 @@ Rules:
         }
     }
     $activitySummaryText = if ($activitySummaryItems.Count -gt 0) {
-        Get-ShortLine -Text ("今日は" + (($activitySummaryItems.ToArray() | Select-Object -First 6) -join " / ") + "。") -MaxChars 650
+        Get-ShortLine -Text ("今日は" + (Join-JapaneseClauses -Items @($activitySummaryItems.ToArray()) -MaxItems 6) + "。") -MaxChars 650
     } else {
         "今日は自動収集できた活動ログが少なめ。必要なら、活動ログやObsidian側に手動で補足。"
     }
 
-    $impressionItems = New-Object 'System.Collections.Generic.List[string]'
-    $impressionItems.Add("活動まとめ: $activitySummaryText")
-    foreach ($item in ($reflectionItems | Sort-Object { Get-ActivityTimestamp -Item $_ })) {
-        $reflectionText = Get-ShortLine -Text $item.content -MaxChars 240
-        if (-not [string]::IsNullOrWhiteSpace($reflectionText)) {
-            $impressionItems.Add((Get-TimestampedText -Item $item -ReportDate $Date -Text $reflectionText))
-        }
-    }
-    if ($countParts.Count -gt 0) {
-        $impressionItems.Add("自動集計: $countSummaryText。")
-    }
+    $watchExcerptText = Get-WatchExcerptText -WatchItems $watchItems -YoutubeItems $youtubeItems
+    $moodValues = Get-MoodValuesFromItems -MoodItems $moodItems -ReportDate $Date
+    $moodValues["朝"] = Get-MoodValueOrEstimate -Label "朝" -Value $moodValues["朝"] -ActivityCount $activityItems.Count -WatchCount $watchItems.Count -RecentDiscordCount $recentDiscordItems.Count
+    $moodValues["昼"] = Get-MoodValueOrEstimate -Label "昼" -Value $moodValues["昼"] -ActivityCount $activityItems.Count -WatchCount $watchItems.Count -RecentDiscordCount $recentDiscordItems.Count
+    $moodValues["夜"] = Get-MoodValueOrEstimate -Label "夜" -Value $moodValues["夜"] -ActivityCount $activityItems.Count -WatchCount $watchItems.Count -RecentDiscordCount $recentDiscordItems.Count
+    $dailyReflectionText = Get-DailyReflectionProse -ActivitySummaryText $activitySummaryText -WatchExcerptText $watchExcerptText -MoodValues $moodValues -CountSummaryText $countSummaryText
 
     $digestParts = New-Object 'System.Collections.Generic.List[string]'
-    $digestParts.Add("【$Date 日報】")
+    $digestParts.Add("【$dateLabel 日報】")
     $digestParts.Add("")
 
     $wakeWeatherSentences = New-Object 'System.Collections.Generic.List[string]'
+    $wakeWeatherSentences.Add("日付は${dateLabel}です。")
     if (-not [string]::IsNullOrWhiteSpace($wakeValue)) {
         $wakeWeatherSentences.Add("起床時刻は${wakeValue}です。")
+    }
+    if (-not [string]::IsNullOrWhiteSpace($sleepPredictionValue)) {
+        $wakeWeatherSentences.Add("就寝予想は${sleepPredictionValue}です。")
     }
     if (-not [string]::IsNullOrWhiteSpace($weatherSummary)) {
         $wakeWeatherSentences.Add("天気は $weatherSummary でした。")
@@ -1680,6 +1853,18 @@ Rules:
 
     $digestParts.Add("**今日の活動**")
     $digestParts.Add($activitySummaryText)
+    $digestParts.Add("")
+
+    $digestParts.Add("**気分**")
+    $digestParts.Add("朝は$($moodValues["朝"])、昼は$($moodValues["昼"])、夜は$($moodValues["夜"])でした。")
+    $digestParts.Add("")
+
+    $digestParts.Add("**視聴ログ抜粋**")
+    $digestParts.Add($watchExcerptText)
+    $digestParts.Add("")
+
+    $digestParts.Add("**振り返り**")
+    $digestParts.Add($dailyReflectionText)
     $digestParts.Add("")
 
     if ($countParts.Count -gt 0) {
@@ -1702,8 +1887,12 @@ Rules:
 
     $body = if ([string]::IsNullOrWhiteSpace($templateText)) {
         @"
+- 日付:
 - 起床:
+- 就寝（予想）:
 - 天気:
+
+#活動まとめ
 
 #やった
 -
@@ -1713,6 +1902,8 @@ Rules:
 
 #読んだ/見た/知った
 -
+
+#視聴ログ抜粋
 
 #精神状態
 - 朝:
@@ -1726,12 +1917,17 @@ Rules:
     }
     $body = [regex]::Replace($body, "(?m)^(#{1,6})[ \t]*大学メールタスク[ \t]*$", '$1メールタスク')
 
-    $body = Set-TemplateLineValueIfBlank -Text $body -Label "起床" -Value $wakeValue
-    $body = Set-TemplateLineValueIfBlank -Text $body -Label "天気" -Value $weatherSummary
+    $metadata = [ordered]@{
+        "日付" = $dateLabel
+        "起床" = $wakeValue
+        "就寝（予想）" = $sleepPredictionValue
+        "天気" = $weatherSummary
+    }
+    $body = Set-DailyMetadataBlock -Text $body -Metadata $metadata
     if ($weatherDetailLines.Count -gt 0) {
         $body = Upsert-SectionBeforeHeading -Text $body -Heading "天気の移り変わり" -BeforeHeading "やった" -ContentLines (ConvertTo-BulletLines -Items @($weatherDetailLines) -Fallback "")
     }
-    $body = Upsert-SectionBeforeHeading -Text $body -Heading "活動まとめ" -BeforeHeading "やった" -ContentLines @("- $activitySummaryText")
+    $body = Upsert-SectionBeforeHeading -Text $body -Heading "活動まとめ" -BeforeHeading "やった" -ContentLines @($activitySummaryText)
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "食事" -BeforeHeading "やった" -ContentLines @($foodLines)
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "予定" -BeforeHeading "やった" -ContentLines @($calendarTaskItems)
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "メールタスク" -BeforeHeading "やった" -ContentLines @($mailTaskItems)
@@ -1739,15 +1935,15 @@ Rules:
     $body = Set-MarkdownSection -Text $body -Heading "やった" -ContentLines (ConvertTo-BulletLines -Items @($doneItems) -Fallback "今日やったことは手動で追記してください。")
     $body = Set-MarkdownSection -Text $body -Heading "思った" -ContentLines (ConvertTo-BulletLines -Items @($thoughtItems) -Fallback "今日思ったことをあとで足す。")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "研究アイデア候補" -BeforeHeading "読んだ/見た/知った" -ContentLines (ConvertTo-BulletLines -Items @($researchIdeaItems) -Fallback "昇格先: [[Research-memo/研究アイデアInbox|研究アイデアInbox]]")
+    $body = Upsert-SectionBeforeHeading -Text $body -Heading "視聴ログ抜粋" -BeforeHeading "読んだ/見た/知った" -ContentLines @($watchExcerptText)
     $body = Set-MarkdownSection -Text $body -Heading "読んだ/見た/知った" -ContentLines (ConvertTo-BulletLines -Items @($readItems) -Fallback "今日読んだ/見た/知ったものを追記してください。")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "SNSでの活動" -BeforeHeading "精神状態" -ContentLines (ConvertTo-BulletLines -Items @($snsItems) -Fallback "SNS活動の自動収集はありません。")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "生成AIでの活動" -BeforeHeading "精神状態" -ContentLines (ConvertTo-BulletLines -Items @($aiLines) -Fallback "生成AI活動の自動収集はありません。")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "生活シグナル" -BeforeHeading "精神状態" -ContentLines (ConvertTo-BulletLines -Items @($signalLines) -Fallback "生活シグナルはありません。")
-    $moodValues = Get-MoodValuesFromItems -MoodItems $moodItems -ReportDate $Date
-    $body = Set-TemplateLineValue -Text $body -Label "朝" -Value $(if ([string]::IsNullOrWhiteSpace($moodValues["朝"])) { "未入力" } else { $moodValues["朝"] })
-    $body = Set-TemplateLineValue -Text $body -Label "昼" -Value $(if ([string]::IsNullOrWhiteSpace($moodValues["昼"])) { "未入力" } else { $moodValues["昼"] })
-    $body = Set-TemplateLineValue -Text $body -Label "夜" -Value $(if ([string]::IsNullOrWhiteSpace($moodValues["夜"])) { "未入力" } else { $moodValues["夜"] })
-    $body = Set-AnyHeadingSection -Text $body -Heading "今日の感想" -ContentLines (ConvertTo-BulletLines -Items @($impressionItems) -Fallback "今日の感想を追記してください。")
+    $body = Set-TemplateLineValue -Text $body -Label "朝" -Value $moodValues["朝"]
+    $body = Set-TemplateLineValue -Text $body -Label "昼" -Value $moodValues["昼"]
+    $body = Set-TemplateLineValue -Text $body -Label "夜" -Value $moodValues["夜"]
+    $body = Set-AnyHeadingSection -Text $body -Heading "今日の感想" -ContentLines @($dailyReflectionText)
 
     $report = New-Object 'System.Collections.Generic.List[string]'
     $report.Add("# Daily Report - $Date")

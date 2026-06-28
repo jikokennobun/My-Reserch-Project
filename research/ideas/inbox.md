@@ -18,6 +18,175 @@ Next action:
 
 ## Unsorted
 
+### 2026-06-28 - どういう台集合を考えるかにもよりますが写像の合成による代数は(恒等射を単位元とする)モノイドになる場合が多いと思います。
+
+Source: Discord command 1520458347277455380 in 🎓大学の勉強 at 2026-06-27T15:58:38.7410000+00:00
+
+Idea:
+どういう台集合を考えるかにもよりますが写像の合成による代数は(恒等射を単位元とする)モノイドになる場合が多いと思います。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-25 - ちなみに余談ですが、非古典論理の世界には矛盾許容型論理という古典論理から爆発律を落とした体系群があって日本でも(主に東北の方で)それなりに研...
+
+Source: Discord command 1519591164565651477 in 📚下剋上院進 at 2026-06-25T06:32:46.2710000+00:00
+
+Idea:
+ちなみに余談ですが、非古典論理の世界には矛盾許容型論理という古典論理から爆発律を落とした体系群があって日本でも(主に東北の方で)それなりに研究されています。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-25 - 遅ればせながら。 文面の感じからして、たぶん自然演繹をベースに推論を行なっているのだと思います。 wiki: https://ja.wiki...
+
+Source: Discord command 1519589849059954848 in 📚下剋上院進 at 2026-06-25T06:27:32.6300000+00:00
+
+Idea:
+遅ればせながら。 文面の感じからして、たぶん自然演繹をベースに推論を行なっているのだと思います。 wiki: https://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E6%BC%94%E7%B9%B9 自然演繹はHilbert流などと比べて推論規則が豊富で意味論的な操作がしやすいので、その点で真偽と証明の区別が付きにくくなっているのだと思われます(どちらにせよ完全性は担保されるため心配は不要)。 step 4 については恐らく自然演繹の ¬-導入: A I- ¬A ⇒ I- ¬A (あるいは A I- ⊥ ⇒ I- ¬A) を自然言語で表現しようとしたのではないでしょうか。 (A: 太陽は黒い、(前提) I- (結論): 前提から自然演繹を使って結論が導けるの意) ただ、どちらにせよ∧-除去で A∧¬A I- ¬A が導けるので上の推論は回り道をしているような気もします。 またstep 5は、より直接的には 名称不明: (¬A∧(A∨B)) I- B という推論に対応していると思います。 (B: 月はチーズで出来ている) この推論はある意味で(A∨B) I- ¬A➝B と同値で、ゆのさんの解釈とも繋がっています。(この辺の変形は古典命題論理の基礎を学ぶとわかります。) 私は自然演繹にあまり馴染みがないので間違っていたら申し訳ないです。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-25 - 院試勉強用サーバーの宣伝です。主に理数系向けです。 https://discord.gg/6wspBEtqM ゼミを開催して教科書の問題や院...
+
+Source: Discord command 1519551542359756810 in 📚下剋上院進 at 2026-06-25T03:55:19.6010000+00:00
+
+Idea:
+院試勉強用サーバーの宣伝です。主に理数系向けです。 https://discord.gg/6wspBEtqM ゼミを開催して教科書の問題や院試の過去問を解いたり、大学や研究室の情報を教え合ったり、雑談したりなどラフに色々と活動しています。 まだ設立してから日が浅く人も少ないので良ければ色んな分野を勉強している人に参加してもらいたいです。 よろしくお願いします。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-25 - AIに尋ねたところLarson–Zapletal の Geometric Set Theory (第6章)を紹介してもらいました。なんか、か...
+
+Source: Discord command 1519545421326843996 in 📚下剋上院進 at 2026-06-25T03:31:00.2330000+00:00
+
+Idea:
+AIに尋ねたところLarson–Zapletal の Geometric Set Theory (第6章)を紹介してもらいました。なんか、かなり尖ってる内容な気がしますね。 Larsonは知らないですが(ローソン位相の人？)、Zapletalはハーフ・コーエン実数問題の文脈で名前を聞いたことがあります。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-25 - 院試勉強用サーバーの宣伝です。主に理数系向けです。 https://discord.gg/fCF2aZrv4 ゼミを開催して教科書の問題や院...
+
+Source: Discord command 1519529889282261023 in 📚下剋上院進 at 2026-06-25T02:29:17.1050000+00:00
+
+Idea:
+院試勉強用サーバーの宣伝です。主に理数系向けです。 https://discord.gg/fCF2aZrv4 ゼミを開催して教科書の問題や院試の過去問を解いたり、大学や研究室の情報を教え合ったり、雑談したりなどラフに色々と活動しています。 まだ設立してから日が浅く人も少ないので良ければ色んな分野を勉強している人に参加してもらいたいです。 よろしくお願いします。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-25 - 自分の意図としては、様々な数学的対象をLeanで形式化したときに膨らんだ(形式言語による)差分と形式化された対象が所定の形式体系でどのように...
+
+Source: Discord command 1519509525722431658 in 🧮comm-math-for-ai at 2026-06-25T01:08:22.0540000+00:00
+
+Idea:
+自分の意図としては、様々な数学的対象をLeanで形式化したときに膨らんだ(形式言語による)差分と形式化された対象が所定の形式体系でどのように振る舞うか、という部分は人間の自然言語による議論では追いきれない(はず)の内容なのでそこは(手に追える限りは)人間の目で対応づけて確認した方が良いのではないかということです。 ただよくよく考えたら別に人間の専門家による査読が正確であるという保証はないわけですし、むしろ東大入試や法試験、医師国家試験を難なく突破することができるchatGPTなどの生成AIに査読/保証役を任せたほうが自然言語⇆形式言語の擦り合わせを上手くこなしてくれるのではないか、とも思えてきました。 (添付いただいたurlの記事をみる限り研究レベルの内容でも特に問題なく？形式化できているようだったので)
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-25 - 自然言語と形式言語(Leanコード)の少しのズレで全く異なる数学の議論 (ひいては数学の歴史)が作られるバタフライ効果的な展開があるのかもし...
+
+Source: Discord command 1519407541056966668 in 🧮comm-math-for-ai at 2026-06-24T18:23:07.0150000+00:00
+
+Idea:
+自然言語と形式言語(Leanコード)の少しのズレで全く異なる数学の議論 (ひいては数学の歴史)が作られるバタフライ効果的な展開があるのかもしれないと思いました。 皆さん仰られるように(g2の問題しかり)自然言語の文章とLeanの陳述を一対一で正確に対応づけることはかなり難しく(あるいは殆ど不可能で)、その対応関係を保証&納得する数学専門のコミュニティは(人類が主体的に数学に取り組もうとする限りは)必要になるのかなと思います。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-22 - ようは抽象的な概念に代数や位相、モデル理論の言葉で性質を付加させていって徐々に(抽象的)演繹体系を分析的にしていく、というイメージを数学的に...
+
+Source: Discord command 1518508397211816048 in 🧮comm-math-for-ai at 2026-06-22T06:50:14.4170000+00:00
+
+Idea:
+ようは抽象的な概念に代数や位相、モデル理論の言葉で性質を付加させていって徐々に(抽象的)演繹体系を分析的にしていく、というイメージを数学的に表現したのが当該階層だと言えると思います
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-22 - Ω_Aが単調(protoalgebraic)だとimplication formulas(同一律とmpを満たす含意っぽいやつ)が取れたり、e...
+
+Source: Discord command 1518507895765995550 in 🧮comm-math-for-ai at 2026-06-22T06:48:14.8630000+00:00
+
+Idea:
+Ω_Aが単調(protoalgebraic)だとimplication formulas(同一律とmpを満たす含意っぽいやつ)が取れたり、equivalentialになるとequivalence formula(論理同値っぽいやつ)が取れたりします。 代数化可能階層はCPLやIPCのようにメタで含意やその他の論理記号の性質を入れないでsyntactic closureと(logical) matrix(真理値集合でtoposで言うtruth value objectみたいなもの)の代数(論理)的な性質だけから様々な分析的構成の存在を導き出します。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-22 - L-代数 A上のacr-filterにそのfilter上のleibeniz congruenceを返す作用素Ω_Aの(順序)代数的性質によっ...
+
+Source: Discord command 1518505078036762747 in 🧮comm-math-for-ai at 2026-06-22T06:37:03.0640000+00:00
+
+Idea:
+L-代数 A上のacr-filterにそのfilter上のleibeniz congruenceを返す作用素Ω_Aの(順序)代数的性質によって(抽象的)演繹体系の代数化可能性を測る階層がalgebraizable hierarchyです。 (古典論理を考えている場合はAはブール代数になります。leibeniz congruenceはモデル理論におけるindiscernibilityを代数論理の言葉で書き直した概念です。あとLは言語です)
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-22 - 添付urlやwiki, nLabに飛んでもらってもいいですが、もっと細かくて体系的な話はSEPに載ってます。(圏に興味あるならnLabの方が...
+
+Source: Discord command 1518323087928590478 in 🎓大学の勉強 at 2026-06-21T18:33:53.2410000+00:00
+
+Idea:
+添付urlやwiki, nLabに飛んでもらってもいいですが、もっと細かくて体系的な話はSEPに載ってます。(圏に興味あるならnLabの方がいいですが) https://plato.stanford.edu/archives/fall2019/entries/russell-paradox/ https://plato.stanford.edu/entries/settheory-alternative/#TheoClas
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-22 - 粗く説明すると、集合の集合(圏の圏)を作るときに集合の濃度を制限したりオブジェクト/クラスをソートを区別したりしてrussellの矛盾を回避...
+
+Source: Discord command 1518322864422391931 in 🎓大学の勉強 at 2026-06-21T18:32:59.9530000+00:00
+
+Idea:
+粗く説明すると、集合の集合(圏の圏)を作るときに集合の濃度を制限したりオブジェクト/クラスをソートを区別したりしてrussellの矛盾を回避する、という発想ですね
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
 ### 2026-06-21 - 非正規様相論理は様相原理K: □(p➝q)➝(□p➝□q) あるいは規則Nec: I- p ⇒ I- □p の何れかを満たさない体系のことで...
 
 Source: Discord command 1518005106321129634 in 🧮comm-math-for-ai at 2026-06-20T21:30:20.5180000+00:00

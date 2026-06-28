@@ -4,7 +4,7 @@ Source vault:
 
 $HOME\Documents\Mr.Jikokennobun
 
-Generated: 2026-06-21T00:03:00
+Generated: 2026-06-28T00:00:32
 
 This index intentionally includes only research-related folders from the Obsidian vault. It does not index daily logs, personal notes, life planning, images, or non-research folders.
 
@@ -36,37 +36,47 @@ This index intentionally includes only research-related folders from the Obsidia
 
 | Root | Count |
 | --- | ---: |
-| Logic & Logic | 23 |
+| Logic & Logic | 25 |
 | Proof_memo | 4 |
-| References | 93 |
+| References | 113 |
 | Research | 1 |
-| Research-memo | 315 |
+| Research-memo | 329 |
 | Tex | 1 |
-| 研究紹介 | 10 |
+| 研究紹介 | 12 |
 
 ## Counts by Category
 
 | Category | Count |
 | --- | ---: |
 | APS/G2/provability | 13 |
-| Literature | 93 |
-| Logic | 23 |
+| Literature | 113 |
+| Logic | 25 |
 | Proof memo | 4 |
-| Research note | 304 |
-| Research presentation | 10 |
+| Research note | 318 |
+| Research presentation | 12 |
 
 ## Recently Modified
 
 | Title | Category | Root | Last modified | Path |
 | --- | --- | --- | --- | --- |
-| 抽象的証明可能構造 | Literature | References | 2026-06-19T02:14:18 | References\Research\抽象的証明可能構造.md |
+| 文献候補Inbox | Literature | References | 2026-06-23T07:23:53 | References\Zotero\文献候補Inbox.md |
+| 小定理・モデル関係ビジュアライザー | Literature | References | 2026-06-21T15:15:58 | References\Research\小定理・モデル関係ビジュアライザー.md |
+| 抽象的証明可能構造 | Literature | References | 2026-06-21T14:19:06 | References\Research\抽象的証明可能構造.md |
+| 文献管理・Zotero導入 | Literature | References | 2026-06-21T02:44:23 | References\Zotero\文献管理・Zotero導入.md |
+| 論理学研究MOC | Literature | References | 2026-06-21T02:44:21 | References\Research\論理学研究MOC.md |
+| 研究システム運用 | Literature | References | 2026-06-21T02:44:18 | References\Research\研究システム運用.md |
+| 文献ダッシュボード | Literature | References | 2026-06-21T02:44:15 | References\Zotero\文献ダッシュボード.md |
+| 研究アイデア・ダッシュボード | Literature | References | 2026-06-21T02:22:18 | References\Research\研究アイデア・ダッシュボード.md |
+| 研究リンク棚卸し | Literature | References | 2026-06-21T02:21:21 | References\Research\研究リンク棚卸し.md |
+| README | Literature | References | 2026-06-21T02:20:29 | References\Zotero\notes\README.md |
+| README | Literature | References | 2026-06-21T02:20:26 | References\Zotero\bib\README.md |
+| 渋谷セミナー3 (2026.6.19) | Research note | Research-memo | 2026-06-19T06:19:47 | Research-memo\渋谷セミナー3 (2026.6.19).md |
 | AMS・APS・剰余付きAMS-APSの基礎とモデル一覧 | APS/G2/provability | Research-memo | 2026-06-17T10:45:03 | Research-memo\AMS・APS・剰余付きAMS-APSの基礎とモデル一覧.md |
-| 未解決問題リスト | Literature | References | 2026-06-15T08:00:13 | References\Research\未解決問題リスト.md |
 | 研究成果リスト | Literature | References | 2026-06-15T08:00:13 | References\Research\研究成果リスト.md |
-| 研究アイデア・ダッシュボード | Literature | References | 2026-06-15T07:45:49 | References\Research\研究アイデア・ダッシュボード.md |
+| 未解決問題リスト | Literature | References | 2026-06-15T08:00:13 | References\Research\未解決問題リスト.md |
+| 研究アイデア運用ガイド | Literature | References | 2026-06-15T07:33:13 | References\Research\研究アイデア運用ガイド.md |
 | 研究_ワークフロー | Logic | Logic & Logic | 2026-06-15T07:33:13 | Logic & Logic\研究_ワークフロー.md |
 | 研究アイデアInbox | Research note | Research-memo | 2026-06-15T07:33:13 | Research-memo\研究アイデアInbox.md |
-| 研究アイデア運用ガイド | Literature | References | 2026-06-15T07:33:13 | References\Research\研究アイデア運用ガイド.md |
 | 研究アイデアテンプレート | Literature | References | 2026-06-15T07:33:12 | References\Research\研究アイデアテンプレート.md |
 | G2-zoo | Literature | References | 2026-05-30T23:04:40 | References\Research\動物園動物園\G2-zoo.md |
 | 渋谷セミナー2 (2026.5.08) | Literature | References | 2026-05-30T23:04:12 | References\Research\渋谷セミナー2 (2026.5.08).md |
@@ -74,27 +84,17 @@ This index intentionally includes only research-related folders from the Obsidia
 | 「0.99…＝1」問題 | Logic | Logic & Logic | 2026-05-29T22:54:02 | Logic & Logic\「0.99…＝1」問題.md |
 | 自己消滅系 | Research note | Research-memo | 2026-05-26T00:30:05 | Research-memo\自己消滅系.md |
 | Abstract G2-ZOO | Literature | References | 2026-05-25T16:59:43 | References\Abstract G2-ZOO.md |
+| 最近の興味 (Logic) | Logic | Logic & Logic | 2026-05-22T12:04:20 | Logic & Logic\最近の興味 (Logic).md |
 | 抽象的証明可能構造 | Research note | Research | 2026-05-22T09:40:11 | Research\抽象的証明可能構造.md |
 | Abstract Provbaility Predicate | Research note | Research-memo | 2026-05-22T08:47:33 | Research-memo\Abstract Provbaility Predicate.md |
 | Project-G2 | APS/G2/provability | Logic & Logic | 2026-05-21T05:38:05 | Logic & Logic\Project-G2.md |
-| 自己言及文と抽象代数 | Research note | Research-memo | 2026-05-16T13:42:30 | Research-memo\自己言及文と抽象代数.md |
-| 病的な論理体系Ⅱ | Research note | Research-memo | 2026-05-16T13:00:45 | Research-memo\病的な論理体系Ⅱ.md |
-| 主述の捻じれとツイステッド領域 | Research note | Research-memo | 2026-05-16T07:38:17 | Research-memo\主述の捻じれとツイステッド領域.md |
-| 圏論的抽象代数論理 | Literature | References | 2026-05-16T01:28:04 | References\Research\圏論的抽象代数論理.md |
-| Haskell_BASIC | Logic | Logic & Logic | 2026-05-14T08:58:12 | Logic & Logic\Haskell_BASIC.md |
-| ロジック✕TCS✕ゲーム | Logic | Logic & Logic | 2026-05-14T05:00:31 | Logic & Logic\ロジック✕TCS✕ゲーム.md |
-| 論理の創発現象 | Research note | Research-memo | 2026-05-14T03:38:20 | Research-memo\論理の創発現象.md |
-| Sequential Theory | Literature | References | 2026-05-11T04:41:28 | References\Sequential Theory.md |
-| Refinements of provability and consistency principles for the second incompleteness theorem | Literature | References | 2026-05-10T19:35:47 | References\Refinements of provability and consistency principles for the second incompleteness theorem.md |
-| 抽象的自己検証理論 | Research note | Research-memo | 2026-05-06T16:49:26 | Research-memo\抽象的自己検証理論.md |
-| 研究紹介7 | Research presentation | 研究紹介 | 2026-05-06T07:11:53 | 研究紹介\研究紹介7.md |
-| 抽象的代数論理学 | Literature | References | 2026-05-06T05:09:09 | References\Research\抽象的代数論理学.md |
+| 数理論理学者_一覧 | Literature | References | 2026-05-17T01:54:07 | References\Research\数理論理学者_一覧.md |
 
 ## Largest Research Notes
 
 | Title | Category | Root | Size | Path |
 | --- | --- | --- | ---: | --- |
-| 抽象的証明可能構造 | Literature | References | 108016 | References\Research\抽象的証明可能構造.md |
+| 抽象的証明可能構造 | Literature | References | 108119 | References\Research\抽象的証明可能構造.md |
 | 抽象的証明可能構造 | Research note | Research | 102869 | Research\抽象的証明可能構造.md |
 | AMS・APS・剰余付きAMS-APSの基礎とモデル一覧 | APS/G2/provability | Research-memo | 41493 | Research-memo\AMS・APS・剰余付きAMS-APSの基礎とモデル一覧.md |
 | 「0.99…＝1」問題 | Logic | Logic & Logic | 20331 | Logic & Logic\「0.99…＝1」問題.md |
@@ -110,6 +110,7 @@ This index intentionally includes only research-related folders from the Obsidia
 | 命題量化子に関する注意 | Research note | Research-memo | 12408 | Research-memo\命題量化子に関する注意.md |
 | 病的な推論特性の一覧 | Literature | References | 11422 | References\Research\動物園動物園\病的な推論特性の一覧.md |
 | MAIN-MEMO | Research note | Research-memo | 10583 | Research-memo\MAIN-MEMO.md |
+| 最近の興味 (Logic) | Logic | Logic & Logic | 10228 | Logic & Logic\最近の興味 (Logic).md |
 | K4上同値な原理 | Proof memo | Proof_memo | 10128 | Proof_memo\K4上同値な原理.md |
 | 未解決問題リスト | Literature | References | 9676 | References\Research\未解決問題リスト.md |
 | 自己言及と様相 | Literature | References | 9538 | References\Research\自己言及と様相.md |
@@ -122,8 +123,7 @@ This index intentionally includes only research-related folders from the Obsidia
 | テーマリスト | Literature | References | 6785 | References\Research\テーマリスト.md |
 | 命題型 | Literature | References | 6192 | References\Research\命題型.md |
 | 様相原理一覧 | Literature | References | 6159 | References\Research\動物園動物園\様相原理一覧.md |
-| 領域理論 | Research note | Research-memo | 5986 | Research-memo\領域理論.md |
-| 現在の研究テーマ - ミニリスト | Literature | References | 5857 | References\Research\現在の研究テーマ - ミニリスト.md |
+| 倉橋先生3(考察メモ) | Research note | Research-memo | 6100 | Research-memo\倉橋先生3(考察メモ).md |
 
 ## Full CSV
 

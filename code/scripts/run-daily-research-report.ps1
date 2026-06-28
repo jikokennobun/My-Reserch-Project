@@ -283,7 +283,7 @@ Invoke-Step "export Discord watch-log activity" {
 Invoke-Step "export Discord watchlist activity" {
     .\code\scripts\export-discord-watchlist-activity.ps1 -Date $Date
 }
-foreach ($kind in @("activity", "mood", "wake", "reflection")) {
+foreach ($kind in @("activity", "mood", "wake")) {
     Invoke-Step "export $kind log" {
         .\code\scripts\export-discord-log-channel.ps1 -LogKind $kind -Date $Date
     }

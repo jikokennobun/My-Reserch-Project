@@ -6538,3 +6538,24 @@ reflection condition.
 `artifacts/reports/pass113-four-element-macneille-g2-boundary-check.json`,
 PASS) plus standalone witness report
 `artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json`.
+
+## Pass 114 - Same-order residuation blocks the four-element witness
+
+Pass 114 tests the first natural strengthening of the Pass-113 hierarchy
+counterexample: keep the same carrier/order and ask for a two-sided-unit
+associative monotone tensor with both residuals.  The exhaustive search scans
+1,048,576 operation tables.  It finds 624 associative tensors and 56
+associative+monotone tensors, but no full residual package.
+
+The first obstruction among the surviving units is the non-principal fiber
+$$
+\{x:0\otimes x\le0\}=\{0,a,b,c\}.
+$$
+Since the carrier has no greatest element, this fiber cannot be represented by
+any residual element.  Thus the Pass-113 witness separates finite A1-A4, G2,
+and FG2 from syntactic fixed-point reflection only at the finite table level;
+it does not yet separate the corresponding residuated APS package.
+
+This suggests a sharper hierarchy question for the next pass: is residuation
+blocking the witness because of missing top/join structure alone, or because
+completion-stability of A1-A4/G2/FG2 fails even after the order is repaired?

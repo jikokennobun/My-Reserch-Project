@@ -2,6 +2,34 @@
 
 ## Active
 
+- **(Drive supplement 2026-06-28: can APS be organized as a CAAL-style doctrine?)**
+  The new Drive PDF `caal_article.pdf` presents categorical abstract algebraic
+  logic through closure operators, theory lattices, logical matrices,
+  Leibniz/Suszko congruences, pi-institutions, institutions, and doctrine
+  equivalence. Open:
+  (i) formulate an indexed APS doctrine whose fibers are theoremhood and
+  refutability closure structures over a signature/category of contexts;
+  (ii) decide whether `\Box`, `\boxtimes`, `T`, and `\bot` can be transported
+  by signature morphisms as closure-preserving doctrine maps without forcing
+  the G2/FG2 distinctions to collapse;
+  (iii) identify the Leibniz or Suszko-style congruence that should quotient
+  APS matrices while preserving primitive refutability rather than replacing
+  it by provability of negation.
+
+- **(Drive supplement 2026-06-25: can abstract-interpretation widening be internalized as APS approximation?)**
+  The new reference PDF `abstractInter_コピー.pdf` presents abstract
+  interpretation as complete-lattice fixed-point approximation through Galois
+  connections and widening. Open:
+  (i) formulate an APS or preAPS analogue of a widening operator
+  $\nabla:S\times S\to S$ that preserves enough of A3/A4 to approximate
+  $\boxtimes$-orbits without forcing a spurious fixed point;
+  (ii) decide whether Galois connections between concrete and abstract
+  theoremhood/refutability lattices preserve G2, FG2, or only weaker
+  safety-style invariants;
+  (iii) build a finite interval/polyhedral-domain-inspired APS example where
+  widening terminates while exact fixed-point iteration remains non-stable, to
+  compare with the repository's finite truncation versus liman obstruction.
+
 - **(Drive supplement 2026-06-18: when does Scott-topos coherence force APS A3?)**
   The new Drive PDF `karazeris_categorical_domain_theory_commentary.pdf`
   sharpens the domain-semantics line into a categorical approximation problem.
@@ -42,20 +70,20 @@
   points, collapsed `\Box\neg` fixed points, and full six-condition MND4
   inconsistency.
 
-- **(Pass 113 -> 114: residual boundary for the four-element MacNeille witness)**
-  Pass 113 found a four-element poset witness with finite A1-A4, G2, and FG2:
-  the order is `0<a<b` plus `0<c`, with `T=a`,
-  `boxtimes(0)=boxtimes(a)=b`, `boxtimes(b)=boxtimes(c)=0`, and
-  `Box(0)=Box(a)=Box(c)=0`, `Box(b)=b`.  It has no syntactic fixed point, but
-  its v1 MacNeille completion has the non-principal fixed cut
-  `{ 0, a, b, c }`.  Thus the Pass-112 A2 gate is only three-element local.
-  Open:
-  (i) decide whether this witness admits any compatible tensor/residual package
-  satisfying the repository's residuated APS expectations;
-  (ii) check whether A1-A4, G2, and FG2 survive the selected MacNeille
-  completion extension or fail at a named completion-stability condition;
-  (iii) if residuals fail, isolate the weakest extra hypothesis that rules out
-  the four-element witness while preserving known positive APS examples.
+- **(Pass 114 -> 115: order repair for the four-element residual obstruction)**
+  Pass 114 fixed the Pass-113 four-element witness and exhaustively searched
+  all same-carrier, same-order two-sided-unit tensors.  It found 624
+  associative tensors and 56 associative+monotone tensors, but no tensor with
+  both residuals.  The first residual obstruction is the non-principal fiber
+  `{x : 0 tensor x <= 0} = {0,a,b,c}`, the whole carrier; this is not principal
+  because the carrier has no greatest element.  Open:
+  (i) test the weakest order expansion that makes this fiber principal, first
+  by adding a top/join for the incomparable branch elements `b` and `c`;
+  (ii) check whether the repaired order still preserves finite A1-A4, G2, FG2,
+  no syntactic fixed point, and the MacNeille completion-separation profile;
+  (iii) decide whether the obstruction is best formulated as missing top,
+  missing binary join, noncompact residual fiber, or failure of a completion
+  stability law.
 
 - **(Drive supplement 2026-06-14: fixed-point spaces versus APS self-reference)**
   The June 13 Drive PDFs `unary_operator_fixed_point_spaces.pdf` and

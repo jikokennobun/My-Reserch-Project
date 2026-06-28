@@ -49,6 +49,9 @@ This folder is for machine-checkable finite APS/preAPS models.
   properties, and collapse conditions.
 - Tensor/residual search script:
   [../scripts/search-residuated-tensor.py](../scripts/search-residuated-tensor.py).
+- Pass-114 residual-boundary checker for the four-element MacNeille witness:
+  [../scripts/check-pass114.py](../scripts/check-pass114.py), with report
+  [../../artifacts/reports/pass114-four-element-residual-boundary-check.json](../../artifacts/reports/pass114-four-element-residual-boundary-check.json).
 - Same-carrier order repair search script:
   [../scripts/search-residuated-order-expansions.py](../scripts/search-residuated-order-expansions.py).
 - Commutative fixed-unit/fixed-zero residuation search script:

@@ -206,3 +206,22 @@ and 36 posets.
 The next search target is not A2 but residual/completion stability: determine
 whether this witness can carry compatible tensor and residual operations, and
 whether A1-A4/G2/FG2 survive the chosen completion extension.
+
+## Pass 114 Same-order Residual Boundary
+
+Residual search reports:
+
+- [../../artifacts/reports/pass114-four-element-residual-boundary-check.json](../../artifacts/reports/pass114-four-element-residual-boundary-check.json)
+- [../../artifacts/reports/pass114-four-element-witness-residuated-tensor-search.json](../../artifacts/reports/pass114-four-element-witness-residuated-tensor-search.json)
+
+The fixed-carrier/fixed-order upgrade fails.  Across all four possible units,
+the search enumerates 1,048,576 two-sided-unit tensor tables.  It finds 624
+associative operations and 56 associative+monotone operations, but zero
+operations with both residuals.
+
+The first residual obstruction for the surviving units is the fiber
+`{x : 0 tensor x <= 0} = {0,a,b,c}`.  Because the carrier has no greatest
+element, this is not a principal downset and therefore cannot be represented
+by a residual element.  The next search target is an order repair, such as
+adding a top/join for the incomparable branch, followed by a re-check of the
+finite APS and MacNeille separation profile.

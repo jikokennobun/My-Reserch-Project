@@ -6,27 +6,25 @@
 - Mode: Codex-centered repository discussion
 - Default cadence: one compact pass per scheduled wake-up
 - Target run: ongoing until the user explicitly pauses or stops the automation
-- Current pass: 114
-- Last pass note: Pass 113 (2026-06-21) extended the MacNeille G2/A2 boundary
-  search from the fixed three-element V-carrier to all labelled four-element
-  posets with a unique bottom.  The Pass-112 A2 gate is a three-element
-  artifact: the four-element poset consisting of the chain `0<a<b` plus a
-  separate branch `0<c`, with `T=a`, `bottom=0`,
-  `boxtimes(0)=boxtimes(a)=b`, `boxtimes(b)=boxtimes(c)=0`, and
-  `Box(0)=Box(a)=Box(c)=0`, `Box(b)=b`, has no syntactic fixed point and has
-  the non-principal MacNeille completion fixed cut `{ 0, a, b, c }` under v1.
-  It satisfies finite A1-A4, G2, and FG2 as table checks; G2 holds vacuously
-  because `boxtimes(T)=b` is not below `bottom`, while A2 holds because
-  `T=a <= boxtimes(bottom)=b`.  The exhaustive labelled-poset search scanned
-  76 unique-bottom posets and 359424 Box tables after separation; it found
-  2784 separation+G2+finite-APS tables across 240 refutability profiles and 36
-  posets.  Residuals and completion-stability remain unchecked.  Machine
-  verification `code/scripts/check-pass113.py` ->
-  `artifacts/reports/pass113-four-element-macneille-g2-boundary-check.json`
-  PASS; the standalone witness report
-  `artifacts/reports/macneille-reflection-four-element-g2-aps-nosynt-v1.json`
-  confirms `nonprincipal-without-syntactic`, `g2=true`, `fg2=true`, and
-  `apsAxioms.APS=true`.  Counter 113->114.
+- Current pass: 115
+- Last pass note: Pass 114 (2026-06-21) tested whether the Pass-113
+  four-element G2+finite-APS MacNeille witness admits a same-carrier,
+  same-order tensor/residual expansion.  Exhaustive enumeration over all
+  two-sided-unit binary tensors for every possible unit scanned 1,048,576
+  operation tables.  Of these, 624 were associative and 56 were both
+  associative and monotone, but 0 admitted both left and right residuals by
+  the principal-downset test.  Unit `0` has no associative monotone tensors;
+  units `a`, `b`, and `c` have 6, 18, and 32 associative monotone tensors,
+  respectively, but each surviving class hits a non-principal residual fiber.
+  The first named obstruction is `{x : 0 tensor x <= 0} = {0,a,b,c}`, the
+  whole carrier, which is not principal because the four-element carrier has
+  no greatest element.  This is a same-carrier/same-order no-go only; order
+  expansions and completion-stability remain open.  Machine verification
+  `code/scripts/check-pass114.py` ->
+  `artifacts/reports/pass114-four-element-residual-boundary-check.json` and
+  `code/scripts/search-residuated-tensor.py` ->
+  `artifacts/reports/pass114-four-element-witness-residuated-tensor-search.json`.
+  Counter 114->115.
 - Earlier note: Pass 109 (2026-06-21) computed the rational barycentric
   transition under a support inclusion $S\subset T$.  If $|S|=n$ and
   $|T|=m$, then
@@ -13171,3 +13169,86 @@ Next step:
 Pass 114 should test whether the four-element G2+finite-APS witness admits
 any compatible tensor/residual package or stable completion extension.  If it
 does not, isolate the first failing residual or completion-stability condition.
+
+### Pass 114 - 2026-06-21 JST
+
+Focus:
+Test whether the Pass-113 four-element MacNeille witness can be upgraded, on
+the same carrier and the same order, to a residuated tensor package.
+
+Proposer:
+The shortest next boundary test is to keep the witness fixed and enumerate
+every binary operation with a two-sided unit.  If any operation is
+associative, monotone in both arguments, and has both residuals, then the
+MacNeille separation survives a first residuation audit.  If none does, the
+four-element model remains a finite table APS witness but not yet a
+residuated APS witness.
+
+Skeptic:
+The scope is deliberately narrow.  This does not rule out an order repair, an
+added top element, a quotient/collapse, a different four-element witness, or a
+completion-level tensor.  It only says that the exact Pass-113 carrier/order
+cannot carry the requested tensor/residual package.
+
+Formalist:
+For each possible unit `e` in `{0,a,b,c}`, `check-pass114.py` enumerates all
+two-sided-unit binary operations.  The total operation space is
+$$
+4\cdot 4^9 = 1,048,576.
+$$
+The stage counts are:
+
+| unit | operation space | associative | associative+monotone | full residual |
+| --- | ---: | ---: | ---: | ---: |
+| `0` | 262144 | 156 | 0 | 0 |
+| `a` | 262144 | 156 | 6 | 0 |
+| `b` | 262144 | 156 | 18 | 0 |
+| `c` | 262144 | 156 | 32 | 0 |
+
+Thus 624 operations are associative and 56 survive monotonicity, but no
+surviving operation has both left and right residuals.  The first named
+obstruction for the surviving units is a non-principal residual fiber:
+$$
+\{x:0\otimes x\le 0\}=\{0,a,b,c\}.
+$$
+This set is the whole carrier, and it is not a principal downset because the
+carrier has no greatest element.  The same missing-top shape is exactly what
+made the MacNeille fixed cut non-principal in Pass 113.
+
+> **Theorem 114a (same-carrier residual no-go).** On the Pass-113 four-element
+> carrier/order, no two-sided-unit associative monotone tensor admits both
+> left and right residuals by the principal-downset criterion.
+>
+> **Caveat 114b (scope).** The theorem is fixed-carrier and fixed-order.  It
+> does not decide order expansions, completion-level tensors, or other
+> four-element G2+finite-APS witnesses.
+
+Machine verification:
+- `code/scripts/check-pass114.py` produced
+  `artifacts/reports/pass114-four-element-residual-boundary-check.json`.
+- `code/scripts/search-residuated-tensor.py` produced the independent
+  zero-candidate report
+  `artifacts/reports/pass114-four-element-witness-residuated-tensor-search.json`.
+
+Archivist:
+- `records/discussions/autonomous-discussion.md`: appended this Pass-114
+  entry; State counter $114\to115$.
+- `records/logs/research-log.md`: Pass-114 entry.
+- `research/ideas/research-questions.md`: retargeted the next pass to the
+  order-repair and completion-stability boundary.
+- `research/open_problems.md`: partially resolved the Pass-113 residual
+  problem on the same carrier/order and opened the order-expansion repair
+  problem.
+- `research/definitions.md`, `research/notes/completion-and-fixed-points.md`,
+  `research/notes/g2-fg2-hierarchy.md`,
+  `code/models/macneille-reflection-search.md`, and
+  `code/models/macneille-checker-interface.md`: recorded the same-order
+  residual no-go and its scope.
+- `artifacts/pdf/four-element-residual-obstruction-2026-06-21.md`:
+  publication summary source.
+
+Next step:
+Pass 115 should test the weakest order repair that makes the obstruction
+principal, starting with adding a top/join for `b` and `c`, and should then
+ask whether the repaired order still preserves the finite A1-A4, G2, FG2, and
+MacNeille completion-separation profile.

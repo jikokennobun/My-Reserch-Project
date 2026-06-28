@@ -37,6 +37,18 @@ report is exploratory or incomplete, mark it as such.
 
 ## Recent Reports
 
+- `pass114-four-element-residual-boundary-check.json`: verifies the Pass-114
+  same-carrier residual boundary for the four-element MacNeille witness. It
+  enumerates all two-sided-unit tensor tables for every possible unit, records
+  624 associative tensors, 56 associative+monotone tensors, zero full
+  residuated tensors, and identifies the first named obstruction as the
+  non-principal whole-carrier residual fiber.
+
+- `pass114-four-element-witness-residuated-tensor-search.json`: independent
+  zero-candidate search report from `search-residuated-tensor.py` for the same
+  witness. It confirms that no full residual expansion was found for units
+  `0`, `a`, `b`, or `c` on the fixed carrier/order.
+
 - `pass113-four-element-macneille-g2-boundary-check.json`: verifies the
   Pass-113 labelled four-element poset search. It enumerates all labelled
   four-element posets with a unique bottom, all antitone `boxtimes` maps, and

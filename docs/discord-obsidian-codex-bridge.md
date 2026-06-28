@@ -27,7 +27,8 @@ such as `やった`, `思った`, `視聴ログ`, `食`, `気分ログ`, `起床
   yearly report channels.
 - `🧾 生活ログ`: raw daily-life capture channels such as `🧾活動ログ`,
   `✅やった`, `💭思った`, `🍽️食`, `🎬視聴ログ`, `🌗気分ログ`,
-  `🌅起床ログ`, and `🪞振り返り`.
+  and `🌅起床ログ`. The old separate `振り返り` channel is deprecated because
+  the daily report now carries the reflection prose itself.
 - `AI 自動化`: bot control and AI conversation channels such as
   `aicodex-command`, `aiai-chat`, and `ir自己満足文`.
   Discord normalizes ASCII channel-name prefixes to lowercase and strips
@@ -121,11 +122,10 @@ AI and mathematics news channels
   -> code/scripts/ensure-discord-news-channels.ps1
   -> Discord `ai-news` and `math-news`
   -> optional future curated news digest
-Wake/mood/reflection Discord channels
+Wake/mood Discord channels
   -> records/inbox/activity/YYYY-MM-DD.jsonl
   -> records/inbox/wake/YYYY-MM-DD.jsonl
   -> records/inbox/mood/YYYY-MM-DD.jsonl
-  -> records/inbox/reflection/YYYY-MM-DD.jsonl
   -> Codex triage
   -> records/tasks/todo.md
   -> records/daily/YYYY-MM-DD.md
@@ -198,8 +198,6 @@ Obsidian vault
   the `起床ログ` Discord channel.
 - `records/inbox/mood/YYYY-MM-DD.jsonl`: morning/noon/night mood records from
   the `気分ログ` Discord channel.
-- `records/inbox/reflection/YYYY-MM-DD.jsonl`: night-review answers from the
-  `振り返り` Discord channel.
 - `records/tasks/todo.md`: active todo list grouped by Now, Next, Waiting, and
   Someday.
 - `records/tasks/candidates/YYYY-MM-DD.md`: review-only todo candidates.
@@ -452,7 +450,6 @@ powershell -ExecutionPolicy Bypass -File .\code\scripts\enrich-video-metadata.ps
 powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-calendar-notifications.ps1 -Date YYYY-MM-DD -IncludeDiscordEvents -SyncObsidian -PostDiscordDigest
 powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind wake -Date YYYY-MM-DD
 powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind mood -Date YYYY-MM-DD
-powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind reflection -Date YYYY-MM-DD
 powershell -ExecutionPolicy Bypass -File .\code\scripts\import-gmail-task-export.ps1 -Date YYYY-MM-DD -SyncObsidian
 powershell -ExecutionPolicy Bypass -File .\code\scripts\post-gmail-task-announcements.ps1 -Date YYYY-MM-DD
 powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-mail-deadline-reminders.ps1 -Date YYYY-MM-DD -SyncObsidian -PostDiscordReminders
@@ -480,11 +477,12 @@ The life-log setup script creates or reuses:
 
 - `起床ログ`: wake/sleep/activity-start notes
 - `気分ログ`: morning/noon/night mood notes
-- `振り返り`: nightly reflection answers
 
 The daily report preserves an existing `起床` value. If it is blank, it uses
 `起床ログ` first and then falls back to the earliest reliable activity timestamp.
-Every food, SNS, AI, watch, and video item should keep a timestamp.
+Every food, SNS, AI, watch, and video item should keep a timestamp. Reflection
+belongs in the daily report's prose section rather than a separate life-log
+channel.
 
 External Discord capture excludes the primary `DISCORD_GUILD_ID` by default.
 Invite the bot to other servers when their activity should be recorded.
@@ -535,8 +533,8 @@ keeps irreversible decisions out of the Discord event handler.
   and recent Obsidian research changes; produce a compact task list for today.
 - Evening daily report: summarize completed work, new notes, blocked items,
   generated artifacts, and the best next research action.
-- Nightly reflection prompt: post a short form for good things, hard things,
-  tomorrow carryovers, and mood.
+- Nightly reflection: keep it inside the daily report prose unless the user
+  explicitly asks for a separate prompt.
 - Weekly research synthesis: update open problems, definitions, and research
   questions from the week's notes and discussions.
 

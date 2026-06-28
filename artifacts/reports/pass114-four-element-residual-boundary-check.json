@@ -1,0 +1,343 @@
+{
+  "pass": 114,
+  "model": "four-element-g2-aps-nosynt",
+  "modelPath": "code/models/examples/four-element-g2-aps-nosynt.json",
+  "scope": {
+    "sameCarrier": true,
+    "sameOrder": true,
+    "twoSidedUnit": true,
+    "associative": true,
+    "monotoneInBothArguments": true,
+    "leftAndRightResiduals": "principal-downset test"
+  },
+  "carrier": [
+    "0",
+    "a",
+    "b",
+    "c"
+  ],
+  "principalDownsets": {
+    "0": [
+      "0"
+    ],
+    "a": [
+      "0",
+      "a"
+    ],
+    "b": [
+      "0",
+      "a",
+      "b"
+    ],
+    "c": [
+      "0",
+      "c"
+    ]
+  },
+  "summary": {
+    "operationSpace": 1048576,
+    "associativeCount": 624,
+    "associativeMonotoneCount": 56,
+    "fullResiduatedCount": 0,
+    "firstNamedObstruction": "non-principal-residual-fiber"
+  },
+  "results": [
+    {
+      "unit": "0",
+      "operationSpace": 262144,
+      "associativeCount": 156,
+      "associativeMonotoneCount": 0,
+      "fullResiduatedCount": 0,
+      "firstMonotonicityObstruction": {
+        "tensor": {
+          "0": {
+            "0": "0",
+            "a": "a",
+            "b": "b",
+            "c": "c"
+          },
+          "a": {
+            "0": "a",
+            "a": "0",
+            "b": "b",
+            "c": "c"
+          },
+          "b": {
+            "0": "b",
+            "a": "b",
+            "b": "b",
+            "c": "b"
+          },
+          "c": {
+            "0": "c",
+            "a": "c",
+            "b": "b",
+            "c": "b"
+          }
+        },
+        "obstruction": {
+          "side": "left-argument",
+          "lower": "0",
+          "upper": "a",
+          "fixed": "a",
+          "lowerValue": "a",
+          "upperValue": "0"
+        }
+      },
+      "firstResidualObstruction": null,
+      "examples": []
+    },
+    {
+      "unit": "a",
+      "operationSpace": 262144,
+      "associativeCount": 156,
+      "associativeMonotoneCount": 6,
+      "fullResiduatedCount": 0,
+      "firstMonotonicityObstruction": {
+        "tensor": {
+          "0": {
+            "a": "0",
+            "0": "0",
+            "b": "0",
+            "c": "0"
+          },
+          "a": {
+            "0": "0",
+            "a": "a",
+            "b": "b",
+            "c": "c"
+          },
+          "b": {
+            "a": "b",
+            "0": "0",
+            "b": "0",
+            "c": "0"
+          },
+          "c": {
+            "a": "c",
+            "0": "0",
+            "b": "0",
+            "c": "0"
+          }
+        },
+        "obstruction": {
+          "side": "left-argument",
+          "lower": "a",
+          "upper": "b",
+          "fixed": "b",
+          "lowerValue": "b",
+          "upperValue": "0"
+        }
+      },
+      "firstResidualObstruction": {
+        "tensor": {
+          "0": {
+            "a": "0",
+            "0": "0",
+            "b": "0",
+            "c": "0"
+          },
+          "a": {
+            "0": "0",
+            "a": "a",
+            "b": "b",
+            "c": "c"
+          },
+          "b": {
+            "a": "b",
+            "0": "0",
+            "b": "b",
+            "c": "c"
+          },
+          "c": {
+            "a": "c",
+            "0": "0",
+            "b": "c",
+            "c": "0"
+          }
+        },
+        "obstruction": {
+          "side": "left",
+          "fixedLeft": "0",
+          "bound": "0",
+          "fiber": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "condition": "{b : a tensor b <= c} is not a principal downset"
+        }
+      },
+      "examples": []
+    },
+    {
+      "unit": "b",
+      "operationSpace": 262144,
+      "associativeCount": 156,
+      "associativeMonotoneCount": 18,
+      "fullResiduatedCount": 0,
+      "firstMonotonicityObstruction": {
+        "tensor": {
+          "0": {
+            "b": "0",
+            "0": "0",
+            "a": "0",
+            "c": "0"
+          },
+          "a": {
+            "b": "a",
+            "0": "0",
+            "a": "0",
+            "c": "0"
+          },
+          "b": {
+            "0": "0",
+            "a": "a",
+            "b": "b",
+            "c": "c"
+          },
+          "c": {
+            "b": "c",
+            "0": "0",
+            "a": "a",
+            "c": "c"
+          }
+        },
+        "obstruction": {
+          "side": "right-argument",
+          "lower": "a",
+          "upper": "b",
+          "fixed": "c",
+          "lowerValue": "a",
+          "upperValue": "c"
+        }
+      },
+      "firstResidualObstruction": {
+        "tensor": {
+          "0": {
+            "b": "0",
+            "0": "0",
+            "a": "0",
+            "c": "0"
+          },
+          "a": {
+            "b": "a",
+            "0": "0",
+            "a": "0",
+            "c": "0"
+          },
+          "b": {
+            "0": "0",
+            "a": "a",
+            "b": "b",
+            "c": "c"
+          },
+          "c": {
+            "b": "c",
+            "0": "0",
+            "a": "0",
+            "c": "0"
+          }
+        },
+        "obstruction": {
+          "side": "left",
+          "fixedLeft": "0",
+          "bound": "0",
+          "fiber": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "condition": "{b : a tensor b <= c} is not a principal downset"
+        }
+      },
+      "examples": []
+    },
+    {
+      "unit": "c",
+      "operationSpace": 262144,
+      "associativeCount": 156,
+      "associativeMonotoneCount": 32,
+      "fullResiduatedCount": 0,
+      "firstMonotonicityObstruction": {
+        "tensor": {
+          "0": {
+            "c": "0",
+            "0": "0",
+            "a": "0",
+            "b": "0"
+          },
+          "a": {
+            "c": "a",
+            "0": "0",
+            "a": "0",
+            "b": "a"
+          },
+          "b": {
+            "c": "b",
+            "0": "0",
+            "a": "a",
+            "b": "c"
+          },
+          "c": {
+            "0": "0",
+            "a": "a",
+            "b": "b",
+            "c": "c"
+          }
+        },
+        "obstruction": {
+          "side": "left-argument",
+          "lower": "a",
+          "upper": "b",
+          "fixed": "b",
+          "lowerValue": "a",
+          "upperValue": "c"
+        }
+      },
+      "firstResidualObstruction": {
+        "tensor": {
+          "0": {
+            "c": "0",
+            "0": "0",
+            "a": "0",
+            "b": "0"
+          },
+          "a": {
+            "c": "a",
+            "0": "0",
+            "a": "0",
+            "b": "0"
+          },
+          "b": {
+            "c": "b",
+            "0": "0",
+            "a": "0",
+            "b": "0"
+          },
+          "c": {
+            "0": "0",
+            "a": "a",
+            "b": "b",
+            "c": "c"
+          }
+        },
+        "obstruction": {
+          "side": "left",
+          "fixedLeft": "0",
+          "bound": "0",
+          "fiber": [
+            "0",
+            "a",
+            "b",
+            "c"
+          ],
+          "condition": "{b : a tensor b <= c} is not a principal downset"
+        }
+      },
+      "examples": []
+    }
+  ]
+}

@@ -23,7 +23,7 @@ This document defines the daily-report inputs and the current automation level.
 | Video metadata | Automatic | `code/scripts/enrich-video-metadata.ps1` adds YouTube titles and channel names to watch-log and YouTube inbox records when oEmbed is available. |
 | Wake log | Bot required | `code/scripts/export-discord-log-channel.ps1 -LogKind wake` captures wake/sleep posts from `起床ログ`; this is preferred over inferred wake time. |
 | Mood log | Bot required | `code/scripts/export-discord-log-channel.ps1 -LogKind mood` captures morning/noon/night mood posts from `気分ログ`. |
-| Reflection log | Bot required | `code/scripts/export-discord-log-channel.ps1 -LogKind reflection` captures night review answers from `振り返り`. |
+| Reflection log | Deprecated | Separate life-log reflection is no longer part of the daily report contract because it overlaps with the daily report's own reflection prose. |
 | Twitter/X | Optional API/manual | `code/scripts/import-twitter-activity.ps1` can queue manual records or fetch via X API when `X_BEARER_TOKEN` is available. |
 | Generated AI activity | Manual/API-ready | `code/scripts/import-ai-activity.ps1` queues Codex, ChatGPT, Claude, Gemini, or other AI-session summaries. |
 | Gmail task mail | Label/export based | Gmail labels `Codex/大学タスク` and `Codex/塾講師タスク` are exported by `code/apps-script/gmail-university-task-export.gs`, then imported by `code/scripts/import-gmail-task-export.ps1`. |
@@ -39,7 +39,7 @@ This document defines the daily-report inputs and the current automation level.
 | Proof obligations | Automatic | `code/scripts/extract-proof-obligations.ps1` scans `research/` for TODO, conjecture, and proof-obligation markers. |
 | Weekly/monthly reports | Automatic | `code/scripts/new-periodic-report.ps1` summarizes daily reports into `records/periodic/`. |
 | Activity correspondence | Automatic | `code/scripts/build-activity-correspondence.ps1` links watch/video/AI activity to research follow-up candidates. |
-| Morning/night prompts | Automatic | Codex automations post a morning brief and a nightly reflection prompt through the daily Discord webhook. |
+| Morning/night prompts | Automatic | Codex automations post a morning brief. The daily report itself now carries the reflection prose, so separate life-log reflection prompts should stay disabled unless explicitly needed. |
 | Browser or YouTube watch history | Not enabled | This needs explicit browser/Google history access. Do not enable it silently. |
 
 ## Automation Health and Recovery
@@ -236,7 +236,9 @@ powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-watchlist
 
 ## Life Log Capture
 
-Create or find the wake, mood, and reflection channels:
+Create or find the wake and mood channels. The old `振り返り` channel is no
+longer required for daily-report generation because the daily report already
+contains its own prose reflection.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\code\scripts\ensure-discord-life-log-channels.ps1 -StoreInUserEnvironment
@@ -246,14 +248,12 @@ Use them like this:
 
 - `起床ログ`: `起床 08:15`, `睡眠 6h`, `活動開始 09:00`
 - `気分ログ`: `朝: 60 眠い`, `昼: 70 集中できた`, `夜: 45 疲れ`
-- `振り返り`: night-review answers, good things, hard things, and tomorrow carryovers
 
 Export those logs for a date:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind wake -Date YYYY-MM-DD
 powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind mood -Date YYYY-MM-DD
-powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind reflection -Date YYYY-MM-DD
 ```
 
 ## Weather Capture
@@ -501,7 +501,6 @@ powershell -ExecutionPolicy Bypass -File .\code\scripts\enrich-video-metadata.ps
 powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-calendar-notifications.ps1 -Date YYYY-MM-DD -IncludeDiscordEvents -SyncObsidian -PostDiscordDigest
 powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind wake -Date YYYY-MM-DD
 powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind mood -Date YYYY-MM-DD
-powershell -ExecutionPolicy Bypass -File .\code\scripts\export-discord-log-channel.ps1 -LogKind reflection -Date YYYY-MM-DD
 powershell -ExecutionPolicy Bypass -File .\code\scripts\import-gmail-task-export.ps1 -Date YYYY-MM-DD -SyncObsidian
 powershell -ExecutionPolicy Bypass -File .\code\scripts\post-gmail-task-announcements.ps1 -Date YYYY-MM-DD
 powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-mail-deadline-reminders.ps1 -Date YYYY-MM-DD -SyncObsidian -PostDiscordReminders

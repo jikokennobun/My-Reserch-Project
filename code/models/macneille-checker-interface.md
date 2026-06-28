@@ -141,3 +141,19 @@ while the v1 MacNeille completion has a non-principal fixed cut and the
 original carrier has no syntactic fixed point.  The report still records only
 finite table checks; residual operations and completion-stability fields remain
 the next interface gap.
+
+## Pass 114 Residual Boundary Status
+
+The fixed-carrier residual boundary is now checked separately by
+`../scripts/check-pass114.py`.  It keeps
+`examples/four-element-g2-aps-nosynt.json` on the same carrier and order and
+enumerates every two-sided-unit tensor for every possible unit.  The report
+`../../artifacts/reports/pass114-four-element-residual-boundary-check.json`
+records 1,048,576 operation tables, 624 associative tensors, 56
+associative+monotone tensors, and zero tensors with both residuals.
+
+The first named obstruction is the non-principal fiber
+`{x : 0 tensor x <= 0} = {0,a,b,c}`.  This should be treated as a residual
+interface field in the next checker iteration: reports should distinguish
+finite table APS status, same-carrier residual obstruction, order-repair
+residual success/failure, and completion-stability status.

@@ -1,5 +1,33 @@
 # Research Log
 
+## 2026-06-28 (Relay sync 2026-06-28T19:23:52+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root after direct script execution was blocked by the
+  local PowerShell execution policy. The ChatGPT Project artifact inbox scan
+  found the same `3` supported PDF artifacts, collected/refreshed `3` central
+  PDFs under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive
+  PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Attempted to re-run
+  `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`,
+  but the process stalled without writing a new share-log section and had to be
+  stopped. The latest completed watcher entry remains
+  `2026-06-28T12:16:08`, where all `23` watched
+  `https://chatgpt.com/share/...` links were `unchanged`; no changed transcript
+  body was available for mathematical reconstruction in this pass.
+- Searched the connected Google Drive relay for non-folder files modified after
+  the automation handoff `2026-06-28T03:14:57Z`, then listed the recorded
+  research root, reference root, `ChatGPT_Research`, and `ChatGPT_Study`
+  folders. The only new relevant item was `caal_article.pdf` in the new
+  `ChatGPT_Study/圏論的抽象代数論理入門記事beta版` folder.
+- Indexed `caal_article.pdf` in `research/references/research-drive.md` as a
+  categorical abstract algebraic logic primer covering consequence relations,
+  closure operators, theory lattices, matrices, Leibniz/Suszko congruences,
+  pi-institutions, institutions, and doctrine equivalence. Added one open
+  question to `research/ideas/research-questions.md` on organizing APS as a
+  CAAL-style indexed doctrine. No theorem note was rewritten because the source
+  is expository background rather than a new APS-specific result.
+
 ## 2026-06-28 (Relay sync 2026-06-28T12:16:08+09:00)
 
 - Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
