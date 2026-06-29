@@ -4,7 +4,7 @@ Source vault:
 
 $HOME\Documents\Mr.Jikokennobun
 
-Generated: 2026-06-28T00:00:32
+Generated: 2026-06-29T14:52:03
 
 This index intentionally includes only research-related folders from the Obsidian vault. It does not index daily logs, personal notes, life planning, images, or non-research folders.
 

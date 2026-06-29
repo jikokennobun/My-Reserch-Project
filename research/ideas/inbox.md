@@ -18,6 +18,19 @@ Next action:
 
 ## Unsorted
 
+### 2026-06-28 - AIと共同してCAALの入門用解説記事を作りました。数学的内容は未精査です。 https://drive.google.com/drive/...
+
+Source: Discord command 1520673065166569592 in 🧮comm-math-for-ai at 2026-06-28T06:11:51.4750000+00:00
+
+Idea:
+AIと共同してCAALの入門用解説記事を作りました。数学的内容は未精査です。 https://drive.google.com/drive/folders/14uf-fgAlOWVa-mk6jBOLqPWx94mHn6e6 https://drive.google.com/file/d/1iRjQS5MuEzrH4J0byhns68YWTAAeCqhZ/view?usp=drivesdk
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
 ### 2026-06-28 - どういう台集合を考えるかにもよりますが写像の合成による代数は(恒等射を単位元とする)モノイドになる場合が多いと思います。
 
 Source: Discord command 1520458347277455380 in 🎓大学の勉強 at 2026-06-27T15:58:38.7410000+00:00

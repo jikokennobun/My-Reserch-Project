@@ -1,5 +1,25 @@
 # Research Log
 
+## 2026-06-29 (Relay sync 2026-06-29T14:46:26+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The ChatGPT Project artifact inbox scan found the
+  same `3` supported PDF artifacts, collected/refreshed `3` central PDFs under
+  `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF backup,
+  and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `https://chatgpt.com/share/...` links
+  and reported `unchanged=23`, so no shared-conversation transcript required
+  extraction or mathematical reconstruction.
+- Queried the connected Google Drive relay for non-folder files modified after
+  the previous automation handoff `2026-06-28T09:54:46Z`, then listed the
+  recorded research root, reference root, `ChatGPT_Research`, `ChatGPT_Study`,
+  `Paper`, `Slide`, `Gemini`, and `Claude` folders. No newly relevant papers,
+  slides, Gemini/Claude outputs, generated PDFs, or reference files were
+  visible beyond material already indexed in `research/references/`.
+- No research note, literature note, Drive index, or open-question update was
+  made because this run produced no new stable mathematical source delta.
+
 ## 2026-06-28 (Relay sync 2026-06-28T19:23:52+09:00)
 
 - Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
