@@ -1576,3 +1576,24 @@
   beyond material already indexed in `research/references/`.
 - No research note, literature note, Drive index, or open-question update was
   made because this run produced no new stable mathematical source delta.
+
+## 2026-06-30 (Relay sync 2026-06-30T11:45:27+09:00)
+
+- Ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The ChatGPT Project artifact inbox scan found the
+  same `3` supported PDF artifacts, collected/refreshed `3` central PDFs under
+  `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF backup,
+  and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched shares at `2026-06-30T11:43:30+09:00`
+  and reported `unchanged=23`, so no shared-conversation transcript required
+  extraction or mathematical reconstruction.
+- Inspected the connected Google Drive research/reference relay roots recorded
+  in `research/references/`, including `ChatGPT_Research`, `ChatGPT_Study`,
+  `Gemini`, `Claude`, `Paper`, `Slide`, and the reference root. No newly
+  relevant June 29/30 papers, slides, Gemini/Claude outputs, ChatGPT-generated
+  PDFs, or reference files were visible beyond material already indexed in
+  `research/references/research-drive.md` and `research/references/drive.md`.
+- No research note, literature note, Drive index, artifact report, or
+  open-question update was made because this run produced no new stable
+  mathematical source delta.
