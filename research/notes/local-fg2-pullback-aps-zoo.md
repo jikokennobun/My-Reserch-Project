@@ -9,6 +9,26 @@ Access note: the share is recorded in the local watchlist as
 temporarily inaccessible in relay logs. The notation $M_G$ and $M_{GJ}$ is kept
 as working notation until the source transcript is re-exported.
 
+Relay update on 2026-07-09:
+
+- `records/logs/chatgpt-share-state.csv` marked this share as `changed` at
+  `2026-07-09T19:41:18+09:00`; the watched hash moved from the prior committed
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b` snapshot
+  to `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518`.
+- Direct transcript recovery was not available in this run. The ordinary web
+  view exposed only the logged-out ChatGPT shell, the authenticated Chrome
+  bridge was unavailable in this automation session, and three bounded
+  `Invoke-WebRequest` retries failed with a remote-server connection error.
+- The Google Drive relay folders recorded in `research/references/` were
+  rechecked through the Drive connector: `ChatGPT_Research`,
+  `ChatGPT_Study`, `Gemini`, `Claude`, `Paper`, `Slide`, and the reference
+  root exposed no newer relevant paper, slide, Gemini output, Claude output, or
+  generated PDF beyond already indexed June material.
+- This is therefore a provenance-only change. It should not be read as a new
+  theorem, counterexample, finite-model task, or proof obligation until a fresh
+  transcript export, PDF, deck, or `sandbox:/mnt/data/...` artifact is routed
+  through the ChatGPT Project artifact inbox.
+
 Relay update on 2026-06-11:
 
 - `records/logs/chatgpt-share-state.csv` marked this share as `changed` at
@@ -141,6 +161,46 @@ Late relay recheck on 2026-06-23:
   No new theorem statement, example, counterexample, proof obligation, or open
   question should be added until a fresh transcript export or side artifact is
   routed through the Drive artifact inbox.
+
+Relay update on 2026-07-01:
+
+- `records/logs/chatgpt-share-state.csv` marked this share as `changed` at
+  `2026-07-01T00:13:03+09:00`; the watched hash moved from the prior
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b` value to
+  `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518`, a hash
+  already seen in earlier fingerprint-flip runs.
+- Direct transcript recovery failed again in this automation environment:
+  `Invoke-WebRequest` could not connect to the share URL, and the public web
+  surface did not expose a stable conversation body for extraction.
+- The ChatGPT Project artifact inbox still contained the same three supported
+  PDF artifacts, and the connected Drive relay folders (`ChatGPT_Research`,
+  `ChatGPT_Study`, `Gemini`, `Claude`, `Paper`, `Slide`, and the reference
+  root) exposed no newer PDF, deck, Gemini output, Claude output, or paper
+  beyond already indexed material.
+- This update is therefore provenance-only. It should not be treated as a new
+  mathematical delta until a fresh shared export or a `sandbox:/mnt/data/...`
+  artifact is routed through the Google Drive artifact inbox.
+
+Later relay recheck on 2026-07-01:
+
+- A second same-day watch pass marked this share as `changed` at
+  `2026-07-01T06:12:15+09:00`; the watched hash moved from
+  `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518` back to
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`, another
+  hash already seen in previous fingerprint-flip runs.
+- Direct extraction remained unavailable in this pass:
+  `Invoke-WebRequest` could not connect to the public share URL, and no cached
+  transcript body for this hash was present under the local `records/`,
+  `artifacts/`, or `tmp/` trees.
+- The connected Drive relay search for non-folder files modified after the
+  previous automation cutoff `2026-06-30T15:11:10Z` returned no results.
+  Direct listings of `ChatGPT_Research`, `ChatGPT_Study`, `Gemini`, `Claude`,
+  `Paper`, `Slide`, and the reference root likewise showed no newly relevant
+  PDF, deck, Gemini output, Claude output, paper, or generated artifact.
+- This recheck is therefore also provenance-only. The mathematical
+  reconstruction below remains unchanged because no source-stable transcript
+  text, theorem statement, example, counterexample, proof sketch, or
+  `sandbox:/mnt/data/...` side artifact was available to extract.
 
 ## Abstract
 

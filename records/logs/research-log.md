@@ -1,5 +1,297 @@
 # Research Log
 
+## 2026-07-06 (APS autonomous discussion Pass 124)
+
+- Pass 124 executed the Pass-123 "Next step": build the ODD-SEED Rosser
+  bouquet-with-center -- adjoin a Jeroslow carrier point `p=boxt p` to two
+  incomparable Rosser twins and decide whether their disjunction can be a carrier
+  fixed cut. RESULT: a refuted-then-scoped dichotomy + carrier-join criterion.
+  (1) Thm 124a CARRIER-JOIN CRITERION: the Henkin center is CARRIER-SEEDED iff
+  `c_1 v c_2` exists in the carrier; on `L*` (six-elt lattice with `w=c_1 v c_2` a
+  genuine element) `boxt w=w` coexists with a detached seed `p` (SEEDED bouquet),
+  contrasting the hexagon's seedless completion cut (Thm 123a). `ConLat_T` Boolean
+  => `rho_1 v rho_2` always exists => arithmetic bouquet is ALWAYS seeded. (2) Thm
+  124b DE-MORGAN COLLAPSE: a naive "boxt w=w forces fused twins" dichotomy is FALSE
+  for general antitone maps (28/65 `L*` fixing maps are separated -- an antitone map
+  is not a lattice dual-hom, ignores De Morgan); correctly SCOPED to the 17 NORMAL
+  (De-Morgan = `D2`-shadow) maps, 4 fix `w` and 0 separated => normal + `boxt w=w`
+  => FUSED twins, so the separated seeded bouquet lives ONLY in `¬D2` (carrier
+  shadow of Thm 123b). `Fix(boxt)` always an antichain. (3) Thm 124c: profile
+  `D1 ^ ¬D2`, base `Box` remains `GL`, `D3` NOT forced to fail (uniqueness needs
+  full `GL`; `¬D2` alone liberates the twins). (4) Cor 124d: phantom tax = 1 for
+  EVERY `H`, connectedness-blind. Machine: `code/scripts/check-pass124.py` ->
+  `artifacts/reports/pass124-odd-seed-bouquet-with-center-check.json` (overall PASS:
+  A `L*` 638 maps/65 fix `w`/28 sep/37 fused/2 seeded + 17 normal/4 fix/0 sep,
+  B hexagon seedless cross `Fix={p}`, C tax=1 on 6 hypergraphs incl. disconnected).
+  [Per aps-run-sync-hazard: bash mount lagged the discussion log (13068 vs true
+  15019+ lines); all reads/writes via Windows-path file tools, script run off-mount
+  from `/tmp`, verified via Windows-path Grep/Read not bash grep.]
+- Archivist: discussion-log counter `124->125`, header rolled (124 Last, 123 Prior,
+  122 -> Earlier); open_problems `[New (Pass 123)]` odd-seed item [Resolved
+  (Pass 124)]; g2-fg2-hierarchy Pass-124 section (Thm 124a-d + refuted-dichotomy
+  note); definitions normalized (seeded/seedless center, carrier-join criterion,
+  separated/fused twins, normal=De-Morgan boxt, phantom tax); research-questions
+  retargeted `124->125` (`Box_R`-`D3` / exhaustive-`alpha` / infinite carrier-join).
+
+## 2026-07-05 (APS autonomous discussion Pass 123)
+
+- Pass 123 executed the Pass-122 "Next step": chase the arithmetic
+  independent-Rosser-twins phantom `w=c_1 v c_2` (Rem 122f), its derivability cost,
+  its Guaspari-Solovay shadow, and the `alpha(H)` residue. RESULT: three theorems +
+  a parity correction of Rem 122f. (1) Thm 123a CORRECTION: by the antitone De Morgan
+  law (Thm 117a) `boxt_hat(w)=boxt c_1 ^ boxt c_2`, so a PURE 2-twin frontier is a
+  FIXED cut only via the CROSS map (lower twins {x,y} ONTO upper twins {m,n}, images
+  above the summands, Cor 117b); the front-internal SWAP collapses `w` to `bot`
+  (Pass-117a). Hexagon census: 477 antitone maps, 22 fix the middle cut ALL
+  carrier-seedless, 38 collapse to `bot` -- so the Thm-117c odd self-dual seed can be
+  COMPLETION-MANUFACTURED, a POSITIVE answer to Pass 118(ii). (2) Thm 123b COST: over
+  GL the consistency fixed point is unique (de Jongh-Sambin), no bouquet; a Rosser
+  bouquet forces `¬D2`; Guaspari-Solovay 1979 give the arithmetic witness (independent
+  Rosser sentences, `Pr_R` sat. D1 not D2); the bouquet is an ANTI-artifact (arithmetic
+  `Box` fails the internalized disjunction property = the De Morgan law, so the Henkin
+  cut survives exactly where abstract `boxt_hat` would collapse it). (3) Thm 123c
+  DICTIONARY: distinguished-vs-true-frontier (Thm 122d) = Guaspari-Solovay
+  witness-comparison nonuniqueness -- witness ordering = distinguished family (free),
+  `Pi_1` equiconsistency = rigid true frontier (`mu_*=2`), meet-density = D2/normality.
+  (4) Thm 123d/Cor 123e: atom-support lemma makes `alpha_phantom(H)=2+|MaxInd(H)|`
+  OPTIMAL; single-core principal realization costs `1+|MaxInd(H)|`; the phantom tax is
+  exactly ONE core atom = one extra witness-ordering. Machine:
+  `code/scripts/check-pass123.py` ->
+  `artifacts/reports/pass123-independent-rosser-twins-phantom-check.json` (overall
+  PASS: A hexagon census 477/22/38, B `alpha` on 6 hypergraphs, C `mu_*=2`).
+  [Bash mount lagged (discussion-log tail served at Pass 111 vs true 122); per
+  aps-run-sync-hazard all reads/writes via Windows-path file tools, script run from a
+  `/tmp` copy, verified via Windows-path Grep/Read not bash grep.]
+- Archivist: discussion-log counter `123->124`, header rolled (123 Last, 122 Prior,
+  121 -> Earlier); open_problems Pass-122 independent-Rosser-twins item [Resolved
+  (Pass 123)] and Pass-118(ii) [Resolved (Pass 123), positively]; g2-fg2-hierarchy
+  Pass-123 section (Thm 123a-e + Guaspari-Solovay dictionary); definitions normalized
+  (Rosser bouquet, cross vs swap, completion-manufactured seed, `alpha(H)`);
+  research-questions retargeted `123->124` (bouquet-with-center / Rosser logic R).
+
+## 2026-07-05 (APS autonomous discussion Pass 122)
+
+- Pass 122 executed the Pass-121 "Next step": a completion free on BOTH frontiers +
+  positive realization + the `Con^{orb}` identification. RESULT: a DICHOTOMY. (i)
+  POSITIVE at the distinguished-family level -- Thm 122c: every finite antichain
+  hypergraph `H` on `[m]` is realized EXACTLY as `H_min^G(w)` over the distinguished
+  coatom family `G` in the ideal completion `D(L(H))` (maximal-independent-set /
+  set-cover carrier, atom cost `2+|MaxInd(H)|`); verified for `K_3`, non-uniform
+  `{12,234}` (mu-spectrum `{2,3}`), 3-uniform `{123}`, all triples on `[4]`,
+  disjoint `{12,345}`. So Thm 120d's "only `K_n`" becomes "EVERY antichain
+  hypergraph" once meet-density drops. (ii) NEGATIVE at the true-frontier level --
+  Thm 122a: over the TRUE frontier `G_*(w)=min((w)^u\w)` rigidity is UNCONDITIONAL
+  (order-theoretic, no MacNeille hypothesis), so `H_min^{G_*}(w)=K_{|G_*|}`, `mu_*=2`
+  in EVERY completion (MacNeille+ideal `K_{n,m}`, 2000 random posets, 0 violations).
+  Cor 122b re-reads Pass 121: its `mu=3` was a distinguished-family artifact (filter
+  completion demotes the carrier coatoms below the true frontier). Thm 122d (exact
+  invariant): `H_min^G=K_{|G|}` iff `G=G_*(w)` iff meet-dense at `w` -- the silent
+  Thm 120d hypothesis. Obstruction 122e: no both-free TRUE-frontier phantom exists.
+  Rem 122f REFUTES the `Con^{orb}` identification: the tower is a CHAIN, pairwise
+  joins are maxima (< limit) in every completion; the collapsing phantom is instead
+  a bouquet of order-INCOMPARABLE Rosser twins. Machine:
+  `code/scripts/check-pass122.py` ->
+  `artifacts/reports/pass122-two-sided-realization-check.json` (overall PASS).
+- Archivist: discussion-log counter `122->123`, header rolled (122 Last, 121 Prior,
+  120 Earlier); open_problems Pass-121 two-sided-free/`Con^{orb}` item [Resolved
+  (Pass 122)] (positive distinguished / negative frontier; identification refuted),
+  independent-Rosser-twins successor opened; g2-fg2-hierarchy Pass-122 section
+  (Thm 122a, Cor 122b, Thm 122c, Thm 122d, Obstruction 122e, Rem 122f); definitions
+  normalized (true frontier vs distinguished family, frontier meet-density,
+  independent Rosser twins); research-questions retargeted `122->123`.
+
+## 2026-07-04 (APS autonomous discussion Pass 120)
+
+- Pass 120 executed the Pass-119 "Next step": break the `|F|=|G|` symmetry with
+  an asymmetric frontier (`K_{2,3}^{0,U}`, `|F|=2`, `|G|=3`) and settle the
+  meet-generator-hypergraph realization question. RESULT: FRONTIER MEET-RIGIDITY
+  (Thm 120a) -- in any MacNeille completion distinct upper-frontier `g,g'` always
+  meet to `w` (and distinct lower-frontier elements join to `w`), so `H_min(w) =`
+  complete graph `K_{|G|}`, `mu(w)=2` identically (Cor 120b), and the ONLY
+  realizable frontier hypergraphs are complete graphs (Thm 120d, NEGATIVE answer
+  -- CORRECTS the Pass-119 anticipation of a variable `mu`-spectrum). Fixing side
+  (Thm 120c): slack `s=|F|-mu=0` on `K_{2,3}` forces every fixing `boxt` to inject
+  `F` onto a distinct `g`-pair; census 1362 antitone synt-FP-free maps, 174 fix
+  `w`, 0 repeat-image, 0 `U`-image, `|boxt[F] cap G|` all `=2`. Self-healing
+  (Cor 120e): forcing `g2 ^ g3 = z>w` inserts `z` into the frontier (new
+  `G={g1,z}`), rigidity restored. Machine: `code/scripts/check-pass120.py` ->
+  `artifacts/reports/pass120-asymmetric-frontier-meet-rigidity-check.json`
+  (overall PASS: A basic+census, B `K_{3,3}` slack-1 contrast, C rigidity survey
+  over 7 bipartite carriers 0 violations, D self-healing).
+- Archivist: discussion-log counter `120->121`, header rolled (120 Last, 119
+  Prior, 118 Earlier); open_problems Pass-119 mixed-frontier/`mu`-spectrum/
+  realization residue [Resolved (Pass 120)]; g2-fg2-hierarchy Pass-120 section
+  (Thm 120a/b/c/d, Cor 120e, Rem 120f); definitions normalized (meet-generator
+  hypergraph, `mu`-spectrum, frontier slack, frontier meet-rigidity); retargeted
+  Pass 121 to non-MacNeille completions and the dual join-rigidity's arithmetic
+  (`Con^orb` tower) reading.
+
+## 2026-07-04 (APS autonomous discussion Pass 119)
+
+- Pass 119 executed the Pass-118 "Next step": push the frontier-onto criterion
+  (Thm 118b) from `|F|=|G|=2` to a THREE-element "triple crossing" on the
+  complete-bipartite bounded carrier `K33 = {0,f1,f2,f3,g1,g2,g3,U}`
+  (`f_i<g_j` all `i,j`). Completion has 9 cuts, one non-principal
+  `w={0,f1,f2,f3}`, frontiers `F,G` of size 3. RESULT: `boxt[F]=G` is
+  SUFFICIENT but NOT NECESSARY at `|F|=3` — witness `D` (`boxt f3=U`, the
+  non-frontier top) fixes `w` with `boxt[F]={g1,g2,U}!=G`. The exact criterion
+  is the meet criterion `/\ boxt[F]=w` (Thm 119b); sharp form Thm 119c
+  (`|boxt[F]∩G|>=mu(w)`, the minimal meet-generator size); necessity of onto
+  holds IFF `w` meet-irredundant (`mu=|G|`: hexagon yes, K33 no). Census: 7609
+  antitone synt-FP-free maps, 2814 fix `w`, only 402 onto, 2412 non-onto, 0
+  disjoint from `G`; hexagon regression 22/22 onto (reproduces Pass 118).
+  Arithmetic (Rem 119e): `w` is a phantom Henkin/Rosser fixed point; meet-
+  redundancy = Rosser economy (a meet-generating witness pair suffices).
+  Machine `code/scripts/check-pass119.py` ->
+  `artifacts/reports/pass119-triple-crossing-frontier-meet-criterion-check.json`
+  (PASS). Archivist: appended Pass-119 to autonomous-discussion.md, counter
+  119->120; open_problems Pass-118(i) [Resolved (Pass 119)], (ii) [Partially
+  resolved]; retargeted research-questions to the `|F|!=|G|` asymmetric-frontier
+  / mu-spectrum question; added Thm 119a/b/c, Cor 119d, Rem 119e to
+  g2-fg2-hierarchy.md; normalized meet-generator / mu(w) / meet-(ir)redundant
+  vocabulary in definitions.md.
+
+## 2026-07-04 (APS autonomous discussion Pass 118)
+
+- Pass 118 executed the Pass-117 "Next step": is Thm 117c's necessity STRICT --
+  does a non-principal `boxt_hat`-fixed cut REQUIRE a carrier-level Jeroslow
+  point `p = boxt p`? RESULT: necessity is NOT strict; FP-synt is UNNECESSARY.
+  On the SAME hexagon `H = {0,x,y,m,n,U}` and with NO carrier synt-FP, the
+  frontier-CROSSING map (`boxt 0=U, boxt x=m, boxt y=n, boxt m=y, boxt n=x,
+  boxt U=0`) is antitone and makes the non-principal cut `w = {0,x,y} = x v y =
+  m ^ n` a genuine `boxt_hat`-FIXED cut. Lemma 118a (frontier De Morgan law):
+  `boxt_hat(w) = /\ boxt[F]` over the lower frontier `F = max(w)`. Thm 118b
+  (frontier-onto criterion): `w` fixed IFF `boxt[F] = G` (lower frontier ONTO
+  upper frontier `G`); no `p = boxt p` needed. Cor 118c: Thm 117c's Tarski
+  criterion stands but its "seed = carrier Jeroslow point" clause is FALSE --
+  the seed is a NEW cut. The realizing orbit `(x m y n)` is a 4-cycle (EVEN),
+  so parity is a red herring (Rem 118d). Census: of 273 antitone synt-FP-free
+  hexagon maps, 22 fix `w` (all with `boxt[F]=G`), 4 two-way swaps, 0 needing a
+  carrier fixed point. APS reading: the completion manufactures a phantom
+  Henkin/Rosser fixed point absent from the base. `code/scripts/check-pass118.py`
+  -> `artifacts/reports/pass118-completion-generated-selfdual-seed-check.json`.
+  Next: 3-element frontier pairs (triple crossing) + arithmetic phantom-Henkin
+  reading vs the Löb/Rosser dictionary.
+
+## 2026-07-04 (APS autonomous discussion Pass 117)
+
+- Pass 117 executed the Pass-116 "Next step" (adjudicate Rem 116c): replace the
+  collapsing chain orbit by a `boxt`-antichain 2-cycle plateau `{x,y}`
+  (`boxt x = y`, `boxt y = x`, `x || y`) with an unattained join via a doubled
+  cover, on the minimal bounded **hexagon** `H = {0,x,y,m,n,U}`. RESULT: STILL
+  NO-COEXISTENCE, now by a PARITY obstruction. The MacNeille completion identifies
+  `x v y` with `m ^ n` into one non-principal middle cut `w = {0,x,y}`, and
+  `boxt_hat(w) = boxt x ^ boxt y = x ^ y = 0 = bottom`, so `w` is not fixed;
+  `boxt_hat` is globally FIXED-POINT-FREE (Thm 117a). Cor 117b unifies with
+  Thm 116a via the antitone De Morgan join law `boxt_hat(x v y) = boxt x ^ boxt y`
+  (a fixed join needs images ABOVE the summands; no orbit through the summands
+  supplies this). Thm 117c: a non-principal fixed cut needs an odd self-dual seed
+  = a Jeroslow FP-synt point `p = boxt p`; completion-separation is a conservative
+  shadow of FP-synt, not an escape. Machine-verified for `boxt 0 in {U,m}`, the
+  antichain-4 double-2-cycle, and an FP-synt control (which alone yields a fixed
+  cut). `code/scripts/check-pass117.py` ->
+  `artifacts/reports/pass117-two-cycle-plateau-fixed-point-free-check.json`.
+  Next: `R_{2k}` general fixed-point-freeness + strictness of Thm 117c necessity.
+
+## 2026-07-03 (APS autonomous discussion Pass 116)
+
+- Pass 116 executed the Pass-115 "Next step": the weaker, bounded-but-non-lattice
+  top-repair of the Pass-113 four-element MacNeille witness. Doubled-cover carrier
+  `L1 = {0,a,b,c,m,n,U}` (top `U` above two incomparable minimal upper bounds
+  `m,n` of `{b,c}`; `b v c`, `a v c`, `m ^ n` unattained). RESULT: NO-COEXISTENCE.
+  The non-principal MacNeille cut `{0,a,b,c}` is retained by non-latticeness but
+  is NOT `boxt_hat`-fixed (orbit collapse `boxt b = boxt c = 0` forces
+  `boxt_hat(b v c) = bottom < b`), so the unique fixed cut is the principal top
+  `down(U)` and separation fails; and residuation is not repaired either (integral
+  census 345600/2350/145/0, relocated non-principal fiber `{0,a,b,c,m,n}`).
+  Theorem 116a (join-defect conservation): the absent join `b v c` is a conserved
+  charge, displaced between the completion-fixed-cut obligation and the residual
+  fiber but never annihilated on a finite carrier. Verified
+  `code/scripts/check-pass116.py` ->
+  `artifacts/reports/pass116-doubled-cover-coexistence-check.json`. Counter 116->117.
+
+## 2026-07-01 (Relay sync 2026-07-01T12:15:06+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root after direct script execution was blocked by the
+  local PowerShell execution policy. The ChatGPT Project artifact inbox scan
+  found the same `3` supported PDF artifacts, collected/refreshed `3` central
+  PDFs under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF
+  backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `https://chatgpt.com/share/...` links at
+  `2026-07-01T12:12:52+09:00` and reported `unchanged=23`, so no shared
+  conversation transcript required extraction or mathematical reconstruction.
+- Inspected the connected Google Drive relay roots recorded in
+  `research/references/`, including `ChatGPT_Research`, `ChatGPT_Study`,
+  `Gemini`, `Claude`, `Paper`, `Slide`, and the reference root. A direct Drive
+  search for non-folder files modified after the automation cutoff
+  `2026-06-30T21:11:21.165Z` returned no results, and folder listings showed no
+  newly relevant paper, slide, Gemini/Claude output, generated PDF, or ChatGPT
+  Project artifact beyond material already indexed in `research/references/`.
+- No research note, literature note, Drive index, artifact manifest content, or
+  open-question update was made because this run produced no stable new
+  mathematical source delta.
+
+## 2026-07-01 (Relay sync 2026-07-01T06:13:43+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File code/scripts/sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The ChatGPT Project artifact inbox scan again found
+  `3` supported PDF artifacts, collected/refreshed `3` central PDFs under
+  `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF backup,
+  and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `https://chatgpt.com/share/...` links at
+  `2026-07-01T06:12:15+09:00` and reported `changed=1`, `unchanged=22`. The
+  changed entry was again `research/notes/local-fg2-pullback-aps-zoo.md`; its
+  hash reverted from the earlier same-day
+  `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518` to the
+  previously seen `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Attempted direct transcript recovery for the changed share, but
+  `Invoke-WebRequest` could not connect to the public share URL. A local search
+  found no cached transcript body for this changed hash under `records/`,
+  `artifacts/`, or `tmp/`, so no theorem-level mathematical payload was
+  available for reconstruction.
+- Searched the connected Google Drive relay for non-folder files modified after
+  the previous automation cutoff `2026-06-30T15:11:10Z` and listed the recorded
+  relay folders: `ChatGPT_Research`, `ChatGPT_Study`, `Gemini`, `Claude`,
+  `Paper`, `Slide`, and the reference root. No newly relevant paper, slide,
+  Gemini/Claude output, generated PDF, or ChatGPT Project artifact appeared
+  beyond material already indexed in `research/references/`.
+- Added a provenance-only recheck note to
+  `research/notes/local-fg2-pullback-aps-zoo.md`. No new open question,
+  literature note, or Drive-index update was added because this run exposed
+  public-share fingerprint instability rather than a stable mathematical source
+  delta.
+
+## 2026-07-01 (Relay sync 2026-07-01T00:13:03+09:00)
+
+- Ran `powershell -ExecutionPolicy Bypass -File code/scripts/sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The ChatGPT Project artifact inbox scan again found
+  `3` supported PDF artifacts, collected/refreshed `3` central PDFs under
+  `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF backup,
+  and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `https://chatgpt.com/share/...` links at
+  `2026-07-01T00:13:03+09:00` and reported `changed=1`, `unchanged=22`. The
+  changed entry was `research/notes/local-fg2-pullback-aps-zoo.md`, whose hash
+  returned to the previously observed
+  `9a63010dee96d050167030a4c1305342f028fb02b7a42f2dbc0655f7b15d9518`.
+- Attempted direct recovery of the changed shared conversation, but the share
+  URL was not connection-stable in this environment and did not expose a
+  retrievable transcript body. Added a provenance-only access note to
+  `research/notes/local-fg2-pullback-aps-zoo.md`; no theorem statement,
+  definition, example, counterexample, finite-model task, or proof sketch was
+  added because no source-stable mathematical payload was available.
+- Inspected the connected Google Drive relay roots recorded in
+  `research/references/`, including `ChatGPT_Research`, `ChatGPT_Study`,
+  `Gemini`, `Claude`, `Paper`, `Slide`, the research root, and the reference
+  root. No newly relevant paper, slide, Gemini/Claude output, generated PDF, or
+  ChatGPT Project artifact appeared beyond material already indexed in
+  `research/references/research-drive.md` and `research/references/drive.md`.
+- No new open question was added because this run exposed only public-share
+  fingerprint instability, not a durable mathematical source delta.
+
 ## 2026-06-30 (Relay sync 2026-06-30T17:44:16+09:00)
 
 - Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
@@ -398,6 +690,27 @@
 - Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1` at `2026-06-21T16:04:27+09:00`. The first two watched shares (`bs16-fiber-residuated-aps.md` and `mnd4-preaps-fixedpoint-obstruction.md`) were `unchanged`; the remaining `21` shares were inaccessible in this run because `chatgpt.com` resolution/transport failed. No shared-link content was promoted into notes because the transcript layer was not reliably accessible.
 - Attempted to query the connected Google Drive relay via the Google Drive connector after the last automation cutoff `2026-06-21T01:03:17.319Z`, but the connector failed with an MCP backend transport error. As a fallback, scanned the local Google Drive sync folders used by the relay (`ChatGPT Project Inbox` and `GitHub PDF Backup`) for files newer than the cutoff; no new inbox/backup source files were found.
 - Because the only durable changes were manifest/state refreshes and the current source layer was partially inaccessible, no research note reconstruction, open question, Drive-index update, or literature-note update was made in this pass. The inaccessible shared-link and remote Drive states should be rechecked on the next relay run before treating the source layer as stable.
+
+## 2026-07-02 (Autonomous discussion Pass 115)
+
+- Executed the Pass-114 order-repair "Next step": adjoined `U = b v c` as a new
+  top to the Pass-113 four-element witness, turning the carrier into the
+  pentagon `N5` (`0<a<b<U, 0<c<U`, the canonical non-modular lattice).
+  Result = a trilemma (Thm 115a): (i) A1-A4, G2, FG2 and no-syntactic-fixed-
+  point transfer for the forced `boxt U=0` and both monotone box-extensions
+  `box U in {b,U}`; (ii) the MacNeille completion-separation is DESTROYED --
+  `N5` is a finite lattice, all 5 cuts are principal, the sole completion-fixed
+  cut `down(U)` is principal and unreflected (`boxt U=0!=U`), no non-principal
+  fixed cut survives; (iii) residuation is repaired but only Rosser -- 115
+  commutative residuated tensors appear, units `a:53, b:18, c:44`, `U:0`, the
+  integral (meet) tensor failing residuation because `N5` is non-distributive.
+  Cor 115b: the missing join `b v c` is one load-bearing defect shared by the
+  Pass-113 separation and the Pass-114 residual non-principality; a
+  non-principal MacNeille fixed cut requires a non-lattice carrier. Added
+  `code/scripts/check-pass115.py` and
+  `artifacts/reports/pass115-top-repair-n5-check.json`; recorded Thm 115a/Cor
+  115b/Rem 115c in `g2-fg2-hierarchy.md`; retargeted Pass 116 to a
+  join-defect-preserving (bounded non-lattice) repair.
 
 ## 2026-06-21 (Autonomous discussion Pass 114)
 
@@ -1618,3 +1931,73 @@
 - No research note, literature note, Drive index, artifact report, or
   open-question update was made because this run produced no new stable
   mathematical source delta.
+
+## 2026-07-05 (Autonomous discussion Pass 121)
+
+- Settled the Pass-120 residue "does frontier meet-rigidity (Thm 120a) survive
+  completions OTHER than MacNeille" -- NEGATIVELY: rigidity is COMPLETION-RELATIVE,
+  a consequence of MacNeille's simultaneous join+meet density, not a universal law.
+  Recomputing H_min(w) for K_{2,3}^{0,U} in three completions: MacNeille (=
+  canonical extension L^delta for a finite poset, since all filters/ideals are
+  principal) is meet-rigid, mu(w)=2, H_min=K_3; the ideal/downset completion D(L)
+  stays meet-rigid (g_i^g_j = {0,f1,f2} = w) but unfreezes the DUAL join-frontier
+  (adjoining free joins g_i v g_j < U); the filter/upset completion F(L) BREAKS
+  meet-rigidity -- g_i^g_j = {g_i,g_j,U} are 3 distinct new elements > w, so
+  H_min(w) = {{g1,g2,g3}} is 3-uniform and mu(w)=3=|G|, unfreezing Cor 120b and
+  REALIZING the k>=3-uniform hyperedge Thm 120d called impossible. Thm 121a/b/c;
+  Rem 121d gives the Con^orb/meet-density arithmetic reading (partial). Machine:
+  code/scripts/check-pass121.py -> artifacts/reports/pass121-completion-relative-frontier-rigidity-check.json
+  (PASS: macneille_rigid_mu2, ideal_meet_rigid_mu2, filter_breaks_rigidity_mu3,
+  canonical_eq_macneille). [Bash mount lagged behind Windows-path writes again
+  (discussion-log tail served at Pass 111, research-log at 1695 lines vs true
+  1834); per aps-run-sync-hazard all reads/writes done via Windows-path file
+  tools, computation run in-memory in the sandbox.]
+
+## 2026-07-07 (Relay sync 2026-07-07T13:25:48+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The ChatGPT Project artifact inbox again exposed
+  the same `3` supported PDF artifacts, collected/refreshed `3` central PDFs
+  under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF
+  backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `chatgpt.com/share/...` links at
+  `2026-07-07T13:25:48+09:00` and reported `unchanged=23`, so no shared
+  conversation transcript required extraction or mathematical reconstruction.
+- Inspected the connected Google Drive relay roots recorded in
+  `research/references/`: `ChatGPT_Research`, `ChatGPT_Study`, `Gemini`,
+  `Claude`, `Paper`, `Slide`, and the reference root. The newest visible
+  research/reference candidates were already indexed before this run, including
+  the `2026-06-28` CAAL study folder and the `2026-06-24` reference-side
+  `Others` folder. No newer papers, slides, Gemini/Claude outputs,
+  ChatGPT-generated PDFs, or reference files were visible.
+- No research note, literature note, Drive index, artifact report, or
+  open-question update was made because this run produced no new stable
+  mathematical source delta.
+
+## 2026-07-09 (Relay sync 2026-07-09T19:41:18+09:00)
+
+- Ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The ChatGPT Project artifact inbox again exposed
+  the same `3` supported PDF artifacts, collected/refreshed `3` central PDFs
+  under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF
+  backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `chatgpt.com/share/...` links at
+  `2026-07-09T19:41:18+09:00` and reported `changed=1`, `unchanged=22`. The
+  changed entry was `research/notes/local-fg2-pullback-aps-zoo.md`.
+- Direct recovery of the changed share body failed in this automation
+  environment: the public browser view exposed only the logged-out ChatGPT
+  shell, the Chrome bridge was unavailable, and three bounded
+  `Invoke-WebRequest` retries failed with a remote-server connection error.
+  The affected note was updated with a provenance-only access block and no
+  mathematical reconstruction was added.
+- Inspected the connected Google Drive relay roots recorded in
+  `research/references/`: `ChatGPT_Research`, `ChatGPT_Study`, `Gemini`,
+  `Claude`, `Paper`, `Slide`, and the reference root, plus the already indexed
+  `ChatGPT_Study` CAAL folder and reference-side `Others` folder. No newer
+  relevant papers, slides, Gemini/Claude outputs, ChatGPT-generated PDFs, or
+  reference files were visible beyond already indexed material.
+- No open question, Drive index, literature note, or artifact report update was
+  made because this run exposed only a share fingerprint change, not a
+  source-stable mathematical payload.
