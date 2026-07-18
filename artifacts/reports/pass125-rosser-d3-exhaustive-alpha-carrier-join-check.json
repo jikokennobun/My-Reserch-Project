@@ -1,0 +1,201 @@
+{
+  "pass": 125,
+  "date": "2026-07-09",
+  "parts": {
+    "A_rosser_D3": {
+      "pos_first": {
+        "D1": true,
+        "notD2": true,
+        "D3_mix": true,
+        "D3_hom": true
+      },
+      "neg_first": {
+        "D1": true,
+        "notD2": true,
+        "D3_mix": true,
+        "D3_hom": false
+      },
+      "D3_mix_order_independent": true,
+      "D3_hom_R_independent": true,
+      "profile": "D1 & ~D2 & D3_mix ; D3_hom free (arithmetization-dependent)",
+      "ok": true
+    },
+    "B_alpha_exhaustive": {
+      "samples": {
+        "single{12}": {
+          "m": 2,
+          "MaxInd": 2,
+          "predicted_2+MaxInd": 4,
+          "min_atoms_found": 4,
+          "exact": true,
+          "no_realization_below_bound": true,
+          "realizable_flags": {
+            "1": false,
+            "2": false,
+            "3": false,
+            "4": true,
+            "5": true
+          }
+        },
+        "path{12,23}": {
+          "m": 3,
+          "MaxInd": 2,
+          "predicted_2+MaxInd": 4,
+          "min_atoms_found": 4,
+          "exact": true,
+          "no_realization_below_bound": true,
+          "realizable_flags": {
+            "1": false,
+            "2": false,
+            "3": false,
+            "4": true,
+            "5": true
+          }
+        },
+        "K3": {
+          "m": 3,
+          "MaxInd": 3,
+          "predicted_2+MaxInd": 5,
+          "min_atoms_found": 5,
+          "exact": true,
+          "no_realization_below_bound": true,
+          "realizable_flags": {
+            "1": false,
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": true,
+            "6": true
+          }
+        },
+        "3-unif{123}": {
+          "m": 3,
+          "MaxInd": 3,
+          "predicted_2+MaxInd": 5,
+          "min_atoms_found": 5,
+          "exact": true,
+          "no_realization_below_bound": true,
+          "realizable_flags": {
+            "1": false,
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": true,
+            "6": true
+          }
+        },
+        "nonunif{12,234}": {
+          "m": 4,
+          "MaxInd": 3,
+          "predicted_2+MaxInd": 5,
+          "min_atoms_found": 5,
+          "exact": true,
+          "no_realization_below_bound": true,
+          "realizable_flags": {
+            "1": false,
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": true,
+            "6": true
+          }
+        },
+        "disjoint{12,345}": {
+          "m": 5,
+          "MaxInd": 6,
+          "predicted_2+MaxInd": 8,
+          "min_atoms_found": 8,
+          "exact": true,
+          "no_realization_below_bound": true,
+          "realizable_flags": {
+            "1": false,
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": false,
+            "8": true,
+            "9": true
+          }
+        }
+      },
+      "ok": true,
+      "claim": "min atoms for a non-principal bouquet realizing H == 2+|MaxInd(H)|, exhaustively"
+    },
+    "C_infinite_carrier_join": {
+      "data": {
+        "truncations": [
+          {
+            "K": 2,
+            "meet_images": 2,
+            "jc_forced_boxt_w": 2,
+            "honest_seed_under_continuity": true,
+            "discontinuous_tower_2adic": [
+              1,
+              2
+            ],
+            "non_Mittag_Leffler": true
+          },
+          {
+            "K": 3,
+            "meet_images": 3,
+            "jc_forced_boxt_w": 3,
+            "honest_seed_under_continuity": true,
+            "discontinuous_tower_2adic": [
+              1,
+              2,
+              4
+            ],
+            "non_Mittag_Leffler": true
+          },
+          {
+            "K": 4,
+            "meet_images": 4,
+            "jc_forced_boxt_w": 4,
+            "honest_seed_under_continuity": true,
+            "discontinuous_tower_2adic": [
+              1,
+              2,
+              4,
+              8
+            ],
+            "non_Mittag_Leffler": true
+          },
+          {
+            "K": 5,
+            "meet_images": 5,
+            "jc_forced_boxt_w": 5,
+            "honest_seed_under_continuity": true,
+            "discontinuous_tower_2adic": [
+              1,
+              2,
+              4,
+              8,
+              16
+            ],
+            "non_Mittag_Leffler": true
+          },
+          {
+            "K": 6,
+            "meet_images": 6,
+            "jc_forced_boxt_w": 6,
+            "honest_seed_under_continuity": true,
+            "discontinuous_tower_2adic": [
+              1,
+              2,
+              4,
+              8,
+              16,
+              32
+            ],
+            "non_Mittag_Leffler": true
+          }
+        ]
+      },
+      "ok": true,
+      "thm125c": "join-continuous => boxt(w)=meet boxt(c_n) FORCED (honest seed iff meet==w); discontinuous cover => FREE boxt(w)=w, non-ML tower (completion-manufactured phantom seed, Pass-55 solenoid)."
+    }
+  },
+  "overall_PASS": true
+}

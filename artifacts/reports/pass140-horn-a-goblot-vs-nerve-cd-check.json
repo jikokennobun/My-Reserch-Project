@@ -1,0 +1,41 @@
+{
+  "pass": 140,
+  "checks": {
+    "A_cd_sphere_recert": {
+      "rows": [
+        {"k": 1, "reduced_homology": {"0": 0, "1": 1}, "H_k=F3_only": true},
+        {"k": 2, "reduced_homology": {"0": 0, "1": 0, "2": 1}, "H_k=F3_only": true},
+        {"k": 3, "reduced_homology": {"0": 0, "1": 0, "2": 0, "3": 1}, "H_k=F3_only": true}
+      ],
+      "pass": true
+    },
+    "B_goblot_threshold": {
+      "rows": [
+        {"cf=aleph": 1, "lim^n=0 for n>=": 3, "lim2_possibly_nonzero": true, "lim3_possibly_nonzero": false},
+        {"cf=aleph": 2, "lim^n=0 for n>=": 4, "lim2_possibly_nonzero": true, "lim3_possibly_nonzero": true},
+        {"cf=aleph": 3, "lim^n=0 for n>=": 5, "lim2_possibly_nonzero": true, "lim3_possibly_nonzero": true}
+      ],
+      "note": "cd(nerve)=1 does NOT enter Goblot; vanishing keyed to index cofinality only",
+      "horn_I_antecedent_possible": false,
+      "threshold_always_ge_3": true
+    },
+    "C_blh_konig": {
+      "h_n_ceiling_rank": {"1": 2, "2": 3, "3": 4, "4": 5, "5": 6},
+      "sup_forces_rank": "omega",
+      "konig_cf_gt_omega_bumps_to": "omega+1",
+      "pass": true
+    },
+    "D_corrected_separator_home": {
+      "MA_aleph1_gives_c": "aleph2 (=2^aleph0)",
+      "mechanism": "BLH-ceiling CONTRAPOSITIVE, not Goblot",
+      "h2_vanish_would_need_c>=aleph": 3,
+      "actual_c=aleph": 2,
+      "lim2_A_forced_nonzero": true,
+      "h1_delivered_by": "MA_{aleph1} additivity (c>=aleph2)",
+      "cd2_genuine_by_A": true,
+      "horn_decided": "horn-I antecedent IMPOSSIBLE (Goblot threshold always >=3); nerve-cd and index-cf-rank are decoupled (Thm 136c); (forall n) NOT redundant, corrected separator h_1 ^ lim^2!=0 is the right object; consistent large-cardinal-free",
+      "pass": true
+    }
+  },
+  "overall_pass": true
+}

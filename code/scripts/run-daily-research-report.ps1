@@ -1,4 +1,4 @@
-param(
+﻿param(
     [string]$Date,
     [switch]$ScheduledRun,
     [string]$RepositoryRoot
@@ -16,11 +16,15 @@ if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
 Set-Location -LiteralPath $RepositoryRoot
 
 if ([string]::IsNullOrWhiteSpace($Date)) {
-    $jst = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(9))
+    $runJst = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(9))
+    $jst = $runJst
     if ($ScheduledRun) {
-        $jst = $jst.AddMinutes(-5)
+        $jst = $jst.AddHours(-12)
     }
     $Date = $jst.ToString("yyyy-MM-dd")
+    if ($ScheduledRun) {
+        Write-Host "Scheduled run date basis: actual JST $($runJst.ToString("yyyy-MM-dd HH:mm:ss zzz")); report date $Date."
+    }
 }
 
 $envNames = @(
@@ -60,6 +64,7 @@ $RunStartedAt = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(9))
 $RunId = "daily-research-report-$($RunStartedAt.ToString("yyyyMMdd-HHmmss"))"
 $StepResults = New-Object 'System.Collections.Generic.List[object]'
 $LockAcquired = $false
+$LockHandle = $null
 $LockPath = Join-Path $RepositoryRoot "records\logs\automation-runs\daily-research-report.lock"
 
 function Get-EnvPresence {
@@ -106,14 +111,25 @@ function Acquire-AutomationLock {
         started_at_jst = $RunStartedAt.ToString("yyyy-MM-dd HH:mm:ss zzz")
     } | ConvertTo-Json -Compress
 
-    New-Item -ItemType File -Path $Path -Value $lockPayload -ErrorAction Stop | Out-Null
-    $script:LockAcquired = $true
+    try {
+        $script:LockHandle = [System.IO.File]::Open($Path, [System.IO.FileMode]::CreateNew, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None)
+        $bytes = [System.Text.Encoding]::UTF8.GetBytes($lockPayload)
+        $script:LockHandle.Write($bytes, 0, $bytes.Length)
+        $script:LockHandle.Flush()
+        $script:LockAcquired = $true
+    } catch [System.IO.IOException] {
+        throw "Another daily automation run appears active. Lock: $Path"
+    }
 }
 
 function Release-AutomationLock {
     param([string]$Path)
 
-    if ($script:LockAcquired -and (Test-Path -LiteralPath $Path)) {
+    if ($null -ne $script:LockHandle) {
+        $script:LockHandle.Dispose()
+        $script:LockHandle = $null
+    }
+if ($script:LockAcquired -and (Test-Path -LiteralPath $Path)) {
         Remove-Item -LiteralPath $Path -Force
         $script:LockAcquired = $false
     }
@@ -359,3 +375,4 @@ if ($finalStatus -eq "failed") {
 }
 
 Write-Host "Daily research report automation completed for $Date ($finalStatus)."
+

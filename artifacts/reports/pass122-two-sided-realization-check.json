@@ -1,0 +1,29 @@
+{
+  "pass": 122,
+  "title": "two-sided-free completion: distinguished-family realization is universal, true-frontier rigidity is unconditional",
+  "A_distinguished_family_realization": {
+    "tests": [
+      { "label": "K3_complete_baseline", "m": 3, "H": [[1,2],[1,3],[2,3]], "num_atoms": 5, "Hmin_realized": [[1,2],[1,3],[2,3]], "matches_target": true, "cover_law_holds": true },
+      { "label": "nonuniform_mu_spectrum_2_3", "m": 4, "H": [[1,2],[2,3,4]], "num_atoms": 5, "Hmin_realized": [[1,2],[2,3,4]], "matches_target": true, "cover_law_holds": true },
+      { "label": "3uniform_single_hyperedge", "m": 3, "H": [[1,2,3]], "num_atoms": 5, "Hmin_realized": [[1,2,3]], "matches_target": true, "cover_law_holds": true },
+      { "label": "all_triples_on_4", "m": 4, "H": [[1,2,3],[1,2,4],[1,3,4],[2,3,4]], "num_atoms": 8, "Hmin_realized": [[1,2,3],[1,2,4],[1,3,4],[2,3,4]], "matches_target": true, "cover_law_holds": true },
+      { "label": "disjoint_2_and_3", "m": 5, "H": [[1,2],[3,4,5]], "num_atoms": 8, "Hmin_realized": [[1,2],[3,4,5]], "matches_target": true, "cover_law_holds": true }
+    ],
+    "all_match": true,
+    "claim": "every finite antichain hypergraph realizes as H_min^G(w) in the ideal completion of an explicit finite carrier"
+  },
+  "B_true_frontier_rigidity": {
+    "K_nm_completions": {
+      "K_2_3": { "macneille_true_frontier_size": 3, "macneille_pairwise_meet_is_w": true, "ideal_true_frontier_size": 3, "ideal_pairwise_meet_is_w": true },
+      "K_3_3": { "macneille_true_frontier_size": 3, "macneille_pairwise_meet_is_w": true, "ideal_true_frontier_size": 3, "ideal_pairwise_meet_is_w": true },
+      "K_2_4": { "macneille_true_frontier_size": 4, "macneille_pairwise_meet_is_w": true, "ideal_true_frontier_size": 4, "ideal_pairwise_meet_is_w": true },
+      "K_3_4": { "macneille_true_frontier_size": 4, "macneille_pairwise_meet_is_w": true, "ideal_true_frontier_size": 4, "ideal_pairwise_meet_is_w": true }
+    },
+    "all_Knm_rigid": true,
+    "random_poset_trials": 2000,
+    "random_poset_violations": 0,
+    "unconditional": true,
+    "claim": "over the TRUE frontier min((w)^u minus w) pairwise meets equal w in EVERY completion (order-theoretic, distinguished-family-independent)"
+  },
+  "overall_PASS": true
+}

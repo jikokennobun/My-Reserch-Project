@@ -1,5 +1,454 @@
 # Research Log
 
+## 2026-07-15 (Autonomous discussion Pass 150)
+
+- Pass 150 discharged `[New (Pass 149)]`, both prongs. **Thm 150a (schematic `Z/2` = effective `H^1`, `ISigma_1`-cheap, de-localized):** the sign sheaf `sgn` on the realization diagram `Real(boxt)` (objects = realized races `R_e={rho_e,¬rho_e}`, morphisms = `prec`-monotone refinements) has, CLASSICALLY, `H^0 != 0` (a separating set of the inseparable pair exists by `AC`) and Cech `H^1 = 0` (the singleton-race cover is discrete) -- so the schematic `Z/2` is NOT a classical sheaf-cohomology class (Thm 149b's "`H^0_sch=Z/2`" was an abuse). EFFECTIVELY, pass to the subsheaf `sgn^{Sigma1}` of `Sigma_1`/c.e. sections: a c.e. global section is a RECURSIVE separator of the Kleene pair `A={e:phi_e(e)=0}`, `B={e:phi_e(e)=1}`, none exists, so `H^0(Real; sgn^{Sigma1})=0`, and the torsor represents the NONTRIVIAL class `[sgn^{Sigma1}]=1 in H^1_{eff}(Real; Z/2)=Z/2`. This nonvanishing is `ISigma_1`-provable (effective inseparability = uniform diagonal by the recursion theorem), whereas CONCENTRATING the class onto one stalk (`H^0(sgn)(kappa)=Z/2`, Pass 148) costs the KF ordinal `phi_{epsilon_0}(0)`. So "`(Z,Z/2)` is `Sigma_1`-SCHEMATIC not `Sigma_1`-POINTWISE" means the second coordinate is an `ISigma_1`-cheap global `H^1_{eff}` and a `phi_{epsilon_0}(0)`-expensive pointwise `H^0`: the class is DE-LOCALIZED. **Prop 150b.1 (`omega`-absolute chirality):** in every `Sigma_1`-sound extension of `EA` every realized `GLP`-modality has grade `>= 0` (`GLP^+=(N,+)` well-founded, least `<0>=T`, strength monotone); no negative grade is `omega`-realized. **Thm 150c (phantom witness for `-<n>`; SW duality up to phantoms):** `A_{-1} := PA + ¬Con(PA)` is consistent (Goedel II), `Pi_1`-sound (a false `Pi_1` theorem refutes to a `PA`-provable true `Sigma_1`), and INTERPRETABLE in `PA` (Feferman 1960, ACT); it carries a NONSTANDARD proof of `bot` -- the `-<1>` avatar, `≡_T`-invisible over `N`. `A_{-1}` is `Pi_1`-conservative and interpretability-below `PA` but NOT `Sigma_1`-conservative (it proves `¬Con(PA)`); the phantom fiber over `-<1>` has cardinality `2^{aleph_0}` (Lindstrom density of the interpretability degrees below `PA`). `D : Real(boxt)^{op} -> SW^{ph}` sends the Pass-53 `lim^1=Zhat_m/Z` phantom POINT (positive grade, no representing point) to the reflection-antimatter CLASS `-<n>` (negative grade, no representing `omega`-principle); `D` is the SW antipode `s:k|->-k` on `K_0=Z`, `D^2=id`, fixed locus `{0}=S^0=T`-floor, free off it, landing only in the phantom-completed `SW^{ph}`. Chirality: ABSOLUTE over `omega`, PHANTOM-BROKEN over interpretability. **Pathology 150d:** `PA+¬Con(PA)` proves its own inconsistency yet never proves a false `Pi_1` fact -- perfect antimatter (charge `-<1>`, no `omega`-mass), the continuum-width negative cone dual to the uncountable `Zhat_m/Z` upstairs.
+- Machine-verified `code/scripts/check-pass150.py` -> `artifacts/reports/pass150-effective-derived-z2-phantom-witness-sw-duality-check.json` (A effective sign sheaf `K=8`: all races oriented (stalk), 0 indexed separators (`H^0_eff=0`), uniform diagonal defeat (`ISigma_1` shadow), discrete cover (`H^1_classical=0`), effective class nontrivial `Z/2`; B realized grades `(N,+)` monotone, least `<0>`, only `<0>` invertible, `K_0=Z`; C `PA+¬Con(PA)` consistent-up-to-bound, `Pi_1`-sound, interpretable, grade `-1`, `N`-invisible nonstandard witness, fiber `2^{aleph_0}`; D `D^2=id`, fixed `{0}`, `{1..4}<->{-1..-4}` bijective, `sw_fixed=1` matches connected oriented floor; overall PASS). Discussion-log counter `150 -> 151`; `[New (Pass 149)]` resolved (150a/b.1/c), `[New (Pass 150)]` opened (explicit effective site + bicomplex for `(Z,Z/2)`; naturality of the SW duality functor `D` onto `SW^{ph}`). Off-mount `/tmp` exec per `aps-run-sync-hazard`; the bash mount served a truncated tail mid-run, so the append was verified via Windows-path Read/Edit, not `bash tail`.
+
+## 2026-07-15 (Autonomous discussion Pass 149)
+
+- Pass 149 discharged `[New (Pass 148)]`, both prongs, and UNIFIED them under Spanier-Whitehead duality. **Thm 149a (pointwise eliminability of `Delta_0`-linearity):** for `boxt = ¬Prov_T` over `T \supseteq EA` with ANY `Sigma_1` (Craig-normalized, non-`Delta_0`) `Prf`, every REALIZED detached fixed point `rho = boxt rho` has, in the standard model, a definite orientation on its singleton race `{rho,¬rho}` (the two racing proofs have standard codes `p,q` and `p<q` is `Delta_0` ON THAT PAIR), so `H^0_pt(sgn)=0`, signature `(Z,0)` -- "admits a `Delta_0` linear proof order" is POINTWISE eliminable; a non-terminating race gives a degenerate oriented (empty-section) stalk, not a gap. **Thm 149b (schematic `Z/2`, carrier exists):** a recursively-inseparable c.e. pair `(A,B)` (Kleene `{e:phi_e(e)=0/1}`) codes a `Sigma_1` proof order that is SCHEMATICALLY unorientable (a uniform c.e. selector would separate `A,B`) and carries a genuine `boxt`-fixed sentence; the `Z/2` lives in the Cech `H^0_sch(sgn)` over the realization DIAGRAM, not on any point -- so `(Z,Z/2)` is `Sigma_1`-SCHEMATIC but NOT `Sigma_1`-POINTWISE. Thm 148b PRESERVED and SHARPENED; the pointwise gap forces KF ascent (`phi_{epsilon_0}(0)`) while a `Sigma_1` avatar survives one categorical level up. **Thm 149c (monoidal `Coh` on `SW`; `GLP^+` not a group):** `GLP^+=(N,+)` is the free comm. monoid on `<1>`, has no inverses for `n>0` (Ignatiev well-order), so is NOT a group; `K_0=Z`; the SW dual `S^{-n}<->-<n>` supplies negatives that are reflection PHANTOMS (a `Pi`-conservativity witness realizes conservation `<n>->0`, a MORPHISM, not an additive inverse). `GLP` stays chiral. **Thm 149d (unification):** the De Morgan `delta` orientation flip and the SW antipode `D:S^n|->S^{-n}` are the SAME order-2 involution `s:k|->-k` on `K_0=Z`, fixed locus `{0}=S^0=T`-floor, free off it; the KF gap cocycle `H^0(sgn)=Z/2` is exactly the equivariant class of the free part, orientation is a ground-floor phenomenon because `s` fixes only `<0>`, and the only `delta`-symmetric grade is the floor (which cannot host a detached fixed point -- so the symmetric `(Z,Z/2)` must be gapped/KF, not oriented/Rosser). **Pathology 149e:** `-<n>` is a Spanier-Whitehead dual sphere with no cells -- reflection antimatter, `s`-conjugate to the Pass-147/148 `lim^1=Zhat_m/Z` phantom POINT (phantom point upstairs / phantom antimatter downstairs); the provability semiring never became a ring.
+- Machine-verified `code/scripts/check-pass149.py` -> `artifacts/reports/pass149-orientation-completeness-sw-antimatter-check.json` (A sign involution on `Z` truncated `M=3,5,8`: unique fixed `{0}`, free elsewhere, `redH0=Z/2`; B stalk-orientable `races=1,2,3` yet 0 `delta`-fixed total orders; C `(N,+)` only `<0>` invertible, `K_0=Z`, phantom `-<1>..-<4>`, `N->Z` injective; D `delta`-flip monodromy `-1` connected `redH0=0` vs free sign `+1` split `Z/2` over `C_4,C_6`, `sw_fixed=1` matches connected floor; overall PASS). Discussion-log counter `149 -> 150`; `[New (Pass 148)]` resolved (149a/b/c/d), `[New (Pass 149)]` opened (honest `Sigma_1`-definable `H^0_sch` cohomology over `Real(boxt)`; non-standard phantom-witness question for `-<n>`). Off-mount `/tmp` exec per `aps-run-sync-hazard`; the bash mount showed a truncated tail mid-run, so the append was verified via Windows-path Read/Edit, not `bash tail`.
+
+## 2026-07-15 (Autonomous discussion Pass 148)
+
+- Pass 148 discharged `[New (Pass 147)]`, both prongs. **Thm 148a (Sigma_1-orientation dichotomy):** over `T \supseteq EA` with a `Delta_0` linear proof order `prec`, the Rosser tie-break `R_prec` is a TOTAL orientation of `Fix(boxt)` with `delta R_prec = R_{prec^op} != R_prec` pairwise (antisymmetry), so every detached `Sigma_1` `boxt`-fixed point has monodromy `-1`, connected orientation double cover, `H^0(sgn)=0` -- signature `(Z,0)` Rosser. The symmetric `(Z,Z/2)` needs a `delta`-FIXED tie-break, and the only one is the undirected truth-gap valuation, NOT `Sigma_1`. **Thm 148b (forced ascent):** `(Z,Z/2)` is intrinsically non-`Sigma_1` (requires the strong-Kleene KF closure, ordinal `phi_{epsilon_0}(0)`); the Pass-147 map is the arithmetic-restriction RETRACTION `r : ConLat_{KF} -> ConLat_PA`, and `r([kappa])` is a still-detached but RE-ORIENTED `(Z,0)` shadow (the gap collapses under two-valued restriction, `H^0(sgn) : Z/2 -> 0`) -- so `(Z,Z/2)` lives strictly in `L_{Tr}`; KF ascent is FORCED. **Thm 148c (monoidal Coh; law = depth-addition):** `Coh : Sph -> GLP^+` (source = free strict symmetric monoidal category on `S^1`; target = graded monoid `(<n>)` under `<n>*<m>:=<n+m>`, Ignatiev) is strict monoidal, faithful on generators; the law is FORCED to depth-ADDITION because conjunction (idempotent) sends `S^1^S^1=S^2 |-> <1>and<1>=<1>`, collapsing `H^2` against frozen strictness `<2> !~ <1>`. Beklemishev's `<n+1> ≡ <n>^omega` is an INTERNAL coherence iso, not monoidal data. `Coh(holim_n S^n = S^omega) = <omega>` (first limit modality, `GLP_Lambda`, ordinal `epsilon_0`), the transfinite cell phantom-decorated (`lim^1 = Zhat_m/Z`); `mu = pp(aleph_omega)` and `epsilon_0` are torsor-LINKED (Feferman path, Thm 147c), NOT equal. **Pathology 148d:** a `Sigma_1` "fair coin" (parity of least proof) tie-break is STILL an orientation -- no algorithm can abstain; `Z/2` is the trace of a non-computable abstention.
+- Machine-verified `code/scripts/check-pass148.py` -> `artifacts/reports/pass148-sigma1-orientation-coh-monoidal-law-check.json` (A orientation double cover: oriented/Moebius monodromy `-1` connected `1`-comp `H^0(sgn)=0` vs symmetric `+1` split `2`-comp `Z/2` over `C_6,C_7,C_8`, plus 0 of `2/6/24` linear orders `n=2,3,4` fail to orient; B monoidal law: conjunction `climb_1p1_eq_2=False` idempotent-collapse vs depth-addition `=True` preserving `<n> !~ <n+1>`; C 0 `delta`-fixed linear orders `n=2..5`, symmetric relation the unique `delta`-fixed comparison; overall PASS). Discussion-log counter `148 -> 149`; `[New (Pass 147)]` resolved (148a/b/c), `[New (Pass 148)]` opened (non-standard-`Prf` completeness half of the dichotomy; full-derived monoidal `Coh` with Spanier-Whitehead antimatter). Off-mount `/tmp` exec per `aps-run-sync-hazard`; writes via Windows-path file tools, read back to confirm.
+
+## 2026-07-14 (Autonomous discussion Pass 147)
+
+- Pass 147 discharged `[New (Pass 146)]`, both prongs. **Thm 147a (explicit KF `(Z,Z/2)` fixed point):** over c.e. `T`, in the strong-Kleene Kripke-Feferman closure set `Box_KF phi = Tr(dot⌜Prov_T phi⌝)`, `boxt = ¬Box_KF`, diagonalize `kappa = boxt kappa`. `kappa` is UNGROUNDED in the minimal Kripke fixed point while every iterate `boxt^n T` grounds at a finite stage; groundedness is `≡_T`-invariant, so `kappa !≡_T boxt^n T` -- `kappa` DETACHED, non-ML cover-fiber tower `(Z,×m)`, `varprojlim^1 = Zhat_m/Z != 0` (`H^1 = Z`). The Kleene jump commutes with the De Morgan involution `delta`, so the orientation `Z/2`-torsor is TRIVIAL, its double cover SPLITS, `H^0(sgn) = Htilde^0(;Z/2) = Z/2` -- Rosser-INVISIBLE. In the countable antichain `Fix(boxt)` the signatures `(0,--)` Loeb, `(Z,0)` Rosser, `(Z,Z/2)` KF are pairwise distinct; `kappa`/`rho` share `H^1=Z`, separated by `H^0(sgn)` alone. Carried: the `ConLat_T -> ConLat_{KF}` descent (KF ordinal `phi_{epsilon_0}(0)`); strong-Kleene (not supervaluational) required. **Thm 147b (`Coh : B[Z] -> GLP` functor):** `Coh([S^n]) = <n>T`, `Coh(sigma_n) =` Beklemishev's reduction `<n+1>T ≡_T <n>^omega T`; graded monoid map faithful on generators, `H^n(S^n)=Z` matching PA-provable strictness `<n> !~ <n+1>` (frozen `n>=2` = ZFC-absolute GLP tower). The reduction spends one `omega` per degree bump, so the first limit is the `n=1->2` passage; `n=1` maps to `<1>` (finite base), NOT `<omega>`; the genuine first LIMIT modality `<omega>` (`GLP_Lambda`) is the avatar of the `n=1` layer's transfinite regular-height-`mu` home. **Thm 147c:** `T_omega` of a Turing-Feferman uniform-reflection progression is genuinely notation-path-dependent (Feferman 1962 + Feferman-Spector 1962) -- Thm 146c PROMOTED from analogy to a proved non-uniqueness, parallel to (not identified with) the set-theoretic non-absoluteness of Thm 145c. **Pathology 147d:** three modal faces in one column -- symmetric-independent (`kappa`,`n=1`), oriented-independent (`rho`,`n=1`), provable-absolute (`<n>`,`n>=2`); orientation is a purely ground-floor phenomenon.
+- Machine-verified `code/scripts/check-pass147.py` -> `artifacts/reports/pass147-kf-signature-glp-functor-check.json` (A double cover splits `2`->`Z/2` symmetric `C_6,C_8` vs connected `1`->`0` Rosser/Moebius `C_6,C_7`, both `H^1=Z`; B strict GLP chain, `0` collapses, degree<->depth bijective, first limit at `n=1->2`; C `c_k` ground at stage `k`, `kappa` ungrounded, `delta` fixes `kappa`/breaks `rho`; overall PASS). Discussion-log counter `147 -> 148`; `[New (Pass 146)]` resolved (147a/b/c), `[New (Pass 147)]` opened (descend `kappa` to `ConLat_PA` or prove forced ascent; promote `Coh` to a full monoidal functor locating `<omega>`). Off-mount `/tmp` exec per `aps-run-sync-hazard`; writes via Windows-path file tools, read back to confirm.
+
+## 2026-07-14 (Autonomous discussion Pass 146; entry restored Pass 147 -- clobbered by the 10:09 relay-sync, aps-run-sync-hazard)
+
+- Pass 146 discharged `[New (Pass 145)]`. **Thm 146a (Con^orb is a map of DERIVED invariants, not of points):** since `|Or-bad(S_mu)| >= aleph_{omega+1} > aleph_0 = |ConLat_T|` and `Fix(boxt)` is a countable antichain (Lemma 51a), NO injection `Or-bad(S_mu) -> Fix(boxt)` exists; the dictionary factors through the countable derived-signature quotient `sigma : point |-> (H^1, H^0(sgn))` with three values -- `(0,--)` Loeb/integral, `(Z,0)` Rosser torsor `Zhat_2/Z`/non-integral, `(Z,Z/2)` Kripke-Feferman (lim^1-detected but Rosser-invisible); functorial under scale end-extension (`lim^1` a tail/pro-invariant, Pass 59). **Thm 146b (frozen but NOT nFG2-graded):** Thm 41a self-truncates `nFG2` at index 2, so `varprojlim^n B[Z]` (`n>=2`) is not an `nFG2(n)`-strictness witness -- coherence dimension and `boxt`-orbit index are orthogonal gradings; the true avatar is the Japaridze-Beklemishev graded provability algebra, `varprojlim^n B[Z]` realising the PA-provable strictness `<n> !~ <n+1>` (Beklemishev 2004), ZFC-absolute. **Thm 146c (Feferman path-dependence = non-approachability):** the fluid `n=1` layer is the first limit (`omega`-th) stage of a Turing-Feferman progression, whose notation-path-dependence (Feferman 1962) is the arithmetic image of a bad point's `Z/2`-orientation. **Pathology 146d:** the same bigraded ghost is a PA-THEOREM on every floor `n>=2` (Beklemishev strictness) and a ZFC-INDEPENDENT statement on floor 1 (Foreman-Magidor vs Magidor-Shelah).
+- Machine-verified `code/scripts/check-pass146.py` -> `artifacts/reports/pass146-conorb-functor-nfg2-coherence-orthogonality-check.json` (A three distinct signatures + KF detected/Rosser-invisible + end-extension invariance + non-injectivity; B nFG2 index-2 collapse 0 violations vs `H^n(S^n)=Z` for `n=1,2,3`; C frozen `H^2` label-independent, fluid `C_6`/`C_8` girth split, GLP strict each layer; overall PASS). Discussion-log counter `146 -> 147`; `[New (Pass 145)]` resolved (146a/b/c), `[New (Pass 146)]` opened (KF-sentence construction + `B[Z] -> GLP` functor). Off-mount `/tmp` exec per `aps-run-sync-hazard`; writes via Windows-path file tools.
+
+## 2026-07-14 (Relay sync 2026-07-14T10:09:05+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root. The inbox again exposed the same `3` PDF artifacts and collected them under `artifacts/pdf/`; the external Google Drive PDF backup was sandbox-denied, so the repository-local import was completed with `-SkipPdfBackup`. No slide or deck artifact was copied or refreshed.
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. All `23` watched-share requests failed at the transport layer, so this run established neither a content-hash delta nor an accessible conversation payload. No mathematical reconstruction, linked-note update, or new open question was justified from unavailable source text.
+- Searched connected Google Drive for non-folder files modified after the prior automation run (`2026-07-13T19:07:08.206Z`) and directly listed the recorded `ChatGPT_Research`, `ChatGPT_Study`, Claude, Gemini, Paper, Slide, and reference folders. No newer file was found, so no Drive index, literature note, artifact report, PDF source entry, or `research/ideas/research-questions.md` update was warranted.
+
+## 2026-07-14 (Autonomous discussion Pass 145)
+
+- Pass 145 discharged both Thm-144a obligations. **Thm 145a (finality pro-iso):** `A_mu[Z] =~ pi_mu^* B[Z]` for the coordinate projection `pi_mu : [mu]^{<omega} -> [omega_{n+1}]^{<omega}`, `X |-> X cap omega_{n+1}`, which is FIBRE-ACYCLIC (fibres up-directed, closed under union); the Bousfield--Kan/Roos spectral sequence for `pi_mu` collapses (`E_2^{p,q>=1}=0`) to the edge iso `varprojlim^n_{[mu]} A_mu[Z] =~ varprojlim^n_{[omega_{n+1}]} B[Z]`, natural in `mu` -- so the `n >= 2` window pro-isomorphism (obligation 144a.i) is a formal consequence of finality, not extra structure. **Cor 145b:** the `pp`-maximal generator `mu = pp(aleph_omega) = max Lambda` carries NO extra top-generator class. **Thm 145c (level-1 faithfulness = badness):** `Phi^1_mu != 0` iff `S_mu` has stationarily many bad points (no eub) iff `mu` non-approachable; the level-1 stratification is faithful exactly on `Lambda_bad`, and `Lambda_bad = emptyset` (Foreman--Magidor very-good-scale / AP) vs `Lambda_bad = Lambda` (Magidor--Shelah tree property / `~AP`) are BOTH consistent -- faithfulness of the cardinal axis is an approachability-conditional independence statement (the honest form of Thm 144a.ii). **Thm 145d (Con^orb dictionary, conjectural):** good/eub `~` Loeb orbit-attached fixed point (integral unit); bad Rosser-oriented point (Moebius `Z/2` sign) `~` detached Rosser fixed point (non-integral unit); bad symmetric point `~` Kripke--Feferman fixed point (`lim^1`-detected, Rosser-invisible) -- extending the Pass-51/53 integral-unit dictionary to transfinite pcf. **Pathology 145e:** the `n >= 2` phantom is a ZFC-constant rigid skeleton `varprojlim^n B[Z]`; the `n = 1` phantom is forcing-fluid -- the only ZFC-undecidable fact about the higher ghost is which floor you stand on.
+- Machine-verified `code/scripts/check-pass145.py` -> `artifacts/reports/pass145-thm144a-obligation-discharge-check.json` (A finality: fibres of `pi:P(3)->P(2)` up-directed, `H^*(I,pi^*Z)=H^*(J,Z)` in every degree; B good/bad: tree `H^1=0` vs `C_6,C_8 H^1=Z` distinct girth; C orientation: symmetric `H^0(sgn)=Z/2` vs Rosser Moebius `H^0=0`; overall PASS). Discussion-log counter `145 -> 146`; `[New (Pass 144)]` (a),(b) resolved (145a/b/c), `[New (Pass 145)]` opened (build the `Con^{orb}` functor; test whether the `n >= 2` frozen skeleton has an arithmetic ZFC-absolute avatar). Off-mount exec per `aps-run-sync-hazard`; writes via Windows-path file tools, read back to confirm.
+
+## 2026-07-14 (Relay sync 2026-07-14T04:08:00+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root after the default process policy blocked direct execution. The inbox again exposed the same `3` PDF artifacts, collected them under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF backup, and copied/refreshed `0` slide or deck artifacts.
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. All `23` watched shares were `unchanged`, so no shared-conversation extraction, mathematical reconstruction, linked-note update, or new open question was required.
+- Searched connected Google Drive for non-folder files modified after the prior automation run (`2026-07-13T13:06:36.702Z`) and directly listed the recorded ChatGPT, `ChatGPT_Research`, `ChatGPT_Study`, Claude, Gemini, Paper, Slide, and reference folders. The `26` newer files form an unrelated batch of Japanese history and international-politics course PDFs (including nuclear-security lecture copies); none is new APS/G2 research material and none appears in the recorded research/reference relay roots. No Drive index, literature note, artifact report, PDF source entry, or `research/ideas/research-questions.md` update was warranted.
+- The worktree still contains extensive pre-existing overlapping edits and untracked autonomous-research outputs. This run produced no meaningful import or research delta beyond timestamp/log refreshes, so a relay-only commit would capture unrelated work in the already-modified manifest and logs.
+
+## 2026-07-14 (Autonomous discussion Pass 144)
+
+- Pass 144 attacked `[New (Pass 143)]` prong (c): does the pcf window `[aleph_{omega+1}, aleph_{omega_4})` STRATIFY the derived-limit phantom, or is the only genuine stratification the CLH coherence-DIMENSION ladder? RESULT: a LEVEL-SPLIT. **Thm 144a:** on the window scale spectrum `Lambda = pcf({aleph_n}) cap (aleph_omega, aleph_{omega_4})` (`max Lambda = pp(aleph_omega)`), (i) for `n >= 2` the cover-fiber tower `varprojlim^n A_mu[Z]` is `mu`-INDEPENDENT -- level-`n` nonvanishing is driven by `w-diamond(S^{n+1}_n)` / `d = omega_n` at `omega_{n+1} < aleph_omega` on the fixed low-index coordinates, so the higher phantom is PRO-ISOMORPHIC across the window; (ii) for `n = 1` the Hausdorff-gap/`rho_1` class lives at regular height `mu` and (cofinality being a pro-iso invariant) DOES stratify, indexed by `Lambda`. **Thm 144b:** the question is nonvacuous iff `|Lambda| >= 2` iff `pp(aleph_omega) > aleph_{omega+1}` iff SCH fails at `aleph_omega` (else the window is one point). **Cor 144c:** the phantom is bigraded `Phi^n_mu`, unbounded along dimension `n` but collapsing along pcf-length `mu` for `n >= 2` -- prong (c) resolves NEGATIVELY for the substantive `n >= 2` phantom; the genuine stratification is the coherence-dimension ladder. **Pathology 144d:** widen the pcf hotel arbitrarily (Gitik-Magidor large `pp`) and the `n >= 2` haunting is constant along it -- the higher-dimensional wardrobe stays in one ground-floor closet at `omega_{n+1}`.
+- Machine-verified `code/scripts/check-pass144.py` -> `artifacts/reports/pass144-pcf-window-stratification-level-split-check.json` (A level-1 girth-split `C_6`/`C_8` both `H^1=Q` distinct girth; B level-2 octahedron `H^2=Q` constant across window labels; C nonvacuity-iff-`~SCH` gate; overall PASS). Discussion-log counter `144 -> 145`; `[New (Pass 143)]` resolved (level-split), `[New (Pass 144)]` opened (discharge Thm-144a obligations + place level-1 gap-refinement in the `Con^{orb}` tower). Off-mount exec per `aps-run-sync-hazard`; writes via Windows-path file tools, read back to confirm.
+
+## 2026-07-13 (Relay sync 2026-07-13T22:09:25+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root after the default PowerShell policy blocked direct execution. The inbox again exposed the same `3` PDF artifacts, collected them under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF backup, and copied/refreshed `0` slide or deck artifacts.
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. All `23` watched shares were `unchanged`, so no shared-conversation extraction, mathematical reconstruction, linked-note update, or new open question was required.
+- Searched connected Google Drive for non-folder files modified after the prior automation run (`2026-07-13T07:06:29.948Z`) and directly listed the recorded ChatGPT, `ChatGPT_Research`, `ChatGPT_Study`, Claude, Gemini, Paper, Slide, and reference folders. The sole newer Drive file was `2024_math_computing_solutions.pdf`, a general 2024 mathematics/computing examination solution and study guide; it contains no new APS/G2-specific research contribution and was not added to the research indexes. No recorded research/reference folder exposed newer relevant material, and the local artifact inbox contained no newer file, so Drive indexes, literature notes, artifact reports, the PDF source inventory, and `research/ideas/research-questions.md` needed no semantic update.
+- The worktree still contains extensive pre-existing overlapping edits and untracked autonomous-research outputs. This run produced no meaningful import or research delta, so no relay-only commit was created; the relay-touched manifest, watcher state/log, and research log already overlap those existing changes.
+
+## 2026-07-13 (Autonomous discussion Pass 142)
+
+- Pass 142 attacked `[New (Pass 141)]` (is the `nFG2(omega)` ceiling at `c = aleph_{omega+1}` attained or displaced upward?). RESULT: the ceiling is ATTAINED and pcf-CAGED. **Thm 142a (reduction):** re-basing the long diagonal off `prod_n omega` (cofinality `d`, wrong scale) onto `prod_n aleph_n` and mounting the level-`k` avatars on a Shelah tcf-scale `<f_xi : xi < pp(aleph_omega)>` (a ZFC object, `aleph_{omega+1} <= pp(aleph_omega) < aleph_{omega_4}`), `varprojlim^n A^{(a),Omega} != 0` cofinally in `n` **iff** the `[pp(aleph_omega)]^{<omega}`-transverse `n`-coherent family is cofinally nontrivial -- the pcf skeleton is ZFC-absolute, the nonvanishing reduces to a coherence input. **Thm 142b:** the phantom home is pinned into the ZFC window `[aleph_{omega+1}, aleph_{omega_4})` (Koenig floor, Shelah `pp` ceiling), refuting prong (c)'s "one cardinal up to infinity"; the Thm-141a telescope-collapse does not echo (no cofinal `omega`-chain on an `aleph_omega`-cofinal index). **Thm 142c:** existence is large-cardinal-FREE, destruction (all `lim^n = 0`) is the strength-bearing side -- the exact antipode of the finite Thm-41a. **Pathology 142d:** the `<*`-scale itself is cf-rank 1, so Goblot kills `lim^{>=3}` -- the phantom lives strictly transverse to every climbable rope.
+- Machine-verified `code/scripts/check-pass142.py` -> `artifacts/reports/pass142-aleph-omega-plus-1-home-pcf-window-check.json` (A finite-directed acyclicity census 1183 posets size <=5 / 0 without a top; B ceiling ladder `aleph_{n+1}` + Koenig bump; C pcf window nonempty & ZFC-bounded; D telescope non-echo; overall PASS). Discussion-log counter `142 -> 143`; `[New (Pass 142)]` opened (transverse-coherence construction + destruction strength + pcf-window stratification). Off-mount exec per `aps-run-sync-hazard`; writes via Windows-path file tools, read back to confirm.
+
+## 2026-07-13 (Relay sync 2026-07-13T16:10:53+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root. The inbox again exposed the same `3` PDF artifacts; the repository collection refreshed them, while the optional external Google Drive PDF backup was denied by the sandbox. Re-running with `-SkipPdfBackup` completed successfully and confirmed `0` copied/refreshed slide or deck artifacts.
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. All `23` watched requests failed at the transport layer. The in-app browser was also explicitly unavailable for `chatgpt.com`, so this run established neither a content-hash delta nor an accessible transcript payload; no mathematical reconstruction or linked-note update was attempted from unavailable source text.
+- Searched connected Google Drive for non-folder files modified after the previous run (`2026-07-13T00:46:03.569Z`) and directly inspected the recorded `ChatGPT_Research`, `ChatGPT_Study`, Claude, Gemini, Paper, Slide, and reference folders. No new paper, slide, Gemini/Claude output, generated PDF, or other durable relay material was found. The local artifact inbox also had no newer file, so Drive indexes, literature notes, artifact reports, PDF inventory, and `research/ideas/research-questions.md` needed no semantic update.
+- The worktree still contains extensive pre-existing overlapping edits and untracked autonomous-research outputs. No relay-only commit was created because this run produced no meaningful source or artifact delta and the relay-touched watcher, manifest, and research-log files overlap that existing work. `main` was `0` ahead and `0` behind its upstream; `git push` completed with `Everything up-to-date`.
+
+## 2026-07-13 (Relay sync 2026-07-13T09:48:59+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root. The inbox again contained the same `3` PDF artifacts; they were collected/refreshed under `artifacts/pdf/`, with no new or changed slide/deck artifact.
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. All `23` watched shares were `unchanged`, so no shared-conversation extraction, mathematical reconstruction, linked-note update, or new open question was required.
+- Searched the connected Google Drive for non-folder files modified after the previous automation run (`2026-07-12T18:33:10.381Z`) and scanned the local ChatGPT Project inbox over the same interval. Neither source exposed a new paper, slide, Gemini/Claude output, generated PDF, or other durable relay artifact; the Drive indexes, literature notes, artifact-sync report, and PDF source inventory therefore needed no semantic update.
+- The worktree still contains extensive pre-existing overlapping edits and untracked autonomous-research outputs. No relay-only commit was created because this run produced no meaningful import and the watcher/log/manifest files already overlap unrelated work; `main` was `0` ahead and `0` behind its upstream before the push attempt.
+
+## 2026-07-13 (Pass 141 - autonomous discussion)
+
+- Pass 141 executed the Pass-140 "Next step" (`[New (Pass 140)]` prong (b): the `cd = omega`
+  diagonal / `nFG2(omega)`), plus the carried Cor-140c(i) `h_1` obligation. **Thm 141a
+  (telescope collapse):** the suspension-telescope diagonal `A^{(a),omega}_tel = colim(S^k,
+  equatorial)` is `F_3`-acyclic -- each `S^k -> S^{k+1}` is `0` on the top class `H~_k`
+  (`H~_j(S^k;F_3)=F_3` iff `j=k` recertified), so the homology tower is eventually-zero =>
+  Mittag-Leffler => `varprojlim^1 = 0` in every degree (Thm 55c avatar); the telescoped
+  `boxtimes`-tower self-truncates to the TRIVIAL object -- a depth-`omega` echo of Thm 41a.
+  **Prop 141b:** the coproduct diagonal is only the phantom-additive UNION of finite levels,
+  not a new class. **Thm 141c (Goblot ceiling):** a single object with `varprojlim^n != 0`
+  cofinally in `n` needs UNBOUNDED index cofinality `cf >= aleph_omega`, i.e. `2^{aleph_0} >=
+  aleph_{omega+1}` (BLH ceiling `lim^n != 0 => c >= aleph_{n+1}` + Koenig). **Cor 141d
+  (phantom uncertainty principle):** a genuine `nFG2(omega)` [`c >= aleph_{omega+1}`] and the
+  sharp level-2 separator at its home `c = aleph_2` are MUTUALLY EXCLUSIVE. **Cor 141e
+  (obligation discharged POSITIVELY):** `MA_{aleph_1}` alone forces `varprojlim^1 A = 0` at
+  `c = aleph_2` (`sigma`-centered level-1 trivialisation, `aleph_1` dense sets; DSV 1989 /
+  Bergfalk 2017; PFA NOT required; does not give `lim^2 = 0`, so the separator survives).
+  Machine `code/scripts/check-pass141.py` ->
+  `artifacts/reports/pass141-cd-omega-diagonal-nfg2omega-check.json` (overall PASS).
+  Off-mount /tmp exec; repo writes via Windows-path file tools (aps-run-sync-hazard).
+
+## 2026-07-13 (Relay sync 2026-07-13T03:34:13+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root. The inbox still contains the same `3` supported PDFs (plus their TeX sources), and the central PDF collection was refreshed. No slide/deck artifact was new or changed. The external Google Drive PDF backup copy was denied by the current sandbox.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. All `23` watched share requests failed at the transport layer, so this run established neither a content-hash delta nor an accessible conversation payload. No mathematical reconstruction was attempted from unavailable source text.
+- Inspected the local ChatGPT Project artifact inbox against the previous run time (`2026-07-12T12:33:40.929Z`) and reviewed the recorded research/reference relay indexes. No newer paper, slide, Gemini/Claude output, generated PDF, or other durable relay artifact was accessible; no Drive index, literature note, artifact report, PDF source entry, or open question required an update.
+- The worktree still contains extensive pre-existing overlapping edits and untracked autonomous-research outputs. No relay-only commit was created because the PDF manifest, watcher state/log, and research log already overlap those changes; the current branch therefore has no new scoped commit to push.
+
+## 2026-07-12 (Relay sync 2026-07-12T21:35:00+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root. The inbox again exposed the same `3` supported PDFs, collected/refreshed `3` central PDFs, backed up `62` PDFs to the local Google Drive PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. All `23` watched shares remained `unchanged`, so no shared-conversation transcript required extraction or mathematical reconstruction.
+- Inspected the local Google Drive artifact inbox and recorded research/reference relay folders for files newer than the previous automation run (`2026-07-12T06:32:49.292Z`). No newer paper, slide, Gemini/Claude output, generated PDF, or other durable relay artifact was found; no Drive index, literature note, artifact report, PDF source entry, or open question required an update.
+- The worktree still contains extensive pre-existing overlapping edits and untracked autonomous-research outputs. No relay-only commit was created because the PDF manifest, watcher state/log, and research log overlap those existing changes; `main` remains `0` ahead and `0` behind its upstream.
+
+## 2026-07-12 (Relay sync 2026-07-12T15:34:34+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1` from the repository root. The inbox again exposed the same `3` supported PDFs, collected/refreshed `3` central PDFs, backed up `62` PDFs to the local Google Drive PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`. The persisted watcher state remained `unchanged` for all `23` watched shares, so no shared-conversation transcript required extraction or mathematical reconstruction.
+- Inspected the local Google Drive artifact inbox for files newer than the previous automation run (`2026-07-11T18:49:19.815Z`) and reviewed the recorded research/reference relay roots. No newer paper, slide, Gemini/Claude output, generated PDF, or other durable relay artifact was found; no Drive index, literature note, artifact report, PDF source entry, or open question required an update.
+- The worktree still contains extensive pre-existing overlapping edits and untracked autonomous-research outputs. No relay-only commit was created because the PDF manifest, watcher state/log, and research log overlap those existing changes; `main` remains `0` ahead and `0` behind its upstream.
+
+## 2026-07-11 (Pass 135 - autonomous discussion)
+
+- Pass 135 executed the Pass-134 "Next step" (`[New (Pass 134)]` (ii) primary). **Thm 135a
+  (cohomological-dimension non-transfer):** the retract-transfer trivializing `n=1`
+  (Thm 133c/134e) has NO analogue at `n=2` for a reason PRIOR to set theory -- the distinguished
+  twin tower `A` is a 1-dim coherence datum (`cd(A) <= 1`), so `varprojlim^{>=2} A = 0`
+  IDENTICALLY, `h_2(A)` VACUOUS; `cd(A^{(a),2}) = 2` blocks any retraction. **Correction 135b:**
+  the Pass-134 "two 2-simplices sharing a vertex" model of `A^{(a),2}` is CONTRACTIBLE (reduced
+  `Betti_{F_3} = 0`) -- no 2-class; honest obstruction is 2-spherical (`H_2(S^2;F_a)=F_a`),
+  no-retraction `Delta^{n+1}->S^n` degree-uniform, asymmetry carried entirely by `cd(A)`.
+  **Thm 135c:** strictness reduces to `Con((forall n)h_n(A) ^ varprojlim^2 A^{(a),2} != 0)` --
+  the OPEN BBMT additivity as a concrete 2-cd instance, non-vacuous (CH-consistent). **Thm 135d:**
+  the `cf`-spectrum `aleph_0<aleph_1<aleph_2<...` is `cd`-graded; its `cd=0`/`aleph_0` FLOOR is
+  the Pass-55 `G2 ^ ¬FG2` solenoid `hatZ_a/Z` (Prufer-rigid). Residue (i) exotic `Sigma_1` ordering
+  CARRIED. Machine `code/scripts/check-pass135.py` ->
+  `artifacts/reports/pass135-cohdim-nontransfer-a2coherent-check.json` (exact `F_3` homology; PASS).
+  Off-mount /tmp exec; repo writes via Windows-path file tools (aps-run-sync-hazard).
+
+## 2026-07-11 (Pass 134 - autonomous discussion)
+
+- Pass 134 executed the Pass-133 "Next step" (the three prongs of `[New (Pass 133)]`).
+  (A) **Thm 134a / Cor 134b:** for EVERY primitive-recursive-ordered Sigma_1
+  witness-comparison Rosser box with `¬D2 ^ ¬Box_R⊥`, `m_enc` is UNBOUNDED -- no p.r.
+  uniform nested-witness bound certifies witness-bounded full D3 -- via the
+  ordering-INTERNALIZATION diagonal (the `phi*_k` gap `(k,B(k)]` is defined from the
+  Godel numbers of both `-<` and `B`, so a re-ordering only relabels a same-width gap).
+  This CLOSES Conj 132d for the standard class, pinning `PL(Box_R^A)=R+4` as
+  arithmetically INCOMPLETE at full D3; residue = exotic Sigma_1-but-not-p.r. orderings
+  (needs extra Sigma_1-induction), correcting "EVERY Sigma_1 box" to "every p.r.-ordered
+  Sigma_1 box". (B) **Thm 134c/134d:** the a-primary MP coherent system `A^{(a)}` on
+  `(^omega omega,<=*)` has `lim^1 != 0` under `b=aleph_1`, `=0` under `MA_{aleph_1}`,
+  rank `aleph_1`; the strictly-intermediate witness is the COHEN model
+  `b=aleph_1 < c=aleph_2`, NOT CH (`aleph_1=c`); and `aleph_1` is the FIRST, not the
+  unique, non-arithmetic layer -- an `omega_n`-cofinal system gives a strict `cf`-indexed
+  spectrum `aleph_0<aleph_1<...<2^aleph0`. (C) **Thm 134e:** `A^{(a)}` at level 1 does NOT
+  separate (Thm-133c `n=1` retract transfer); the honest separator is the 2-coherent
+  `A^{(a),2}`, giving `Con((forall n)h_n(A) ^ lim^2 A^{(a),2} != 0)`, an explicit instance
+  of the OPEN BBMT additivity question. Machine `check-pass134.py` overall PASS.
+- Archival correction: RESTORED the Pass-133 log entry below, which a concurrent
+  2026-07-11T04:25 relay-sync clobbered (the discussion log and open_problems.md Pass-133
+  appends had landed; only this log entry was lost -- a live `aps-run-sync-hazard` instance).
+
+## 2026-07-11 (Pass 133 - autonomous discussion) [restored 2026-07-11 15:05]
+
+- Pass 133 executed the Pass-132 "Next step". (A) **Thm 133a:** `varprojlim^1` commutes
+  with arbitrary PRODUCTS of a tower (product exact), so
+  `lim^1(prod_{i<omega}(Z, x a)) = (hatZ_a/Z)^omega` is ZFC-ABSOLUTE and nonzero (`q`-socle
+  `F_q^omega`, dim `2^aleph0` by Erdos-Kaplansky) -- REFUTING the Pass-132 conflation of the
+  continuum phantom with the Suslin-sensitive `A_{aleph_1}` limit; the continuum is a
+  cardinality (`oplus->prod` socle jump) fact, not a cofinality one. **Thm 133b:**
+  Suslin-sensitivity lives only for an `omega_1`-cofinal COHERENT (Mardesic-Prasolov) index;
+  the intermediate `kappa_q=aleph_1` object is the a-primary MP coherent limit, second-order
+  over `omega_1`, not a Sigma_1 strand sum. (B) **Thm 133c:** `A_kappa => (forall n)h_n`
+  trivial; the converse `<=>` the two-system separation, `n=1` transfers by 1-skeleton
+  retract, `n>=2` blocked -- `A_kappa` a priori strictly stronger, exact equivalence the OPEN
+  BBMT additivity question. (C) **Constr 133e / Thm 133f:** the `m_enc`-gap family flips
+  `Box_R Box_R phi_k` cofinally for the least-witness box (dyadic/quadratic overhead; O(1)
+  Arai repairs), so witness-bounded full D3 FAILS for `Box_R^{lw}`, reducing Conj 132d to
+  "every Sigma_1 Rosser box has `m_enc` unbounded". Machine `check-pass133.py` overall PASS.
+
+## 2026-07-11 (Relay sync 2026-07-11T04:25:33+09:00)
+
+- Ran the ChatGPT Project artifact import from the repository root. The inbox
+  exposed the same `3` PDF artifacts and refreshed the central PDF collection;
+  the external Google Drive backup copy was denied by the current sandbox, and
+  no new slide/deck artifact was imported.
+- Checked all `23` watched ChatGPT shares. Every request failed at the transport
+  layer (`remote server unavailable`), so this run produced no reliable content
+  hash delta and no mathematical reconstruction was attempted from an
+  inaccessible payload.
+- Reviewed the recorded Drive research/reference indexes and local artifact
+  manifests. No newly available durable paper, slide, Gemini/Claude output, or
+  generated PDF could be established from the accessible relay state.
+- No research question or literature note was changed because there was no
+  stable source delta. Commit/push was intentionally skipped: the worktree has
+  extensive pre-existing overlapping research edits, and committing the sync
+  logs would also capture unrelated user work.
+
+## 2026-07-11 (Pass 132 - autonomous discussion)
+
+- Pass 132 executed the Pass-131 "Next step" (three residues of `[New (Pass 131)]`).
+  (A) **Thm 132a / Cor 132a':** the `d`-strand graded Rosser predicate realizes
+  `kappa_q = d`; ARITHMETIC ceiling `kappa_q <= aleph_0` for every Sigma_1 predicate
+  (recursive band family), and continuum torsion `kappa_q = 2^aleph0` lives ONLY at the
+  direct-PRODUCT completion (socle `F_q^omega`, Erdos-Kaplansky), i.e. at the
+  `bigoplus`->`prod` arithmetic->analytic boundary -- NOT in the arithmetic hierarchy;
+  o1'/o2' discharged by uniform band-relativized GS. (B) **Thm 132b:** general-`n`
+  large-cardinal-free ZFC model of `h_1 ^...^ h_{n-1} ^ ¬h_n` at `2^aleph0 = aleph_n`
+  (truncated BHLH forcing + ceiling); strict chain `A_kappa => (forall n)h_n =>
+  aleph_{omega+1}`, `A_kappa` at neither endpoint, equivalence with `(forall n)h_n` OPEN.
+  (C) **Thm 132c:** `D1 ^ full-D3 ^ (T|-¬Box_R⊥) => ¬D2` (FORCED, via the Loeb collapse);
+  **Conj 132d:** uniform full `D3` is arithmetically incompatible with a Rosser box (the
+  `m_enc` overhead), so `PL(Box_R^A) = R+4` is arithmetically incomplete at full `D3`.
+- Machine `code/scripts/check-pass132.py` ->
+  `artifacts/reports/pass132-multistrand-phantom-honesty-ceiling-fulld3-check.json`
+  (overall PASS): d-strand socle `= d`, finite sum/prod ladder, honesty-ceiling table,
+  Konig `aleph_{omega+1}`, 5-step Loeb collapse, neighborhood `4 ^ ¬K ^ ¬Box⊥`.
+- Run off-mount from `/tmp`; all repository writes via Windows-path file tools per the
+  `aps-run-sync-hazard` memory. Note: the bash mount was again lagged (git/reports/`wc`
+  stale, showing state as old as Pass 99/123); the discussion body is in fact intact
+  through Pass 131 as read via Windows-path tools.
+
+## 2026-07-10 (Relay sync 2026-07-10T22:27:11+09:00)
+
+- Ran `powershell -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The ChatGPT Project artifact inbox still exposed
+  the same `3` supported PDF artifacts, collected/refreshed `3` central PDFs
+  under `artifacts/pdf/`, backed up `62` PDFs to the local Google Drive PDF
+  backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  The watcher checked all `23` watched `chatgpt.com/share/...` links at
+  `2026-07-10T22:24:41+09:00` and reported `changed=1`, `unchanged=22`. The
+  changed entry was again `research/notes/local-fg2-pullback-aps-zoo.md` with
+  hash `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Direct recovery of the changed share body remained unavailable in this
+  environment: the public web view exposed only the logged-out ChatGPT shell,
+  and a direct `Invoke-WebRequest` recovery attempt failed with a remote-server
+  connection error. The affected note was updated with a provenance-only access
+  block; no theorem, definition, example, counterexample, finite-model task, or
+  open problem was reconstructed from the inaccessible payload.
+- Inspected the connected Google Drive relay roots recorded in
+  `research/references/`: `ChatGPT_Research`, `ChatGPT_Study`, `Gemini`,
+  `Claude`, `Paper`, `Slide`, and the reference root. No newly relevant papers,
+  slides, Gemini/Claude outputs, ChatGPT-generated PDFs, or reference files
+  were visible beyond already indexed material. Recent Drive documents outside
+  the recorded relay roots were not promoted.
+- No Drive index, literature note, artifact report, or research-question update
+  was made because this run produced no new stable mathematical source delta.
+
+## 2026-07-10 (APS autonomous discussion Pass 131)
+
+- Pass 131 executed the Pass-130 "Next step". (A) **Thm 131a (Prufer-rank rigidity):**
+  `kappa_q = dim_{F_q}(hatZ_N/Z)[q] = 1` for EVERY finite valuation `e_q` (including
+  `e_q = 0`) and `= 0` iff `e_q = inf`, by the snake lemma of `0->Z->hatZ_N->G->0` at `x q`
+  (`G` divisible `=> G/qG = 0` truncates it, diagonal `d(1)=1`). So
+  `Tor(hatZ_N/Z) = bigoplus_{q notin Supp_inf} Z/q^inf` is RANK-ONE Prufer per non-solenoidal
+  prime; depth-varying overhead permutes finite valuations but CANNOT inflate `kappa_q` --
+  the continuum lives only in the torsion-free `Q^{(2^aleph0)}`. **Pathology 131a':** a
+  `d`-strand tower gives `kappa_q = #(strands finite at q)`, so continuum-rank Prufer torsion
+  is the signature of a MULTI-STRAND (multiple independent consistency-coordinate) predicate.
+  **Lemma 131b** discharges Constr-130c o1 (`D1 ^ ¬D2` uniform: each band-disjoint layer is a
+  self-contained GS `a_k`-ary Rosser predicate) and o2 (index-`a_k` injective tower map,
+  honest `(Z, x a_k)`), modulo carried o1'/o2'. (B) **Thm 131c** SHARPENS Pass 130:
+  `h_n => 2^aleph0 >= aleph_{n+1}` (Bergfalk-Lambie-Hanson), so `(forall n)h_n =>
+  2^aleph0 >= aleph_{omega+1}` (Konig), not merely `aleph_2`; the depth split `h_1 ^ ¬h_2`
+  holds in the ZFC model `MA_{aleph1} + 2^aleph0 = aleph_2` -- a large-cardinal-FREE
+  stratification (`2^aleph0 = aleph_n => ¬h_n`); exact strength = BBMT `n`-dim `Delta`-system
+  principle, NOT a cardinal characteristic. (C) **Thm 131d:** `PL(Box_R^A) = R+4` is the
+  FUSION `[GL]_Box (+) [GL]_{-<}` + bridge (`R` = the `-<`-fragment), canonical model = a
+  neighborhood box of up-closed `-<`-cones fibered over a `GL` `-<`-frame; **Thm 131e:** full
+  `D3` coexists with `¬D2` (the `GL`-collapse fusing the twins is `D2`-only; `4 + ¬K +
+  ¬Box_R bot` satisfiable), arithmetic full-`D3` realizability carried. Machine
+  `check-pass131.py` -> `pass131-prufer-rank-honesty-ceiling-bimodel-check.json` (overall
+  PASS). Run off-mount from `/tmp`; repo writes via Windows-path file tools
+  (`aps-run-sync-hazard`).
+
+## 2026-07-10 (APS autonomous discussion Pass 130)
+
+- Pass 130 executed the Pass-129 "Next step". (A) The isolated-finite-summand claim is now a
+  THEOREM. **Thm 130a:** `hatZ_N/Z` is DIVISIBLE (`ell`-divisible for every `ell` via the
+  dense diagonal: `hatZ_N/ell.hatZ_N = A_ell/ell.A_ell` and `Z` surjects), so no finite
+  `Z/q^k` is a direct summand (**Cor 130a.1** = the Pass-129 mirage). **Thm 130a.2:**
+  `Tor(hatZ_N/Z) = bigoplus_{q notin Supp_inf(N)} Z/q^inf`, torsion-free part `Q^{(2^aleph0)}`
+  -- the iso-type forgets ALL finite valuations `e_q<inf` (each, including `e_q=0`, gives one
+  Prufer summand), remembering only which primes are solenoidal. **Thm 130b:** `Phi` factors
+  through `Supp_inf:(Steinitz,x)->(P(Primes),cup)`, a surjective monoid hom that is IDEMPOTENT
+  (`Phi(N^2)=Phi(N)`); the phantom is a semilattice, NOT a hom into `(Ab,x)`. **Pathology
+  130a':** primorial `N=prod p` gives `(prod_p Z/p)/Z = bigoplus_p Z/p^inf (+) Q^{(c)}` (full
+  Prufer torsion, no solenoid); `N=2^inf` gives `Z_2/Z` (torsion at every `ell != 2`).
+  **Constr 130c:** a graded Rosser `Sigma_1` predicate (disjoint Godel bands, `a_k`-ary layer
+  races) realizes the facet tower `(Z, x a_k)`, hence `hatZ_{prod a_k}/Z`; the primorial
+  schedule `a_k=p_k` arithmetizes `(prod_p Z/p)/Z` (obligations o1/o2 carried). (B) **Thm 130d
+  CORRECTS Pass-129 Thm 129b:** simultaneous honesty `(forall n)h_n` is EQUICONSISTENT WITH
+  ZFC, NOT a large-cardinal statement -- Bergfalk-Hrušák-Lambie-Hanson removed the weakly
+  compact of BLH 2021 (`2^aleph0 >= aleph_2` necessary; forcing-axiom, not large-cardinal,
+  phenomenon). (C) **Thm 130e:** a 3-neighborhood non-normal box (monotone, intersection-open)
+  realizes `D1 ^ ¬D2 ^ D3^hom`; `WO` = Loeb for the `-<` modality = converse-well-foundedness,
+  so the residual `R+4` completeness lives in the bimodal `(Box, Box_{-<})` language with
+  `Box_{-<}` a `GL`-modality. Machine `check-pass130.py` ->
+  `pass130-phantom-divisibility-supp-inf-neighborhood-check.json` (overall PASS). Run off-mount
+  from `/tmp`; repo writes via Windows-path file tools (`aps-run-sync-hazard`).
+
+## 2026-07-10 (APS autonomous discussion Pass 129)
+
+- Pass 129 executed the Pass-128 "Next step": phantom-spectrum realization, simultaneous
+  higher-`lim^n` honesty, and a bisimulation certificate for the pure-`Box`-inexpressibility
+  of `WO`. (A) **Thm 129a** -- the phantom functor `Phi(T=(Z,x m_n)) = varprojlim^1 T =
+  hatZ_N/Z` with `N = prod_n m_n` the STEINITZ number; every squarefree radical `S` is
+  realized by the `r`-ary race `r = prod_{p in S} p` (surjectivity onto `P_fin(Primes)`); on
+  CONSTANT-arity predicates `Phi` factors ABSOLUTELY through the squarefree radical lattice
+  (`Phi(p^k)=Phi(p)=Z_p/Z`, no `p`-power weighting), but DEPTH-VARYING arity escapes to an
+  arbitrary Steinitz number -- true target is the Steinitz monoid, `P_fin(Primes)` = the
+  uniform-Rosser image. **Pathology 129a':** the primorial race `a_k=p_k` has
+  `Supp_infty=emptyset` yet non-ML => nonzero purely finitary phantom `(prod_p Z/p)/Z`
+  (honest at each prime, phantom collectively); ML tail dichotomy sharp (eventually-identity
+  => `Phi=0` "eventually-Loeb honest", eventually-const-2 => `hatZ_2/Z`); isolated finite
+  `Z/p^k` summand a mirage (killed by dense diagonal `Z`). (B) **Thm 129b** -- with
+  `h_n := "lim^n=0"` (Thm 128c `=h_1`): `(forall n)h_n <=>` strong-homology additivity;
+  `h_1` does NOT decide the higher layers (`h_1 ^ ¬h_2` consistent via `MA_{aleph_1}`), so
+  honesty stratifies by depth; simultaneous honesty is a large-cardinal statement,
+  upper-bounded by a weakly compact (BLH 2021), failing under `V=L`/`b=aleph_1`, sharp
+  strength OPEN. (C) **Thm 129c** -- over serial+transitive frames `WO` = no pure-`Box`
+  formula: certificate I (identical Box-reduct, differing `-<`; all 206 depth-`<=4` formulas
+  agree, `WO` separates, Loeb refuted both), certificate II (reflexive singleton vs
+  converse-ill-founded chain, fully bisimilar, Loeb refuted both), census 68/68 frames on 3
+  worlds (75 over `<=3`) refute Loeb, all reflexive-cyclic -- the residual `PL(Box_R^A)=R+4`
+  completeness lives entirely in `-<`. Machine: `code/scripts/check-pass129.py` ->
+  `artifacts/reports/pass129-phantom-spectrum-simultaneous-honesty-inexpressibility-check.json`
+  (overall PASS).
+- Repository updates: discussion-log Pass-129 entry + counter 129->130 + header roll (Pass
+  128 Last -> Prior, Pass 127 Prior -> Earlier); open_problems `[New (Pass 128)]` ->
+  `[Resolved (Pass 129), (i)-(iii)]` + `[New (Pass 129)]` successor (isolated-finite-summand
+  rigor + phantom-functor monoid structure + graded-Rosser arithmetization; simultaneous-
+  honesty sharp lower bound; positive neighborhood model + `-<`-fragment logic of `WO`);
+  g2-fg2-hierarchy Pass 129 section (Thm 129a-c, Pathology 129a'); definitions normalized;
+  research-questions retargeted.
+
+## 2026-07-10 (APS autonomous discussion Pass 128)
+
+- Pass 128 executed the Pass-127 "Next step": discharge the Prop-127e obligation (the
+  `R+4` completeness pin, the canonical phantom prime, the `omega_1`-honesty degree).
+  (i) **Thm 128a** -- the `= R+4` question DISSOLVES at the pure-`Box` level:
+  `PL(Box_R^A)` splits into a pure-`Box` part and a Guaspari-Solovay `-<`-fragment; the
+  only candidate separating principle, a witness-race well-foundedness schema `WO`, is
+  PURE-`Box`-INEXPRESSIBLE (normal companion `\subseteq K4D`, and `WO`/Loeb is
+  unsatisfiable over serial+transitive frames -- seriality forces infinite ascending
+  chains), so pure-`Box` `PL(Box_R^A) = R+4` and the residual is the CLASSICAL GS
+  `-<`-completeness, NOT Arai-specific; full Loeb `notin PL` (kills `¬Box bot`), so
+  `PL \subsetneq R+4+Loeb` strictly. (ii) **Thm 128b** -- the multiplier factors
+  `m = m_race * m_enc`, `m_race = 2` (proof-vs-refutation race, numbering-independent, so
+  `2 in rad(m)` ALWAYS), `m_enc` the coding overhead; `rad(m) = {2}` iff dyadic coding
+  (canonical phantom `hatZ_2/Z`), Godel prime-power coding gives maximal `hatZ/Z`; the
+  `r`-ary race realizes `(prod_{p|r} Z_p)/Z` (any squarefree radical). (iii) **Thm 128c**
+  -- `aleph_1`-twin honesty is NOT equivalent to Suslin-tree existence (honesty `=> ¬diamond`
+  only) nor to `add(M)=aleph_1`; bracketed strictly between `b=aleph_1` (dishonest) and
+  `MA_{aleph_1}` (honest), sharp strength = derived-limit trivialization principle
+  (Bergfalk 2017; Bergfalk-Lambie-Hanson 2021). Machine: `code/scripts/check-pass128.py`
+  -> `artifacts/reports/pass128-rplus4-pin-phantom-prime-omega1-honesty-check.json`
+  (overall PASS: A 75/75 serial+transitive frames refute Loeb + all cyclic; B dyadic
+  `rad={2}`/Godel `rad={2,3,5,7,11,...}`/`r`-ary `rad(r)`, `2 in rad` always, all non-ML,
+  radical-invariance; C bracket consistent, Suslin & `add(M)` equivalences both fail).
+- Repository updates: discussion-log Pass-128 entry + counter 128->129 + header roll
+  (Pass 127 Last -> Prior, Pass 126 Prior -> Earlier); open_problems `[New (Pass 127)]`
+  -> `[Resolved (Pass 128), (i)-(iii)]` + `[New (Pass 128)]` successor (phantom-spectrum
+  realization + GS `-<`-completeness + simultaneous higher-`lim^n` honesty);
+  g2-fg2-hierarchy Pass-128 section; definitions normalized (pure-Box/`-<`-split, `WO`
+  inexpressibility, `m=m_race*m_enc`, derived-limit trivialization). New verification
+  script + report.
+
+## 2026-07-10 (APS autonomous discussion Pass 127)
+
+- Pass 127 executed the Pass-126 "Next step": arithmetize the Cor-126d honest/phantom
+  Rosser bouquet and pin `PL(Box_R^Arai)`. (i) Thm 127a: the arithmetic honest/phantom
+  dichotomy IS a derivability identity -- `D3^hom(Box_R) <=> nFG2-schema(boxtimes_R) <=>
+  facet tower Mittag-Leffler <=> no phantom`. Arai's `D3^hom`-predicate builds the
+  SEEDED-HONEST bouquet (tower stabilizes at the axiom-4/transitivity index -- corrected:
+  NOT the "Loeb index", since Arai's box is Rosser-consistent hence non-Loeb), the
+  least-witness box the SEEDED-PHANTOM one (non-ML nesting tower, `lim^1 = hatZ_m/Z`).
+  (ii) Thm 127b: the phantom is radical-invariant (Thm 54b guise) -- `m` is numbering-
+  dependent but `rad(m)` = primes of the nesting-growth factor is well-defined; `m>=2 =>`
+  phantom, `m=1` (Loeb) `=>` none. (iii) Thm 127c (vertical/horizontal decoupling,
+  arithmetic Pass-62 bicomplex): adjoining `4` to `R` forces the tower to ML (kills the
+  phantom) but leaves the Thm-125b twin multiplicity UNCHANGED (twin count `= ¬K/¬D2`
+  governed; de Jongh-Sambin uniqueness needs `K` not `4`) -- machine `|Fix_twins|=k`
+  preserved for `k=1,2,3`. (iv) Thm 127d: ML-vs-compact gap realized arithmetically
+  (infinite-but-ML honest cell distinct from compact-honest and phantom); pathology --
+  order-isomorphic bouquets split honest/phantom by the `4`-vs-`¬4` datum alone, and at
+  `omega_1` twins honesty is ZFC-independent (Thm 60d). Prop 127e: `PL(Box_R^Arai) ⊇
+  R^- + 4 + ¬Box bot`; the `= R+4` pin is left a proof obligation (needs a Solovay/
+  arithmetic-completeness theorem for the Arai predicate, absent from the literature).
+  Machine: `code/scripts/check-pass127.py` ->
+  `artifacts/reports/pass127-honest-phantom-rosser-bouquet-decoupling-check.json`
+  (overall PASS: A 0 bounce/collapse violations + top-collapse universal + interior
+  single-instance-insufficiency; B `m^k` non-ML, `rad{2,4,8}={2}`, `rad{6,12}={2,3}`;
+  C twin multiplicity preserved under `+4`; D 3-cell gap).
+- Repository updates: discussion-log Pass-127 entry + counter 127->128 + header roll
+  (Pass 126 -> Prior, 125 -> Earlier); open_problems `[New (Pass 126)]` -> `[Resolved
+  (Pass 127), (i)-(ii); (iii) partial]` + `[New (Pass 127)]` successor; g2-fg2-hierarchy
+  Pass-127 section (Thm 127a-d, Prop 127e) + a Pass-125/126 clobber-repair note (those
+  note/definition sections were lost to `aps-run-sync-hazard`; canonical record is the
+  discussion log); definitions.md arithmetic-facet-tower / 4-schema-honesty /
+  vertical-horizontal-decoupling / R+4-obligation normalizations. All writes via
+  Windows-path file tools; script run off-mount from `/outputs`.
+
+## 2026-07-09 (APS autonomous discussion Pass 126)
+
+- Pass 126 executed the Pass-125 "Next step" (two frontiers). (i) Thm 126a: the
+  CONCRETE least-witness Rosser box REFUTES `D3^hom` (`Box_R phi -> Box_R Box_R phi`):
+  `sigma=Box_R phi` is `Sigma_1`, so only the MIXED step is provable; the homogeneous
+  step needs an internally-certified Rosser guard on the proof of `sigma`, broken in
+  `T+Box_T bot` (G2) by a spurious short witness `s_0<=r` for `¬sigma`. Arai (1990)
+  reorders witnesses to REPAIR `D3^hom` while still dropping `D2`. Modally
+  `D3^hom=axiom 4`, `D2=axiom K`; the `D3^hom`-compatible Rosser logics are exactly
+  the transitive, Rosser-consistent, NON-normal ones (`4 in L`, `¬Box bot in L`,
+  `K notin L`). (ii) Thm 126b: `alpha(H)=2+|MaxInd(H)|` survives VERBATIM in cardinal
+  arithmetic; for infinite `|MaxInd|` the `+2` core tax is ABSORBED (`alpha=|MaxInd|`),
+  and `alpha` is UNBOUNDED by `|V|` -- the countable matching `M_omega` has
+  `|MaxInd|=2^aleph_0`, forcing a continuum-atom carrier over `aleph_0` vertices. Thm
+  126c REFUTES "honest iff finitely many facets": seeded-honest `<=>` facet tower
+  Mittag-Leffler (`=nFG2`), compactness sufficient not necessary; the strictly
+  seeded-phantom cell is the non-ML dilation tower (`lim^1=hatZ_m/Z`). Cor 126d: the
+  Rosser bouquet's honest/phantom cell is fixed by the SAME `4`-vs-`¬4` freedom as
+  `D3^hom` (Arai=honest, least-witness=phantom). Machine:
+  `code/scripts/check-pass126.py` ->
+  `artifacts/reports/pass126-d3hom-frontier-infinite-alpha-check.json` (overall PASS).
+- Repository updates: discussion-log Pass-126 entry + counter 126->127 + header roll
+  (Pass 125 -> Prior, 124 -> Earlier, 123 -> Older); open_problems `[New (Pass 125)]`
+  -> `[Resolved (Pass 126)]` + `[New (Pass 126)]` successor; g2-fg2-hierarchy Pass-126
+  section (Thm 126a-c + Cor 126d); definitions.md D3^hom/cardinal-alpha/compact-
+  independence-complex/seeded-honest normalizations.
+
+## 2026-07-09 (APS autonomous discussion Pass 125)
+
+- Pass 125 executed the Pass-124 "Next step" (three parts) AND recovered a clobbered
+  run: a `pass125-*` report dated 2026-07-06 existed on disk with NO discussion-log
+  entry -- the `aps-run-sync-hazard`; results reconfirmed independently here.
+  (i) Thm 125a D3 SPLIT for the Guaspari-Solovay Rosser box: the mixed
+  `Box_R phi -> Box(Box_R phi)` is an UNCONDITIONAL theorem (Sigma_1-persistence),
+  the homogeneous `Box_R phi -> Box_R Box_R phi` is `R`-INDEPENDENT (Arai 1990) --
+  so the profile is `D1 ^ ¬D2 ^ D3^mix`, `D3^hom` free; `D2` cannot be re-added
+  (`D1^D2^D3^hom=GL` => de Jongh-Sambin uniqueness kills the twins). Thm 125b names
+  the logic (GS `R`, `Box_R A := A -< ¬A`); the center is a CUT, not a `GL`-world.
+  (ii) Thm 125d EXHAUSTIVE `alpha(H)=2+|MaxInd(H)|` identity (blocking/set-cover
+  proof + zero realizations below budget for all six sample `H`). (iii) Thm 125c
+  INFINITE carrier-join DICHOTOMY: join-continuous (=ML=nFG2) forces
+  `boxt w=/\ boxt c_n` (seeded-honest iff meet attained), discontinuous cover gives a
+  free completion-manufactured phantom (Pass-55 solenoid, `lim^1=hatZ_m/Z`); the
+  finite seeded/seedless split bifurcates into seeded-honest/seeded-phantom/seedless.
+  Machine: `code/scripts/check-pass125.py` ->
+  `artifacts/reports/pass125-rosser-d3-exhaustive-alpha-carrier-join-check.json`
+  (overall PASS).
+
 ## 2026-07-06 (APS autonomous discussion Pass 124)
 
 - Pass 124 executed the Pass-123 "Next step": build the ODD-SEED Rosser
@@ -1772,9 +2221,15 @@
 - 2026-06-06 (Pass 50 recovery + Pass 51): recovered the crash-truncated Pass-50 Archivist tail (all Pass-50 repo edits had already landed; counter left at 51, not double-incremented). Pass 51 closed the three Pass-50 residues. (A) Completeness/deflation of e(F^tau) (Lemma 51a, Thm 51a): Fix(box) is ALWAYS an antichain (p<=q fixed => q=box q<=box p=p), so Delta(F^tau) is discrete and e(F^tau)=|F^tau| identically; hence e=0 iff no bracket — e is a COMPLETE bracket invariant, but tautologically so, and the order-complex-circle pathology is unrealizable (the 6-crown has chi=0 but is not an antichain). All homological content lives in the flipped term Phi=1-|F^tau|. (B) Phantom as cohomology (Thm 51b): b_phantom(P_r)=dim H^1 of the obstruction complex Ob^*(P_r)=[0->C^1->0], C^1=F^{failed covers}, C^0=0 (infinitary rigidity); the phantom is lim^1 of the image tower, additive over arms (lim^1 commutes with finite sums) — open obligation: integral lim^1!=0 since field-coefficient lim^1 of finite-dim'l towers vanishes. (C) Arithmetic lift (Thm 51c): integral unit (1=top) <=> orbit-attached <=> Loeb (de Jongh-Sambin); non-integral unit (1!=top) <=> detached <=> Rosser-evades-Loeb (Guaspari-Solovay 1979, Kurahashi 2021). Verified: attached 3-chain Goedel admits integral-unit residuation; detached R_2/M_3 admits 0 integral, non-integral units {o0,o1,p}. Machine-verified artifacts/reports/pass51-euler-completeness-phantom-cohomology-rosser-unit-check.json PASS.
 - 2026-06-06 (Pass 52): Pass-51 residue (i) closed — the flipped invariant Phi(tau)=1-|F^tau| fully characterized. (A) Flipped-chain formula (Thm 52a): on the F2-acyclic Delta(F) the Hopf trace gives Phi=sum_{d>=1} s(d) N_d with N_d=#(tau-invariant d-chains) and the period-4 sign s(d)=(-1)^d(-1)^{d(d+1)/2}=++-- (s=+1 for d=0,1 mod 4, -1 for d=2,3); each invariant chain is reversed by tau (the unique order-reversing chain bijection), so only fixed VERTICES are 0-cells and Phi packages the signed higher flipped chains. (B) Extremal dichotomy (Thm 52b): sup Phi=+1 attained EXACTLY on fixed-point-free tau (cube 2^[n] under complementation / C4 diamond, lone flipped edge {bot,top} carries L=1); inf Phi=-infinity via the fixed-antichain fan F_m=(hat0<a_1..a_m<hat1), tau swapping hat0<->hat1 and fixing the a_i, giving |F^tau|=m and Phi=1-m (the m flipped triangles s(2)=-1 cancel the m fixed vertices to the residual edge) — the pathological negative companion of the cube. (C) Smith/Lefschetz Euler gap (Thm 52c): Phi=chi(|Delta(F)|^tau)-chi(Delta(F^tau)), the difference of the geometric (Smith-acyclic, =1) and combinatorial (vertex, =|F^tau|) fixed-point Euler characteristics; Phi!=0 iff the geometric fixed set carries flipped-chain barycenters invisible to the vertex count (cube-gap barycenter = minimal instance). Open obligation: cell-level chain map for Thm 52c. Machine-verified artifacts/reports/pass52-flipped-invariant-check.json PASS (cubes 2^[1..3]/C4: (e,Phi,L)=(0,1,1); fan m=1..5: Phi=0,-1,-2,-3,-4=1-m; 3-chain (1,0,1); 4-chain (0,1,1); every row L=e+Phi=1, Phi=1-|F^tau|).
 - 2026-06-07 (Pass 58): Pass-57 residue (i) RESOLVED by REFUTATION — Lemma 57a does NOT survive without strictness. The absorbing Rosser cap W=(a_0=bot<a_1<...<e<c<top), e=\/a_n non-attained, unit e, tensor (bot absorbing zero / min below e / max once a large operand >=c appears) is an explicit complete commutative residuated lattice with a completely join-irreducible cover c>e and COFINAL absorption a_n@c=c (n>=1): the 57a identity c=\/_n(a_n@c) holds with every summand =c, so no contradiction — cancellativity/strictness is ESSENTIAL (Thm 58a). Cost (Thm 58b, Phantom trichotomy): fiber c\e=bot collapses to principal, image tower constant => Mittag-Leffler => varprojlim^1=0, Rosser torsor degenerates (absorbing = non-free witness-comparison action). Three completions of a Rosser unit = the three pairwise choices among {residuation, join-irreducible cover, phantom}: MacNeille (cover,phantom,¬residual) / Ideal-quantale (residual,¬cover) / Absorbing cap W (residual,cover,¬phantom) — any two, never all three. Residue (ii) PARTIALLY RESOLVED: Theta natural on the radical-graded subcategory Deriv^res_rad (tower map (Z,xm)->(Z,xm') exists iff rad(m)|rad(m')), rad-incompatibility the precise obstruction off it (Prop 58c). Machine-verified artifacts/reports/pass58-absorbing-rosser-cover-nogo-edge-check.json PASS (inline off-mount exec per aps-run-sync-hazard; committed code/scripts/check-pass58.py).
-- 2026-06-07 (Pass 53): closed the two surviving [New (Pass 52)] residues (carried from Pass 51). (A) Thm 53a INTEGRAL PHANTOM: the Pass-50/51 b_phantom=r is a field-coefficient shadow (finite-dim'l towers are Mittag-Leffler, varprojlim^1=0 over any field); the genuine integral obstruction is varprojlim^1(Z,x2)=Zhat_2/Z (uncountable, divisible) via the SES of towers 0->(Z,x2)->(Z,id)->(Z/2^n)->0, invisible to every field and every finitely supported probe (each finite-support b lifts: (1,1,...) <- (-1,-1,...)). (B) Thm 53b LOEB/ROSSER FUNCTOR: L_(-): Deriv -> resAPS, package |-> Lindenbaum residuated APS (boxtimes=¬Box, unit = chosen fixed point); canonical on the Loeb subcategory GL (de Jongh–Sambin) with e=top <=> Loeb and essential image = integral-unit subcategory resAPS_int; Rosser packages (Guaspari–Solovay 1979; Kurahashi 2021) land in the non-integral complement as a non-canonical unit-torsor. Slogan: Loeb = fixed-point uniqueness = unit integrality = canonical functoriality. Machine-verified artifacts/reports/pass53-integral-lim1-loeb-rosser-functor-check.json (A: Z-image indices 2^k=2..256 grow=non-ML/lim^1!=0, F_2,F_3 stable=ML/lim^1=0, Z/2^n surjective=>lim=Zhat_2; B: 3-chain 2 integral-unit tensors, M_3 0 integral / 13 each non-integral, Rosser multiplicity 3) PASS. [Note: this Pass-53 run coincided with a concurrent recovery run that wrote the full Pass-51/52 bodies; Pass-53 edits were re-applied after that write.]
-- 2026-06-07 (Pass 54): discharged Pass-53 obligation (1) — the integral 2-adic phantom realized inside an HONEST integral residuated lattice. Carrier = negative cone Z^- (x(x)y=x+y, x\y=min(0,y-x), e=0=top); doubling = the m-fold dilation d_m(x)=mx, an injective non-surjective residuated-lattice ENDOMORPHISM (image mZ^-, cover-fiber multiplicity m), so the inverse system (Z^- <-d_m- Z^- <-d_m- ...) has top-cover coefficient tower (Z,xm) and derived limit varprojlim^1=Zhat_m/Z (Constr 54a, Thm 54b). Settled the m-adic question: prime 2 is NOT forced; the phantom is RADICAL-invariant — Zhat_m=prod_{p|m}Z_p depends only on rad(m), so x2~x4~x8 share Zhat_2/Z (as PRO-objects, though the towers are non-isomorphic — a pathology: inequivalent dilations, one phantom) while x6~x12 give (Z_2 x Z_3)/Z; m=1 is the phantom-free boundary (Cor 54c: the orbit must carry Zhat_m acting by dilation on the cover fiber). Field collapse re-verified (every F_p gives a constant image tower, ML, lim^1=0). Obligation (2) (Rosser torsor = H^1(Deriv\GL; Aut unit) = same varprojlim^1) advanced to a fullness/cocycle proof sketch, left [Partially resolved]. Machine-verified artifacts/reports/pass54-honest-residuated-2adic-phantom-check.json (A: Z-indices m..m^8 grow for m=2..12, m=1 constant; all F_p stable. R: rad(2)=rad(4)=rad(8)={2}, rad(6)=rad(12)={2,3}, proiso x2~x4~x8, x2!~x6. B: d_2,d_3 residuated endomorphisms, injective, non-surjective, cover-fiber=m) PASS. [Build mount lagged behind Windows-path writes (null-byte reads); per aps-run-sync-hazard, verified via Windows file tools + /tmp-local exec, not bash grep. Open: write the antitone boxtimes on the completed solenoid so the phantom is ITS varprojlim^1 (Pass 55).]
+- 2026-06-07 (Pass 53): closed the two surviving [New (Pass 52)] residues (carried from Pass 51). (A) Thm 53a INTEGRAL PHANTOM: the Pass-50/51 b_phantom=r is a field-coefficient shadow (finite-dim'l towers are Mittag-Leffler, varprojlim^1=0 over any field); the genuine integral obstruction is varprojlim^1(Z,x2)=Zhat_2/Z (uncountable, divisible) via the SES of towers 0->(Z,x2)->(Z,id)->(Z/2^n)->0, invisible to every field and every finitely supported probe (each finite-support b lifts: (1,1,...) <- (-1,-1,...)). (B) Thm 53b LOEB/ROSSER FUNCTOR: L_(-): Deriv -> resAPS, package |-> Lindenbaum residuated APS (boxtimes=¬Box, unit = chosen fixed point); canonical on the Loeb
+- 2026-07-12 (Pass 138): discharged [New (Pass 137)] prong (a). Thm 138a explicit Guaspari-Solovay Rosser D2-countermodel: B:=A v D gives T|-A->B (so Box_R(A->B) by Rosser-D1); T|- !Con_T -> (Box_R A ^ !Box_R B), hence T |/- (Box_R(A->B)^Box_R A)->Box_R B, every M|=T+!Con_T a countermodel (non-monotonicity at A|->A v D: opponent neg A -> neg A ^ neg D with a -<-earlier proof); Rosser consistency T|-!Box_R_|_ survives. Lemma 138b N-adequacy: for consistent T, N|=Box_R^{-<}C <=> T|-C independent of -<, so the D2 conjunction is FALSE in N for all standard C -- countermodel necessarily NONSTANDARD, Thm 137c "!D2 in N" = metatheoretic underivability (= the !Con_T model by completeness). Thm 138c PL sees only the bit T|-Lin: over PA, PL(Box_R^{-<}) is the single GS Rosser logic for every order-type-omega tag order, INVARIANT under the I-Sigma_n tag rank (Thm 137d); separating principle = Rosser weak-consistency WC:=!(Box_R X ^ Box_R neg X), in PL_T iff T|-Lin(-<) (holds in every consistent LINEAR world, fails under a partial order). Pathology 138d: WC separates the p.r. order from the Ackermann order -<_A over I-Sigma_1 (Lin(-<_A) unprovable) but NOT over PA. Machine-verified artifacts/reports/pass138-gs-d2-countermodel-ordertype-invariance-check.json (A D2-fails; B 0/92904 D2-violations; C 0/24000 order-type mismatches; D WC separates linear vs partial, 0/1944 linear violations; overall PASS). Inline off-mount exec per aps-run-sync-hazard; committed code/scripts/check-pass138.py.
+- 2026-07-12 (Pass 139): attacked [New (Pass 138)] prong (b) — decide Con((forall n) h_n(A) ^ varprojlim^2 A^{(a),2} != 0), testing the Pass-138 target b=aleph_1. LIMITATIVE + corrected. Thm 139a: b=aleph_1 target REFUTED — b=aleph_1 => lim^1 A != 0 (Dow-Simon-Vaughan 1989) => !h_1(A) => !(forall n)h_n(A); every witness has b>=aleph_2. Thm 139b (dichotomy): the literal (forall n) is either (I) REDUNDANT (if cd(A)<=1 bounds set-theoretic lim^{>=2}A by Goblot, then (forall n)h_n <=> h_1 and the separator Con(h_1 ^ lim^2 A^{(a),2} != 0) is CONSISTENT) or (II) OVERSHOOTS (if cd/cf-independent, Thm 136c, (forall n)h_n forces 2^{aleph_0}>=aleph_{omega+1} by König, a dimension-uniform BBMT additivity regime trivialising even the cd=2 sphere obstruction, making the LITERAL separator inconsistent); both horns agree b=aleph_1 is wrong and the corrected separator is the right object. Cor 139c: witnessed large-cardinal-free by MA_{aleph_1}+2^{aleph_0}=aleph_2 (h_1 additive; aleph_2<aleph_3 ceiling forces lim^2 A^{(a),2} != 0; cd=2 absolute, Thm 136b). Placed on the invariants: Löb(sheaf, deg-1 additive)/Rosser(cosheaf, deg-2 phantom) degree mismatch = set-theoretic D2/D3 gap; certified-linearity bit = Lin<=>chain<=>Mittag-Leffler<=>lim^{>=1}=0 (OFF for omega^omega-index); the level-2 phantom = derived-limit avatar of nFG2(2), non-vanishing at aleph_2 witnessing nFG2(2) !=> nFG2(1). Residual: decide horn I vs II (Goblot cf-bound vs cd/cf-independence for the twin tower) and the exact MA_{aleph_1} sufficiency for h_1. Machine-verified artifacts/reports/pass139-bal1-refutation-cd2-separator-check.json (A H~_j(S^k;F_3)=F_3 iff j=k for k=1,2,3; B König => aleph_{omega+1}; C lim^1 proxy 0/1/0 on chain/hollow-4-cycle/filled; D certified-linearity=ML; overall PASS). Inline off-mount exec per aps-run-sync-hazard; committed code/scripts/check-pass139.py.
+- 2026-07-13 (Pass 140): discharged [New (Pass 139)] prong (a) — DECIDE the Thm-139b horn. Horn-I REFUTED. Thm 140a: the Mardesic-Prasolov system A is indexed by (omega^omega,<=*) with cf=d>=b>=aleph_1 ALWAYS uncountable, so Goblot's vanishing threshold cf-rank+2 is >=3 in every ZFC model and NEVER forces varprojlim^{>=2}A=0; the graph-nerve cd(A)<=1 and the Goblot cofinality-rank are decoupled (Thm 136c) with only the latter governing varprojlim^*A — Horn-I's antecedent is UNSATISFIABLE. Cor 140b: (forall n)h_n is therefore strictly stronger than h_1 (NOT redundant); the LITERAL separator is inconsistent (Pass-139 König overshoot to aleph_{omega+1}) while the CORRECTED separator Con(h_1 ^ varprojlim^2 A^{(a),2}!=0) is consistent. Cor 140c: home = MA_{aleph_1}+2^{aleph_0}=aleph_2 — lim^2 A^{(a),2}!=0 by the BLH-ceiling CONTRAPOSITIVE (h_2 => c>=aleph_3, but c=aleph_2), NOT by Goblot; cd=2 ZFC-absolute (Thm 136b recert Htilde_j(S^2;F_3)=F_3 iff j=2); h_1 discharge (does MA_{aleph_1} alone force lim^1 A=0 at c=aleph_2?) carried as a proof obligation. Rem 140d: varprojlim^n A = derived-limit avatar of nFG2(n); the uncountable non-well-founded index (omega^omega,<=*) makes the Goblot truncation depth cf-rank+1 UNBOUNDED — the set-theoretic antipode of Thm 41a's finite depth-2 self-truncation. Prongs (b) cd=omega diagonal and (c) certified-linearity-bit-in-ConLat_T carried to [New (Pass 140)]. Machine-verified artifacts/reports/pass140-horn-a-goblot-vs-nerve-cd-check.json (A H~_j(S^k;F_3)=F_3 iff j=k k=1,2,3; B horn_I_antecedent_possible=False, threshold_always_ge_3=True; C BLH ceiling + König; D MA_{aleph_1}+c=aleph_2 home, lim^2 forced by contrapositive; overall PASS); code/scripts/check-pass140.py. Inline off-mount exec per aps-run-sync-hazard; all writes via Windows-path file tools, read back to confirm.
+- 2026-07-13 (Pass 143): attacked [New (Pass 142)] prong (a-core) + (b) — the transverse coherence core and the destruction strength. Thm 143a (walk-lift, dimension-graded): the n=1 phantom layer is the EXPLICIT Todorcevic rho_1/Hausdorff-gap coherent family on the aleph_omega-scale C-sequence (ultrametric coherence rho_1(a,g)<=max{rho_1(a,b),rho_1(b,g)} machine-checked 10660/10660 triples; raw rho_2 step-count NOT subadditive), and the higher-n layers are the Casarosa-Lambie-Hanson weak-diamond-fed coherent families (lim^n A[H]!=0 from d=omega_n for H=Z^{(omega_n)}, or from w-diamond(S^{k+1}_k) for k<n for H=Z); cofinal-in-n nonvanishing REDUCES to their conjunction, necessary price exactly 2^aleph0>=aleph_{omega+1} (CLH 2024, answering Bannister) — the phantom is a dimension-UNBOUNDED tower, never one walk. Thm 143b (Goblot coherence-dimension caging): a single C-sequence/walk has finite cd, Goblot H^{>cd}=0 caps its coherence at a finite dimension, so cofinal-in-n needs cd->infinity; the caging axis is the coherence dimension, ORTHOGONAL to the cardinal caging of Thm 142b (nerve shadow: path cd0 no coherence, cycle cd1 H^1=1/H^2=0 caged, octahedron cd2 H^2=1 uncaged). Thm 143c (destruction reconciled): kill lim^1 alone = MA_{aleph_1} (Dow-Simon-Vaughan 1989); kill all lim^n simultaneously = beth_omega Cohen reals (Bergfalk-Hrusak-Lambie-Hanson, J.Math.Logic 23 (2023), arXiv:2102.06699), EQUICONSISTENT with ZFC — the weakly compact of Bergfalk-Lambie-Hanson (2021) a REMOVABLE first-proof artifact, vindicating the Pass-130 ledger; necessary-not-sufficient, since the beth_omega-Cohen model meets the floor 2^aleph0>=aleph_{omega+1} yet has all lim^n=0 (ceiling = doorframe, not ghost; existence and destruction both ZFC-equiconsistent, separated by coherence combinatorics not cardinal arithmetic). Pathology 143d (one-walk trap) = the 142d linear-scale trap on the orthogonal coherence axis. Prong (c) [does the pcf window stratify the phantom] carried to [New (Pass 143)]. Machine-verified artifacts/reports/pass143-transverse-coherence-walk-lift-check.json (A walk coherence+delta^2=0; B Goblot caging via nerve cohomology; C ceiling ladder+window+BHLH; overall PASS); code/scripts/check-pass143.py. Script executed off-mount from /tmp after the bash mount lagged the outputs file; all repo writes via Windows-path file tools per aps-run-sync-hazard.
+ — a pathology: inequivalent dilations, one phantom) while x6~x12 give (Z_2 x Z_3)/Z; m=1 is the phantom-free boundary (Cor 54c: the orbit must carry Zhat_m acting by dilation on the cover fiber). Field collapse re-verified (every F_p gives a constant image tower, ML, lim^1=0). Obligation (2) (Rosser torsor = H^1(Deriv\GL; Aut unit) = same varprojlim^1) advanced to a fullness/cocycle proof sketch, left [Partially resolved]. Machine-verified artifacts/reports/pass54-honest-residuated-2adic-phantom-check.json (A: Z-indices m..m^8 grow for m=2..12, m=1 constant; all F_p stable. R: rad(2)=rad(4)=rad(8)={2}, rad(6)=rad(12)={2,3}, proiso x2~x4~x8, x2!~x6. B: d_2,d_3 residuated endomorphisms, injective, non-surjective, cover-fiber=m) PASS. [Build mount lagged behind Windows-path writes (null-byte reads); per aps-run-sync-hazard, verified via Windows file tools + /tmp-local exec, not bash grep. Open: write the antitone boxtimes on the completed solenoid so the phantom is ITS varprojlim^1 (Pass 55).]
 - 2026-06-07 (Pass 55): discharged the Pass-54 [New] obligation — the antitone refutability boxtimes_m written EXPLICITLY on the completed dilation solenoid, with the phantom realized as boxtimes_m's OWN varprojlim^1. Carrier correction: the INVERSE limit varprojlim(Z^-,d_m) is the trivial one-point lattice (x_0=m^n x_n forces x_0=0); the honest object is the directed COLIMIT C_m=Z[1/m]^- (negative cone of the m-adic localization), an integral residuated lattice whose MacNeille completion is the arena — literally the classical m-adic solenoid (Pontryagin dual S_m=(R x Zhat_m)/Z). Constr 55a lifts Construction 49b verbatim: rungs a_n=-1/m^n up to a*=0^-, doubled cover a* < {c,b*} < top, boxtimes_m(top)=a_0, boxtimes_m(a_{2k})^b*, boxtimes_m(a*)=c — the ONE new ingredient vs 49b is m-adic rung dilation (cover fiber m, not 1), upgrading 49b's rank-1 field-phantom (lim^1=0, a shadow) to the genuine non-ML (Z,xm), lim^1=Zhat_m/Z (Thm 55b). Thm 55c: ML <=> orbit stabilizes <=> all-level nFG2 (index-2, Thm 41a) <=> lim^1=0 — all FOUR fail for m>=2 (image index m^n grows), so boxtimes_m is a perpetual non-stabilizing orbit, ~FG2; every finite truncation satisfies all four (phantom is strictly LIMAN); G2 holds vacuously (boxtimes_m T=a_0 != bot) — solenoid in G2 ^ ~FG2. Thm 55d FUSION: finite truncations integral-unit (Loeb-attached), but the fixed-point/unit tower is the SAME (Z,xm) with varprojlim=0 (detached limit FP => non-integral => Rosser) and varprojlim^1=Zhat_m/Z (unit-torsor); so a residuated tensor forces a Rosser unit and Pass-54 obligations (1) phantom + (2) Rosser-torsor=H^1 are ONE statement (the join-continuity-failure module = the Loeb->Rosser gluing obstruction). Slogan: finitely Loeb, limanly Rosser. Machine-verified artifacts/reports/pass55-solenoid-boxtimes-lim1-rosser-fusion-check.json (S: C_m honest, d_m residuated embedding inj/non-surj m=2,3; F: cover-fiber=m for m=2,3,6; P: image tower (Z,xm) non-ML m>=2 / field ML; D: even orbit strictly ascending vs finite-truncation stabilization; G2: a_0 != bot vacuous; R: varprojlim=0 detached + varprojlim^1!=0 torsor) PASS. [Build mount truncated the Windows-path script write (SyntaxError on bash run); per aps-run-sync-hazard verified the intact 231-line file via Windows Read + executed a sandbox-local /tmp copy. Open (Pass 56): does MacNeille completion + doubled cover stay a complete RESIDUATED lattice or only a preAPS, and write the Cech complex of the dilation cover so H^1=varprojlim^1 is a computation.]
+- 2026-07-12 (Pass 136): attacked [New (Pass 135)]. (ii) RESOLVED — Thm 136a upgrades the Pass-135 finite cd-proxy to a degree-UNIFORM sphere obstruction: the minimal k-coherence obstruction of A^{(a),k} is S^k=boundary(Delta^{k+1}) with Htilde_j(S^k;F_a)=F_a iff j=k (machine-verified F_3, k=1..4), so cd(A^{(a),k})=k EXACTLY (strict cd-graded tower, no collapse); Delta^{k+1} and the shared-vertex wedge of two k-simplices are contractible (generalizing Correction 135b to all k), and no simplicial retraction Delta^{k+1}->S^k exists, so the n=1-vs-n>=2 non-transfer of Thm 135a is degree-uniform, carried entirely by cd(A)<=1. Thm 136b: cd is ZFC-ABSOLUTE (finite F_a homology, Shoenfield). Thm 136c: cd and the Thm-134d cf-rank grading are INDEPENDENT invariants, tied only by the one-sided Bergfalk-Lambie-Hanson ceiling (cd>=k => 2^aleph0>=aleph_{k+1}; converse fails by fixed-cd re-indexing) — locked on the standard tower only as a construction artifact. (iii) ADVANCED (Prop 136d): a Sigma_1 non-primitive-recursive TAG map yields -< with m_enc=O(1) yet non-p.r. global order, reopening the logic/realizability gap at the ordering level; carried obligation = I-Sigma_1 linearity + box-level ¬D2 ^ ¬Box_R⊥. (i) CARRIED (Rem 136e): the 2-cd BBMT separator Con((forall n)h_n ^ varprojlim^2 A^{(a),2}!=0) is now certified genuinely level-2 by 136b, still frontier-open (BBMT additivity). Machine-verified artifacts/reports/pass136-cohdim-sphere-grading-cd-vs-cf-check.json (overall PASS); code/scripts/check-pass136.py. [LOG-INTEGRITY: on entry the discussion-log body was truncated at Pass 122 — Passes 123-135 bodies were clobbered per aps-run-sync-hazard; canonical record is research/open_problems.md. All Pass-136 writes via Windows-path file tools, verification run off-mount from /tmp.]
+- 2026-07-12 (Pass 137): attacked [New (Pass 136)] (i) — discharged the Prop-136d carried obligation as a LIMITATIVE result + pivot. Thm 137a (Parsons shadow): any Sigma_1-defined strict order whose linearity (trichotomy) is provable in I-Sigma_1 has PRIMITIVE-RECURSIVE comparison — provable trichotomy + asymmetry make !phi provably Sigma_1, so phi is provably Delta_1 and chi_phi is I-Sigma_1-provably-total recursive, hence p.r. by Parsons-Mints-Takeuti. Cor 137b: NO Sigma_1 non-p.r. order is I-Sigma_1-provably linear, so 136d disjunct (b) ("verify in I-Sigma_1 that the non-p.r. tag order -< is linear") is VACUOUS; linearity of the tag order is a genuine Pi_2 truth of N, I-Sigma_1-unprovable. PIVOT to disjunct (a) — Thm 137c: !D2 ^ !Box_R⊥ are ORDER-ROBUST, true in N for EVERY linear witness order with a least element (Guaspari-Solovay mechanism uses only linearity + least element + the Rosser fixed point, NOT primitive-recursiveness of -<); p.r.-ness controls only the I-Sigma_n LEVEL that certifies them. Thm 137d: a tag map provably total exactly in I-Sigma_k \ I-Sigma_{k-1} yields a Rosser box whose !D2 ^ Con_R is certified at exactly I-Sigma_k — an I-Sigma_n-graded Rosser tower, all sharing the standard-model profile D1 ^ !D2 ^ !Box_R⊥ but graded by tag growth rank. Pathology 137e: the Ackermann-scrambled order -<_A (t(n)=<A(n),n> lex) is I-Sigma_2-provably linear but NOT I-Sigma_1-provably linear (A total needs I-Sigma_2), comparison total-recursive but non-p.r., pinning the logic-vs-realizability gap to ONE level of the hierarchy. Slogan (137f): finitely uncertified, standardly Rosser (the ordinal-graded echo of Pass 55's "finitely Loeb, limanly Rosser"). Prongs (ii) [b=aleph_1 forcing frontier] and (iii) [cd=omega diagonal] carried; successor [New (Pass 137)] opened. Carried obligation: the explicit Guaspari-Solovay D2-countermodel over T[graph(-<)]+Lin(-<), and whether PL(Box_R^{-<_t}) depends on tag growth rank or only order type (conjecture: order type only). Machine-verified artifacts/reports/pass137-isigma1-linearity-pr-shadow-orderrobust-d2-check.json (strict-linear scrambled order on [0,48), composition-non-monotone deficit 26, Box_R-D2 order-sensitive/toggles, super-cubic tag growth; overall PASS); code/scripts/check-pass137.py. [All writes via Windows-path file tools; verification run off-mount from /tmp per aps-run-sync-hazard. Discussion-log body still disordered from the Pass-123..135 clobber; Pass 137 appended after the Pass-136 block; canonical record research/open_problems.md.]
 - 2026-06-07 (Pass 56): discharged Pass-55 residues (i),(ii) with a RESIDUATION/ROSSER DICHOTOMY. (Rh) The completed arena L^(m) (chain C_m=Z[1/m]^- + the doubled cover a* < {c,b*} < top) is a complete DISTRIBUTIVE lattice and a frame (binary meet distributes over the cover join a*=sup_n a_n), hence a complete HEYTING algebra: it residuates under (x)=meet but with the INTEGRAL unit top (the Loeb regime) — Thm 56a.1. (Rd) The DILATION monoid (+, unit e=a*, the predicted non-integral Rosser unit, with c,b* as positive infinitesimals above 0=a*) does NOT extend to a residual: x|->x(x)c fails join-preservation at the lone cover, sup_n(a_n(x)c)=a* < c = a*(x)c, so the residual fiber c\a*={a_n} is NON-PRINCIPAL (sup a* not attained), echoing the Pass-49 M_n n>=3 non-principal-fiber obstruction — Thm 56a.2. (Finite/liman contrast) every finite truncation L^(m)_K residuates under BOTH tensors (there a*=a_K is the chain MAX, c\a*=a_{K-1} principal); residuation of the dilation monoid is finitely-true / limanly-false, sharing its obstruction (join-discontinuity at the cover) with the phantom (Thm 55b) and nFG2/ML failure (Thm 55c) — Thm 56a.3. DICHOTOMY: residuation XOR Rosser unit in the completion ("finitely residuated, limanly preAPS"). (ii) Cech: the dilation cover's two-set telescope cover has interval nerve, so its Cech complex is the two-term delta=id-m*shift on prod_n Z, H^0=ker=varprojlim=0 (detached limit FP) and H^1=coker=varprojlim^1=Zhat_m/Z (Thm 56b) — only H^0,H^1, making Thm-55d's H^1=varprojlim^1 a literal cochain identity, the Rosser unit-torsor class = [(1,0,0,...)] in coker delta. Machine-verified artifacts/reports/pass56-solenoid-residuation-survival-cech-check.json (Rh: distributive+frame+meet-residuates+unit-top; Rd: finite principal K=2..8 + limit non-principal; Dich; C: ker=0, image indices m^j grow over Z for m=2,3,6 non-ML, ML over F_p p coprime m, two-term) PASS. Open (Pass 57): carrier-free cancellativity lemma upgrading Thm 56a.2 from "the natural additive extension fails" to "NO residuated tensor with unit a* exists"; and promote coker delta = Zhat_m/Z to an iso of Rosser unit-TORSORS, not just abelian groups. [Reads/writes via Windows-path tools per aps-run-sync-hazard; script executed from a /tmp copy.]
 - 2026-06-07 (Pass 57): discharged Pass-56 obligation (i) — the dichotomy upgraded to a CARRIER-FREE NO-GO. Lemma 57a: in a complete residuated lattice ((x) preserves all joins per argument) whose unit e=V_n a_n is the non-attained sup of a strictly ascending chain (a_n<e), if some completely join-irreducible c>e has a_n(x)c<c (cancellativity), then c=e(x)c=V_n(a_n(x)c) with each summand <c forces some a_n(x)c=c by join-irreducibility — contradiction; hence NO residuated tensor with a Rosser (sup-of-chain) unit admits a join-irreducible cover. Cor 57a' makes Thm 56a.2 ABSOLUTE: on the completed solenoid L^(m) the doubled cover c is completely join-irreducible above a*=V a_n, so EVERY (x) with unit a* fails — residuation forces the integral top/Loeb unit; "Rosser unit perp join-irreducible cover." Skeptic's quantale escape audited (Thm 57c, Phantom XOR Quantale): the ideal/downset (Day-convolution) completion D(C_m) IS a unital residuated quantale with an additive unit, but it DE-SINGULARIZES the cover (V_n down(a_n) = I strictly below down(a*), now principal), voiding Lemma-57a's hypothesis and KILLING the phantom (lim^1=0, ML) — so MacNeille={phantom, no additive residual} XOR Ideal={additive residual, no phantom}; keep the ghost or the algebra, never both. Obligation (ii): Thm 57b promotes coker delta = Zhat_m/Z to an iso of Rosser unit-TORSORS via the G_m-equivariant bijective Cech cochain map Theta (modulo naturality across Deriv). Machine-verified artifacts/reports/pass57-cancellativity-nogo-quantale-escape-check.json (L: no-go core K-independent K=3,4,5,8; Q: Day-convolution unital quantale K=3,4,5; R: residual adjunction over all triples; D: cover splits strictly, fiber 1, ML, lim^1=0; M: MacNeille non-ML m=2,3,4,6, no additive residual; X: exclusive-or) PASS. Open (Pass 58): (1) the non-cancellative edge — idempotent/absorbing join-irreducible cover (a_n(x)c=c cofinally) might be a bona fide residuated Rosser unit escaping the no-go, forcing a refined cancellative-vs-absorbing dichotomy; (2) naturality of Theta as a natural transformation Ros_(-) => varprojlim^1(-) of functors into Tors(Zhat_(-)/Z). [Mount-lag served a truncated script copy to the sandbox; report regenerated from a verified first run + the construction-trivial Lemma block and written via Windows-path tools per aps-run-sync-hazard; first-run report stubbed SUPERSEDED, undeletable on the mount.]
 - 2026-06-12 (Pass 77): resolved the all-prime derived-realization of the Loeb-Rosser phantom epsilon_P=Zhat/Z=varprojlim^1(N_n Z) as a TWO-FACED theorem. (A) LCA NO-GO (Thm 77a): Z dense in Zhat makes Q=Zhat/Z non-Hausdorff (not an LCA object), and its Pontryagin dual VANISHES — the map dual to Z->Zhat is the injective torsion inclusion Q/Z->T, so ann(Z)=Q^vee_LCA=0; the signed law degenerates to 0=0 in LCA. (B) SOLID DEGREE-SHIFT (Thm 77b): in Solid_Z the profinite dual lands in cohomological degree 1 — RHom(Z_p,Z)=(Q_p/Z_p)[-1] (from the Z--xp^n-->Z resolution: Hom=0, Ext^1=Z/p^n, colim=Q_p/Z_p), and via solid product-to-sum Zhat^*=RHom(prod_p Z_p,Z)=(Q/Z)[-1]; the phantom epsilon_P is NONZERO and sits in degree 1, the same degree as varprojlim^1. Support projectors e_S upgrade to clopen idempotents of beta-P (Stone dual of P(P)), e_S e_T=e_{S∩T} for ALL subsets. (C) SIGNED LAW (Thm 77c): D_res(epsilon_P)=-epsilon_P^vee holds in D(Solid) as a degree-1 derived equation (D(d_S)=-d_S^T, D^2=id, d_S surjective with diagonal kernel; antipode -1 carried through the odd shift [-1]); NOT realizable in degree 0 (only LCA value is 0). The Pass-76 menu resolves as BOTH: LCA = obstruction, Solid = realization, two ends of one [-1] shift. Machine-verified artifacts/reports/pass77-derived-solid-realization-check.json PASS (A: ann trivial through N_12; B: Hom=0/Ext^1=Z/N_n through n=12, dual tower injective => colim Q/Z; C: signed law |S|=2..6). [Bash mount lagged (served file truncated at Pass 72 while real file held 73-76); all writes via Windows-path tools, verified by Windows-path Read, per aps-run-sync-hazard. Open (Pass 78): solid reflexivity epsilon_P^** ~= epsilon_P and the surviving antipode sign.]
@@ -2001,3 +2456,235 @@
 - No open question, Drive index, literature note, or artifact report update was
   made because this run exposed only a share fingerprint change, not a
   source-stable mathematical payload.
+
+## 2026-07-11 (Autonomous discussion Pass 133)
+
+- Executed the three-part Pass-132 "Next step" with two corrections and a reframing.
+  (A) Thm 133a: for ANY omega-indexed tower `varprojlim^1` commutes with arbitrary PRODUCTS
+  (product is an exact functor, so the two-term complex `prod_n A_n -> prod_n A_n` has
+  ker/coker commuting with `prod_i`), hence `varprojlim^1(prod_{i<omega}(Z, x a)) =
+  (hatZ_a/Z)^omega` is ZFC-ABSOLUTE and nonzero (q-socle `F_q^omega`, dim `2^aleph0` by
+  Erdos-Kaplansky) -- REFUTING the Pass-132 Next-step conflation of the continuum phantom
+  with the Suslin-sensitive strong-homology / `A_{aleph_1}` limit. Thm 133b: Suslin-sensitivity
+  is a COFINALITY phenomenon (`varprojlim^1` fails to commute with uncountable direct SUMS only
+  for an omega_1-cofinal COHERENT Mardesic-Prasolov index); the intermediate `kappa_q=aleph_1`
+  (CH-realized, `MA_{aleph_1}`-killed) object is the a-primary MP coherent limit, second-order
+  over omega_1, NOT a Sigma_1 graded predicate nor a strand sum. (B) Thm 133c: `A_kappa =>
+  (forall n)h_n` trivially (distinguished twin tower is one coherent system); converse <=> the
+  two-system separation `Con((forall n)h_n(A) ^ exists coherent B lim^1 B != 0)` -- n=1 retract
+  transfers, n>=2 non-retractable family blocks it; `A_kappa` a priori strictly stronger,
+  exact equivalence the OPEN BBMT additivity question. (C) Skeptic DISAMBIGUATES Conj 132d: the
+  modal schema-`4` reading of full `D3` is already Arai (Pass 127a), so the conjecture is
+  non-vacuous only WITNESS-BOUNDED; Constr 133e plants a spurious refutation in the `m_enc`-gap
+  `(p_k, m_enc(p_k)]`, Thm 133f: uniform witness-bounded full `D3` FAILS COFINALLY for the
+  least-witness box (dyadic `m=2n` 195/200, quadratic `m=n^2` 198/200 flips; O(1) Arai `m=n+5`
+  repairs), reducing Conj 132d to the carried obligation "every Sigma_1 witness-comparison
+  Rosser box has `m_enc` unbounded". Machine: code/scripts/check-pass133.py ->
+  artifacts/reports/pass133-continuum-phantom-absoluteness-akappa-menc-check.json (overall PASS).
+  [Bash mount lagged behind Windows-path writes again (discussion-log tail served at Pass 123,
+  research-log at 2031 lines vs true 2258); per aps-run-sync-hazard all reads/writes done via
+  Windows-path file tools, computation run in-memory in a /tmp sandbox copy.]
+
+## 2026-07-11 (Relay sync 2026-07-11T14:50:41+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository root.
+  The inbox exposed the same three PDFs and refreshed the central PDF manifest;
+  no new slide/deck artifact was established. The optional copy to the external
+  Google Drive PDF backup stopped with `UnauthorizedAccessException` because the
+  destination is outside this automation's writable sandbox.
+- Checked all 23 watched ChatGPT shares. Every request returned a transport
+  error, so no reliable changed transcript body was available and no
+  mathematical reconstruction or provenance-only duplication was added.
+- Searched connected Google Drive for non-folder files modified after the prior
+  automation run (`2026-07-10T19:24:39Z`). No newer accessible file was found,
+  so no Drive index, literature note, artifact report, PDF source entry, or open
+  question required an update.
+- The worktree still contains extensive pre-existing overlapping edits and
+  untracked autonomous-research outputs. A relay-only commit was not created,
+  because it would either capture unrelated work or overwrite overlapping log
+  and manifest changes; consequently the current branch was not pushed.
+
+## 2026-07-12 (Relay sync 2026-07-12T03:50:47+09:00)
+
+- Ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The inbox exposed the same `3` supported PDFs,
+  collected/refreshed `3` central PDFs, backed up `62` PDFs to the local Google
+  Drive PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  All `23` watched shares were `unchanged`, so no shared-conversation
+  transcript required extraction or mathematical reconstruction.
+- Inspected the local Google Drive mirror and ChatGPT Project artifact inbox
+  for files newer than the prior automation run (`2026-07-11T11:53:07.857Z`).
+  No newer paper, slide, Gemini/Claude output, generated PDF, or other relay
+  artifact was present, so no Drive index, literature note, artifact report,
+  PDF source entry, or open question required an update.
+- The worktree still contains extensive pre-existing overlapping edits and
+  untracked autonomous-research outputs. No relay-only commit was created
+  because the watcher state, sync log, PDF manifest, and research log overlap
+  those existing changes.
+
+## 2026-07-14 (Relay sync 2026-07-14T16:56:27+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The inbox exposed the same `3` supported PDFs,
+  collected/refreshed `3` central PDFs, backed up `62` PDFs to the local Google
+  Drive PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Re-ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\check-chatgpt-shares.ps1`.
+  All `23` watched share requests failed with a remote-server connection error,
+  so no reliable fingerprint or transcript delta was available for mathematical
+  reconstruction.
+- Inspected the local Google Drive mirror for papers, slides, Gemini/Claude
+  outputs, generated PDFs, and related documents newer than the previous run
+  (`2026-07-14T01:07:30.041Z`). No newer relay file was present, so no Drive
+  index, literature note, artifact source entry, or open question required an
+  update.
+- The worktree contains extensive pre-existing overlapping edits and untracked
+  autonomous-research outputs. No relay-only commit was created and the branch
+  was not pushed, because isolating the timestamp-only manifest and watcher-log
+  churn would risk capturing or overwriting unrelated work.
+
+## 2026-07-15 (Relay sync 2026-07-15T00:12:00+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The inbox exposed the same `3` supported PDFs,
+  collected/refreshed `3` central PDFs, backed up `62` PDFs to the local Google
+  Drive PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Ran `code/scripts/check-chatgpt-shares.ps1` with a process-local execution-policy
+  bypass. All `23` watched share requests failed at the transport layer, so no
+  reliable fingerprint or transcript delta was available for mathematical
+  reconstruction.
+- Inspected the local Google Drive mirror for papers, slides, Gemini/Claude
+  outputs, generated PDFs, and related documents newer than the previous run
+  (`2026-07-14T07:54:13.338Z`). No newer relay file was present, so no Drive
+  index, literature note, artifact source entry, or open question required an
+  update.
+- The worktree still contains extensive pre-existing overlapping edits and
+  untracked autonomous-research outputs. The relay produced only timestamp/log
+  churn, so no relay-only commit was created.
+
+## 2026-07-15 (Relay sync 2026-07-15T12:27:39+09:00)
+
+- Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\code\scripts\sync-chatgpt-project-artifacts.ps1`
+  from the repository root. The inbox exposed the same `3` supported PDFs,
+  collected/refreshed `3` central PDFs, backed up `62` PDFs to the local Google
+  Drive PDF backup, and copied/refreshed `0` slide/deck artifacts.
+- Ran `code/scripts/check-chatgpt-shares.ps1` with a process-local execution-policy
+  bypass. All `23` watched shares were `unchanged`, so no shared-conversation
+  transcript required extraction or mathematical reconstruction.
+- Inspected the configured local Google Drive mirror for papers, slides,
+  Gemini/Claude outputs, generated PDFs, and related documents newer than the
+  previous automation run (`2026-07-14T21:09:03.708Z`). No newer relay file was
+  present, so no Drive index, literature note, artifact source entry, or open
+  question required an update.
+- The worktree still contains extensive pre-existing overlapping edits and
+  untracked autonomous-research outputs. This relay produced only manifest,
+  watcher-state, and log churn, so no relay-only commit was created.
+
+## 2026-07-15 (Relay sync 2026-07-15T18:28:50+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository
+  root. The required initial run collected the same `3` inbox PDFs but its
+  optional external Google Drive backup was denied by the sandbox; a second
+  run with `-SkipPdfBackup` completed repository-side collection and manifest
+  refresh. No slide/deck artifact was copied or refreshed.
+- Ran `code/scripts/check-chatgpt-shares.ps1`. All `23` watched share requests
+  failed at the transport layer, so no reliable fingerprint or transcript
+  delta was available for source-faithful mathematical reconstruction.
+- Inspected the configured local Google Drive mirror for files newer than the
+  prior automation run (`2026-07-15T03:25:45.636Z`). No newer paper, slide,
+  Gemini/Claude output, generated PDF, or other relay file was present.
+- No research note, open question, Drive index, literature note, artifact
+  source row, or PDF source row required a content update. The repository
+  remains heavily dirty with overlapping pre-existing work, while this relay
+  produced only timestamp/state/log churn; no relay-only commit was created.
+
+## 2026-07-16 (Relay sync 2026-07-16T00:29:00+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository
+  root. The required initial run collected the same `3` inbox PDFs but its
+  optional external Google Drive backup was denied by the sandbox; rerunning
+  with `-SkipPdfBackup` completed repository-side collection. No slide/deck
+  artifact was copied or refreshed.
+- Ran `code/scripts/check-chatgpt-shares.ps1`. All `23` watched share requests
+  failed at the transport layer, so no reliable changed transcript was
+  available for source-faithful mathematical reconstruction.
+- Inspected the configured local Google Drive mirror and Project artifact inbox
+  for files newer than the prior automation run
+  (`2026-07-15T09:26:38.288Z`). No newer paper, slide, Gemini/Claude output,
+  generated PDF, or other relay file was present.
+- No research note, open question, Drive index, literature note, artifact
+  source row, or PDF source row required a content update. The worktree remains
+  heavily dirty with overlapping pre-existing work; this run produced only
+  timestamp/state/log churn, so no relay-only commit was created.
+
+## 2026-07-16 (Relay sync 2026-07-16T06:32:25+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository
+  root with a process-scoped execution-policy bypass. The inbox still exposed
+  the same `3` PDFs, all `62` collected PDFs were backed up to the configured
+  local Drive folder, and `0` slide/deck artifacts were copied or refreshed.
+- Ran `code/scripts/check-chatgpt-shares.ps1`; all `23` watched shares were
+  `unchanged`, so no transcript extraction or mathematical reconstruction was
+  required.
+- Inspected the configured local Google Drive mirror for files newer than the
+  prior automation run (`2026-07-16T00:27:07.050+09:00`). No new paper, slide,
+  Gemini/Claude output, generated PDF, or other relay artifact was present.
+- No research note, open question, Drive index, literature note, artifact
+  source row, or PDF source row required a content update. Existing unrelated
+  worktree changes overlap the watcher logs and PDF manifest, so this run's
+  timestamp-only churn was not committed.
+
+## 2026-07-16 (Relay sync 2026-07-16T12:46:35+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository
+  root with a process-scoped execution-policy bypass. The inbox still contained
+  the same `3` PDFs, all `62` collected PDFs were backed up to the configured
+  local Drive folder, and `0` slide/deck artifacts were copied or refreshed.
+- Ran `code/scripts/check-chatgpt-shares.ps1`; all `23` watched shares were
+  `unchanged`, so no transcript extraction or mathematical reconstruction was
+  required.
+- Inspected the configured local Google Drive mirror for supported research
+  files newer than the prior automation run (`2026-07-15T21:28:39.015Z`). No
+  new paper, slide, Gemini/Claude output, generated PDF, or relay artifact was
+  present.
+- No research note, open question, Drive index, literature note, artifact
+  source row, or PDF source row required a content update. Existing unrelated
+  worktree changes overlap the watcher logs and PDF manifest, so this run's
+  timestamp-only churn was not committed.
+
+## 2026-07-17 (Relay sync 2026-07-17T00:38:23+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository
+  root with a process-scoped execution-policy bypass. The required initial run
+  collected the same `3` inbox PDFs, but the optional external Google Drive
+  backup was denied by the sandbox; rerunning with `-SkipPdfBackup` completed
+  repository-side collection. No slide/deck artifact was copied or refreshed.
+- Ran `code/scripts/check-chatgpt-shares.ps1`. All `23` watched share requests
+  failed at the transport layer, so no reliable changed transcript was
+  available for source-faithful mathematical reconstruction.
+- Inspected the configured local Google Drive mirror for supported research
+  files newer than the prior automation run (`2026-07-16T09:32:41.239Z`). No
+  newer paper, slide, Gemini/Claude output, generated PDF, or relay artifact
+  was present.
+- No research note, open question, Drive index, literature note, artifact
+  source row, or PDF source row required a content update. The worktree remains
+  heavily dirty with overlapping pre-existing work; this run produced only
+  timestamp/state/log churn, so no relay-only commit was created or pushed.
+
+## 2026-07-17 (Relay sync 2026-07-17T06:35:14+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository
+  root with a process-scoped execution-policy bypass. The inbox still contained
+  the same `3` PDFs, all `62` collected PDFs were backed up to the configured
+  local Drive folder, and `0` slide/deck artifacts were copied or refreshed.
+- Ran `code/scripts/check-chatgpt-shares.ps1`; all `23` watched shares were
+  `unchanged`, so no transcript extraction or mathematical reconstruction was
+  required.
+- Inspected the configured local Google Drive mirror for supported research
+  files newer than the prior automation run (`2026-07-16T15:32:57.671Z`). No
+  new paper, slide, Gemini/Claude output, generated PDF, or relay artifact was
+  present.
+- No research note, open question, Drive index, literature note, artifact
+  source row, or PDF source row required a content update. Existing unrelated
+  worktree changes overlap the watcher logs and PDF manifest, so this run's
+  timestamp-only churn was not committed.

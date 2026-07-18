@@ -1,0 +1,48 @@
+﻿{
+    "date":  "2026-06-28",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "喫茶ステラと死神の蝶",
+                           "context":  "[watched] 喫茶ステラと死神の蝶 共通√#11（ナイトch） - https://youtu.be/RJBDSMBsrW0?si=GsJjdobzbVJc0nVS",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "MU-TON vs だーひー\" UMB2018 GRAND CHAMPIONSHIP BEST16 第3試合",
+                           "context":  "[watched] \"MU-TON vs だーひー\" UMB2018 GRAND CHAMPIONSHIP BEST16 第3試合（UMB channel） - https://youtu.be/wgujFyA4Nsg?si=WDO-ckIilEGGM31M",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "Introduction to CAAL beta 版",
+                           "context":  "Algebra/categorical logic / Logic \u0026 Logic\\Introduction to CAAL beta 版.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "Monadic CAAL",
+                           "context":  "Algebra/categorical logic / Research-memo\\Monadic CAAL.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "Pakhomov-Visser(2022)の圏論化",
+                           "context":  "Research note / Research-memo\\Pakhomov-Visser(2022)の圏論化.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "monoidal introspective theory",
+                           "context":  "Research note / Research-memo\\monoidal introspective theory.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "AALの観点からみるPakhomov-Visser(2022)",
+                           "context":  "Algebra/categorical logic / Research-memo\\AALの観点からみるPakhomov-Visser(2022).md",
+                           "source":  "obsidian-research-index"
+                       }
+                   ]
+}

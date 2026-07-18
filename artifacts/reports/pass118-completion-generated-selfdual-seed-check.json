@@ -1,0 +1,62 @@
+{
+  "pass": 118,
+  "date": "2026-07-04",
+  "question": "Is Theorem 117c's necessity strict? Can a non-principal boxt_hat-fixed cut exist in the MacNeille completion WITHOUT a carrier-level Jeroslow point p = boxt p (FP-synt)?",
+  "answer": "NO, necessity is NOT strict. The self-dual seed is COMPLETION-GENERATED. On the SAME hexagon carrier/order used in Pass 117, and with NO carrier synt-FP, antitone maps that send the lower MacNeille frontier F={x,y} of the unattained middle cut w=xvy=m^n ONTO the upper frontier G={m,n} make w a genuine non-principal boxt_hat-FIXED cut. FP-synt is therefore unnecessary; Thm 117c's clause 'requires ... effectively a Jeroslow FP-synt point' is refuted.",
+  "carrier": {
+    "name": "hexagon H",
+    "elements": ["0", "x", "y", "m", "n", "U"],
+    "covers": "0<x, 0<y, x<m, x<n, y<m, y<n, m<U, n<U",
+    "macneille_cuts": 7,
+    "nonprincipal_cut": ["0", "x", "y"],
+    "nonprincipal_cut_identity": "w = x v y = m ^ n (unique non-principal cut)"
+  },
+  "general_identity": "For any non-principal cut w with lower frontier F=max(w cap L): boxt_hat(w) = /\\_{f in F} boxt(f) (antitone De Morgan: image-meet). On the hexagon boxt_hat(w) = boxt x ^ boxt y.",
+  "fixed_cut_criterion": "w is boxt_hat-fixed  <=>  boxt x ^ boxt y = w = m^n  <=>  {boxt x, boxt y} = G = {m,n}  <=>  boxt[F] = G (lower frontier maps ONTO upper frontier). Parity of the orbit is irrelevant.",
+  "witness_A_frontier_cross": {
+    "boxt": {"0": "U", "x": "m", "y": "n", "m": "y", "n": "x", "U": "0"},
+    "orbit_structure": "(0 U)(x m y n)  -- a 4-cycle, EVEN",
+    "antitone": true,
+    "synt_fixed_points": [],
+    "boxt_hat_w": ["0", "x", "y"],
+    "w_fixed": true,
+    "note": "boxt[F]={m,n}=G and boxt[G]={x,y}=F (two-way frontier swap, involutive on frontiers)"
+  },
+  "witness_C_parallel_swap": {
+    "boxt": {"0": "U", "x": "m", "y": "n", "m": "x", "n": "y", "U": "0"},
+    "orbit_structure": "(0 U)(x m)(y n)  -- three 2-cycles, EVEN",
+    "antitone": true,
+    "synt_fixed_points": [],
+    "boxt_hat_w": ["0", "x", "y"],
+    "w_fixed": true
+  },
+  "control_B_pass117_plateau": {
+    "boxt": {"0": "U", "x": "y", "y": "x", "m": "0", "n": "0", "U": "0"},
+    "orbit_structure": "(0 U)(x y) with m,n,U -> 0  -- Pass-117 front-internal swap",
+    "antitone": true,
+    "synt_fixed_points": [],
+    "boxt_hat_w": ["0"],
+    "w_fixed": false,
+    "note": "boxt[F]=F (NOT G): boxt_hat(w)= boxt x ^ boxt y = y ^ x = bottom. Reproduces Pass-117 Thm 117a."
+  },
+  "hexagon_full_census": {
+    "scope": "ALL antitone boxt on the hexagon with NO carrier synt-FP",
+    "antitone_maps_total": 477,
+    "antitone_no_syntFP": 273,
+    "w_fixed_count": 22,
+    "w_fixed_all_have_boxt_F_onto_G": true,
+    "w_fixed_that_are_two_way_frontier_swaps": 4,
+    "w_fixed_needing_carrier_synt_FP": 0,
+    "conclusion": "22 distinct synt-FP-free antitone maps produce the non-principal fixed cut w; 0 require a carrier fixed point. The 4 two-way frontier swaps (incl. witnesses A,C) are the involutive sub-case."
+  },
+  "general_census_small": {
+    "scope": "labelled bounded posets n=4..5, unique bottom/top",
+    "posets_scanned": 28,
+    "nonlattice_posets": 0,
+    "remark": "Every bounded poset with unique bottom/top on <=5 elements is a lattice (trivial completion). The minimal non-lattice bounded poset is the hexagon (n=6), so the hexagon is the minimal witness carrier."
+  },
+  "correction_to_pass117": "Thm 117c is split. The Tarski-interval criterion (a fixed cut exists iff [lfp boxt_hat^2, gfp boxt_hat^2] contains a self-dual element) STANDS. The clause identifying the self-dual seed with a carrier-level odd/Jeroslow point p=boxt p is FALSE: the seed can be a NEW cut, realized by an EVEN frontier-swapping orbit with no carrier fixed point.",
+  "aps_reading": "The MacNeille completion manufactures a phantom self-referential fixed point w (boxt w = w, a Rosser/Henkin-style consistency sentence) that NO base sentence realizes. Fixed-point-level analogue of the earlier phantom-limit passes: completing the Lindenbaum order can introduce self-reference absent downstairs.",
+  "verdict": "COMPLETION-GENERATED SELF-DUAL SEED CONFIRMED. FP-synt NOT necessary. Operative invariant = boxt[F]=G (frontier-onto), not orbit parity.",
+  "machine": "code/scripts/check-pass118.py"
+}

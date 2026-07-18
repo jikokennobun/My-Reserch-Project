@@ -1,0 +1,36 @@
+﻿{
+    "date":  "2026-07-15",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "韻マン.vs.PONEY.凱旋MC battle東西選抜夏ノ陣2019.１回戦",
+                           "context":  "[watched] 韻マン.vs.PONEY.凱旋MC battle東西選抜夏ノ陣2019.１回戦（凱旋MCbattle） - https://youtu.be/Q8rGJIEesSI?si=uV--uHcChkdRmBvA",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "凱旋MCbattle東西選抜秋ノ陣2019@恵比寿LIQUIDROOM",
+                           "context":  "[watched] 凱旋MCbattle東西選抜秋ノ陣2019@恵比寿LIQUIDROOM（凱旋MCbattle） - https://youtu.be/Fq_d3hsgD6k?si=5h8tgUNlL3lJ3NXs",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【神回】歴史に刻まれた神バトル1時間耐久",
+                           "context":  "[watched] 【神回】歴史に刻まれた神バトル1時間耐久（ラップバトルCH【公認】） - https://youtu.be/iPmUd_IxWu0?si=PRacfpv2De07dj0o",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "Berywam - America\u0027s Got Talent : All Stars 2023 / Beatboxing Group !",
+                           "context":  "[watched] Berywam - America\u0027s Got Talent : All Stars 2023 / Beatboxing Group !（Berywam） - https://youtu.be/PtcYS9IEmo0?si=YOHmpaYp8V16HLsc",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【ベリンガム×メッシ（イングランド代表／アルゼンチン代表）ゴール\u0026アシスト集】新時代を彩る「王」か、伝説を築き続ける「神」か｜FIFAワールドカップ2026",
+                           "context":  "[watched] 【ベリンガム×メッシ（イングランド代表／アルゼンチン代表）ゴール\u0026アシスト集】新時代を彩る「王」か、伝説を築き続ける「神」か｜FIFAワールドカップ2026（DAZN Japan） - https://youtu.be/g_ybIILJnqs?si=AkFwG4q1l2OYNfvM",
+                           "source":  "watch-log"
+                       }
+                   ]
+}

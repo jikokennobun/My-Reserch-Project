@@ -1,0 +1,52 @@
+{
+  "pass": 124,
+  "date": "2026-07-06",
+  "title": "Odd-seed Rosser bouquet-with-center: carrier-join criterion + De-Morgan collapse",
+  "A_Lstar_seeded_bouquet": {
+    "carrier": "L* = {bot<c1,c2,p ; c1,c2<w ; w<U ; p<U}, w=c1 v c2 in carrier",
+    "antitone_maps": 638,
+    "carrier_fixed_cut_boxt_w_eq_w": 65,
+    "separated_twins_among_fixcut": 28,
+    "fused_twins_among_fixcut": 37,
+    "seeded_bouquet_with_center": 2,
+    "seeded_bouquet_exists": true,
+    "witness_map": "bot->U, c1->w, c2->U, w->w, p->p, U->bot  (Fix={w,p}, detached seed p)",
+    "fix_always_antichain": true
+  },
+  "A_demorgan_subclass": {
+    "note": "lattice antitone dual-endomorphisms = abstract shadow of D2-normality",
+    "demorgan_maps": 17,
+    "demorgan_fix_w": 4,
+    "demorgan_fix_w_separated": 0,
+    "conclusion": "normal(De-Morgan) + boxt(w)=w  =>  twins FUSED; separated bouquet requires ~D2"
+  },
+  "B_hexagon_center_contrast": {
+    "carrier": "HP = hexagon {bot,x,y,m,n,U} + detached p",
+    "x_join_y_in_carrier": "absent (lub=U); c1 v c2 is a MacNeille cut only",
+    "seedless_cross_antitone": true,
+    "cross_carrier_fixpoints": [
+      "p"
+    ],
+    "fix_always_antichain": true,
+    "conclusion": "join absent in carrier => Henkin center is completion-manufactured & seedless (Thm 123a); any carrier seed is a DISTINCT detached point"
+  },
+  "C_alpha_and_phantom_tax": {
+    "formula": "alpha_phantom=2+|MaxInd(H)|, alpha_principal=1+|MaxInd(H)|, tax=1",
+    "samples": {
+      "single{12}": { "MaxInd": 2, "tax": 1, "connected": false },
+      "path{12,23}": { "MaxInd": 2, "tax": 1, "connected": false },
+      "K3": { "MaxInd": 3, "tax": 1, "connected": false },
+      "3-unif{123}": { "MaxInd": 3, "tax": 1, "connected": true },
+      "nonunif{12,234}": { "MaxInd": 3, "tax": 1, "connected": true },
+      "disjoint{12,345}": { "MaxInd": 6, "tax": 1, "connected": true }
+    },
+    "conclusion": "phantom tax = exactly 1 atom for EVERY H, independent of independence-complex connectedness"
+  },
+  "theorems": {
+    "Thm124a": "Carrier-join criterion: Henkin center is carrier-seeded <=> bouquet disjunction exists in the carrier. ConLat_T Boolean => rho_1 v rho_2 exists => seeded regime.",
+    "Thm124b": "De-Morgan collapse: on L*, normal(De-Morgan) boxt with boxt(w)=w forces FUSED twins (4 fix w, 0 separated); the separated seeded bouquet-with-center exists only in the ~D2 (non-normal) regime. Carrier shadow of Thm 123b.",
+    "Thm124c": "Modal profile: twin-plus-center realizable in Guaspari-Solovay R with D1 ^ ~D2; base box remains GL (D3 not forced to fail); uniqueness fails because GL needs normality, already gone.",
+    "Cor124d": "Phantom tax = 1 for every H; connectedness of the independence complex affects |MaxInd| (absolute alpha) but not the tax."
+  },
+  "overall": "PASS"
+}

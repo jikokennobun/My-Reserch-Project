@@ -1,0 +1,65 @@
+{
+  "pass": 141,
+  "focus": "cd=omega diagonal / nFG2(omega); discharge MA_{aleph_1} h_1 obligation",
+  "A_sphere_homology_F3": {
+    "S^1": {
+      "reduced_betti_F3": {
+        "1": 1
+      },
+      "concentrated_in_degree_k": true
+    },
+    "S^2": {
+      "reduced_betti_F3": {
+        "2": 1
+      },
+      "concentrated_in_degree_k": true
+    },
+    "S^3": {
+      "reduced_betti_F3": {
+        "3": 1
+      },
+      "concentrated_in_degree_k": true
+    }
+  },
+  "A_suspension_zero_on_top_degree": true,
+  "A_telescope_acyclic_ML_lim1_zero": true,
+  "B_goblot_ceiling": {
+    "cf=aleph_0": {
+      "vanish_from_n": 2,
+      "max_nonzero_level_le": 1
+    },
+    "cf=aleph_1": {
+      "vanish_from_n": 3,
+      "max_nonzero_level_le": 2
+    },
+    "cf=aleph_2": {
+      "vanish_from_n": 4,
+      "max_nonzero_level_le": 3
+    },
+    "cf=aleph_3": {
+      "vanish_from_n": 5,
+      "max_nonzero_level_le": 4
+    }
+  },
+  "B_cofinal_phantom_needs_unbounded_cf": true,
+  "B_nFG2omega_index_cofinality": "aleph_omega",
+  "C_blh_continuum_floor": {
+    "lim^1!=0": "2^aleph0 >= aleph_2",
+    "lim^2!=0": "2^aleph0 >= aleph_3",
+    "lim^3!=0": "2^aleph0 >= aleph_4"
+  },
+  "C_nFG2omega_continuum_ceiling": "aleph_{omega+1}",
+  "D_separator_home_aleph": 2,
+  "D_nFG2omega_home_min_aleph": "omega+1",
+  "D_mutually_exclusive": true,
+  "E_h1_discharge": {
+    "statement": "MA_{aleph_1} => lim^1 A = 0 at 2^{aleph_0}=aleph_2",
+    "forcing_class": "sigma-centered (hence ccc)",
+    "dense_sets_needed": "aleph_1",
+    "MA_aleph1_suffices": true,
+    "PFA_required": false,
+    "consistent_with_c_eq_aleph2": true,
+    "does_NOT_give_lim2_zero": true
+  },
+  "overall": "PASS"
+}

@@ -1,0 +1,41 @@
+{
+  "pass": 142,
+  "parts": {
+    "A_finite_directed_acyclicity": {
+      "posets_scanned_up_to_size": 5,
+      "directed_posets_found": 1183,
+      "directed_without_top": 0,
+      "claim": "every finite directed poset has a maximum => lim exact => lim^{>=1}=0",
+      "status": "PASS"
+    },
+    "B_ceiling_ladder_arithmetic": {
+      "blh_floors_aleph_index": {
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 5,
+        "5": 6,
+        "6": 7,
+        "7": 8
+      },
+      "sup_over_finite_levels": "aleph_omega",
+      "koenig_forced_home_floor": "aleph_omega+1",
+      "status": "PASS"
+    },
+    "C_pcf_window": {
+      "home_index_lower": "aleph_{omega+1}  (BLH floor + Koenig)",
+      "home_index_upper": "aleph_{omega_4}  (Shelah pp(aleph_omega) < aleph_{omega_4})",
+      "window_nonempty": true,
+      "window_bounded_in_ZFC": true,
+      "status": "PASS"
+    },
+    "D_telescope_non_echo": {
+      "index_cofinal_subset_size": "aleph_omega",
+      "has_cofinal_omega_chain": false,
+      "thm141a_telescope_applicable": false,
+      "conclusion": "depth-omega re-truncation does NOT echo at the ceiling",
+      "status": "PASS"
+    }
+  },
+  "overall": "PASS"
+}

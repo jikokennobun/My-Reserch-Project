@@ -1,0 +1,54 @@
+﻿{
+    "date":  "2026-07-10",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "私的渋いMCバトル20選",
+                           "context":  "[watched] 私的渋いMCバトル20選（莏） - https://youtu.be/1zYqW0O6DpM?si=wzVvqSjk5kurB6iY",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【本田】些細なことで悩む本田圭佑は〇〇秒だけ【本田圭佑切り抜き/人生相談/ライフハック】",
+                           "context":  "[watched] 【本田】些細なことで悩む本田圭佑は〇〇秒だけ【本田圭佑切り抜き/人生相談/ライフハック】（本田圭佑のライフハック【切り抜き】） - https://youtu.be/jUpak-IEnfA?si=W4-Y7fm--mbNF5j_",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【DIGEST】本田圭佑、日本教育「漢字ドリルやる意味がある？」／個の力を高めるための教育とは／強靭なメンタルの鍛え方",
+                           "context":  "[watched] 【DIGEST】本田圭佑、日本教育「漢字ドリルやる意味がある？」／個の力を高めるための教育とは／強靭なメンタルの鍛え方（PIVOT 公式チャンネル） - https://youtu.be/Rhi2rm9eMf4?si=ywIfd14Ca2sjNfWh",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "R指定 UMB バース集",
+                           "context":  "[watched] R指定 UMB バース集（莏） - https://youtu.be/MxCeUEmHyDo?si=lKlqOvBu607XPJeT",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "本田圭佑のう○こ事情はこれだ！",
+                           "context":  "[watched] 本田圭佑のう○こ事情はこれだ！（ケイスケの切り抜き部屋【本田圭佑切り抜き】） - https://youtube.com/shorts/PHwMxS6IFW4?si=27S1Q8fogSdtw2BT",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【本田圭佑】もう人と関わりたくない奴は●●に行け！【本田圭佑切り抜き/人生相談/ライフハック】",
+                           "context":  "[watched] 【本田圭佑】もう人と関わりたくない奴は●●に行け！【本田圭佑切り抜き/人生相談/ライフハック】（本田圭佑のライフハック【切り抜き】） - https://youtu.be/Ss3N580oRGU?si=CI1Kfc6CMnKI6EXK",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【名言集】一流が語る’”死”とは？",
+                           "context":  "[watched] 【名言集】一流が語る’”死”とは？（人生を変えたいゴリラ） - https://youtu.be/JSXYpK-a2uc?si=KzdgBbDFimZ_TUEv",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【涙腺崩壊】ドッキリ企画のはずがまさかの神展開に／江頭が語るお金よりも大事なこと",
+                           "context":  "[watched] 【涙腺崩壊】ドッキリ企画のはずがまさかの神展開に／江頭が語るお金よりも大事なこと（【切り抜き】エガちゃんねるず） - https://youtu.be/i-6ImJKRQHQ?si=-2nmSLRUDVlRzfHs",
+                           "source":  "watch-log"
+                       }
+                   ]
+}

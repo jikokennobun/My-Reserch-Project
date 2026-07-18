@@ -1,0 +1,42 @@
+{
+  "pass": 116,
+  "carrier": ["0", "a", "b", "c", "m", "n", "U"],
+  "covers": [["0","a"],["a","b"],["0","c"],["b","m"],["b","n"],["c","m"],["c","n"],["m","U"],["n","U"]],
+  "partial_order_ok": true,
+  "bottom": ["0"],
+  "top": ["U"],
+  "is_lattice": false,
+  "missing_joins": [["a","c"], ["b","c"]],
+  "missing_meets": [["m","n"]],
+  "boxt": {"0":"b","a":"b","b":"0","c":"0","m":"0","n":"0","U":"0"},
+  "boxt_antitone": true,
+  "syntactic_fixed_points": [],
+  "A2_holds": true,
+  "G2_holds": true,
+  "FG2_holds": true,
+  "num_admissible_box_extensions": 25,
+  "num_macneille_cuts": 8,
+  "num_principal_cuts": 7,
+  "num_nonprincipal_cuts": 1,
+  "nonprincipal_cut": "{0,a,b,c}",
+  "fixed_cuts": [
+    {"cut": "{0,a,b,c,m,n,U}", "principal_element": "U", "is_principal": true}
+  ],
+  "nonprincipal_fixed_cuts": [],
+  "boxt_hat_of_phantom_cut": "{0,a,b,c,m,n,U} (= down(U), principal)",
+  "separation_survives": false,
+  "residuation_census": {
+    "scope": "integral (unit=U top), commutative, associative, monotone",
+    "total_candidates": 345600,
+    "associative": 2350,
+    "assoc_and_monotone": 145,
+    "residuated": 0,
+    "example_residuated": null,
+    "example_nonprincipal_fiber": {
+      "x": "a", "z": "0",
+      "fiber": "{0,a,b,c,m,n}",
+      "note": "= L minus {U}; maximal antichain {m,n}, no greatest element -> non-principal"
+    }
+  },
+  "verdict": "NO-COEXISTENCE. Bounded doubled-cover repair keeps a non-principal completion cut {0,a,b,c} in DM(L) but boxt_hat does not fix it (it fixes the principal top down(U)); and residuation fails via the relocated top-less fiber {0,a,b,c,m,n}. The join-defect is conserved, only relocated."
+}

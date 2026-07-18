@@ -1,0 +1,39 @@
+{
+  "pass": 148,
+  "title": "Sigma1-orientation dichotomy (a) + Coh monoidal law depth-addition (b)",
+  "A_double_cover": {
+    "C_6_oriented(monodromy-1)": { "comps": 1, "redH0": "0" },
+    "C_6_symmetric(monodromy+1)": { "comps": 2, "redH0": "Z/2" },
+    "C_7_oriented(monodromy-1)": { "comps": 1, "redH0": "0" },
+    "C_7_symmetric(monodromy+1)": { "comps": 2, "redH0": "Z/2" },
+    "C_8_oriented(monodromy-1)": { "comps": 1, "redH0": "0" },
+    "C_8_symmetric(monodromy+1)": { "comps": 2, "redH0": "Z/2" }
+  },
+  "A_orientation_census": {
+    "n=2": { "linear_orders": 2, "fail_to_orient": 0 },
+    "n=3": { "linear_orders": 6, "fail_to_orient": 0 },
+    "n=4": { "linear_orders": 24, "fail_to_orient": 0 }
+  },
+  "A_ok": true,
+  "A_census_ok": true,
+  "B_monoidal_law": {
+    "conjunction": { "climb_1p1_eq_2": false },
+    "depth_addition": { "climb_1p1_eq_2": true }
+  },
+  "B_ok": true,
+  "C_delta_symmetry_census": {
+    "n=2": { "delta_fixed_linear_orders": 0, "symmetric_relation_delta_fixed": true },
+    "n=3": { "delta_fixed_linear_orders": 0, "symmetric_relation_delta_fixed": true },
+    "n=4": { "delta_fixed_linear_orders": 0, "symmetric_relation_delta_fixed": true },
+    "n=5": { "delta_fixed_linear_orders": 0, "symmetric_relation_delta_fixed": true }
+  },
+  "C_ok": true,
+  "overall": "PASS",
+  "notes": [
+    "A: oriented(Rosser/Moebius) monodromy -1 -> connected double cover (redH0=0);",
+    "   symmetric(KF) monodromy +1 -> split (redH0=Z/2); 0 linear orders fail to orient.",
+    "B: conjunction is idempotent (<1>^<1>=<1>, no climb) => collapses graded strictness;",
+    "   depth-addition (<n>*<m>=<n+m>) climbs, preserving <n> !~ <n+1>. Concatenation wins.",
+    "C: no linear proof-order is delta-fixed (n>=2) => symmetric (Z,Z/2) is non-Sigma1."
+  ]
+}

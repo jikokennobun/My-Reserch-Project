@@ -947,3 +947,26 @@ No theorem statement, definition, example, counterexample, finite-model task, or
 open problem is added from this event. A fresh transcript export or any
 referenced `sandbox:/mnt/data/...` artifact should still be routed through the
 local ChatGPT Project artifact inbox before this note is substantively updated.
+
+## Relay Access Note: 2026-07-10 Recheck
+
+- Source link:
+  `https://chatgpt.com/share/6a0b9917-ef00-83a7-a14d-57f0788adab2`
+- Watcher result: `changed` at `2026-07-10T22:24:41+09:00`.
+- New recorded hash:
+  `8e40d991b7749b76a425d3c955470da0b774eab321fe4aad3fceae6a3c56649b`.
+- Access status: provenance-only. The public browser view exposed only the
+  logged-out ChatGPT shell, and direct `Invoke-WebRequest` recovery failed with
+  a remote-server connection error. No conversation body or referenced
+  `sandbox:/mnt/data/...` artifact was available for extraction.
+- Drive relay status: direct connector listings of the recorded
+  `ChatGPT_Research`, `ChatGPT_Study`, `Gemini`, `Claude`, `Paper`, `Slide`,
+  and reference roots showed no newly relevant durable source artifact beyond
+  material already indexed in `research/references/`.
+
+This repeats the known public-share fingerprint flip rather than exposing a
+source-stable mathematical payload. No local-FG2 theorem, definition,
+counterexample, finite-model task, or open problem is added from this event. A
+fresh transcript export or any `sandbox:/mnt/data/...` side artifact should be
+routed through the local ChatGPT Project artifact inbox before this note is
+substantively reconstructed.

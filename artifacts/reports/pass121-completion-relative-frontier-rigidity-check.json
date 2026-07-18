@@ -1,0 +1,54 @@
+{
+  "pass": 121,
+  "date": "2026-07-05",
+  "title": "Frontier meet-rigidity is completion-relative, not universal",
+  "carrier": "K_{2,3}^{0,U} = {0, f1,f2, g1,g2,g3, U}; 0<all<U; f_i<g_j for all i,j",
+  "question": "Is Thm 120a (distinct upper-frontier g,g' meet to w) a MacNeille artifact or a completion-universal law?",
+  "generator": "code/scripts/check-pass121.py",
+  "results": {
+    "macneille": {
+      "n_elements": 8,
+      "n_nonprincipal": 1,
+      "w_is_principal": false,
+      "upper_frontier_G": ["g1", "g2", "g3"],
+      "H_min(w)": [["g1", "g2"], ["g1", "g3"], ["g2", "g3"]],
+      "mu(w)": 2,
+      "meet_rigid_all_pairs_to_w": true,
+      "note": "= canonical extension L^delta (finite poset: all filters/ideals principal)"
+    },
+    "ideal_downset_D(L)": {
+      "n_elements": 13,
+      "n_nonprincipal": 6,
+      "w_is_principal": false,
+      "upper_frontier_G": ["g1", "g2", "g3"],
+      "H_min(w)": [["g1", "g2"], ["g1", "g3"], ["g2", "g3"]],
+      "mu(w)": 2,
+      "meet_rigid_all_pairs_to_w": true,
+      "note": "meets = intersection of downsets; g_i^g_j = downset {0,f1,f2} = w. Meet-rigid. The 6 new elements are the free JOINS g_i v g_j = {0,f1,f2,g_i,g_j} < U (empty set as new bottom, w, d12,d13,d23,d123): join-rigidity of the DUAL (coatom) frontier is what breaks here, not w's meet frontier."
+    },
+    "filter_upset_F(L)": {
+      "n_elements": 13,
+      "n_nonprincipal": 6,
+      "w_is_principal": false,
+      "upper_frontier_G": ["g1", "g2", "g3"],
+      "H_min(w)": [["g1", "g2", "g3"]],
+      "mu(w)": 3,
+      "meet_rigid_all_pairs_to_w": false,
+      "note": "order-dual construction (reverse inclusion of upsets); meet = union of upsets. g_i^g_j = up(g_i) U up(g_j) = {g_i,g_j,U} = z_ij, THREE distinct NEW elements strictly above w = up(f1)^up(f2) = {g1,g2,g3,U}. Only the full triple meets to w => H_min(w) 3-uniform, mu(w)=3=|G|. Cor 120b freezing (mu=2) BROKEN."
+    },
+    "canonical_ext_eq_macneille": true
+  },
+  "theorems": {
+    "121a": "Frontier meet-rigidity (Thm 120a) is NOT completion-universal. It holds in MacNeille and in the ideal/downset completion, but FAILS in the filter/upset completion, where the upper frontier G of w carries the FREE meet-semilattice structure: pairwise meets g_i^g_j are distinct new elements > w, so H_min(w) = {G} is |G|-uniform and mu(w)=|G|.",
+    "121b": "For finite posets MacNeille = canonical extension (every filter is a down-directed upset = principal, dually for ideals), so both freeze mu=2. The freezing is exactly the consequence of SIMULTANEOUS join- and meet-density: MacNeille is the unique dense completion in which L is both join- and meet-dense.",
+    "121c": "One-sided completions unfreeze exactly one frontier: the downset completion D(L) (join-dense only) keeps meet-rigidity of w but unfreezes the DUAL join-frontier (adjoining free joins g_i v g_j < U); the upset completion F(L) (meet-dense only) unfreezes w's meet-frontier to mu(w)=|G|. For K_{n,m}^{0,U}: filter completion gives mu(w)=m; ideal completion keeps mu(w)=2 but the dual (coatom-below-U) join-multiplicity becomes n. So the Pass-120 realization NEGATIVE (K_n only) is a MacNeille/canonical phenomenon; over F(L) the |G|-uniform hyperedge IS realized.",
+    "121d_arith": "DUAL join-rigidity reading (boxt = neg Box): in MacNeille the lower frontier F of w is a family of consistency-like sentences whose pairwise joins collapse to the Henkin cut w (any two already generate the phantom limit). This collapse is NOT order-forced: the free downset completion keeps such joins distinct. Hence 'pairwise joins of Con^orb iterates generate the phantom limit' is a property of BOTH-density (Lindenbaum/MacNeille), not of the bare consistency order -- partial reading of the Pass-69 Con^orb tower question; exact identification left open."
+  },
+  "checks": {
+    "macneille_rigid_mu2": true,
+    "ideal_meet_rigid_mu2": true,
+    "filter_breaks_rigidity_mu3": true,
+    "canonical_eq_macneille": true
+  },
+  "OVERALL": "PASS"
+}

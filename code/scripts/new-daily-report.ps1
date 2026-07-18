@@ -7,7 +7,9 @@
     [switch]$UseCodex,
     [switch]$SyncObsidian,
     [switch]$PostDiscordDigest,
-    [switch]$DryRun
+    [switch]$DryRun,
+    [switch]$SkipAiReadNotes,
+    [int]$AiReadNoteMaxItems = 8
 )
 
 $ErrorActionPreference = "Stop"
@@ -401,6 +403,214 @@ function Get-WatchItemProseLabel {
     $display = ($display -replace "\s*-\s*$", "").Trim()
     if ([string]::IsNullOrWhiteSpace($display)) { return "視聴ログ" }
     return Get-ShortLine -Text $display -MaxChars 110
+}
+
+function Get-AiReadTopicTitle {
+    param([string]$Text)
+
+    $value = Remove-UrlsFromText -Text (Get-ShortLine -Text $Text -MaxChars 180)
+    $value = ($value -replace "^\[[^\]]+\]\s*", "").Trim()
+    $value = ($value -replace "\s*/\s*メモ:.*$", "").Trim()
+    $value = ($value -replace "^[`"“”'「『]+|[`"“”'」』]+$", "").Trim()
+    if ($value -match "^(.+?)[\s　]+(?:共通|[^\s　]{1,16}√|第?\d+話|#\d+|Part\s*\d+|part\s*\d+)") {
+        $value = $matches[1].Trim()
+    }
+    if ($value -match "^(.+?)\s*[-‐‑‒–—]\s*(?:第?\d+話|#\d+|Part\s*\d+|part\s*\d+)") {
+        $value = $matches[1].Trim()
+    }
+    return Get-ShortLine -Text $value -MaxChars 80
+}
+
+function Add-AiReadNoteCandidate {
+    param(
+        [System.Collections.Generic.List[object]]$Candidates,
+        [System.Collections.Generic.HashSet[string]]$Seen,
+        [string]$Kind,
+        [string]$Title,
+        [string]$Context,
+        [string]$Source
+    )
+
+    $topic = Get-AiReadTopicTitle -Text $Title
+    if ([string]::IsNullOrWhiteSpace($topic) -or $topic.Length -lt 2) { return }
+    if ($topic -match "(?i)^(https?|www\.)") { return }
+    if ($topic -match "^(No .* found|視聴ログ|動画|URL)$") { return }
+
+    $key = (($topic.ToLowerInvariant()) -replace "\s+", "")
+    if ([string]::IsNullOrWhiteSpace($key) -or $Seen.Contains($key)) { return }
+    $Seen.Add($key) | Out-Null
+
+    $Candidates.Add([pscustomobject][ordered]@{
+        kind = $Kind
+        title = $topic
+        context = Get-ShortLine -Text $Context -MaxChars 180
+        source = $Source
+    }) | Out-Null
+}
+
+function Add-AiReadNoteCandidatesFromText {
+    param(
+        [System.Collections.Generic.List[object]]$Candidates,
+        [System.Collections.Generic.HashSet[string]]$Seen,
+        [string]$Kind,
+        [string]$Text,
+        [string]$Source,
+        [int]$MaxFromText = 3
+    )
+
+    $clean = Remove-UrlsFromText -Text (Get-ShortLine -Text $Text -MaxChars 500)
+    if ([string]::IsNullOrWhiteSpace($clean)) { return }
+
+    $added = 0
+    foreach ($match in [regex]::Matches($clean, "\[\[([^\]|#]+)(?:[|#][^\]]*)?\]\]")) {
+        Add-AiReadNoteCandidate -Candidates $Candidates -Seen $Seen -Kind $Kind -Title $match.Groups[1].Value -Context $clean -Source $Source
+        $added++
+        if ($added -ge $MaxFromText) { return }
+    }
+    foreach ($match in [regex]::Matches($clean, "[「『]([^」』]{2,60})[」』]")) {
+        Add-AiReadNoteCandidate -Candidates $Candidates -Seen $Seen -Kind $Kind -Title $match.Groups[1].Value -Context $clean -Source $Source
+        $added++
+        if ($added -ge $MaxFromText) { return }
+    }
+    foreach ($match in [regex]::Matches($clean, "([\p{L}\p{N}A-Za-z\^\{\}_+\-・\. ]{2,50}(?:定理|補題|命題|予想|完全性|不完全性|枚挙|モデル理論|再帰理論|証明論|集合論|様相論理|論文))")) {
+        Add-AiReadNoteCandidate -Candidates $Candidates -Seen $Seen -Kind $Kind -Title $match.Groups[1].Value -Context $clean -Source $Source
+        $added++
+        if ($added -ge $MaxFromText) { return }
+    }
+}
+
+function Get-AiReadNotes {
+    param(
+        [object[]]$Candidates,
+        [string]$Date,
+        [string]$InputPath,
+        [string]$OutputPath,
+        [int]$MaxItems,
+        [switch]$Skip
+    )
+
+    if ($Skip -or $MaxItems -le 0) { return @() }
+    $selected = @($Candidates | Select-Object -First $MaxItems)
+    if ($selected.Count -eq 0) { return @() }
+
+    $dir = Split-Path -Parent $InputPath
+    if (-not (Test-Path -LiteralPath $dir)) {
+        New-Item -ItemType Directory -Path $dir | Out-Null
+    }
+
+    $payload = [ordered]@{
+        date = $Date
+        purpose = "#読んだ/見た/知った欄に入れる短いAI補足候補"
+        candidates = $selected
+    }
+    $inputJson = $payload | ConvertTo-Json -Depth 8
+    $inputJson | Set-Content -LiteralPath $InputPath -Encoding UTF8
+
+    if (Test-Path -LiteralPath $OutputPath) {
+        try {
+            $parsedExisting = Get-Content -Raw -Encoding UTF8 -LiteralPath $OutputPath | ConvertFrom-Json
+            $existingNotes = @()
+            foreach ($note in @($parsedExisting.notes)) {
+                $title = [string]$note.title
+                $body = [string]$note.note
+                $kind = [string]$note.kind
+                if (-not [string]::IsNullOrWhiteSpace($title) -and -not [string]::IsNullOrWhiteSpace($body)) {
+                    $existingNotes += [pscustomobject]@{
+                        title = $title
+                        kind = $kind
+                        note = $body
+                    }
+                }
+            }
+            if (@($existingNotes).Count -gt 0) {
+                return @($existingNotes)
+            }
+        } catch {
+            Write-Warning "Existing AI read-item notes could not be parsed and will be ignored: $($_.Exception.Message)"
+        }
+    }
+
+    $useCodexCli = [Environment]::GetEnvironmentVariable("DAILY_REPORT_AI_NOTES_USE_CODEX_CLI", "Process")
+    if ([string]::IsNullOrWhiteSpace($useCodexCli)) {
+        $useCodexCli = [Environment]::GetEnvironmentVariable("DAILY_REPORT_AI_NOTES_USE_CODEX_CLI", "User")
+    }
+    if ($useCodexCli -notmatch "^(?i:true|1|yes)$") {
+        Write-Host "AI read-item note candidates: $InputPath"
+        return @()
+    }
+
+    $codex = Get-Command "codex" -ErrorAction SilentlyContinue
+    if ($null -eq $codex) {
+        Write-Warning "codex CLI was not found. Skipping AI read-item notes."
+        return @()
+    }
+
+    $instruction = @"
+Create short Japanese AI supplement notes for a private Obsidian daily report.
+Read the input JSON from stdin. It contains candidate concepts, theorem names, book/anime/game/video titles, or note titles.
+
+Return JSON only, without Markdown fences:
+{
+  "notes": [
+    { "title": "...", "kind": "...", "note": "..." }
+  ]
+}
+
+Rules:
+- Use at most $MaxItems notes.
+- Each note must be one Japanese sentence, roughly 45-95 characters.
+- Keep the explanation compact and useful for remembering what the item is.
+- For mathematical concepts or theorems, explain the role or intuition, not a proof.
+- For books, anime, games, or video titles, give a cautious one-sentence orientation.
+- If you are unsure, say "要確認: ..." instead of inventing facts.
+- Do not include URLs, Markdown bullets, headings, code fences, or secret values.
+- Do not invent bibliographic facts, release years, exact authors, or formal theorem statements.
+"@
+
+    try {
+        if (Test-Path -LiteralPath $OutputPath) {
+            Remove-Item -LiteralPath $OutputPath -Force
+        }
+        $inputJson | & $codex.Source exec --sandbox workspace-write --output-last-message $OutputPath $instruction | Out-Null
+    } catch {
+        Write-Warning "AI read-item notes generation failed: $($_.Exception.Message)"
+        return @()
+    }
+
+    if (-not (Test-Path -LiteralPath $OutputPath)) {
+        Write-Warning "AI read-item notes output was not created: $OutputPath"
+        return @()
+    }
+
+    try {
+        $raw = Get-Content -Raw -Encoding UTF8 -LiteralPath $OutputPath
+        $json = $raw.Trim()
+        if ($json -match '(?s)```(?:json)?\s*(.*?)\s*```') {
+            $json = $matches[1].Trim()
+        }
+        $jsonMatch = [regex]::Match($json, '(?s)\{.*\}')
+        if ($jsonMatch.Success) {
+            $json = $jsonMatch.Value
+        }
+        $parsed = $json | ConvertFrom-Json
+        $notes = @()
+        foreach ($note in @($parsed.notes)) {
+            $title = Get-ShortLine -Text ([string]$note.title) -MaxChars 80
+            $body = Get-ShortLine -Text ([string]$note.note) -MaxChars 130
+            $kind = Get-ShortLine -Text ([string]$note.kind) -MaxChars 40
+            if (-not [string]::IsNullOrWhiteSpace($title) -and -not [string]::IsNullOrWhiteSpace($body)) {
+                $notes += [pscustomobject]@{
+                    title = $title
+                    kind = $kind
+                    note = $body
+                }
+            }
+        }
+        return @($notes)
+    } catch {
+        Write-Warning "AI read-item notes output could not be parsed: $($_.Exception.Message)"
+        return @()
+    }
 }
 
 function Get-CalendarItemDisplay {
@@ -1125,6 +1335,9 @@ $researchLogPath = Join-Path $RepositoryRoot "records\logs\research-log.md"
 $obsidianCsvPath = Join-Path $RepositoryRoot "research\references\obsidian-research-index.csv"
 $reportPath = Join-Path $dailyDir "$Date.md"
 $packetPath = Join-Path $packetDir "$Date.md"
+$readAiNoteDir = Join-Path $RepositoryRoot "records\inbox\read-ai-notes"
+$readAiNoteInputPath = Join-Path $readAiNoteDir "$Date.input.json"
+$readAiNotePath = Join-Path $readAiNoteDir "$Date.json"
 
 $discordItemsRaw = @(Read-JsonLines -Path $discordPath)
 $recentDiscordItemsRaw = @(Read-JsonLines -Path $recentDiscordPath)
@@ -1483,9 +1696,9 @@ After the detailed Obsidian report, add:
 ## Discord Digest
 
 Rules:
-- Discord Digest must be a short plain-language summary for Discord, under 1800 characters.
-- Write Discord Digest in Japanese prose, separated by bold section labels such as `**起床と天気**` and `**今日の活動**`.
-- Do not use bullet lists, numbered lists, or Markdown heading lines inside Discord Digest.
+- Discord Digest must be a compact plain-language summary for Discord, under 700 characters.
+- Write Discord Digest as at most 4 short lines: title, optional wake/weather, main activity, and a note that details are in Obsidian.
+- Do not use bullet lists, numbered lists, Markdown heading lines, or many bold section labels inside Discord Digest.
 - The report must include date and weekday, wake time, predicted sleep time, weather, morning/noon/night mood, a watch-log excerpt, today's activity, and reflection.
 - If mood logs are missing, make cautious estimates and label them as 自動予想 instead of leaving them blank.
 - Today's activity and reflection must be prose paragraphs, not bullet lists.
@@ -1496,6 +1709,7 @@ Rules:
 - Include Twitter/X and generated-AI activities when provided.
 - The detailed Obsidian report can include compact private notes, counts, and local image links.
 - Include Watch Log entries as anime/video/watched-media items.
+- In #読んだ/見た/知った, add a compact "AI補足（要確認）" block for notable concepts, theorem names, book/anime/game titles, and video titles when such items appear.
 - Summarize YouTube videos only from provided notes, metadata, or transcripts.
 - Include food images as Markdown image links when food image paths are provided.
 - Fill the template weather line from Weather when available, and include a compact weather-transition section.
@@ -1695,6 +1909,54 @@ Rules:
     foreach ($item in ($youtubeItems | Sort-Object { Get-ActivityTimestamp -Item $_ })) {
         $readItems.Add((Get-TimestampedText -Item $item -ReportDate $Date -Text ("YouTube/動画: {0}" -f (Get-YouTubeItemDisplay -Item $item))))
     }
+
+    $aiReadCandidates = New-Object 'System.Collections.Generic.List[object]'
+    $aiReadSeen = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+    foreach ($item in ($watchItems | Sort-Object { Get-ActivityTimestamp -Item $_ } | Select-Object -First 40)) {
+        $watchDisplay = Get-WatchItemDisplay -Item $item
+        $hasVideo = $false
+        foreach ($video in @((Get-PropertyValue -Item $item -Name "videos"))) {
+            if ($null -eq $video) { continue }
+            $hasVideo = $true
+            Add-AiReadNoteCandidate -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "watch" -Title ([string](Get-PropertyValue -Item $video -Name "title")) -Context $watchDisplay -Source "watch-log"
+        }
+        if (-not $hasVideo) {
+            Add-AiReadNoteCandidate -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "watch" -Title ([string](Get-PropertyValue -Item $item -Name "content")) -Context $watchDisplay -Source "watch-log"
+        }
+        Add-AiReadNoteCandidatesFromText -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "watch-context" -Text ([string](Get-PropertyValue -Item $item -Name "content")) -Source "watch-log" -MaxFromText 2
+    }
+    foreach ($item in ($youtubeItems | Sort-Object { Get-ActivityTimestamp -Item $_ } | Select-Object -First 20)) {
+        $title = [string](Get-PropertyValue -Item $item -Name "title")
+        if ([string]::IsNullOrWhiteSpace($title)) {
+            $title = [string](Get-NestedPropertyValue -Item $item -ObjectName "metadata" -Names @("title", "oembed_title"))
+        }
+        Add-AiReadNoteCandidate -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "youtube" -Title $title -Context (Get-YouTubeItemDisplay -Item $item) -Source "youtube"
+        Add-AiReadNoteCandidatesFromText -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "youtube-notes" -Text ([string](Get-PropertyValue -Item $item -Name "notes")) -Source "youtube" -MaxFromText 2
+    }
+    foreach ($item in ($chatgptItems | Select-Object -First 20)) {
+        Add-AiReadNoteCandidatesFromText -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "chatgpt" -Text ([string]$item.text) -Source "chatgpt-pro" -MaxFromText 2
+        Add-AiReadNoteCandidate -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "chatgpt-title" -Title ([string]$item.title) -Context ([string]$item.text) -Source "chatgpt-pro"
+    }
+    foreach ($item in ($obsidianChanged | Select-Object -First 40)) {
+        Add-AiReadNoteCandidate -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "obsidian-note" -Title ([string]$item.Title) -Context ("$($item.Category) / $($item.RelativePath)") -Source "obsidian-research-index"
+    }
+    foreach ($item in ($activityItems | Sort-Object { Get-ActivityTimestamp -Item $_ } | Select-Object -First 30)) {
+        Add-AiReadNoteCandidatesFromText -Candidates $aiReadCandidates -Seen $aiReadSeen -Kind "activity" -Text ([string]$item.content) -Source "activity-log" -MaxFromText 2
+    }
+
+    $aiReadNotes = Get-AiReadNotes -Candidates $aiReadCandidates.ToArray() -Date $Date -InputPath $readAiNoteInputPath -OutputPath $readAiNotePath -MaxItems $AiReadNoteMaxItems -Skip:([bool]$SkipAiReadNotes)
+    $readSectionLines = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($line in (ConvertTo-BulletLines -Items @($readItems) -Fallback "今日読んだ/見た/知ったものを追記してください。")) {
+        $readSectionLines.Add($line) | Out-Null
+    }
+    if ($aiReadNotes.Count -gt 0) {
+        $readSectionLines.Add("") | Out-Null
+        $readSectionLines.Add("**AI補足（要確認）**") | Out-Null
+        foreach ($note in $aiReadNotes) {
+            $readSectionLines.Add("- $($note.title): $($note.note)") | Out-Null
+        }
+        $readSectionLines.Add("※AI補足は短い概説です。数学的主張や作品情報は必要に応じて確認してください。") | Out-Null
+    }
     $mailTaskItems = New-Object 'System.Collections.Generic.List[string]'
     foreach ($item in ($gmailItems | Sort-Object received_at | Select-Object -First 20)) {
         $subject = Get-ShortLine -Text $item.subject -MaxChars 140
@@ -1832,58 +2094,21 @@ Rules:
 
     $digestParts = New-Object 'System.Collections.Generic.List[string]'
     $digestParts.Add("【$dateLabel 日報】")
-    $digestParts.Add("")
 
-    $wakeWeatherSentences = New-Object 'System.Collections.Generic.List[string]'
-    $wakeWeatherSentences.Add("日付は${dateLabel}です。")
+    $compactSignals = New-Object 'System.Collections.Generic.List[string]'
     if (-not [string]::IsNullOrWhiteSpace($wakeValue)) {
-        $wakeWeatherSentences.Add("起床時刻は${wakeValue}です。")
-    }
-    if (-not [string]::IsNullOrWhiteSpace($sleepPredictionValue)) {
-        $wakeWeatherSentences.Add("就寝予想は${sleepPredictionValue}です。")
+        $compactSignals.Add("起床 $wakeValue")
     }
     if (-not [string]::IsNullOrWhiteSpace($weatherSummary)) {
-        $wakeWeatherSentences.Add("天気は $weatherSummary でした。")
+        $compactSignals.Add("天気 " + (Get-ShortLine -Text $weatherSummary -MaxChars 45))
     }
-    if ($wakeWeatherSentences.Count -gt 0) {
-        $digestParts.Add("**起床と天気**")
-        $digestParts.Add(($wakeWeatherSentences.ToArray() -join " "))
-        $digestParts.Add("")
+    if ($compactSignals.Count -gt 0) {
+        $digestParts.Add(($compactSignals.ToArray() -join " / "))
     }
 
-    $digestParts.Add("**今日の活動**")
-    $digestParts.Add($activitySummaryText)
-    $digestParts.Add("")
+    $digestParts.Add((Get-ShortLine -Text $activitySummaryText -MaxChars 120))
 
-    $digestParts.Add("**気分**")
-    $digestParts.Add("朝は$($moodValues["朝"])、昼は$($moodValues["昼"])、夜は$($moodValues["夜"])でした。")
-    $digestParts.Add("")
-
-    $digestParts.Add("**視聴ログ抜粋**")
-    $digestParts.Add($watchExcerptText)
-    $digestParts.Add("")
-
-    $digestParts.Add("**振り返り**")
-    $digestParts.Add($dailyReflectionText)
-    $digestParts.Add("")
-
-    if ($countParts.Count -gt 0) {
-        $digestParts.Add("**記録の内訳**")
-        $digestParts.Add("自動収集では、$countSummaryText を確認しました。")
-        $digestParts.Add("")
-    }
-
-    $digestParts.Add("**進捗**")
-    if ($doneItems.Count -gt 0) {
-        $progressText = Join-JapaneseNominalClauses -Items @($doneItems) -MaxItems 3
-        if ([string]::IsNullOrWhiteSpace($progressText)) {
-            $digestParts.Add("主な進捗はObsidian側の詳細日報にまとめています。")
-        } else {
-            $digestParts.Add("主な進捗は、${progressText}です。")
-        }
-    } else {
-        $digestParts.Add("自動収集材料は少なめでした。必要ならObsidian側で詳細を追記してください。")
-    }
+    $digestParts.Add("詳細はObsidianの日報に記録しました。")
 
     $body = if ([string]::IsNullOrWhiteSpace($templateText)) {
         @"
@@ -1936,7 +2161,7 @@ Rules:
     $body = Set-MarkdownSection -Text $body -Heading "思った" -ContentLines (ConvertTo-BulletLines -Items @($thoughtItems) -Fallback "今日思ったことをあとで足す。")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "研究アイデア候補" -BeforeHeading "読んだ/見た/知った" -ContentLines (ConvertTo-BulletLines -Items @($researchIdeaItems) -Fallback "昇格先: [[Research-memo/研究アイデアInbox|研究アイデアInbox]]")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "視聴ログ抜粋" -BeforeHeading "読んだ/見た/知った" -ContentLines @($watchExcerptText)
-    $body = Set-MarkdownSection -Text $body -Heading "読んだ/見た/知った" -ContentLines (ConvertTo-BulletLines -Items @($readItems) -Fallback "今日読んだ/見た/知ったものを追記してください。")
+    $body = Set-MarkdownSection -Text $body -Heading "読んだ/見た/知った" -ContentLines @($readSectionLines)
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "SNSでの活動" -BeforeHeading "精神状態" -ContentLines (ConvertTo-BulletLines -Items @($snsItems) -Fallback "SNS活動の自動収集はありません。")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "生成AIでの活動" -BeforeHeading "精神状態" -ContentLines (ConvertTo-BulletLines -Items @($aiLines) -Fallback "生成AI活動の自動収集はありません。")
     $body = Upsert-SectionBeforeHeading -Text $body -Heading "生活シグナル" -BeforeHeading "精神状態" -ContentLines (ConvertTo-BulletLines -Items @($signalLines) -Fallback "生活シグナルはありません。")

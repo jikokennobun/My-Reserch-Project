@@ -1,0 +1,58 @@
+{
+  "pass": 139,
+  "title": "b=aleph_1 refutation, additivity-ceiling arithmetic, and the cd=2 strictness separator",
+  "field": "F_3",
+  "A_cd_grading_sphere_homology": {
+    "ok": true,
+    "S^1": {
+      "reduced_homology_F3": { "0": 0, "1": 1 },
+      "expected": { "0": 0, "1": 1 },
+      "cd": 1,
+      "ok": true
+    },
+    "S^2": {
+      "reduced_homology_F3": { "0": 0, "1": 0, "2": 1 },
+      "expected": { "0": 0, "1": 0, "2": 1 },
+      "cd": 2,
+      "ok": true
+    },
+    "S^3": {
+      "reduced_homology_F3": { "0": 0, "1": 0, "2": 0, "3": 1 },
+      "expected": { "0": 0, "1": 0, "2": 0, "3": 1 },
+      "cd": 3,
+      "ok": true
+    }
+  },
+  "B_additivity_ceiling_koenig": {
+    "ok": true,
+    "finite_sup_reaches": "omega (aleph_omega)",
+    "koenig_excludes_aleph_omega": true,
+    "forced_min_continuum": "aleph_{omega+1}",
+    "sample_finite_bound_N": 200,
+    "sample_req_max": 201
+  },
+  "C_lim1_proxy_gap": {
+    "ok": true,
+    "h1_chain_linear": 0,
+    "h1_square_hollow_nonlinear": 1,
+    "h1_square_filled": 0,
+    "interpretation": "linear index => lim^1 proxy = 0 (ML); non-linear gap => lim^1 proxy != 0 (DSV b=aleph_1 shape); filling (additivity) kills it"
+  },
+  "D_certified_linearity_bridge": {
+    "ok": true,
+    "linear_index_ML_vanishes": true,
+    "nonlinear_index_lim1_survives": true,
+    "bridge": "Thm 138c certified-linearity bit = the ML/vanishing dichotomy at the derived-limit level"
+  },
+  "claims_verified": [
+    "A^{(a),2} is a genuine cd=2 obstruction (H~_j(S^2)=F_3 iff j=2)",
+    "(forall n)h_n forces 2^{aleph_0} >= aleph_{omega+1} (Koenig), incompatible with b=aleph_1",
+    "b=aleph_1 => lim^1 A != 0 (DSV) proxied by a non-uniformizable gap 1-cocycle => !h_1",
+    "certified linearity (chain index) <=> Mittag-Leffler <=> lim^{>=1}=0"
+  ],
+  "NOT_verified_here_proof_obligations": [
+    "the positive model (2^{aleph_0}=aleph_2, level-1 additivity, level-2 failure) realizing lim^1 A = 0 ^ lim^2 A^{(a),2} != 0 -- a forcing, not a finite check",
+    "that 1-dim additivity (h_1) does not drag h_2 for the SAME index family (reduces to BBMT/BLH strict grading, cited)"
+  ],
+  "overall": "PASS"
+}

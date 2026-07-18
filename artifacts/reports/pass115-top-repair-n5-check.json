@@ -1,0 +1,161 @@
+{
+  "pass": 115,
+  "carrier": [
+    "0",
+    "a",
+    "b",
+    "c",
+    "U"
+  ],
+  "order": "N5 (0<a<b<U, 0<c<U)",
+  "join_irreducibles": [
+    "a",
+    "b",
+    "c"
+  ],
+  "A_aps_profile": {
+    "boxt_antitone": true,
+    "synt_fixed_points": [],
+    "box_extensions": [
+      {
+        "boxU": "b",
+        "box_monotone": true,
+        "A2": true,
+        "A3": true,
+        "A4": true,
+        "G2": true,
+        "FG2": true
+      },
+      {
+        "boxU": "U",
+        "box_monotone": true,
+        "A2": true,
+        "A3": true,
+        "A4": true,
+        "G2": true,
+        "FG2": true
+      }
+    ]
+  },
+  "B_macneille_separation": {
+    "num_closed_cuts": 5,
+    "all_cuts_principal": true,
+    "completion_fixed_cuts": [
+      {
+        "cut": [
+          "0",
+          "U",
+          "a",
+          "b",
+          "c"
+        ],
+        "principal": true
+      }
+    ],
+    "nonprincipal_fixed_cut_exists": false,
+    "syntactic_fixed_points": []
+  },
+  "C_residuated_census": {
+    "commutative_residuated_total": 115,
+    "by_unit": {
+      "c": 44,
+      "b": 18,
+      "a": 53
+    },
+    "examples": {
+      "c": {
+        "0*0": "0",
+        "0*a": "0",
+        "0*b": "0",
+        "0*c": "0",
+        "0*U": "0",
+        "a*0": "0",
+        "a*a": "0",
+        "a*b": "0",
+        "a*c": "a",
+        "a*U": "a",
+        "b*0": "0",
+        "b*a": "0",
+        "b*b": "0",
+        "b*c": "b",
+        "b*U": "b",
+        "c*0": "0",
+        "c*a": "a",
+        "c*b": "b",
+        "c*c": "c",
+        "c*U": "U",
+        "U*0": "0",
+        "U*a": "a",
+        "U*b": "b",
+        "U*c": "U",
+        "U*U": "U"
+      },
+      "b": {
+        "0*0": "0",
+        "0*a": "0",
+        "0*b": "0",
+        "0*c": "0",
+        "0*U": "0",
+        "a*0": "0",
+        "a*a": "a",
+        "a*b": "a",
+        "a*c": "0",
+        "a*U": "a",
+        "b*0": "0",
+        "b*a": "a",
+        "b*b": "b",
+        "b*c": "c",
+        "b*U": "U",
+        "c*0": "0",
+        "c*a": "0",
+        "c*b": "c",
+        "c*c": "c",
+        "c*U": "c",
+        "U*0": "0",
+        "U*a": "a",
+        "U*b": "U",
+        "U*c": "c",
+        "U*U": "U"
+      },
+      "a": {
+        "0*0": "0",
+        "0*a": "0",
+        "0*b": "0",
+        "0*c": "0",
+        "0*U": "0",
+        "a*0": "0",
+        "a*a": "a",
+        "a*b": "b",
+        "a*c": "c",
+        "a*U": "U",
+        "b*0": "0",
+        "b*a": "b",
+        "b*b": "b",
+        "b*c": "c",
+        "b*U": "U",
+        "c*0": "0",
+        "c*a": "c",
+        "c*b": "c",
+        "c*c": "0",
+        "c*U": "c",
+        "U*0": "0",
+        "U*a": "U",
+        "U*b": "U",
+        "U*c": "c",
+        "U*U": "U"
+      }
+    },
+    "meet_tensor_is_residuated": false,
+    "meet_tensor_unit": "U",
+    "pass114_fiber_under_meet": {
+      "fiber": [
+        "0",
+        "a",
+        "b",
+        "c",
+        "U"
+      ],
+      "principal": true
+    }
+  }
+}

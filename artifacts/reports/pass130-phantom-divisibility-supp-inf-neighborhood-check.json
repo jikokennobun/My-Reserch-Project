@@ -1,0 +1,215 @@
+{
+  "pass": 130,
+  "parts": {
+    "A1_unit_absorption": {
+      "name": "unit-absorption (finite prime is a unit in every other Z_p)",
+      "cases": [
+        {
+          "q_finitepart": 3,
+          "solenoid_prime": 2,
+          "q_is_unit": true,
+          "inverse_exists": true,
+          "ok": true
+        },
+        {
+          "q_finitepart": 5,
+          "solenoid_prime": 2,
+          "q_is_unit": true,
+          "inverse_exists": true,
+          "ok": true
+        },
+        {
+          "q_finitepart": 7,
+          "solenoid_prime": 3,
+          "q_is_unit": true,
+          "inverse_exists": true,
+          "ok": true
+        },
+        {
+          "q_finitepart": 25,
+          "solenoid_prime": 2,
+          "q_is_unit": true,
+          "inverse_exists": true,
+          "ok": true
+        },
+        {
+          "q_finitepart": 6,
+          "solenoid_prime": 5,
+          "q_is_unit": true,
+          "inverse_exists": true,
+          "ok": true
+        }
+      ],
+      "ok": true
+    },
+    "A2_torsion_detection": {
+      "name": "torsion detects complement of Supp_inf",
+      "cases": [
+        {
+          "tower": {
+            "2": 1,
+            "3": 1,
+            "5": 1
+          },
+          "torsion_primes": [
+            {
+              "q": 2,
+              "order": 2,
+              "expected_order": 2
+            },
+            {
+              "q": 3,
+              "order": 3,
+              "expected_order": 3
+            },
+            {
+              "q": 5,
+              "order": 5,
+              "expected_order": 5
+            }
+          ],
+          "torsionfree_primes": [],
+          "ok": true
+        },
+        {
+          "tower": {
+            "2": "inf",
+            "3": 1
+          },
+          "torsion_primes": [
+            {
+              "q": 3,
+              "order": 3,
+              "expected_order": 3
+            }
+          ],
+          "torsionfree_primes": [
+            2
+          ],
+          "ok": true
+        },
+        {
+          "tower": {
+            "2": "inf",
+            "3": "inf",
+            "5": 2
+          },
+          "torsion_primes": [
+            {
+              "q": 5,
+              "order": 25,
+              "expected_order": 25
+            }
+          ],
+          "torsionfree_primes": [
+            2,
+            3
+          ],
+          "ok": true
+        }
+      ],
+      "ok": true
+    },
+    "A3_supp_inf_homomorphism": {
+      "name": "Supp_inf : (Steinitz,x) -> (P(primes),cup) hom + idempotent",
+      "cases": [
+        {
+          "a": {
+            "2": "inf",
+            "3": 1
+          },
+          "b": {
+            "3": "inf",
+            "5": 2
+          },
+          "supp_inf(ab)": [
+            2,
+            3
+          ],
+          "supp_inf(a)Usupp_inf(b)": [
+            2,
+            3
+          ],
+          "homomorphism": true,
+          "idempotent": true,
+          "ok": true
+        },
+        {
+          "a": {
+            "2": 1,
+            "3": 1
+          },
+          "b": {
+            "5": 1,
+            "7": 1
+          },
+          "supp_inf(ab)": [],
+          "supp_inf(a)Usupp_inf(b)": [],
+          "homomorphism": true,
+          "idempotent": true,
+          "ok": true
+        },
+        {
+          "a": {
+            "2": "inf"
+          },
+          "b": {
+            "2": 5
+          },
+          "supp_inf(ab)": [
+            2
+          ],
+          "supp_inf(a)Usupp_inf(b)": [
+            2
+          ],
+          "homomorphism": true,
+          "idempotent": true,
+          "ok": true
+        }
+      ],
+      "ok": true
+    },
+    "C_neighborhood_box": {
+      "name": "non-normal neighborhood box D1 ^ ~D2 ^ D3hom",
+      "ok": true,
+      "D1_necessitation": true,
+      "D3hom_monotone": true,
+      "D2_normal_K": false,
+      "nonnormal": true
+    },
+    "Cprime_WO_equals_loeb": {
+      "name": "WO = Loeb-for-'-<' = converse-well-founded",
+      "cases": [
+        {
+          "frame": "converse-wellfounded chain 0-<1-<2 (transitive closure)",
+          "loeb_valid": true,
+          "converse_wellfounded": true,
+          "WO_expected": true,
+          "ok": true
+        },
+        {
+          "frame": "reflexive point (loop)",
+          "loeb_valid": false,
+          "converse_wellfounded": false,
+          "WO_expected": false,
+          "ok": true
+        },
+        {
+          "frame": "converse-ILL-founded 2-cycle",
+          "loeb_valid": false,
+          "converse_wellfounded": false,
+          "WO_expected": false,
+          "ok": true
+        }
+      ],
+      "ok": true
+    },
+    "B_simultaneous_honesty": {
+      "name": "simultaneous higher-lim^n honesty: consistency strength",
+      "machine_checked": false,
+      "correction_of_pass129": "Pass 129 Thm 129b(c) called (forall n)h_n a LARGE-CARDINAL statement (upper bound weakly compact, BLH 2021). CORRECTED: Bergfalk-Hrusak-Lambie-Hanson removed the large cardinal -- simultaneous vanishing is consistent with ZFC ALONE. So (forall n)h_n is EQUICONSISTENT WITH ZFC, not a large-cardinal statement; the relevant threshold is a cardinal-characteristic one (2^aleph0 >= aleph_2 necessary), not a weakly compact.",
+      "ok": true
+    }
+  },
+  "overall": "PASS"
+}

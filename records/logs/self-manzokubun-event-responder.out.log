@@ -314,3 +314,783 @@ Discord event listener started. Press Ctrl+C to stop.
 を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
 Restarting Discord event listener in 300 second(s). Restart count: 37
 Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 38
+Discord event listener started. Press Ctrl+C to stop.
+警告: Gateway heartbeat failed: "0" 個の引数を指定して "GetResult" を呼び出し中に例外が発生しました: "WebSocket がこの操作に対して無効な状態です 
+('Aborted')。有効な状態:'Open, CloseReceived'"
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "0" 個の引数を指定して "GetResult" 
+を呼び出し中に例外が発生しました: "内部 WebSocket エラーが発生しました。詳細については、innerException (存在する場合) を参照してください。"
+Restarting Discord event listener in 300 second(s). Restart count: 39
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 40
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 41
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 42
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 43
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 44
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 45
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 46
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 47
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 48
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 49
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 50
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 51
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 52
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 53
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 54
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 55
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 300 second(s). Restart count: 56
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 57
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 58
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 59
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 60
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 300 second(s). Restart count: 61
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 62
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 63
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 64
+Discord event listener started. Press Ctrl+C to stop.
+[2026/07/01 12:42:27.92] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 5 second(s). Restart count: 1
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 8 second(s). Restart count: 2
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 13 second(s). Restart count: 3
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 21 second(s). Restart count: 4
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 34 second(s). Restart count: 5
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 54 second(s). Restart count: 6
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 86 second(s). Restart count: 7
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 138 second(s). Restart count: 8
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 221 second(s). Restart count: 9
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 10
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 11
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 12
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 13
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 14
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 15
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 16
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 17
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 18
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 19
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 20
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 21
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 22
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 23
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 24
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 25
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 26
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 27
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 28
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 29
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 30
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 300 second(s). Restart count: 31
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 32
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 33
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 34
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 35
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 36
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 37
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 38
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 39
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 40
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "0" 個の引数を指定して "GetResult" 
+を呼び出し中に例外が発生しました: "リモート サーバーに接続できません。"
+Restarting Discord event listener in 300 second(s). Restart count: 41
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 42
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 43
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 44
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 45
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 300 second(s). Restart count: 46
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 47
+Discord event listener started. Press Ctrl+C to stop.
+警告: Gateway heartbeat failed: "0" 個の引数を指定して "GetResult" を呼び出し中に例外が発生しました: "WebSocket がこの操作に対して無効な状態です 
+('Aborted')。有効な状態:'Open, CloseReceived'"
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "0" 個の引数を指定して "GetResult" 
+を呼び出し中に例外が発生しました: "内部 WebSocket エラーが発生しました。詳細については、innerException (存在する場合) を参照してください。"
+Restarting Discord event listener in 300 second(s). Restart count: 48
+[2026/07/06 21:12:43.46] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 5 second(s). Restart count: 1
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 8 second(s). Restart count: 2
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 13 second(s). Restart count: 3
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 21 second(s). Restart count: 4
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 34 second(s). Restart count: 5
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 54 second(s). Restart count: 6
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 86 second(s). Restart count: 7
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 138 second(s). Restart count: 8
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 221 second(s). Restart count: 9
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 10
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 11
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 12
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 13
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 14
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 15
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 16
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 17
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 18
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 19
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 20
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "0" 個の引数を指定して "GetResult" 
+を呼び出し中に例外が発生しました: "内部 WebSocket エラーが発生しました。詳細については、innerException (存在する場合) を参照してください。"
+Restarting Discord event listener in 300 second(s). Restart count: 21
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 22
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 23
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 24
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 25
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 26
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 27
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 28
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 29
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 30
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 300 second(s). Restart count: 31
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 32
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 33
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 34
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 35
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 36
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 37
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 38
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 39
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+警告: Could not close Discord Gateway cleanly: "0" 個の引数を指定して "GetResult" を呼び出し中に例外が発生しました: "受信メッセージの型 'Text' 
+は、WebSocket.CloseAsync の呼び出し後は無効です。WebSocket.CloseAsync は、リモート 
+エンドポイントから今後データを受信しないことが予想される場合にのみ使用します。データを受信できる状態を保ちながら出力チャネルを閉じるには、代わりに 'WebSocket.CloseOutputAsync' を使用します。"
+Restarting Discord event listener in 300 second(s). Restart count: 40
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 41
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 42
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 43
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 44
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 45
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 46
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 47
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 48
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 49
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 50
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 51
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 52
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 53
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 54
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 55
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 56
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 57
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 58
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 59
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 60
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 61
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 62
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 63
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 64
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 65
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 66
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 67
+警告: Could not load channel names: リモート名を解決できませんでした。: 'discord.com'
+警告: Self-Manzokubun event responder stopped with an error: リモート名を解決できませんでした。: 'discord.com'
+Restarting Discord event listener in 300 second(s). Restart count: 68
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 69
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 70
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 71
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 300 second(s). Restart count: 72
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 73
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 74
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 75
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 76
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 77
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 78
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 79
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 80
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 81
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 82
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 83
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 84
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 85
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 86
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 87
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 88
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 89
+Discord event listener started. Press Ctrl+C to stop.
+Restarting Discord event listener in 300 second(s). Restart count: 90
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 91
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 92
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 93
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 94
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 95
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 96
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 97
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 98
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 99
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 100
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 101
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 102
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 103
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 104
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 105
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 106
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "0" 個の引数を指定して "GetResult" 
+を呼び出し中に例外が発生しました: "内部 WebSocket エラーが発生しました。詳細については、innerException (存在する場合) を参照してください。"
+Restarting Discord event listener in 300 second(s). Restart count: 107
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 108
+Discord event listener started. Press Ctrl+C to stop.
+[2026/07/15 14:30:34.38] Self-Manzokubun event responder stopped. ExitCode=1073807364
+[2026/07/15 18:10:30.64] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 5 second(s). Restart count: 1
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 8 second(s). Restart count: 2
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 13 second(s). Restart count: 3
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 21 second(s). Restart count: 4
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 34 second(s). Restart count: 5
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 54 second(s). Restart count: 6
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 86 second(s). Restart count: 7
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 138 second(s). Restart count: 8
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+警告: Could not close Discord Gateway cleanly: "0" 個の引数を指定して "GetResult" を呼び出し中に例外が発生しました: "受信メッセージの型 'Text' 
+は、WebSocket.CloseAsync の呼び出し後は無効です。WebSocket.CloseAsync は、リモート 
+エンドポイントから今後データを受信しないことが予想される場合にのみ使用します。データを受信できる状態を保ちながら出力チャネルを閉じるには、代わりに 'WebSocket.CloseOutputAsync' を使用します。"
+Restarting Discord event listener in 221 second(s). Restart count: 9
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 10
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 11
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 12
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 300 second(s). Restart count: 13
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 14
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 15
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 16
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 17
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 18
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 19
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 20
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 21
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 22
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 300 second(s). Restart count: 23
+[2026/07/17 20:29:48.46] Starting Self-Manzokubun event responder. ReplyMode=QueueOnly
+Resolved DISCORD_AI_CHAT_CHANNEL_ID=1516830527687098388
+Self-Manzokubun event responder supervisor started. ReplyMode=QueueOnly
+Watching channel id(s): 1516830527687098388
+QueueOnly mode detects posts immediately and stores pending messages without API billing.
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 5 second(s). Restart count: 1
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 8 second(s). Restart count: 2
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 13 second(s). Restart count: 3
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 21 second(s). Restart count: 4
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 34 second(s). Restart count: 5
+Discord event listener started. Press Ctrl+C to stop.
+警告: Self-Manzokubun event responder stopped with an error: Discord event listener failed: "1" 個の引数を指定して "Wait" 
+を呼び出し中に例外が発生しました: "1 つ以上のエラーが発生しました。"
+Restarting Discord event listener in 54 second(s). Restart count: 6
+Discord event listener started. Press Ctrl+C to stop.
+警告: Discord requested reconnect. Restart this script.
+Restarting Discord event listener in 86 second(s). Restart count: 7
+Discord event listener started. Press Ctrl+C to stop.

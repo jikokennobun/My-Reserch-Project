@@ -1,0 +1,59 @@
+{
+  "pass": 133,
+  "parts": {
+    "A_socle_jump_and_absoluteness": {
+      "finite_socle_ladder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "lim1_commutes_with_products_for_towers": true,
+      "product_tower_kappa_q": "2^aleph0 (ZFC-absolute, NOT Suslin-sensitive)",
+      "suslin_sensitivity_requires": "omega_1-cofinal COHERENT index (Mardesic-Prasolov), not omega-many strands",
+      "correction_of_pass132_nextstep": "prod-tower phantom is ZFC-absolute prod lim^1; NOT the A_{aleph1} strong-homology lim^1",
+      "kappa_q_single_strand": 1,
+      "ok": true
+    },
+    "B_A_kappa_placement": {
+      "A_kappa_implies_forall_h_n": true,
+      "n1_retract_transfers": true,
+      "n2_nonretract_witness": true,
+      "placement": "A_kappa strictly stronger IFF (forall n)h_n(A) + (exists coherent B) lim^1 B != 0 is consistent",
+      "reduction": "single-system vs all-systems; separation = a second independent coherent family; n=1 collapses, n>=2 open",
+      "equivalence_A_kappa_iff_forall_h_n": "OPEN (reframed as two-system separation, not resolved)",
+      "ok": true
+    },
+    "C_m_enc_inflation": {
+      "tau_repair_budget": 5,
+      "N": 200,
+      "least_witness_dyadic": {
+        "num_flipped": 195,
+        "cofinal_failure": true,
+        "first_flip_k": 6,
+        "gap_at_N": 200
+      },
+      "godel_quadratic": {
+        "num_flipped": 198,
+        "cofinal_failure": true,
+        "first_flip_k": 3,
+        "gap_at_N": 39800
+      },
+      "arai_O1": {
+        "num_flipped": 0,
+        "cofinal_failure": false,
+        "first_flip_k": null,
+        "gap_at_N": 5
+      },
+      "uniform_bound_beaten_dyadic_vs_linear": 193,
+      "conj132d_least_witness": true,
+      "carried_obligation": "general Sigma_1 witness-comparison Rosser box has m_enc UNBOUNDED (no prim-rec uniform nested-witness bound)",
+      "disambiguation": "full D3 must mean WITNESS-BOUNDED derivability; the modal schema-4 reading is already Arai (Pass 127a), making Conj 132d vacuous unless witness-bounded",
+      "ok": true
+    }
+  },
+  "overall": "PASS"
+}

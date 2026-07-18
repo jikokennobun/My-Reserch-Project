@@ -1,0 +1,74 @@
+{
+  "pass": 119,
+  "date": "2026-07-04",
+  "model": "K33_bipartite_bounded",
+  "carrier": ["0", "f1", "f2", "f3", "g1", "g2", "g3", "U"],
+  "order": "0 <= everything; everything <= U; f_i <= g_j for all i,j (complete bipartite K_{3,3} between fronts)",
+  "num_cuts": 9,
+  "num_nonprincipal_cuts": 1,
+  "nonprincipal_cuts": [["0", "f1", "f2", "f3"]],
+  "w": ["0", "f1", "f2", "f3"],
+  "F": ["f1", "f2", "f3"],
+  "G": ["g1", "g2", "g3"],
+  "witnesses": {
+    "A_onto": {
+      "map": {"0": "U", "f1": "g1", "f2": "g2", "f3": "g3", "g1": "0", "g2": "0", "g3": "0", "U": "0"},
+      "antitone": true, "synt_fp_free": true,
+      "boxt[F]": ["g1", "g2", "g3"], "boxt[F]==G": true,
+      "boxt_hat(w)": ["0", "f1", "f2", "f3"], "fixes_w": true,
+      "note": "sufficiency: boxt[F]=G forces meet = w"
+    },
+    "D_top_nonfrontier": {
+      "map": {"0": "U", "f1": "g1", "f2": "g2", "f3": "U", "g1": "0", "g2": "0", "g3": "0", "U": "0"},
+      "antitone": true, "synt_fp_free": true,
+      "boxt[F]": ["U", "g1", "g2"], "boxt[F]==G": false,
+      "boxt_hat(w)": ["0", "f1", "f2", "f3"], "fixes_w": true,
+      "note": "REFUTES necessity: f3 mapped to the non-frontier TOP U, yet w stays fixed (g1^g2^U = g1^g2 = w)"
+    },
+    "E_repeat_frontier": {
+      "map": {"0": "U", "f1": "g1", "f2": "g2", "f3": "g2", "g1": "0", "g2": "0", "g3": "0", "U": "0"},
+      "antitone": true, "synt_fp_free": true,
+      "boxt[F]": ["g1", "g2"], "boxt[F]==G": false,
+      "boxt_hat(w)": ["0", "f1", "f2", "f3"], "fixes_w": true,
+      "note": "REFUTES necessity: image {g1,g2} is a meet-generating pair (any 2 of 3 g's meet to w)"
+    },
+    "C0_collapse_principal": {
+      "map": {"0": "U", "f1": "g1", "f2": "g1", "f3": "g1", "g1": "0", "g2": "0", "g3": "0", "U": "0"},
+      "antitone": true, "synt_fp_free": true,
+      "boxt[F]": ["g1"], "boxt[F]==G": false,
+      "boxt_hat(w)": ["0", "f1", "f2", "f3", "g1"], "fixes_w": false,
+      "note": "control: single-g image gives principal meet down(g1) != w; not fixed"
+    }
+  },
+  "census_K33": {
+    "antitone_syntFPfree_total": 7609,
+    "fix_w_total": 2814,
+    "fix_w_boxtF_eq_G": 402,
+    "fix_w_boxtF_neq_G": 2412,
+    "fix_w_with_nonfrontier_image": 1206,
+    "intersection_size_distribution_|boxtF_cap_G|": {"2": 2412, "3": 402},
+    "fix_w_with_boxtF_disjoint_from_G": 0,
+    "necessity_of_boxtF_eq_G_holds": false
+  },
+  "hexagon_regression": {
+    "F": ["x", "y"], "G": ["m", "n"],
+    "antitone_syntFPfree_total": 273,
+    "fix_w_total": 22,
+    "fix_w_boxtF_eq_G": 22,
+    "necessity_of_boxtF_eq_G_holds": true,
+    "note": "reproduces Pass 118: at |F|=|G|=2, w meet-irredundant, boxt[F]=G IS necessary"
+  },
+  "checks": {
+    "K33_has_unique_nonprincipal_cut": true,
+    "F_and_G_size_3": true,
+    "witness_A_onto_fixes": true,
+    "witness_D_nonfrontier_fixes_but_not_onto": true,
+    "witness_E_repeat_fixes_but_not_onto": true,
+    "control_C0_not_fixed": true,
+    "necessity_FAILS_at_triple": true,
+    "no_fix_disjoint_from_G": true,
+    "hexagon_necessity_HOLDS": true
+  },
+  "conclusion": "At |F|=|G|=3 (K_{3,3}), boxt[F]=G is SUFFICIENT but NOT NECESSARY for w to be boxt_hat-fixed. The exact criterion is the meet criterion /\\ boxt[F] = w (Lemma 118a). Sharp form (Thm 119c): fixed iff boxt[F] contains a meet-generating subfamily of G; equivalently |boxt[F] cap G| >= mu(w), the minimal meet-generator size. Here mu(w)=2 < 3=|G| (G meet-REDUNDANT), so necessity of onto fails; in the hexagon mu(w)=2=|G| (meet-IRREDUNDANT), so onto is forced. No fixing map has boxt[F] disjoint from G: at least 2 genuine upper-frontier elements are mandatory.",
+  "overall": "PASS"
+}

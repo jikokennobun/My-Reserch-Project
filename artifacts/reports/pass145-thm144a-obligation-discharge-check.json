@@ -1,0 +1,29 @@
+{
+  "pass": 145,
+  "date": "2026-07-14",
+  "title": "Thm-144a obligation discharge: finality pro-iso (n>=2) + good/bad level-1 dichotomy + orientation torsor",
+  "blockA_finality_proiso": {
+    "H_star_J": [[1, []], [0, []], [0, []]],
+    "H_star_I": [[1, []], [0, []], [0, []], [0, []]],
+    "fibers_up_directed": true,
+    "cohomology_agrees_all_degrees": true,
+    "pass": true
+  },
+  "blockB_good_bad_level1": {
+    "good_scale_tree_H1": 0,
+    "bad_scale_C6_H1": 1,
+    "bad_scale_C8_H1": 1,
+    "girth_C6": 6,
+    "girth_C8": 8,
+    "level1_vanishes_iff_good": true,
+    "distinct_girth_not_proiso": true,
+    "pass": true
+  },
+  "blockC_orientation_rosser": {
+    "symmetric_monodromy_H0_is_Z2": true,
+    "rosser_moebius_H0_vanishes": true,
+    "orientation_distinguishes_rosser_from_symmetric": true,
+    "pass": true
+  },
+  "overall_PASS": true
+}

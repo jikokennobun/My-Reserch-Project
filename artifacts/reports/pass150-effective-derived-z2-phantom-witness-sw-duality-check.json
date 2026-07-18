@@ -1,0 +1,58 @@
+{
+  "pass": 150,
+  "title": "Effective derived class for the schematic Z/2 (a) + phantom-witness / SW duality for -<n> (b)",
+  "A_effective_sign_sheaf_H0_vs_H1": {
+    "K": 8,
+    "true_side_t": [1, 1, 1, 1, 1, 1, 1, 1],
+    "stalk_oriented": true,
+    "indexed_separators": [],
+    "eff_H0_empty": true,
+    "uniform_diagonal_defeat": true,
+    "ISigma1_provable_shadow": true,
+    "classical_separator_exists": true,
+    "cover_overlaps": 0,
+    "H1_classical": 0,
+    "H0_effective": "0",
+    "H1_effective": "nontrivial(Z/2)"
+  },
+  "A_ok": true,
+  "B_chirality_monotone_grade": {
+    "realized_grades": [0, 1, 2, 3, 4],
+    "monotone_nondecreasing": true,
+    "least_is_floor_<0>": true,
+    "no_negative_realized": true,
+    "only_zero_invertible": true,
+    "group_completion": "Z"
+  },
+  "B_ok": true,
+  "C_phantom_witness_PA_notCon": {
+    "theory": "PA + not-Con(PA)",
+    "consistent_up_to_bound": true,
+    "phantom_bottom_proof_code": "beyond every standard bound (nonstandard)",
+    "phantom_witness_is_nonstandard": true,
+    "Pi1_sound": true,
+    "interpretable_in_PA": true,
+    "grade": -1,
+    "invisible_over_standard_model_N": true,
+    "phantom_fiber_cardinality": "2^aleph_0"
+  },
+  "C_ok": true,
+  "D_spanier_whitehead_duality": {
+    "D2_is_id": true,
+    "fixed_locus": [0],
+    "sw_fixed": 1,
+    "pos_realized": [1, 2, 3, 4],
+    "neg_phantom": [-1, -2, -3, -4],
+    "bijective_pos_to_neg": true,
+    "phantom_pairing_ok": true,
+    "chirality": "absolute over omega, phantom-broken over interpretability"
+  },
+  "D_ok": true,
+  "overall": "PASS",
+  "notes": [
+    "A: sign sheaf sgn on Real(boxt). CLASSICAL: H^0 != 0 (separator by AC), Cech H^1 = 0 (discrete singleton-race cover) -- the schematic Z/2 is NOT a classical class. EFFECTIVE (c.e. sections): H^0 = 0 (no recursive separator of the inseparable pair), H^1 = Z/2, nonvanishing ISigma_1-provable (uniform diagonal defeat). => (Z,Z/2) is the H^1 of the EFFECTIVE sign sheaf [cheap, ISigma_1] and only the pointwise H^0 of a single sentence after KF ascent [expensive, phi_{eps_0}(0)]: the class is DE-LOCALIZED.",
+    "B: realized grades (N,+) are monotone, well-founded, least <0>; only <0> invertible; no omega-sound principle has negative grade -- chirality is omega-ABSOLUTE.",
+    "C: PA + not-Con(PA): consistent, Pi_1-sound, INTERPRETABLE in PA (Feferman 1960). Its nonstandard proof of bottom is the -<1> PHANTOM witness: negative grade realized only nonstandardly, ==_T-invisible over N; the phantom fiber is 2^aleph_0 (Lindstrom density).",
+    "D: D:k|->-k on K_0=Z, D^2=id, fixed locus {0}=S^0=T-floor, free off it. D pairs the Pass-53 lim^1 phantom POINT (upstairs) with the interpretability phantom ANTIMATTER -<n> (downstairs): one Spanier-Whitehead duality, landing only in the phantom-completed SW category. Chirality: absolute over omega, phantom-broken over interpretability-conservative extensions -- closing the phantom-point / phantom-antimatter loop."
+  ]
+}

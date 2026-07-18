@@ -1,0 +1,90 @@
+{
+  "pass": 135,
+  "coeff_field": "F_3",
+  "title": "cohomological-dimension non-transfer of the retract argument at n=2; explicit a-primary A^{(a),2}; correction of the Pass-134 simplicial heuristic",
+  "parts": {
+    "A_no_retraction_each_degree": {
+      "n1_triangle_to_S1": {
+        "H_dom": 0,
+        "H_cod": 1,
+        "retraction_blocked": true
+      },
+      "n2_tetra_to_S2": {
+        "H_dom": 0,
+        "H_cod": 1,
+        "retraction_blocked": true
+      },
+      "H1_S1": 1,
+      "H2_S2": 1,
+      "claim": "S^n carries a nonzero F_a n-class and does NOT retract off Delta^{n+1}; the obstruction is genuinely n-dimensional.",
+      "pass": true
+    },
+    "B_correction_wedge_is_contractible": {
+      "wedge_reduced_betti": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "honest_min_2class_H2_S2": 1,
+      "note": "check-pass134 modelled A^{(a),2} as 'two 2-simplices sharing a vertex', which is contractible (all reduced Betti = 0) and cannot carry a lim^2 obstruction; the genuine 2-coherence class is 2-spherical (S^2).",
+      "pass": true
+    },
+    "C_cohdim_transfer_obstruction": {
+      "tower_chain": {
+        "top_reduced_nonzero_H": 0,
+        "top_face_dim": 1
+      },
+      "tower_star": {
+        "top_reduced_nonzero_H": 0,
+        "top_face_dim": 1
+      },
+      "A_a_2_as_S2": {
+        "top_reduced_nonzero_H": 2,
+        "top_face_dim": 2
+      },
+      "structural_claim": "cd(twin tower) <= 1 < 2 = cd(A^{(a),2}); lim^{>=2}(tower)=0 IDENTICALLY, so the n=1 retract-transfer (Thm 133c/134e) has NO analogue at n=2 -- transfer fails for a dimension reason, BEFORE any set theory.",
+      "residual_open": "Con((forall n)h_n(A) ^ lim^2 A^{(a),2} != 0) -- the genuine BBMT additivity, now a concrete 2-cd instance (Bergfalk-Lambie-Hanson 2021; BBMT).",
+      "pass": true
+    },
+    "D_cf_spectrum_floor": {
+      "ladder": [
+        {
+          "n": 0,
+          "object": "solenoid hatZ_a/Z (Pass 55)",
+          "cd": 0,
+          "rank": "kappa_a = 1 (prime a; Prufer-rigid, Pass 130/131)",
+          "cardinal_layer": "aleph_0",
+          "status": "ZFC-absolute (arithmetic floor)"
+        },
+        {
+          "n": 1,
+          "object": "A^{(a)} MP coherent (Pass 134 Thm 134c)",
+          "cd": 1,
+          "rank": "least non-trivializable coherent family",
+          "cardinal_layer": "aleph_1",
+          "status": "Suslin-sensitive: !=0 at b=aleph_1 (MP88), =0 at MA_{aleph_1} (DSV89)"
+        },
+        {
+          "n": 2,
+          "object": "A^{(a),2} 2-coherent (this pass)",
+          "cd": 2,
+          "rank": "2-dim BBMT Delta-system",
+          "cardinal_layer": "aleph_2 (conjectural)",
+          "status": "lim^2 !=0 consistent (CH); additivity with (forall n)h_n(A) OPEN"
+        }
+      ],
+      "floor_identity": "the n=0, cd=0 floor of the cf-tower IS the G2^^-FG2 solenoid phantom of Pass 55 -- de-arithmetization ladder: cd = n, cardinal ~ aleph_n.",
+      "pass": true
+    },
+    "E_exotic_ordering_residue": {
+      "status": "CARRIED (not finitely decidable)",
+      "dichotomy": [
+        "(refute) a Sigma_1 non-p.r. ordering with m_enc = O(1) keeping ~D2 ^ ~Box_R bot -> reopens the logic-vs-realizability gap",
+        "(confirm) I-Sigma_1 over graph(-<) proves the plant cofinal for EVERY Sigma_1 ordering -> upgrades Cor 134b to the full Sigma_1 class"
+      ],
+      "pass": true
+    }
+  },
+  "overall": "PASS"
+}

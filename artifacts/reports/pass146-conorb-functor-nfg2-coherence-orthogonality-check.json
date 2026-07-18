@@ -1,0 +1,51 @@
+{
+  "pass": 146,
+  "date": "2026-07-14",
+  "title": "Con^orb map (well-defined/non-injective/functorial) + nFG2-vs-coherence orthogonality + frozen/fluid GLP-strictness realisation",
+  "blockA_conorb_map": {
+    "sig_good": [
+      0,
+      null
+    ],
+    "sig_oriented_bad": [
+      1,
+      false
+    ],
+    "sig_symmetric_bad": [
+      1,
+      true
+    ],
+    "three_targets_distinct": true,
+    "KF_lim1_detected_rosser_invisible": true,
+    "end_extension_H1_invariant": true,
+    "map_non_injective_good_collapses": true,
+    "pass": true
+  },
+  "blockB_nFG2_coherence_orthogonality": {
+    "nFG2_all_level_models": 8,
+    "index2_collapse_violations": 0,
+    "reduced_H_n_of_S_n": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    },
+    "orbit_grading_truncates_at_2": true,
+    "coherence_grading_unbounded": true,
+    "gradings_orthogonal": true,
+    "pass": true
+  },
+  "blockC_frozen_fluid_glp": {
+    "H2_boundary_simplex": 1,
+    "H2_octahedron": 1,
+    "frozen_label_independent": true,
+    "fluid_girth_split_C6_C8": true,
+    "glp_tower_H_n": [
+      1,
+      1,
+      1
+    ],
+    "glp_strict_each_layer": true,
+    "pass": true
+  },
+  "overall_PASS": true
+}

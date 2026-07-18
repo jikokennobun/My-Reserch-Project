@@ -1,0 +1,32 @@
+{
+  "pass": 138,
+  "checks": {
+    "A_countermodel": {
+      "box_I": true,
+      "box_A": true,
+      "box_B": false,
+      "D2_fails": true,
+      "rosser_consistency_preserved": true,
+      "pass": true
+    },
+    "B_N_adequacy": {
+      "worlds_tested": 92904,
+      "D2_violations": 0,
+      "pass": true
+    },
+    "C_order_type_invariance": {
+      "trials": 24000,
+      "mismatches": 0,
+      "pass": true
+    },
+    "D_weak_consistency_bit": {
+      "WC_in_partial_order": false,
+      "WC_in_all_linear_extensions": true,
+      "WC_linear_violations_over_all_worlds": 0,
+      "worlds_tested": 1944,
+      "separates": true,
+      "pass": true
+    }
+  },
+  "overall_pass": true
+}

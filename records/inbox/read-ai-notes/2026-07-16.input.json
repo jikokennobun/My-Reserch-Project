@@ -1,0 +1,54 @@
+﻿{
+    "date":  "2026-07-16",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "【バトルの王】呂布カルマ138分間の神バース無双",
+                           "context":  "[watched] 【バトルの王】呂布カルマ138分間の神バース無双（ラップバトルCH【公認】） - https://youtu.be/FLmVKRz23YE?si=iIfGreEQjPOztIY5",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "喫茶ステラと死神の蝶",
+                           "context":  "[watched] 喫茶ステラと死神の蝶 栞那√#7（ナイトch） - https://youtu.be/d2IFg2VrlKg?si=Z_I09LBJygxdFDcz",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "DOTAMA vs SATORU| 戦極MCBATTLE vs THE罵倒 2025特別編 (2025.4.26)",
+                           "context":  "[watched] DOTAMA vs SATORU| 戦極MCBATTLE vs THE罵倒 2025特別編 (2025.4.26)（戦極MCBATTLE） - https://youtu.be/DMnpVJquRnc?si=dtVg8Nt8Q2JHzapx",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【天使☆騒々 RE-BOOT! 】乃愛#6",
+                           "context":  "[watched] 【天使☆騒々 RE-BOOT! 】乃愛#6（ナイトch） - https://youtu.be/KGPsFee4aOs?si=X6YPX0bbLSNbbZud",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "凱旋MCbattle東西選抜秋ノ陣2019@恵比寿LIQUIDROOM",
+                           "context":  "[watched] 凱旋MCbattle東西選抜秋ノ陣2019@恵比寿LIQUIDROOM（凱旋MCbattle） - https://youtu.be/Fq_d3hsgD6k?si=1E7eGEMN9g6BOPtT",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "アルゼンチンがイングランドに奇跡の大逆転… W杯史に残る神試合に現地実況がガチで大発狂",
+                           "context":  "[watched] アルゼンチンがイングランドに奇跡の大逆転… W杯史に残る神試合に現地実況がガチで大発狂（YouTubeサッカー通訳） - https://youtu.be/hmbwEaplxbg?si=PUU8HJi_PoCuLNsX",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【海外の反応】アルゼンチンに悪夢の逆転負けして、怒りが収まらないイングランドサポの反応がこちらですwww",
+                           "context":  "[watched] 【海外の反応】アルゼンチンに悪夢の逆転負けして、怒りが収まらないイングランドサポの反応がこちらですwww（サッカーラボ【ネット民・海外の反応まとめ】） - https://youtu.be/OyZXE-_98AI?si=oZdUfjDKjLu6Z-Qo",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【これぞ、無敵艦隊!!🇪🇸】“最強の個”を封じ込んだ世界No.1の組織力！最大のライバルを“完全制圧”した90分間をダイジェストで！｜準決勝｜FIFAワール...",
+                           "context":  "[watched] 【これぞ、無敵艦隊!!🇪🇸】“最強の個”を封じ込んだ世界No.1の組織力！最大のライバルを“完全制圧”した90分間をダイジェストで！｜準決勝｜FIFAワールドカップ2026（DAZN Japan） - https://youtu.be/C0qmH0LBERw?si=2P-iftse4U9MDP7X",
+                           "source":  "watch-log"
+                       }
+                   ]
+}

@@ -1,0 +1,147 @@
+{
+  "pass": 125,
+  "parts": {
+    "A_D2D3_independence_neighborhood": {
+      "realizable_D2_D3_combinations": {
+        "D2=True,D3=True": true,
+        "D2=False,D3=False": true,
+        "D2=True,D3=False": true,
+        "D2=False,D3=True": true
+      },
+      "rosser_with_D3_realizable_(\u00acD2^D3)": true,
+      "standard_rosser_realizable_(\u00acD2^\u00acD3)": true,
+      "D2_D3_independent_over_D1": true,
+      "Lstar_normal_fix_w": 4,
+      "Lstar_normal_fix_w_separated": 0,
+      "normal_forces_fused_twins": true,
+      "PASS": true
+    },
+    "B_exhaustive_alpha": {
+      "single{12}": {
+        "num_maxind": 2,
+        "min_fan_exhaustive": 2,
+        "fan_below_k_impossible": true,
+        "alpha_phantom": 4,
+        "alpha_principal": 3,
+        "tax": 1,
+        "exhaustive_lower_bound_confirmed": true
+      },
+      "path{12,23}": {
+        "num_maxind": 2,
+        "min_fan_exhaustive": 2,
+        "fan_below_k_impossible": true,
+        "alpha_phantom": 4,
+        "alpha_principal": 3,
+        "tax": 1,
+        "exhaustive_lower_bound_confirmed": true
+      },
+      "K3": {
+        "num_maxind": 3,
+        "min_fan_exhaustive": 3,
+        "fan_below_k_impossible": true,
+        "alpha_phantom": 5,
+        "alpha_principal": 4,
+        "tax": 1,
+        "exhaustive_lower_bound_confirmed": true
+      },
+      "3-unif{123}": {
+        "num_maxind": 3,
+        "min_fan_exhaustive": 3,
+        "fan_below_k_impossible": true,
+        "alpha_phantom": 5,
+        "alpha_principal": 4,
+        "tax": 1,
+        "exhaustive_lower_bound_confirmed": true
+      },
+      "nonunif{12,234}": {
+        "num_maxind": 3,
+        "min_fan_exhaustive": 3,
+        "fan_below_k_impossible": true,
+        "alpha_phantom": 5,
+        "alpha_principal": 4,
+        "tax": 1,
+        "exhaustive_lower_bound_confirmed": true
+      },
+      "disjoint{12,345}": {
+        "num_maxind": 6,
+        "min_fan_exhaustive": 6,
+        "fan_below_k_impossible": true,
+        "alpha_phantom": 8,
+        "alpha_principal": 7,
+        "tax": 1,
+        "exhaustive_lower_bound_confirmed": true
+      },
+      "_summary": {
+        "all_confirmed": true,
+        "statement": "min carrier atoms for a non-principal bouquet = 2+|MaxInd(H)|, exhaustively"
+      }
+    },
+    "C_infinite_carrier_join": {
+      "JC": [
+        {
+          "K": 2,
+          "regime": "JC",
+          "witness_inf": 0.0,
+          "meet_of_finite_images": 0.5,
+          "jc_forced_boxt_w": 0.0,
+          "seed_requires_discontinuity": false,
+          "finite_truncations_seedless": true
+        },
+        {
+          "K": 3,
+          "regime": "JC",
+          "witness_inf": 0.0,
+          "meet_of_finite_images": 0.3333333333333333,
+          "jc_forced_boxt_w": 0.0,
+          "seed_requires_discontinuity": false,
+          "finite_truncations_seedless": true
+        },
+        {
+          "K": 4,
+          "regime": "JC",
+          "witness_inf": 0.0,
+          "meet_of_finite_images": 0.25,
+          "jc_forced_boxt_w": 0.0,
+          "seed_requires_discontinuity": false,
+          "finite_truncations_seedless": true
+        }
+      ],
+      "PH": [
+        {
+          "K": 2,
+          "regime": "PH",
+          "witness_inf": 1.0,
+          "meet_of_finite_images": 0.5,
+          "jc_forced_boxt_w": 1.0,
+          "seed_requires_discontinuity": true,
+          "finite_truncations_seedless": true
+        },
+        {
+          "K": 3,
+          "regime": "PH",
+          "witness_inf": 1.0,
+          "meet_of_finite_images": 0.3333333333333333,
+          "jc_forced_boxt_w": 1.0,
+          "seed_requires_discontinuity": true,
+          "finite_truncations_seedless": true
+        },
+        {
+          "K": 4,
+          "regime": "PH",
+          "witness_inf": 1.0,
+          "meet_of_finite_images": 0.25,
+          "jc_forced_boxt_w": 1.0,
+          "seed_requires_discontinuity": true,
+          "finite_truncations_seedless": true
+        }
+      ],
+      "_summary": {
+        "JC_seeded_degenerate": true,
+        "PH_liman_phantom": true,
+        "dichotomy": "finite Thm-124a (carrier-join=>seeded) splits at omega: join-continuous boxt => degenerate/attached seed; join-discontinuous boxt => liman phantom seed (finite truncations seedless)"
+      },
+      "PASS": true
+    }
+  },
+  "overall": "PASS"
+}

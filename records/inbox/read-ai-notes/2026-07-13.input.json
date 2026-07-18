@@ -1,0 +1,36 @@
+﻿{
+    "date":  "2026-07-13",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "UFC329の感想",
+                           "context":  "[watched] UFC329の感想（MMA言語化挑戦中 Voyage GI） - https://youtu.be/de2NfylLQLo?si=a9LKeERQvdUgW_C_",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【ショック！！！】マクレガーvsホロウェイリアルタイム観戦【UFC329】",
+                           "context":  "[watched] 【ショック！！！】マクレガーvsホロウェイリアルタイム観戦【UFC329】（川尻達也のじりラジオ） - https://youtu.be/XgtoD49pASY?si=3QkuMf9H2iHJb8wc",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "テトリス vs SAM 凱旋MCbattle GOLDEN TAG at Zepp Osaka Bayside",
+                           "context":  "[watched] テトリス vs SAM 凱旋MCbattle GOLDEN TAG at Zepp Osaka Bayside（凱旋MCbattle） - https://youtu.be/LPuZ_B7MGEE?si=qhUOEGPc92fX3L1z",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "凱旋MCbattle東西選抜春ノ陣2019.@渋谷TSUTAYA O-EAST",
+                           "context":  "[watched] 凱旋MCbattle東西選抜春ノ陣2019.@渋谷TSUTAYA O-EAST（凱旋MCbattle） - https://youtu.be/PBGJgEKfVRM?si=4gopQmYN1t0LGhHm",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "句潤 vs 晋平太 \" UMB2018 THE CHOICE IS YOURS Vol.2 3/20(TUE)",
+                           "context":  "[watched] \"句潤 vs 晋平太 \" UMB2018 THE CHOICE IS YOURS Vol.2 3/20(TUE)（UMB channel） - https://youtu.be/NV91kBFTpWc?si=atueEfpjxY7vNWbo",
+                           "source":  "watch-log"
+                       }
+                   ]
+}

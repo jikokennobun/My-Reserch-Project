@@ -1,0 +1,33 @@
+{
+  "pass": 144,
+  "focus": "pcf-window stratification vs CLH coherence-dimension ladder",
+  "checks": {
+    "A_level1_stratifies_by_length": {
+      "H1_C6": 1,
+      "H1_C8": 1,
+      "girth_C6": 6,
+      "girth_C8": 8,
+      "note": "both nonzero H^1 (a gap class each) but distinct girth => not pro-isomorphic",
+      "pass": true
+    },
+    "B_level2_constant_along_window": {
+      "H2_octahedron": 1,
+      "H1_octahedron": 0,
+      "H2_at_mu": 1,
+      "H2_at_muprime": 1,
+      "note": "CLH dim-2 obstruction (S^2) is mu-independent: H^2 identical across window labels",
+      "pass": true
+    },
+    "C_nonvacuity_iff_not_SCH": {
+      "Lambda_under_SCH": ["omega+1"],
+      "|Lambda|_SCH": 1,
+      "Lambda_under_notSCH": ["omega+1", "omega+2"],
+      "|Lambda|_notSCH": 2,
+      "note": "stratification question nonvacuous <=> |Lambda|>=2 <=> pp(aleph_omega)>aleph_{omega+1} <=> ~SCH",
+      "pass": true
+    }
+  },
+  "overall_pass": true,
+  "verdict": "Prong (c) resolves NEGATIVELY for the substantive n>=2 phantom (pro-isomorphic across the window); a ~SCH-conditional level-1 gap-refinement indexed by Lambda survives. The genuine stratification is the CLH coherence-DIMENSION ladder.",
+  "run_note": "Executed off-mount from /tmp copy; report written via Windows-path file tool per aps-run-sync-hazard memory."
+}

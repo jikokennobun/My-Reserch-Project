@@ -1,0 +1,61 @@
+{
+ "pass": 131,
+ "parts": {
+  "A_prufer_rank": {
+   "cases": [
+    {"q": 2, "e_q": 0, "kappa_q": 1, "expected": 1, "ok": true},
+    {"q": 2, "e_q": 1, "kappa_q": 1, "expected": 1, "ok": true},
+    {"q": 2, "e_q": 2, "kappa_q": 1, "expected": 1, "ok": true},
+    {"q": 2, "e_q": 5, "kappa_q": 1, "expected": 1, "ok": true},
+    {"q": 3, "e_q": 0, "kappa_q": 1, "expected": 1, "ok": true},
+    {"q": 3, "e_q": 1, "kappa_q": 1, "expected": 1, "ok": true},
+    {"q": 3, "e_q": 7, "kappa_q": 1, "expected": 1, "ok": true},
+    {"q": 2, "e_q": "inf", "kappa_q": 0, "expected": 0, "ok": true},
+    {"q": 3, "e_q": "inf", "kappa_q": 0, "expected": 0, "ok": true},
+    {"q": 5, "e_q": "inf", "kappa_q": 0, "expected": 0, "ok": true}
+   ],
+   "all_ok": true,
+   "multistrand": [
+    {"strands": 1, "kappa_q": 1},
+    {"strands": 2, "kappa_q": 2},
+    {"strands": 3, "kappa_q": 3}
+   ],
+   "note": "single rank-1 (graded-Rosser) tower: kappa_q in {0,1}, =1 iff e_q<inf; rigid, depth-varying OVERHEAD changes only e_q not kappa_q; inflation to continuum needs an infinite-STRAND (non-rank-1) facet tower."
+  },
+  "A2_witness_counting_o2": {
+   "schedule": "primorial a_k=p_k",
+   "valuations": {"2":1,"3":1,"5":1,"7":1,"11":1,"13":1,"17":1,"19":1,"23":1,"29":1,"31":1,"37":1,"41":1,"43":1,"47":1},
+   "Supp_inf": [],
+   "all_val_finite": true,
+   "index_at_layer_k_equals_a_k": true,
+   "note": "band-disjoint layers => tower map injective, index a_k (honest (Z,xa_k))"
+  },
+  "B_honesty_ceiling": {
+   "necessary_bound_hn": "2^aleph0 >= aleph_{n+1}",
+   "simultaneous_necessary": "2^aleph0 >= aleph_{omega+1} (Koenig: cf(2^aleph0)>omega)",
+   "sharpens_pass130_aleph2": true,
+   "ceiling_table": [
+    {"continuum": "aleph_1", "max_possible_honest_depth": 0, "forced_first_failure": "h_1", "h1": false, "h2_forced_fail": true},
+    {"continuum": "aleph_2", "max_possible_honest_depth": 1, "forced_first_failure": "h_2", "h1": true, "h2_forced_fail": true},
+    {"continuum": "aleph_3", "max_possible_honest_depth": 2, "forced_first_failure": "h_3", "h1": true, "h2_forced_fail": false}
+   ],
+   "depth_split_ZFC_only": "MA_{aleph1} + 2^aleph0 = aleph_2 : h_1 (DSV 1989) ^ not-h_2 (needs 2^aleph0>=aleph_3) -- NO large cardinal.",
+   "threshold_is_cardinal_characteristic": false,
+   "threshold_note": "exact strength = BBMT n-dim Delta-system / definable additivity trivialization principle; equiconsistent with ZFC; NOT a single cardinal-characteristic equation."
+  },
+  "C_bimodel": {
+   "D1": true,
+   "Rosser_consistency_notBoxRbot": true,
+   "RM_D3hom": true,
+   "notD2_notK": true,
+   "trans_4": true,
+   "K_failure_witness": {"A": [0,1], "B": [0,2], "BoxRA": [0,1,2], "BoxRB": [0,1,2], "AcapB": [0], "BoxR(AcapB)": []},
+   "loeb_by_frame": {"wf_chain 2-<1-<0": true, "reflexive point": false, "2-cycle 0-<1-<0": false},
+   "fullD3_to_depth3": true,
+   "fullD3_coexists_with_notD2": true,
+   "all_ok": true,
+   "note": "collapse to GL (kills twins) is driven by D2 alone; 4+notK+not-Box-bot satisfiable => full D3 addable without collapsing notD2; arithmetic realizability of uniform full-D3 Rosser predicate = carried obligation."
+  }
+ },
+ "overall_PASS": true
+}

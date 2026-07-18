@@ -1,0 +1,33 @@
+{
+  "pass": 137,
+  "date": "2026-07-12",
+  "focus": "Prop 136d obligation: I-Sigma_1 linearity forces p.r. (Thm 137a); order-robust !D2 ^ !Box_R_|_ (Thm 137c)",
+  "A_strict_linear_order_scrambled": {
+    "irreflexive": true,
+    "asymmetric": true,
+    "transitive": true,
+    "trichotomous": true,
+    "is_strict_linear": true
+  },
+  "B_composition_monotonicity": {
+    "scramble_deficit": 26,
+    "standard_deficit": 40,
+    "scramble_nonmonotone": true
+  },
+  "C_rosser_D2_toggle": {
+    "scramble": { "boxR_AtoB": true, "boxR_A": true, "boxR_B": true, "D2": true },
+    "standard": { "boxR_AtoB": true, "boxR_A": true, "boxR_B": false, "D2": false },
+    "D2_toggles": true
+  },
+  "D_nonpr_growth_certificate": {
+    "level2_tags": [2, 4, 16, 65536, 1000000000000000205, 1000000000000000206],
+    "beats_cubic": true
+  },
+  "notes": [
+    "Thm 137a/Cor 137b are METATHEOREMS (Parsons: provably-total recursive fns of I-Sigma_1 = primitive recursive); not machine-decidable, only illustrated here.",
+    "(A) the scrambled tag order is a genuine strict linear order on [0,48).",
+    "(B) the scrambled order is composition-NON-monotone (deficit>0): no monotone bound on the concat gadget -- the algebraic shadow of the D2 obstruction.",
+    "(C) Box_R-D2 is ORDER-SENSITIVE (toggles with the witness order); D2 is governed by composition-monotonicity, not by primitive-recursiveness of -< -> the !D2 / Con_R behaviour is order-robust across p.r. and non-p.r. orders (Thm 137c)."
+  ],
+  "overall": "PASS"
+}

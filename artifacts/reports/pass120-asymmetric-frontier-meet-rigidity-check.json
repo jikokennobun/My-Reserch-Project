@@ -1,0 +1,170 @@
+{
+  "pass": 120,
+  "checks": {
+    "A_K23_basic": {
+      "carrier": [
+        "0",
+        "f1",
+        "f2",
+        "g1",
+        "g2",
+        "g3",
+        "U"
+      ],
+      "w": [
+        "0",
+        "f1",
+        "f2"
+      ],
+      "F": [
+        "f1",
+        "f2"
+      ],
+      "G": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "|F|": 2,
+      "|G|": 3,
+      "mu": 2,
+      "Hmin": [
+        [
+          "g1",
+          "g2"
+        ],
+        [
+          "g1",
+          "g3"
+        ],
+        [
+          "g2",
+          "g3"
+        ]
+      ],
+      "all_pairs_meet_to_w": true,
+      "complete_graph": true
+    },
+    "A_K23_census": {
+      "antitone_fpfree_total": 1362,
+      "fixing_w": 174,
+      "fixing_with_repeat_image": 0,
+      "fixing_with_U_image": 0,
+      "fixing_inject_onto_distinct_g_pair": 174,
+      "|boxtF cap G|_distribution": {
+        "2": 174
+      },
+      "slack_s = |F|-mu": 0,
+      "forced_injection_onto_frontier_pair": true
+    },
+    "B_K33_contrast": {
+      "|F|": 3,
+      "|G|": 3,
+      "mu": 2,
+      "slack_s": 1,
+      "Hmin_is_complete_K3": true,
+      "num_nonprincipal_cuts": 1
+    },
+    "C_rigidity_survey": {
+      "posets_tested": [
+        "K_2_2",
+        "K_2_3",
+        "K_3_2",
+        "K_2_4",
+        "K_3_3",
+        "K_3_4",
+        "K_4_4"
+      ],
+      "nonprincipal_cuts_examined": 7,
+      "rigidity_violations (non-complete or mu!=2)": 0,
+      "all_frontier_hypergraphs_complete_graphs": true,
+      "detail": [
+        {
+          "poset": "K_2_2",
+          "|F|": 2,
+          "|G|": 2,
+          "mu": 2,
+          "complete_graph": true
+        },
+        {
+          "poset": "K_2_3",
+          "|F|": 2,
+          "|G|": 3,
+          "mu": 2,
+          "complete_graph": true
+        },
+        {
+          "poset": "K_3_2",
+          "|F|": 3,
+          "|G|": 2,
+          "mu": 2,
+          "complete_graph": true
+        },
+        {
+          "poset": "K_2_4",
+          "|F|": 2,
+          "|G|": 4,
+          "mu": 2,
+          "complete_graph": true
+        },
+        {
+          "poset": "K_3_3",
+          "|F|": 3,
+          "|G|": 3,
+          "mu": 2,
+          "complete_graph": true
+        },
+        {
+          "poset": "K_3_4",
+          "|F|": 3,
+          "|G|": 4,
+          "mu": 2,
+          "complete_graph": true
+        },
+        {
+          "poset": "K_4_4",
+          "|F|": 4,
+          "|G|": 4,
+          "mu": 2,
+          "complete_graph": true
+        }
+      ]
+    },
+    "D_self_healing": {
+      "num_nonprincipal_cuts": 1,
+      "cuts": [
+        {
+          "cut": [
+            "0",
+            "f1",
+            "f2"
+          ],
+          "F": [
+            "f1",
+            "f2"
+          ],
+          "G": [
+            "g1",
+            "z"
+          ],
+          "Hmin": [
+            [
+              "g1",
+              "z"
+            ]
+          ],
+          "complete": true
+        }
+      ],
+      "note": "z enters as a frontier/intermediate element; every non-principal cut still has a complete-graph frontier hypergraph",
+      "all_complete": true
+    }
+  },
+  "overall_PASS": true,
+  "subresults": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "pass": 132,
+  "blocks": {
+    "A": {
+      "name": "multi-strand socle & arithmetic torsion-rank ceiling",
+      "d_strand_kappa_q": [
+        {"d": 1, "kappa_q": 1, "ok": true},
+        {"d": 2, "kappa_q": 2, "ok": true},
+        {"d": 3, "kappa_q": 3, "ok": true},
+        {"d": 4, "kappa_q": 4, "ok": true},
+        {"d": 5, "kappa_q": 5, "ok": true},
+        {"d": 6, "kappa_q": 6, "ok": true}
+      ],
+      "sum_vs_prod_finite_ladder": [
+        {"N": 1, "sum": 1, "prod": 1, "ok": true},
+        {"N": 2, "sum": 2, "prod": 2, "ok": true},
+        {"N": 3, "sum": 3, "prod": 3, "ok": true},
+        {"N": 4, "sum": 4, "prod": 4, "ok": true},
+        {"N": 5, "sum": 5, "prod": 5, "ok": true},
+        {"N": 6, "sum": 6, "prod": 6, "ok": true},
+        {"N": 7, "sum": 7, "prod": 7, "ok": true}
+      ],
+      "erdos_kaplansky": {
+        "dim_sum_omega": "aleph_0",
+        "dim_prod_omega": "2^aleph_0  (= |F_q|^{aleph_0}, Erdos-Kaplansky)",
+        "jump_locus": "(+) -> (prod) = arithmetic (Sigma_1, recursive bands) -> analytic",
+        "ok": true
+      },
+      "arithmetic_ceiling": {
+        "statement": "recursive Goedel-band family has <= aleph_0 strands => kappa_q <= aleph_0",
+        "sampled_finite_color_counts_ok": true,
+        "ok": true
+      },
+      "pass": true
+    },
+    "B": {
+      "name": "honesty ceiling cardinal arithmetic",
+      "ceiling_table": [
+        {"continuum_index": 1, "h_compatible_upto": [], "first_forced_false": 1, "ok": true},
+        {"continuum_index": 2, "h_compatible_upto": [1], "first_forced_false": 2, "ok": true},
+        {"continuum_index": 3, "h_compatible_upto": [1, 2], "first_forced_false": 3, "ok": true},
+        {"continuum_index": 4, "h_compatible_upto": [1, 2, 3], "first_forced_false": 4, "ok": true},
+        {"continuum_index": 5, "h_compatible_upto": [1, 2, 3, 4], "first_forced_false": 5, "ok": true},
+        {"continuum_index": 6, "h_compatible_upto": [1, 2, 3, 4, 5], "first_forced_false": 6, "ok": true}
+      ],
+      "koenig": {
+        "all_h_n_lower_bound": "aleph_{omega+1}",
+        "reason": "sup aleph_{n+1}=aleph_omega, cf(2^aleph0)>omega, cf(aleph_omega)=omega => 2^aleph0 != aleph_omega",
+        "sharper_than_pass130_aleph2": true,
+        "ok": true
+      },
+      "placement": {
+        "chain": "A_kappa ==> (forall n) h_n ==> 2^aleph0 >= aleph_{omega+1}",
+        "lower_link_strict": "necessary-not-sufficient (cardinal bound alone gives no h_n)",
+        "upper_link": "A_kappa (BBMT Delta-system) decides the whole coherent class; a priori strictly above (forall n)h_n; equivalence OPEN"
+      },
+      "pass": true
+    },
+    "C": {
+      "name": "arithmetic full-D3 Rosser dichotomy",
+      "loeb_collapse": {
+        "steps": [
+          ["A0", "assumption: Box_bot -> bot (¬Box_R bot as theorem)"],
+          ["Box A0", "Nec (D1) on step 1"],
+          ["Box A0 -> Box bot", "Loeb axiom instance at p=bot (needs D2+D3)"],
+          ["Box bot", "MP steps 2,3"],
+          ["bot", "MP steps 1,4"]
+        ],
+        "justified": true,
+        "reaches_bottom": true,
+        "consumes_D2": true,
+        "corollary": "over consistent T: D1 ^ full-D3 ^ (T |- ¬Box_R bot) => ¬D2 (FORCED)",
+        "pass": true
+      },
+      "neighborhood": {
+        "worlds": [0, 1, 2],
+        "N": [[0, 1], [0, 2], [0, 1, 2]],
+        "neg_box_bot_valid": true,
+        "K_fails": true,
+        "axiom4_all_subsets": true,
+        "depth_checked": "all subsets => all finite depths",
+        "pass": true
+      },
+      "conjecture_132d": "full uniform D3 is arithmetically incompatible with the Rosser witness-comparison discipline: the m_enc nesting overhead (Pass 128b) inflates the inner witness code cofinally, so only the O(1)-nesting fragment D3^hom survives; the obstruction is arithmetic, NOT modal (4 ^ ¬K ^ ¬Box_bot is modally consistent).",
+      "pass": true
+    }
+  },
+  "obligations": [
+    "o1'/o2' (Lemma 131b): the band-relativized GS cross-layer independence is given as a uniform recursion-theorem construction; T-provable non-collapse of the a_k orderings is argued, not machine-checked.",
+    "Thm 132b positive half: the truncated BHLH forcing giving h_1..h_{n-1} ^ ¬h_n at 2^aleph0 = aleph_n is cited from Bannister-Bergfalk-Hrusak-Lambie-Hanson / Bergfalk-Hrusak-Lambie-Hanson; only the cardinal bookkeeping is checked here.",
+    "Conj 132d: the cofinal m_enc-inflation refuting uniform full D3 for a Rosser box must be pinned to an explicit phi-family (carried)."
+  ],
+  "overall": "PASS",
+  "note": "Executed off-mount from /tmp; report written via Windows-path file tools per the aps-run-sync-hazard memory."
+}

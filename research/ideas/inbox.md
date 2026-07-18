@@ -18,6 +18,201 @@ Next action:
 
 ## Unsorted
 
+### 2026-07-14 - microworldsの話、興味深いですね。non-monotonicやCWAの話とも関係していそうです。 https://en.wikip...
+
+Source: Discord command 1526501077824962592 in 🧮comm-math-for-ai at 2026-07-14T08:10:17.9720000+00:00
+
+Idea:
+microworldsの話、興味深いですね。non-monotonicやCWAの話とも関係していそうです。 https://en.wikipedia.org/wiki/Closed-world_assumption これは妄想ですが、(有限モデルの論理が非コンパクトになる、みたいに)小さな体系でしか本質的に成立しないメタ性質や推論の法則みたいなものがあり、それらの構造的な制約によって世界毎に(逆説的に)バラエティ豊かな(数学的)発想が生まれる、みたいな現象があったら面白いなと思いました。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-13 - 1. 非単調論理の面白さに出会えた。 2. 起きるのが遅かった / 輪読セミナーを欠席してしまった 3. 多元数理の過去問を解く 4. 先週...
+
+Source: Discord command 1526219976019673099 in 2026-6 at 2026-07-13T13:33:18.0790000+00:00
+
+Idea:
+1. 非単調論理の面白さに出会えた。 2. 起きるのが遅かった / 輪読セミナーを欠席してしまった 3. 多元数理の過去問を解く 4. 先週に比べて生産性のない一日だったがそれなりにほどよくいい時間を過ごすことができた。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-13 - 非単調論理、かなり面白そう
+
+Source: Discord command 1526203654921523261 in 💭思った at 2026-07-13T12:28:26.8260000+00:00
+
+Idea:
+非単調論理、かなり面白そう
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-13 - やっぱり自分は(代数的)非古典論理の人なのかもしれない
+
+Source: Discord command 1526177027634499694 in 💭思った at 2026-07-13T10:42:38.3860000+00:00
+
+Idea:
+やっぱり自分は(代数的)非古典論理の人なのかもしれない
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-12 - 例: ・非自明な有限商代数を持たない可算モデルを構成してください ・添付論文の結果では作れない例を構成してください ・有限生成でない可算モデ...
+
+Source: Discord command 1525814735629713488 in 🧮comm-math-for-ai at 2026-07-12T10:43:01.2410000+00:00
+
+Idea:
+例: ・非自明な有限商代数を持たない可算モデルを構成してください ・添付論文の結果では作れない例を構成してください ・有限生成でない可算モデルを構成してください
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-12 - あと自分は反例だけではなく正例も作らせています。ただ正例の場合は適当に頼むとつまらない例しか作ってくれないのである意味で非自明な例を作ってく...
+
+Source: Discord command 1525809798237519893 in 🧮comm-math-for-ai at 2026-07-12T10:23:24.0750000+00:00
+
+Idea:
+あと自分は反例だけではなく正例も作らせています。ただ正例の場合は適当に頼むとつまらない例しか作ってくれないのである意味で非自明な例を作ってくれるよう数学的に工夫してプロンプトを書くことが多いです。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-12 - 自分「数理計算の筆記は解きやすいイメージがあります」 K「うーんどうなんですかね」 自分「どんな問題を解きましたか？」 K「必答は線形/微積...
+
+Source: Discord command 1525757837039501322 in 📚下剋上院進 at 2026-07-12T06:56:55.5600000+00:00
+
+Idea:
+自分「数理計算の筆記は解きやすいイメージがあります」 K「うーんどうなんですかね」 自分「どんな問題を解きましたか？」 K「必答は線形/微積で、選択は代数/位相/形式言語です」 自分「あー分かります。数学科ならその択を選びますよね。ただ去年の形式言語の問題はわりと難しくなかったですか」 K「そうなんですかね。自分は思いつきました」 自分「それはすごいですね。ちなみに口頭試問の方はどんな感じでしたか？噂によると筆記問題の解き直しや院での研究内容の話などをすると聞きました」 K「うーん、解き直しはしていないのでよく分からないです。ただ口頭試問で落とされた友人は知っています。対策しなかったらまーふつうに落とされると思いますよ」 自分「対策って何をすればいいのですか？志望理由書の書き方とかですか？」 K「まあその辺りですね。志望理由書はちゃんと書いた方がいいっすよ。意外と見られるんで」
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-10 - (問題設定とか一般化/抽象化による数学の体系的展開は、むしろ記号的AIみたいな演繹的推論モデルが得意な領域、というイメージがあります)
+
+Source: Discord command 1525006414337019945 in 🧮comm-math-for-ai at 2026-07-10T05:11:02.4270000+00:00
+
+Idea:
+(問題設定とか一般化/抽象化による数学の体系的展開は、むしろ記号的AIみたいな演繹的推論モデルが得意な領域、というイメージがあります)
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-10 - 生成AIは、既存の研究分野の解説や数学的に厳密な問題を解くのは得意だが、オリジナルの概念やモヤッとした展望/問題意識を投げた瞬間に空回りする...
+
+Source: Discord command 1525004989930672229 in 🧮comm-math-for-ai at 2026-07-10T05:05:22.8220000+00:00
+
+Idea:
+生成AIは、既存の研究分野の解説や数学的に厳密な問題を解くのは得意だが、オリジナルの概念やモヤッとした展望/問題意識を投げた瞬間に空回りする、という印象が(どんなモデルにも)あります。 これって、既存の学習データをだいじにする統計的推論モデルならではの誤謬な気がするのですが、本質的に解決可能な問題なのでしょうかね。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-10 - 研究室の修士の韓国人が未だに苦手だ。
+
+Source: Discord command 1524834323289608322 in 💭思った at 2026-07-09T17:47:12.7240000+00:00
+
+Idea:
+研究室の修士の韓国人が未だに苦手だ。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-09 - 世界モデルを利用した数学の研究が盛んになる。 https://ai-market.jp/technology/world-models-an...
+
+Source: Discord command 1524436543706763275 in 🧮comm-math-for-ai at 2026-07-08T15:26:34.6810000+00:00
+
+Idea:
+世界モデルを利用した数学の研究が盛んになる。 https://ai-market.jp/technology/world-models-and-llms/ https://www.technologyreview.jp/s/381665/world-models/
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-07 - 数学に対するモチベーションが割れているのを心底実感する。
+
+Source: Discord command 1523714477579567124 in 🌗気分ログ at 2026-07-06T15:37:20.7010000+00:00
+
+Idea:
+数学に対するモチベーションが割れているのを心底実感する。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-07-07 - 自分は何をしたいのだろう。 自分は研究者になりたいのだろう？ 自分は研究をしたいのだろう？ 何者かになりたいのだろう？ よく分からない。
+
+Source: Discord command 1523714235765493821 in 🌗気分ログ at 2026-07-06T15:36:23.0480000+00:00
+
+Idea:
+自分は何をしたいのだろう。 自分は研究者になりたいのだろう？ 自分は研究をしたいのだろう？ 何者かになりたいのだろう？ よく分からない。
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-30 - 生成AIなどの統計的推論モデルに、推論規則を(恣意的に)適用するという概念って存在するんですかね
+
+Source: Discord command 1521356459550703656 in 🧮comm-math-for-ai at 2026-06-30T03:27:25.3930000+00:00
+
+Idea:
+生成AIなどの統計的推論モデルに、推論規則を(恣意的に)適用するという概念って存在するんですかね
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
+### 2026-06-30 - 「古典命題論理においてA∧(A➝B)ならば？？？」という穴埋め問題を、演繹的推論を用いてBと答えることと、統計的推論を用いてBと答えることの...
+
+Source: Discord command 1521355900869279835 in 🧮comm-math-for-ai at 2026-06-30T03:25:12.1930000+00:00
+
+Idea:
+「古典命題論理においてA∧(A➝B)ならば？？？」という穴埋め問題を、演繹的推論を用いてBと答えることと、統計的推論を用いてBと答えることの間にどんな違いがあるのか、これを考えることが人間とAIの間の思考様式の差異を理解する上で重要なんじゃないかと思っています。 (もちろんBの他にもTやA➝Bなどが答えになり得ますが恐らく統計的にはBが正解になりやすいと思うのでこちらを答えとして採用しました)
+
+Related references:
+
+Next action:
+Triage this into a research note or discard it.
+
+
 ### 2026-06-28 - AIと共同してCAALの入門用解説記事を作りました。数学的内容は未精査です。 https://drive.google.com/drive/...
 
 Source: Discord command 1520673065166569592 in 🧮comm-math-for-ai at 2026-06-28T06:11:51.4750000+00:00

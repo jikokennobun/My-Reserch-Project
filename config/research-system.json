@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "owner": {
+    "name": "渋谷伊織",
+    "timezone": "Asia/Tokyo"
+  },
+  "entrypoint": "RESEARCH_SYSTEM.md",
+  "paths": {
+    "active_goal": "research/goals/active.md",
+    "idea_inbox": "research/ideas/inbox.md",
+    "problems": "research/problems",
+    "literature_inbox": "research/literature/inbox",
+    "literature_catalog": "research/literature/catalog.jsonl",
+    "cycles": "records/research-cycles",
+    "reviews": "records/reviews",
+    "reflections": "records/reflections",
+    "improvements": "records/system-improvements",
+    "researcher_model": "research/meta/researcher-model.md"
+  },
+  "integrations": {
+    "obsidian": {
+      "mode": "research-roots-index-only",
+      "policy": "research/references/obsidian-research-vault.md",
+      "index_command": "powershell -ExecutionPolicy Bypass -File .\\code\\scripts\\index-obsidian-research.ps1"
+    },
+    "github": {
+      "role": "provenance-and-automation",
+      "workflow": ".github/workflows/research-intake.yml",
+      "auto_commit_scope": [
+        "research/literature/inbox",
+        "research/literature/catalog.jsonl"
+      ]
+    },
+    "google_drive": {
+      "role": "reference-originals-and-large-artifacts",
+      "reference_folder_id": "1R7j8xtt1nNXVxFrlutAn9eo5LCpUWn1l",
+      "reference_folder_url": "https://drive.google.com/drive/folders/1R7j8xtt1nNXVxFrlutAn9eo5LCpUWn1l",
+      "identity_key": "fileId",
+      "copy_policy": "store-link-and-metadata-first"
+    }
+  },
+  "collection": {
+    "max_results_per_query": 6,
+    "lookback_days": 45,
+    "arxiv_delay_seconds": 3,
+    "queries": [
+      {
+        "id": "provability-fixed-points",
+        "kind": "paper",
+        "arxiv": "(cat:math.LO OR cat:cs.LO) AND (all:\"provability logic\" OR all:\"fixed point\" OR all:Rosser)",
+        "openalex": "(\"provability logic\" OR Rosser) AND (\"fixed point\" OR incompleteness)"
+      },
+      {
+        "id": "algebraic-categorical-logic",
+        "kind": "paper",
+        "arxiv": "(cat:math.LO OR cat:math.CT) AND (all:\"algebraic logic\" OR all:\"categorical logic\" OR all:residuated)",
+        "openalex": "(\"algebraic logic\" OR \"categorical logic\") AND (residuated OR provability)"
+      },
+      {
+        "id": "domain-completion",
+        "kind": "paper",
+        "arxiv": "(cat:math.LO OR cat:math.GN OR cat:cs.LO) AND (all:\"domain theory\" OR all:\"MacNeille completion\")",
+        "openalex": "(\"domain theory\" OR \"MacNeille completion\") AND (logic OR fixed point)"
+      },
+      {
+        "id": "survey-watch",
+        "kind": "survey",
+        "arxiv": "(cat:math.LO OR cat:cs.LO) AND (ti:survey OR co:survey OR ti:\"lecture notes\")",
+        "openalex": "(survey OR review) AND (provability logic OR algebraic logic OR domain theory)"
+      },
+      {
+        "id": "lecture-notes-watch",
+        "kind": "lecture-note",
+        "arxiv": "(cat:math.LO OR cat:cs.LO OR cat:math.CT) AND (ti:\"lecture notes\" OR co:\"lecture notes\")",
+        "openalex": "\"lecture notes\" AND (mathematical logic OR category theory OR domain theory)"
+      },
+      {
+        "id": "lecture-slides-watch",
+        "kind": "slides",
+        "openalex": "(slides OR tutorial) AND (provability logic OR categorical logic OR domain theory)"
+      }
+    ]
+  },
+  "quality_gates": {
+    "claim_requires": [
+      "precise_scope",
+      "evidence_or_proof",
+      "counterevidence_check",
+      "primary_review",
+      "secondary_review"
+    ],
+    "cycle_requires": [
+      "goal",
+      "focus",
+      "decision_log",
+      "skeptic_report",
+      "primary_review",
+      "secondary_review",
+      "reflection",
+      "next_action"
+    ]
+  },
+  "cadence": {
+    "intake": "Monday, Wednesday, Friday at 07:15 JST",
+    "goal_review": "weekly",
+    "research_reflection": "at every cycle close and weekly",
+    "system_audit": "monthly"
+  }
+}
+

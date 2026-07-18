@@ -1,0 +1,14 @@
+﻿{
+    "notes":  [
+                  {
+                      "title":  "反単調写像の不動点",
+                      "kind":  "obsidian-note",
+                      "note":  "反単調写像の不動点はResearch note / Research-memo\\反単調写像の不動点.mdを手掛かりに、写像がどこで自己参照するかを捉えるのが直感です。要確認"
+                  },
+                  {
+                      "title":  "余代数的不動点定理",
+                      "kind":  "obsidian-note",
+                      "note":  "余代数的不動点定理はResearch note / Research-memo\\余代数的不動点定理.mdを手掛かりに、写像がどこで自己参照するかを捉えるのが直感です。要確認"
+                  }
+              ]
+}

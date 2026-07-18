@@ -1,0 +1,79 @@
+{
+  "field": "F_3",
+  "cases": {
+    "k=1": {
+      "Htilde_sphere": {
+        "0": 0,
+        "1": 1
+      },
+      "expected_sphere": {
+        "0": 0,
+        "1": 1
+      },
+      "sphere_is_S^k": true,
+      "Delta_{k+1}_contractible": true,
+      "wedge_two_ksimplices_contractible": true,
+      "no_retraction_Delta->S^k": true,
+      "case_pass": true
+    },
+    "k=2": {
+      "Htilde_sphere": {
+        "0": 0,
+        "1": 0,
+        "2": 1
+      },
+      "expected_sphere": {
+        "0": 0,
+        "1": 0,
+        "2": 1
+      },
+      "sphere_is_S^k": true,
+      "Delta_{k+1}_contractible": true,
+      "wedge_two_ksimplices_contractible": true,
+      "no_retraction_Delta->S^k": true,
+      "case_pass": true
+    },
+    "k=3": {
+      "Htilde_sphere": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1
+      },
+      "expected_sphere": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1
+      },
+      "sphere_is_S^k": true,
+      "Delta_{k+1}_contractible": true,
+      "wedge_two_ksimplices_contractible": true,
+      "no_retraction_Delta->S^k": true,
+      "case_pass": true
+    },
+    "k=4": {
+      "Htilde_sphere": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "expected_sphere": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "sphere_is_S^k": true,
+      "Delta_{k+1}_contractible": true,
+      "wedge_two_ksimplices_contractible": true,
+      "no_retraction_Delta->S^k": true,
+      "case_pass": true
+    }
+  },
+  "overall": "PASS",
+  "notes": "Pass 136. Reduced F_3 simplicial homology confirms the minimal k-coherence obstruction is S^k = boundary(Delta^{k+1}) with Htilde_j = F_3 iff j=k, uniformly for k=1..4; Delta^{k+1} and the shared-vertex wedge of two k-simplices are contractible; no simplicial retraction Delta^{k+1} -> S^k. Establishes cd(A^{(a),k}) = k exactly (no dimension collapse) and generalizes Pass-135 Correction 135b (k=2) to all k. cd is thereby a ZFC-absolute (arithmetic, Shoenfield) invariant; the cf-rank grading of Thm 134d is not absolute, so the two gradings are distinct invariants tied only by the one-sided Bergfalk-Lambie-Hanson ceiling."
+}

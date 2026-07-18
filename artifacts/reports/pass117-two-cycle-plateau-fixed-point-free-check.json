@@ -1,0 +1,153 @@
+{
+  "pass": 117,
+  "date": "2026-07-04",
+  "claim": "boxt-antichain 2-cycle plateau {x,y} with unattained join (doubled cover) yields boxt_hat(x v y)=boxt x ^ boxt y = x^y, NOT fixed; minimal hexagon realization is globally fixed-point-free. Even-orbit geometry cannot host a non-principal boxt_hat-fixed cut. Control with genuine FP-synt DOES yield a fixed cut.",
+  "models": {
+    "hexagon_R2_boxt0_U": {
+      "carrier": [
+        "0",
+        "x",
+        "y",
+        "m",
+        "n",
+        "U"
+      ],
+      "boxt": {
+        "0": "U",
+        "x": "y",
+        "y": "x",
+        "m": "0",
+        "n": "0",
+        "U": "0"
+      },
+      "antitone": true,
+      "synt_fixed_points": [],
+      "n_cuts": 7,
+      "n_principal": 6,
+      "nonprincipal_cuts": [
+        [
+          "0",
+          "x",
+          "y"
+        ]
+      ],
+      "nonprincipal_cut_images": {
+        "0,x,y": [
+          "0"
+        ]
+      },
+      "n_fixed_cuts": 0,
+      "fixed_cuts": [],
+      "n_nonprincipal_fixed": 0
+    },
+    "hexagon_R2_boxt0_m": {
+      "carrier": [
+        "0",
+        "x",
+        "y",
+        "m",
+        "n",
+        "U"
+      ],
+      "boxt": {
+        "0": "m",
+        "x": "y",
+        "y": "x",
+        "m": "0",
+        "n": "0",
+        "U": "0"
+      },
+      "antitone": true,
+      "synt_fixed_points": [],
+      "n_cuts": 7,
+      "n_principal": 6,
+      "nonprincipal_cuts": [
+        [
+          "0",
+          "x",
+          "y"
+        ]
+      ],
+      "nonprincipal_cut_images": {
+        "0,x,y": [
+          "0"
+        ]
+      },
+      "n_fixed_cuts": 0,
+      "fixed_cuts": [],
+      "n_nonprincipal_fixed": 0
+    },
+    "double_2cycle_antichain4": {
+      "carrier": [
+        "0",
+        "p",
+        "q",
+        "r",
+        "s",
+        "m",
+        "n",
+        "U"
+      ],
+      "boxt": {
+        "0": "U",
+        "p": "q",
+        "q": "p",
+        "r": "s",
+        "s": "r",
+        "m": "0",
+        "n": "0",
+        "U": "0"
+      },
+      "antitone": true,
+      "synt_fixed_points": [],
+      "n_cuts": 9,
+      "n_principal": 8,
+      "nonprincipal_cuts": [
+        [
+          "0",
+          "p",
+          "q",
+          "r",
+          "s"
+        ]
+      ],
+      "nonprincipal_cut_images": {
+        "0,p,q,r,s": [
+          "0"
+        ]
+      },
+      "n_fixed_cuts": 0,
+      "fixed_cuts": [],
+      "n_nonprincipal_fixed": 0
+    },
+    "control_genuine_fixed_point": {
+      "carrier": [
+        "0",
+        "p",
+        "U"
+      ],
+      "boxt": {
+        "0": "U",
+        "p": "p",
+        "U": "0"
+      },
+      "antitone": true,
+      "synt_fixed_points": [
+        "p"
+      ],
+      "n_cuts": 3,
+      "n_principal": 3,
+      "nonprincipal_cuts": [],
+      "nonprincipal_cut_images": {},
+      "n_fixed_cuts": 1,
+      "fixed_cuts": [
+        [
+          "0",
+          "p"
+        ]
+      ],
+      "n_nonprincipal_fixed": 0
+    }
+  },
+  "verdict": "NO-COEXISTENCE (parity obstruction). Thm116a (chain: join->bottom) and Thm117a (2-cycle: join->meet) unify as boxt_hat(x v y)=boxt x ^ boxt y; a fixed join needs images ABOVE the summands, impossible for any antitone orbit through the summands. A non-principal fixed cut requires an odd self-dual seed (FP-synt), which the no-synt-fixed-point hypothesis forbids."
+}

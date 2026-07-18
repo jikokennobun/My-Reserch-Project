@@ -1,0 +1,62 @@
+{
+  "pass": 129,
+  "parts": {
+    "A_phantom_spectrum": {
+      "data": {
+        "const_2": {"ML": false, "phantom_nonzero": true, "supp_inf": [2], "finite_primes_count": 0, "solenoid": "prod_{p in [2]} Z_p / Z"},
+        "const_4": {"ML": false, "phantom_nonzero": true, "supp_inf": [2], "finite_primes_count": 0, "solenoid": "prod_{p in [2]} Z_p / Z"},
+        "const_8": {"ML": false, "phantom_nonzero": true, "supp_inf": [2], "finite_primes_count": 0, "solenoid": "prod_{p in [2]} Z_p / Z"},
+        "const_6": {"ML": false, "phantom_nonzero": true, "supp_inf": [2, 3], "finite_primes_count": 0, "solenoid": "prod_{p in [2, 3]} Z_p / Z"},
+        "const_12": {"ML": false, "phantom_nonzero": true, "supp_inf": [2, 3], "finite_primes_count": 0, "solenoid": "prod_{p in [2, 3]} Z_p / Z"},
+        "race_2": {"ML": false, "phantom_nonzero": true, "supp_inf": [2], "finite_primes_count": 0, "solenoid": "prod_{p in [2]} Z_p / Z"},
+        "race_3": {"ML": false, "phantom_nonzero": true, "supp_inf": [3], "finite_primes_count": 0, "solenoid": "prod_{p in [3]} Z_p / Z"},
+        "race_4": {"ML": false, "phantom_nonzero": true, "supp_inf": [2], "finite_primes_count": 0, "solenoid": "prod_{p in [2]} Z_p / Z"},
+        "race_6": {"ML": false, "phantom_nonzero": true, "supp_inf": [2, 3], "finite_primes_count": 0, "solenoid": "prod_{p in [2, 3]} Z_p / Z"},
+        "race_30": {"ML": false, "phantom_nonzero": true, "supp_inf": [2, 3, 5], "finite_primes_count": 0, "solenoid": "prod_{p in [2, 3, 5]} Z_p / Z"},
+        "primorial": {"ML": true, "phantom_nonzero": false, "supp_inf": [], "finite_primes_count": 15, "solenoid": "0"},
+        "primorial_truncation": {"all_valuations_bounded_by_1": true, "distinct_primes": 15, "note": "infinite continuation -> non-ML, Supp_inf = empty => purely finitary phantom"},
+        "eventually_id_222_then_1": {"ML": true, "phantom_nonzero": false, "supp_inf": [], "finite_primes_count": 1, "solenoid": "0"},
+        "eventually_const2_357_then2": {"ML": false, "phantom_nonzero": true, "supp_inf": [2], "finite_primes_count": 3, "solenoid": "prod_{p in [2]} Z_p / Z"}
+      },
+      "checks": {
+        "radinv_248_equal": true,
+        "radinv_6_12_equal": true,
+        "race_radicals": true,
+        "primorial_bounded": true,
+        "eventually_id_kills_phantom": true,
+        "eventually_const2_keeps_Z2": true
+      },
+      "pass": true
+    },
+    "B_simultaneous_honesty": {
+      "scenarios": {
+        "V=L": {"lim1": false, "all_lim": false, "large_cardinal": false},
+        "b=aleph_1": {"lim1": false, "all_lim": false, "large_cardinal": false},
+        "MA_aleph_1": {"lim1": true, "all_lim": false, "large_cardinal": false},
+        "weakly_compact_force": {"lim1": true, "all_lim": true, "large_cardinal": true}
+      },
+      "checks": {
+        "i_all_implies_1": true,
+        "ii_lim1_does_not_decide_higher": true,
+        "iii_simultaneous_needs_large_cardinal": true
+      },
+      "pass": true
+    },
+    "C_pureBox_inexpressibility": {
+      "checks": {
+        "pair1_loeb_refuted_both": true,
+        "pair1_pureBox_depth4_identical": true,
+        "pair1_WO_separates": true,
+        "pair2_fully_bisimilar_depth4": true,
+        "pair2_loeb_refuted_both": true,
+        "census_no_frame_validates_loeb": true,
+        "census_all_reflexive_cycle": true,
+        "frame_count": 68,
+        "num_depth4_formulas": 206
+      },
+      "pass": true
+    }
+  },
+  "overall_pass": true,
+  "notes": "frame_count 68 = serial+transitive frames on exactly 3 worlds; over <=3 worlds the total is 1+6+68 = 75, matching Pass 128. Run off-mount from /outputs; repository writes via Windows-path file tools only (aps-run-sync-hazard)."
+}

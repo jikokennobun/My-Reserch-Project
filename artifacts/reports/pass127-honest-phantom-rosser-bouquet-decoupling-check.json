@@ -1,0 +1,61 @@
+{
+  "pass": 127,
+  "title": "Arithmetic honest/phantom Rosser bouquet + vertical/horizontal decoupling",
+  "A_nFG2_schema_ML": {
+    "posets": {
+      "C3": {"antitone_total": 10, "index2_collapse_ok": 15, "single_instance_insufficient": 7},
+      "C4": {"antitone_total": 35, "index2_collapse_ok": 56, "single_instance_insufficient": 39},
+      "C5": {"antitone_total": 126, "index2_collapse_ok": 210, "single_instance_insufficient": 196},
+      "M3": {"antitone_total": 178, "index2_collapse_ok": 226, "single_instance_insufficient": 290},
+      "Lstar": {"antitone_total": 638, "index2_collapse_ok": 879, "single_instance_insufficient": 1327}
+    },
+    "index2_collapse_violations": 0,
+    "antitone_bounce_violations": 0,
+    "single_instance_insufficient_examples": [
+      {"poset": "C3", "seed": "1", "seed_is_bottom": false, "map": {"0": "2", "1": "2", "2": "0"}, "orbit": ["1", "2", "0", "2", "0"]},
+      {"poset": "C4", "seed": "1", "seed_is_bottom": false, "map": {"0": "2", "1": "2", "2": "0", "3": "0"}, "orbit": ["1", "2", "0", "2", "0"]},
+      {"poset": "C5", "seed": "1", "seed_is_bottom": false, "map": {"0": "2", "1": "2", "2": "0", "3": "0", "4": "0"}, "orbit": ["1", "2", "0", "2", "0"]},
+      {"poset": "M3", "seed": "3", "seed_is_bottom": false, "map": {"0": "1", "1": "0", "2": "0", "3": "1", "4": "0"}, "orbit": ["3", "1", "0", "1", "0"]},
+      {"poset": "Lstar", "seed": "4", "seed_is_bottom": false, "map": {"0": "1", "1": "0", "2": "0", "3": "0", "4": "1", "5": "0"}, "orbit": ["4", "1", "0", "1", "0"]}
+    ],
+    "top_collapse_confirmed": {"C3": true, "C4": true, "C5": true, "M3": true, "Lstar": true},
+    "PASS": true
+  },
+  "B_madic_phantom_tower": {
+    "least_witness_phantom": {
+      "m=2": {"index_tower": [1, 2, 4, 8, 16, 32, 64, 128, 256], "lim1_trunc_order": 256, "non_ML": true, "strictly_increasing_index": true, "phantom_primes": [2]},
+      "m=4": {"index_tower": [1, 4, 16, 64, 256, 1024, 4096, 16384, 65536], "lim1_trunc_order": 65536, "non_ML": true, "strictly_increasing_index": true, "phantom_primes": [2]},
+      "m=8": {"index_tower": [1, 8, 64, 512, 4096, 32768, 262144, 2097152, 16777216], "lim1_trunc_order": 16777216, "non_ML": true, "strictly_increasing_index": true, "phantom_primes": [2]},
+      "m=6": {"index_tower": [1, 6, 36, 216, 1296, 7776, 46656, 279936, 1679616], "lim1_trunc_order": 1679616, "non_ML": true, "strictly_increasing_index": true, "phantom_primes": [2, 3]},
+      "m=1": {"index_tower": [1, 1, 1, 1, 1, 1, 1, 1, 1], "lim1_trunc_order": 1, "non_ML": false, "strictly_increasing_index": false, "phantom_primes": []}
+    },
+    "arai_honest": {
+      "m=2_stab@2": {"index_tower": [1, 2, 4, 4, 4, 4, 4, 4, 4], "ML": true, "lim1": 0},
+      "m=6_stab@2": {"index_tower": [1, 6, 36, 36, 36, 36, 36, 36, 36], "ML": true, "lim1": 0}
+    },
+    "radical_invariance": {
+      "[2, 4, 8]": {"radicals": {"2": [2], "4": [2], "8": [2]}, "same_phantom": true},
+      "[6, 12]": {"radicals": {"6": [2, 3], "12": [2, 3]}, "same_phantom": true},
+      "[1]": {"radicals": {"1": []}, "same_phantom": true}
+    },
+    "PASS": true
+  },
+  "C_vertical_horizontal_decoupling": {
+    "cases": {
+      "k=1": {"antitone_nontrans": true, "antitone_trans": true, "twins": ["p1"], "twin_multiplicity_preserved": true, "tower_orbit_nontrans": ["t0", "t2", "t0", "t2", "t0"], "tower_orbit_trans": ["t0", "t1", "t1", "t1", "t1"], "ML_nontrans": false, "ML_trans": true},
+      "k=2": {"antitone_nontrans": true, "antitone_trans": true, "twins": ["p1", "p2"], "twin_multiplicity_preserved": true, "tower_orbit_nontrans": ["t0", "t2", "t0", "t2", "t0"], "tower_orbit_trans": ["t0", "t1", "t1", "t1", "t1"], "ML_nontrans": false, "ML_trans": true},
+      "k=3": {"antitone_nontrans": true, "antitone_trans": true, "twins": ["p1", "p2", "p3"], "twin_multiplicity_preserved": true, "tower_orbit_nontrans": ["t0", "t2", "t0", "t2", "t0"], "tower_orbit_trans": ["t0", "t1", "t1", "t1", "t1"], "ML_nontrans": false, "ML_trans": true}
+    },
+    "PASS": true
+  },
+  "D_infinite_ML_honest_cell": {
+    "cells": [
+      {"name": "compact_honest", "facets": 3, "mults": [2, 2, 1, 1, 1, 1, 1, 1], "index_tower": [1, 2, 4, 4, 4, 4, 4, 4, 4], "ML": true, "honest": true, "compact": true},
+      {"name": "infinite_ML_honest", "facets": "aleph0", "mults": [2, 2, 1, 1, 1, 1, 1, 1], "index_tower": [1, 2, 4, 4, 4, 4, 4, 4, 4], "ML": true, "honest": true, "compact": false},
+      {"name": "infinite_phantom", "facets": "aleph0", "mults": [2, 2, 2, 2, 2, 2, 2, 2], "index_tower": [1, 2, 4, 8, 16, 32, 64, 128, 256], "ML": false, "honest": false, "compact": false}
+    ],
+    "ml_vs_compact_gap_realized": true,
+    "PASS": true
+  },
+  "overall_PASS": true
+}

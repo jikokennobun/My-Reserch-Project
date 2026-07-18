@@ -1,0 +1,57 @@
+{
+  "pass": 126,
+  "date": "2026-07-09",
+  "script": "code/scripts/check-pass126.py",
+  "overall": "PASS",
+  "checks": {
+    "A_alpha_identity": {
+      "status": "PASS",
+      "claim": "alpha(H) = 2 + |MaxInd(H)| exactly (finite), by the atom/coatom incidence reduction",
+      "samples": {
+        "single{12}":   {"MaxInd": 2, "alpha_pred": 4, "brute_min": 4},
+        "path{12,23}":  {"MaxInd": 2, "alpha_pred": 4, "brute_min": 4},
+        "triangle K3":  {"MaxInd": 3, "alpha_pred": 5, "brute_min": 5},
+        "3-uniform{123}": {"MaxInd": 3, "alpha_pred": 5, "brute_min": 5},
+        "nonunif{12,234}": {"MaxInd": 3, "alpha_pred": 5, "brute_min": 5},
+        "disjoint{12,345}": {"MaxInd": 6, "alpha_pred": 8, "brute_min": 8}
+      }
+    },
+    "A_prime_matching_pathology": {
+      "status": "PASS",
+      "claim": "M_k perfect matching: |MaxInd(M_k)| = 2^k, alpha = 2 + 2^k > |V| = 2k for all k>=1",
+      "M_k": {
+        "1": {"V": 2, "MaxInd": 2, "alpha": 4},
+        "2": {"V": 4, "MaxInd": 4, "alpha": 6},
+        "3": {"V": 6, "MaxInd": 8, "alpha": 10},
+        "4": {"V": 8, "MaxInd": 16, "alpha": 18},
+        "5": {"V": 10, "MaxInd": 32, "alpha": 34},
+        "6": {"V": 12, "MaxInd": 64, "alpha": 66},
+        "7": {"V": 14, "MaxInd": 128, "alpha": 130},
+        "8": {"V": 16, "MaxInd": 256, "alpha": 258}
+      },
+      "limit": "|V|=aleph_0, |MaxInd|=2^aleph_0, alpha = 2 + 2^aleph_0 = 2^aleph_0 (core tax +2 absorbed)"
+    },
+    "B_honesty_is_ML_not_finiteness": {
+      "status": "PASS",
+      "claim": "seeded-honest <=> facet tower Mittag-Leffler; NOT <=> |MaxInd| finite",
+      "infinite_fan_eventually_collapsing": {"ML": true,  "cell": "seeded-honest"},
+      "m_adic_dilation_fan":                {"ML": false, "cell": "seeded-phantom", "lim1": "hatZ_m/Z"},
+      "refutes": "naive conjecture 'infinite fan => seeded-phantom'"
+    },
+    "C_rosser_D3hom_flip": {
+      "status": "PASS",
+      "claim": "least-witness Box_R: D3^hom flips with meta proof-order (R-independent)",
+      "M0_consistent":            {"box_R_box_R_phi": true,  "D3hom": "holds (vacuous guard)"},
+      "M1_spurious_short_witness":{"box_R_box_R_phi": false, "D3hom": "FAILS", "witness_code": 9, "sigma_proof_code": 12},
+      "arai_reorder":             {"box_R_box_R_phi": true,  "D3hom": "repaired", "witness_code": 17}
+    }
+  },
+  "theorems": ["126a (concrete D3^hom failure + modal classification)",
+               "126b (infinite cardinal alpha + matching pathology)",
+               "126c (honesty <=> ML of facet tower; compactness sufficient not necessary)"],
+  "references": [
+    "D. Guaspari, R. Solovay, Rosser sentences, Ann. Math. Logic 16 (1979) 81-99",
+    "T. Arai, Derivability conditions on Rosser's provability predicates, NDJFL 31 (1990) 487-497",
+    "T. Kurahashi, Henkin sentences and local reflection principles for Rosser provability, APAL 167 (2016) 73-94"
+  ]
+}

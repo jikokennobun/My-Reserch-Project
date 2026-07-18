@@ -1,0 +1,54 @@
+﻿{
+    "date":  "2026-07-11",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "喫茶ステラと死神の蝶",
+                           "context":  "[watched] 喫茶ステラと死神の蝶 ナツメ√8（まるねこん） - https://youtu.be/jClGBs1cYVE?si=fgAvPXXgWrsYi2CL",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "スペインに敗れてベスト16敗退したロナウドがらしさ溢れるカッコいい言葉で最後のワールドカップに別れを告げる",
+                           "context":  "[watched] スペインに敗れてベスト16敗退したロナウドがらしさ溢れるカッコいい言葉で最後のワールドカップに別れを告げる（YouTubeサッカー通訳） - https://youtu.be/Mi32XKlITfw?si=6cAUFOUmNDRUXbXE",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "凱旋MCbattle東西選抜秋ノ陣2019@恵比寿LIQUIDROOM",
+                           "context":  "[watched] 凱旋MCbattle東西選抜秋ノ陣2019@恵比寿LIQUIDROOM（凱旋MCbattle） - https://youtu.be/Fq_d3hsgD6k?si=rxGfjiGoS96MSFZC",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "渋谷セミナー3 (2026.6.2X)",
+                           "context":  "Research note / Research-memo\\渋谷セミナー3 (2026.6.2X).md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "渋谷セミナー3 (2026.7.1X)",
+                           "context":  "Research note / Research-memo\\渋谷セミナー3 (2026.7.1X).md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "領域理論",
+                           "context":  "Research note / Research-memo\\領域理論.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "Algebraic sequential theory",
+                           "context":  "Algebra/categorical logic / Research-memo\\Algebraic sequential theory.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "Fibrated Tarski operator",
+                           "context":  "Research note / Research\\Fibrated Tarski operator.md",
+                           "source":  "obsidian-research-index"
+                       }
+                   ]
+}

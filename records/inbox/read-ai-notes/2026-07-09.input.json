@@ -1,0 +1,54 @@
+﻿{
+    "date":  "2026-07-09",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "19歳メッシ クラシコハットトリック ～世界に衝撃を与えた試合～ Messi hat-trick El Clasico",
+                           "context":  "[watched] [伝説の試合 #1] 19歳メッシ クラシコハットトリック ～世界に衝撃を与えた試合～ Messi hat-trick El Clasico（サッカーゲーム実験室） - https://youtu.be/xQSBKk6O-sk?si=VygUQDor8xRh_6mU",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【中毒】四季ナツメのご褒美フルコース【喫茶ステラと死神の蝶】【ゆずソフト】",
+                           "context":  "[watched] 【中毒】四季ナツメのご褒美フルコース【喫茶ステラと死神の蝶】【ゆずソフト】（あかりの美少女ゲーム紹介ch） - https://youtu.be/9a286pzly1k?si=yDgod5qrUgvDXzGY",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【ウクライナ】首都キーウとその周辺で28人死亡 ロシア軍が大規模攻撃",
+                           "context":  "[watched] 【ウクライナ】首都キーウとその周辺で28人死亡 ロシア軍が大規模攻撃（日テレNEWS） - https://youtu.be/hFAz-k0VZVo?si=Y8aA15cLq7bqyoFj",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "ロシア軍がウクライナに大規模攻撃 25人死亡80人以上負傷(2026年7月3日)",
+                           "context":  "[watched] ロシア軍がウクライナに大規模攻撃 25人死亡80人以上負傷(2026年7月3日)（ANNnewsCH） - https://youtu.be/y14QLbnBnYY?si=GWam7JdL93x0BOwt",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【4人死亡】W杯メキシコ代表 40年ぶりに決勝トーナメントで勝利し大勢のサポーター殺到",
+                           "context":  "[watched] 【4人死亡】W杯メキシコ代表 40年ぶりに決勝トーナメントで勝利し大勢のサポーター殺到（日テレNEWS） - https://youtu.be/dnFVrtO44nk?si=SEYt34bndjpL_lio",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【怪童】ハーランドの面白エピソード50連発",
+                           "context":  "[watched] 【怪童】ハーランドの面白エピソード50連発（フットラボ） - https://youtu.be/U9gIXe8FE_s?si=dqJHB8q7MSkqySIH",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "ビデオゲストブック 今野 北斗 (東京大学 大学院数理科学研究科)",
+                           "context":  "[watched] ビデオゲストブック 今野 北斗 (東京大学 大学院数理科学研究科)（東大数理ビデオアーカイブ） - https://youtu.be/m8ilneS018w?si=NkEXk62uQsW0uGeF",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "メッシのベストゴールがこちら【2chサッカー】",
+                           "context":  "[watched] メッシのベストゴールがこちら【2chサッカー】（2chサッカー研究所） - https://youtu.be/eh0wEXdIb1s?si=qcxCgnroEjVfwwAd",
+                           "source":  "watch-log"
+                       }
+                   ]
+}

@@ -1,0 +1,101 @@
+{
+  "pass": 147,
+  "title": "KF (Z,Z/2) fixed point realised; Coh:B[Z]->GLP functor; Feferman path-dependence",
+  "A_sign_local_system": {
+    "symmetric_KF_C6": {
+      "monodromy": 1,
+      "cover_components": 2,
+      "Htilde0_sgn_Z2": "Z/2"
+    },
+    "symmetric_KF_C8": {
+      "monodromy": 1,
+      "cover_components": 2,
+      "Htilde0_sgn_Z2": "Z/2"
+    },
+    "rosser_C6": {
+      "monodromy": -1,
+      "cover_components": 1,
+      "Htilde0_sgn_Z2": "0"
+    },
+    "rosser_C7": {
+      "monodromy": -1,
+      "cover_components": 1,
+      "Htilde0_sgn_Z2": "0"
+    },
+    "H1_phantom_both": "Z",
+    "separation_ok": true,
+    "signatures": {
+      "Loeb": [
+        0,
+        "--"
+      ],
+      "Rosser": [
+        "Z",
+        0
+      ],
+      "KF": [
+        "Z",
+        "Z/2"
+      ]
+    }
+  },
+  "B_GLP_tower_functor": {
+    "N": 6,
+    "tower_strengths": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "strict_no_collapse": true,
+    "strictly_ordered": true,
+    "collapses": 0,
+    "degree_depth_bijective": true,
+    "H_n_S_n_ranks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "reduction_property_uniform": true,
+    "first_limit_modality_layer": 1,
+    "functor_faithful_on_frozen_part": true
+  },
+  "C_kripke_groundedness_delta": {
+    "grounding_stage": {
+      "c0": 0,
+      "c1": 1,
+      "c2": 2,
+      "c3": 3,
+      "c4": 4,
+      "c5": 5,
+      "kappa": null,
+      "rho": 1
+    },
+    "kappa_ungrounded_detached": true,
+    "consistency_iterates_grounded": true,
+    "rho_grounded_by_order": true,
+    "kappa_delta_symmetric": true,
+    "rho_delta_asymmetric": true,
+    "kappa_signature": [
+      "Z",
+      "Z/2"
+    ],
+    "rho_signature": [
+      "Z",
+      0
+    ],
+    "c_k_signature": [
+      0,
+      "--"
+    ],
+    "separation_ok": true
+  },
+  "overall_PASS": true
+}

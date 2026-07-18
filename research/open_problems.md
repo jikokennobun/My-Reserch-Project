@@ -1437,15 +1437,1364 @@
   witnesses.  Machine-verified by
   `artifacts/reports/pass114-four-element-residual-boundary-check.json` and
   `artifacts/reports/pass114-four-element-witness-residuated-tensor-search.json`.
-- **[New (Pass 114)]** **Order repair and completion-stability test for the
-  four-element residual obstruction.**
-  Add the weakest order data that makes the whole-carrier residual fiber
-  principal, starting with a top or join for the incomparable `b,c` branch, and
-  test whether the repaired model preserves finite A1-A4, G2, FG2, absence of
-  syntactic fixed points, and the MacNeille non-principal completion fixed cut.
-  If preservation fails, identify whether the named obstruction is loss of
-  antitonicity, loss of A2/A3/A4, collapse of the completion fixed cut to a
-  principal cut, or failure of residual/completion-stability compatibility.
+- **[Resolved (Pass 115)]** **Order repair and completion-stability test for
+  the four-element residual obstruction.**
+  Adjoining the one missing join `U = b v c` as a new top turns the Pass-113
+  carrier into the pentagon `N5` (`0<a<b<U, 0<c<U`, the canonical non-modular
+  lattice; forced `boxt U = 0`, monotone `box U in {b,U}`).  **Thm 115a
+  (trilemma):** (i) A1-A4, G2, FG2 and no-syntactic-fixed-point transfer for
+  both box-extensions; (ii) the MacNeille completion-separation is
+  **destroyed** -- `N5` is a finite lattice, so all 5 closed cuts are
+  principal and the sole completion-fixed cut `down(U)` is principal and
+  unreflected (`boxt U = 0 != U`), with no non-principal fixed cut surviving;
+  (iii) residuation is repaired -- 115 commutative residuated tensors appear
+  (units `a:53, b:18, c:44`), but **zero** with the integral unit `U`, the
+  meet tensor failing residuation because `N5` is non-distributive.  The named
+  obstruction is therefore precisely (ii): collapse of the completion fixed cut
+  to a principal (unreflected) cut.  **Cor 115b:** the missing join is a single
+  load-bearing defect shared by the Pass-113 separation and the Pass-114
+  residual non-principality; a non-principal MacNeille fixed cut *requires* a
+  non-lattice carrier, so no residuation-enabling top-repair can preserve the
+  separation on this carrier.  **Rem 115c:** the repair lands on Dedekind's
+  `N5`, whose non-distributivity forbids the integral (Loeb) unit, forcing
+  every residuated tensor Rosser (non-integral, Pass-51c) -- with no syntactic
+  `boxt`-fixed point to attach an integral unit to.  Machine-verified
+  `code/scripts/check-pass115.py` ->
+  `artifacts/reports/pass115-top-repair-n5-check.json`.
+- **[Resolved (Pass 116), negatively]** **Join-defect-preserving (non-lattice)
+  repair: can a principal residual fiber coexist with a non-principal completion
+  fixed cut?**  Thm 115a shows a *lattice* top-repair cannot: finiteness forces
+  every cut principal.  The weaker repair -- adjoin a top `U` above two
+  incomparable minimal upper bounds `m,n` of `{b,c}` (doubled cover
+  `L1 = {0,a,b,c,m,n,U}`, bounded but non-lattice: `b v c` unattained) -- was
+  tested and the coexistence **fails** (Thm 116a, join-defect conservation).
+  The non-principal cut `{0,a,b,c}` is retained but is **not** `boxt_hat`-fixed:
+  the orbit collapse `boxt b = boxt c = 0` forces
+  `boxt_hat(b v c) = boxt_hat(b) ^ boxt_hat(c) = bottom < b`, so the unique fixed
+  cut is the principal top `down(U)` and separation dies.  Residuation is not
+  repaired either -- the integral census (345600/2350/145/**0** residuated)
+  finds the Pass-114 fiber merely relocated to `{0,a,b,c,m,n} = L1 minus {U}`,
+  non-principal via the antichain `{m,n}`.  The absent join is a conserved charge:
+  a single top pushes it into principality (N5, Rosser tax), a doubled cover keeps
+  the non-principal cut but pushes the defect into `boxt_hat`-unfixedness and a
+  top-less fiber one level down.  Machine-verified
+  `code/scripts/check-pass116.py` ->
+  `artifacts/reports/pass116-doubled-cover-coexistence-check.json` (PASS).
+- **[Resolved (Pass 117), negatively]** **Plateau-join repair: can an incomparable
+  `boxt`-2-cycle carry a non-principal completion-fixed cut on a bounded non-lattice
+  carrier?**  NO -- for a *parity* reason that unifies Pass 116.  On the minimal
+  bounded realization, the **hexagon** `H = {0,x,y,m,n,U}` (`x || y`, `m || n`,
+  each of `x,y` below each of `m,n`), the MacNeille completion identifies
+  `x v y` with `m ^ n` into a single non-principal middle cut `w = {0,x,y}`, and
+  the antitone extension gives
+  `boxt_hat(w) = boxt x ^ boxt y = y ^ x = x ^ y = 0 = bottom`, so `w` is **not**
+  fixed; in fact `boxt_hat` is globally **fixed-point-free** (Thm 117a).  The
+  swap 2-cycle offers a length-2 self-duality, not a fixed point -- the
+  `2^n`-complementation phenomenon.  Corollary 117b unifies this with Thm 116a via
+  the antitone De Morgan join law `boxt_hat(x v y) = boxt x ^ boxt y`: a fixed
+  join needs images ABOVE the summands, which no orbit running *through* the
+  summands (chain OR swap) can supply.  Machine-verified for `boxt 0 = U`,
+  `boxt 0 = m`, and the antichain-4 double-2-cycle; a control carrier with a
+  genuine `p = boxt p` DOES yield a fixed cut, isolating the operative variable.
+  `code/scripts/check-pass117.py` ->
+  `artifacts/reports/pass117-two-cycle-plateau-fixed-point-free-check.json`.
+- **[Resolved (Pass 118)]** **Self-dual-seed necessity.**  Residue (ii) of the
+  Pass-117 problem.  Thm 117c's necessity is **NOT strict**: FP-synt is
+  UNNECESSARY, and the operative variable is neither oddness nor a carrier fixed
+  point but where the antitone map routes the MacNeille frontier.  On the SAME
+  hexagon `H`, with NO carrier synt-FP, the **frontier-crossing** map
+  `boxt 0=U, boxt x=m, boxt y=n, boxt m=y, boxt n=x, boxt U=0` (orbit
+  `(0 U)(x m y n)`, EVEN) is antitone and makes `w = {0,x,y} = x v y = m ^ n` a
+  genuine `boxt_hat`-**fixed** cut.  **Lemma 118a** (frontier De Morgan law):
+  `boxt_hat(w) = /\_{f in F} boxt f` over the lower frontier `F = max(w)`.
+  **Theorem 118b** (frontier-onto criterion): a non-principal cut `w` with
+  frontier pair `(F,G)` is fixed **iff** `boxt[F] = G` (lower frontier ONTO
+  upper frontier) -- carrier-fixed-point-free.  **Corollary 118c**: the Pass-117
+  Tarski-interval criterion stands, but its "seed = Jeroslow point" clause is
+  false; the self-dual seed is a NEW cut, completion-generated.  Pass 117's
+  plateau failed only because it chose `boxt[F]=F` (images collapse to bottom);
+  `boxt[F]=G` puts the image-meet at `w`.  Census: 273 antitone synt-FP-free
+  hexagon maps, 22 fix `w` (all `boxt[F]=G`), 4 two-way swaps, 0 needing a
+  carrier fixed point.  `code/scripts/check-pass118.py` ->
+  `artifacts/reports/pass118-completion-generated-selfdual-seed-check.json`.
+- **[Resolved (Pass 119), (i)] / [Partially resolved (Pass 119), (ii)]** _(was
+  [New (Pass 118)])_ **Higher-frontier crossing + arithmetic phantom Henkin.**
+  **(i) RESOLVED (Pass 119): onto is sufficient but NOT necessary at `|F|=3`.**
+  On the complete-bipartite bounded carrier `K33 = {0,f1,f2,f3,g1,g2,g3,U}`
+  (`0` bottom, `U` top, `f_i<g_j` for ALL `i,j`), the MacNeille completion has
+  9 cuts, exactly ONE non-principal, `w = {0,f1,f2,f3} = f1 v f2 v f3 =
+  g1 ^ g2 ^ g3`, frontiers `F={f1,f2,f3}`, `G={g1,g2,g3}`.  **Theorem 119b
+  (meet criterion, exact for all `|F|`):** `w` is `boxt_hat`-fixed **iff**
+  `/\ boxt[F] = w` (Lemma 118a).  **Theorem 119a:** `boxt[F]=G` still SUFFICES
+  (402 census witnesses) but is NOT necessary -- witness `D` maps
+  `boxt f1=g1, boxt f2=g2, boxt f3=U` (the NON-frontier top), antitone,
+  synt-FP-free, `boxt[F]={g1,g2,U} != G`, yet `/\ boxt[F] = g1 ^ g2 = w`
+  (2412 census witnesses non-onto, 1206 with a genuine non-frontier image).
+  **Theorem 119c (sharp form):** with `mu(w)=` minimal size of a meet-generator
+  `G' subset G` (`/\ G' = w`), `w` is fixed **iff** `|boxt[F] cap G| >= mu(w)`;
+  so necessity of `boxt[F]=G` holds IFF `w` is meet-IRREDUNDANT (`mu=|G|`) --
+  hexagon `mu=2=|G|` (regression: 22/22 onto), K33 `mu=2<3=|G|` (`G` redundant,
+  any two `g`'s meet to `w`).  **Cor 119d:** no fixing map has `boxt[F]` disjoint
+  from `G` (`|boxt[F] cap G|` distribution `{2:2412, 3:402}`); `>=2` upper-frontier
+  witnesses are mandatory.  Census: 7609 antitone synt-FP-free maps on K33.
+  `code/scripts/check-pass119.py` ->
+  `artifacts/reports/pass119-triple-crossing-frontier-meet-criterion-check.json`.
+  **(ii) PARTIALLY RESOLVED (Pass 119) -- Rem 119e.** The completion-generated
+  self-dual `w` is a Henkin/Rosser fixed point realized only in the Lindenbaum
+  completion (no carrier `p = neg Box p`); `boxt[F]=G`/`boxt[F] supseteq` a
+  meet-generator is the Rosser "route to an ordered higher witness" move (vs
+  paradoxical `boxt[F]=F`), and meet-REDUNDANCY (`mu<|G|`) is Rosser economy: a
+  meet-generating *pair* of comparison witnesses suffices, not a complete
+  matching.  *Left open:* promote this to a functorial Rosser-economy statement
+  (a `mu`-graded refinement of the Pass-53/57 Löb/Rosser functor `L_{(-)}`).
+- **[Resolved (Pass 120)]** _(was [New (Pass 119)])_ **Asymmetric frontiers and
+  the meet-generator hypergraph -- FRONTIER MEET-RIGIDITY.**  Both residues
+  settled, the second NEGATIVELY (correcting the anticipation of a variable
+  `mu`-spectrum).  **(i) `|F| != |G|` crossing.** On `K_{2,3}^{0,U}` the unique
+  non-principal cut `w={0,f1,f2}=f1 v f2 = g1 ^ g2 ^ g3` has `|F|=2`, `|G|=3`,
+  yet `mu(w)=2` and `H_min(w)=`complete `K_3`.  The expansion crossing succeeds:
+  a 2-element `F` maps onto a meet-generating PAIR `{g1,g2} subsetneq G` and fixes
+  `w`.  But the slack `s(w)=|F|-mu=0` FORCES injectivity (Thm 120c): every fixing
+  `boxt` sends `f1,f2` to two DISTINCT frontier `g`'s -- census 1362 antitone
+  synt-FP-free maps, 174 fix `w`, 0 with a `U`-image, 0 with a repeat,
+  `|boxt[F] cap G|` all `=2`; the Pass-119 slack freedom (`f_3 -> U`) is spent.
+  **(ii) Meet-generator hypergraph and `mu`-spectrum -- Thm 120a/b/d.** Frontier
+  meet-rigidity (Thm 120a): in ANY MacNeille completion distinct upper-frontier
+  `g,g'` meet to `w` (else `g ^ g'` is a strict upper bound of `w` below `g`,
+  breaking minimality), dually distinct lower-frontier elements join to `w`.
+  Hence `H_min(w)=binom(G,2)` and `mu(w)=2` identically (Cor 120b), and the ONLY
+  realizable frontier hypergraphs are complete graphs `K_n` (Thm 120d) -- no
+  non-uniform and no `k>=3`-uniform antichain occurs; the hypergraph is NOT a
+  free invariant, determined by `|G|` alone.  Self-healing (Cor 120e): forcing
+  `g2 ^ g3 = z>w` merely inserts `z` into the frontier (`G={g1,z}`), rigidity
+  restored.  Rosser-economy (Rem 120f): the minimal witness budget of a
+  completion-generated Henkin/Rosser cut is always exactly `2`.  Machine:
+  `code/scripts/check-pass120.py` ->
+  `artifacts/reports/pass120-asymmetric-frontier-meet-rigidity-check.json`
+  (A basic+census, B `K_{3,3}` slack-1 contrast, C rigidity survey over 7
+  bipartite carriers with 0 violations, D self-healing; overall PASS).
+- **[Resolved (Pass 121), (i) NEGATIVELY] / [Partially resolved (Pass 121), (ii)]**
+  _(was [New (Pass 120)])_ **Completion-universality of frontier meet-rigidity,
+  and the dual join-rigidity's arithmetic.**
+  **(i) RESOLVED (Pass 121), NEGATIVELY -- rigidity is COMPLETION-RELATIVE.**
+  Frontier meet-rigidity (Thm 120a) is NOT a completion-universal law; it is a
+  consequence of MacNeille's SIMULTANEOUS join+meet density.  Recomputing
+  `H_min(w)` for `K_{2,3}^{0,U}` inside three completions (**Thm 121a**):
+  MacNeille `overline L` (= canonical extension `L^delta`, since a finite poset
+  has only principal filters/ideals -- **Thm 121b**) is meet-rigid, `mu(w)=2`,
+  `H_min=K_3` (reproduces Pass 120); the ideal/downset completion `D(L)` (13
+  elements) STAYS meet-rigid (`g_i ^ g_j = downset {0,f1,f2} = w`), `mu(w)=2`, but
+  is not minimal -- it adjoins the free JOINS `g_i v g_j < U`, breaking the DUAL
+  (coatom) join-frontier instead; the filter/upset completion `F(L)` (order-dual,
+  reverse inclusion, meet = union of upsets) BREAKS meet-rigidity -- the pairwise
+  meets `g_i ^ g_j = {g_i,g_j,U} = z_ij` are THREE distinct new elements strictly
+  above `w = {g1,g2,g3,U}`, so `H_min(w) = {{g1,g2,g3}}` is 3-UNIFORM and
+  `mu(w)=3=|G|`, UNFREEZING Cor 120b and REALIZING the `k>=3`-uniform hyperedge
+  Thm 120d called impossible.  **Thm 121c (`K_{n,m}` law):** each one-sided
+  completion unfreezes exactly ONE frontier -- filter `F(K_{n,m})` gives
+  `mu(w)=m`, ideal `D(K_{n,m})` keeps `mu(w)=2` but the dual join-multiplicity is
+  `n`; MacNeille/`L^delta`, dense on both sides, is the unique completion freezing
+  BOTH.  So Thm 120d's "only complete graphs `K_n`" is a MacNeille/canonical
+  theorem, silently assuming both densities.  **(ii) PARTIALLY RESOLVED (Pass 121)
+  -- Rem 121d.**  The dual join-rigidity `f_i v f_j = w` (pairwise joins of the
+  consistency-like lower frontier collapse to the Henkin cut `w`) is the
+  completion shadow of "any two `Con^orb` iterates (Pass-69) already generate the
+  phantom limit"; but `D(L)` shows this collapse is NOT order-forced (join-free
+  completion keeps `f_i v f_j` distinct), so it is a property of MEET-density
+  (Lindenbaum both-dense completion), not of the bare consistency order.  *Left
+  open:* the exact `Con^orb`-tower identification of the meet-density collapse.
+  Machine: `code/scripts/check-pass121.py` ->
+  `artifacts/reports/pass121-completion-relative-frontier-rigidity-check.json`
+  (PASS: macneille_rigid_mu2, ideal_meet_rigid_mu2, filter_breaks_rigidity_mu3,
+  canonical_eq_macneille).
+- **[Resolved (Pass 122); (i) POSITIVE at distinguished level / NEGATIVE at true frontier; (ii) REFUTED]**
+  _(was [New (Pass 121)])_ **Two-sided-free completion and POSITIVE realization;
+  the `Con^orb` identification.**  The realization question splits by WHICH family
+  one measures over.  **(i-a) POSITIVE (distinguished family) -- Thm 122c.** Every
+  finite antichain hypergraph `H` on `[m]` IS realized exactly as `H_min^G(w)` over
+  the distinguished coatom family `G={g_1,...,g_m}` in the ideal completion
+  `D(L(H))` of an explicit carrier: atoms `=` core `{c_1,c_2}` (shared by all
+  `g_j`, giving `w=c_1 v c_2` non-principal) plus one fan atom `x_I` per maximal
+  `H`-independent set `I subseteq [m]`, with `x_I < g_j` iff `j in I`; then
+  `/\_{j in S} g_j = w` iff no maximal independent set contains `S` iff `S` contains
+  an `H`-edge, so `H_min^G(w)=H` on the nose (atom cost `2+|MaxInd(H)|`).  Verified
+  for complete `K_3`, non-uniform `{12,234}` (mu-spectrum `{2,3}`), 3-uniform
+  `{123}`, all triples on `[4]`, disjoint `{12,345}`.  So Thm 120d's "only `K_n`"
+  becomes "EVERY antichain hypergraph" once meet-density is dropped.  **(i-b)
+  NEGATIVE (true frontier) -- Thm 122a.** Over the TRUE frontier
+  `G_*(w)=min((w)^u\w)` rigidity is UNCONDITIONAL: the order-theoretic proof
+  (`g/\g'` strictly between `w` and `g` contradicts minimality of `g`) uses NO
+  MacNeille hypothesis, so distinct true-frontier elements meet to `w` in EVERY
+  completion, `H_min^{G_*}(w)=K_{|G_*|}`, `mu_*(w)=2` always (verified MacNeille +
+  ideal `K_{n,m}`, 2000 random posets, 0 violations).  **Exact invariant --
+  Thm 122d:** `H_min^G(w)=K_{|G|}` iff `G=G_*(w)` iff the completion is meet-dense
+  at `w` (no element strictly between `w` and any `g in G`) -- precisely the
+  hypothesis Thm 120d silently used.  **Cor 122b:** Pass 121's "completion-relative"
+  `mu=3` (filter) was a distinguished-family artifact -- the carrier coatoms cease
+  to be minimal upper bounds (`z_ij=g_i/\g_j` sit strictly between `w` and `g_i`).
+  **Obstruction 122e:** since Thm 122a is unconditional, NO completion yields a
+  non-complete TRUE-frontier meet-hypergraph, so "two-sided-free realization" is
+  vacuous for frontier invariants and trivial for distinguished ones.  **(ii)
+  REFUTED -- Rem 122f.** The `Con^orb_n` tower (Pass-69) is a CHAIN; a chain-cut is
+  frontierless (`max(w cap L)=emptyset`) and its pairwise joins are maxima `=` a
+  single iterate, ALWAYS strictly below the limit, in EVERY completion -- so
+  "pairwise consistency joins collapse to the phantom limit" NEVER holds for the
+  tower; meet-density is irrelevant.  The Pass-120/121 collapse `f_i v f_j = w`
+  belongs to the ANTICHAIN-frontier phantom `|F|>=2` incomparable -- a bouquet of
+  order-INCOMPARABLE Rosser-type consistency twins `c_1,c_2` (distinct
+  witness-orderings) whose disjunction is the Henkin cut, NOT iterated consistency.
+  Machine: `code/scripts/check-pass122.py` ->
+  `artifacts/reports/pass122-two-sided-realization-check.json` (overall PASS).
+- **[Resolved (Pass 123)]** _(was [New (Pass 122)])_ **The independent-Rosser-twins
+  phantom inside `ConLat_T`.**  All three sub-questions settled, with a parity
+  CORRECTION of Rem 122f.  **(i) Realization + correction (Thm 123a).** On the
+  Pass-117 hexagon (carrier `{0,x,y,m,n,U}`, non-lattice) the MacNeille completion
+  inserts the middle cut `w=x v y`; by the antitone De Morgan law (Thm 117a)
+  `boxt_hat(w)=boxt x ^ boxt y`.  A pure 2-twin frontier is a FIXED cut ONLY via the
+  CROSS map (`boxt x=m, boxt y=n`, images strictly ABOVE the summands, Cor 117b); the
+  front-internal SWAP (independent witness-orderings EXCHANGING) collapses `w` to
+  `bot` (Pass-117a).  So Rem 122f's "Henkin/Rosser FIXED cut" was an overstatement
+  for the bare bouquet -- fixedness is the cross regime.  Machine census: of 477
+  antitone self-maps 22 fix the middle cut, ALL 22 with NO carrier `p=boxt p`, 38
+  collapse to `bot`.  Hence the Thm-117c odd self-dual seed can be
+  COMPLETION-MANUFACTURED -- a POSITIVE answer to Pass-118(ii) on the hexagon (see
+  next item).  **(ii) Derivability cost + non-artifact (Thm 123b) & dictionary
+  (Thm 123c).**  Over GL (`D1+D2+D3`) the consistency fixed point is unique up to
+  provable equivalence (de Jongh-Sambin), `|F_*(w)|=1`, no bouquet; a Rosser bouquet
+  FORCES `¬D2`.  Guaspari-Solovay 1979 give the arithmetic witness (independent
+  Rosser sentences from independent witness-orderings; `Pr_R` satisfies `D1` not
+  `D2`).  The bouquet is an ANTI-artifact: arithmetic `Box_T` fails the internalized
+  disjunction property `Box(a v b) -> Box a v Box b` = the De Morgan law, so the
+  Henkin cut survives precisely in the gap where the abstract MacNeille `boxt_hat`
+  (which obeys De Morgan) would collapse it.  The distinguished-vs-true-frontier gap
+  (Thm 122d) IS Guaspari-Solovay witness-comparison nonuniqueness: witness ordering =
+  distinguished family (free, Thm 122c), `Pi_1` equiconsistency = rigid true frontier
+  (`mu_*=2`, Thm 122a), meet-density = `D2`/normality.  **(iii) `alpha(H)` optimal
+  (Thm 123d/Cor 123e).**  Atom-support lemma (each certifying atom's support is
+  `H`-independent; distinct maximal independent sets need private atoms) forces
+  `alpha_phantom(H)=2+|MaxInd(H)|`, matched by Constr 122c hence OPTIMAL; the
+  single-core principal realization costs `1+|MaxInd(H)|`, so the phantom/bouquet tax
+  is EXACTLY one core atom = one extra witness-ordering.  Machine:
+  `code/scripts/check-pass123.py` ->
+  `artifacts/reports/pass123-independent-rosser-twins-phantom-check.json` (PASS).
+- **[Resolved (Pass 123), positively; carried from Pass 117/118(ii)]** **Can a
+  MacNeille completion manufacture a non-principal `boxt_hat`-fixed cut WITHOUT a
+  carrier-level Jeroslow point `p=boxt p`?**  YES on the hexagon (Thm 123a census):
+  every one of the 22 antitone maps fixing the middle cut is carrier-SEEDLESS, so
+  completion-separation is genuine, NOT a conservative shadow of a carrier fixed
+  point.  This refines Thm 117c: the "odd self-dual seed" it demands is a property of
+  the COMPLETION (the created cut `w` with `boxt_hat(w)=w`), not of the carrier.
+  Note the R_{2k} general fixed-point-freeness residue (`boxt[F]=F` front-internal,
+  next item) is the COMPLEMENTARY collapsing regime and remains open.
+- **[Resolved (Pass 124)]** _(was [New (Pass 123)])_ **The odd-seed Rosser
+  bouquet-with-center.**  All three sub-questions settled, plus a naive dichotomy
+  REFUTED-then-scoped.  **(i) Carrier-join criterion (Thm 124a).** The Henkin center
+  is CARRIER-SEEDED iff the bouquet disjunction `c_1 v c_2` exists in the carrier.
+  On the six-element lattice `L*` (`0<c_1,c_2,p`; `c_1,c_2<w`; `w<U`; `p<U`, with
+  `w=c_1 v c_2` a GENUINE element) the antitone `boxt: 0->U, c_1->w, c_2->U, w->w,
+  p->p, U->0` has `boxt w=w` (carrier Jeroslow fixed cut = Henkin center), separated
+  twins (`boxt c_1 != boxt c_2`), AND a detached carrier seed `p=boxt p` -- a SEEDED
+  bouquet-with-center, sharply contrasting the hexagon's SEEDLESS completion cut
+  (Thm 123a, 22/22 seedless).  Since `ConLat_T` is Boolean/Lindenbaum, `rho_1 v
+  rho_2` is a genuine sentence, so the arithmetic bouquet ALWAYS lives in the seeded
+  regime; the seedless hexagon cut is an artifact of a non-lattice-complete carrier.
+  **(ii) De-Morgan collapse (Thm 124b), the derivability profile (Thm 124c).**  A
+  tempting dichotomy -- "`boxt w=w` forces fused twins when `w` is covered only by
+  `U`" -- is FALSE for general antitone maps (census: 28 of the 65 `boxt`-`w`-fixing
+  `L*` maps are separated; a general antitone `boxt` is NOT a lattice dual-hom and
+  ignores the De Morgan law, mirroring non-normal arithmetic `¬Box_R`).  Correctly
+  SCOPED to the NORMAL subclass (antitone lattice dual-endomorphisms = the abstract
+  shadow of `D2`): 17 normal maps, 4 fix `w`, `0` separated -- so normal `+ boxt w=w
+  => FUSED twins`, and the separated seeded bouquet-with-center exists ONLY in the
+  `¬D2` regime (the carrier shadow of Thm 123b).  Modal profile `D1 ^ ¬D2` in the
+  Guaspari-Solovay logic `R`; the base `Box` stays `GL` and `D3` is NOT forced to
+  fail (fixed-point uniqueness needs the full `GL` package -- normality AND Loeb --
+  so `¬D2` alone liberates the twins with `D3` free; cf. `K4`/`S4` where `p<->Box p`
+  has non-`top` solutions).  **(iii) Phantom tax (Cor 124d).**  `alpha_phantom=
+  2+|MaxInd(H)|`, `alpha_principal=1+|MaxInd(H)|`, so the tax `=1` for EVERY `H`:
+  the fan atoms are shared, only the core differs (`1->2`); connectedness of the
+  independence complex changes `|MaxInd|` (absolute `alpha`) but NOT the tax
+  (machine-confirmed on 6 hypergraphs incl. disconnected `MaxInd`-overlap graphs).
+  `Fix(boxt)` always an antichain (`L*` 638 maps, hexagon+center 5040 maps).
+  Machine: `code/scripts/check-pass124.py` ->
+  `artifacts/reports/pass124-odd-seed-bouquet-with-center-check.json` (PASS).
+- **[Resolved (Pass 125)]** _(was [New (Pass 124)])_ **Concrete `Box_R`-`D3` status,
+  exhaustive `alpha`, and the infinite carrier-join.**  All three settled; Thm 124c's
+  non-committal "`D3` not forced to fail" is SHARPENED by splitting `D3`.
+  **(i) D3 dichotomy (Thm 125a) + the exact logic (Thm 125b).**  The Rosser box
+  `Box_R phi := exists p(Prf(p,phi) ^ forall q<=p ¬Prf(q,¬phi))` is `Sigma_1`
+  (bounded guard); hence the HETEROGENEOUS `Box_R phi -> Box(Box_R phi)` is an
+  UNCONDITIONAL theorem of every `T >= I Sigma_1` (`Sigma_1`-completeness), while the
+  HOMOGENEOUS `Box_R phi -> Box_R Box_R phi` is `R`-INDEPENDENT (Guaspari-Solovay
+  completeness + Arai 1990: one Rosser predicate satisfies it, one refutes it).
+  Profile: `D1 ^ ¬D2 ^ D3^mix`, `D3^hom` free.  `D2` cannot be re-added:
+  `D1^D2^D3^hom = GL` forces de Jongh-Sambin uniqueness, `|F_*(w)|=1`, killing the
+  twins.  The logic is GS `R` with `Box_R A := (A -< ¬A)`; the twin-plus-center is a
+  model of `R + Con + {two -<-independent fixed points}` (consistent by GS
+  non-uniqueness).  Kripke-with-`-<`: `GL` trees (irreflexive, converse-well-founded)
+  + a linear witness-priority on successors; the center `w` is a CUT, never a world.
+  **(ii) Exhaustive `alpha` identity (Thm 125d).**  Reducing a non-principal bouquet
+  to its atom/coatom incidence, `alpha(H) = 2+|MaxInd(H)|` is EXACT (blocking/set-
+  cover: each proper fan atom's independent label covers `<=1` maximal independent
+  set, forcing `>=|MaxInd|` fan atoms; `mu=2` non-principality forces `>=2` core).
+  Exhaustive enumeration of ALL incidence systems below budget: ZERO realizations for
+  all six samples; `min_atoms = 2+|MaxInd|` exactly (`single{12}`/`path`=4, `K3`/
+  `3-unif`/`nonunif`=5, `disjoint{12,345}`=8).  Upgrades the Thm-123d lemma to an
+  identity.  **(iii) Infinite carrier-join dichotomy (Thm 125c).**  For an
+  `omega`-bouquet with directed join `w=\/c_n` and `boxt c_n >= w`: join-continuity of
+  `boxt` (`<=>` ML `<=>` nFG2, Thm 48b/55c) FORCES `boxt w = /\ boxt c_n`
+  (seeded-HONEST iff the directed meet attains `w`); a join-continuity FAILURE at the
+  cover gives a FREE `boxt w=w` = a completion-manufactured phantom (Pass-55 solenoid,
+  non-ML `(Z,xm)`, `varprojlim^1=hatZ_m/Z`).  So Thm 124a's finite seeded/seedless
+  split bifurcates into `{seeded-honest, seeded-phantom, seedless}` -- the middle cell
+  invisible on finite carriers.  Cor 125e: across (i)-(iii) the Rosser object is
+  honest one level down and free/phantom at the diagonal step (*Löb rigidifies;
+  Rosser liberates, by exactly one degree of freedom at self-reference*).  Machine:
+  `code/scripts/check-pass125.py` ->
+  `artifacts/reports/pass125-rosser-d3-exhaustive-alpha-carrier-join-check.json`
+  (PASS).  _(Archival: a 2026-07-06 `pass125-*` report was found orphaned -- clobbered
+  append per `aps-run-sync-hazard`; reconfirmed and re-recorded here.)_
+- **[Resolved (Pass 126)]** _(was [New (Pass 125)])_ **The `D3^hom` frontier and the
+  infinite-fan `alpha`.**  Both parts settled.
+  **(i) Concrete `D3^hom` status (Thm 126a).**  The least-witness `Box_R` REFUTES
+  `D3^hom`.  `sigma := Box_R phi` is `Sigma_1`, so provable `Sigma_1`-completeness
+  yields only the MIXED step `sigma -> Box sigma`; the HOMOGENEOUS step `Box_R sigma`
+  requires an internally-certified Rosser guard on a proof of `sigma`, which `T`
+  cannot supply (G2 blocks internal consistency).  Explicit failure: in any
+  `M |= T + Box_T bot` a spurious short witness `s_0 <= r` for `¬sigma` breaks the
+  guard, so `M |= Box_R phi ^ ¬Box_R Box_R phi` and `T |/- Box_R phi -> Box_R Box_R
+  phi`.  (The failure is of the CONDITIONAL; for provable `phi` both sides are
+  theorems by `D1` -- exactly the `Sigma_1`-completeness vs provable-`Sigma_1`-
+  completeness gap.)  Arai (1990) reorders witnesses to REPAIR `D3^hom` while STILL
+  dropping `D2` (monotonicity would revive Loeb and refute Rosser consistency
+  `T |- ¬Box_R bot`).  Modally `D3^hom = axiom 4`, `D2 = axiom K`: the
+  `D3^hom`-compatible Rosser logics are exactly the transitive, Rosser-consistent,
+  NON-normal ones (`4 in L`, `¬Box bot in L`, `K notin L`) -- an `4`-containing,
+  `K`-omitting band of the Kurahashi (2016) range; the least-witness box realizes an
+  `4`-free point, Arai an `4`-containing one.
+  **(ii) Infinite `alpha` (Thm 126b) + compactness fusion (Thm 126c, Cor 126d).**
+  The identity `alpha(H) = 2 + |MaxInd(H)|` survives VERBATIM once `+` is CARDINAL
+  addition; for infinite `|MaxInd|` the `+2` core tax is ABSORBED, `alpha =
+  |MaxInd(H)|`.  `alpha` is UNBOUNDED by `|V(H)|`: the countable perfect matching
+  `M_omega` (edges `{2i,2i+1}`) has `|MaxInd| = 2^aleph_0`, forcing a continuum-atom
+  carrier over `aleph_0` vertices.  The Next-step's naive guess "honest `iff` finitely
+  many facets" is FALSE (Thm 126c): seeded-honest `<=>` the descending
+  `boxtimes`-facet tower is Mittag-Leffler (`= nFG2` at the frontier, Thm 55c), NOT
+  `|MaxInd| < aleph_0`; an infinite fan with eventually-constant images is honest, so
+  compactness is SUFFICIENT but not necessary; the strictly seeded-phantom cell is the
+  non-ML dilation tower (`lim^1 = hatZ_m/Z`).  Cor 126d: a Rosser bouquet's
+  honest/phantom cell is decided by the SAME `4`-vs-`¬4` degree of freedom as `D3^hom`
+  (Arai = seeded-honest, least-witness = seeded-phantom).  Machine-verified
+  `code/scripts/check-pass126.py` ->
+  `artifacts/reports/pass126-d3hom-frontier-infinite-alpha-check.json` (overall PASS).
+- **[Resolved (Pass 127), (i)-(ii); (iii) partial]** _(was [New (Pass 126)])_
+  **Arithmetic realization of the honest vs phantom Rosser
+  bouquet, and the `PL(Box_R^{Arai})` pin.**  (i) Build the seeded-HONEST and
+  seeded-PHANTOM Rosser bouquets as genuine arithmetic APS of a SPECIFIC pair --
+  Arai's `D3^hom`-predicate (facet tower ML, stabilizing at the Loeb index) versus the
+  least-witness one (non-ML tower carrying the `varprojlim^1 = hatZ_m/Z` Rosser
+  torsor).  (ii) Realize the Thm-126c ML-vs-compact GAP arithmetically: an infinite
+  family of Rosser fixed points with eventually-constant witness comparison (the
+  "infinite but ML" honest cell) DISTINCT from the finitely-many-fixed-points compact
+  cell.  (iii) Pin `PL(Box_R^{Arai})` inside the Kurahashi (2016) range: is it a
+  single named transitive non-normal logic (candidate `R + 4`), and does adjoining `4`
+  to `R` REDUCE the multiplicity of `-<`-independent Rosser fixed points that Thm 125b
+  needed for the twin-plus-center model (does `D3^hom` partially re-rigidify what `¬D2`
+  liberated)?
+  **Resolution (Pass 127).** (i)-(ii) DONE. **Thm 127a:** the arithmetic honest/phantom
+  dichotomy IS a derivability identity, `D3^hom(Box_R) <=> nFG2-schema(boxtimes_R) <=>
+  facet tower Mittag-Leffler <=> no phantom`; Arai's `D3^hom`-predicate realizes the
+  seeded-HONEST bouquet (stabilizing at the axiom-`4`/transitivity index -- **corrected:
+  NOT the Loeb index**, Arai's box being Rosser-consistent hence non-Loeb), the
+  least-witness box the seeded-PHANTOM one (`varprojlim^1 = hatZ_m/Z`). **Thm 127b:** the
+  phantom is `rad`-invariant (`m` numbering-dependent, `rad(m)` well-defined; `m>=2 =>`
+  phantom, `m=1 =>` none). **Thm 127d:** the ML-vs-compact gap is realized arithmetically
+  (an infinite-but-ML Arai-Rosser fixed-point family is honest, distinct from the finite
+  compact-honest and the infinite phantom cells); order-isomorphic bouquets split
+  honest/phantom by the `4`-vs-`¬4` datum alone, and at `omega_1` twins honesty is
+  ZFC-independent (Thm 60d). (iii) PARTIAL. **Prop 127e:** `PL(Box_R^{Arai}) ⊇ R^- + 4 +
+  ¬Box bot`, and by **Thm 127c** (vertical/horizontal decoupling: `4` rigidifies the
+  nesting tower, `¬K` governs the twin count; de Jongh-Sambin uniqueness needs `K` not
+  `4`) adjoining `4` does **NOT** reduce the Thm-125b twin multiplicity -- the
+  twin-plus-center model survives verbatim in `R+4`. The single-named-logic
+  identification `= R+4` is left open (needs a Solovay/arithmetic-completeness theorem for
+  the Arai predicate). Machine-verified `code/scripts/check-pass127.py` ->
+  `artifacts/reports/pass127-honest-phantom-rosser-bouquet-decoupling-check.json` (PASS).
+- **[Resolved (Pass 128), (i)-(iii) with transferred obligations]** _(was
+  [New (Pass 127)])_ **The `R+4` completeness pin, the canonical phantom prime, and the
+  `omega_1`-honesty degree.** (i) Prove or refute `PL(Box_R^{Arai}) = R + 4` EXACTLY via a
+  Solovay-style arithmetic-completeness theorem for Arai's `D3^hom`-predicate (which
+  pure-`Box_R` schemata beyond `4` are forced -- does `4 + ¬K` entail any Loeb-fragment on
+  `Sigma_1` sentences?). (ii) Pin the exact phantom multiplier `m` of the standard
+  least-witness box under a FIXED numbering: is `rad(m) = {2}` forced, making the canonical
+  arithmetic Rosser phantom exactly `hatZ_2/Z`? (iii) Locate the Thm-127d `omega_1`-honesty
+  independence degree in the `b = aleph_1` vs `MA_{aleph_1}` bracket: a named statement
+  (Suslin tree, `add(M) = aleph_1`)?
+  **Resolution (Pass 128).** (i) **Thm 128a:** the pin DISSOLVES at the pure-`Box` level.
+  `PL(Box_R^A)` splits as (pure-`Box` part) x (Guaspari-Solovay `-<`-fragment). The only
+  candidate separating principle -- a witness-race well-foundedness schema `WO` (proofs are
+  finite, every descending witness-race terminates) -- is PURE-`Box`-INEXPRESSIBLE: the
+  normal companion is `\subseteq K4D`, and every serial+transitive frame is converse-ILL-
+  founded (seriality => infinite ascending `R`-chain), so `WO`/Loeb is unsatisfiable over
+  `K4D` (machine: 75/75 finite serial+transitive frames refute a Loeb instance, all
+  reflexive-cyclic). Hence pure-`Box` `PL(Box_R^A) = R+4`; axiom `4` adds no pure-`Box`
+  content, and the residual completeness is the CLASSICAL GS `-<`-fragment obligation, NOT
+  Arai-specific. Full Loeb `notin PL` (would kill `¬Box bot`), so `PL \subsetneq R+4+Loeb`
+  strictly. NO Loeb-fragment on `Sigma_1` separates them (the attached-cone "Loeb" is
+  ML-stabilization already provable in `R+4`). (ii) **Thm 128b:** `rad(m) = {2}` is NOT
+  absolutely forced; `m = m_race * m_enc`, `m_race = 2` the proof-vs-refutation RACE arity
+  (numbering-independent, so `2 in rad(m)` ALWAYS), `m_enc` the coding overhead. `rad(m) =
+  {2}` `\iff` dyadic coding (canonical phantom `hatZ_2/Z`); Godel prime-power coding gives
+  the maximal `hatZ/Z`. The `r`-ary race realizes `(prod_{p|r} Z_p)/Z` (any squarefree
+  radical). (iii) **Thm 128c:** NOT equivalent to Suslin-tree existence (honesty `=>
+  ¬diamond` only, `SH` orthogonal) nor to `add(M) = aleph_1`; bracketed strictly between
+  `b=aleph_1` (dishonest) and `MA_{aleph_1}` (honest), sharp strength = derived-limit
+  trivialization principle (Bergfalk 2017; Bergfalk-Lambie-Hanson 2021). Machine-verified
+  `code/scripts/check-pass128.py` ->
+  `artifacts/reports/pass128-rplus4-pin-phantom-prime-omega1-honesty-check.json` (PASS).
+  *Transferred obligations:* the GS `-<`-fragment completeness of `R+4` (classical, not
+  Arai-specific); a neighborhood/bisimulation model certifying pure-`Box`-inexpressibility
+  of `WO` at modal depth `>= 4`.
+- **[Resolved (Pass 129), (i)-(iii) with transferred obligations]** _(was
+  [New (Pass 128)])_ **Phantom-spectrum realization, GS `-<`-completeness, and
+  simultaneous higher-`lim^n` honesty.** (i) PHANTOM-SPECTRUM: for each squarefree `n`,
+  construct a genuine arithmetic Rosser predicate whose canonical phantom is exactly
+  `(prod_{p|n} Z_p)/Z` (via an `r`-ary witness race with `rad(r) = {p:p|n}` or a designer
+  proof-coding with `rad(m_enc)` prescribed), and decide whether a SINGLE predicate can
+  realize a non-squarefree/`p`-power-weighted phantom or whether the phantom functor factors
+  absolutely through the squarefree radical lattice (a "phantom spectrum" map
+  `Predicates -> P_fin(Primes)`). (ii) Discharge the Thm-128a transferred obligation: the
+  pure-`Box` completeness `R+4 = pure-Box PL(Box_R^A)` via the GS `-<`-fragment
+  (Guaspari-Solovay/Kurahashi), and build the neighborhood/bisimulation witness at depth
+  `>= 4`. (iii) SIMULTANEOUS HONESTY: lift Thm 128c from `lim^1` to `(lim^n)_{n>=1}`
+  (Bergfalk-Lambie-Hanson): is "`aleph_1`-twin Arai honest at EVERY finite twin-depth"
+  (all `lim^n = 0`) equiconsistent with a weakly compact cardinal, and does single-`lim^1`
+  honesty already decide the higher ones or genuinely split (strong-homology additivity
+  inside the G2-ZOO)?
+  **Resolution (Pass 129).** (i) **Thm 129a:** the phantom is `varprojlim^1(Z,x m_n) =
+  hatZ_N/Z` with `N = prod_n m_n` the STEINITZ (supernatural) number; the `r`-ary race
+  `r = prod_{p in S} p` realizes every squarefree radical `S` (surjectivity onto
+  `P_fin(Primes)`). A SINGLE predicate CANNOT carry a `p`-power-weighted phantom while
+  constant-arity: `Phi(p^k) = Phi(p) = Z_p/Z`, so `Phi` factors ABSOLUTELY through the
+  squarefree radical lattice ON the uniform (constant-arity) subcategory. But a DEPTH-VARYING
+  race escapes the lattice to an arbitrary Steinitz number `N`, so the true "phantom
+  spectrum" target is the Steinitz monoid and `P_fin(Primes)` is exactly the uniform-Rosser
+  image. **Pathology 129a':** the primorial race `a_k = p_k` has `Supp_infty(N) = emptyset`
+  yet is non-ML, giving a NONZERO purely finitary/adelic phantom `(prod_p Z/p)/Z` (honest at
+  each prime, phantom collectively); the ML tail dichotomy is sharp (eventually-identity =>
+  `Phi = 0`; eventually-const-`2` => `hatZ_2/Z`); an isolated finite `Z/p^k` summand is a
+  mirage killed by the dense diagonal `Z`. (ii) PARTIAL/TRANSFERRED: the pure-`Box`
+  inexpressibility of `WO` is discharged (**Thm 129c**, two bisimulation certificates, census
+  68/68 frames on 3 worlds); the POSITIVE GS `-<`-fragment completeness and the actual
+  non-normal neighborhood model realizing `D1^¬D2^D3^hom` remain owed. (iii) **Thm 129b:**
+  `h_1` (Thm 128c) does NOT decide `(h_n)_{n>=2}` (`h_1 ^ ¬h_2` consistent via `MA_{aleph_1}`)
+  -- honesty STRATIFIES by depth; `(forall n)h_n <=>` strong-homology additivity, a
+  large-cardinal statement upper-bounded by a weakly compact (BLH 2021), failing under `V=L`
+  and `b=aleph_1`, sharp strength OPEN (equiconsistency-with-weakly-compact conjectured, not
+  proved). Machine-verified `code/scripts/check-pass129.py` ->
+  `artifacts/reports/pass129-phantom-spectrum-simultaneous-honesty-inexpressibility-check.json`
+  (PASS).
+- **[Resolved (Pass 130), (i)-(iii) with obligations o1/o2 carried; (i) as a CORRECTION,
+  (iii-B) as a CORRECTION of Pass 129]** _(was [New (Pass 129)])_ **Steinitz-image rigor,
+  phantom-functor monoid structure, graded-Rosser arithmetization, simultaneous-honesty
+  bound, and the positive `WO` model.**
+  (i) The naive "`varprojlim^1 = hatZ_{Supp_infty(N)}/Z`, finite-valuation primes DIE" is
+  FALSE as a group iso and TRUE only for direct summands. **Thm 130a:** `hatZ_N/Z` is
+  DIVISIBLE (`ell`-divisible for every `ell` via the dense diagonal, since
+  `hatZ_N/ell.hatZ_N = A_ell/ell.A_ell` and `Z` surjects), so **no finite `Z/q^k` is a direct
+  summand** (Cor 130a.1 = the Pass-129 mirage, now a theorem). **Thm 130a.2:**
+  `Tor(hatZ_N/Z) = bigoplus_{q notin Supp_inf(N)} Z/q^inf` and `(hatZ_N/Z)/Tor = Q^{(2^aleph0)}`
+  -- a finite-valuation prime survives COLLECTIVELY, reincarnated as a Prufer `Z/q^inf`, NOT as
+  the bounded `Z/q^{e_q}`; the iso-type forgets ALL finite valuations (incl. `e_q=0`) and
+  remembers only `Supp_inf`. **Thm 130b:** `Phi` is NOT a monoid hom into `(Ab,x)`; it factors
+  through the surjective IDEMPOTENT semilattice hom `Supp_inf:(Steinitz,x)->(P(Primes),cup)`
+  (`Phi(N^2)=Phi(N)`).
+  (ii) **Constr 130c:** a graded Rosser `Sigma_1` predicate with disjoint Godel bands and
+  `a_k`-ary layer races realizes the facet tower `(Z, x a_k)`, hence `hatZ_{prod a_k}/Z`; the
+  primorial schedule `a_k=p_k` arithmetizes `(prod_p Z/p)/Z`. Obligations **o1** (`D1^¬D2`
+  uniform across layers) and **o2** (`ConLat`-image tower honestly `(Z,x a_k)`) carried.
+  (iii) **Thm 130d CORRECTS Pass-129 Thm 129b(c):** `(forall n)h_n` is NOT a large-cardinal
+  statement -- Bergfalk-Hrušák-Lambie-Hanson removed the weakly compact of BLH 2021;
+  simultaneous honesty is **equiconsistent with ZFC** (`2^aleph0 >= aleph_2` necessary,
+  forcing-axiom not large-cardinal phenomenon).
+  (iv) **Thm 130e:** a 3-neighborhood non-normal box (monotone, intersection-open:
+  `{0,1} cap {0,2} = {0} notin N`) realizes `D1 ^ ¬D2 ^ D3^hom`; `WO` = Loeb for the `-<`
+  modality = converse-well-foundedness. Machine `check-pass130.py` PASS.
+- **[Corrected (Pass 130)]** _(Pass-129 Thm 129b(c))_ The claim "`(forall n)h_n` is a
+  large-cardinal statement, upper-bounded by a weakly compact, sharp strength the OPEN BLH
+  program" is DOWNGRADED: the weakly compact was only BLH 2021's first upper bound;
+  Bergfalk-Hrušák-Lambie-Hanson give it in ZFC alone. `(forall n)h_n` is equiconsistent with
+  ZFC (Thm 130d).
+- **[Resolved (Pass 131), (i)-(iii); (ii) as a SHARPENING of Pass 130]** _(was
+  [New (Pass 130)])_ **Prufer-rank rigidity, graded-Rosser witness-counting, the honesty
+  ceiling, and bimodal `R+4`.**
+  (i) **Thm 131a:** `kappa_q = dim_{F_q}(hatZ_N/Z)[q] = 1` for EVERY finite valuation
+  `e_q` (INCLUDING `e_q = 0`) and `= 0` iff `e_q = inf`, by the snake lemma of
+  `0->Z->hatZ_N->G->0` at `x q` (`G` divisible `=> G/qG = 0`; diagonal `d(1)=1`). So
+  `Tor(hatZ_N/Z) = bigoplus_{q notin Supp_inf} Z/q^inf` is RANK-ONE Prufer; a depth-varying
+  overhead permutes finite valuations but CANNOT inflate `kappa_q` -- the continuum lives
+  only in the torsion-free `Q^{(2^aleph0)}`. **Pathology 131a':** a `d`-strand facet tower
+  gives `kappa_q = #(strands finite at q)`; continuum-rank Prufer torsion is the signature
+  of a MULTI-STRAND predicate, not the single-strand graded one. **Lemma 131b:** o1
+  (`D1 ^ ¬D2` uniform: each band-disjoint layer is a self-contained GS `a_k`-ary Rosser
+  predicate) and o2 (index-`a_k` injective tower map, honest `(Z, x a_k)`) discharged,
+  modulo carried o1' (uniform cross-layer GS independence) and o2' (no two orderings
+  `T`-provably equivalent).
+  (ii) **Thm 131c SHARPENS the Pass-130 `2^aleph0 >= aleph_2`:** `h_n => 2^aleph0 >=
+  aleph_{n+1}` (Bergfalk-Lambie-Hanson), so `(forall n)h_n => 2^aleph0 >= aleph_{omega+1}`
+  (Konig `cf > omega`). The depth split `h_1 ^ ¬h_2` holds in the ZFC model
+  `MA_{aleph1} + 2^aleph0 = aleph_2` (`h_1` by Dow-Simon-Vaughan, `¬h_2` forced by the
+  ceiling) -- a LARGE-CARDINAL-FREE stratification. Exact strength = the BBMT `n`-dim
+  `Delta`-system / definable additivity principle, NOT a cardinal characteristic.
+  (iii) **Thm 131d:** `PL(Box_R^A) = R+4` is the FUSION `[GL]_Box (+) [GL]_{-<}` + bridge
+  (`R` = the `-<`-fragment); canonical model = up-closed `-<`-cone neighborhood box fibered
+  over a `GL` `-<`-frame (3-world witness `N(w)=up{W,{0,1},{0,2}}` validates
+  `D1 ^ RM ^ 4 ^ ¬Box_R bot`, refutes `K`). **Thm 131e:** full `D3` coexists with `¬D2`
+  (the `GL`-collapse fusing the twins is `D2`-only), arithmetic full-`D3` realizability
+  carried. Machine `check-pass131.py` overall PASS.
+- **[Resolved (Pass 136), (ii) primary; (iii) advanced; (i) carried]** _(was
+  [New (Pass 135)])_ **The 2-cd BBMT separator consistency, `cd`-vs-`cf` grading, and the
+  exotic-ordering `Sigma_1`-induction.**
+  **(ii) RESOLVED — Thm 136a (uniform sphere obstruction / `cd`-grading).** For every
+  `k >= 1` the minimal k-coherence obstruction of `A^{(a),k}` is `S^k =
+  boundary(Delta^{k+1})` with `Htilde_j(S^k; F_a) = F_a` iff `j = k`; hence
+  `cd(A^{(a),k}) = k` EXACTLY (strict `cd`-graded tower, no collapse). `Delta^{k+1}` and the
+  shared-vertex wedge of two k-simplices are contractible (generalizing Pass-135
+  Correction 135b to ALL k), and no simplicial retraction `Delta^{k+1} -> S^k` exists, so
+  the `n=1`-vs-`n>=2` non-transfer of Thm 135a is degree-UNIFORM, carried entirely by
+  `cd(A) <= 1`. **Thm 136b:** `cd` is ZFC-ABSOLUTE (finite `F_a` simplicial homology, a
+  `Delta^0_1` predicate; Shoenfield). **Thm 136c:** `cd` and the Thm-134d `cf`-rank grading
+  are INDEPENDENT invariants — `cd` absolute, `cf`-rank not (DSV89/MP88/BLH21) — tied ONLY
+  by the one-sided Bergfalk-Lambie-Hanson ceiling `cd >= k => 2^{aleph_0} >= aleph_{k+1}`;
+  the converse fails (fixed-`cd` re-indexing along a higher-cofinality cofinal set raises
+  the vanishing threshold without touching `cd`), so their lockstep on the standard tower
+  `A^{(a),•}` is a construction artifact, not an identity. Machine-verified `F_3`, k=1..4:
+  `artifacts/reports/pass136-cohdim-sphere-grading-cd-vs-cf-check.json` (overall PASS).
+  **(iii) ADVANCED — Prop 136d.** A `Sigma_1`-definable, non-primitive-recursive TAG map
+  `t` gives `n -< m :iff t(n) <_lex t(m)` with per-comparison encoding `m_enc = O(1)` yet
+  non-p.r. global order (non-p.r. content quarantined in `t`), exhibiting the
+  `m_enc = O(1)` / non-p.r. `-<` combination the Pass-134 Skeptic feared: realizability and
+  logic diverge; bounded `m_enc` does not entail p.r. `-<`. *Carried obligation:* `I-Sigma_1`
+  linearity of `-<` and box-level preservation of `¬D2 ^ ¬Box_R⊥` (the tag order must not
+  restore `D2` via proof-concatenation monotonicity). **(i) CARRIED — Rem 136e.** The
+  strictness separator `Con((forall n) h_n(A) ^ varprojlim^2 A^{(a),2} != 0)` is now
+  certified genuinely level-2 by 136b (`cd(A^{(a),2}) = 2` absolute), non-vacuous
+  (CH-consistent), a concrete 2-cd instance of the OPEN BBMT additivity
+  (Bannister-Bergfalk-Moore-Todorcevic; Bergfalk-Lambie-Hanson 2021); target model
+  `b = aleph_1` against a BLH21-style simultaneous-vanishing forcing. NOT decided this pass.
+- **[Resolved (Pass 139), (b) LIMITATIVE + corrected; (c),(d) carried to
+  `[New (Pass 139)]`]** _(was [New (Pass 138)])_ **The 2-cd forcing frontier
+  (carried from `[New (Pass 137)]` (b),(c)) and the completed Rosser-box
+  dictionary.**
+  **(b) RESOLVED (Pass 139) as LIMITATIVE + corrected.** **Thm 139a:** the Pass-138
+  target `b = aleph_1` is REFUTED. `b = aleph_1 => varprojlim^1 A != 0`
+  (Dow--Simon--Vaughan 1989, "Strong homology and the proper forcing axiom," Proc.
+  AMS 106 (1989) 821--828), so `!h_1(A)`, so `!(forall n) h_n(A)`: the first
+  conjunct fails in EVERY `b = aleph_1` model, and any witness of the separator has
+  `b >= aleph_2`. **Thm 139b (hidden dichotomy):** the literal `(forall n)` either
+  (I) is REDUNDANT -- if `cd(A) <= 1` bounds the set-theoretic `varprojlim^{>=2} A`
+  (Goblot at the `omega^omega`-index cofinality), then `(forall n) h_n <=> h_1` and
+  the separator is `Con(h_1(A) ^ varprojlim^2 A^{(a),2} != 0)`, CONSISTENT -- or
+  (II) OVERSHOOTS -- if cd/cf-INDEPENDENT (Thm 136c), then `(forall n) h_n` forces
+  `2^{aleph_0} >= aleph_{omega+1}` (BLH ceiling `h_n => 2^{aleph_0} >= aleph_{n+1}`
+  + König `cf(2^{aleph_0}) > omega`), a dimension-UNIFORM BBMT additivity regime in
+  which even the `cd = 2` sphere obstruction `A^{(a),2}` trivialises, so
+  `varprojlim^2 A^{(a),2} = 0` and the LITERAL conjunction is INCONSISTENT. Both
+  horns AGREE the `b = aleph_1` target is wrong and that the CORRECTED separator
+  `Con(h_1(A) ^ varprojlim^2 A^{(a),2} != 0)` is the right object. **Cor 139c:** it
+  is witnessed LARGE-CARDINAL-FREE by `MA_{aleph_1} + 2^{aleph_0} = aleph_2` (the
+  Thm-131c depth-split model): `h_1(A)` additive, `aleph_2 < aleph_3` ceiling forces
+  `varprojlim^2 A^{(a),2} != 0`, and `cd(A^{(a),2}) = 2` ZFC-absolute (Thm 136b,
+  recertified: `H~_j(S^2; F_3) = F_3` iff `j = 2`) certifies genuineness (not a
+  re-indexed level-1). Placed on the two governing invariants: a Löb(sheaf,
+  deg-1-additive)/Rosser(cosheaf, deg-2-phantom) DEGREE MISMATCH = set-theoretic
+  `D2`/`D3` gap (Thm 61a/b, 130e/131e); certified-linearity bit (Thm 138c) =
+  `Lin(-<) <=>` chain `<=>` Mittag-Leffler `<=> varprojlim^{>=1} = 0`, OFF for the
+  non-linear `omega^omega`-index (so `lim^1 A != 0` at `b = aleph_1`); and the
+  level-2 phantom = derived-limit avatar of `nFG2(2)` (`boxtimes^3 T <= boxtimes^2
+  T`), its non-vanishing at `aleph_2` a set-theoretic witness that `nFG2(2)` does
+  NOT reduce to `nFG2(1) = FG2`. Machine-verified
+  `artifacts/reports/pass139-bal1-refutation-cd2-separator-check.json` (A/B/C/D,
+  overall PASS) via `code/scripts/check-pass139.py`. *Residual proof obligations
+  (carried):* the horn-I-vs-II decision (Goblot cofinality bound vs cd/cf
+  independence for the twin tower) and the exact sufficiency of `MA_{aleph_1}` (vs
+  full dimension-1 additivity) for `h_1(A)`. **(c),(d) CARRIED** verbatim to
+  `[New (Pass 139)]`.
+- **[Resolved (Pass 140), (a) horn-I REFUTED; (b),(c) carried to `[New (Pass 140)]`]**
+  _(was [New (Pass 139)])_ **Deciding the strictness dichotomy, the `cd = omega`
+  diagonal, and the certified-linearity bit inside `ConLat_T`.** Opened by Pass 139.
+  **(a) RESOLVED (Pass 140) -- horn I is refuted outright, the dichotomy dissolves.**
+  **Thm 140a:** the Mardesic--Prasolov system `A` is indexed by `(omega^omega, <=*)`
+  whose directed cofinality `cf = d >= b >= aleph_1` is ALWAYS uncountable (a ZFC
+  theorem: no countable subset of `omega^omega` is cofinal under `<=*`). Goblot's
+  vanishing theorem (Goblot 1970; Mardesic, *Strong Shape and Homology*, Springer
+  2000) then gives `varprojlim^n A = 0` only for `n >= cf-rank + 2 >= 3`, so Goblot
+  NEVER forces `varprojlim^{>=2} A = 0`. The graph-nerve `cd(A) <= 1` (a Cech/sheaf
+  invariant of the 1-dimensional nerve) and the Goblot cofinality-rank of the index
+  poset are DECOUPLED (Thm 136c), and only the latter governs `varprojlim^* A`:
+  Horn I's antecedent ("`cd <= 1` bounds `varprojlim^{>=2} A` via Goblot") is
+  UNSATISFIABLE. **Cor 140b:** hence `(forall n) h_n` is strictly stronger than
+  `h_1` (the literal quantifier is NOT redundant); the LITERAL separator
+  `Con((forall n) h_n ^ varprojlim^2 A^{(a),2} != 0)` is INCONSISTENT (Pass-139
+  Koenig overshoot `(forall n) h_n => 2^{aleph_0} >= aleph_{omega+1}`), while the
+  CORRECTED separator `Con(h_1(A) ^ varprojlim^2 A^{(a),2} != 0)` is CONSISTENT.
+  **Cor 140c:** its home is `MA_{aleph_1} + 2^{aleph_0} = aleph_2`, where
+  `varprojlim^2 A^{(a),2} != 0` holds by the Bergfalk--Lambie-Hanson ceiling
+  CONTRAPOSITIVE (`h_2 => 2^{aleph_0} >= aleph_3`, refuted by `c = aleph_2`), NOT by
+  Goblot; `cd(A^{(a),2}) = 2` is ZFC-absolute (Thm 136b, recertified:
+  `Htilde_j(S^2; F_3) = F_3` iff `j = 2`). **Rem 140d:** `varprojlim^n A` is the
+  derived-limit avatar of `nFG2(n)` (`boxtimes^{n+1} T <= boxtimes^n T`); because
+  the orbit index `(omega^omega, <=*)` is uncountable and non-well-founded, the
+  Goblot truncation depth `cf-rank + 1` is UNBOUNDED -- the exact set-theoretic
+  ANTIPODE of Thm 41a's finite depth-2 self-truncation of the antitone `boxtimes`-
+  orbit. Machine-verified `artifacts/reports/pass140-horn-a-goblot-vs-nerve-cd-check.json`
+  (overall PASS) via `code/scripts/check-pass140.py`. *Residual proof obligation
+  (carried, Cor 140c(i)):* whether `MA_{aleph_1}` ALONE (vs `PFA`, used by
+  Dow--Simon--Vaughan 1989) forces `varprojlim^1 A = 0` at `2^{aleph_0} = aleph_2`
+  -- the load-bearing `h_1` line, a `MA_{aleph_1}`-trivialisation of the level-1 MP
+  obstruction on coherent `aleph_1`-families (Todorcevic 1989). **(b),(c) CARRIED**
+  verbatim to `[New (Pass 140)]`.
+- **[Resolved (Pass 141), (a) and (c); (b) carried to `[New (Pass 141)]`]**
+  _(was [New (Pass 140)])_ **The `cd = omega` diagonal / `nFG2(omega)` limit, and the
+  certified-linearity bit inside `ConLat_T`.** Opened by Pass 140.
+  (a) THE `cd = omega` DIAGONAL [carried from `[New (Pass 139)]` (b)]: **RESOLVED
+  (Pass 141) -- the diagonal RE-TRUNCATES below the ceiling.** **Thm 141a (telescope
+  collapse):** the suspension-telescope diagonal `A^{(a),omega}_tel = colim(S^k,
+  equatorial)` is `F_3`-acyclic (each `S^k -> S^{k+1}` is `0` on the top class
+  `H~_k`, so the homology tower is eventually-zero => Mittag-Leffler =>
+  `varprojlim^1 = 0` in every degree, the Thm-55c avatar); the telescoped
+  `boxtimes`-tower self-truncates to the TRIVIAL object -- a depth-`omega` echo of
+  Thm 41a. **Prop 141b:** the coproduct diagonal `+_k A^{(a),k}` is only the
+  phantom-additive UNION of finite levels (Pass 50/51), not a new class. **Thm 141c
+  (Goblot ceiling):** over any FIXED index of cofinality `aleph_r`, `varprojlim^n =
+  0` for `n >= r+2` (Goblot 1970; Mardesic 2000), so a single object with
+  `varprojlim^n != 0` cofinally in `n` needs UNBOUNDED cofinality `cf >= aleph_omega`,
+  i.e. `2^{aleph_0} >= aleph_{omega+1}` (BLH ceiling `lim^n != 0 => c >= aleph_{n+1}`
+  + Koenig). **Cor 141d (phantom uncertainty principle):** a genuine `nFG2(omega)`
+  [`c >= aleph_{omega+1}`] and the sharp level-2 separator at its home `c = aleph_2`
+  (Cor 140c) are MUTUALLY EXCLUSIVE -- so at `c = aleph_2` there is NO genuine
+  `cd = omega` phantom, only the re-truncating telescope or the splintering union.
+  (b) CERTIFIED-LINEARITY BIT [carried from `[New (Pass 139)]` (c)]: **CARRIED** to
+  `[New (Pass 141)]` -- locate `T |- Lin(-<)` inside `ConLat_T`, whether the single
+  Boolean PL detects (Thm 138c) is the shadow of the `I-Sigma_{k-1}`/`I-Sigma_k`
+  boundary (Thm 137d), and whether Rosser `WC` names a point of the `Con^{orb}_n`
+  tower (Pass 69).
+  (c) DISCHARGE Cor 140c(i): **RESOLVED (Pass 141), POSITIVELY.** **Cor 141e:**
+  `MA_{aleph_1}` ALONE forces `varprojlim^1 A = 0` at `2^{aleph_0} = aleph_2` -- the
+  level-1 trivialisation poset is `sigma`-centered (ccc), needs only `aleph_1` dense
+  sets (Dow--Simon--Vaughan 1989; Bergfalk 2017; Todorcevic 1989); full `PFA`/`OCA`
+  is required by DSV only for SIMULTANEOUS higher vanishing, and the same
+  `MA_{aleph_1}` does NOT give `varprojlim^2 = 0` (needs `c >= aleph_3` by BLH), so
+  the level-2 separator survives. Machine `code/scripts/check-pass141.py` ->
+  `artifacts/reports/pass141-cd-omega-diagonal-nfg2omega-check.json` (PASS).
+- **[Resolved (Pass 142), (a) reduced + attained, (c) REFUTED; (b) split and carried]**
+  _(was [New (Pass 141)])_ **The `aleph_{omega+1}` home: is the `nFG2(omega)` ceiling
+  ATTAINED, or does a higher obstruction reappear one cardinal up?**
+  (a) ATTAINED, as a pcf REDUCTION. **Thm 142a:** re-base the long diagonal off the
+  countable-coordinate product `prod_n omega` (whose `<*`-cofinality is the dominating
+  number `d`, a red herring) onto `prod_n aleph_n`; Shelah pcf gives IN ZFC a
+  tcf-scale `<f_xi : xi < lambda>`, `lambda = pp(aleph_omega)`, cofinal of length
+  `aleph_{omega+1} <= lambda < aleph_{omega_4}`. Mounting `(A^{(a),k})_k` on the walks
+  of the scale, `varprojlim^n A^{(a),Omega} != 0` cofinally in `n` **iff** the
+  transverse `n`-coherent family is cofinally nontrivial. The pcf skeleton (scale,
+  cofinality `aleph_omega`, window) is ZFC-ABSOLUTE; the nonvanishing REDUCES to a
+  coherence-nontriviality input (the honest core). (c) REFUTED. **Thm 142b (pcf
+  caging):** the home ordinal-index is pinned into the ZFC window `[omega+1, omega_4)`
+  (`aleph_omega^{aleph_0} >= aleph_{omega+1}` floor by Koenig; `pp(aleph_omega) <
+  aleph_{omega_4}` ceiling by Shelah), so the phantom can be displaced upward only
+  within a BOUNDED pcf interval, never to infinity; and the Thm-141a telescope-collapse
+  does NOT echo, because an `aleph_omega`-cofinal index carries no cofinal `omega`-chain
+  (least cofinal-subset size `aleph_omega > aleph_0`), voiding the Mittag-Leffler
+  reduction. (b) SPLIT. **Thm 142c:** the phantom's EXISTENCE is large-cardinal-FREE
+  (ZFC pcf + ZFC nontrivial coherence); its DESTRUCTION (all `lim^n = 0`, the
+  `omega`-level honesty) is the strength-bearing side (weakly compact upper bound BLH
+  2021, since reduced BHLH; exact strength carried). **Pathology 142d (linear-scale
+  trap):** indexing by the `<*`-scale ITSELF is cf-rank `1`, so Goblot forces
+  `lim^{>=3} = 0` -- worse than the telescope; the phantom lives strictly on the
+  `[lambda]^{<omega}`-transverse coherence, the transfinite reprise of "no strictly
+  nFG2-descending orbit exists on a linearly reachable chain" (Thm 41a). Antipode of
+  Thm 41a: finitely the phantom is impossible-to-have / free-to-destroy; transfinitely
+  at the ceiling it is cheap-to-have / expensive-to-destroy. Machine
+  `code/scripts/check-pass142.py` ->
+  `artifacts/reports/pass142-aleph-omega-plus-1-home-pcf-window-check.json`
+  (A finite-directed acyclicity 1183 posets/0 top-violations; B ceiling ladder;
+  C pcf window nonempty+bounded; D telescope non-echo; overall PASS). Successor
+  `[New (Pass 142)]` opened below.
+- **[Resolved (Pass 143), (a) reduced to the CLH weak-diamond ladder + coherence-dimension
+  caging; (b) RESOLVED -- ZFC-equiconsistent, weakly compact removed; (c) carried]**
+  _(was [New (Pass 142)])_ **The transverse coherence core, and the destruction strength.**
+  Opened by Pass 142 (Thm 142a reduces attainment to coherence; the honest content is
+  now isolated).
+  (a) RESOLVED as a further reduction + a caging. **Thm 143a (walk-lift, dimension-graded):**
+  the `n=1` layer is the EXPLICIT Todorcevic `rho_1`/Hausdorff-gap coherent family on the
+  `aleph_omega`-scale C-sequence (ultrametric coherence `rho_1(a,g) <= max{rho_1(a,b),
+  rho_1(b,g)}` machine-checked, 10660/10660 triples; raw `rho_2` step-count NOT subadditive,
+  not certified); the higher-`n` layers are the Casarosa--Lambie-Hanson weak-diamond-fed
+  coherent families (`varprojlim^n A[H] != 0` from `d = omega_n` for `H = Z^{(omega_n)}`, or
+  from `w-diamond(S^{k+1}_k)` for all `k<n` for `H = Z`), stratifying by dimension.
+  Cofinal-in-`n` non-vanishing REDUCES to their conjunction, whose necessary cardinal price
+  is exactly `2^{aleph_0} >= aleph_{omega+1}` (CLH 2024, answering Bannister). The phantom
+  is a dimension-UNBOUNDED tower of coherent families, never one walk. **Thm 143b (Goblot
+  coherence-dimension caging):** any single C-sequence/walk has finite cohomological
+  dimension `cd`, so Goblot `H^{>cd}=0` caps its non-trivial coherence at a finite dimension
+  -- one walk NEVER carries the phantom cofinally; the caging axis is the COHERENCE dimension,
+  ORTHOGONAL to the bounded-pcf cardinal caging of Thm 142b (finite-nerve shadow: path `cd0`
+  no coherence, cycle `cd1` `H^1=1`/`H^2=0` caged, octahedron `cd2` `H^2=1` uncaged).
+  (b) RESOLVED. **Thm 143c:** kill `lim^1` alone `= MA_{aleph_1}` (Dow--Simon--Vaughan 1989);
+  kill ALL `lim^n` simultaneously `=` adjoin `beth_omega` Cohen reals
+  (Bergfalk--Hrusak--Lambie-Hanson, J. Math. Logic 23 (2023); arXiv:2102.06699) --
+  EQUICONSISTENT with ZFC, the weakly compact of Bergfalk--Lambie-Hanson (2021) a
+  removable first-proof artifact; the Pass-130 ledger (equiconsistent ZFC) is CORRECT.
+  Necessary-not-sufficient: the `beth_omega`-Cohen model MEETS the floor
+  `2^{aleph_0} >= aleph_{omega+1}` yet has all `lim^n = 0` -- the ceiling is the doorframe,
+  not the ghost; existence and destruction are both ZFC-equiconsistent and both compatible
+  with the ceiling, separated by coherence combinatorics (weak-diamond vs Cohen-generic),
+  not cardinal arithmetic. (c) carried to `[New (Pass 143)]`. Machine
+  `code/scripts/check-pass143.py` ->
+  `artifacts/reports/pass143-transverse-coherence-walk-lift-check.json` (A walk coherence +
+  `delta^2=0`; B Goblot caging via nerve cohomology; C ceiling ladder + window + BHLH;
+  overall PASS). Refs: Mardesic--Prasolov 1988; Dow--Simon--Vaughan 1989; Todorcevic, Walks
+  on Ordinals (2007); BLH Forum Math Pi 9 (2021); BHLH JML 23 (2023); Casarosa--Lambie-Hanson
+  arXiv:2411.15856 (2024).
+- **[Resolved (Pass 144), level-split: `n>=2` pro-isomorphic across the window; `n=1`
+  gap-refinement indexed by `Lambda`, nonvacuous iff `~SCH`]**
+  _(was [New (Pass 143)])_ **Does the pcf window stratify the phantom, or is the only genuine
+  stratification the CLH coherence-dimension ladder?**
+  RESOLVED as a LEVEL-SPLIT. **Def 144.0:** `Lambda := pcf({aleph_n : 1<=n<omega}) cap
+  (aleph_omega, aleph_{omega_4})`, the regular scale-lengths, `max Lambda = pp(aleph_omega)`.
+  **Thm 144a (level-split of window stratification):** for the transverse cover-fiber system
+  `A_mu[H]` of a length-`mu` tcf-scale `S_mu`, (i) for `n >= 2`, `varprojlim^n A_mu[Z] =~
+  varprojlim^n A_{mu'}[Z]` for all `mu, mu' in Lambda` -- level-`n` nonvanishing is governed by
+  `w-diamond(S^{n+1}_n)` (resp. `d = omega_n` for `H = Z^{(omega_n)}`), a characteristic at
+  `omega_{n+1} < aleph_omega` on the FIXED low-index coordinates, INDEPENDENT of the scale
+  length `mu`; the higher phantom is PRO-ISOMORPHIC across the whole window (obligation:
+  pullback naturality of `[mu]^{<omega} -> [omega_{n+1}]^{<omega}`). (ii) for `n = 1`, the
+  Hausdorff-gap / `rho_1` class lives at regular height `mu`, and since cofinality is a
+  pro-iso invariant, distinct `mu` give NON-pro-isomorphic classes -- level 1 DOES stratify,
+  indexed by `Lambda` (obligation: per-`mu` non-tightness / bad-point). **Thm 144b (nonvacuity
+  = failure of SCH):** `|Lambda| >= 2` iff `pp(aleph_omega) > aleph_{omega+1}` iff SCH fails at
+  `aleph_omega`; under SCH the window is a single point and both horns collapse to the Pass-143
+  dimension-tower. **Cor 144c:** the phantom is BIGRADED `Phi^n_mu` -- unbounded along the
+  coherence dimension `n` (Pass 143, every `mu`), collapsing along the pcf-length `mu` for
+  `n >= 2` (pro-isomorphic) and surviving only at `n = 1` (a `~SCH`-conditional gap-refinement).
+  So prong (c) resolves NEGATIVELY for the substantive `n >= 2` phantom -- the cardinal window
+  adds no new HIGHER classes; the genuine stratification is the coherence-DIMENSION ladder.
+  **Pathology 144d:** widen the pcf hotel arbitrarily (large `pp(aleph_omega)`, Gitik-Magidor)
+  and the `n >= 2` haunting is CONSTANT along it -- the higher-dimensional wardrobe stays in one
+  ground-floor closet at `omega_{n+1}`; cross-cofinality transfer to a window cardinal is vacuous.
+  Machine `code/scripts/check-pass144.py` ->
+  `artifacts/reports/pass144-pcf-window-stratification-level-split-check.json` (A level-1
+  girth-split, B level-2 `H^2` constant across window labels, C nonvacuity-iff-`~SCH` gate;
+  overall PASS). Refs: Shelah, *Cardinal Arithmetic* (1994); Abraham-Magidor pcf chapter,
+  Handbook of Set Theory (2010); Gitik-Magidor on SCH failure; Casarosa-Lambie-Hanson
+  arXiv:2411.15856 (2024); BHLH JML 23 (2023).
+- **[Resolved (Pass 145), (a),(b) discharged; (c) Con^orb carried to `[New (Pass 145)]`]**
+  _(was [New (Pass 144)])_ **Discharge the Thm-144a obligations and place the level-1
+  gap-refinement inside the nFG2 hierarchy / `Con^{orb}` tower.** Opened by Pass 144 (Cor
+  144c gives a bigraded phantom `Phi^n_mu` with the cardinal axis alive only at `n = 1`).
+  RESOLUTION. (a) **Thm 145a (finality pro-iso):** `A_mu[Z] =~ pi_mu^* B[Z]` for
+  `pi_mu : [mu]^{<omega} -> [omega_{n+1}]^{<omega}`, `X |-> X cap omega_{n+1}`, which is
+  FIBRE-ACYCLIC (fibres up-directed); the Bousfield--Kan/Roos spectral sequence collapses
+  (`E_2^{p,q>=1}=0`) to the edge iso `varprojlim^n_{[mu]} A_mu =~ varprojlim^n_{[omega_{n+1}]} B`,
+  natural in `mu`, for all `n >= 2` -- naturality of 144a.i is a formal consequence of
+  finality. **Cor 145b:** `mu = max Lambda = pp(aleph_omega)` carries NO extra top-generator
+  class (`pi` quotients scale-length). (b) **Thm 145c (level-1 faithfulness = badness):**
+  `Phi^1_mu != 0` iff `S_mu` has stationarily many bad points (no eub) iff `mu` non-approachable;
+  the level-1 stratification is faithful exactly on `Lambda_bad`, and `Lambda_bad = emptyset`
+  (Foreman--Magidor very-good-scale / AP) vs `Lambda_bad = Lambda` (Magidor--Shelah tree
+  property / `~AP`) are BOTH consistent -- faithfulness is approachability-conditional.
+  Machine `code/scripts/check-pass145.py` ->
+  `artifacts/reports/pass145-thm144a-obligation-discharge-check.json` (A finality, B good/bad
+  level-1, C orientation; overall PASS). Refs: Cummings--Foreman--Magidor, "Canonical structure
+  in the universe of set theory" I--II, APAL 129 (2004) / 142 (2006); Foreman--Magidor, "A very
+  weak square principle", JSL 62 (1997); Magidor--Shelah, "The tree property at successors of
+  singular cardinals", Arch. Math. Logic 35 (1996); Bousfield--Kan, LNM 304 (1972); Roos,
+  "Sur les foncteurs derives de lim", CRAS 252 (1961).
+- **[Resolved (Pass 146), (a),(b); residues carried to `[New (Pass 146)]`]**
+  _(was [New (Pass 145)])_ **Build the `Con^{orb}` functor of Thm 145d and test whether the
+  `n >= 2` frozen skeleton has an arithmetic ZFC-absolute avatar.** Opened by Pass 145
+  (Thm 145d is a structural conjecture; Pathology 145e gives a frozen `n >= 2` / fluid
+  `n = 1` split).
+  RESOLUTION. (a) **Thm 146a (Con^orb is a map of DERIVED invariants, not of points):**
+  since `|Or-bad(S_mu)| >= aleph_{omega+1} > aleph_0 = |ConLat_T|` and `Fix(boxt)` is a
+  countable antichain (Lemma 51a), NO injection `Or-bad(S_mu) hookrightarrow Fix(boxt)`
+  exists; the dictionary factors through the countable derived-signature quotient
+  `sigma : point |-> (H^1, H^0(sgn))` with three values -- `(0,--)` `|->` Loeb/integral,
+  `(Z,0)` `|->` Rosser torsor `Zhat_2/Z`/non-integral, `(Z,Z/2)` `|->` Kripke-Feferman
+  (lim^1-detected but Rosser-invisible). Functorial under scale end-extension (`lim^1` is a
+  tail/pro-invariant, Pass 59). (b) **Thm 146b (frozen but NOT nFG2-graded):** Thm 41a
+  self-truncates `nFG2` at index 2, so `varprojlim^n B[Z]` (`n >= 2`) is NOT an
+  `nFG2(n)`-strictness witness -- coherence dimension and `boxt`-orbit index are orthogonal
+  gradings; the true avatar is the Japaridze-Beklemishev graded provability algebra, with
+  `varprojlim^n B[Z]` realising the PA-provable strictness `<n> !~ <n+1>` (Beklemishev 2004),
+  ZFC-absolute (reproduces Cor 145b). **Thm 146c (Feferman path-dependence =
+  non-approachability):** the fluid `n = 1` layer is the first limit (`omega`-th) stage of a
+  Turing-Feferman transfinite progression, whose notation-path-dependence (Feferman 1962) is
+  the arithmetic image of a bad point's `Z/2`-orientation. **Pathology 146d:** the same
+  bigraded ghost is a PA-THEOREM on every floor `n >= 2` (Beklemishev strictness) and a
+  ZFC-INDEPENDENT statement on floor 1 (Foreman-Magidor vs Magidor-Shelah). Machine
+  `code/scripts/check-pass146.py` ->
+  `artifacts/reports/pass146-conorb-functor-nfg2-coherence-orthogonality-check.json`
+  (A Con^orb signatures/KF/end-extension/non-injectivity; B nFG2 index-2 collapse vs
+  `H^n(S^n)=Z` orthogonality; C frozen `H^2` label-independence + fluid girth split + GLP
+  strictness; overall PASS). Refs: G. Japaridze, "The polymodal logic of provability", 1988;
+  L. Beklemishev, "Provability algebras and proof-theoretic ordinals, I", APAL 128 (2004)
+  103--123; S. Feferman, "Transfinite recursive progressions of axiomatic theories", JSL 27
+  (1962) 259--316.
+- **[Resolved (Pass 147), (a),(b); residues carried to `[New (Pass 147)]`]**
+  _(was [New (Pass 146)])_ **Realise the Kripke-Feferman prong arithmetically and construct the
+  `Coh : B[Z] -> GLP`-tower functor.** Opened by Pass 146 (Thm 146a leaves the `(Z, Z/2)`
+  KF signature realised only algebraically; Thm 146b's GLP identification and Thm 146c's
+  Feferman-path correspondence are structural/heuristic, not constructed).
+  RESOLUTION. (a) **Thm 147a (explicit KF `(Z,Z/2)` fixed point; KF/Rosser separation):** over
+  c.e. `T \supseteq EA`, in the strong-Kleene Kripke-Feferman closure (Feferman 1991) put
+  `Box_KF phi = Tr(dot⌜Prov_T phi⌝)`, `boxt = ¬Box_KF`, diagonalize `T |- kappa <-> boxt kappa`.
+  `kappa` is UNGROUNDED in the minimal Kripke fixed point while every iterate `boxt^n T` is
+  grounded at a finite stage; groundedness is `≡_T`-invariant, so `kappa !≡_T boxt^n T` --
+  `kappa` DETACHED, cover-fiber tower non-ML `(Z,×m)`, `varprojlim^1 = Zhat_m/Z != 0`
+  (`H^1 = Z`). The Kleene jump commutes with the De Morgan involution `delta`, so the
+  orientation `Z/2`-torsor is TRIVIAL, its double cover SPLITS, `H^0(sgn) = Htilde^0(;Z/2) =
+  Z/2` -- Rosser-INVISIBLE. In the countable antichain `Fix(boxt)` (Lemma 51a) the signatures
+  `(0,--)` Loeb, `(Z,0)` Rosser, `(Z,Z/2)` KF are pairwise distinct; `kappa`/`rho` share
+  `H^1=Z` and are separated by `H^0(sgn)` alone. (b) **Thm 147b (`Coh` functor):**
+  `Coh([S^n]) = <n>T`, `Coh(sigma_n) =` Beklemishev's reduction `<n+1>T ≡_T <n>^omega T`
+  (APAL 2004); a graded monoid map faithful on generators with `H^n(S^n)=Z` matching PA-provable
+  strictness `<n> !~ <n+1>` (frozen `n>=2` = ZFC-absolute GLP tower, confirming Thm 146b). The
+  reduction spends one `omega` per degree bump: the first limit is at the `n=1->2` passage, so
+  `n=1` maps to the finite base `<1>`, NOT `<omega>`; the genuine first LIMIT modality `<omega>`
+  (`GLP_Lambda`, Fernandez-Duque--Joosten) is the avatar of the `n=1` layer's transfinite
+  regular-height-`mu` home. **Thm 147c (Feferman-Spector non-uniqueness):** `T_omega` of a
+  Turing-Feferman uniform-reflection progression is genuinely notation-path-dependent (Feferman
+  1962 completeness + Feferman-Spector 1962 incomparable `O`-paths) -- Thm 146c PROMOTED from
+  analogy to a proved recursion-theoretic non-uniqueness (parallel to, not identified with, the
+  set-theoretic non-absoluteness of Thm 145c). **Pathology 147d:** three modal faces in one
+  column -- symmetric-independent (`kappa`, `n=1`), oriented-independent (`rho`, `n=1`),
+  provable-absolute (`<n>`, `n>=2`); orientation is a purely ground-floor phenomenon. Machine
+  `code/scripts/check-pass147.py` ->
+  `artifacts/reports/pass147-kf-signature-glp-functor-check.json` (A double cover `2`->`Z/2`
+  symmetric vs connected `1`->`0` Rosser, both `H^1=Z`; B strict GLP chain, `0` collapses,
+  degree<->depth bijective, first limit at `n=1->2`; C `c_k` ground at stage `k`, `kappa`
+  ungrounded, `delta` fixes `kappa`/breaks `rho`; overall PASS). Refs: Feferman 1962 (JSL 27,
+  259-316); Feferman-Spector 1962 (JSL 27, 383-390); Feferman 1991 (JSL 56, 1-49); Kripke 1975;
+  Cantini 1990 (JSL 55, 244-259); Beklemishev 2004 (APAL 128, 103-123); Ignatiev 1993;
+  Fernandez-Duque-Joosten 2013.
+- **[Resolved (Pass 148), (a),(b); residues carried to `[New (Pass 148)]`]** **Descend `kappa`
+  to `ConLat_PA` (or prove ascent is forced), and promote `Coh` to a full monoidal functor
+  locating `<omega>`.** Opened by Pass 147 (Thm 147a realises `kappa` only in `ConLat_{KF}`;
+  Thm 147b's `Coh` is a generator-level monoid map on the positive cone).
+  RESOLUTION. (a) **Thm 148a (Sigma_1-orientation dichotomy):** over `T \supseteq EA` with a
+  `Delta_0` linear proof order `prec`, the Rosser tie-break `R_prec` is a TOTAL orientation of
+  `Fix(boxt)` and `delta R_prec = R_{prec^op} != R_prec` on every non-degenerate fixed point
+  (antisymmetry of `prec`), so every detached `Sigma_1` `boxt`-fixed point has monodromy `-1`,
+  connected orientation double cover, `H^0(sgn) = 0` -- signature `(Z,0)` Rosser. The symmetric
+  `(Z,Z/2)` requires a `delta`-FIXED tie-break, and the unique `delta`-fixed comparison is the
+  undirected truth-gap valuation, which is NOT `Sigma_1`. **Thm 148b (forced ascent + descent
+  retraction):** `(Z,Z/2)` is intrinsically non-`Sigma_1` -- it requires the strong-Kleene KF
+  closure (ordinal `phi_{epsilon_0}(0)`); the Pass-147 embedding is the arithmetic-restriction
+  RETRACTION `r : ConLat_{KF} -> ConLat_PA` (not an inclusion of `kappa in L_{Tr}`), and
+  `r([kappa])` is a still-DETACHED but RE-ORIENTED `(Z,0)` shadow (the gap collapses under
+  two-valued restriction, dropping `H^0(sgn) : Z/2 -> 0`). So `(Z,Z/2)` lives strictly in
+  `L_{Tr}`; the KF ascent is FORCED. (b) **Thm 148c (monoidal Coh; law = depth-addition):**
+  `Coh : Sph -> GLP^+` (source = free strict symmetric monoidal category on `S^1`,
+  `S^n^S^m=S^{n+m}`; target = graded monoid `(<n>)` under `<n>*<m>:=<n+m>`, Ignatiev normal form)
+  is strict monoidal, faithful on generators. The law is FORCED to be depth-ADDITION: conjunction
+  (`otimes=and`, idempotent) sends `S^1^S^1=S^2 |-> <1>and<1>=<1>`, collapsing `H^2` against the
+  frozen strictness `<2> !~ <1>`. Beklemishev's reduction `<n+1> ≡ <n>^omega` is an INTERNAL
+  coherence iso of `GLP^+`, not part of `Coh`'s monoidal data (smash stays finite; `omega` spent
+  inside the target). `Coh(holim_n S^n = S^omega) = <omega>`, the first limit modality of
+  `GLP_Lambda` (Fernandez-Duque--Joosten 2013, ordinal `epsilon_0`), the transfinite cell
+  phantom-decorated (`lim^1 = Zhat_m/Z`); the pcf `mu = pp(aleph_omega)` and the ordinal
+  `epsilon_0` are torsor-LINKED (Feferman path, Thm 147c), NOT equal. **Pathology 148d:** a
+  `Sigma_1` "fair coin" (parity of the least deciding proof) tie-break is STILL an orientation --
+  no algorithm can abstain; `Z/2` is the cohomological trace of a non-computable abstention.
+  Machine `code/scripts/check-pass148.py` ->
+  `artifacts/reports/pass148-sigma1-orientation-coh-monoidal-law-check.json` (A monodromy `-1`
+  connected vs `+1` split over `C_6,C_7,C_8`, orientation census 0 of `2/6/24` linear orders
+  fails to orient; B conjunction no-climb vs depth-addition climbs; C 0 `delta`-fixed linear
+  orders `n=2..5`; overall PASS). Refs: Guaspari-Solovay 1979 (Ann. Math. Logic 16, 81-99);
+  Cantini 1990 (JSL 55, 244-259); Feferman 1991 (JSL 56, 1-49); Kripke 1975; Beklemishev 2004
+  (APAL 128, 103-123); Ignatiev 1993 (JSL 58, 249-290); Fernandez-Duque-Joosten 2013 (JSL 78,
+  543-561).
+- **[Resolved (Pass 150), (a),(b); residues carried to `[New (Pass 150)]`]** **Make the schematic
+  `Z/2` an honest derived class, and settle the phantom-witness question for reflection antimatter.**
+  Opened by Pass 149 (Thm 149b produces the symmetric `(Z,Z/2)` only as a Cech `H^0` over the
+  realization diagram, not yet as a `Sigma_1`-definable cohomology object; Thm 149c leaves `-<n>`
+  as a formal `K_0`-class with no decided model status).
+  RESOLUTION. (a) **Thm 150a (schematic `Z/2` = effective `H^1`, `ISigma_1`-cheap, de-localized):**
+  the sign sheaf `sgn` on `Real(boxt)` has, CLASSICALLY, `H^0 != 0` (a separating set exists by
+  `AC`) and Cech `H^1 = 0` (the singleton-race cover is discrete), so the schematic `Z/2` is NOT a
+  classical class. EFFECTIVELY, the subsheaf `sgn^{Sigma1}` of `Sigma_1`/c.e. sections has
+  `H^0(Real; sgn^{Sigma1}) = 0` (a c.e. global section is a recursive separator of the Kleene pair
+  `A={e:phi_e(e)=0}`, `B={e:phi_e(e)=1}`, none exists) and represents the NONTRIVIAL class
+  `[sgn^{Sigma1}] = 1 in H^1_{eff}(Real; Z/2) = Z/2`; this nonvanishing is `ISigma_1`-provable
+  (effective inseparability = uniform diagonal, recursion theorem), whereas concentrating the class
+  onto one stalk (`H^0(sgn)(kappa) = Z/2`, Pass 148) costs the KF ordinal `phi_{epsilon_0}(0)`.
+  Hence "`Sigma_1`-schematic not `Sigma_1`-pointwise" = the `Z/2` is DE-LOCALIZED (`ISigma_1`-cheap
+  global `H^1`, `phi_{epsilon_0}(0)`-expensive pointwise `H^0`). (b) **Prop 150b.1 (`omega`-absolute
+  chirality):** every `omega`-sound reflection principle has grade `>= 0` (`GLP^+=(N,+)`
+  well-founded, least `<0>`); no negative grade is `omega`-realized. **Thm 150c (phantom witness +
+  SW duality):** `A_{-1} := PA + ¬Con(PA)` is consistent (Goedel II), `Pi_1`-sound, and
+  INTERPRETABLE in `PA` (Feferman 1960, ACT), carrying a NONSTANDARD proof of `bot` -- the `-<1>`
+  phantom witness, `≡_T`-invisible over `N`; `Pi_1`-conservative and interpretability-below `PA`
+  but NOT `Sigma_1`-conservative; the phantom fiber over `-<1>` is `2^{aleph_0}` (Lindstrom
+  density). `D : Real(boxt)^{op} -> SW^{ph}` is the SW antipode `s:k|->-k` on `K_0=Z` (`D^2=id`,
+  fixed locus `{0}=S^0=T`-floor, free off it), sending the Pass-53 `lim^1=Zhat_m/Z` phantom POINT
+  to the interpretability ANTIMATTER `-<n>`, landing only in the phantom-completed `SW^{ph}`.
+  Chirality is ABSOLUTE over `omega`, PHANTOM-BROKEN over interpretability. **Pathology 150d:**
+  `PA+¬Con(PA)` proves its own inconsistency yet never proves a false `Pi_1` fact. Machine
+  `code/scripts/check-pass150.py` ->
+  `artifacts/reports/pass150-effective-derived-z2-phantom-witness-sw-duality-check.json` (A `K=8`
+  all races oriented, 0 indexed separators, uniform defeat, discrete cover `H^1_classical=0`,
+  effective class `Z/2`; B grades monotone/least `<0>`/`K_0=Z`; C `PA+¬Con` consistent/`Pi_1`-sound/
+  interpretable/grade `-1`/`N`-invisible/fiber `2^{aleph_0}`; D `D^2=id`, fixed `{0}`,
+  `{1..4}<->{-1..-4}`, `sw_fixed=1`; overall PASS). Refs: Rogers 1967; Feferman 1960 (Fund. Math.
+  49, 35-92); Feferman 1991 (JSL 56, 1-49); Cantini 1990 (JSL 55, 244-259); Lindstrom 2003
+  (Aspects of Incompleteness, LNL 10); Beklemishev 2004 (APAL 128, 103-123); Spanier-Whitehead 1955
+  (Mathematika 2, 56-80).
+
+- **[New (Pass 150)]** **Realize `(Z,Z/2)` in one explicit bicomplex over an effective site, and
+  promote the point/antimatter Spanier-Whitehead duality to an honest functor.** Opened by Pass 150
+  (Thm 150a locates the schematic `Z/2` as `H^1_{eff}` but leaves the Ershov/realizability site and
+  the `RGamma`-computation as sketches; Thm 150c pins `D` on grades only, not as a natural functor).
+  (a) Build the effective site explicitly: give the Ershov/realizability Grothendieck topology on
+  `Real(boxt)` in which c.e. families are covers, prove `RGamma` there computes
+  `H^0(sgn^{Sigma1}) = 0` and `[sgn^{Sigma1}] = 1 in H^1_{eff} = Z/2`, and assemble the single
+  bicomplex whose total cohomology is `(H^1(cover tower) = Z, H^1_{eff}(sgn) = Z/2) = (Z,Z/2)` --
+  unifying the detachment phantom (vertical `varprojlim^1 = Zhat_m/Z`) and the orientation gap
+  (horizontal effective `Z/2`) as two edges of one derived object, and pinning the exact `ISigma_1`
+  vs `phi_{epsilon_0}(0)` proof-theoretic boundary between the horizontal (schematic) and pointwise
+  (concentrated) readings.
+  (b) Promote `D : Real(boxt)^{op} -> SW^{ph}` to an honest functor: prove naturality of the pairing
+  sending each positive-grade `lim^1` phantom point to its negative-grade interpretability-antimatter
+  class `-<n>`, decide whether `D` is an equivalence onto `SW^{ph}` or only a faithful embedding, and
+  test whether the continuum-width phantom fiber (Lindstrom density downstairs) is `D`-dual to the
+  uncountable `Zhat_m/Z` phantom (Pass 53 upstairs) as an iso of `2^{aleph_0}`-torsors -- the final
+  Spanier-Whitehead statement that the `G2-ZOO`'s positive detachment spectrum and its negative
+  interpretability spectrum are one object seen through the mirror `s`. Connects to the Pass-69
+  `Con^{orb}` open problem and the Pass-51/53 integral-unit dictionary.
+  (a) Upgrade the SCHEMATIC `Z/2` of Thm 149b to an honest object: define a `Sigma_1`-parametrized
+  sheaf of orientation double covers over the realization diagram `Real(boxt)` and prove its first
+  Cech/`lim^1` cohomology is a `Sigma_1`-definable `Z/2` -- locate `(Z,Z/2)` NOT as a point of
+  `ConLat_PA` but as a class in a DERIVED enhancement `R\Gamma(ConLat_PA; sgn)`, making
+  "`Sigma_1`-schematic, not `Sigma_1`-pointwise" precise as `H^0` vs `H^1` of one sheaf; test
+  whether the effectively-inseparable carrier of 149b makes this class provably nonzero in `PA` or
+  only in a reflection extension.
+  (b) Decide the phantom-witness question for `-<n>`: is there a conservative (`Pi^0_1`- or
+  interpretability-) extension of `PA` in which the SW co-reflection `-<n>` acquires a NON-standard
+  sentential witness (a phantom principle, `≡_T`-invisible over the standard model), or is
+  chirality absolute (no model of `GLP` realizes a negative grade)? If a phantom witness exists,
+  promote the `s`-conjugacy of Pathology 149e to an honest duality functor
+  `Real(boxt)^op -> SW` sending each detached fixed point's `lim^1` phantom point to a
+  reflection-antimatter class, closing the "phantom point upstairs / phantom antimatter
+  downstairs" loop into a single Spanier-Whitehead duality on the whole `G2-ZOO`. Connects to the
+  Pass-69 `Con^{orb}` open problem and the Pass-51/53 integral-unit dictionary.
+
+- **[Resolved (Pass 149), (a),(b); residues carried to `[New (Pass 149)]`]** **Close the
+  completeness half of the orientation dichotomy, and promote `Coh` to a functor on the full
+  stable/derived category.** Opened by Pass 148 (Thm 148a is proved only for boxes with a
+  `Delta_0` linear proof order; Thm 148c is monoidal only on the positive cone).
+  *Resolution (Pass 149):* (a) **Thm 149a** proves "admits a `Delta_0` linear proof order" is
+  POINTWISE eliminable -- every realized detached fixed point is oriented (`H^0_pt(sgn)=0`,
+  signature `(Z,0)`) because its singleton race involves two standard proof codes with a `Delta_0`
+  comparison; a non-terminating race is a degenerate oriented (empty-section) stalk, not a gap.
+  **Thm 149b** exhibits, via a recursively-inseparable c.e. pair `(A,B)`, a `Sigma_1` proof order
+  that is SCHEMATICALLY unorientable and carries a genuine `boxt`-fixed sentence, so `(Z,Z/2)` is
+  `Sigma_1`-SCHEMATIC but NOT `Sigma_1`-POINTWISE: Thm 148b PRESERVED and SHARPENED, the pointwise
+  gap forces KF ascent while a `Sigma_1` avatar survives one level up. (b) **Thm 149c**: `GLP^+ =
+  (N,+)` is not a group (Ignatiev well-order), `K_0 = Z`, and the negatives `-<n>` are reflection
+  PHANTOMS (`Pi`-conservativity is a morphism `<n>->0`, not an inverse). **Thm 149d**: the `delta`
+  orientation flip IS the Spanier-Whitehead antipode -- one order-2 involution `s:k|->-k` on
+  `K_0=Z`, fixed locus `{0}=S^0=T`-floor, free off it; the KF gap cocycle `H^0(sgn)=Z/2` is its
+  equivariant class, unifying both prongs. Verified by `code/scripts/check-pass149.py` (overall
+  PASS), report `artifacts/reports/pass149-orientation-completeness-sw-antimatter-check.json`.
+  (a) Prove or refute that NO `Sigma_1` box over `PA` with a NON-standard (non-`Delta_0`-linear)
+  proof predicate `Prf` -- e.g. a recursively-inseparable pair coded as an unorientable partial
+  order of proofs -- can carry a `delta`-symmetric detached fixed point with `H^0(sgn) = Z/2`. If
+  such unorientable `Sigma_1` proof orders exist, `(Z,Z/2)` descends to `ConLat_PA` after all,
+  REFUTING Thm 148b's strict non-`Sigma_1` claim; if not, the KF ascent is absolutely forced and
+  "admits a `Delta_0` linear proof order" is eliminable from Thm 148a.
+  (b) Promote `Coh` to a monoidal functor on the FULL stable/derived category: give the reflection
+  avatar (or prove its absence) of the negative Grothendieck classes `-[S^n]`; note `GLP^+` does
+  NOT extend to a graded group (Ignatiev well-order has no inverses), so identify the "reflection
+  antimatter" as a Spanier-Whitehead dual / co-reflection (dual GLP, downward modalities), and
+  test whether the Spanier-Whitehead involution on `Sph` matches the `delta` orientation flip of
+  prong (a) -- unifying both prongs under one duality. Connects to the Pass-69 `Con^{orb}` open
+  problem and the Pass-51/53 integral-unit dictionary.
+  (a) Decide whether the symmetric `(Z, Z/2)` KF signature is realisable ALREADY inside
+  `ConLat_PA` -- is there a Rosser-invisible, `lim^1`-detected `boxt`-fixed point over PA
+  itself -- or whether `delta`-symmetry PROVABLY forces ascent to a truth-theoretic / reflection
+  extension (KF ordinal `phi_{epsilon_0}(0)`). Sharpen: does a `Sigma_1`-definable well-ordering
+  of proofs force EVERY detached fixed point to be orientable (Rosser `(Z,0)`), making unoriented
+  detachment `(Z,Z/2)` intrinsically non-`Sigma_1`; and pin the exact embedding
+  `ConLat_T \hookrightarrow ConLat_{KF}` carrying `kappa`.
+  (b) Promote `Coh` from a generator-level monoid map to a genuine monoidal functor: specify the
+  source category (cover-system tower under suspension/smash), decide the target monoidal law
+  (GLP concatenation vs conjunction), and construct the transfinite extension sending the first
+  TRANSFINITE coherence stage (`varprojlim` over the whole `omega`-tower of suspensions) to the
+  first LIMIT modality `<omega>` of `GLP_Lambda`, testing whether the `n=1` layer's
+  regular-height-`mu` (`aleph_omega`-analogue) home matches `<omega>`'s proof-theoretic ordinal
+  via the Feferman path torsor of Thm 147c. Connects to the Pass-69 `Con^{orb}` open problem and
+  the Pass-51/53 integral-unit dictionary.
+  (a) Construct an explicit Kripke-Feferman fixed point `kappa` (partial-model / fixed-point
+  semantics) and verify it carries BOTH `varprojlim^1 != 0` (not provably equivalent to any
+  iterate `boxt^n T`) AND `H^0(sgn) = Z/2` (no witness-comparison orientation) -- separating
+  KF from Rosser inside `Fix(boxt) subseteq ConLat_T`.
+  (b) Construct `Coh : (B[Z] cover systems) -> GLP`-tower sending `varprojlim^n B[Z]` to the
+  `n`-fold reflection layer `<n>`, carrying Bousfield-Kan degree to GLP modality depth, with
+  `<n> !~ <n+1>` (Beklemishev 2004) matching `H^n(S^n) = Z`; decide whether the `n = 1` layer
+  is the image of the first LIMIT modality `<omega>` (transfinite reflection / `omega`-consistency)
+  and whether Thm 146c's Feferman path-dependence is a genuine metamathematical independence
+  THEOREM rather than an analogy. Connects to the Pass-69 `Con^{orb}` open problem and the
+  Pass-51/53 integral-unit dictionary.
+  (a) Construct explicitly `Or-bad(S_mu) -> Fix(boxt) subseteq ConLat_T` sending an oriented
+  bad point to a Rosser fixed point and a good point to a Loeb fixed point; verify functoriality
+  under scale end-extension and that the `Z/2` orientation torsor maps to the Rosser
+  proof-ordering choice. Decide whether a SYMMETRIC bad point lands on a Kripke--Feferman fixed
+  point that is `varprojlim^1`-detected but Rosser-invisible.
+  (b) Decide whether the ZFC-constant `varprojlim^n B[Z]` (`n >= 2`, Cor 145b) is the shadow of
+  an ARITHMETIC absolute object -- e.g. an `nFG2(n)`-strictness witness independent of ambient
+  cardinal arithmetic -- so that Pathology 145e becomes a statement about which `nFG2` layers
+  are provably strict vs forcing-fragile. Concretely: is there a provability predicate whose
+  `n`-th derived-consistency layer realizes `varprojlim^n B[Z]` for `n >= 2` while its `1`-st
+  layer's (non)triviality tracks approachability at a metamathematical `aleph_omega`-analogue?
+  Connects to the Pass-69 `Con^{orb}` open problem and the Pass-51/53 integral-unit dictionary.
+  (a) Prove the pullback naturality of Thm 144a.i: show the coordinate projection
+  `pi : [mu]^{<omega} -> [omega_{n+1}]^{<omega}` is cofinal-type-preserving on the CLH sub-nerve,
+  so `pi^*` is a pro-isomorphism of the `n >= 2` cover-fiber towers across all `mu in Lambda`;
+  identify the failure locus if `mu` is a `pp`-maximal vs sub-maximal generator (does
+  `max Lambda = pp(aleph_omega)` carry an EXTRA top-generator class the shorter scales miss?).
+  (b) Prove Thm 144a.ii's per-`mu` non-tightness: decide whether EVERY `mu in Lambda` carries a
+  nontrivial `(mu, .)`-Hausdorff gap (bad/non-good point of `S_mu`), or whether a `mu` all of
+  whose scales are tight/good collapses its level-1 class -- is the level-1 stratification
+  faithful on all of `Lambda`, or only on the non-good part of the pcf spectrum? Connect the
+  good/bad-point dichotomy to the `Con^{orb}` consistency-tower (Pass-69 open problem): does an
+  orbit-attached (good) scale correspond to a Loeb/orbit-attached fixed point and a bad
+  (gap-bearing) scale to a detached Rosser fixed point, extending the Pass-51/53
+  integral-vs-non-integral unit dictionary to the transfinite pcf setting? The
+  `[New (Pass 140)]` (b) certified-linearity bit is carried here.
+  *(Original Pass-142 statement, now resolved (a,b) / carried (c) above: (a) construct or
+  obstruct the transfinite `n`-coherent family on `[pp(aleph_omega)]^{<omega}` via lifting
+  Todorcevic `rho`-functions / minimal-walk oscillation; (b) pin the destruction strength
+  ZFC vs weakly compact, split-point single-`lim^1` = `MA_{aleph_1}` (Cor 141e) vs
+  simultaneous all-`n`; (c) does the pcf window stratify the phantom.)*
+- **[Superseded (Pass 140)]** _(was [New (Pass 139)] original phrasing of the strictness
+  dichotomy prong (a); resolved above, prongs (b),(c) re-opened as `[New (Pass 140)]`)_
+  Deciding the strictness dichotomy, the `cd = omega` diagonal, and the certified-linearity
+  bit. Original Pass-139 statement:
+  (a) DECIDE the Thm-139b horn: does `cd(A) <= 1` (graph nerve, absolute) BOUND the
+  set-theoretic `varprojlim^{>=2} A`? Compute/bound the cohomological dimension of
+  the MP cover-fiber tower AS AN INVERSE SYSTEM over its `omega^omega`-index
+  (Goblot's `cf`-bound vs the graph-nerve `cd = 1`), settling whether
+  `(forall n) h_n <=> h_1` (horn I) or `(forall n) h_n` overshoots into the
+  `aleph_{omega+1}` regime (horn II). Discharge Cor 139c's residual obligation:
+  verify `h_1(A)` (not merely `b >= aleph_2`) holds in `MA_{aleph_1} + 2^{aleph_0}
+  = aleph_2` at the required additivity strength.
+  (b) FRONTIER prong (iii) [carried from `[New (Pass 138)]` (c)]: decide whether the
+  `cd`-graded tower `{A^{(a),k}}` admits a diagonal `cd = omega` object (a coherence
+  datum of infinite cohomological dimension) and whether its `varprojlim^*` spectrum
+  is the union of finite-level phantoms or a genuinely new transfinite obstruction --
+  the `nFG2(omega)` limit of the strict `nFG2(k)` tower located by Pass 139.
+  (c) [carried from `[New (Pass 138)]` (d)] Locate the "certified-linearity bit"
+  `T |- Lin(-<)` inside `ConLat_T`: is the single Boolean that PL detects
+  (Thm 138c(b)) the shadow of a consistency-strength jump (the
+  `I-Sigma_{k-1}`/`I-Sigma_k` boundary of Thm 137d), and does the Rosser
+  weak-consistency principle `WC` correspond to a named point of the `Con^{orb}_n`
+  tower (Pass 69)?
+- **[Resolved (Pass 138), (a); (b),(c) carried to `[New (Pass 138)]`]** _(was
+  [New (Pass 137)])_ **The `I-Sigma_n`-graded Rosser tower, and the two surviving 2-cd
+  frontiers.** **(a) RESOLVED (Pass 138).** The explicit Guaspari--Solovay Rosser
+  `D2`-countermodel: with the disjunctive consequent `B := A v D` and `A,D` GS
+  witness-comparison fixed points over `graph(-<)`, `T |- A -> B`, so
+  `T |- Box_R^{-<}(A->B)` by Rosser-`D1` (that conjunct is free); the content is
+  `T |- !Con_T -> (Box_R^{-<}A ^ !Box_R^{-<}B)` via the non-monotonicity of `Box_R`
+  at `A |-> A v D` (the Rosser opponent shifts `neg A -> neg A ^ neg D`, whose least
+  `-<`-proof can precede that of `A v D`), whence
+  `T |/- (Box_R(A->B) ^ Box_R A) -> Box_R B` and **every** `M |= T + !Con_T` is a
+  countermodel (**Thm 138a**); Rosser consistency `T |- !Box_R_|_` survives.
+  **Lemma 138b (`N`-adequacy):** for consistent `T`, `N |= Box_R^{-<}C <=> T |- C`
+  INDEPENDENT of `-<` (standard witness = genuine proof; least proof vacuously
+  Rosser), so the `D2` conjunction is **false in `N`** for all standard `C` -- the
+  countermodel is necessarily NONSTANDARD (a model of `!Con_T`), and Thm 137c's
+  "`!D2` in `N`" is the metatheoretic `T`-underivability, EQUIVALENT by completeness
+  to the `!Con_T` model. **Thm 138c (PL sees only the bit `T |- Lin`):** over a base
+  proving `Lin(-<)` (e.g. `PA`), `PL_T(Box_R^{-<})` is the single Guaspari--Solovay
+  Rosser logic for every order-type-`omega` tag order, INVARIANT under the
+  `I-Sigma_n` tag-growth rank of Thm 137d; the separating modal principle is Rosser
+  weak-consistency `WC(X) := !(Box_R X ^ Box_R neg X)`, which is in `PL_T` iff
+  `T |- Lin(-<)` -- valid in every consistent LINEAR world (the `-<`-least element of
+  `prf(X) u prf(neg X)` lies on one side only), false under a partial order (two
+  incomparable minimal proofs). So the Thm-137d grading collapses, for `PL`, to one
+  Boolean; the conjecture "order type only" is CONFIRMED above the linearity
+  threshold and SHARPENED below it (`PL` sees the bit, not the finer rank).
+  **Pathology 138d:** `WC` separates the p.r. order from the Ackermann order `-<_A`
+  (137e) over `I-Sigma_1` (where `Lin(-<_A)` is unprovable) but NOT over `PA`.
+  Machine-verified `artifacts/reports/pass138-gs-d2-countermodel-ordertype-invariance-check.json`
+  (A/B/C/D, overall PASS) via `code/scripts/check-pass138.py`. **(b),(c) CARRIED**
+  verbatim to `[New (Pass 138)]`. Original Pass-137 statement:
+  (a) DISCHARGE the Thm-137c(2) carried obligation: write the explicit Guaspari-Solovay
+  Rosser `D2`-countermodel over `T[graph(-<)] + Lin(-<)` -- a concrete arithmetic instance
+  `Box_R^{-<}(A->B) ^ Box_R^{-<}A ^ !Box_R^{-<}B` -- and DECIDE the question raised by
+  Thm 137d: does the provability logic `PL(Box_R^{-<_t})` depend on the tag GROWTH RANK
+  (the `I-Sigma_n` certification level) or only on the ORDER TYPE of `-<_t`? *Conjecture:*
+  order type only -- all tag orders of type `omega` give the same Guaspari-Solovay `R`, so
+  the `I-Sigma_n`-grading (Thm 137d) is a purely metatheoretic filtration invisible to
+  `PL`; test against the Ackermann order `-<_A` (Pathology 137e). If instead `PL` DOES see
+  the rank, exhibit a modal formula separating two order-type-`omega` tag orders of
+  different `I-Sigma_n` strength.
+  (b) FRONTIER prong (ii) [carried from `[New (Pass 136)]` (ii)]: attempt the `b = aleph_1`
+  simultaneous-vanishing forcing (BLH21-style) deciding
+  `Con((forall n) h_n(A) ^ varprojlim^2 A^{(a),2} != 0)`, using Thm 136b (`cd = 2`
+  absolute) to certify the target is a genuine level-2 obstruction; either exhibit the
+  model (strict gap `A_kappa =/=> (forall n)h_n`) or reduce it to a named higher
+  additivity-of-ideal invariant.
+  (c) FRONTIER prong (iii) [carried]: decide whether the `cd`-graded tower `{A^{(a),k}}`
+  admits a diagonal `cd = omega` object (a coherence datum of infinite cohomological
+  dimension) and whether its `varprojlim^*` spectrum is the union of the finite-level
+  phantoms or a genuinely new transfinite obstruction.
+- **[Resolved (Pass 137), (i) LIMITATIVE + pivot; (ii)/(iii) carried to `[New (Pass 137)]`]**
+  _(was [New (Pass 136)])_ **Discharging Prop 136d and opening the 2-cd forcing frontier.**
+  **(i) RESOLVED (Pass 137) -- disjunct (b) is VACUOUS; pivot to disjunct (a), graded.**
+  **Thm 137a (I-Sigma_1 linearity forces primitive recursion):** if `phi(x,y)` is `Sigma_1`
+  and `I-Sigma_1` proves `phi` a strict linear order (irreflexivity, transitivity,
+  asymmetry, trichotomy), then the comparison `{(x,y):phi(x,y)}` is PRIMITIVE RECURSIVE --
+  provable trichotomy+asymmetry give `I-Sigma_1 |- !phi(x,y) <-> (x=y v phi(y,x))` (RHS
+  `Sigma_1`), so `phi` is provably `Delta_1`, `chi_phi` is `I-Sigma_1`-provably-total
+  recursive, hence p.r. by Parsons-Mints-Takeuti. **Cor 137b:** there is NO `Sigma_1`,
+  non-p.r. strict linear order that is `I-Sigma_1`-provably linear; the Prop-136d obligation
+  "verify in `I-Sigma_1` that the non-p.r. tag order `-<` is linear" is UNSATISFIABLE, and
+  linearity of a genuinely non-p.r. tag order is a true `Pi_2` sentence of `N` that
+  `I-Sigma_1` cannot prove. **Thm 137c (order-robustness):** for ANY linear `-<` with a
+  `-<`-least element, `!D2 ^ !Box_R^{-<}_|_` hold in `N` (the Guaspari-Solovay Rosser
+  mechanism uses only linearity + least element + the Rosser fixed point, never
+  primitive-recursiveness of `-<`); p.r.-ness controls only the `I-Sigma_n` LEVEL that
+  certifies them. **Thm 137d (I-Sigma_n-graded Rosser tower):** if the tag map is provably
+  total exactly in `I-Sigma_k \ I-Sigma_{k-1}` then `I-Sigma_k |- (Lin(-<) -> !D2 ^ Con_R)`
+  for `Box_R^{-<}` while `I-Sigma_{k-1}` does not -- a strictly increasing certification
+  hierarchy, all levels sharing the standard-model profile `D1 ^ !D2 ^ !Box_R_|_`.
+  **Pathology 137e (Ackermann-scrambled order):** `-<_A` (`t(n) = <A(n), n>` lex, `A`
+  Ackermann) is `I-Sigma_2`-provably linear but NOT `I-Sigma_1`-provably linear (`Lin(-<_A)`
+  entails `A` total), comparison total-recursive but non-p.r., pinning the
+  logic-vs-realizability gap to exactly one `I-Sigma_n` level. So the `m_enc = O(1)`/non-p.r.
+  `-<` of Prop 136d is genuine, but its box-level payoff is metatheoretic (finitely
+  uncertified, standard-model true) -- a "finitely uncertified, standardly Rosser" echo of
+  Pass 55. *Carried obligations (-> `[New (Pass 137)]`):* the explicit GS `D2`-countermodel
+  over `T[graph(-<)]`, and the `PL`-rank-vs-order-type question. **(ii)/(iii) CARRIED**
+  verbatim to `[New (Pass 137)]` (b),(c). Machine `code/scripts/check-pass137.py` ->
+  `artifacts/reports/pass137-isigma1-linearity-pr-shadow-orderrobust-d2-check.json`
+  (strict-linear scrambled order on `[0,48)`; composition-non-monotone; `Box_R`-`D2`
+  order-sensitive; super-cubic tag growth; overall PASS). Original Pass-136 statement:
+  (i) Verify in `I-Sigma_1` that the Prop-136d tag-order `-<` is a linear order and that the
+  Rosser box `Box_R^{-<}` preserves `¬D2 ^ ¬Box_R⊥` (confirm the tag map does not restore
+  `D2` by respecting proof-concatenation) — thereby closing disjunct (b) of the Pass-134
+  Skeptic residue at the BOX level; OR, if it fails, pivot to disjunct (a) and give the
+  `I-Sigma_1`-over-`graph(-<)` cofinality proof upgrading Cor 134b to the full `Sigma_1`
+  class.
+  (ii) Begin the frontier: attempt the `b = aleph_1` simultaneous-vanishing forcing
+  (BLH21-style) deciding `Con((forall n) h_n(A) ^ varprojlim^2 A^{(a),2} != 0)`, using
+  Thm 136b (`cd = 2` absolute) to certify the target is a genuine level-2 obstruction rather
+  than a re-indexed level-1; either exhibit the model (strict gap `A_kappa =/=> (forall n)h_n`)
+  or reduce it to a named higher additivity-of-ideal invariant.
+  (iii) Decide whether the `cd`-graded tower `{A^{(a),k}}` admits a diagonal `cd = omega`
+  object (a coherence datum of infinite cohomological dimension) and whether its
+  `varprojlim^*` spectrum is the union of the finite-level phantoms or a genuinely new
+  transfinite obstruction.
+  (i) Decide the residual additivity consistency
+  `Con((forall n)h_n(A) ^ varprojlim^2 A^{(a),2} != 0)` -- does an `omega_1`-cofinal 2-coherent
+  a-primary system keep `varprojlim^2 != 0` in a model where the distinguished twin tower `A`
+  trivializes at every level (2-cd BBMT additivity; test under `b = aleph_1` against a
+  simultaneous-vanishing forcing à la Bergfalk-Lambie-Hanson 2021), thereby DECIDING
+  `A_kappa <=> (forall n)h_n` or exhibiting the first strict gap.
+  (ii) Discharge the Thm-135a finite `cd`-proxy to a FULL proof that coherence cohomological
+  dimension `cd(A^{(a),k)}) = k` for the a-primary `k`-coherent MP systems (a strict `cd`-graded
+  tower, no dimension collapse), and decide whether `cd` and the `cf`-rank grading of Thm 134d
+  coincide or are independent invariants.
+  (iii) Settle the Pass-134 Skeptic residue (i): supply the `I-Sigma_1`-over-`graph(-<)`
+  cofinality proof for the exotic non-p.r. ordering (upgrading Cor 134b to the full `Sigma_1`
+  class), or construct the pathological `Sigma_1` ordering with `m_enc = O(1)` reopening the
+  logic-vs-realizability gap.
+- **[Resolved (Pass 135), (ii) primary; (iii) advanced; (i) carried]** _(was [New (Pass 134)])_
+  **The exotic-ordering `m_enc` residue, the explicit `A^{(a),2}`
+  level-2 separator, and the `cf`-indexed rank-spectrum tower.**
+  **(ii) RESOLVED as a structural NON-TRANSFER + a CORRECTION.** **Thm 135a
+  (cohomological-dimension non-transfer):** the retract-transfer that trivialized `n=1`
+  (Thm 133c/134e -- every 1-coherent `B` is a retract of the twin tower's 1-skeleton, so
+  `h_1(A) => varprojlim^1 B = 0`) has NO analogue at `n=2`, for a reason PRIOR to any set theory:
+  the distinguished twin tower `A` is a 1-dimensional coherence datum (chain/tree index,
+  `cd(A) <= 1`), so `varprojlim^{>=2} A = 0` IDENTICALLY and `h_2(A)` is VACUOUS, transmitting
+  nothing to a 2-cd system; since `cd(A^{(a),2}) = 2 > 1 = cd(A)`, no retraction of the
+  2-coherent obstruction onto the tower can exist. **Correction 135b:** the Pass-134 heuristic
+  modelling `A^{(a),2}` as "two 2-simplices sharing a vertex" is WRONG -- that wedge is
+  CONTRACTIBLE (all reduced `Betti_{F_3} = 0`, machine-checked) and hosts no 2-class; the honest
+  minimal 2-coherence obstruction is 2-SPHERICAL (`H_2(S^2; F_a) = F_a`), and the no-retraction
+  `Delta^{n+1} -> S^n` is degree-UNIFORM -- the `n=1`-vs-`n=2` asymmetry is carried ENTIRELY by
+  `cd(A)`, not by any `n`-dependence of the retraction lemma. **Thm 135c (sharpened, not
+  resolved):** strictness `(forall n)h_n(A) =/=> A_kappa` reduces to the pure consistency
+  `Con((forall n)h_n(A) ^ varprojlim^2 A^{(a),2} != 0)`, a concrete 2-cd instance of the OPEN
+  BBMT additivity (Bergfalk-Lambie-Hanson 2021; Bannister-Bergfalk-Moore-Todorcevic),
+  NON-VACUOUS since `varprojlim^2 A^{(a),2} != 0` is CH-consistent.
+  **(iii) ADVANCED -- Thm 135d (de-arithmetization ladder):** the `cf`-indexed spectrum
+  `aleph_0 < aleph_1 < aleph_2 < ...` (Thm 134d) is `cd`-graded; its `cd=0`/`n=0`/`aleph_0`
+  FLOOR is EXACTLY the Pass-55 `G2 ^ ¬FG2` solenoid phantom `hatZ_a/Z` (a-primary, Prufer-rigid
+  `kappa_a = 1`, Pass 130/131), the ZFC-ABSOLUTE arithmetic bottom of the same tower whose
+  `n=1` rung is Suslin-sensitive (MP88/DSV89). **(i) CARRIED:** the exotic `Sigma_1`-but-not-p.r.
+  witness-ordering residue is not finitely decidable (Part E dichotomy). Machine-verified
+  `artifacts/reports/pass135-cohdim-nontransfer-a2coherent-check.json` (exact `F_3` simplicial
+  homology; overall PASS). Successor `[New (Pass 135)]` opened above. Original Pass-134 statement:
+  (i) Decide the Thm-134a exotic residue: can a `Sigma_1`-but-not-primitive-recursive witness
+  ordering `-<` hide `m_enc`? Either exhibit a pathological box with non-p.r. `-<` and
+  `m_enc = O(1)` keeping `¬D2 ^ ¬Box_R⊥` (refuting the universal for all `Sigma_1` boxes and
+  reopening the logic-vs-realizability gap), or give a `Sigma_1`-induction proof that the
+  Thm-134a plant is cofinal for EVERY `Sigma_1` ordering (upgrading Cor 134b to the full
+  `Sigma_1` class).
+  (ii) Construct `A^{(a),2}` explicitly as a 2-coherent a-primary system and compute
+  `varprojlim^2 A^{(a),2}` under `b = aleph_1` vs `MA_{aleph_1}` (or the 2-dimensional BBMT
+  `Delta`-system principle): is it a genuine Thm-134e separator
+  (`Con((forall n)h_n(A) ^ varprojlim^2 A^{(a),2} != 0)`) or does level-2 triviality also
+  transfer by a 2-skeleton retract, pushing BBMT one dimension?
+  (iii) Map the full `cf`-indexed rank spectrum of Thm 134d: for each `n` pin the forcing
+  axiom separating rank `aleph_n` from `aleph_{n+1}`, decide whether the spectrum is a strict
+  ZFC tower or can collapse (adjacent ranks forced equal), and tie the a-primary torsion tower
+  back to the Pass-55 `G2 ^ ¬FG2` solenoid phantom (single-prime `Z_p/Z` = the `n=0`,
+  arithmetic `aleph_0` floor of this very tower).
+- **[Resolved (Pass 134), (i)-(iii) with two corrections and one carried obligation]** _(was
+  [New (Pass 133)])_ **The `m_enc`-unboundedness obligation, the a-primary intermediate
+  strong-homology object, and the two-system witness for `A_kappa`.**
+  **(i) RESOLVED (with a scope correction).** **Thm 134a:** for every
+  PRIMITIVE-RECURSIVE-ordered `Sigma_1` witness-comparison Rosser box with `¬D2 ^ ¬Box_R⊥`,
+  `m_enc` is UNBOUNDED -- no p.r. uniform nested-witness bound `B` certifies witness-bounded
+  full `D3` -- by the ordering-INTERNALIZATION diagonal (`phi*_k` plants a `Prf`-code of
+  `¬Box_R phi*_k` in the gap `(k, B(k)]` defined FROM the Godel numbers of both `-<` and `B`;
+  a p.r. re-ordering `pi` only relabels a gap of the same asymptotic width). **Cor 134b:**
+  Conj 132d CLOSED for the standard class, pinning `PL(Box_R^A) = R+4` arithmetically
+  INCOMPLETE at full `D3`. *Correction:* the open problem's "EVERY `Sigma_1` box" overstates;
+  the honest universal is "every p.r.-ordered `Sigma_1` box", the exotic non-p.r. ordering
+  carried as `[New (Pass 134)]` (i).
+  **(ii) RESOLVED (with a CH correction and a uniqueness REFUTATION).** **Thm 134c:** the
+  a-primary MP coherent system `A^{(a)}` on `(^omega omega, <=^*)` has `varprojlim^1 != 0`
+  under `b = aleph_1` (Mardesic-Prasolov 1988), `= 0` under `MA_{aleph_1}`
+  (Dow-Simon-Vaughan 1989), rank = least non-trivializable coherent family `= aleph_1` at
+  `b = aleph_1`; the strictly-INTERMEDIATE witness is NOT CH (`aleph_1 = c` there) but the
+  COHEN model `b = aleph_1 < c = aleph_2`. **Thm 134d:** `aleph_1` is NOT the unique
+  non-arithmetic layer -- `omega_n`-cofinal systems realize a strictly increasing `cf`-indexed
+  spectrum `aleph_0 < aleph_1 < aleph_2 < cdots < 2^aleph0`; `aleph_1` is the FIRST.
+  **(iii) REFRAMED.** **Thm 134e:** `A^{(a)}` at level 1 does NOT separate (Thm-133c `n=1`
+  retract transfer kills 1-dim `lim^1`); the honest separator is the 2-coherent `A^{(a),2}`,
+  reducing the `A_kappa <=> (forall n)h_n` converse to
+  `Con((forall n)h_n(A) ^ varprojlim^2 A^{(a),2} != 0)` -- an EXPLICIT instance of the still-OPEN
+  BBMT additivity question (carried as `[New (Pass 134)]` (ii)). Machine `check-pass134.py`
+  overall PASS.
+- **[Superseded (Pass 134)]** _(was [New (Pass 133)] original phrasing)_ **The `m_enc`-unboundedness obligation, the a-primary intermediate
+  strong-homology object, and the two-system witness for `A_kappa`.**
+  (i) Discharge the sole carried obligation of Thm 133f: prove (or refute) that EVERY `Sigma_1`
+  witness-comparison Rosser box has UNBOUNDED coding overhead `m_enc` -- equivalently, that no
+  `Sigma_1` Rosser box admits a primitive-recursive uniform nested-witness bound `B`
+  certifying witness-bounded full `D3`. A proof upgrades Thm 133f from the least-witness box to
+  every `Sigma_1` Rosser box, completing Conj 132d and pinning `PL(Box_R^A) = R+4` as
+  arithmetically INCOMPLETE at full `D3`; a pathological box with `m_enc = O(1)` keeping
+  `¬D2 ^ ¬Box_R⊥` refutes it and collapses the LOGIC-vs-realizability gap.
+  (ii) Construct the a-primary Mardesic-Prasolov coherent system `A^{(a)}` (on `[omega_1]^{<omega}`
+  / `omega^omega`, `Z/a^n`-coefficients) explicitly and compute the exact `a`-primary rank of
+  `varprojlim^1 A^{(a)}` under `b = aleph_1` vs `MA_{aleph_1}`, deciding whether the CH-realized
+  `kappa_q = aleph_1` INTERMEDIATE torsion (Thm 133b) is the UNIQUE non-arithmetic layer strictly
+  between the `Sigma_1` `oplus`-sum (`kappa_q <= aleph_0`, Thm 132a) and the ZFC-absolute
+  `prod`-tower continuum (`kappa_q = 2^aleph0`, Thm 133a).
+  (iii) Decide the Thm-133c placement by exhibiting the two-system separation: build a second
+  coherent family `B` non-retractable from the distinguished twin tower at level `n>=2` and
+  decide `Con((forall n)h_n(A) ^ varprojlim^1 B != 0)`; test whether `A^{(a)}` of (ii) is itself
+  that witness (unifying prongs A/B/C at their successor).
+- **[Resolved (Pass 133), A/B/C with two corrections and a reframing; one arithmetic obligation
+  carried]** _(was [New (Pass 132)])_ **The analytic location of the continuum phantom, the
+  `A_kappa <=> (forall n)h_n` placement, and the explicit `m_enc` `phi`-family.**
+  **(A) CORRECTED.** **Thm 133a:** for ANY omega-indexed tower, `varprojlim^1` commutes with
+  arbitrary PRODUCTS (product is an exact functor), so
+  `varprojlim^1(prod_{i<omega}(Z, x a)) = (hatZ_a/Z)^omega` is ZFC-ABSOLUTE and nonzero
+  (`q`-socle `F_q^omega`, dim `2^aleph0` by Erdos-Kaplansky) -- the continuum phantom carries NO
+  forcing-axiom sensitivity, REFUTING the Pass-132 Next-step conflation with the strong-homology
+  `A_{aleph_1}` limit. **Thm 133b:** Suslin-sensitivity lives in COFINALITY, not strand count:
+  `varprojlim^1` fails to commute with uncountable direct SUMS only for an omega_1-cofinal
+  COHERENT (Mardesic-Prasolov) index; the INTERMEDIATE `kappa_q = aleph_1` (CH-realized,
+  `MA_{aleph_1}`-killed) object is the a-primary MP coherent limit, second-order over omega_1,
+  NOT a `Sigma_1` graded predicate nor a strand sum. **(B) REFRAMED.** **Thm 133c:** `A_kappa
+  => (forall n)h_n` trivial; the converse <=> the two-system separation
+  `Con((forall n)h_n(A) ^ (exists coherent B) varprojlim^1 B != 0)` -- at `n=1` the twin tower is a
+  retract of the universal 1-skeleton (transfers), at `n>=2` a non-retractable family blocks it;
+  `A_kappa` a priori strictly stronger, exact equivalence the OPEN BBMT additivity question. **(C)
+  DISAMBIGUATED + PINNED.** the schema-`4` reading of full `D3` is already Arai (Pass 127a), so
+  Conj 132d is non-vacuous only under the WITNESS-BOUNDED reading; **Constr 133e / Thm 133f:** the
+  `m_enc`-gap family flips `Box_R Box_R phi_k` cofinally for the least-witness box (dyadic/quadratic
+  overhead; O(1) Arai repairs), so uniform witness-bounded full `D3` FAILS for `Box_R^{lw}`,
+  reducing Conj 132d to the carried obligation "every `Sigma_1` Rosser box has `m_enc` unbounded"
+  (opened as `[New (Pass 133)]` (i)). Machine `check-pass133.py` overall PASS.
+- **[Superseded (Pass 133)]** _(was [New (Pass 132)] original phrasing)_ **The analytic location of the continuum phantom, the
+  `A_kappa <=> (forall n)h_n` placement, and the explicit `m_enc` `phi`-family.**
+  (i) PIN the analytic location of the `prod`-completion continuum phantom: is the
+  nonvanishing of `varprojlim^1(prod_{i<omega}(Z, x a))` (equivalently the `kappa_q =
+  2^aleph0` torsion of Cor 132a') exactly the strong-homology / `A_{aleph_1}` derived-limit
+  statement (Suslin-sensitive, Pass 60d/61c), and does the `bigoplus`->`prod` boundary admit
+  an INTERMEDIATE `aleph_1`-strand object with `kappa_q = aleph_1` under CH that is killed by
+  `MA_{aleph_1}` -- a torsion analogue of the Pass-60d/61c independence? (ii) Decide the OPEN
+  placement `A_kappa <=> (forall n)h_n` (or `A_kappa` strictly stronger) by testing whether
+  `A_kappa` decides a `lim^n` of a coherent system OTHER than the distinguished twin tower
+  that `(forall n)h_n` leaves open. (iii) Discharge Conj 132d by EXHIBITING the cofinal
+  `m_enc`-inflating `phi`-family: explicit `phi_k` whose least-Rosser-witness of `Box_R phi_k`
+  is provably below that of `Box_R Box_R phi_k` failing cofinally, thereby proving or refuting
+  that uniform full `D3` is arithmetically incompatible with `¬D2 + ¬Box_R⊥`, and settling
+  whether `PL(Box_R^A) = R+4` is arithmetically complete for Rosser boxes.
+- **[Resolved (Pass 132), (i)-(iii); obligations o1'/o2' argued, positive forcing cited,
+  Conj 132d carried]** _(was [New (Pass 131)])_ **Cross-layer independence lemmas, the
+  multi-strand continuum phantom, the positive honesty forcing, and the arithmetic full-`D3`
+  Rosser predicate.** **Thm 132a:** the `d`-strand graded Rosser predicate realizes
+  `Phi = bigoplus_{i<d} hatZ_N/Z`, `kappa_q = d`; **arithmetic ceiling** -- every Sigma_1
+  predicate has a recursive band family, so `kappa_q <= aleph_0` (natural limit = direct SUM).
+  **Cor 132a':** continuum torsion `kappa_q = 2^aleph0` is realized ONLY by the direct PRODUCT
+  completion (socle `F_q^omega`, dim `2^aleph0` by Erdos-Kaplansky), = the `aleph_1`-cofinal
+  twin tower of Thm 131c; continuum-rank Prufer torsion has NO arithmetic-hierarchy
+  representative, first appearing at the `bigoplus`->`prod` (arithmetic->analytic,
+  Suslin-sensitive) boundary. o1'/o2' discharged by uniform band-relativized GS (recursion
+  theorem with parameter `(i,k)`). **Thm 132b:** for every `n` a large-cardinal-free ZFC model
+  of `h_1 ^...^ h_{n-1} ^ ¬h_n` at `2^aleph0 = aleph_n` (truncated BHLH `A_{n-1}` forcing +
+  the Thm-131c ceiling); strict chain `A_kappa => (forall n)h_n => 2^aleph0 >= aleph_{omega+1}`,
+  `A_kappa` at NEITHER endpoint, equivalence with `(forall n)h_n` OPEN. **Thm 132c:** over
+  consistent `T`, `D1 ^ full-D3 ^ (T|-¬Box_R⊥) => ¬D2` is FORCED (5-line Loeb collapse).
+  **Conj 132d:** no Sigma_1 witness-comparison Rosser box has uniform full `D3` (the `m_enc`
+  overhead), so `PL(Box_R^A) = R+4` is arithmetically INCOMPLETE for Rosser boxes at full
+  `D3` (modal `4 ^ ¬K ^ ¬Box⊥` consistent yet unrealized). Machine
+  `check-pass132.py` PASS. Successor `[New (Pass 132)]` opened above.
+- **[Historical, superseded by the block above]** **Cross-layer independence lemmas, the
+  multi-strand continuum phantom, the positive honesty forcing, and the arithmetic full-`D3`
+  Rosser predicate.**
+  (i) Close Lemma-131b's o1'/o2' with an explicit uniform-in-`k` band-relativized
+  Guaspari-Solovay cross-layer independence proof, and CONSTRUCT a genuine `d`-strand (then
+  `omega`-strand) graded Rosser predicate realizing `kappa_q = d` (then `2^aleph0`), pinning
+  where in the arithmetic hierarchy continuum-rank Prufer torsion first appears. (ii) Supply
+  the POSITIVE half of the honesty ceiling -- a ZFC-only model of
+  `h_1 ^ ... ^ h_{n-1} ^ ¬h_n` at `2^aleph0 = aleph_n` for general `n` -- and decide whether
+  the BBMT `A_kappa` principle is STRICTLY between `2^aleph0 >= aleph_{omega+1}` and full
+  `(forall n)h_n` or coincides with an endpoint. (iii) Attack the Thm-131e arithmetic
+  obligation: does a `Sigma_1` Rosser predicate over `T \supseteq ISigma_1` satisfy
+  `D1 ^ ¬D2 ^ (full D3)` with `T |- ¬Box_R bot` (a proper strengthening of Arai 1990), or is
+  uniform full `D3` arithmetically incompatible with `¬D2 + ¬Box_R bot`, isolating the exact
+  derivability content separating `D3^hom` from full `D3` for a Rosser box.
+- **[Superseded (Pass 131)]** _(was [New (Pass 130)])_ **Prufer ranks, graded-Rosser obligations, the ZFC-only honesty
+  threshold, and bimodal `R+4` completeness.** (i) Discharge Constr-130c obligations o1
+  (`D1^¬D2` uniform across graded layers) and o2 (the `ConLat`-image tower is honestly
+  `(Z, x a_k)`, a witness-counting lemma), and pin the exact Prufer ranks `kappa_q` of
+  `Tor(hatZ_N/Z)` -- is `kappa_q = 1` for every `q notin Supp_inf` (rank-one Prufer, per the
+  `Z_2/Z` and primorial evidence), or can depth-varying overhead inflate `kappa_q` to the
+  continuum? (ii) Pin the exact cardinal-characteristic threshold of `(forall n)h_n` between
+  `2^aleph0 >= aleph_2` and the Bannister-Bergfalk-Moore-Todorcevic descriptive / `A_kappa`
+  bound, and decide whether the `h_1 ^ ¬h_2` depth split (Thm 129b) survives in the ZFC-only
+  (no large cardinal) models. (iii) Prove bimodal completeness `PL(Box_R^A) = R + 4` in the
+  `(Box, Box_{-<})` language with `Box_{-<}` a `GL`-modality (canonical
+  neighborhood-`x`-Kripke bimodel; verify the Guaspari-Solovay/Kurahashi Rosser logic `R` is
+  exactly the `-<`-fragment), and settle whether full `D3` (not merely `D3^hom`) can be added
+  without collapsing `¬D2`.
+- **[Open, carried from Pass 117]** **`R_{2k}` general fixed-point-freeness.**
+  Residue (i) of the Pass-117 problem, untouched by Pass 118: prove every
+  `boxt`-`2k`-cycle plateau `R_{2k}` with `boxt[F]=F` (front-internal) is
+  `boxt_hat`-fixed-point-free in its MacNeille completion (verified `k=1` and the
+  split `1+1`).  Note Pass 118 shows this is specifically about `boxt[F]=F`, not
+  about even orbit length per se.
 - **[Closed by Pass 57]** _(was [New (Pass 56)])_ Two residues of Pass 56. (i) **Carrier-free cancellativity lemma:**
   upgrade Thm 56a.2 from "the *natural additive* extension of $\otimes$ fails to residuate"
   to "**no** complete residuated tensor with unit $e=a^\ast$ exists on $\overline{L}^{(m)}$."

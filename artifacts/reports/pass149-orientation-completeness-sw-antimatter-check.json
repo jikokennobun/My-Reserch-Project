@@ -1,0 +1,36 @@
+{
+  "pass": 149,
+  "title": "Orientation-completeness dichotomy (a) + monoidal Coh / Spanier-Whitehead antimatter (b), unified",
+  "A_SW_antipode_sign_involution": {
+    "M=3": {"fixed_locus": [0], "num_fixed": 1, "num_free_pairs": 3, "redH0_sgn": "Z/2"},
+    "M=5": {"fixed_locus": [0], "num_fixed": 1, "num_free_pairs": 5, "redH0_sgn": "Z/2"},
+    "M=8": {"fixed_locus": [0], "num_fixed": 1, "num_free_pairs": 8, "redH0_sgn": "Z/2"}
+  },
+  "A_ok": true,
+  "B_stalk_oriented_vs_global_delta": {
+    "races=1": {"stalk_orientable": true, "global_delta_fixed_total_order": false},
+    "races=2": {"stalk_orientable": true, "global_delta_fixed_total_order": false},
+    "races=3": {"stalk_orientable": true, "global_delta_fixed_total_order": false}
+  },
+  "B_ok": true,
+  "C_GLPplus_nongroup_K0_Z_phantoms": {
+    "monoid_inverses_exist": {"<0>": true, "<1>": false, "<2>": false, "<3>": false, "<4>": false},
+    "only_zero_invertible": true,
+    "group_completion": "Z",
+    "embedding_N_to_Z_injective": true,
+    "phantom_negative_classes": [-4, -3, -2, -1]
+  },
+  "C_ok": true,
+  "D_unification_cocycle": {
+    "C_4": {"delta_flip_monodromy-1_comps": 1, "redH0": "0", "free_sign_monodromy+1_comps": 2, "redH0_free": "Z/2"},
+    "C_6": {"delta_flip_monodromy-1_comps": 1, "redH0": "0", "free_sign_monodromy+1_comps": 2, "redH0_free": "Z/2"}
+  },
+  "D_ok": true,
+  "overall": "PASS",
+  "notes": [
+    "A: SW antipode/delta-flip = sign involution k|->-k on K_0=Z; unique fixed pt 0 (unit S^0=T-floor), free off 0 => equivariant sign local system carries Z/2. This is the KF gap cocycle.",
+    "B: every realized race is stalk-orientable (2-elt order) yet NO delta-fixed total order exists (finite shadow of a Sigma_1/recursively-inseparable proof order: pointwise oriented, schematically unorientable). => (Z,Z/2) is Sigma_1-SCHEMATIC but not Sigma_1-POINTWISE; Thm 148b's strict non-Sigma_1-pointwise claim is PRESERVED and sharpened.",
+    "C: GLP^+=(N,+) has no inverses for n>0; only <0> invertible; K_0 = Z; negatives -<n> are reflection PHANTOMS (no actual reflection principle) -- GLP does NOT extend to a graded group.",
+    "D: delta-flip monodromy -1 (connected, oriented floor redH0=0) and the free sign action off the unit (split, redH0=Z/2) are the two faces of ONE order-2 involution: SW antipode = delta flip; fixed locus {0}=unit sphere=T-floor. The two prongs are unified under Spanier-Whitehead duality."
+  ]
+}

@@ -125,6 +125,51 @@ function Escape-MarkdownCell {
     return (($Value -replace "\r?\n", " ") -replace "\|", "\|")
 }
 
+function Get-NonEmptyLineCount {
+    param([string]$Path)
+
+    if (-not (Test-Path -LiteralPath $Path)) {
+        return 0
+    }
+
+    return (Get-Content -LiteralPath $Path -Encoding UTF8 | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Measure-Object).Count
+}
+
+function Add-DailyArtifactHealth {
+    param(
+        [string]$CheckDate,
+        [switch]$RequireGeneratedArtifacts
+    )
+
+    $dailyPath = Join-Path $RepositoryRoot "records\daily\$CheckDate.md"
+    $packetPath = Join-Path $RepositoryRoot "records\inbox\daily-packets\$CheckDate.md"
+    $ledgerPath = Join-Path $RepositoryRoot "records\logs\automation-runs\$CheckDate.jsonl"
+    $recentDiscordPath = Join-Path $RepositoryRoot "records\inbox\discord\recent-$CheckDate-$CheckDate.jsonl"
+    $obsidianDailyPath = Join-Path (Join-Path $ObsidianVaultRoot $ObsidianDailySubdir) "$CheckDate.md"
+
+    $ledgerRuns = Get-NonEmptyLineCount -Path $ledgerPath
+    $issues = New-Object 'System.Collections.Generic.List[string]'
+
+    if ($RequireGeneratedArtifacts) {
+        if (-not (Test-Path -LiteralPath $dailyPath)) { $issues.Add("missing records daily report") | Out-Null }
+        if (-not (Test-Path -LiteralPath $packetPath)) { $issues.Add("missing daily source packet") | Out-Null }
+        if ($ledgerRuns -eq 0) { $issues.Add("missing automation run ledger") | Out-Null }
+    }
+
+    if ((Test-Path -LiteralPath $obsidianDailyPath) -and (Test-Path -LiteralPath $recentDiscordPath) -and -not (Test-Path -LiteralPath $dailyPath)) {
+        $issues.Add("Obsidian note and Discord source exist, but generated daily report is missing") | Out-Null
+    }
+
+    if ($ledgerRuns -gt 1) {
+        $issues.Add("duplicate automation run ledger entries: $ledgerRuns") | Out-Null
+    }
+
+    if ($issues.Count -eq 0) {
+        Add-HealthResult -Level "OK" -Category "reports" -Name "daily artifact manifest $CheckDate" -Detail "Expected daily artifacts are consistent."
+    } else {
+        Add-HealthResult -Level "WARN" -Category "reports" -Name "daily artifact manifest $CheckDate" -Detail ($issues.ToArray() -join "; ")
+    }
+}
 Test-PathHealth -Category "paths" -Name "repository root" -Path $RepositoryRoot
 Test-PathHealth -Category "paths" -Name "scripts directory" -Path (Join-Path $RepositoryRoot "code\scripts")
 Test-PathHealth -Category "paths" -Name "records directory" -Path (Join-Path $RepositoryRoot "records")
@@ -336,6 +381,14 @@ if (Test-Path -LiteralPath $weatherPath) {
     Add-HealthResult -Level "WARN" -Category "inbox" -Name "weather JSON" -Detail "Weather is configured, but $weatherPath does not exist yet."
 }
 
+try {
+    $dateValueForArtifactHealth = [datetime]::ParseExact($Date, "yyyy-MM-dd", [Globalization.CultureInfo]::InvariantCulture)
+    $previousDateForArtifactHealth = $dateValueForArtifactHealth.AddDays(-1).ToString("yyyy-MM-dd")
+    Add-DailyArtifactHealth -CheckDate $previousDateForArtifactHealth -RequireGeneratedArtifacts
+    Add-DailyArtifactHealth -CheckDate $Date
+} catch {
+    Add-HealthResult -Level "WARN" -Category "reports" -Name "daily artifact manifest" -Detail "Could not evaluate daily artifact consistency: $($_.Exception.Message)"
+}
 $dailyReportPath = Join-Path $RepositoryRoot "records\daily\$Date.md"
 if (Test-Path -LiteralPath $dailyReportPath) {
     $dailyText = Get-Content -LiteralPath $dailyReportPath -Raw -Encoding UTF8
@@ -465,4 +518,5 @@ if ($WriteReport) {
 if ($FailOnCritical -and $failCount -gt 0) {
     exit 1
 }
+
 

@@ -1,0 +1,30 @@
+﻿{
+    "date":  "2026-07-14",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "韻マン vs ERONE #フリースタイルダンジョン",
+                           "context":  "[watched] 韻マン vs ERONE #フリースタイルダンジョン（東京生まれ大阪育ち） - https://youtu.be/fdxiNQJVjfE?si=v194Zp8zR3Vs-Cad",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "9for.vs.ゆうま.凱旋MC battle東西選抜夏ノ陣2019.シード戦",
+                           "context":  "[watched] 9for.vs.ゆうま.凱旋MC battle東西選抜夏ノ陣2019.シード戦（凱旋MCbattle） - https://youtu.be/nCfL6PkyVPg?si=qvaaZ8vLbK6T9KQd",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "Rabbit vs DOPEMAN決勝戦/U-22 MCBATTLE REVENGE SPECIAL 2020",
+                           "context":  "[watched] Rabbit vs DOPEMAN決勝戦/U-22 MCBATTLE REVENGE SPECIAL 2020（戦極MCBATTLE） - https://youtu.be/f8GxvLnUpfs?si=yCOuEI7fbxDS13yk",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "凱旋MCbattle東西選抜夏ノ陣2019.@渋谷TSUTAYA O-EAST",
+                           "context":  "[watched] 凱旋MCbattle東西選抜夏ノ陣2019.@渋谷TSUTAYA O-EAST（凱旋MCbattle） - https://youtu.be/_uhG6tcJ-XQ?si=Lc8BjaGWshZ9Iw92",
+                           "source":  "watch-log"
+                       }
+                   ]
+}

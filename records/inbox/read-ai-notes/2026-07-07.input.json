@@ -1,0 +1,30 @@
+﻿{
+    "date":  "2026-07-07",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "喫茶ステラと死神の蝶",
+                           "context":  "[watched] 喫茶ステラと死神の蝶 希√#3（ナイトch） - https://youtu.be/jNLWhDnM0fQ?si=VKBsfhZOF7AE_cWH",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "妖怪ウォッチ",
+                           "context":  "[watched] 妖怪ウォッチ 第3話で流れたCM（HMC_Sub） - https://youtu.be/r2n6W9BD1GE?si=muHhvMJ-fX9NdH2P",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "R指定 UMB バース集",
+                           "context":  "[watched] R指定 UMB バース集（莏） - https://youtu.be/MxCeUEmHyDo?si=awWxCnaQmQz_lqWj",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "Scatterd quantales",
+                           "context":  "Research note / Research-memo\\Scatterd quantales.md",
+                           "source":  "obsidian-research-index"
+                       }
+                   ]
+}

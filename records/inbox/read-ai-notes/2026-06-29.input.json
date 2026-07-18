@@ -1,0 +1,24 @@
+﻿{
+    "date":  "2026-06-29",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "反単調写像の不動点",
+                           "context":  "Research note / Research-memo\\反単調写像の不動点.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "圏論的論理_勉強",
+                           "context":  "Logic / Logic \u0026 Logic\\圏論的論理_勉強.md",
+                           "source":  "obsidian-research-index"
+                       },
+                       {
+                           "kind":  "obsidian-note",
+                           "title":  "AALish G2",
+                           "context":  "APS/G2/provability / Research-memo\\AALish G2.md",
+                           "source":  "obsidian-research-index"
+                       }
+                   ]
+}

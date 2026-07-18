@@ -1,0 +1,132 @@
+{
+  "pass": 128,
+  "parts": {
+    "A_pure_box_pin": {
+      "frames_scanned": 530,
+      "serial_transitive_frames": 75,
+      "loeb_fails_on_serial_transitive": 75,
+      "loeb_holds_on_any_serial_transitive": false,
+      "all_serial_transitive_have_reflexive_cycle": true,
+      "verdict": "Loeb vacuously absent from K4D; WO unsatisfiable in serial+transitive frames; no pure-box schema separates R+4 from PL(Box_R^A)",
+      "PASS": true
+    },
+    "B_canonical_phantom_prime": {
+      "codings": {
+        "dyadic_bitstring": {
+          "m": 16,
+          "rad_m": [
+            2
+          ],
+          "phantom": "hatZ_{2}/Z",
+          "non_ML": true
+        },
+        "godel_prime_power_len5": {
+          "m": 4620,
+          "rad_m": [
+            2,
+            3,
+            5,
+            7,
+            11
+          ],
+          "phantom": "hatZ_{235711}/Z",
+          "non_ML": true
+        },
+        "godel_prime_power_len9": {
+          "m": 446185740,
+          "rad_m": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23
+          ],
+          "phantom": "hatZ_{23571113171923}/Z",
+          "non_ML": true
+        }
+      },
+      "r_ary_race": {
+        "2": {
+          "rad": [
+            2
+          ],
+          "phantom_primes": [
+            2
+          ]
+        },
+        "3": {
+          "rad": [
+            3
+          ],
+          "phantom_primes": [
+            3
+          ]
+        },
+        "4": {
+          "rad": [
+            2
+          ],
+          "phantom_primes": [
+            2
+          ]
+        },
+        "6": {
+          "rad": [
+            2,
+            3
+          ],
+          "phantom_primes": [
+            2,
+            3
+          ]
+        },
+        "30": {
+          "rad": [
+            2,
+            3,
+            5
+          ],
+          "phantom_primes": [
+            2,
+            3,
+            5
+          ]
+        }
+      },
+      "radical_invariance": {
+        "same_rad_{2,4,8}": true,
+        "same_rad_{6,12}": true,
+        "distinct_towers_2_vs_4": true
+      },
+      "race_arity_intrinsic": 2,
+      "verdict": "2 in rad(m) ALWAYS (Rosser race, numbering-independent); extra primes iff non-dyadic sequence-coding; dyadic => canonical phantom hatZ_2/Z; Godel prime-power => hatZ/Z (full profinite)",
+      "PASS": true
+    },
+    "C_omega1_honesty_bracket": {
+      "model_table": {
+        "diamond (=> CH)": {
+          "honest": false,
+          "note": "CH => Mardesic-Prasolov lim^1 != 0"
+        },
+        "b = aleph_1": {
+          "honest": false,
+          "note": "b=aleph_1 => lim^1 != 0 (weaker than CH)"
+        },
+        "MA_{aleph_1}": {
+          "honest": true,
+          "note": "Dow-Simon-Vaughan lim^1 = 0"
+        }
+      },
+      "bracket_consistent": true,
+      "equivalent_to_Suslin_tree": false,
+      "equivalent_to_add_M_aleph1": false,
+      "verdict": "honesty bracketed strictly between b>aleph_1 and MA_{aleph_1}; NOT equivalent to Suslin-tree existence nor to add(M)=aleph_1; sharp strength = derived-limit trivialization principle (Bergfalk 2017; Bergfalk-Lambie-Hanson 2021)",
+      "PASS": true
+    }
+  },
+  "overall_PASS": true
+}

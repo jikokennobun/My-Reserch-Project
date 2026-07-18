@@ -1,0 +1,54 @@
+﻿{
+    "date":  "2026-07-12",
+    "purpose":  "#読んだ/見た/知った欄に入れる短いAI補足候補",
+    "candidates":  [
+                       {
+                           "kind":  "watch",
+                           "title":  "ERONE vs 韻マン(決勝戦)/戦極Rhymers High(2019.6.23)",
+                           "context":  "[watched] ERONE vs 韻マン(決勝戦)/戦極Rhymers High(2019.6.23)（戦極MCBATTLE） - https://youtu.be/6lqKrNExaZo?si=U0rzpqyjDOVmtTvb",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "BATTLE手裏剣 vs 晋平太\" UMB2018 THE CHOICE IS YOURS Vol.2 BEST4 第2試合",
+                           "context":  "[watched] \"BATTLE手裏剣 vs 晋平太\" UMB2018 THE CHOICE IS YOURS Vol.2 BEST4 第2試合（UMB channel） - https://youtu.be/FfSeFgzezlA?si=7nwjsp08MKJX-R7q",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "RAGA vs Luvit / 戦極MCBATTLE U-22 MCBATTLE 2021 FINAL(2021.6.13)",
+                           "context":  "[watched] RAGA vs Luvit / 戦極MCBATTLE U-22 MCBATTLE 2021 FINAL(2021.6.13)（戦極MCBATTLE） - https://youtu.be/4XSOjy-NuXQ?si=BHIQlgZMzUGarySp",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "ハイライトアルゼンチン 対 スイス - ワールドカップ 2026",
+                           "context":  "[watched] ハイライトアルゼンチン 対 スイス - ワールドカップ 2026（Extra IMO） - https://youtu.be/NuwupryRXsc?si=Io5eihDgfqVVEUm2",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【FIFAワールドカップ2026】ノルウェー vs イングランド : 準々決勝│ MATCH RECAP【全104試合DAZNライブ配信】",
+                           "context":  "[watched] 【FIFAワールドカップ2026】ノルウェー vs イングランド : 準々決勝│ MATCH RECAP【全104試合DAZNライブ配信】（DAZN Japan） - https://youtu.be/qtVROGuxhw0?si=v1U-DhXLkqc3KKpa",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "サッカー 南アフリカ代表のアダムズ選手（25）死去 今年のW杯で3試合に出場(2026年7月12日)",
+                           "context":  "[watched] サッカー 南アフリカ代表のアダムズ選手（25）死去 今年のW杯で3試合に出場(2026年7月12日)（ANNnewsCH） - https://youtu.be/KkpiVyrwHAY?si=_JD05jNhP5Qqdc5k",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【偉業】バロンドールのヴィニシウス、遂にメッシのキャリアワーストシーズンに並ぶ！！！！",
+                           "context":  "[watched] 【偉業】バロンドールのヴィニシウス、遂にメッシのキャリアワーストシーズンに並ぶ！！！！（2chサッカーの噂話【ネット民の反応】） - https://youtu.be/E0Vbp5SLSAk?si=VhgOGlDfA8jX1DmT",
+                           "source":  "watch-log"
+                       },
+                       {
+                           "kind":  "watch",
+                           "title":  "【数学的帰納法】は演繹法 ペアノの公理 数の概念",
+                           "context":  "[watched] 【数学的帰納法】は演繹法 ペアノの公理 数の概念（MT 数学・数学史） - https://youtu.be/YKFmsw9VJO8?si=RG4WgtDb8uqptXdC",
+                           "source":  "watch-log"
+                       }
+                   ]
+}
