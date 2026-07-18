@@ -10,8 +10,8 @@
 4. 研究周回を開始する。
 
 ```powershell
-python .\code\scripts\research_system.py status
-python .\code\scripts\research_system.py init-cycle --goal RSYS-001 --focus "今回の焦点"
+powershell -ExecutionPolicy Bypass -File .\code\scripts\research.ps1 status
+powershell -ExecutionPolicy Bypass -File .\code\scripts\research.ps1 init-cycle --goal RSYS-001 --focus "今回の焦点"
 ```
 
 5. 周回の成果は二名の独立査読を通し、採択・要修正・棄却・保留のいずれかを明示する。
@@ -38,13 +38,13 @@ Git/GitHub がテキスト・コード・来歴の正本、Obsidian が日常の
 
 ```powershell
 # 構造と必須ファイルの検査
-python .\code\scripts\research_system.py validate
+powershell -ExecutionPolicy Bypass -File .\code\scripts\research.ps1 validate
 
 # 文献候補を自動収集（arXiv、OpenAlex）
-python .\code\scripts\research_system.py collect
+powershell -ExecutionPolicy Bypass -File .\code\scripts\research.ps1 collect
 
 # APIを呼ばず収集設定だけ確認
-python .\code\scripts\research_system.py collect --dry-run
+powershell -ExecutionPolicy Bypass -File .\code\scripts\research.ps1 collect --dry-run
 
 # Obsidian研究領域の索引更新
 powershell -ExecutionPolicy Bypass -File .\code\scripts\index-obsidian-research.ps1
@@ -79,4 +79,3 @@ OpenAlexを継続利用する場合は `.env` または実行環境へ `OPENALEX
 - [Machine-readable configuration](config/research-system.json)
 - [Research-cycle prompt](docs/prompts/research-cycle.md)
 - [Templates](research/templates/README.md)
-

@@ -1,0 +1,15 @@
+{
+  "cycle_id": "CYCLE-20260718-091020",
+  "goal": "RSYS-001",
+  "focus": "試運転対象の未解決問題を選定し、定式化可能性を評価する",
+  "created": "2026-07-18T09:10:20+09:00",
+  "required_files": [
+    "context.md",
+    "cycle.md",
+    "review-primary.md",
+    "review-secondary.md",
+    "reflection.md",
+    "improvement.md",
+    "chapter-01.md"
+  ]
+}

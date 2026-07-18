@@ -55,7 +55,7 @@ owner: 渋谷伊織
 ## Linked objects
 
 - Problems: 未選択
-- Cycles: 未開始
+- Cycles: [CYCLE-20260718-091020](../../records/research-cycles/2026-07-18-091020-rsys-001/cycle.md)
 - Artifacts: 未作成
 
 ## Decision log
@@ -63,4 +63,3 @@ owner: 渋谷伊織
 | Date | Decision | Reason | Evidence |
 | --- | --- | --- | --- |
 | 2026-07-18 | 一週間の試運転を最初のGoalとする | 全件移行より運用上の欠陥を早く発見できる | `RESEARCH_SYSTEM.md` |
-
