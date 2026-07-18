@@ -382,6 +382,24 @@ Top-level subfolders:
   rewritten in this pass because the PDF is an expository reference rather than
   a new APS-specific theorem.
 
+### Drive delta on 2026-07-18
+
+- `seminar-3.pdf` (Drive file id `1fNNHrptpW3TwYoj11ht-MiB8Q3uRhJYP`,
+  created `2026-07-17T22:51:12.316Z`) is a new eight-page seminar note titled
+  *Abstract Provability Structures and Algebraic Reverse Mathematics*:
+  https://drive.google.com/file/d/1fNNHrptpW3TwYoj11ht-MiB8Q3uRhJYP
+- The source develops bounded ACR/AMS/APS definitions, finite/countable/
+  continuum APS examples, the implication `FG2 => G2`, and the fixed-point
+  route `exists boxtimes-FP => FG2 => G2`, including a three-element witness
+  showing that modal `4` cannot replace APS axiom A4.
+- Its residuated half proves `K <=> M + C` for normal integral commutative
+  RAMS and, under `K + 4 + CtrBox`, proves
+  `Loeb <=> FLoeb <=> forall-exists SC_Box`.  The Lukasiewicz interval and
+  finite-chain examples isolate contraction and `K` as genuine hypotheses.
+- The detailed local reconstruction and finite-model tasks are recorded in
+  `research/notes/rams-principle-map.md`; this index entry supplies the stable
+  Drive provenance without duplicating that note.
+
 Gemini includes:
 
 - 不完全性現象の代数的逆数学_総合モノグラフ_コピー.pdf

@@ -341,6 +341,16 @@
   realize a stable region with `SC_\Box`, primitive `\boxtimes`, and
   `\neg FG2_{\boxtimes}` simultaneously.
 
+- **(Seminar 3 supplement 2026-07-18: minimize the RAMS Loeb--FLoeb--SC equivalence.)**
+  The new Drive source proves `Loeb <=> FLoeb <=> forall-exists SC_Box` for
+  normal integral commutative RAMS under `K + 4 + CtrBox`. Open:
+  (i) remove each hypothesis separately and find the least finite countermodel
+  for every failed direction;
+  (ii) determine which countermodels extend to genuine APS/RAPS structures
+  with primitive `boxtimes` satisfying A1--A4;
+  (iii) classify when `SC_Box` can coexist with `not FG2_boxtimes` without
+  collapsing primitive refutability to `Box(x -> bottom)`.
+
 - **(Drive supplement 2026-06-15: when does primitive refutability collapse to provability of negation?)**
   The new Drive PDFs `box_neg_vs_boxtimes_models.pdf` and
   `mnd4_residuated_ams_independence_report.pdf` expose a gap that several older

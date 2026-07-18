@@ -2688,3 +2688,23 @@
   source row, or PDF source row required a content update. Existing unrelated
   worktree changes overlap the watcher logs and PDF manifest, so this run's
   timestamp-only churn was not committed.
+
+## 2026-07-18 (Relay sync 2026-07-18T13:25:13+09:00)
+
+- Ran `code/scripts/sync-chatgpt-project-artifacts.ps1` from the repository
+  root with a process-scoped execution-policy bypass. The inbox still held the
+  same `3` PDFs, all `62` collected PDFs were backed up, and `0` slide/deck
+  artifacts were copied or refreshed.
+- Checked all `23` watched ChatGPT shares; every entry was `unchanged`, so no
+  shared transcript required extraction or mathematical reconstruction.
+- Drive inspection since `2026-07-17T22:23:01.720Z` found one new research PDF,
+  `seminar-3.pdf` (file id `1fNNHrptpW3TwYoj11ht-MiB8Q3uRhJYP`). Its APS,
+  G2/FG2, RAMS, and Loeb--FLoeb--Santa-Claus results are already reconstructed
+  in `research/notes/rams-principle-map.md`; this relay added stable Drive
+  provenance and centralized the remaining minimal-hypothesis/finite-model
+  questions rather than duplicating that note.
+- The PDF was readable through Drive but was not yet present in the configured
+  local Drive mirror or Project artifact inbox, so no repository PDF bytes or
+  `artifacts/pdf/manifest.csv` source row could be added in this run. Route the
+  file through the ChatGPT Project artifact inbox if a durable local PDF copy
+  is required.
