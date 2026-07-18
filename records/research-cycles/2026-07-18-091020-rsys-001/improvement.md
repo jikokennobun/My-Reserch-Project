@@ -1,28 +1,39 @@
 ---
 type: system-improvement
 id: IMP-20260718-01
-status: proposed
+status: trial
 created: 2026-07-18
 updated: 2026-07-18
 ---
 
-# Improvement title
+# 普段の入口を一枚にする
 
-## Observed defect
+## 観測した欠陥
 
-## Evidence
+正しい保存先が多く、毎回どのファイルから始めるか判断が必要だった。システム説明も長く、研究そのものより運用が前に出る危険があった。
 
-## Intended change
+## 変更
 
-## Why this should help
+`CURRENT.md` に現在のGoal、問題、ノート、次の三手だけを置いた。`RESEARCH_SYSTEM.md` は普段の操作と保存先に絞り、詳細設計を別資料へ残した。執筆規約も短く固定した。
 
-## Metric / expected observation
+## 意図
 
-## Risks and rollback
+ユーザーは一枚の入口から研究を再開でき、エージェントは既存の詳細構造を失わずに作業できる。
 
-## Trial result
+## 指標
 
-## Decision
+- 再開時に最初に開くファイルが一つで済む。
+- `CURRENT.md` の「次に行うこと」が三項目以下である。
+- 新しい成果の保存先を一度で判断できる。
 
-`accepted / rejected / revise / pending`
+## 危険と戻し方
 
+入口の更新忘れで古い作業を指す危険がある。各cycle終了時のArchivist確認項目にする。不要なら `CURRENT.md` を削除し、従来どおりactive goalから開始できる。
+
+## 試行結果
+
+RAMSの試行議論をGoal、problem card、note、cycle、censusへ一枚から接続できた。次回の再開容易性はまだ未測定である。
+
+## 判断
+
+一週間試す。次回再開時に迷いが出た場合は項目を増やさず、リンクの選び方を修正する。

@@ -1,0 +1,3173 @@
+{
+  "reproducibility": {
+    "command": "python code/scripts/check-rams-principles.py --max-size 4",
+    "python_version": "3.12.13",
+    "script_sha256": "7dc4c93ca67c6c54f372d9f5ffa64d52f0c75fe71c99393afdbd9453ec8b76b6",
+    "external_dependencies": []
+  },
+  "scope": {
+    "families": [
+      "finite Godel chains",
+      "finite Lukasiewicz chains"
+    ],
+    "sizes": [
+      2,
+      3,
+      4
+    ],
+    "box_maps": "all unary maps",
+    "semantics": "algebra-element semantics; no syntactic definability claim",
+    "base": "bounded integral commutative residuated chains",
+    "warning": "Census evidence is not a proof of a general implication."
+  },
+  "definitions": {
+    "normality": "box(top) = top",
+    "M": "x <= y implies box(x) <= box(y)",
+    "K": "box(x -> y) <= (box(x) -> box(y))",
+    "4": "box(x) <= box(box(x))",
+    "T": "box(x) <= x",
+    "CP": "x <= box(x)",
+    "C": "box(x) tensor box(y) <= box(x tensor y)",
+    "CtrBox": "box(x) <= box(x) tensor box(x); not global contraction",
+    "D_derived": "box(x) <= neg(box(neg(x))); diamond is derived",
+    "Con_L_sem": "box(bottom) <= bottom; semantic reading of not box bottom",
+    "Con_EG_elem": "there exists an algebra element x with box(x) <= bottom",
+    "disjunction": "box(x join y) = box(x) join box(y)",
+    "Lob": "box(x) <= x implies top <= x",
+    "sLob": "(box(x) -> x) <= x",
+    "FLob": "box(box(x) -> x) <= box(x)",
+    "SC_elem": "for every algebra element x there is p with p = box(p) -> x",
+    "negBoxFP_elem": "there is an algebra element p with p = neg(box(p))"
+  },
+  "counts": {
+    "godel-2": {
+      "4": 3,
+      "C": 4,
+      "CP": 2,
+      "Con_EG_elem": 3,
+      "Con_L_sem": 2,
+      "CtrBox": 4,
+      "D_derived": 3,
+      "FLob": 3,
+      "K": 4,
+      "Lob": 2,
+      "M": 3,
+      "SC_elem": 3,
+      "T": 2,
+      "disjunction": 3,
+      "negBoxFP_elem": 3,
+      "normality": 2,
+      "sLob": 2
+    },
+    "godel-3": {
+      "4": 13,
+      "C": 27,
+      "CP": 6,
+      "Con_EG_elem": 19,
+      "Con_L_sem": 9,
+      "CtrBox": 27,
+      "D_derived": 11,
+      "FLob": 15,
+      "K": 22,
+      "Lob": 6,
+      "M": 10,
+      "SC_elem": 17,
+      "T": 6,
+      "disjunction": 10,
+      "negBoxFP_elem": 21,
+      "normality": 9,
+      "sLob": 6
+    },
+    "godel-4": {
+      "4": 75,
+      "C": 256,
+      "CP": 24,
+      "Con_EG_elem": 175,
+      "Con_L_sem": 64,
+      "CtrBox": 256,
+      "D_derived": 67,
+      "FLob": 109,
+      "K": 150,
+      "Lob": 24,
+      "M": 35,
+      "SC_elem": 142,
+      "T": 24,
+      "disjunction": 35,
+      "negBoxFP_elem": 208,
+      "normality": 64,
+      "sLob": 24
+    },
+    "lukasiewicz-2": {
+      "4": 3,
+      "C": 4,
+      "CP": 2,
+      "Con_EG_elem": 3,
+      "Con_L_sem": 2,
+      "CtrBox": 4,
+      "D_derived": 3,
+      "FLob": 3,
+      "K": 4,
+      "Lob": 2,
+      "M": 3,
+      "SC_elem": 3,
+      "T": 2,
+      "disjunction": 3,
+      "negBoxFP_elem": 3,
+      "normality": 2,
+      "sLob": 2
+    },
+    "lukasiewicz-3": {
+      "4": 13,
+      "C": 21,
+      "CP": 6,
+      "Con_EG_elem": 19,
+      "Con_L_sem": 9,
+      "CtrBox": 8,
+      "D_derived": 12,
+      "FLob": 12,
+      "K": 17,
+      "Lob": 6,
+      "M": 10,
+      "SC_elem": 15,
+      "T": 6,
+      "disjunction": 10,
+      "negBoxFP_elem": 19,
+      "normality": 9,
+      "sLob": 3
+    },
+    "lukasiewicz-4": {
+      "4": 75,
+      "C": 132,
+      "CP": 24,
+      "Con_EG_elem": 175,
+      "Con_L_sem": 64,
+      "CtrBox": 16,
+      "D_derived": 100,
+      "FLob": 70,
+      "K": 104,
+      "Lob": 24,
+      "M": 35,
+      "SC_elem": 115,
+      "T": 24,
+      "disjunction": 35,
+      "negBoxFP_elem": 175,
+      "normality": 64,
+      "sLob": 4
+    }
+  },
+  "implications": {
+    "normality=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          2
+        ]
+      }
+    },
+    "normality=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          2
+        ]
+      }
+    },
+    "normality=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          2
+        ]
+      }
+    },
+    "normality=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "normality=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          2
+        ]
+      }
+    },
+    "normality=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "normality=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "normality=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "normality=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "normality=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "normality=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          2
+        ]
+      }
+    },
+    "normality=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "normality=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "normality=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "normality=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "normality=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "M=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "M=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "M=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "M=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "M=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "M=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "M=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "M=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "M=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "M=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "M=>disjunction": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "M=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "M=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "M=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "M=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "M=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "K=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "K=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "K=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "K=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "K=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "K=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 4,
+        "box": [
+          0,
+          2,
+          0,
+          0
+        ]
+      }
+    },
+    "K=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "K=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "K=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "K=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "K=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "K=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "K=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "K=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "K=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "K=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "4=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "4=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "4=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          2,
+          0,
+          2
+        ]
+      }
+    },
+    "4=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "4=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "4=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "4=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "4=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "4=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "4=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "4=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "4=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "4=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "4=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "4=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "4=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "T=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "T=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "T=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 4,
+        "box": [
+          0,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "T=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "T=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "T=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 4,
+        "box": [
+          0,
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "T=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "T=>D_derived": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "T=>Con_L_sem": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "T=>Con_EG_elem": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "T=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "T=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "T=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "T=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "T=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "T=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CP=>normality": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "CP=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          2,
+          1,
+          2
+        ]
+      }
+    },
+    "CP=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          2,
+          1,
+          2
+        ]
+      }
+    },
+    "CP=>4": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "CP=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "CP=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "CP=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "CP=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "CP=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "CP=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "CP=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          2,
+          1,
+          2
+        ]
+      }
+    },
+    "CP=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CP=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CP=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CP=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CP=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "C=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "C=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "C=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "C=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "C=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "C=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "C=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "C=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "C=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "C=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "C=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "C=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "C=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "C=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "C=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "C=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CtrBox=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "CtrBox=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "CtrBox=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "CtrBox=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "CtrBox=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "CtrBox=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "CtrBox=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "CtrBox=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "CtrBox=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "CtrBox=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "CtrBox=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "CtrBox=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "CtrBox=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "CtrBox=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CtrBox=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "CtrBox=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "D_derived=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "D_derived=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "D_derived=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 4,
+        "box": [
+          0,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "D_derived=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "D_derived=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "D_derived=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "D_derived=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 4,
+        "box": [
+          0,
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "D_derived=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "D_derived=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "D_derived=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "D_derived=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "D_derived=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "D_derived=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "D_derived=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "D_derived=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "D_derived=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "Con_L_sem=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 4,
+        "box": [
+          0,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "Con_L_sem=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "Con_L_sem=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "Con_L_sem=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>Con_EG_elem": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "Con_L_sem=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_L_sem=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "Con_L_sem=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "Con_L_sem=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "Con_EG_elem=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "Con_EG_elem=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "Con_EG_elem=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "Con_EG_elem=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "Con_EG_elem=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "Con_EG_elem=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "Con_EG_elem=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "disjunction=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "disjunction=>M": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "disjunction=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "disjunction=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "disjunction=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "disjunction=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "disjunction=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          2
+        ]
+      }
+    },
+    "disjunction=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "disjunction=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "disjunction=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "disjunction=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "disjunction=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "disjunction=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "disjunction=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "disjunction=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "disjunction=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          1
+        ]
+      }
+    },
+    "Lob=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Lob=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Lob=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 4,
+        "box": [
+          3,
+          2,
+          3,
+          3
+        ]
+      }
+    },
+    "Lob=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Lob=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Lob=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Lob=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          1,
+          2,
+          0
+        ]
+      }
+    },
+    "Lob=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          1,
+          2,
+          0
+        ]
+      }
+    },
+    "Lob=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "Lob=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Lob=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "Lob=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "Lob=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          1,
+          2,
+          0
+        ]
+      }
+    },
+    "Lob=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          1,
+          2,
+          0
+        ]
+      }
+    },
+    "Lob=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    "Lob=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    "sLob=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "sLob=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "sLob=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 4,
+        "box": [
+          3,
+          2,
+          3,
+          3
+        ]
+      }
+    },
+    "sLob=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "sLob=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "sLob=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "sLob=>C": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "sLob=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          2,
+          2,
+          1
+        ]
+      }
+    },
+    "sLob=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "sLob=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "sLob=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "sLob=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "sLob=>Lob": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "sLob=>FLob": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "sLob=>SC_elem": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "sLob=>negBoxFP_elem": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "FLob=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "FLob=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "FLob=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 4,
+        "box": [
+          3,
+          2,
+          3,
+          3
+        ]
+      }
+    },
+    "FLob=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "FLob=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "FLob=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "FLob=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "FLob=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "FLob=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "FLob=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "FLob=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "FLob=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "FLob=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "FLob=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "FLob=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 4,
+        "box": [
+          2,
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    "FLob=>negBoxFP_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 4,
+        "box": [
+          2,
+          1,
+          2,
+          1
+        ]
+      }
+    },
+    "SC_elem=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "SC_elem=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "SC_elem=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "SC_elem=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "SC_elem=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "SC_elem=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "SC_elem=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "SC_elem=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "SC_elem=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "SC_elem=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "SC_elem=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "SC_elem=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "SC_elem=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "SC_elem=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "SC_elem=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "SC_elem=>negBoxFP_elem": {
+      "holds_in_census": true,
+      "counterexample": null
+    },
+    "negBoxFP_elem=>normality": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>M": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>K": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "negBoxFP_elem=>4": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>T": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>CP": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>C": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>CtrBox": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "lukasiewicz",
+        "size": 3,
+        "box": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>D_derived": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "negBoxFP_elem=>Con_L_sem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>Con_EG_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          1
+        ]
+      }
+    },
+    "negBoxFP_elem=>disjunction": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          1,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>Lob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>sLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 2,
+        "box": [
+          0,
+          0
+        ]
+      }
+    },
+    "negBoxFP_elem=>FLob": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "negBoxFP_elem=>SC_elem": {
+      "holds_in_census": false,
+      "counterexample": {
+        "family": "godel",
+        "size": 3,
+        "box": [
+          1,
+          0,
+          2
+        ]
+      }
+    }
+  },
+  "conditional_claims": {
+    "M+C=>K": {
+      "holds_in_census": true,
+      "supporting_models": 81,
+      "counterexample": null
+    },
+    "normality+D_derived=>Con_L_sem": {
+      "holds_in_census": true,
+      "supporting_models": 33,
+      "counterexample": null
+    },
+    "normality+FLob=>Lob": {
+      "holds_in_census": true,
+      "supporting_models": 12,
+      "counterexample": null
+    },
+    "M+FLob=>SC_elem": {
+      "holds_in_census": true,
+      "supporting_models": 24,
+      "counterexample": null
+    },
+    "M+normality+K+4+CtrBox+SC_elem=>Lob": {
+      "holds_in_census": true,
+      "supporting_models": 11,
+      "counterexample": null
+    },
+    "M+normality+K+4+CtrBox+Lob=>FLob": {
+      "holds_in_census": true,
+      "supporting_models": 11,
+      "counterexample": null
+    }
+  }
+}

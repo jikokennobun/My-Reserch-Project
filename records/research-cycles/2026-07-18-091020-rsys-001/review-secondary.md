@@ -3,31 +3,46 @@ type: research-review
 reviewer_role: secondary
 reviewed_object: CYCLE-20260718-091020
 independent: true
-verdict: hold
+verdict: major-revision
+verdict_after_revision: accept
 created: 2026-07-18
 ---
 
-# Review
+# 副査
 
-## Scope reviewed
+## 評価
 
-## Strongest contribution
+有限鎖実験を一般定理の証明から明確に切り離し、integrality、derived diamond、Löb 系の使用仮定を整理した点は有用である。`CURRENT.md` も次の作業を三点に絞っており、研究方針と整合する。
 
-## Blocking issues
+## 主要な修正点
 
-## Major issues
+1. 「縮約」が二種類混在する。表の `Ctr: x≤x⊗x` は基礎代数全体の構造原理だが、コードと同値予想で使う `CtrBox: □x≤□x⊗□x` は様相像上だけの原理である。別名・別ノードにし、各含意の前提を明記すべきである。
+2. `Con_EG`、`SC`、`negBoxFP` はコードでは有限代数の要素についてのメタレベル存在として評価される。一方、問題文は対象言語の量化か式の存在かを未確定としている。未確定概念を同じ含意表へ投入すると型の違う主張を比較するため、`semantic/meta` と `object-language` を分離する必要がある。`Con_L` もコード上は `□⊥=⊥` であり、式 `¬□⊥` が真であることとの対応にintegrality等の前提を添えるべきである。
+3. primitive `☒` と derived `◇=¬□¬` をノートは区別しているが、実験は後者のDだけである。JSONの `D` を `D_derived` 等に改名し、primitive版を未検査と明示すべきである。
 
-## Minor issues
+## 再現性と簡潔さ
 
-## Counterexample / alternative interpretation
+列挙順と判定は決定的で、外部依存もない。しかし、成果物に実行コマンド、Python版、スクリプトのハッシュ、各原理の機械可読な定義がなく、`sizes: [2,4]` も包含範囲か二点だけか判然としない。また `generated=date.today()` は内容不変でも日付差分を生む。本環境では再生成照合が完走しなかったため、JSONとの完全一致は未確認である。ノート本文には巨大な全含意表を展開せず、採用する最小反例と条件付き主張だけを要約するのがよい。
 
-## Source and reproducibility check
+## 必須変更
 
-## Required changes
+- [ ] `Ctr` と `CtrBox`、対象言語とメタ存在、primitive D と derived D を別定義にする。
+- [ ] 実行コマンド・環境・範囲・定義・ハッシュを成果物に記録し、再生成一致を確認する。
+- [ ] 有限実験で「真だった」を一般含意とせず、反例候補または未反証として表現する。
 
-- [ ] 
+## 判定
 
-## Verdict rationale
+`major-revision`。研究の骨格はよいが、含意図のノードに異なる定義レベルが混在しており、このままでは実験結果と理論主張の対応を一意に読めない。
 
-`accept / minor-revision / major-revision / reject / hold`
+## 再査読
+
+初回の必須変更は解消した。
+
+- `Ctr/CtrBox`、`SC_elem/SC_def`、`Con_L_sem/Con_EG_elem`、`D_derived/primitive D` が区別され、ノート・問題票・コード・JSON・cycleの対応も確認できる。
+- JSONに実行コマンド、Python版、現行コードと一致するスクリプトSHA-256、明示的なサイズ列、基礎クラス、定義表が記録された。
+- 有限列挙の肯定結果は「未反証」、否定結果は「反例候補」と表現され、一般定理との混同がない。本文も代表例に絞られ、`CURRENT.md` の次課題は研究方針に沿って簡潔である。
+
+環境差のため成果物のバイト単位の再生成一致までは独立確認していないが、コードは外部依存なしで決定的であり、記録済みハッシュは現行スクリプトと一致する。これは受理を妨げない。
+
+`verdict_after_revision: accept`
 

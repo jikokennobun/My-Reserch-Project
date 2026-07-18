@@ -5,23 +5,36 @@ goal: RSYS-001
 created: 2026-07-18
 ---
 
-# Research Reflection
+# 研究の反芻
 
-## What changed in our understanding
+## 理解が変わった点
 
-## Why we chose this path
+原理の総当たり表より、単位元と上端、対象言語とメタ規則、primitiveとderived modalityを先に分ける方が重要だと分かった。縮約の向きの混在は、同値予想そのものを左右する。
 
-## What we may be wrong about
+## この道を選んだ理由
 
-## Strongest unresolved objection
+渋谷伊織のメモでは、第二不完全性を算術的符号化より代数、AAL、部分構造論理、固定点から理解する関心が繰り返し現れる。したがってRAMS上の含意・分離問題は現在の研究動機に近い。確信度は高い。
 
-## Results worth re-checking
+## 間違っているかもしれない点
 
-## Relation to motivation, theme, and current feeling
+- ユーザーの `P` と `E` をまだ定義できていない。
+- finite-chain censusはRAMSのうちintegralな二系列しか見ていない。
+- 同じモデル上の役割分担だけでは、人間二名と同じ独立性はない。
 
-明示された研究上の気持ちだけを書く。推測には根拠と確信度を付ける。
+## 最も強い未解決の異議
 
-## Direction drift check
+Löb・FLöb・SCの同値が、APS/RAMS固有の結果なのか、M・K・4・縮約を持つより一般のresiduated modal algebraの結果なのかがまだ切り分けられていない。
 
-## Next hypothesis and discriminating test
+## 再確認する成果
 
+- SC⇒LöbとLöb⇒FLöbの各行で使う仮定。
+- D⇒Con_Lでnormalityとintegralityのどちらが本当に必要か。
+- 有限反例候補がAPSのA1～A4を満たす拡張を持つか。
+
+## 方向ずれの確認
+
+現時点では、ユーザーの最近のLogic関心と一致している。ただし原理の数え上げ自体が目的化しないよう、第二不完全性と固定点の中心線へ戻る。
+
+## 次の識別的検査
+
+`Löb⇔FLöb⇔SC` の三方向について、仮定を一つずつ除いた有限反例を探索する。これにより、K、4、M、normality、縮約のどれが本質的かを判定する。

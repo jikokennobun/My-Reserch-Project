@@ -1,7 +1,7 @@
 ---
 type: research-goal
 id: RSYS-001
-status: active
+status: complete
 created: 2026-07-18
 updated: 2026-07-18
 owner: 渋谷伊織
@@ -31,11 +31,11 @@ owner: 渋谷伊織
 
 ## Done criteria
 
-- [ ] 一件のcycle directoryが完了状態になる。
-- [ ] 主査と副査の独立査読がある。
-- [ ] 一章のskeletonとclaim-mapがある。
-- [ ] 研究反芻がある。
-- [ ] 少なくとも一件の改善提案が意図・指標・rollback付きで記録される。
+- [x] 一件のcycle directoryが完了状態になる。
+- [x] 主査と副査の独立査読がある。
+- [x] 一章のskeletonとclaim-mapがある。
+- [x] 研究反芻がある。
+- [x] 少なくとも一件の改善提案が意図・指標・rollback付きで記録される。
 
 ## Evidence required
 
@@ -54,12 +54,14 @@ owner: 渋谷伊織
 
 ## Linked objects
 
-- Problems: 未選択
+- Problems: [PROB-20260718-RAMS-MAP](../problems/PROB-20260718-rams-principle-map.md)
 - Cycles: [CYCLE-20260718-091020](../../records/research-cycles/2026-07-18-091020-rsys-001/cycle.md)
-- Artifacts: 未作成
+- Artifacts: [finite-chain census](../../artifacts/reports/rams-principle-chain-census.json)
 
 ## Decision log
 
 | Date | Decision | Reason | Evidence |
 | --- | --- | --- | --- |
 | 2026-07-18 | 一週間の試運転を最初のGoalとする | 全件移行より運用上の欠陥を早く発見できる | `RESEARCH_SYSTEM.md` |
+| 2026-07-18 | RAMSの様相原理関係図を試運転対象にする | 現在の関心とセミナーの証明課題に直結し、定式化と計算の両方を試せる | `research/notes/rams-principle-map.md` |
+| 2026-07-18 | RSYS-001を完了する | 二名査読受理、反芻、改善記録、章雛形、再現可能なcensusが揃った | `records/research-cycles/2026-07-18-091020-rsys-001/` |

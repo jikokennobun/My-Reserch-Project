@@ -10,23 +10,23 @@ updated: YYYY-MM-DD
 
 # Chapter title
 
-## Reader and purpose
+## Purpose
 
-## Section skeleton
+この章で答える問いを一文で書く。
 
-## Claim map
+## Claims
 
-| Section | Claim | Evidence/proof | Dependencies | Review status |
-| --- | --- | --- | --- | --- |
+| Claim | Status | Evidence or proof | Dependency |
+| --- | --- | --- | --- |
+
+Statusは `proved`、`conditional`、`computed`、`conjecture` のいずれかにする。
 
 ## Draft
 
-Use `TODO[claim]`, `TODO[citation]`, `TODO[proof]`, `TODO[exposition]`.
+節ごとに短く書く。未完箇所は `TODO[proof]`、`TODO[citation]`、`TODO[exposition]` とする。
 
-## Review-response map
+## Review and next revision
 
-| Review item | Change | Evidence | Status |
-| --- | --- | --- | --- |
-
-## Remaining risks
-
+- 指摘:
+- 修正:
+- 残る問題:
